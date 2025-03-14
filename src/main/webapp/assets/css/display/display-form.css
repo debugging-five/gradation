@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+body {
+	background-color: #FBFCFC;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+}
+
+.display-text {
+	margin-top: 90px;
+	font-size: 30px;
+}
+
+.registration-text {
+	margin-top: 70px;
+	color: #EE3333;
+	border-bottom: solid 1px;
+	width : 1000px;
+	padding-bottom: 7px;
+}
+
+#upload {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.attachment-box {
+    width: 480px;   /* 가로 480px */
+    height: 480px;  /* 세로 480px */
+    background-color: #D9D9D9; /* 박스 배경색 */
+    margin-right: 120px;
+}
+
+#content {
+	margin-top: 38px;	
+}
+
+.input-text {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+}
+
+.artist-info {
+	font-size: 18px;
+	font-weight: bold; 
+	display: block; 
+	margin: 20px 0 7px 0; 
+	
+}
+
+.info-typing {
+	width: 1000px; 
+	height: 200px; 
+	resize: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 10px; /* 버튼 간격 */
+}
+
+.button {
+	margin: 50px 0 0 30px;
+	width: 125px;
+	height: 50px;
+	color: #EE3333; 
+	border: solid 1px;
+	border-radius: 2px;
+	background-color: #FBFCFC;
+}
+
+
+
+
+
+
+
+
+
+
