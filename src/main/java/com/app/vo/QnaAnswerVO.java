@@ -10,6 +10,16 @@ public class QnaAnswerVO {
 	private Timestamp qnaAnswerTime;
 	private Long qnaId;
 	
+	public QnaAnswerVO() {;}
+	
+	public QnaAnswerVO(Long id, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime, Long qnaId) {
+		this.id = id;
+		this.qnaAnswerTitle = qnaAnswerTitle;
+		this.qnaAnswerContent = qnaAnswerContent;
+		this.qnaAnswerTime = qnaAnswerTime;
+		this.qnaId = qnaId;
+	}
+
 	@Override
 	public String toString() {
 		return "qnaAnswer [id=" + id + ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent

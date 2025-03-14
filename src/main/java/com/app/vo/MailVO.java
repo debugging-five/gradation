@@ -12,6 +12,19 @@ public class MailVO {
 	private Long sendUserId;
 	private Long recieveUserId;
 	
+	public MailVO() {;}
+	
+	public MailVO(Long id, String mailTitle, String mailContents, Timestamp mailSendTime, int mailIsopen,
+			Long sendUserId, Long recieveUserId) {
+		this.id = id;
+		this.mailTitle = mailTitle;
+		this.mailContents = mailContents;
+		this.mailSendTime = mailSendTime;
+		this.mailIsopen = mailIsopen;
+		this.sendUserId = sendUserId;
+		this.recieveUserId = recieveUserId;
+	}
+
 	@Override
 	public String toString() {
 		return "MailVO [id=" + id + ", mailTitle=" + mailTitle + ", mailContents=" + mailContents + ", mailSendTime="

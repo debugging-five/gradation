@@ -11,6 +11,18 @@ public class UpcycleVO {
 	private String upcycleAddress;
 	private Long userId;
 	
+	public UpcycleVO() {;}
+	
+	public UpcycleVO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
+			Long userId) {
+		this.id = id;
+		this.upcycleCategory = upcycleCategory;
+		this.upcycleSize = upcycleSize;
+		this.upcycleDate = upcycleDate;
+		this.upcycleAddress = upcycleAddress;
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
 		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize

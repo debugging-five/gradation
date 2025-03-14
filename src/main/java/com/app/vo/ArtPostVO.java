@@ -9,6 +9,15 @@ public class ArtPostVO {
 	private Long userId;
 	private Long artId;
 	
+	public ArtPostVO() {;}
+	
+	public ArtPostVO(Long id, Timestamp artPostDate, Long userId, Long artId) {
+		this.id = id;
+		this.artPostDate = artPostDate;
+		this.userId = userId;
+		this.artId = artId;
+	}
+
 	@Override
 	public String toString() {
 		return "ArtPostVO [id=" + id + ", artPostDate=" + artPostDate + ", userId=" + userId + ", artId=" + artId + "]";

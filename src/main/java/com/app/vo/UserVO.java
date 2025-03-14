@@ -30,6 +30,41 @@ public class UserVO {
    private int userBanOk;
    private Long universityId; // 학교 테이블의 id 참조값
    
+   public UserVO() {;}
+
+   public UserVO(Long id, String userImgName, String userImgPass, String userName, String userEmail, String userId,
+		String userPassword, String userPhone, String userNickName, String userAddress, String userPostalCode,
+		int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
+		String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
+		String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId) {
+	this.id = id;
+	this.userImgName = userImgName;
+	this.userImgPass = userImgPass;
+	this.userName = userName;
+	this.userEmail = userEmail;
+	this.userId = userId;
+	this.userPassword = userPassword;
+	this.userPhone = userPhone;
+	this.userNickName = userNickName;
+	this.userAddress = userAddress;
+	this.userPostalCode = userPostalCode;
+	this.userSnsOk = userSnsOk;
+	this.userMailOk = userMailOk;
+	this.userAgreementOk = userAgreementOk;
+	this.userIntroduce = userIntroduce;
+	this.userRecode = userRecode;
+	this.userInstagram = userInstagram;
+	this.userYoutube = userYoutube;
+	this.userBlog = userBlog;
+	this.userKakao = userKakao;
+	this.userGoogle = userGoogle;
+	this.userNaver = userNaver;
+	this.userWriterOk = userWriterOk;
+	this.userAdminOk = userAdminOk;
+	this.userBanOk = userBanOk;
+	this.universityId = universityId;
+   }
+
    @Override
    public String toString() {
       return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPass=" + userImgPass + ", userName="
