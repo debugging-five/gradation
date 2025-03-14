@@ -7,6 +7,14 @@ public class FaqVO {
 	private String faqTitle;
 	private String FaqContent;
 	
+	public FaqVO() {;}
+	
+	public FaqVO(Long id, String faqTitle, String faqContent) {
+		this.id = id;
+		this.faqTitle = faqTitle;
+		FaqContent = faqContent;
+	}
+
 	@Override
 	public String toString() {
 		return "FaqVO [id=" + id + ", faqTitle=" + faqTitle + ", FaqContent=" + FaqContent + "]";

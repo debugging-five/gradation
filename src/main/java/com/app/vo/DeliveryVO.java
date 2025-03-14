@@ -13,6 +13,22 @@ public class DeliveryVO {
 	private String deliveryPhone;
 	private Long paymentId;
 	
+	public DeliveryVO() {;}
+	
+	public DeliveryVO(Long id, String deliveryAddress, String deliveryDetailAddress, String deliveryPostalCode,
+			String deliveryState, String deliveryMessage, String deliveryReceiver, String deliveryPhone,
+			Long paymentId) {
+		this.id = id;
+		this.deliveryAddress = deliveryAddress;
+		this.deliveryDetailAddress = deliveryDetailAddress;
+		this.deliveryPostalCode = deliveryPostalCode;
+		this.deliveryState = deliveryState;
+		this.deliveryMessage = deliveryMessage;
+		this.deliveryReceiver = deliveryReceiver;
+		this.deliveryPhone = deliveryPhone;
+		this.paymentId = paymentId;
+	}
+
 	@Override
 	public String toString() {
 		return "DeliveryVO [id=" + id + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="

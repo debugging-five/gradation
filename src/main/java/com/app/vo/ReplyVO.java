@@ -10,6 +10,16 @@ public class ReplyVO {
 	private String replyContents;
 	private Date replyDate;
 	
+	public ReplyVO() {;}
+	
+	public ReplyVO(Long id, Long artPostId, Long userId, String replyContents, Date replyDate) {
+		this.id = id;
+		this.artPostId = artPostId;
+		this.userId = userId;
+		this.replyContents = replyContents;
+		this.replyDate = replyDate;
+	}
+
 	@Override
 	public String toString() {
 		return "ReplyVO [id=" + id + ", artPostId=" + artPostId + ", userId=" + userId + ", replyContents="
