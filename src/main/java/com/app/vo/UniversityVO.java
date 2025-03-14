@@ -8,6 +8,18 @@ public class UniversityVO {
    private String universityLocation;
    private String universityLogoImgName;
    private String universityLogoImgPath;
+   
+   public UniversityVO() {;}
+   
+   public UniversityVO(Long id, String universityName, String universityLocation, String universityLogoImgName,
+		String universityLogoImgPath) {
+	this.id = id;
+	this.universityName = universityName;
+	this.universityLocation = universityLocation;
+	this.universityLogoImgName = universityLogoImgName;
+	this.universityLogoImgPath = universityLogoImgPath;
+}
+
    @Override
    public String toString() {
       return "UniversityVO [id=" + id + ", universityName=" + universityName + ", universityLocation="

@@ -12,6 +12,19 @@ public class QnaVO {
 	private String qnaImgPath;
 	private Long userId;
 	
+	public QnaVO() {;}
+	
+	public QnaVO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
+			Long userId) {
+		this.id = id;
+		this.qnaTitle = qnaTitle;
+		this.qnaContent = qnaContent;
+		this.qnaTime = qnaTime;
+		this.qnaImgName = qnaImgName;
+		this.qnaImgPath = qnaImgPath;
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
 		return "QnaVO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime

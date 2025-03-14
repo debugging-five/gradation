@@ -8,6 +8,15 @@ public class ArtImgVO {
 	private String artImgPath;
 	private Long artId;
 	
+	public ArtImgVO() {;}
+	
+	public ArtImgVO(Long id, String artImgName, String artImgPath, Long artId) {
+		this.id = id;
+		this.artImgName = artImgName;
+		this.artImgPath = artImgPath;
+		this.artId = artId;
+	}
+
 	@Override
 	public String toString() {
 		return "ArtImgVO [id=" + id + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId

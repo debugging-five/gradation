@@ -13,6 +13,23 @@ public class GradationExhibitionVO {
 	private String GradationExhibitionAddress;
 	private Date GradationExhibitionDate;
 	
+	public GradationExhibitionVO() {;}
+	
+	public GradationExhibitionVO(Long id, String gradationExhibitionTitle, int gradationExhibitionCount,
+			Date gradationExhibitionTime, int gradationExhibitionFee, String gradationExhibitionTel,
+			String gradationExhibitionAddress, Date gradationExhibitionDate) {
+		this.id = id;
+		GradationExhibitionTitle = gradationExhibitionTitle;
+		GradationExhibitionCount = gradationExhibitionCount;
+		GradationExhibitionTime = gradationExhibitionTime;
+		GradationExhibitionFee = gradationExhibitionFee;
+		GradationExhibitionTel = gradationExhibitionTel;
+		GradationExhibitionAddress = gradationExhibitionAddress;
+		GradationExhibitionDate = gradationExhibitionDate;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "GradationExhibitionVO [id=" + id + ", GradationExhibitionTitle=" + GradationExhibitionTitle

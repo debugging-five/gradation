@@ -14,6 +14,21 @@ public class AuctionVO {
 	private Long auctionBidPrice; // 낙찰가
 	private Date auctionBidDate; // 경매 종료일
 	
+	public AuctionVO() {;}
+	
+	public AuctionVO(Long id, Long artId, Long userId, Date auctionStartDate, Long auctionStartPrice,
+			Long auctionEstimatePrice, int auctionAttracted, Long auctionBidPrice, Date auctionBidDate) {
+		this.id = id;
+		this.artId = artId;
+		this.userId = userId;
+		this.auctionStartDate = auctionStartDate;
+		this.auctionStartPrice = auctionStartPrice;
+		this.auctionEstimatePrice = auctionEstimatePrice;
+		this.auctionAttracted = auctionAttracted;
+		this.auctionBidPrice = auctionBidPrice;
+		this.auctionBidDate = auctionBidDate;
+	}
+
 	@Override
 	public String toString() {
 		return "AuctionVO [id=" + id + ", artId=" + artId + ", userId=" + userId + ", auctionStartDate="

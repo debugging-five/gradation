@@ -7,6 +7,14 @@ public class PaymentCancellationVO {
 	private String paymentCancellationCode;
 	private Long paymentId;
 	
+	public PaymentCancellationVO() {;}
+	
+	public PaymentCancellationVO(Long id, String paymentCancellationCode, Long paymentId) {
+		this.id = id;
+		this.paymentCancellationCode = paymentCancellationCode;
+		this.paymentId = paymentId;
+	}
+
 	@Override
 	public String toString() {
 		return "PaymentCancellationVO [id=" + id + ", paymentCancellationCode=" + paymentCancellationCode

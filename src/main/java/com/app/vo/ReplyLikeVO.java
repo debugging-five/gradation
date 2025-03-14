@@ -9,6 +9,15 @@ public class ReplyLikeVO {
 	private Long userId;
 	private Timestamp replyLikeTime;
 	
+	public ReplyLikeVO() {;}
+	
+	public ReplyLikeVO(Long id, Long replyId, Long userId, Timestamp replyLikeTime) {
+		this.id = id;
+		this.replyId = replyId;
+		this.userId = userId;
+		this.replyLikeTime = replyLikeTime;
+	}
+
 	@Override
 	public String toString() {
 		return "ReplyLikeVO [id=" + id + ", replyId=" + replyId + ", userId=" + userId + ", replyLikeTime="

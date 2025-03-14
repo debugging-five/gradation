@@ -11,6 +11,18 @@ public class UniversityExhibitionVO {
 	private String universityExhibitionLocation;
 	private Long majorId;
 	
+	public UniversityExhibitionVO() {;}
+	
+	public UniversityExhibitionVO(Long id, Date universityExhibitionDate, String universityExhibitionState,
+			String universityExhibitionTitle, String universityExhibitionLocation, Long majorId) {
+		this.id = id;
+		this.universityExhibitionDate = universityExhibitionDate;
+		this.universityExhibitionState = universityExhibitionState;
+		this.universityExhibitionTitle = universityExhibitionTitle;
+		this.universityExhibitionLocation = universityExhibitionLocation;
+		this.majorId = majorId;
+	}
+
 	@Override
 	public String toString() {
 		return "UniversityExhibitionVO [id=" + id + ", universityExhibitionDate=" + universityExhibitionDate

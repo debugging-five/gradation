@@ -14,6 +14,21 @@ public class ArtVO {
 	private Date artEndDate;
 	private Long userId;
 	
+	public ArtVO() {;}
+	
+	public ArtVO(Long id, String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
+			Date artStartDate, Date artEndDate, Long userId) {
+		this.id = id;
+		this.artCategoty = artCategoty;
+		this.artMeterial = artMeterial;
+		this.artSize = artSize;
+		this.artDescription = artDescription;
+		this.artDate = artDate;
+		this.artStartDate = artStartDate;
+		this.artEndDate = artEndDate;
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
 		return "ArtVO [id=" + id + ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize="

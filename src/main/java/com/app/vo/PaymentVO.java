@@ -11,6 +11,18 @@ public class PaymentVO {
 	private Timestamp paymentDate;
 	private String paymentCode;
 	
+	public PaymentVO() {;}
+	
+	public PaymentVO(Long id, Long auctionId, String paymentMethod, int paymentAmount, Timestamp paymentDate,
+			String paymentCode) {
+		this.id = id;
+		this.auctionId = auctionId;
+		this.paymentMethod = paymentMethod;
+		this.paymentAmount = paymentAmount;
+		this.paymentDate = paymentDate;
+		this.paymentCode = paymentCode;
+	}
+
 	@Override
 	public String toString() {
 		return "PaymentVO [id=" + id + ", auctionId=" + auctionId + ", paymentMethod=" + paymentMethod
