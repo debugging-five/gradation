@@ -3,24 +3,25 @@ package com.app.vo;
 import java.sql.Timestamp;
 import java.util.Objects;
 
-public class ArtPostVO {
+public class ReplyLikeVO {
 	private Long id;
-	private Timestamp artPostDate;
+	private Long replyId;
 	private Long userId;
-	private Long artId;
+	private Timestamp replyLikeTime;
 	
-	public ArtPostVO() {;}
+	public ReplyLikeVO() {;}
 	
-	public ArtPostVO(Long id, Timestamp artPostDate, Long userId, Long artId) {
+	public ReplyLikeVO(Long id, Long replyId, Long userId, Timestamp replyLikeTime) {
 		this.id = id;
-		this.artPostDate = artPostDate;
+		this.replyId = replyId;
 		this.userId = userId;
-		this.artId = artId;
+		this.replyLikeTime = replyLikeTime;
 	}
 
 	@Override
 	public String toString() {
-		return "ArtPostVO [id=" + id + ", artPostDate=" + artPostDate + ", userId=" + userId + ", artId=" + artId + "]";
+		return "ReplyLikeVO [id=" + id + ", replyId=" + replyId + ", userId=" + userId + ", replyLikeTime="
+				+ replyLikeTime + "]";
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class ArtPostVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ArtPostVO other = (ArtPostVO) obj;
+		ReplyLikeVO other = (ReplyLikeVO) obj;
 		return Objects.equals(id, other.id);
 	}
 
@@ -48,12 +49,12 @@ public class ArtPostVO {
 		this.id = id;
 	}
 
-	public Timestamp getArtPostDate() {
-		return artPostDate;
+	public Long getReplyId() {
+		return replyId;
 	}
 
-	public void setArtPostDate(Timestamp artPostDate) {
-		this.artPostDate = artPostDate;
+	public void setReplyId(Long replyId) {
+		this.replyId = replyId;
 	}
 
 	public Long getUserId() {
@@ -64,12 +65,12 @@ public class ArtPostVO {
 		this.userId = userId;
 	}
 
-	public Long getArtId() {
-		return artId;
+	public Timestamp getReplyLikeTime() {
+		return replyLikeTime;
 	}
 
-	public void setArtId(Long artId) {
-		this.artId = artId;
+	public void setReplyLikeTime(Timestamp replyLikeTime) {
+		this.replyLikeTime = replyLikeTime;
 	}
 	
 }

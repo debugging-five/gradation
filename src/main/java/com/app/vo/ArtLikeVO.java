@@ -8,6 +8,16 @@ public class ArtLikeVO {
 	private Long artId;
 	private Long userId;
 	private Timestamp artLikeTime;
+	
+	public ArtLikeVO() {;}
+	
+	public ArtLikeVO(Long id, Long artId, Long userId, Timestamp artLikeTime) {
+		this.id = id;
+		this.artId = artId;
+		this.userId = userId;
+		this.artLikeTime = artLikeTime;
+	}
+
 	@Override
 	public String toString() {
 		return "ArtLikeVO [id=" + id + ", artId=" + artId + ", userId=" + userId + ", artLikeTime=" + artLikeTime + "]";

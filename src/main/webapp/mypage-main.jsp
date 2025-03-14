@@ -7,6 +7,6 @@
 <title>mypage-main</title>
 </head>
 <body>
-	이걸 언제 다하냐 ;;;;
+	
 </body>
 </html>

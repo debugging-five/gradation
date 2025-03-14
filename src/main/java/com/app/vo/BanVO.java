@@ -9,6 +9,15 @@ public class BanVO {
 	private Timestamp banDate;
 	private Long userId;
 	
+	public BanVO() {;}
+	
+	public BanVO(Long id, String banReason, Timestamp banDate, Long userId) {
+		this.id = id;
+		this.banReason = banReason;
+		this.banDate = banDate;
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
 		return "BanVO [id=" + id + ", banReason=" + banReason + ", banDate=" + banDate + ", userId=" + userId + "]";

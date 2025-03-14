@@ -6,6 +6,15 @@ public class MajorVO {
 	private Long id;
 	private Long universityId;
 	private String majorName;
+	
+	public MajorVO() {;}
+	
+	public MajorVO(Long id, Long universityId, String majorName) {
+		this.id = id;
+		this.universityId = universityId;
+		this.majorName = majorName;
+	}
+
 	@Override
 	public String toString() {
 		return "majorVO [id=" + id + ", universityId=" + universityId + ", majorName=" + majorName + "]";

@@ -9,6 +9,15 @@ public class UniversityLikeVO {
 	private Long userId;
 	private Timestamp universityLikeTime;
 	
+	public UniversityLikeVO() {;}
+	
+	public UniversityLikeVO(Long id, Long universityId, Long userId, Timestamp universityLikeTime) {
+		this.id = id;
+		this.universityId = universityId;
+		this.userId = userId;
+		this.universityLikeTime = universityLikeTime;
+	}
+
 	@Override
 	public String toString() {
 		return "UniversityLikeVO [id=" + id + ", universityId=" + universityId + ", userId=" + userId
