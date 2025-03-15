@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* 전체 wrapper */
+#wrapper {
+	background-color : #fbfcfc;
+}
+
+/* 제목 : exhibition */
+#title-wrapper p {
+	color : #333333;
+	font-size : 30px;
+	display : flex;
+	justify-content : center;
+	margin : 86px 0 0 0;
+}
+
+/* 그라데이션 전시회 | 대학교 전시회 */
+#category-wrapper {
+	font-size : 16px;
+	margin : 35px 0 0 0;
+	display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+/* | */
+#category-wrapper span {
+	color : #6e7476;
+	margin : 0 65px;
+}
+
+/* 지도 api wrapper */
+#map-wrapper {
+	display : flex;
+	justify-content: center; 
+	align-items : center;
+}
+
+/* 지도 api */
+#map-wrapper div {
+	background-color : #6e7476;
+	width : 1160px;
+	height : 561px;
+	margin : 87px 0 0 0;
+	text-align : center;
+}
+
+#university-wrapper {
+	width : 481px;
+	height : 479px;
+	margin : 100px 0 0 120px;
+	font-size : 16px;
+}
+
+#bar {
+	width : 480px;
+	border-bottom : solid 1px #6e7476;
+	display : flex;
+}
+
+#bar-left {
+	margin : 0 0 14px 0;
+}
+
+#bar-left span {
+	color : #333333;
+}
+
+.bar-menu {
+	margin : 0 48px 0 0;	
+}
+
+
+#bar-right {
+	margin : 0 0 0 38px;
+}
+
+#bar-right input {
+	width : 147px;
+	height : 29px;
+	border : solid 1px #6e7476;
+	border-radius : 3px;
+}
+
+#bar-right input::placeholder  {
+	padding : 0 0 0 12px;
+}
+
+
+
+
+
+
+
