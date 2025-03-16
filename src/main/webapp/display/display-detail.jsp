@@ -51,6 +51,6 @@
             <p>색감이 너무 좋아요 👍</p>
         </div>
     </div>
-</div>ㄴ
+</div>
 </body>
 </html>
