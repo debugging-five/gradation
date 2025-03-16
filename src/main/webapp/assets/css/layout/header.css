@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FBFCFC;
+    height: 56px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    margin-left: 53px;
+}
+
+.menu {
+    margin-left: 52px;
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #6E7476;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.menu li a:hover {
+    color: #EE3333;
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 13px;
+}
+
+.headerSearch {
+    height: 16px;
+    cursor: pointer; /* 일단 클릭 되는 척 */
+    margin-right: 54px;
+}
+
+.sign-in {
+    text-decoration: none;
+    color: #6E7476;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.sign-in:hover {
+    color: #EE3333;
+}
