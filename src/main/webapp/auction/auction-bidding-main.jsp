@@ -18,7 +18,7 @@
 	
 		<!-- 경매 작품 사진-->
 		<div id="auction-img">
-			<img src="../assets/images/auction/auction1.jpg" alt="경매 작품"/>
+			<div class="img"><p>경매 작품 사진</p></div>
 		</div>
 		
 		<!-- 경매 정보 -->

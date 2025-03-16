@@ -25,15 +25,19 @@
 #auction-img {
 	display : flex;
 	justify-content : center;
+	align-items : center;
 	width : 560px;
 	height : 560px;
 	background-color : #d9d9d9;
 }
 
-#auction-img img {
+.img{
 	width : 420px;
 	height : 560px;
+	color : #333333;
 }
+
+
 
 
 
