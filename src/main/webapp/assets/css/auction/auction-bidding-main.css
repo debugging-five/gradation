@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#wrapper {
+	background-color : #fbfcfc;
+	min-height : 100vh;
+	overflow : hidden;
+	display : flex; 
+	flex-direction : column; 
+}
+
+#title-wrapper p {
+	color : #333333;
+	font-size : 30px;
+	display : flex;
+	justify-content : center;
+	margin : 86px 0 0 0;
+}
+
+#auction-detail {
+	width : 1160px;
+	margin : 70px auto 0 ;
+	gap : 120px;
+}
+
+#auction-img {
+	display : flex;
+	justify-content : center;
+	width : 560px;
+	height : 560px;
+	background-color : #d9d9d9;
+}
+
+#auction-img img {
+	width : 420px;
+	height : 560px;
+}
+
+
+

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/exhibition/exhibition-main.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/font/font-pretendard.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
 <title>대학교 전시회 메인</title>
 </head>
