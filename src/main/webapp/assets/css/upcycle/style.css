@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+.upcycling-form {
+  background-color: #fbfcfc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.upcycling-form .div {
+  background-color: #fbfcfc;
+  width: 1920px;
+  height: 1737px;
+  position: relative;
+}
+
+.upcycling-form .group {
+  position: absolute;
+  width: 1920px;
+  height: 280px;
+  top: 1457px;
+  left: 0;
+}
+
+.upcycling-form .element {
+  position: relative;
+  width: 1922px;
+  height: 282px;
+  top: -1px;
+  left: -1px;
+  background-color: #fbfcfc;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #c0c5c7;
+}
+
+.upcycling-form .group-2 {
+  position: relative;
+  width: 378px;
+  height: 125px;
+  top: 78px;
+  left: 772px;
+}
+
+.upcycling-form .image {
+  position: absolute;
+  width: 220px;
+  height: 45px;
+  top: 0;
+  left: 78px;
+}
+
+.upcycling-form .address-samcheong {
+  position: absolute;
+  height: 40px;
+  top: 85px;
+  left: 0;
+  font-family: "SUIT", Helvetica;
+  font-weight: 400;
+  color: #6e7476;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  line-height: normal;
+}
+
+.upcycling-form .text-wrapper-2 {
+  height: 37px;
+  top: 141px;
+  left: 909px;
+  font-family: "SUIT", Helvetica;
+  font-weight: 700;
+  color: #333333;
+  font-size: 30px;
+  letter-spacing: -0.12px;
+  position: absolute;
+  text-align: center;
+  line-height: normal;
+}
+
+.upcycling-form .group-3 {
+  position: absolute;
+  width: 1002px;
+  height: 36px;
+  top: 249px;
+  left: 460px;
+}
+
+.upcycling-form .line {
+  position: absolute;
+  width: 1000px;
+  height: 2px;
+  top: 35px;
+  left: 0;
+}
+
+.upcycling-form .text-wrapper-3 {
+  position: absolute;
+  height: 26px;
+  top: 0;
+  left: 0;
+  font-family: "SUIT", Helvetica;
+  font-weight: 700;
+  color: #ee3333;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: -0.084px;
+  line-height: normal;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-color {
+  color: #ee3333;
+}
+
+.secondary-color {
+  color: #6e7476;
+}
+
+.background-gray {
+  background-color: #fbfcfc;
+}
+
+.border-gray {
+  border-color: #c0c5c7;
+}
+
+.text-h1 {
+  font-family: "SUIT", Helvetica;
+  font-weight: 700;
+  font-size: 30px;
+  color: #333333;
+}
+
+.text-h2 {
+  font-family: "SUIT", Helvetica;
+  font-weight: 700;
+  font-size: 21px;
+  color: #ee3333;
+}
+
+.text-body {
+  font-family: "Work Sans", Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  color: #6e7476;
+}

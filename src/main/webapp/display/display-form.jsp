@@ -23,24 +23,38 @@
 		<div id="content">
 			<form>
 				<div class="input-text">
-			        <label>작가명 *</label>
-			        <input type="text" placeholder="작가명을 입력하세요.">			
+			        <label>작가명<span class="essential">*</span></label>
+			        <input type="text" placeholder="작가명을 입력하세요."
+			        		style="margin-left: 49px" class="input-box">			
 				</div>
 				<div class="input-text">
-			        <label>작품명 *</label>
-			        <input type="text" placeholder="작품명을 입력하세요.">			
+			        <label>작품명<span class="essential">*</span></label>
+			        <input type="text" placeholder="작품명을 입력하세요."
+			        		style="margin-left: 49px" class="input-box">			
 				</div>
 				<div class="input-text">
-			        <label>작품 분류 *</label>
-			        <input type="text" placeholder="작품 분류를 선택하세요">			
+			        <label>작품 분류<span class="essential">*</span></label>
+			        <input type="text" placeholder="작품 분류를 선택하세요"
+			        		style="margin-left: 25px" class="input-box">	
+				    <select>
+	                    <option>분류</option>
+	                    <option>회화</option>
+	                    <option>조각</option>
+	                    <option>한국화</option>
+	                    <option>공예</option>
+	                    <option>건축</option>
+	                    <option>서예</option>
+	                </select>		
 				</div>
 				<div class="input-text">
-			        <label>작품 재료 *</label>
-			        <input type="text" placeholder="작품 재료를 입력하세요.">			
+			        <label>작품 재료<span class="essential">*</span></label>
+			        <input type="text" placeholder="작품 재료를 입력하세요."
+			        		style="margin-left: 25px" class="input-box">			
 				</div>
 				<div class="input-text">
-			        <label>작품 규격*</label>
-			        <input type="text" placeholder="가로 X 세로 X 높이">			
+			        <label>작품 규격<span class="essential">*</span></label>
+			        <input type="text" placeholder="가로 X 세로 X 높이"
+			        		style="margin-left: 25px" class="input-box">			
 				</div>
 			</form>
 		</div>
@@ -48,7 +62,7 @@
 	
 	<!-- 작품설명 -->
 	<div>
-		<label class="artist-info">작품설명 *</label>
+		<label class="artist-info">작품설명<span class="essential">*</span></label>
 		<textarea placeholder="작품 설명을 입력하세요." class="info-typing"></textarea>	
 	</div>
 	
