@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/layout/header.css" />
 <title>헤더</title>
 </head>
 <body>
@@ -19,10 +20,10 @@
                 <li><a href="#">exhibition</a></li>
                 <li><a href="#">upcycling</a></li>
             </ul>
-            <div class="login-wrap">
-                <img src="<%= request.getContextPath() %>/assets/images/layout/header/search-icon.png" alt="Search" class="icon">
-                <a href="#" class="sign-in">sign in</a>
-            </div>
+            <div class="login-section">
+               <img class="headerSearch"  src="../assets/images/layout/header/headerSearch.png" alt="search">
+               <a href="#" class="sign-in">sign in</a>
+			</div>
         </nav>
     </header>
 </body>
