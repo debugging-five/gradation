@@ -28,17 +28,69 @@ nav {
     gap: 60px;
 }
 
+.menu li {
+    position: relative; /* 드롭다운 위치 조절 */
+}
+
 .menu li a {
     text-decoration: none;
     color: #6E7476;
     font-size: 19px;
     font-weight: normal;
+    
 }
 
 .menu li a:hover {
+    text-decoration: underline;
     color: #EE3333;
 }
 
+/* 드롭다운 */
+.dropdown {
+    display: none;
+    position: absolute; /* li아래 배치 */
+    top: 50px; /* 상위 메뉴 바로 아래에 위치 */
+    left: -30px; /* 왼쪽으로 10px 이동 */
+    background-color: r#FBFCFC;
+    list-style: none; /* 앞에 점 없애기 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border: 0.1px solid #C0C5C7;
+    padding: 10px 10px 10px 10px;
+}
+
+/* 드롭다운 내부 스타일 */
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: #6E7476;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.dropdown li a:hover {
+    background-color: #f2f2f2;
+    color: #EE3333;
+}
+
+/* 마우스를 올렸을 때 드롭다운 표시 */
+.menu li:hover > .dropdown {
+    display: block;
+}
+
+/* 대학교 전시회 드롭다운 */
+.sub-dropdown {
+	padding: 0px 0px 0px 10px;
+    list-style: "-";
+}
+
+
+
+/* 로그인 섹션 */
 .login-section {
     display: flex;
     align-items: center;
