@@ -125,15 +125,25 @@ input::placeholder {
 	margin : 15px 0 0 0;
 }
 
-.bidding {
-	width : 190px;
-	height : 70px;
-	border : solid 1.5px var(--color-primary);
-	border-radius : 3px;
+button {
+  font-family: var(--font-family-Pretendard-Regular);
+  	display: flex;
+  	align-items: center; 
+  	justify-content: center; 
+  	border-radius : 3px; 
+  	border : solid 1.5px var(--color-primary);
 }
 
-.bidding h3 {
-	color : var(--color-primary);
+.bidding {
+
+	width : 190px;
+	height : 70px;
+
+	background-color : var(--color-primary);
+	color : var(--color-gray100);
+
+	font-size : var(--font-size-h3);
 }
+
 
 

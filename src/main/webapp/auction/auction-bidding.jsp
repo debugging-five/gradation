@@ -70,11 +70,13 @@
 			</div>
 		 </div>
 		 
-		 <div class="popup-right">
-		 	<button class="bidding">
-		 		<h3>응찰하기</h3>
-		 	</button>
-		 	<button class="back">돌아가기</button>
+		 <div class="popup-button">
+		 	<div>
+			 	<button class="bidding">응찰하기</button>
+		 	</div>
+		 	<div>
+			 	<button class="back">돌아가기</button>
+		 	</div>
 		 </div>
 		
 
