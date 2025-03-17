@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/layout/header.css" />
-<title>헤더</title>
+<title>header</title>
 </head>
 <body>
     <header>
