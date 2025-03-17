@@ -18,7 +18,7 @@
                    <p class="address-samcheong">
                 <span class="text-wrapper">146, Teheran-ro, Gangnam-gu, </span>
                 <a
-                  href="https://www.jusoen.com/addreng.asp?p1=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C+146&x=0&y=0#"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   ><span class="text-wrapper"> Seoul</span></a
