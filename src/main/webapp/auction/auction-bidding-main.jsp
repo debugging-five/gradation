@@ -15,7 +15,7 @@
 
 <div id="wrapper">
 	<div id="title-wrapper">	
-		<p>auction</p>	
+		<h2>auction</h2>	
 	</div>
 	
 	<div id="auction-detail">
@@ -32,12 +32,12 @@
 			<!-- 경매 정보1 -->
 			<div id="auction-info1">
 				<div>
-					<h1 class="title">당황한 동상</h1>
+					<h2 class="title">당황한 동상</h2>
 				</div>
 				<div class="artist">
-					<p>작가명</p>
-					<span>|</span>
-					<p>홍길동</p>
+					<h3>작가명</h3>
+<!-- 					<span>|</span> -->
+					<h3>홍길동</h3>
 				</div>
 				
 				<div class="etc">
@@ -50,24 +50,24 @@
 			<!-- 경매 정보2 -->
 			<div id="auction-info2">
 				<div class="info">
-					<p>마감일</p>
-					<p>2025 . 01 . 21 . 8:00:00</p>
+					<h4>마감일</h4>
+					<h4>2025 . 01 . 21 . 8:00:00</h4>
 				</div>
 				<div class="info">
-					<p>추정가</p>
-					<p>KRW 1,000,000 ~ 2,000,000</p>
+					<h4>추정가</h4>
+					<h4>KRW 1,000,000 ~ 2,000,000</h4>
 				</div>
 				<div class="info">
-					<p>시작가</p>
-					<p>KRW 500,000</p>
+					<h4>시작가</h4>
+					<h4>KRW 500,000</h4>
 				</div>
 			</div>
 			
 			<!-- 경매 정보3 -->
 			<div>
 				<div class="info">
-					<h1>마감시간</h1>
-					<h1>4일 4시간 44분 44초</h1>
+					<h2>마감시간</h2>
+					<h2>4일 4시간 44분 44초</h2>
 				</div>
 				<div class="info2 first">
 					<p>현재 입찰가</p>

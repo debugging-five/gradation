@@ -14,9 +14,7 @@ body {
     justify-content: center;
 }
 
-#title-wrapper p {
-	color : #333333;
-	font-size : 30px;
+#title-wrapper h2 {
 	margin : 86px 0 0 0;
 }
 
@@ -45,7 +43,6 @@ body {
 }
 
 .img p {
-	color : #333333;
 	font-weight : bold;
 	font-size : 20px;
 }
@@ -61,7 +58,6 @@ body {
 }
 
 .title {
-	color : #333333;
 	font-size : 30px;
 }
 
@@ -69,22 +65,20 @@ body {
     display: flex;
     align-items: center; 
     gap: 10px;
+    margin : 22px 0 0 0;
 }
 
-.artist p, span {
-	color : #333333;
+.artist span {
 	font-size : 21px;
-	font-weight : bold;
-	margin : 22px 0 0 0;
 }
 
 .etc {
-	margin : 13px 0 0 0;
+	margin : 19px 0 0 0;
 }
 
 .etc p{
 	color : #6e7476;
-	font-size : 12px;
+	font-size : var(--font-size-h8);
 	margin : 6px 0 0 0;
 }
 
@@ -93,8 +87,7 @@ body {
 	justify-content : space-between;
 }
 
-.info p {
-	color : #333333;
+.info h4 {
 	margin : 28px 0 0 0;
 	font-size : 18px;
 }
@@ -105,8 +98,7 @@ body {
 	padding : 0 0 28px 0;
 }
 
-.info h1 {
-	color : #333333;
+.info h2 {
 	margin : 18px 0 0 0;
 }
 
@@ -152,6 +144,8 @@ body {
 .auto-bidding, .bidding {
 	background-color : #ee3333;
 	color : #fbfcfc;
+	
+	
 }
 
 
