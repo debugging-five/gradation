@@ -53,7 +53,7 @@
 				<span>|</span>
 				<a>비밀번호 찾기</a>
 				<span>|</span>
-				<a href="../join/join-main.jsp">회원가입</a>
+				<a href="../join/join-main.user">회원가입</a>
 			</div>
 			<div>
 				<span>또는 다른 서비스 계정으로 로그인</span>

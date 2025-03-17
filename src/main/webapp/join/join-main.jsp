@@ -19,13 +19,16 @@
 			<div>
 				<span class="user-text">아이디</span>
 				<span class="red-star">*</span>
-				<input type="text" name="userId" placeholder="6~20자 영문, 숫자"/>
-				<button type="button" onclick="return idCheck()"><p>중복체크</p></button>
-			</div>	
+				<input type="text" id="id-input" name="userId" placeholder="6~20자 영문, 숫자"/>
+				<button type="button" id="id-check-button"><p>중복체크</p></button>
+			</div>
+			<div><p id="already use id">이미 사용중인 아이디 입니다.</p></div>
+			<div><p class="need-write">필수 항목입니다.</p></div>
 			<div>
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
 				<input type="password" placeholder="8~12자 영문, 숫자, 특수문자 "/>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">비밀번호 확인</span>
@@ -83,9 +86,10 @@
 			</div>
 			
 			<div>
-				<button id="join-button" type="submit">회원가입</button>
+				<button id="join-button" type="button">회원가입</button>
 			</div>
 		</form>
 	</div>
 </body>
+<script type="text/javascript" src="../assets/js/join/join-main.js"></script>
 </html>
