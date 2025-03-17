@@ -1,20 +1,45 @@
 @charset "UTF-8";
 
-footer {
+body {
+	width: 100%;
+	height: 100%;
 	background-color: #FBFCFC;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .footer-menu {
     gap: 60px;
     display: flex;
-    padding-left: 52px;
+    margin-top: 84px;
+    margin-left: 52px;
 }
 
-.menu1 {
-	align-items: center;
-	
+.menu-wrap {
+	color: #333333;
 }
 
 li {
 	list-style: none;
 }
+
+a {
+	text-decoration: none;
+	color: #6E7476;
+}
+
+.icon-wrap {
+	/* 오른쪽에 맞출때! */
+	margin-left: auto; 
+	margin-right: 12px; 
+}
+
+.icon {
+	color: #333333;
+}
+
