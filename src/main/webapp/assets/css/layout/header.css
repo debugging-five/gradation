@@ -78,6 +78,7 @@ nav {
 }
 
 /* 마우스를 올렸을 때 드롭다운 표시 */
+/* 이거안됌 하는중  */
 .menu li:hover > .dropdown {
     display: block;
 }
