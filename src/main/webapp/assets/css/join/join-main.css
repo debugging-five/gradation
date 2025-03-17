@@ -1,1 +1,14 @@
 @charset "UTF-8";
+/* body{
+	font-size: 0;
+} */
+
+.user-text {
+	font-size: var(--font-size-h4);
+	color: var(--color-black);
+}
+
+.red-star {
+	font-size: var(--font-size-h4);
+	color: var(--color-primary);	
+}
