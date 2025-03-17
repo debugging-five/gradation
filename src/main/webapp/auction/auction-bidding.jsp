@@ -27,7 +27,7 @@
 				</div>
 				<div class="info">
 					<h4>마감시간</h4>
-					<h4>4일 12시간 44분 44초</h4>
+					<h4 class="text-red">4일 12시간 44분 44초</h4>
 				</div>
 				<div class="info">
 					<h4>경쟁응찰자</h4>
@@ -59,14 +59,13 @@
 		 
 		 	<input type="text" placeholder="응찰가를 입력해주세요."/>
 		 
-
 			<div class="info3 bid">
 				<h4>현재 입찰가<span>(KRW)</span></h4>
 				<h3>550,000</h3>
 			</div>
 			<div class="info3">
 				<h4>최소 응찰가<span>(KRW)</span></h4>
-				<h3>560,000</h3>
+				<h3 class="text-red">560,000</h3>
 			</div>
 		 </div>
 		 
@@ -78,12 +77,12 @@
 			 	<button class="back">돌아가기</button>
 		 	</div>
 		 </div>
-		
-
 	</div>
+	
+	<div id="notice">
+		<p>※ 작품 마감 30초 전에 응찰이 들어왔을 경우 해당작품 마감이 30초 연장됩니다. 한번 응찰된 작품은 응찰을 취소 할 수 없습니다. </p>
+		<p>신중한 선택 부탁드립니다. 낙찰 후 결제기한 내에 결제하지 않으면 경매이용이 불가능해질 수 있습니다. </p>
 	</div>
-
-
 </div>
 
 
