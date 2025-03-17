@@ -43,7 +43,7 @@
     }
    
 
-    // 글자 수 체크 & 버튼 활성화
+ // 글자 수 체크 & 버튼 활성화
     function countCharacters() {
         let textArea = document.getElementById("message");
         let charCount = textArea.value.length;
@@ -56,6 +56,12 @@
         } else {
             sendBtn.disabled = true;
             sendBtn.classList.remove("active");
+        }
+
+        // 글자 수가 500을 넘지 않도록 제한
+        if (charCount > 500) {
+            textArea.value = textArea.value.substring(0, 500);  // 500자까지만 입력 가능
+            document.getElementById("charCount").textContent = "500 / 500"; // 문자 수 표시 갱신
         }
     }
 

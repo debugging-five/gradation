@@ -19,10 +19,13 @@
 
 	<div id="upload">
 		<!-- 첨부파일 업로드 -->
-		<div class="attachment-box">
-			<img class="add-image" alt="add-icon" src="../assets/images/display/add.png">
-			<span class="add-text">첨부파일 업로드</span>
+		<div class="attachment-box" onclick="document.getElementById('file-input').click();">
+		    <img class="add-image" alt="add-icon" src="../assets/images/display/add.png">
+		    <span class="add-text">첨부파일 업로드</span>
+		    <!-- 숨겨진 파일 업로드 input -->
+		    <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
 		</div>
+
 	
 		<!-- 작가 및 작품 정보 -->
 		<div id="content">
@@ -37,22 +40,21 @@
 			        <input type="text" placeholder="작품명을 입력하세요."
 			        		style="margin-left: 49px" class="input-box">			
 				</div>
-				<div class="input-text">
-				    <label>작품 분류<span class="essential">*</span></label>
-					    <span id="category-text">
-						    작품 분류를 선택하세요
-						    <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
-						</span> 
-				    <select id="category-select" class="select-box">
-				        <option value="">분류</option>
-				        <option value="회화">회화</option>
-				        <option value="조각">조각</option>
-				        <option value="한국화">한국화</option>
-				        <option value="공예">공예</option>
-				        <option value="건축">건축</option>
-				        <option value="서예">서예</option>
-				    </select>
-				</div>
+					<div class="input-text">
+					    <label>작품 분류<span class="essential">*</span></label>
+					    <span id="category-text" style="cursor: pointer;">
+					        작품 분류를 선택하세요
+					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+					    </span> 
+					    <select id="category-select" class="select-box" style="display: none;">
+					        <option value="회화">회화</option>
+					        <option value="조각">조각</option>
+					        <option value="한국화">한국화</option>
+					        <option value="공예">공예</option>
+					        <option value="건축">건축</option>
+					        <option value="서예">서예</option>
+					    </select>
+					</div>
 				<div class="input-text">
 			        <label>작품 재료<span class="essential">*</span></label>
 			        <input type="text" placeholder="작품 재료를 입력하세요."
@@ -90,15 +92,5 @@
 	
 </div>
 </body>
-<script>
-	document.getElementById('category-select').addEventListener('change', function() {
-	    var selectedValue = this.value;
-	    var categoryText = document.getElementById('category-text');
-	    if (selectedValue) {
-	        categoryText.textContent = selectedValue; // 선택된 값으로 텍스트 변경
-	    } else {
-	        categoryText.textContent = "작품 분류를 선택하세요"; // 기본 텍스트로 돌아가게 설정
-	    }
-	});
-</script>
+<script type="text/javascript" src="../assets/js/display/display-form.js"></script>
 </html>

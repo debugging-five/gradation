@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/display/display-detail.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>전시 상세</title>
 </head>
 <body>
