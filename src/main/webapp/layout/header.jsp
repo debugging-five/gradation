@@ -18,7 +18,7 @@
             <ul class="menu">
             
              	<!-- display -->
-                <li><a href="#">display</a>
+                <li id="category1"><a href="#">display</a>
                 	<ul class="dropdown">
                 		<!-- display 드롭다운 -->
                 		<li><a href="#">전시 중인 작품</a></li>
@@ -28,10 +28,10 @@
                 </li>
                 
                 <!-- artist -->
-                <li><a href="#">artist</a></li>
+                <li id="category2"><a href="#">artist</a></li>
                 
                 <!-- auction -->
-                <li><a href="#">auction</a>
+                <li id="category3"><a href="#">auction</a>
                 	<ul class="dropdown">
                 		<!-- auction 드롭다운 -->
                 		<li><a href="#">경매중</a></li>
@@ -41,7 +41,7 @@
                 </li>
                 
                 <!-- exhibition -->
-                <li><a href="#">exhibition</a>
+                <li id="category4"><a href="#">exhibition</a>
                 	<ul class="dropdown">
                 		<!-- exhibition 드롭다운 -->
                 		<li><a href="#">그라데이션 전시회</a></li>
@@ -55,7 +55,7 @@
                 </li>
                 
                 <!-- upcycling -->
-                <li><a href="#">upcycling</a>
+                <li id="category5"><a href="#">upcycling</a>
                 	<ul class="dropdown">
                 		<!-- upcycling 드롭다운 -->
                 		<li><a href="#">업사이클</a></li>
