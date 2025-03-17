@@ -7,6 +7,13 @@
 <title>회원가입</title>
 </head>
 <body>
-
+	<h2 id="join-head">회원가입</h2>
+	
+	<form action="join-ok" method="post">
+		<div>
+			<h4></h4>
+		</div>			
+	</form>
+	
 </body>
 </html>
