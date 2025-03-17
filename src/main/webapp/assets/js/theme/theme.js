@@ -2,10 +2,10 @@ const theme = {
     PALLETE: {
         primary: {
             main: "#ee3333",
-            sub: "#fff4d8",
+
         },
         black: "#333333",
-        secondary: "#f1ebf5",
+
         white: "#fbfcfc",
         gray: {
             500: "#C0C5C7",
