@@ -59,12 +59,17 @@
         }
     }
 
-    // 전송 버튼 클릭 이벤트
+ 	// 전송 버튼 클릭 이벤트 수정
     function sendMessage() {
         let message = document.getElementById("message").value;
-        alert("메시지가 전송되었습니다: " + message);
-        document.getElementById("message").value = "";
-        countCharacters();
+
+        if (message.trim() === "") {
+            alert("메시지를 입력하세요.");
+            return;
+        }
+
+        // artist-contact-popup-ok.jsp로 이동
+        location.href = "artist-contact-popup-ok.jsp";
     }
 </script>
 
