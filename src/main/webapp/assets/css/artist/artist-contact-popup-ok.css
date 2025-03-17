@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* 전체 화면을 덮는 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달 스타일 */
+.modal {
+    background: white;
+    border-radius: 5px;
+    width: 600px;
+    height: 375px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 모달 헤더 */
+.ok-icon {
+	width: 56px;
+	height: 56px;
+	color: red;
+	margin-top: 60px;
+}
+
+/* 타이틀 */
+.big-text {
+    color: red;
+    font-weight: bold;	
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* 작은 글씨 */
+.small-text1 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+.small-text2 {
+    color: gray;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* 버튼 스타일 */
+.close-btn {
+	width:75px;
+	height:35px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.modal-footer {
+	margin-top: 40px;	
+	margin-bottom: 40px;	
+}
+
