@@ -31,14 +31,14 @@ button:focus-visible {
 }
 
 .text-h2 {
-  font-size: val(--font-size-h3);
-  font-weight: val(--font-weight-bold);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }
 
 .text-body {
-  font-size: val(--font-size-h8);
-  font-weight: val();
+  font-size: var(--font-size-h8);
+  font-weight: var();
   color: var(--color-gray500);
 }
 
@@ -53,10 +53,10 @@ button:focus-visible {
 .upcycling-form .container {
   width: 80%;
   max-width: 1200px;
-  background-color: val(--color-gray100);
+  background-color: var(--color-gray100);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px val(--color-black);
+  box-shadow: 0 2px 10px var(--color-black);
 }
 
 .upcycling-form .header {
@@ -72,7 +72,7 @@ button:focus-visible {
 .input-group label {
   font-size: 16px;
   font-weight: 600;
-  display: val(--color-black);
+  display: var(--color-black);
   margin-bottom: 5px;
 }
 
@@ -96,8 +96,8 @@ button:focus-visible {
 
 .button {
   padding: 10px 20px;
-  font-size: val(--font-size-h7);
-  font-weight: val(--font-weight-semibold);
+  font-size: var(--font-size-h7);
+  font-weight: var(--font-weight-semibold);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -105,7 +105,7 @@ button:focus-visible {
 
 .button.primary {
   background-color: var(--color-primary);
-  color: val(--color-gray100);
+  color: var(--color-gray100);
 }
 
 .button.secondary {
