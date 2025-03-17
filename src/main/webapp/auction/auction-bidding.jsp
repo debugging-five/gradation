@@ -1,4 +1,3 @@
-<!-- 경매 팝업 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,9 +6,11 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<title>Insert title here</title>
+<title>경매 팝업</title>
 </head>
 <body>
+
+
 
 <div id="wrapper">
 
@@ -57,11 +58,11 @@
 		 </div>
 		 
 		 <div class="popup-left">
-			<div class="info bid1">
+			<div class="info3 bid">
 				<p>현재 입찰가<span>(KRW)</span></p>
 				<p>550,000</p>
 			</div>
-			<div class="info bid2">
+			<div class="info3">
 				<p>최소 응찰가<span>(KRW)</span></p>
 				<p>560,000</p>
 			</div>

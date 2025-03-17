@@ -100,12 +100,26 @@ input::placeholder {
 	padding : 0 0 0 16px;
 }
 
-.bid1 {
+/* .bid1 {
 	margin : 15px 0 0 0;
 }
 
 .bid2 {
 	margin : 10px 0 0 0;
 }
+ */
 
+.info3 {
+	display : flex;
+	justify-content : space-between;
+}
 
+.info3 p {
+	color : #333333;
+	margin : 10px 0 0 0;
+	font-size : 21px;
+}
+
+.bid {
+	margin : 15px 0 0 0;
+}

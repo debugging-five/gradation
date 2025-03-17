@@ -1,15 +1,18 @@
-<!-- 경매 상세 페이지 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<title>Insert title here</title>
+<title>경매 상세 페이지</title>
 </head>
 <body>
+
+<%@ include file="../layout/header.jsp" %>
+
 <div id="wrapper">
 	<div id="title-wrapper">	
 		<p>auction</p>	
