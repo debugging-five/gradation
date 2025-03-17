@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<div>
-			<h2 id="login">로그인 hello</h2>
+			<h2 id="login">로그인</h2>
 		</div>
 		<div>
 			<form action="login-ok" method="post">

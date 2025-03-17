@@ -30,7 +30,7 @@ body {
 	width: 440px;
 	height: 27px;
 	margin-top: 11px;
-	border-bottom: solid 1px var(--color-prime);
+	border-bottom: solid 1px var(--color-black);
 }
 .login-input-text {
 	font-size: 16px;
