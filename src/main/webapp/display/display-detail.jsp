@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../layout/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="assets/css/display/display-detail.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-detail.css" />
 <title>전시 상세</title>
 </head>
 <body>
@@ -14,19 +15,18 @@
     
     <div id="content">
         <!-- 작품 이미지 -->
-        <div class="image-box">
-            <img src="assets/images/sample-art.jpg" alt="작품 이미지">
-        </div>
+        <div class="image-box"></div>
         
         <!-- 작품 정보 -->
         <div class="info-box">
-            <h2 class="title">절망에 빠진 동상</h2>
-            <p class="likes">좋아요 ♥ 999+</p>
-            <p><strong>제작연도:</strong> 2025</p>
-            <p><strong>재료:</strong> 돌+철</p>
-            <p><strong>규격:</strong> 200 X 50 X 50</p>
-            <p><strong>분류:</strong> 조각</p>
-            <button class="like-button">좋아요 ♥</button>
+            <span class="title">절망에 빠진 동상</span>
+            <h3 class="artist">작가명 ㅣ 박세현</h3>
+            <p class="likes">좋아요 999+개</p>
+            <p class="date"><strong>제작연도</strong> 2025</p>
+            <p class="ingredient"><strong>재료</strong> 돌+철</p>
+            <p class="size"><strong>규격</strong> 200 X 50 X 50</p>
+            <p class="category"><strong>부문</strong> 조각</p>
+            <button class="like-button">좋아요</button>
             <button class="contact-button">작가와 연락</button>
         </div>
     </div>
