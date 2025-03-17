@@ -46,10 +46,8 @@ body {
 }
 
 
-.info p {
-	color : #333333;
+.info h4 {
 	margin : 15px 0 0 0;
-	font-size : 21px;
 }
 
 .info2 {
@@ -57,8 +55,7 @@ body {
 	justify-content : space-between;
 }
 
-.info2 p {
-	color : #333333;
+.info2 h6 {
 	margin : 15px 0 0 0;
 	font-size : 18px;
 }
@@ -77,11 +74,11 @@ body {
     justify-content: center;
     margin : 34px 0 0 0;
 }
-
+/* 
 #popup-right p {
 	color : #333333;
 }
-
+ */
 #popup-info2 {
 	border-top : solid 1px #6e7476;
 	margin : 47px 0 0 0;
@@ -114,10 +111,8 @@ input::placeholder {
 	justify-content : space-between;
 }
 
-.info3 p {
-	color : #333333;
+.info3 h4 {
 	margin : 10px 0 0 0;
-	font-size : 21px;
 }
 
 .bid {

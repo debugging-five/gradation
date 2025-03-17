@@ -22,26 +22,26 @@
 		<div class="popup-info">
 			<div class="popup-left">
 				<div class="info title">
-					<p>당황한 동상</p>
-					<p>경매중</p>
+					<h4>당황한 동상</h4>
+					<h4>경매중</h4>
 				</div>
 				<div class="info">
-					<p>마감시간</p>
-					<p>4일 12시간 44분 44초</p>
+					<h4>마감시간</h4>
+					<h4>4일 12시간 44분 44초</h4>
 				</div>
 				<div class="info">
-					<p>경쟁응찰자</p>
-					<p>1명</p>
+					<h4>경쟁응찰자</h4>
+					<h4>1명</h4>
 				</div>
 				
 				<!-- 추정가, 시작가 -->
 				<div class="info2">
-					<p>추정가<span>(KRW)</span></p>
-					<p>1,000,000,000 ~ 2,000,000,000</p>
+					<h6>추정가<span>(KRW)</span></h6>
+					<h6>1,000,000,000 ~ 2,000,000,000</h6>
 				</div>
 				<div class="info2">
-					<p>시작가<span>(KRW)</span></p>
-					<p>500,000</p>
+					<h6>시작가<span>(KRW)</span></h6>
+					<h6>500,000</h6>
 				</div>
 				
 			</div>
@@ -59,12 +59,12 @@
 		 
 		 <div class="popup-left">
 			<div class="info3 bid">
-				<p>현재 입찰가<span>(KRW)</span></p>
-				<p>550,000</p>
+				<h5>현재 입찰가<span>(KRW)</span></h5>
+				<h5>550,000</h5>
 			</div>
 			<div class="info3">
-				<p>최소 응찰가<span>(KRW)</span></p>
-				<p>560,000</p>
+				<h4>최소 응찰가<span>(KRW)</span></h4>
+				<h4>560,000</h4>
 			</div>
 		 
 		 </div>

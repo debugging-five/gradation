@@ -50,15 +50,15 @@
 			<!-- 경매 정보2 -->
 			<div id="auction-info2">
 				<div class="info">
-					<h4>마감일</h4>
+					<h5>마감일</h5>
 					<h4>2025 . 01 . 21 . 8:00:00</h4>
 				</div>
 				<div class="info">
-					<h4>추정가</h4>
+					<h5>추정가</h5>
 					<h4>KRW 1,000,000 ~ 2,000,000</h4>
 				</div>
 				<div class="info">
-					<h4>시작가</h4>
+					<h5>시작가</h5>
 					<h4>KRW 500,000</h4>
 				</div>
 			</div>
@@ -70,23 +70,51 @@
 					<h2>4일 4시간 44분 44초</h2>
 				</div>
 				<div class="info2 first">
-					<p>현재 입찰가</p>
-					<p>KRW 550,000</p>
+					<h3>현재 입찰가</h3>
+					<h3>KRW 550,000</h3>
 				</div>
 				<div class="info2 second">
-					<p>최소 응찰가</p>
-					<p>KRW 560,000</p>
+					<h3>최소 응찰가</h3>
+					<h3>KRW 560,000</h3>
 				</div>
 			</div>
 			
 			<div id="button-wrapper">
-				<button class="button list">목록으로</button>
-				<button class="button auto-bidding">자동응찰</button>
-				<button class="button bidding">응찰</button>
+				<button class="button list">
+					<p>목록으로</p>
+				</button>
+				<button class="button auto-bidding">
+					<p>자동응찰</p>
+				</button>
+				<button class="button bidding">
+					<p>응찰</p>
+				</button>
 			</div>
-		
 		</div>
 	</div>
+
+	<div id="auction-list">
+		<div id="auction-ing">
+			<p>경매중인 작품</p>
+		</div>
+			
+		<div id="art-wrapper">
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+		</div>
+
+	</div>
+
 </div>
 
 </body>
