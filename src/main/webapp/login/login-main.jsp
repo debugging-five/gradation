@@ -5,12 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../assets/css/login/login-main.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>gradation 로그인</title>
 </head>
 <body>
+
+	<%@ include file="../layout/header.jsp" %>
+
 	<div class="container">
 		<div>
-			<h2 id="login">로그인</h2>
+			<h2 id="login">로그인 hello</h2>
 		</div>
 		<div>
 			<form action="login-ok" method="post">
