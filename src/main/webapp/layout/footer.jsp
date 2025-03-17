@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/layout/footer.css" />
+
 <title>footer</title>
 </head>
 	<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
@@ -14,7 +15,7 @@
 		<div class="footer-inner">
 			<div class="footer-menu">
 				<div class="menu1">
-					<p>주요 기능</p>
+					<p class="menu-wrap">주요 기능</p>
 					<p><a href="#">작품 모아보기</a></p>
 					<p><a href="#">작가</a></p>
 					<p><a href="#">경매</a></p>
@@ -22,24 +23,30 @@
 					<p><a href="#">업사이클링</a></p>
 				</div>
 				<div class="menu2">
-					<p>고객 지원</p>
+					<p class="menu-wrap">고객 지원</p>
 					<p><a href="#">자주 묻는 질문</a></p>
 					<p><a href="#">고객센터</a></p>
 				</div>
 				<div class="menu3">
-					<p>기업 소개</p>
+					<p class="menu-wrap">기업 소개</p>
 					<p><a href="#">그라데이션</a></p>
 				</div>
+				<p class="icon-wrap"> 
+				    <a class="icon" href="https://www.facebook.com/" target="_blank">
+				        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+				    </a>
+				    <a class="icon" href="https://www.instagram.com/" target="_blank">
+				        <i class="fa-brands fa-instagram fa-2xl"></i> 
+				    </a>
+				    <a class="icon" href="https://www.youtube.com/" target="_blank">
+				        <i class="fa-brands fa-youtube fa-2xl"></i>
+				    </a>
+				</p>
 			</div >
-			<div class="icon-wrap"> 
-				<button><i class="fa-brands fa-square-facebook fa-2xl"></i></button> 
- 				<button><i class="fa-brands fa-instagram fa-2xl"></i></button> 
-				<button><i class="fa-brands fa-youtube fa-2xl"></i></button> 
-			</div>
-			<address class="footer-info">
+			<div class="footer-info">
 				상호명 (주)Gradation | 대표 : 서민아 | 개인정보관리책임자 : 김동건 |  사업자 등록번호 : 123-456-7890 | 통신판매업신고번호 : 제 2025-IT아카데미-1008 | 본사 : 서울시 강남구 테헤란로146, 3층<br> 
 				이용약관 | 개인정보처리방침 | 고객지원 : 이메일(rlaehdrjs@naver.com)
-			</address>
+			</div>
 		</div> 
 	</footer>
 	
