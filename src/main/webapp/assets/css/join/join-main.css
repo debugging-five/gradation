@@ -1,7 +1,17 @@
 @charset "UTF-8";
-/* body{
+body{
 	font-size: 0;
-} */
+	background-color: #FBFCFC;
+	width: 100%;
+	height: 100%;
+}
+
+.join-container{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .user-text {
 	font-size: var(--font-size-h4);
@@ -12,3 +22,34 @@
 	font-size: var(--font-size-h4);
 	color: var(--color-primary);	
 }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label{
+	display: block;
+	width: 335px;
+	height: 20px;
+	background: url('../../images/join/checked_off.png') no-repeat 0 0px / contain;
+}
+
+input[type='checkbox']:checked+label{
+	background: url('../../images/join/checked_on.png') no-repeat 0 0px / contain;
+}
+
+.check-label-span{
+	font-size: var(--font-size-h7);
+	color : var(--color-gray500);
+  	vertical-align: middle;
+  	margin-left: 25px;
+ 	 width: 300px;
+ }
+ 
+ #join-button{
+ 	width: 760px;
+ 	height: 58px;
+ 	border : none;
+ 	border-radius: 3px;
+ 	color: var(--color-gray500);
+ }
