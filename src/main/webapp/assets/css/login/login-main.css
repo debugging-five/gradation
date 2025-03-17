@@ -1,4 +1,10 @@
 @charset "UTF-8";
+a {
+  text-decoration: none;
+  color: #333333;
+}
+input:focus {outline:none;}
+
 body {
 	background-color: #FBFCFC;
 	width: 100%;
@@ -15,7 +21,7 @@ body {
 #login {
 	font-size: 30px;
 	margin-top: 178px;	
-	margin-bottom: 40px;
+	margin-bottom: 59px;
 }
 
 .login-input {
@@ -23,7 +29,7 @@ body {
 	justify-content: space-between;
 	width: 440px;
 	height: 27px;
-	margin-top: 30px;
+	margin-top: 11px;
 	border-bottom: solid 1px #333333;
 }
 .login-input-text {
@@ -38,17 +44,27 @@ body {
 	height: 20px;
 }
 
-
-#login-checks {
-	margin-top: 25px;
+.need-write {
+	color: #FBFCFC;
+	font-size: 12px;
+	margin-left: 35px;
 }
 
-#login-button {
+#login-checks {
+	margin-top: 6px;
+}
+
+.login-button {
 	width: 440px;
 	height: 50px;
 	margin-top: 30px;
 	background-color: #C0C5C7; 
 	border: none;
+	border-radius: 3px;
+}
+
+.active {
+	background-color: #3333; /* 입력 시 변경될 색상 */
 }
 
 #login-button-text { 
