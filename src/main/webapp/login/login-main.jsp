@@ -16,7 +16,7 @@
 		</div>
 		<div>
 			<form action="login-ok" method="post">
-				<div class="login-input">
+				<div class="login-input" id="id-input">
 					<div>
 						<img class="input-image" alt="user-icon" src="../assets/images/login/user.png">
 						<input id="id-input-text" class="login-input-text" type="text" name="id" placeholder="아이디" />
@@ -25,7 +25,7 @@
 				<div>
 					<span id="id-need-write" class="need-write">필수 항목입니다.</span>
 				</div>
-				<div class="login-input">
+				<div class="login-input" id="pw-input">
 					<div>
 						<img class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
 						<input id="pw-input-text" class="login-input-text" type="password" name="password" placeholder="비밀번호" />

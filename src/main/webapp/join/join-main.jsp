@@ -15,7 +15,7 @@
 	<div class="join-container">
 		<h2 id="join-head">회원가입</h2>
 	
-		<form action="join-ok" method="post">
+		<form action="join-ok.user" method="post">
 			<div>
 				<span class="user-text">아이디</span>
 				<span class="red-star">*</span>
@@ -27,39 +27,45 @@
 			<div>
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
-				<input type="password" placeholder="8~12자 영문, 숫자, 특수문자 "/>
+				<input type="password" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 "/>
 				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">비밀번호 확인</span>
 				<span class="red-star">*</span>
-				<input type="password" placeholder="8~12자 영문, 숫자, 특수문자 "/>
+				<input type="password" name="checkUserPassword" placeholder="8~12자 영문, 숫자, 특수문자 "/>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">이름</span>
 				<span class="red-star">*</span>
-				<input type="text" placeholder="이름을 입력하세요."/>
+				<input type="text" name="userName" placeholder="이름을 입력하세요."/>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">닉네임</span>
-				<input type="text" placeholder="닉네임을 입력하세요."/>
+				<input type="text" name="userNickname" placeholder="닉네임을 입력하세요."/>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">휴대폰</span>
 				<span class="red-star">*</span>
-				<input type="text" placeholder="휴대폰 번호를 입력하세요."/>
+				<input type="text" name="userPhone" placeholder="휴대폰 번호를 입력하세요."/>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">이메일</span>
 				<span class="red-star">*</span>
-				<input type="text" placeholder="이메일을 입력하세요."/>
-				<button><p>이메일 인증</p></button>
+				<input type="text" name="userEmail" placeholder="이메일을 입력하세요."/>
+				<button type="button" id="email-check-button"><p>이메일 인증</p></button>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">인증번호</span>
 				<span class="red-star">*</span>
-				<input type="text" placeholder="인증번호를 입력하세요."/>
+				<input type="text" name="checkUserEmail" placeholder="인증번호를 입력하세요."/>
 				<button><p>인증번호 확인</p></button>
+				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			
 			<div>
@@ -79,9 +85,9 @@
 	  			<label for="check_need_private">
 	  				<span class="check-label-span">[필수] 개인정보 수집 및 이용 동의</span>
 	  			</label>
-				<input class="check-label" type="checkbox" id="check_private"/>
+				<input name="agreement" class="check-label" type="checkbox" id="check_private"/>
 	  			<label for="check_private">
-	  				<span class="check-label-span">[선택] 개인정보 수집 및 이용 동의</span>
+	  				<span  class="check-label-span">[선택] 개인정보 수집 및 이용 동의</span>
 	  			</label>
 			</div>
 			

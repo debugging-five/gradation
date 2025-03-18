@@ -15,7 +15,6 @@ public class UserjoinController implements Action{
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		
 		result.setPath("join-main.jsp");
 		return result;
 	}
