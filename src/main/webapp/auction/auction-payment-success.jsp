@@ -15,6 +15,7 @@
 
 	<div id="pop-up">
 		<div class="bar">
+			<i class="fa-solid fa-xmark"></i>
 		</div>
 		
 		<div id="icon-wrapper">
