@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/layout/header.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/layout/header.css" />
 <title>header</title>
 </head>
 <body>
     <header>
         <nav>
         	<!-- 로고 이미지 -->
-            <div class="logo">
-                <img src="../assets/images/layout/header/mainLogo.jpg" alt="Main Logo">
+            <div class="headerLogo-wrap">
+                <img id="headerLogo" src="../assets/images/layout/header/headerLogo.png" alt="headerLogo">
             </div>
             
             <ul class="menu">
