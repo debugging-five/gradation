@@ -18,6 +18,7 @@ body {
 	width : 688px;
 	height : 540px;
 	border : solid 1px #6e7476;
+	border-radius : 5px;
 }
 
 .bar {
@@ -50,8 +51,11 @@ body {
 }
 
 
-.info h4 {
+/* .info h4 {
 	margin : 15px 0 0 0;
+} */
+.info h4 {
+	margin : 0 0 15px 0;
 }
 
 .info2 {
@@ -60,7 +64,8 @@ body {
 }
 
 .info2 h6 {
-	margin : 15px 0 0 0;
+/* 	margin : 15px 0 0 0; */
+	margin : 0 0 15px 0;
 	font-size : 18px;
 }
 
@@ -85,18 +90,20 @@ body {
  */
 #popup-info2 {
 	border-top : solid 1px #6e7476;
-	margin : 47px 0 0 0;
+	margin : 42px 0 0 0;
 	display : flex;
 
 }
 
 input {
-	margin : 34px 0 0 35px;
+	margin : 34px 0 0 34px;
 	width : 392px;
 	height : 35px;
 	border-radius : 3px;
 	border : solid 1px #6e7476;
 	background-color: #fbfcfc;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h9);
 }
 
 input::placeholder {
@@ -117,16 +124,20 @@ input::placeholder {
 	justify-content : space-between;
 }
 
-.info3 h3, h4 {
+/* .info3 h3, h4 {
 	margin : 10px 0 0 0;
-}
+} */
 
 .bid {
-	margin : 15px 0 0 0;
+	margin : 15px 0 10px 0;
+}
+
+.popup-button {
+	margin : 0 0 0 32px;
 }
 
 button {
-  font-family: var(--font-family-Pretendard-Regular);
+	font-family: var(--font-family-Pretendard-Regular);
   	display: flex;
   	align-items: center; 
   	justify-content: center; 
@@ -135,14 +146,35 @@ button {
 }
 
 .bidding {
-
 	width : 190px;
 	height : 70px;
-
 	background-color : var(--color-primary);
 	color : var(--color-gray100);
-
 	font-size : var(--font-size-h3);
+	margin : 34px 0 0 0;
+}
+
+.back {
+	width : 190px;
+	height : 35px;
+	background-color : var(--color-gray100);
+	color : var(--color-primary);
+	font-size : var(--font-size-h7);
+	margin : 20px 0 0 0;
+}
+
+#notice {
+	margin : 20px 0 27px 34px;
+}
+
+#notice p {
+	color : var(--color-gray900);
+	font-size : var(--font-size-h9);
+}
+
+.text-red {
+	color : var(--color-primary);
+	font-weight : var(--font-weight-semibold)
 }
 
 
