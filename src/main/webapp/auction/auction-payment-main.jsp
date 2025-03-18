@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<%@ include file="../layout/header.jsp" %>
+
 <div id="wrapper">
 
 	<div id="title-wrapper">	
@@ -45,26 +47,77 @@
 			
 			<!-- 주소 -->
 			<div id="address-wrapper">
-				<div class="list2">
+				<div class="list">
 					<span class="type">주소</span>
 					<span class="star">*</span>
 					<h5>주소(자동완성)</h5>
 				</div>
-
+				<div>
 					<button>주소 검색</button>
-
+				</div>
 			</div>
 			
 			<!-- 상세 주소 -->
-			<div>
-				<h5>상세주소</h5>
-				<input />
+			<div class="list">
+				<span class="type">상세주소</span>
+				<span class="star">*</span>
+				<input type="text" placeholder="주소를 입력하세요." />
 			</div>
 			
+			<!-- 전화번호 -->
+			<div class="list">
+				<span class="type">전화번호</span>
+				<span class="star">*</span>
+				<input type="text" placeholder="전화번호를 입력하세요." />
+			</div>
+			
+			<!-- 이메일 -->
+			<div class="list2">
+				<span class="type">이메일</span>
+				<span class="star">*</span>
+				<input type="text" placeholder="이메일을 입력하세요." />
+			</div>
+			
+			
+			<div id="check-wrapper">
+				<div id="check-user">
+					<input class="checkbox" type="checkbox"/><span>주문자 본인이 맞습니까?</span>
+				</div>
+				<div>
+					<input class="checkbox" type="checkbox"/><span>결제에 동의하십니까?</span>
+				</div>
+			</div>
 		</div>
+
 	</div>
+			<button id="payment-button">결제하기</button>
+			
+		<div id="auction-list">
+		<div id="auction-ing">
+			<p>경매중인 작품</p>
+		</div>
+			
+		<div id="art-wrapper">
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+			<div class="art-list">
+				<h6>경매 작품 사진</h6>
+			</div>
+		</div>
+
+	</div>
+			
+	
 
 </div>
 
+<%@ include file="../layout/footer.jsp" %>
 </body>
 </html>
