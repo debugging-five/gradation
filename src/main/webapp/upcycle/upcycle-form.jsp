@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1920, maximum-scale=1.0" />
     <meta name="og:type" content="website" />
@@ -11,38 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/upcycle/upcycle-form.css" />
   </head>
   <body style="margin: 0; background: #fbfcfc">
+  	<%@ include file="../layout/header.jsp" %>
     <input type="hidden" id="anPageName" name="page" value="upcycleForm" />
     <div class="container-center-horizontal">
       <div class="upcycleForm screen">
         <div class="flex-col">
-          <header class="header">
-            <img class="icon" src="../assets/images/upcycle/upcycle-form/group-4035@2x.png" alt="icon" />
-            <div class="overlap-group3">
-              <div class="navbar suit-regular-normal-sonic-silver-19px">
-                <div class="navbar-link-display valign-text-middle navbar-link">
-                  display
-                </div>
-                <div class="navbar-link-artist valign-text-middle navbar-link">
-                  artist
-                </div>
-                <div class="navbar-link-auction valign-text-middle navbar-link">
-                  auction
-                </div>
-                <div
-                  class="navbar-link-exhibition valign-text-middle navbar-link"
-                >
-                  exhibition
-                </div>
-                <div class="navbar-link-upcycle valign-text-middle navbar-link">
-                  upcycle
-                </div>
-                <div class="navbar-link-sign-in valign-text-middle">
-                  sign in
-                </div>
-              </div>
-              <img class="icon-1" src="../assets/images/upcycle/upcycle-form/icon-2@2x.png" alt="icon" />
-            </div>
-          </header>
           <h1 class="title valign-text-middle suith1">upcycle</h1>
           <div class="registration">
             <div class="registration-1 valign-text-middle suith2">
@@ -282,18 +254,13 @@
               </span>
             </div>
             <div class="flex-row-6 pretendardh7">
-              <div class="rectangle"></div>
-              <div class="text-13 valign-text-middle">캔버스 &amp; 종이류</div>
-              <div class="rectangle-40 rectangle"></div>
-              <div class="text-1-1 valign-text-middle">목재</div>
-              <div class="rectangle-40 rectangle"></div>
-              <div class="text-1-1 valign-text-middle">금속</div>
-              <div class="rectangle-40 rectangle"></div>
-              <div class="text-16 valign-text-middle">
-                플라스틱 &amp; 아크릴
-              </div>
-              <div class="rectangle-40 rectangle"></div>
-              <div class="text-1-1 valign-text-middle">기타</div>
+              	<fieldset>
+		            <label><input type="checkbox" name="material" value="canvas-paper" /> 캔버스 & 종이류</label>
+		            <label><input type="checkbox" name="material" value="wood" /> 목재</label>
+		            <label><input type="checkbox" name="material" value="metal" /> 금속</label>
+		            <label><input type="checkbox" name="material" value="plastic-acrylic" /> 플라스틱 & 아크릴</label>
+		            <label><input type="checkbox" name="material" value="other" /> 기타</label>
+	         	</fieldset>
             </div>
           </div>
           <div class="significant">
@@ -309,40 +276,17 @@
           </div>
           <div class="confirm">
             <div class="confirm-item">
-              <div class="overlap-group-3">
-                <div class="text-6 valign-text-middle pretendardh4">취소</div>
-              </div>
+              <button type="button"class="overlap-group-3">
+                 <div class="text-6 valign-text-middle pretendardh4">취소</div>
+              </button>
             </div>
             <div class="confirm-item">
-              <div class="overlap-group1">
+              <button type="submit" class="overlap-group1">
                 <div class="text-7 valign-text-middle pretendardh4">신청</div>
-              </div>
+              </button>
             </div>
           </div>
-          <footer class="footer">
-            <div class="footer-layer">
-              <div class="footer-address">
-                <img class="image-3" src="../assets/images/upcycle/upcycle-form/image-3@2x.png" alt="image 3" />
-                <p class="address-14-samcheo valign-text-middle suith4">
-                  <span
-                    ><span class="span-1 suit-regular-normal-sonic-silver-16px"
-                      >146, Teheran-ro, Gangnam-gu, </span
-                    ><a
-                      href="https://www.jusoen.com/addreng.asp?p1=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C+146&x=0&y=0#"
-                      target="_blank"
-                      ><span
-                        class="span-1 suit-regular-normal-sonic-silver-16px"
-                        > Seoul</span
-                      ></a
-                    ><span class="span-1 suit-regular-normal-sonic-silver-16px"
-                      >, Republic of Korea<br />KoreaItAcademy - All rights
-                      reserved 2025</span
-                    >
-                  </span>
-                </p>
-              </div>
-            </div>
-          </footer>
+             <%@ include file="../layout/footer.jsp" %>
         </div>
       </div>
     </div>

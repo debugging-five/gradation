@@ -74,7 +74,7 @@
 .suit-regular-normal-sonic-silver-19px {
   color: var(--color-gray900);
   font-family: 'SUIT-Regular';
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h4);
   font-style: normal;
   font-weight: var(font-weight-regular);
 }
@@ -397,6 +397,7 @@ input:focus {
   align-items: center;
   background-color: var(--color-primary);
   border-radius: 2px;
+  border: none;
   display: flex;
   height: 35px;
   margin-left: 13px;
@@ -850,27 +851,30 @@ input:focus {
 }
 
 .upcycleForm .overlap-group2 {
+  display: flex;
   align-items: flex-start;
-  background-color: var(--main-gray100);
+  background-color: var(--color-gray100);
   border: 0.5px solid;
   border-color: var(--color-black);
   border-radius: 2px;
   display: flex;
-  height: 91px;
   min-width: 402px;
-  padding: 7.5px;
+  height: 91px;
 }
 
 .upcycleForm .x-4 {
   color: var(--color-gray500);
-  font-weight: 300;
-  height: 27px;
-  text-align: center;
-  width: 160px;
+  font-weight: var(--font-weight-light);
+  width: 400px;
+  height: 90px;
+  text-align: left;
+  padding: 10px;
+  line-height: 1.4;
 }
 
 .upcycleForm .x-4::placeholder {
   color: #c0c5c799;
+  text-align: left;
 }
 
 .upcycleForm .confirm {
@@ -889,7 +893,7 @@ input:focus {
 
 .upcycleForm .overlap-group-3 {
   align-items: flex-start;
-  background-color: var(--main-gray100);
+  background-color: var(--color-gray100);
   border: 1.2px solid;
   border-color: var(--color-primary);
   border-radius: 2px;
@@ -917,6 +921,7 @@ input:focus {
   height: 50px;
   min-width: 125px;
   padding: 12px 46px;
+  border: none;
 }
 
 .upcycleForm .text-7 {
@@ -941,7 +946,7 @@ input:focus {
 }
 
 .upcycleForm .footer-layer {
-  background-color: var(--main-gray100);
+  background-color: var(--color-gray100);
   border-color: var(--color-gray500);
   border-top-style: solid;
   border-top-width: 1px;
@@ -996,7 +1001,7 @@ input:focus {
 }
 
 .upcycleForm .rectangle {
-  background-color: var(--main-gray100);
+  background-color: var(--color-gray100);
   border: 0.5px solid;
   border-color: var(--color-black);
   height: 12px;
