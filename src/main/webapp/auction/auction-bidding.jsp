@@ -53,24 +53,34 @@
 		 
 		 <!-- 응찰가 input -->
 		 
+		
 		 <div id="popup-info2">
-		 	<input type="text" placeholder="응찰가를 입력해주세요."/>
-		 </div>
-		 
 		 <div class="popup-left">
+		 
+		 	<input type="text" placeholder="응찰가를 입력해주세요."/>
+		 
+
 			<div class="info3 bid">
-				<h5>현재 입찰가<span>(KRW)</span></h5>
-				<h5>550,000</h5>
+				<h4>현재 입찰가<span>(KRW)</span></h4>
+				<h3>550,000</h3>
 			</div>
 			<div class="info3">
 				<h4>최소 응찰가<span>(KRW)</span></h4>
-				<h4>560,000</h4>
+				<h3>560,000</h3>
 			</div>
+		 </div>
 		 
+		 <div class="popup-button">
+		 	<div>
+			 	<button class="bidding">응찰하기</button>
+		 	</div>
+		 	<div>
+			 	<button class="back">돌아가기</button>
+		 	</div>
 		 </div>
 		
 
-	
+	</div>
 	</div>
 
 
