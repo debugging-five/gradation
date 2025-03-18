@@ -83,3 +83,14 @@ body {
 	height: 40px;
 	margin-top: 15px;
 }
+
+.placeholder-default::placeholder {
+	margin-bottom : 7px;
+  	font-size: var(--font-size-h7);
+  	color: var(--color-black);
+  
+}
+
+.placeholder-warning::placeholder {
+  	color: var(--color-warning);
+}
