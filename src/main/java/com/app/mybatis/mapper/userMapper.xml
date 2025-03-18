@@ -3,46 +3,19 @@
 
 <mapper namespace="user">
 	<insert id="insert" parameterType="userVO">
-		INSERT INTO TBL_USER
+		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_ID, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK)
 		VALUES (
 			SEQ_USER.NEXTVAL,
-			'default_name',
-			'default_path',
 			#{userName},
 			#{userEmail},
 			#{userId},
 			#{userPassword},
 			#{userPhone},
-			#{userNickName},
-			#{userAddress},
-			#{userPostalCode},
+			#{userNickname},
 			#{userSnsOk},
 			#{userMailOk},
-			#{userAgreementOk},
-			#{userIntroduce},
-			#{userRecode},
-			#{userInstagram},
-			#{userYoutube},
-			#{userBlog},
-			#{userKakao},
-			#{userKakao},
-			#{userNaver},
-			0,
-			0,
-			0,
-			'')
+			#{userAgreementOk}
+		)
 	</insert>
-	
-	<select id="selectByEmailAndPassword" parameterType="MemberVO" resultType="String">
-		SELECT MEMBER_EMAIL
-		FROM TBL_MEMBER
-		WHERE MEMBER_EMAIL = #{memberEmail} AND MEMBER_PASSWORD = #{memberPassword}
-	</select>
-	
-	<select id="selectByEmail" parameterType="String" resultType="MemberVO">
-		SELECT ID, MEMBER_EMAIL, MEMBER_PASSWORD, MEMBER_NAME
-		FROM TBL_MEMBER
-		WHERE MEMBER_EMAIL = #{memberEmail}
-	</select>
 	
 </mapper>

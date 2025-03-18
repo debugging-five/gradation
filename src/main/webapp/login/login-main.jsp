@@ -10,8 +10,6 @@
 </head>
 <body>
 
-	<%@ include file="../layout/header.jsp" %>
-
 	<div class="container">
 		<div>
 			<h2 id="login">로그인</h2>
@@ -53,7 +51,7 @@
 				<span>|</span>
 				<a>비밀번호 찾기</a>
 				<span>|</span>
-				<a href="../join/join-main.jsp">회원가입</a>
+				<a href="../join/join-main.user">회원가입</a>
 			</div>
 			<div>
 				<span>또는 다른 서비스 계정으로 로그인</span>
