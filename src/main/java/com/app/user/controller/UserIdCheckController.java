@@ -8,14 +8,24 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.UserDAO;
+import com.app.vo.UserVO;
 
-public class UserjoinController implements Action{
+public class UserIdCheckController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		UserDAO userDAO = new UserDAO();
+		String tempId = req.getParameter("userId");
+		String tempUrl = "join-main.user?tempId="+ tempId + "&idCheck=";
 		
-		result.setPath("join-main.jsp");
+		if(userDAO.idCheck(tempId) == 1){
+			result.setPath(tempUrl+"false");						
+		}else {
+			result.setPath(tempUrl+"true");			
+		}
+		result.setRedirect(true);
 		return result;
 	}
 

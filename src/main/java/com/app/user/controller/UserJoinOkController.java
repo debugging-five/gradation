@@ -22,10 +22,10 @@ public class UserJoinOkController implements Action {
 		userVO.setUserId(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		userVO.setUserName(req.getParameter("userName"));
-		userVO.setUserNickName(req.getParameter("userNickName"));
+		userVO.setUserNickName(req.getParameter("userNickname"));
 		userVO.setUserPhone(req.getParameter("userPhone"));
 		userVO.setUserEmail(req.getParameter("userEmail"));
-		if(Boolean.parseBoolean(req.getParameter("agreement"))) {
+		if(req.getParameter("agreement").equals("on")) {
 			userVO.setUserSnsOk(1);
 			userVO.setUserMailOk(1);
 			userVO.setUserAgreementOk(1);			

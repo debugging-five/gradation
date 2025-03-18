@@ -11,7 +11,7 @@ public class UserVO {
 	private String userId;
 	private String userPassword;
 	private String userPhone;
-	private String userNickName;
+	private String userNickname;
 	private String userAddress;
 	private String userPostalCode;
 	private int userSnsOk;
@@ -45,7 +45,7 @@ public class UserVO {
 		this.userId = userId;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
-		this.userNickName = userNickName;
+		this.userNickname = userNickName;
 		this.userAddress = userAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
@@ -69,7 +69,7 @@ public class UserVO {
 	public String toString() {
 		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
 				+ userName + ", userEmail=" + userEmail + ", userId=" + userId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickName=" + userNickName + ", userAddress=" + userAddress
+				+ ", userPhone=" + userPhone + ", userNickName=" + userNickname + ", userAddress=" + userAddress
 				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
 				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
 				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
@@ -160,11 +160,11 @@ public class UserVO {
 	}
 
 	public String getUserNickName() {
-		return userNickName;
+		return userNickname;
 	}
 
 	public void setUserNickName(String userNickName) {
-		this.userNickName = userNickName;
+		this.userNickname = userNickName;
 	}
 
 	public String getUserAddress() {

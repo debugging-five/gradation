@@ -51,5 +51,10 @@ input[type='checkbox']:checked+label{
  	height: 58px;
  	border : none;
  	border-radius: 3px;
- 	color: var(--color-gray500);
+ 	font-size : var(--font-size-h4);
+ 	color: var(--color-gray100);
  }
+ 
+.need-write{
+	font-size: var(--font-size-h8);
+}
