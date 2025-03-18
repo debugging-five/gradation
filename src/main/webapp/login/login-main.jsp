@@ -10,8 +10,6 @@
 </head>
 <body>
 
-	<%@ include file="../layout/header.jsp" %>
-
 	<div class="container">
 		<div>
 			<h2 id="login">로그인</h2>
