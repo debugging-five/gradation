@@ -1,18 +1,19 @@
 @charset "UTF-8";
 
-#wrapper {
-	background-color : #fbfcfc;
-	min-height : 100vh;
-	overflow : hidden;
-	display : flex; 
-	flex-direction : column; 
+body {
+	width : 100%;
+	height : 100%;
+	background-color: #fbfcfc;
 }
 
-#title-wrapper p {
-	color : #333333;
-	font-size : 30px;
-	display : flex;
-	justify-content : center;
+#wrapper {
+	display : flex; 
+	flex-direction : column;
+	align-items: center; 
+    justify-content: center;
+}
+
+#title-wrapper h2 {
 	margin : 86px 0 0 0;
 }
 

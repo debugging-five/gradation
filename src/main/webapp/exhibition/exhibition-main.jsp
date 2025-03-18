@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
 	<div id="title-wrapper">	
-		<p>exhibition</p>	
+		<h2>exhibition</h2>	
 	</div>
 	
 	<div id="category-wrapper">

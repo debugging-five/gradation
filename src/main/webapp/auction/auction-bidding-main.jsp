@@ -18,6 +18,7 @@
 		<h2>auction</h2>	
 	</div>
 	
+	
 	<div id="auction-detail">
 	
 		<!-- 경매 작품 사진-->
@@ -114,7 +115,6 @@
 		</div>
 
 	</div>
-
 </div>
 
 <%@ include file="../layout/footer.jsp" %>
