@@ -58,6 +58,9 @@ const idCheckButton = document.querySelector("#id-check-button");
 // 회원가입 버튼
 const joinButton = document.querySelector("#join-button");
 
+// 이메일 인증 버튼
+const emailCheckButton = document.querySelector("#email-check-button");
+
 // 쿼리스트링 파라미터 들고오기
 function getQueryParam(param) {
 	const urlParams = new URLSearchParams(window.location.search);
@@ -67,6 +70,7 @@ function getQueryParam(param) {
 // tempId 값 가져와서 input에 설정
 let tempId = getQueryParam('tempId');
 let isIdChecked = getQueryParam('idCheck');
+let isEmailChecked = getQueryParam('emailCheck');
 
 // 아이디 인풋에 설정
 if (tempId) {
@@ -85,7 +89,7 @@ idCheckButton.addEventListener("click", () => {
 	}
 });
 
-// 패스워드 입력
+// 입력에 대한 이벤트
 pw.addEventListener("input", () => {
 	allOk();
 })
@@ -105,6 +109,7 @@ email.addEventListener("input", () => {
 	allOk();
 })
 
+// 체크박스 체크에 대한 이벤트
 checkAll.addEventListener("click", () => {
 	if(checkAll.checked) {
 		checkUp14.checked = true
@@ -145,6 +150,17 @@ checkPrivate.addEventListener("click", () => {
 	allOk();
 });
 
+// 이메일 인증
+emailCheckButton
+
+// 가입 버튼을 눌렀을 때 무결성 검사
+emailCheckButton.addEventListener("click",() => {
+	if(email.value) {
+		let temp = window.location.href;
+		console.log(temp);
+//		location.href= window.location.href;
+	}
+})
 
 
 
