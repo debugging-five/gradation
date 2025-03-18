@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+	background-color: #FBFCFC;
+}
+
+.wrap {
+    display: flex;
+    margin-top: 310px;
+}
+
+.mainText {
+    margin-top: 86px;
+    justify-content: center;
+}
+
+#introduce {
+	width: 840px;
+	height: 190px;
+}
+
+.artist-wrap {
+    width: 210px;
+    height: 402px;
+}
+
