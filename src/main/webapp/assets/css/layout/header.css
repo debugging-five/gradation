@@ -17,9 +17,19 @@ nav {
     height: 100%;
 }
 
-.logo {
+.headerLogo-wrap {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 34px;
+}
+
+#headerLogo {
     margin-left: 52px;
     padding-top: 7px;
+    width: 100%;
+    height: 100%;
 }
 
 .menu {

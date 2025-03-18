@@ -60,7 +60,7 @@ a {
     white-space: nowrap;
 }
 
-.logo img {
-    width: 168px;
-    height: 60px;
+#footerLogo {
+    width: 96px;
+    height: 34px;
 }

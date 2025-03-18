@@ -11,6 +11,7 @@
 
 <title>display-detail</title>
 </head>
+   <script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
 	<div class="container">
@@ -20,12 +21,30 @@
 			
 			<!-- 작가 정보 -->
 			<div class="artist-wrap">
+				<img src="../assets/images/artist/cat 2.png" alt="프로필 이미지" />
 				<h2 class="name">홍길동</h2>
 				<h6 class="university">00대학교</h6>
 				<button class="contact-button">작가와 연락</button>
-				<h4 class="instagram">@gildong_1234</h4>
-				<h4 class="blog">blog</h4>
-				<h4 class="youtube">@glidong_1234</h4>
+				<div class="sns">
+					<div>
+						<a class="icon" href="https://www.instagram.com/" target="_blank">
+		                    <i class="fa-brands fa-instagram fa-xl"></i> 
+		                </a>
+		                <h4 class="instagram">@gildong_1234</h4>
+	                </div>
+					<div>
+						<a class="icon" href="https://www.tistory.com/" target="_blank">
+							<i class="fa-solid fa-globe fa-xl"></i>
+		                </a>
+						<h4 class="blog">blog</h4>
+					</div>
+	                <div>
+		                <a class="icon" href="https://www.youtube.com/" target="_blank">
+		                    <i class="fa-brands fa-youtube fa-xl"></i>
+		                </a>
+		                <h4 class="youtube">@glidong_1234</h4>
+					</div>
+				</div>
 			</div>	
 		
 			<div class="artist-info">
