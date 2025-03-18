@@ -1,1325 +1,1012 @@
-.upcycling-form {
-  background-color: var(--color-gray100);
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://px.animaapp.com/67d6c6bae05083e2899b7066.67d6c6bbe05083e2899b7069.3gj2aad.hcp.png");
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.suith4 {
+  font-family: 'SUIT-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.4px;
+}
+
+.suith1 {
+  font-family: 'SUIT-Bold';
+  font-size: var(--font-size-h2);
+  font-style: normal;
+  font-weight: var(font-weight-bold);
+  letter-spacing: -0.12px;
+}
+
+.suith2 {
+  font-family: 'SUIT-Bold';
+  font-size: var(--font-size-h3);
+  font-style: normal;
+  font-weight: var(font-weight-bold);
+  letter-spacing: -0.08px;
+}
+
+.pretendardh4 {
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
+}
+
+.pretendardh6 {
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
+}
+
+.pretendardh7 {
+  font-family: 'Pretendard-Light';
+  font-size: var(--font-size-h8);
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: -0.06px;
+}
+
+.pretendard-semi-bold-mine-shaft-18px {
+  color: var(--color-black);
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+}
+
+.pretendard-semi-bold-cinnabar-18px {
+  color: var(--color-primary);
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+}
+
+.suit-regular-normal-sonic-silver-19px {
+  color: var(--color-gray900);
+  font-family: 'SUIT-Regular';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+}
+
+.suit-regular-normal-sonic-silver-16px {
+  color: var(--color-gray900);
+  font-family: 'SUIT-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+}
+
+.container-center-horizontal {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  pointer-events: none;
   width: 100%;
 }
 
-.upcycling-form .div {
-  background-color: var(--color-gray100);
-  width: 1920px;
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* screen - upcycleForm */
+
+.upcycleForm {
+  align-items: center;
+  background-color: var(--main-gray100);
+  display: flex;
+  flex-direction: column;
   height: 1737px;
-  position: relative;
-}
-
-.upcycling-form .footer {
-  position: absolute;
   width: 1920px;
-  height: 280px;
-  top: 1457px;
-  left: 0;
-  background-color: transparent;
 }
 
-.upcycling-form .footer-layer {
-  position: relative;
-  width: 1922px;
-  height: 282px;
-  top: -1px;
-  left: -1px;
-  background-color: var(--color-gray100);
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: var(--color-gray500);
-}
-
-.upcycling-form .footer-address {
-  position: relative;
-  width: 378px;
-  height: 125px;
-  top: 78px;
-  left: 772px;
-}
-
-.upcycling-form .image {
-  width: 220px;
-  height: 45px;
-  left: 78px;
-  position: absolute;
-  top: 0;
-}
-
-.upcycling-form .address-samcheong {
-  position: absolute;
-  height: 40px;
-  top: 85px;
-  left: 0;
-  font-family: 'SUIT-Regular';
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  text-align: center;
-  letter-spacing: -0.4000000059604645px;
-  line-height: var(--line-height-h7);
-  font-style: normal;
-}
-
-.upcycling-form .text-wrapper {
-  letter-spacing: -0.4000000059604645px;
-  font-family: 'SUIT-Regular';
-  font-style: normal;
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-h7);
-  font-size: var(--font-size-h7);
-}
-
-.upcycling-form .text-wrapper-2 {
-  position: absolute;
-  height: 37px;
-  top: 141px;
-  left: 909px;
-  font-family: 'SUIT-Bold';
-  font-weight: var(--font-weight-bold);
-  color: var(--color-black);
-  font-size: var(--font-size-h2);
-  text-align: center;
-  letter-spacing: var(-0.12000000178813934px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .registration {
-  position: absolute;
-  width: 1002px;
-  height: 36px;
-  top: 249px;
-  left: 460px;
-}
-
-.upcycling-form .line {
-  position: absolute;
-  width: 1000px;
-  height: 2px;
-  top: 35px;
-  left: 0;
-}
-
-.upcycling-form .text-wrapper-3 {
-  position: absolute;
-  height: 26px;
-  top: 0;
-  left: 0;
-  font-family: var('SUIT-Bold');
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  font-size: var(--font-size-h4);
-  text-align: center;
-  letter-spacing: var(-0.08400000125169754px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .email {
-  position: absolute;
-  width: 404px;
-  height: 30px;
-  top: 521px;
-  left: 1060px;
-}
-
-.upcycling-form .p {
-  position: absolute;
-  height: 24px;
-  top: 0;
-  left: 0;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: transparent;
-  font-size: var(--font-size-h5);
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .span {
-  color: #333333;
-  letter-spacing: var(-0.07200000107288361px);
-  font-family: var('Pretendard-SemiBold);
-  font-style: var(normal);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-h3);
-  font-size: var(--font-size-h5);
-}
-
-.upcycling-form .text-wrapper-4 {
-  color: #ee3333;
-  letter-spacing: var(-0.07200000107288361px);
-  font-family: var('Pretendard-SemiBold);
-  font-style: var(normal);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-h3);
-  font-size: var(--font-size-h5);
-}
-
-.upcycling-form .img {
-  position: absolute;
-  width: 400px;
-  height: 1px;
-  top: 29px;
-  left: 0;
-  object-fit: cover;
-}
-
-.upcycling-form .input {
-  position: absolute;
-  width: 279px;
-  height: 19px;
-  top: 4px;
-  left: 101px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  background-color: transparent;
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .input::placeholder {
-  color: #6e747699;
-}
-
-.upcycling-form .phone {
-  position: absolute;
-  width: 404px;
-  height: 30px;
-  top: 597px;
-  left: 1060px;
-}
-
-.upcycling-form .input-2 {
-  position: absolute;
-  width: 288px;
-  height: 19px;
-  top: 4px;
-  left: 101px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  background-color: transparent;
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-2::placeholder {
-  color: #6e747699;
-}
-
-.upcycling-form .serch-school {
-  position: absolute;
-  width: 404px;
-  height: 38px;
-  top: 360px;
-  left: 1060px;
-}
-
-.upcycling-form .line-2 {
-  width: 400px;
-  top: 38px;
-  left: 0;
-  position: absolute;
-  height: 1px;
-  object-fit: cover;
-}
-
-.upcycling-form .div-2 {
-  position: absolute;
-  width: 58px;
-  height: 18px;
-  top: 14px;
-  left: 0;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: transparent;
-  font-size: var(--font-size-h5);
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-3 {
-  position: absolute;
-  width: 169px;
-  height: 18px;
-  top: 14px;
-  left: 101px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  white-space: nowrap;
-  background-color: transparent;
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-3::placeholder {
-  color: #6e747699;
-}
-
-.upcycling-form .search-school-button {
-  position: absolute;
-  width: 119px;
-  height: 35px;
-  top: 0;
-  left: 283px;
-}
-
-.upcycling-form .overlap-group {
-  position: relative;
-  width: 117px;
-  height: 35px;
-  background-color: var(--primary);
-  border-radius: 2px;
-  border-color: var(--primary);
-}
-
-.upcycling-form .text-wrapper-5 {
-  position: absolute;
-  width: 63px;
-  height: 19px;
-  top: 8px;
-  left: 27px;
-  font-family: "Pretendard-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray100);
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -0.06px;
-  line-height: normal;
-}
-
-.upcycling-form .search-address {
-  position: absolute;
-  width: 404px;
-  height: 29px;
-  top: 445px;
-  left: 1060px;
-}
-
-.upcycling-form .line-3 {
-  width: 400px;
-  top: 28px;
-  left: 0;
-  position: absolute;
-  height: 1px;
-  object-fit: cover;
-}
-
-.upcycling-form .input-4 {
-  position: absolute;
-  width: 291px;
-  height: 23px;
-  top: 0;
-  left: 101px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  background-color: transparent;
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-4::placeholder {
-  color: #6e747699;
-}
-
-.upcycling-form .confirm {
-  position: absolute;
-  width: 280px;
-  height: 50px;
-  top: 1225px;
-  left: 1180px;
-}
-
-.upcycling-form .cancel {
-  position: absolute;
-  width: 127px;
-  height: 50px;
-  top: 0;
-  left: 0;
-}
-
-.upcycling-form .div-wrapper {
-  position: relative;
-  width: 125px;
-  height: 50px;
-  background-color: var(--color-gray100);
-  border-radius: 2px;
-  border: 1.2px solid;
-  border-color: #ee3333;
-}
-
-.upcycling-form .text-wrapper-6 {
-  position: absolute;
-  height: 24px;
-  top: 11px;
-  left: 45px;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: #ee3333;
-  font-size: var(--font-size-h5);
-  text-align: center;
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .submit {
-  position: absolute;
-  width: 127px;
-  height: 50px;
-  top: 0;
-  left: 155px;
-}
-
-.upcycling-form .overlap {
-  position: relative;
-  width: 125px;
-  height: 50px;
-  background-color: var(--primary);
-  border-radius: 2px;
-  border-color: var(--primary);
-}
-
-.upcycling-form .text-wrapper-7 {
-  position: absolute;
-  height: 24px;
-  top: 12px;
-  left: 46px;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-gray100);
-  font-size: var(--font-size-h5);
-  text-align: center;
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .pickup-date {
-  position: absolute;
-  width: 402px;
-  height: 27px;
-  top: 677px;
-  left: 1060px;
-}
-
-.upcycling-form .line-4 {
-  position: absolute;
-  width: 400px;
-  height: 1px;
-  top: 26px;
-  left: 0;
-  object-fit: cover;
-}
-
-.upcycling-form .text-wrapper-8 {
-  position: absolute;
-  height: 19px;
-  top: 0;
-  left: 126px;
-  font-family: "Pretendard-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 16px;
-  letter-spacing: -0.06px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.upcycling-form .pick-up-text {
-  position: absolute;
-  width: 93px;
-  height: 18px;
-  top: 2px;
-  left: 0;
-}
-
-.upcycling-form .group {
-  position: relative;
-  width: 95px;
-  height: 18px;
-}
-
-.upcycling-form .div-3 {
-  position: absolute;
-  width: 93px;
-  height: 18px;
-  top: 0;
-  left: 0;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: transparent;
-  font-size: var(--font-size-h5);
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .mdi-light-calendar {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 101px;
-}
-
-.upcycling-form .upload-image {
-  position: absolute;
-  width: 482px;
-  height: 515px;
-  top: 335px;
-  left: 460px;
-}
-
-.upcycling-form .overlap-group-wrapper {
-  width: 482px;
-  height: 480px;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.upcycling-form .overlap-group-2 {
-  position: relative;
-  width: 480px;
-  height: 480px;
-  background-color: #d9d9d9;
-}
-
-.upcycling-form .add-four {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  top: 186px;
-  left: 216px;
-}
-
-.upcycling-form .text-wrapper-9 {
-  position: absolute;
-  height: 24px;
-  top: 258px;
-  left: 184px;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-black);
-  font-size: var(--font-size-h5);
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-10 {
-  position: absolute;
-  height: 19px;
-  top: 496px;
-  left: 128px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: var(--color-gray900);
-  font-size: var(--font-size-h7);
-  text-align: center;
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .material {
-  position: absolute;
-  width: 412px;
-  height: 55px;
-  top: 924px;
-  left: 1060px;
-}
-
-.upcycling-form .rectangle {
-  left: 9px;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 40px;
-  background-color: var(--color-gray100);
-  border: 0.5px solid;
-  border-color: var(--color-black);
-}
-
-.upcycling-form .rectangle-2 {
-  left: 125px;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 40px;
-  background-color: var(--color-gray100);
-  border: 0.5px solid;
-  border-color: var(--color-black);
-}
-
-.upcycling-form .rectangle-3 {
-  left: 178px;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 40px;
-  background-color: var(--color-gray100);
-  border: 0.5px solid;
-  border-color: var(--color-black);
-}
-
-.upcycling-form .rectangle-4 {
-  left: 231px;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 40px;
-  background-color: var(--color-gray100);
-  border: 0.5px solid;
-  border-color: var(--color-black);
-}
-
-.upcycling-form .rectangle-5 {
-  left: 359px;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 40px;
-  background-color: var(--color-gray100);
-  border: 0.5px solid;
-  border-color: var(--color-black);
-}
-
-.upcycling-form .text-wrapper-11 {
-  position: absolute;
-  height: 17px;
-  top: 38px;
-  left: 25px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: #000000;
-  font-size: var(--font-size-h8);
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-12 {
-  position: absolute;
-  height: 17px;
-  top: 38px;
-  left: 141px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: #000000;
-  font-size: var(--font-size-h8);
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-13 {
-  position: absolute;
-  height: 17px;
-  top: 38px;
-  left: 194px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: #000000;
-  font-size: var(--font-size-h8);
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-14 {
-  position: absolute;
-  height: 17px;
-  top: 38px;
-  left: 247px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: #000000;
-  font-size: var(--font-size-h8);
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-15 {
-  position: absolute;
-  height: 17px;
-  top: 38px;
-  left: 375px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: #000000;
-  font-size: var(--font-size-h8);
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .significant {
-  position: absolute;
-  width: 406px;
-  height: 126px;
-  top: 1027px;
-  left: 1058px;
-}
-
-.upcycling-form .text-wrapper-16 {
-  position: absolute;
-  height: 24px;
-  top: 0;
-  left: 3px;
-  font-family: var('Pretendard-SemiBold);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-black);
-  font-size: var(--font-size-h5);
-  letter-spacing: var(-0.07200000107288361px);
-  line-height: var(--line-height-h3);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-wrapper {
-  position: absolute;
-  width: 402px;
-  height: 91px;
-  top: 35px;
-  left: 0;
-  background-color: var(--color-gray100);
-  border-radius: 2px;
-  border: 0.5px solid;
-  border-color: #000000;
-}
-
-.upcycling-form .input-5 {
-  position: relative;
-  width: 160px;
-  height: 27px;
-  top: 8px;
-  left: 8px;
-  font-family: var('Pretendard-Light');
-  font-weight: var(--font-weight-light);
-  color: var(--color-gray500);
-  font-size: var(--font-size-h8);
-  text-align: center;
-  background-color: transparent;
-  letter-spacing: var(-0.056000000834465026px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .input-5::placeholder {
-  color: var(--color-gray500)99;
-}
-
-.upcycling-form .header {
-  position: absolute;
+.upcycleForm .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -3px;
+  min-height: 288px;
   width: 1920px;
-  height: 56px;
-  top: -3px;
-  left: 0;
-  background-color: var(--color-gray100);
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-width: 1px;
+}
+
+.upcycleForm .header {
+  align-items: center;
+  background-color: var(--main-gray100);
   border-bottom-style: solid;
-  border-left-style: none;
+  border-bottom-width: 1px;
   border-color: var(--color-gray500);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  gap: 50px;
+  height: 56px;
+  justify-content: flex-start;
+  padding: 7.7px 261px;
+  width: 1920px;
 }
 
-.upcycling-form .overlap-2 {
-  position: absolute;
-  width: 1198px;
+.upcycleForm .icon {
+  align-self: flex-end;
+  height: 40px;
+  margin-left: 48px;
+  width: 102px;
+}
+
+.upcycleForm .overlap-group3 {
   height: 25px;
-  top: 16px;
-  left: 461px;
-}
-
-.upcycling-form .navbar {
-  position: absolute;
+  margin-top: 1px;
+  position: relative;
   width: 1198px;
+}
+
+.upcycleForm .navbar {
+  align-items: flex-start;
+  display: flex;
   height: 25px;
-  top: 0;
   left: 0;
-}
-
-.upcycling-form .text-wrapper-17 {
-  left: 338px;
+  min-width: 1198px;
   position: absolute;
-  height: 24px;
   top: 0;
-  transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: #6e7476;
-  font-size: 19px;
-  text-align: center;
-  letter-spacing: -0.40px;
-  line-height: normal;
 }
 
-.upcycling-form .text-wrapper-17:hover {
-  color: #ee3333;
+.upcycleForm .navbar-link-display {
+  min-width: 57px;
 }
 
-.upcycling-form .text-wrapper-18 {
-  left: 0;
-  position: absolute;
+.upcycleForm .navbar-link-display:hover {
+  color: var(--color-primary);
+}
+
+.upcycleForm .navbar-link-artist {
+  margin-left: 60px;
+  min-width: 42px;
+}
+
+.upcycleForm .navbar-link-artist:hover {
+  color: var(--color-primary);
+}
+
+.upcycleForm .navbar-link-auction {
+  margin-left: 60px;
+  min-width: 59px;
+}
+
+.upcycleForm .navbar-link-auction:hover {
+  color: var(--color-primary);
+}
+
+.upcycleForm .navbar-link-exhibition {
+  margin-left: 60px;
+  min-width: 77px;
+}
+
+.upcycleForm .navbar-link-exhibition:hover {
+  color: var(--color-primary);
+}
+
+.upcycleForm .navbar-link-upcycle {
+  margin-left: 60px;
+  min-width: 60px;
+}
+
+.upcycleForm .navbar-link-upcycle:hover {
+  color: var(--color-primary);
+}
+
+.upcycleForm .navbar-link-sign-in {
+  align-self: flex-end;
+  cursor: pointer;
   height: 24px;
-  top: 0;
-  transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 19px;
-  text-align: center;
-  letter-spacing: -0.40px;
-  line-height: normal;
-}
-
-.upcycling-form .text-wrapper-18:hover {
-  color: #ee3333;
-}
-
-.upcycling-form .text-wrapper-19 {
-  left: 475px;
-  position: absolute;
-  height: 24px;
-  top: 0;
-  transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 19px;
-  text-align: center;
-  letter-spacing: -0.40px;
-  line-height: normal;
-}
-
-.upcycling-form .text-wrapper-19:hover {
-  color: #ee3333;
-}
-
-.upcycling-form .text-wrapper-20 {
-  position: absolute;
-  height: 24px;
-  top: 1px;
-  left: 1133px;
-  transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 19px;
-  text-align: center;
   letter-spacing: -0.08px;
   line-height: normal;
-}
-
-.upcycling-form .text-wrapper-20:hover {
-  color: #ee3333;
-}
-
-.upcycling-form .text-wrapper-21 {
-  left: 219px;
-  position: absolute;
-  height: 24px;
-  top: 0;
-  transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 19px;
+  margin-left: 598px;
+  min-width: 53px;
   text-align: center;
-  letter-spacing: -0.40px;
-  line-height: normal;
-}
-
-.upcycling-form .text-wrapper-21:hover {
-  color: #ee3333;
-}
-
-.upcycling-form .text-wrapper-22 {
-  left: 117px;
-  position: absolute;
-  height: 24px;
-  top: 0;
   transition: all 0.2s ease;
-  font-family: "SUIT-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--color-gray900);
-  font-size: 19px;
-  text-align: center;
-  letter-spacing: -0.40px;
-  line-height: normal;
 }
 
-.upcycling-form .text-wrapper-22:hover {
-  color: #ee3333;
+.upcycleForm .navbar-link-sign-in:hover {
+  color: var(--color-primary);
 }
 
-.upcycling-form .icon {
-  position: absolute;
-  width: 18px;
+.upcycleForm .icon-1 {
   height: 18px;
-  top: 5px;
   left: 1062px;
-}
-
-.upcycling-form .icon-2 {
   position: absolute;
-  width: 102px;
-  height: 40px;
-  top: 8px;
-  left: 309px;
-}
-
-.upcycling-form .select-product {
-  position: absolute;
-  width: 402px;
-  height: 128px;
-  top: 752px;
-  left: 1060px;
-}
-
-.upcycling-form .size-category {
-  position: absolute;
-  width: 151px;
-  height: 81px;
-  top: 43px;
-  left: 12px;
-}
-
-.upcycling-form .text-wrapper-23 {
-  position: absolute;
-  height: 19px;
-  top: 0;
-  left: 0;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-24 {
-  position: absolute;
-  height: 19px;
-  top: 31px;
-  left: 0;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .text-wrapper-25 {
-  position: absolute;
-  height: 19px;
-  top: 62px;
-  left: 0;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  white-space: nowrap;
-  font-style: var(normal);
-}
-
-.upcycling-form .product-number-large {
-  height: 26px;
-  top: 40px;
-  position: absolute;
-  width: 75px;
-  left: 329px;
-}
-
-.upcycling-form .line-5 {
-  width: 55px;
-  top: 25px;
-  left: 2px;
-  position: absolute;
-  height: 1px;
-  object-fit: cover;
-}
-
-.upcycling-form .text-wrapper-26 {
-  position: absolute;
-  width: 14px;
-  height: 19px;
-  top: 3px;
-  left: 57px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-
-.upcycling-form .text {
-  position: absolute;
-  width: 50px;
-  height: 25px;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #6e7476;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  border: 0;
-  padding: 0;
-  font-style: var(normal);
-}
-
-.upcycling-form .text::placeholder {
-  color: #6e747699;
-}
-
-.upcycling-form .product-number {
-  height: 28px;
-  top: 69px;
-  position: absolute;
-  width: 75px;
-  left: 329px;
-}
-
-.upcycling-form .line-6 {
-  position: absolute;
-  width: 55px;
-  height: 1px;
-  top: 27px;
-  left: 2px;
-  object-fit: cover;
-}
-
-.upcycling-form .text-wrapper-27 {
-  position: absolute;
-  width: 14px;
-  height: 19px;
   top: 5px;
-  left: 57px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  font-style: var(normal);
+  width: 18px;
 }
 
-.upcycling-form .product-number-small {
-  height: 25px;
-  top: 103px;
-  position: absolute;
-  width: 75px;
-  left: 329px;
+.upcycleForm .title {
+  color: var(--color-black);
+  font-weight: var(font-weight-bold);
+  height: 37px;
+  line-height: normal;
+  margin-top: 88px;
+  min-width: 102px;
+  text-align: center;
 }
 
-.upcycling-form .overlap-3 {
-  position: relative;
-  width: 71px;
-  height: 25px;
+.upcycleForm .registration {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  height: 36px;
+  margin-left: 2px;
+  margin-top: 71px;
+  width: 1002px;
 }
 
-.upcycling-form .overlap-group-3 {
-  position: absolute;
-  width: 59px;
-  height: 25px;
-  top: 0;
-  left: 0;
+.upcycleForm .registration-1 {
+  align-self: center;
+  color: var(--color-primary);
+  font-weight: var(font-weight-bold);
+  height: 26px;
+  line-height: normal;
+  margin-left: -893px;
+  text-align: center;
+  width: 109px;
 }
 
-.upcycling-form .line-7 {
-  position: absolute;
-  width: 55px;
+.upcycleForm .line-3 {
+  height: 2px;
+  width: 1000px;
+}
+
+.upcycleForm .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 118px;
+  height: 545px;
+  margin-left: 4px;
+  margin-top: 50px;
+  min-width: 1004px;
+}
+
+.upcycleForm .upload-image {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 515px;
+  width: 482px;
+}
+
+.upcycleForm .image {
+  align-items: flex-start;
+  display: flex;
+  height: 480px;
+  min-width: 482px;
+}
+
+.upcycleForm .overlap-group {
+  align-items: flex-end;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 480px;
+  padding: 186px 183px;
+  width: 480px;
+}
+
+.upcycleForm .add-four {
+  align-self: center;
+  height: 48px;
+  width: 48px;
+}
+
+.upcycleForm .text-10 {
+  color: var(--color-black);
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 113px;
+  white-space: nowrap;
+}
+
+.upcycleForm .text-11 {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  margin-left: 128px;
+  text-align: center;
+  white-space: nowrap;
+  width: 224px;
+}
+
+.upcycleForm .flex-col-1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  min-height: 520px;
+  width: 404px;
+}
+
+.upcycleForm .serch-school {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 38px;
+  width: 404px;
+}
+
+.upcycleForm .flex-row-1 {
+  align-items: flex-end;
+  display: flex;
+  min-width: 400px;
+}
+
+.upcycleForm .text-3 {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 18px;
+  line-height: 24px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  width: 58px;
+}
+
+.upcycleForm .span {
+  letter-spacing: -0.01px;
+}
+
+.upcycleForm .x {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 18px;
+  margin-bottom: 3px;
+  margin-left: 43px;
+  white-space: nowrap;
+  width: 169px;
+}
+
+.upcycleForm .x::placeholder {
+  color: var(--color-gray900);
+}
+
+.upcycleForm .overlap-group-1 {
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  display: flex;
+  height: 35px;
+  margin-left: 13px;
+  min-width: 117px;
+  padding: 0 27px;
+}
+
+.upcycleForm .text-4 {
+  color: var(--color-gray100);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  text-align: center;
+  width: 63px;
+}
+
+.upcycleForm .line-10 {
   height: 1px;
-  top: 24px;
+  object-fit: cover;
+  width: 400px;
+}
+
+.upcycleForm .search-address {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 46px;
+  min-height: 29px;
+  width: 404px;
+}
+
+.upcycleForm .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  gap: 29px;
+  min-width: 392px;
+}
+
+.upcycleForm .text-5 {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 72px;
+  white-space: nowrap;
+}
+
+.upcycleForm .x-1 {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 23px;
+  width: 291px;
+}
+
+.upcycleForm .x-1::placeholder {
+  color: var(--color-gray900);
+}
+
+.upcycleForm .email {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 47px;
+  min-height: 30px;
+  width: 404px;
+}
+
+.upcycleForm .flex-row-3 {
+  align-items: flex-end;
+  display: flex;
+  gap: 45px;
+  min-width: 380px;
+}
+
+.upcycleForm .text {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.upcycleForm .x-2 {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  margin-bottom: 1px;
+  width: 279px;
+}
+
+.upcycleForm .x-2::placeholder {
+  color: var(--color-gray900);
+}
+
+.upcycleForm .phone {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 46px;
+  min-height: 30px;
+  width: 404px;
+}
+
+.upcycleForm .flex-row-4 {
+  align-items: flex-end;
+  display: flex;
+  gap: 45px;
+  min-width: 389px;
+}
+
+.upcycleForm .x-3 {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  margin-bottom: 1px;
+  width: 288px;
+}
+
+.upcycleForm .x-3::placeholder {
+  color: var(--color-gray900);
+}
+
+.upcycleForm .pickup-date {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 50px;
+  min-height: 27px;
+  width: 402px;
+}
+
+.upcycleForm .flex-row-5 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 258px;
+}
+
+.upcycleForm .pick-up-text {
+  align-self: flex-end;
+  display: flex;
+  width: 93px;
+}
+
+.upcycleForm .group-616 {
+  display: flex;
+  width: 95px;
+}
+
+.upcycleForm .text-9 {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+  width: 93px;
+}
+
+.upcycleForm .mdi-lightcalendar {
+  height: 20px;
+  margin-left: 8px;
+  width: 20px;
+}
+
+.upcycleForm .text-8 {
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.upcycleForm .select-product-number {
+  align-items: flex-start;
+  display: flex;
+  gap: 138px;
+  height: 128px;
+  margin-top: 48px;
+  min-width: 402px;
+}
+
+.upcycleForm .flex-col-2 {
+  align-items: center;
+  gap: 19px;
+  min-height: 124px;
+  width: 191px;
+}
+
+.upcycleForm .text-19 {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 191px;
+  white-space: nowrap;
+}
+
+.upcycleForm .size-category {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 81px;
+  margin-right: 16px;
+  width: 151px;
+}
+
+.upcycleForm .x50cm {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.upcycleForm .x50cm--100cm {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  white-space: nowrap;
+  width: 145px;
+}
+
+.upcycleForm .x100cm {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  white-space: nowrap;
+  width: 118px;
+}
+
+.upcycleForm .product-number-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 88px;
+  width: 75px;
+}
+
+.upcycleForm .product-number-large {
+  align-items: center;
+  display: flex;
+  height: 26px;
+  min-width: 75px;
+}
+
+.upcycleForm .flex-col-3 {
+  align-items: flex-start;
+  min-height: 26px;
+  width: 57px;
+}
+
+.upcycleForm .text-1 {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 25px;
+  line-height: normal;
+  padding: 0;
+  width: 50px;
+}
+
+.upcycleForm .text-1::placeholder {
+  color: var(--color-gray900);
+}
+
+.upcycleForm .line-10-1 {
+  height: 1px;
+  margin-left: 2px;
+  object-fit: cover;
+  width: 55px;
+}
+
+.upcycleForm .text-20 {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  margin-bottom: 1px;
+  width: 14px;
+}
+
+.upcycleForm .product-number-middle {
+  align-items: center;
+  display: flex;
+  height: 28px;
+  margin-top: 3px;
+  min-width: 75px;
+}
+
+.upcycleForm .flex-col-4 {
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 28px;
+  width: 57px;
+}
+
+.upcycleForm .text-21 {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  line-height: normal;
+  margin-top: 1px;
+  width: 14px;
+}
+
+.upcycleForm .product-number-small {
+  height: 25px;
+  margin-top: 6px;
+  position: relative;
+  width: 75px;
+}
+
+.upcycleForm .overlap-group-2 {
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 59px;
+}
+
+.upcycleForm .line-109 {
+  height: 1px;
   left: 4px;
   object-fit: cover;
-}
-
-.upcycling-form .text-wrapper-28 {
   position: absolute;
-  width: 14px;
-  height: 19px;
-  top: 2px;
-  left: 57px;
-  font-family: var('Pretendard-Regular');
-  font-weight: var(--font-weight-regular);
-  color: #000000;
-  font-size: var(--font-size-h7);
-  letter-spacing: var(-0.06400000095367432px);
-  line-height: var(normal);
-  font-style: var(normal);
-}
-/* Inject the original CSS here */
-
-/* Additional styles */
-.upcycling-form {
-  max-width: 1920px;
-  margin: 0 auto;
+  top: 24px;
+  width: 55px;
 }
 
-.content {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.header {
-  position: sticky;
+.upcycleForm .text-2 {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 25px;
+  left: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
   top: 0;
-  z-index: 100;
+  width: 50px;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-link {
+.upcycleForm .text-2::placeholder {
   color: var(--color-gray900);
-  transition: color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--primary);
+.upcycleForm .text-22 {
+  color: var(--color-black);
+  font-weight: var(font-weight-regular);
+  height: 19px;
+  left: 57px;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+  width: 14px;
 }
 
-.nav-link-signin {
-  margin-left: auto;
+.upcycleForm .flex-col-5 {
+  align-items: center;
+  margin-top: 44px;
+  min-height: 813px;
+  width: 1920px;
 }
 
-.logo {
-  max-width: 102px;
-  height: auto;
-}
-
-main {
-  flex: 1;
-  padding: 40px 20px;
-}
-
-.page-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-title {
-  margin-bottom: 20px;
-}
-
-.upcycle-form {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--color-gray500);
-  border-radius: 4px;
-}
-
-.input-group {
-  display: flex;
-  gap: 10px;
-}
-
-.search-button,
-.calendar-button {
-  padding: 10px 20px;
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.size-category {
+.upcycleForm .material {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
+  margin-left: 612px;
+  min-height: 55px;
+  width: 412px;
 }
 
-.size-item {
-  display: flex;
-  justify-content: space-between;
+.upcycleForm .text-12 {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.upcycleForm .flex-row-6 {
   align-items: center;
-}
-
-.number-input {
+  align-self: center;
   display: flex;
-  align-items: center;
-  gap: 5px;
+  margin-right: 3px;
+  min-width: 391px;
 }
 
-.material-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.upcycleForm .text-13 {
+  color: var(--color-black);
+  font-weight: 300;
+  height: 17px;
+  line-height: normal;
+  margin-left: 4px;
+  min-width: 88px;
 }
 
-.material-option {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.upcycleForm .rectangle-40 {
+  margin-left: 12px;
 }
 
-.file-upload {
-  border: 2px dashed var(--color-gray500);
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
+.upcycleForm .text-1-1 {
+  color: var(--color-black);
+  font-weight: 300;
+  height: 17px;
+  line-height: normal;
+  margin-left: 4px;
+  min-width: 25px;
 }
 
-.file-input {
-  display: none;
+.upcycleForm .text-16 {
+  color: var(--color-black);
+  font-weight: 300;
+  height: 17px;
+  line-height: normal;
+  margin-left: 4px;
+  min-width: 100px;
 }
 
-.file-label {
+.upcycleForm .significant {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  gap: 11px;
+  margin-left: 602px;
+  margin-top: 48px;
+  min-height: 126px;
+  width: 406px;
 }
 
-.upload-icon {
-  width: 48px;
-  height: 48px;
+.upcycleForm .text-18 {
+  color: var(--color-black);
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  margin-left: 3px;
+  white-space: nowrap;
 }
 
-.file-description {
-  font-size: 14px;
-  color: var(--color-gray900);
-}
-
-.form-actions {
+.upcycleForm .overlap-group2 {
+  align-items: flex-start;
+  background-color: var(--main-gray100);
+  border: 0.5px solid;
+  border-color: var(--color-black);
+  border-radius: 2px;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  margin-top: 40px;
+  height: 91px;
+  min-width: 402px;
+  padding: 7.5px;
 }
 
-.button {
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.button-cancel {
-  background-color: white;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
-
-.button-submit {
-  background-color: var(--primary);
-  color: white;
-}
-
-.footer {
-  background-color: var(--color-gray100);
-  padding: 40px 20px;
+.upcycleForm .x-4 {
+  color: var(--color-gray500);
+  font-weight: 300;
+  height: 27px;
   text-align: center;
+  width: 160px;
 }
 
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
+.upcycleForm .x-4::placeholder {
+  color: #c0c5c799;
 }
 
-.footer-logo {
-  max-width: 220px;
-  height: auto;
-  margin-bottom: 20px;
+.upcycleForm .confirm {
+  display: flex;
+  gap: 28px;
+  margin-left: 720px;
+  margin-top: 72px;
+  width: 280px;
 }
 
-.footer-address {
-  font-size: 14px;
+.upcycleForm .confirm-item {
+  align-items: flex-start;
+  display: flex;
+  min-width: 127px;
+}
+
+.upcycleForm .overlap-group-3 {
+  align-items: flex-start;
+  background-color: var(--main-gray100);
+  border: 1.2px solid;
+  border-color: var(--color-primary);
+  border-radius: 2px;
+  display: flex;
+  height: 50px;
+  min-width: 125px;
+  padding: 10.8px 44.8px;
+}
+
+.upcycleForm .text-6 {
+  color: var(--color-primary);
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.upcycleForm .overlap-group1 {
+  align-items: flex-start;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  display: flex;
+  height: 50px;
+  min-width: 125px;
+  padding: 12px 46px;
+}
+
+.upcycleForm .text-7 {
+  color: var(--color-gray100);
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.upcycleForm .footer {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-shrink: 1;
+  height: 280px;
+  justify-content: center;
+  margin-top: 182px;
+  width: 1920px;
+}
+
+.upcycleForm .footer-layer {
+  background-color: var(--main-gray100);
+  border-color: var(--color-gray500);
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  height: 282px;
+  width: 1922px;
+}
+
+.upcycleForm .footer-address {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 125px;
+  margin-left: 772px;
+  margin-top: 78px;
+  width: 378px;
+}
+
+.upcycleForm .image-3 {
+  height: 45px;
+  margin-left: 78px;
+  width: 220px;
+}
+
+.upcycleForm .address-14-samcheo {
+  align-self: center;
   color: var(--color-gray900);
+  font-weight: var(font-weight-regular);
+  height: 40px;
+  line-height: normal;
+  margin-left: -2px;
+  text-align: center;
+  width: 376px;
 }
 
-@media (max-width: 768px) {
-  .size-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.upcycleForm .span-1 {
+  letter-spacing: -0.06px;
+}
 
-  .form-actions {
-    flex-direction: column;
-  }
+.upcycleForm .flex-col-6 {
+  display: flex;
+  flex-direction: column;
+}
 
-  .button {
-    width: 100%;
-  }
+.upcycleForm .navbar-link {
+  cursor: pointer;
+  height: 24px;
+  letter-spacing: -0.4px;
+  line-height: normal;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.upcycleForm .rectangle {
+  background-color: var(--main-gray100);
+  border: 0.5px solid;
+  border-color: var(--color-black);
+  height: 12px;
+  margin-bottom: 1px;
+  width: 12px;
+}
+
+.upcycleForm .x-5 {
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+  padding: 0;
 }
