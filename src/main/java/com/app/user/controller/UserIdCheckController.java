@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 import com.app.dao.UserDAO;
+import com.app.vo.UserVO;
 
 public class UserIdCheckController implements Action {
 
@@ -16,13 +17,14 @@ public class UserIdCheckController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		UserDAO userDAO = new UserDAO();
+		String tempId = req.getParameter("userId");
+		String tempUrl = "join-main.user?tempId="+ tempId + "&idCheck=";
 		
-		System.out.println(req.getParameter("userId"));
-		System.out.println(userDAO.idCheck(req.getParameter("userId")));
-//		userDAO.idCheck(req.getParameter("userId"));
-//		result.setPath("join-main.user?idCheck=true");
-//		
-		result.setPath("join-main.user?idCheck=true");
+		if(userDAO.idCheck(tempId) == 1){
+			result.setPath(tempUrl+"false");						
+		}else {
+			result.setPath(tempUrl+"true");			
+		}
 		result.setRedirect(true);
 		return result;
 	}

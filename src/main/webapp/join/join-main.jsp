@@ -1,3 +1,4 @@
+<%@page import="com.app.vo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,11 +20,11 @@
 			<div>
 				<span class="user-text">아이디</span>
 				<span class="red-star">*</span>
-				<input type="text" id="id-input" name="userId" placeholder="6~20자 영문, 숫자" value={userId}/>
+				<input type="text" id="id-input" name="userId" placeholder="6~20자 영문, 숫자" />
 				<button type="button" id="id-check-button"><p>중복체크</p>	</button>
 			</div>
-			<div><p id="already use id">이미 사용중인 아이디 입니다.</p></div>
-			<div><p class="need-write">필수 항목입니다.</p></div>
+			<div><p id="already-use-id">이미 사용중인 아이디 입니다.</p></div>
+			<div><p class="need-write" id="need-write-id">.</p></div>
 			<div>
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
@@ -58,13 +59,13 @@
 				<span class="red-star">*</span>
 				<input type="text" id="email-input" name="userEmail" placeholder="이메일을 입력하세요."/>
 				<button type="button" id="email-check-button"><p>이메일 인증</p></button>
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p class="need-write"> </p></div>
 			</div>	
 			<div>
 				<span class="user-text">인증번호</span>
 				<span class="red-star">*</span>
 				<input type="text" id="email-check-input" name="checkUserEmail" placeholder="인증번호를 입력하세요."/>
-				<button><p>인증번호 확인</p></button>
+				<button type="button" id="email-check-button-verify"><p>인증번호 확인</p></button>
 				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			
@@ -75,7 +76,7 @@
 	  			</label>
 				<input class="check-label" type="checkbox" id="check-up14"/>
 	  			<label for="check-up14">
-	  				<span class="check-label-span">만 14세 이상입니다.</span>
+	  				<span class="check-label-span">[필수] 만 14세 이상입니다.</span>
 	  			</label>
 				<input class="check-label" type="checkbox" id="check-service"/>
 	  			<label for="check-service">

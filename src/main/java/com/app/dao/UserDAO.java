@@ -15,7 +15,7 @@ import com.app.vo.UserVO;
  	
  //	아이디 중복체크
  	public int idCheck(String userId) {
- 		return sqlSession.selectOne("user.idcheck", userId);
+ 		return sqlSession.selectOne("user.idCheck", userId);
  	}
  	
  //	회원가입	

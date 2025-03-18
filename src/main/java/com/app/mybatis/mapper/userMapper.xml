@@ -19,7 +19,7 @@
 	</insert>
 	
 	<select id="idCheck" parameterType="String" resultType="int">
-		SELECT COUNT(*) 
+		SELECT COUNT(ID) 
   		FROM TBL_USER
 		WHERE USER_ID = #{userId}
 	</select>
