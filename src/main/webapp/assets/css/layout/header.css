@@ -17,13 +17,19 @@ nav {
     height: 100%;
 }
 
-.logo {
-    margin-left: 52px;
-    padding-top: 7px;
+.headerLogo-wrap {
+    margin: 11px 52px;
+	display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#headerLogo {
+	width: 96px;
+    height: 34px;
 }
 
 .menu {
-    margin-left: 52px;
     display: flex;
     list-style: none;
     gap: 60px;
