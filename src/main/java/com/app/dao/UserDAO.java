@@ -14,11 +14,8 @@ import com.app.vo.UserVO;
  	}
  	
  //	아이디 중복체크
- 	public boolean idCheck(String userid) {
- 		if(sqlSession.selectOne("user.idCheck", userid).equals(null)) {
- 			return true;
- 		};
- 		return false;
+ 	public int idCheck(String userId) {
+ 		return sqlSession.selectOne("user.idcheck", userId);
  	}
  	
  //	회원가입	
