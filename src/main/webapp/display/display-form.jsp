@@ -40,21 +40,21 @@
 			        <input type="text" placeholder="작품명을 입력하세요."
 			        		style="margin-left: 49px" class="input-box">			
 				</div>
-					<div class="input-text">
-					    <label>작품 분류<span class="essential">*</span></label>
-					    <span id="category-text" style="cursor: pointer;">
-					        작품 분류를 선택하세요
-					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
-					    </span> 
-					    <select id="category-select" class="select-box" style="display: none;">
-					        <option value="회화">회화</option>
-					        <option value="조각">조각</option>
-					        <option value="한국화">한국화</option>
-					        <option value="공예">공예</option>
-					        <option value="건축">건축</option>
-					        <option value="서예">서예</option>
-					    </select>
-					</div>
+				<div id="category" class="input-text">
+				    <label>작품 분류<span class="essential">*</span></label>
+				    <div id="category-text" style="cursor: pointer;">
+				        작품 분류를 선택하세요
+				        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+				    </div> 
+				    <select id="category-select" class="select-box" style="display: none;">
+				        <option value="회화">회화</option>
+				        <option value="조각">조각</option>
+				        <option value="한국화">한국화</option>
+				        <option value="공예">공예</option>
+				        <option value="건축">건축</option>
+				        <option value="서예">서예</option>
+				    </select>
+				</div>
 				<div class="input-text">
 			        <label>작품 재료<span class="essential">*</span></label>
 			        <input type="text" placeholder="작품 재료를 입력하세요."
@@ -62,16 +62,26 @@
 				</div>
 				<div class="input-text">
 			        <label>작품 규격<span class="essential">*</span></label>
-			        <input type="text" placeholder="가로 X 세로 X 높이"
-			        		style="margin-left: 25px" class="input-box">			
+			        <div class="size-input" style="margin-left: 23px">
+					  <input type="text" placeholder="가로">
+					  <span>X</span>
+					  <input type="text" placeholder="세로">
+					  <span>X</span>
+					  <input type="text" placeholder="높이">
+					</div>		
 				</div>
+				
 				<div class="input-text">
-			        <label>제작 완료일<span class="essential">*</span></label>
-					    <span id="calender-text">
-						    <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
-						    날짜를 선택해주세요.
-						</span> 		
+				    <label>제작 완료일<span class="essential">*</span></label>
+				    <span id="calendar-text" style="cursor: pointer;" onclick="showCalendar()">
+				        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
+				        날짜를 선택해주세요.
+				    </span> 
+				    <!-- 날짜 선택을 위한 input 필드 -->
+				    <input type="date" id="date-input" class="input-box" 
+				    style="display: none;" onchange="updateDate()" >
 				</div>
+				
 			</form>
 		</div>
 	</div>

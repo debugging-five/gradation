@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
     <!-- 상단 타이틀 -->
-    <div class="display-text">display</div>
+    <h1 class="display-text">display</h1>
     
     <div id="content">
         <!-- 작품 이미지 -->
@@ -46,20 +46,44 @@
     <div class="comments-section">
         <h3 class="comments">comments</h3>
         <div class="textarea-container">
-	        <textarea placeholder="댓글을 작성해주세요."></textarea>
+	        <textarea class="comment-typing" placeholder="댓글을 작성해주세요."></textarea>
 	        <button class="submit-button">등록</button>
 	    </div>
+	    
+	    <div>
+		    <button class="filter">
+		    	등록순
+		    	<img class="down-icon" alt="down-icon" src="../assets/images/display/down.png">
+		    </button>
+		</div>
+	
+	    
         
         
-        <div class="comment">
-            <p><strong>user4</strong> 20분 전</p>
-            <p>작품 잘 봤어요 😊</p>
+        <div class="user-profile">
+        	<img class="profile-image" alt="profile-image" src="../assets/images/display/cat.png">
+            <p class="comment-user"><strong>user4</strong></p>
+            <p>20분 전</p>
         </div>
-        <div class="comment">
-            <p><strong>user3</strong> 2시간 전</p>
-            <p>색감이 너무 좋아요 👍</p>
+        <div class="comment-wrapper">
+            <p class="comment">작품 잘 봤습니다.</p>
+            <img class="like" alt="like" src="../assets/images/display/like.png">
         </div>
-    </div>
+        
+        <div class="user-profile">
+        	<img class="profile-image" alt="profile-image" src="../assets/images/display/cat.png">
+            <p class="comment-user"><strong>user3</strong></p>
+            <p>21시간 전</p>
+        </div>
+        <div class="comment-wrapper">
+            <p class="comment">작품 잘 봤어요 😊</p>
+            <img class="like" alt="like" src="../assets/images/display/like.png">
+        </div>
+     </div>        
+    
+    
+    
+   
 </div>
 </body>
 </html>

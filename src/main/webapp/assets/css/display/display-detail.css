@@ -41,12 +41,12 @@
       margin-bottom: 42px;
   }
   .likes {
-      color: red;
+      color: var(--color-primary);
       margin-bottom: 10px;
       border-bottom: solid 1px;
-width : 480px;
-padding-bottom: 20px;
-font-size: 18px;
+	  width : 480px;
+	  padding-bottom: 20px;
+	  font-size: 18px;
       font-weight: bold;
   }
   .date {
@@ -59,10 +59,10 @@ font-size: 18px;
       margin: 27px 0 0 0;
   }
   .category {
-      margin: 27px 0 0 0;
-      border-bottom: solid 1px;
-width : 480px;
-padding-bottom: 20px;
+    margin: 27px 0 0 0;
+    border-bottom: solid 1px;
+	width : 480px;
+	padding-bottom: 20px;
   }
   .content-text {
   	width: 480px;
@@ -76,10 +76,10 @@ padding-bottom: 20px;
   .like-button {
   	width: 210px;
   	height: 50px;
-      border: solid 1.5px;
-      background-color: white;
-      color: #EE3333;
-      cursor: pointer;
+    border: solid 1.5px;
+    background-color: white;
+    color: var(--color-primary);
+    cursor: pointer;
   }
   
   .contact-button {
@@ -97,40 +97,54 @@ padding-bottom: 20px;
 
 
 
-  .comments-section {
-      width: 1160px;
-      margin-top: 120px;
-  }
-  .comments {
-  	border-bottom: solid 1px;
-width : 1160px;
-padding-bottom: 15px;
-  }
-  .comments-section textarea {
-      margin: 15px 0 10px 0;
-width: 1160px; 
-height: 177px; 
-resize: none;
-  }
-  .submit-button {
-      padding: 8px 12px;
-      border: none;
-      background-color: #EE3333;
-      color: white;
-      cursor: pointer;
-  }
-  .comment {
-      background: #f0f0f0;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-  }
+.comments-section {
+    width: 1160px;
+    margin-top: 120px;
+}
+.comments {
+	border-bottom: solid 1px;
+	width : 1160px;
+	padding-bottom: 15px;
+}
+.comments-section textarea {
+    margin: 15px 0 10px 0;
+	width: 1160px; 
+	height: 177px; 
+	resize: none;
+}
+.comment-typing {
+	padding: 10px 0 50px 10px;
+	font-size: 16px;
+}
+  
+.submit-button {
+	width: 75px;
+	height: 35px;
+    border: none;
+    background-color: #EE3333;
+    color: white;
+    cursor: pointer;
+    position: relative;
+	right: -1075px;
+    top: -60px;
+}
 
 
 
-
-
-
+.user-profile {
+    margin-top: 72px;
+    display: flex;
+}
+.comment-user {
+	margin: 0 20px 0 5px;
+}
+ 
+.comment-wrapper {
+	margin-left: 33px;
+}
+.comment {
+	margin: 11px 0 15px 0;
+}
 
 
 
