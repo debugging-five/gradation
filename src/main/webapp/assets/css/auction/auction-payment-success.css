@@ -28,11 +28,23 @@ body {
 
 #icon-wrapper {
 	display : flex;
+	justify-content : flex-end;
+	align-items : center;
+	width : 685px;
+}
+/* 
+#icon-wrapper i {
+	display : flex;
+	justify-content : flex-end;
+}
+ */
+#icon-wrapper2 {
+	display : flex;
 	justify-content : center;
 	align-items : center;
 }
 
-i {
+#icon-wrapper2 i {
 	color : var(--color-primary);
 	margin : 30px 0 0 0;
 }

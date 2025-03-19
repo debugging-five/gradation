@@ -1,18 +1,19 @@
 @charset "UTF-8";
 
-#wrapper {
-	background-color : #fbfcfc;
-	min-height : 100vh;
-	overflow : hidden;
-	display : flex; 
-	flex-direction : column; 
+body {
+	width : 100%;
+	height : 100%;
+	background-color: #fbfcfc;
 }
 
-#title-wrapper p {
-	color : #333333;
-	font-size : 30px;
-	display : flex;
-	justify-content : center;
+#wrapper {
+	display : flex; 
+	flex-direction : column;
+	align-items: center; 
+    justify-content: center;
+}
+
+#title-wrapper h2 {
 	margin : 86px 0 0 0;
 }
 
@@ -99,12 +100,33 @@ i.fa-angle-down {
 
 #bar-right input::placeholder {
 	padding : 0 0 0 12px;
+	font-family: var(--font-family-Pretendard-Regular);
 }
 
 #list-content p {
 	color : #6e7479;
 	font-size : 12px;
   	margin : 6px 0 0 0;
+}
+
+#exhibition-info {
+	display : flex;
+	margin : 13px 0 0 0;
+}
+
+#university-logo{
+	width : 128px;
+	height : 128px;
+	background-color : var(--color-gray100);
+	border : solid 1px var(--color-gray500);
+	border-radius : 10px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+#university-info {
+	margin : 0 0 0 28px;
 }
 
 #img-background {
@@ -137,6 +159,9 @@ i.fa-angle-down {
 	cursor : pointer;
 	font-size : 20px;
 	border : solid 1.5px #ee3333;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h5);
+	font-weight : var(--font-weight-h5);
 }
 
 .inquiry {
