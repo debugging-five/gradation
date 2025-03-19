@@ -87,7 +87,7 @@
 				<button class="button auto-bidding">
 					<p>자동응찰</p>
 				</button>
-				<button class="button bidding">
+				<button class="button bidding" onclick="openPopup()" >
 					<p>응찰</p>
 				</button>
 			</div>
