@@ -50,12 +50,18 @@
 	        <button class="submit-button">등록</button>
 	    </div>
 	    
-	    <div>
-		    <button class="filter">
+	    <div class="filter-text-container">
+		    <div id="filter-text" style="cursor: pointer;">
 		    	등록순
-		    	<img class="down-icon" alt="down-icon" src="../assets/images/display/down.png">
-		    </button>
+		    	<img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+		    </div>
+	        <select id="filter-select" class="select-box" style="display: none;">
+		        <option value="등록순">등록순</option>
+		        <option value="좋아요순">좋아요순</option>
+		    </select>
 		</div>
+		
+		
 	
 	    
         
@@ -86,4 +92,5 @@
    
 </div>
 </body>
+<script type="text/javascript" src="../assets/js/display/display-detail.js"></script>
 </html>

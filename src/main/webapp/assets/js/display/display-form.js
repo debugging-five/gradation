@@ -25,6 +25,7 @@ document.getElementById('category-select').addEventListener('change', function (
 
 
 
+
 	
 /* 사진 */
 	function previewImage(event) {
