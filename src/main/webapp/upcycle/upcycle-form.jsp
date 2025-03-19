@@ -324,44 +324,37 @@
 	            };
 	            reader.readAsDataURL(file);
 	        }
-	    }
-		
+	    }	
     </script>
     <script>
 		document.addEventListener("DOMContentLoaded", function () {
 		    const calendarIcon = document.querySelector(".calendar");
 		    const textCalendar = document.querySelector(".text-calendar");
 		
-		    // 📌 달력 input 요소 생성
 		    const calendarInput = document.createElement("input");
 		    calendarInput.type = "date";
 		    calendarInput.style.position = "absolute";
 		    calendarInput.style.border = "none";
 		    calendarInput.style.background = "transparent";
-		    calendarInput.style.opacity = "0"; // 숨김 처리
-		    calendarInput.style.pointerEvents = "none"; // 직접 클릭 방지
-		    calendarInput.style.zIndex = "-1"; // 화면에서 사라지게 설정
+		    calendarInput.style.opacity = "0";
+		    calendarInput.style.pointerEvents = "none";
+		    calendarInput.style.zIndex = "-1";
 		
 		    document.body.appendChild(calendarInput);
-		
-		    // 📌 아이콘 클릭 시 기본 date picker 표시
-		    calendarIcon.addEventListener("click", function () {
+		        calendarIcon.addEventListener("click", function () {
 		        const rect = calendarIcon.getBoundingClientRect();
-		        calendarInput.style.top = `${rect.bottom + window.scrollY}px`; // 아이콘 아래 배치
+		        calendarInput.style.top = `${rect.bottom + window.scrollY}px`;
 		        calendarInput.style.left = `${rect.left + window.scrollX}px`;
 		
-		        calendarInput.showPicker(); // 기본 캘린더 표시
+		        calendarInput.showPicker();
 		    });
 		
-		    // 📌 날짜 선택 시 text-calendar에 반영
 		    calendarInput.addEventListener("change", function () {
 		        if (calendarInput.value) {
-		            textCalendar.textContent = calendarInput.value; // 선택한 날짜 입력
+		            textCalendar.textContent = calendarInput.value;
 		        }
 		    });
 		});
-</script>
-
-    
+	</script>
   </body>
 </html>
