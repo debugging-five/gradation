@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 import com.app.user.controller.UserEmailCheckController;
+import com.app.user.controller.UserEmailCheckOkController;
 import com.app.user.controller.UserIdCheckController;
 import com.app.user.controller.UserJoinOkController;
+import com.app.user.controller.UserLoginController;
 import com.app.user.controller.UserjoinController;
 
 public class UserFrontController extends HttpServlet{
@@ -32,10 +34,9 @@ public class UserFrontController extends HttpServlet{
 		}else if(target.equals("join/email-check")) {
 			result = new UserEmailCheckController().execute(req, resp);
 		}else if(target.equals("join/email-check-verify")) {
-			result = new UserEmailCheckController().execute(req, resp);
-		}else if(target.equals("login")) {
-		}else if(target.equals("login-ok")) {
-		}else if(target.equals("login")) {
+			result = new UserEmailCheckOkController().execute(req, resp);
+		}else if(target.equals("login/login-main")) {
+			result = new UserLoginController().execute(req, resp);
 		}else if(target.equals("login-ok")) {
 		}else if(target.equals("logout-ok")) {
 		}else {

@@ -24,4 +24,10 @@ import com.app.vo.UserVO;
  	}
  	
 // 	로그인
+ 	public String login(UserVO userVO) {
+ 		return sqlSession.selectOne("user.login", userVO);
+ 	}
+ 	public int banCheck(UserVO userVO) {
+ 		return sqlSession.selectOne("user.banCheck", userVO);
+ 	}
  }

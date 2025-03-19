@@ -34,7 +34,7 @@
 			<button type="button">인증번호 확인</button>
 		</div>
 		
-		<button type="button" id="find-password-button">비밀번호 찾기</button>
+		<button type="button" id="find-password-button" onclick="location.href='./login-new-password.jsp'">비밀번호 찾기</button>
 	</form>
 </body>
 <script type="text/javascript" src="../assets/js/login/login-find-password.js"></script>

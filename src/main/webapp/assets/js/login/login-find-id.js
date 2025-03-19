@@ -2,13 +2,14 @@
  * 
  */
 
-const findPasswordButton = document.querySelector("#find-password-button");
-const findPasswordCloseButton = document.querySelector("#find-password-close-button");
-const passwordAccount = document.querySelector("#password-account")
+const findIdButton = document.querySelector("#find-id-button");
+const findIdCloseButton = document.querySelector("#find-id-close-button");
+const idAccount = document.querySelector("#id-account")
+
 findIdButton.addEventListener("click",() => {
-	passwordAccount.style.display = 'block';
+	idAccount.style.display = 'block';
 })
 
 findIdCloseButton.addEventListener("click",() => {
-	passwordAccount.style.display = 'none';
+	idAccount.style.display = 'none';
 })

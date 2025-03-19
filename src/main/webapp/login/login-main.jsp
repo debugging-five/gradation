@@ -47,9 +47,9 @@
 			</form>
 		</div>	
 			<div id="login-option">
-				<a>아이디 찾기</a>
+				<a href="../login/login-find-id.jsp">아이디 찾기</a>
 				<span>|</span>
-				<a>비밀번호 찾기</a>
+				<a href="../login/login-find-password.jsp">비밀번호 찾기</a>
 				<span>|</span>
 				<a href="../join/join-main.user?
 					idCheck=none&
