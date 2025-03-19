@@ -8,6 +8,12 @@
 }
 
 .upcycle-text {
-    margin-top: 90px;
-    font-size: 30px;
+    margin: 90px 0;
+	font-size: var(--font-size-h1);
+}
+
+.banner {
+	width: 1920px;
+	height: 618px;
+	margin-bottom: 100px;
 }
