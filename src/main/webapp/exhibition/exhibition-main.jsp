@@ -144,8 +144,8 @@
 	
 		
 	<div id="button-wrapper2">
-		<button class="button inquiry">문의하기</button>
-		<button class="button register">학교 등록 신청</button>
+		<button class="button inquiry" value="" name="">문의하기</button>
+		<button class="button register" value="" name="">학교 등록 신청</button>
 	</div>
 	
 	
