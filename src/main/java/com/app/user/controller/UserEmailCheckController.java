@@ -15,6 +15,7 @@ public class UserEmailCheckController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MailSend mailSend = new MailSend();
+		
 		System.out.println(req.getParameter("userEmail"));
 //		mailSend.sendMail(req.getParameter("userEmail"), null);
 		
