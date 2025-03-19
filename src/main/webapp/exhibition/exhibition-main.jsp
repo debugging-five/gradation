@@ -35,7 +35,15 @@
 			<div id="bar">
 				<div id="bar-left">
 					<span class="bar-menu">전체 지역</span>
-					<!-- <span><i class="fa-solid fa-angle-down"></i></span> -->
+					
+					
+					<form>
+						<select id="area" name="area">
+							<option value="">전체 지역</option>
+							<option value="area1">서울</option>
+						</select>
+					</form>
+					
 					<span class="bar-menu">전시 상태</span>
 					<span>My pick</span>
 				</div>
