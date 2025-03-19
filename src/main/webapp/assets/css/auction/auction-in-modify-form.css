@@ -111,6 +111,7 @@ button {
 	height: 45px;
 	border-radius: 3px;
 	border: solid 1.5px;
+	font-size: var(--font-size-h5);
 }
 
 #cancel-button {
