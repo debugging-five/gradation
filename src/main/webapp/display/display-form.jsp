@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/display/display-form.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-click.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>작품 업로드</title>
 </head>
 <body>
@@ -96,8 +98,28 @@
 	<!-- 취소, 등록 버튼 -->
 	<div id="buttons">
 		<button class="button-cancel">취소</button> 
-		<button class="button-upload">등록</button>
+		<button class="button-upload" onclick="openPopup()">등록</button>
 	</div>
+	
+	
+	
+	<!-- 제출 클릭 시 팝업 -->
+	<div class="modal-bg" id="modalBg">
+	    <div class="modal">
+	        <div class="modal-title">
+	        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
+	        	<span>제출하시겠습니까?</span>
+	        </div>
+	        <div class="modal-footer">
+	            <button class="sendBtn">취소</button>
+	            <button class="sendBtn">전송</button>
+	        </div>
+	    </div>
+	</div>
+	
+	
+	<!-- 제출완료 팝업 -->
+	
 	
 	
 	
@@ -105,4 +127,5 @@
 </div>
 </body>
 <script type="text/javascript" src="../assets/js/display/display-form.js"></script>
+<script type="text/javascript" src="../assets/js/display/display-form-click.js"></script>
 </html>
