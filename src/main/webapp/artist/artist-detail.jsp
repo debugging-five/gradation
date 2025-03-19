@@ -8,45 +8,47 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/artist/artist-detail.css" />
-
 <title>display-detail</title>
 </head>
    <script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
 	<div class="container">
-		<h1 class="mainText">artist</h1>
+		<h1 class="main-text">artist</h1>
 		<div class="wrap-content">
 			<!-- 페이지 제목 -->
 			
 			<!-- 작가 정보 -->
-			<div class="artist-wrap">
-				<img src="../assets/images/artist/cat 2.png" alt="프로필 이미지" />
-				<h2 class="name">홍길동</h2>
-				<h6 class="university">00대학교</h6>
-				<button class="contact-button">작가와 연락</button>
-				<div class="sns">
-					<div>
-						<a class="icon" href="https://www.instagram.com/" target="_blank">
-		                    <i class="fa-brands fa-instagram fa-xl"></i> 
-		                </a>
-		                <h4 class="instagram">@gildong_1234</h4>
-	                </div>
-					<div>
-						<a class="icon" href="https://www.tistory.com/" target="_blank">
-							<i class="fa-solid fa-globe fa-xl"></i>
-		                </a>
-						<h4 class="blog">blog</h4>
+			<div id="moving">
+				<div class="artist-wrap">
+					<img src="../assets/images/artist/cat 2.png" alt="프로필 이미지" />
+					<h2 class="name">홍길동</h2>
+					<h6 class="university">00대학교</h6>
+					<button>작가와 연락</button>
+					<div class="sns">
+						<div>
+							<a class="icon" href="https://www.instagram.com/" target="_blank">
+			                    <i class="fa-brands fa-instagram fa-xl"></i> 
+			                </a>
+			                <h4 class="instagram">@gildong_1234</h4>
+		                </div>
+						<div>
+							<a class="icon" href="https://www.tistory.com/" target="_blank">
+								<i class="fa-solid fa-globe fa-xl"></i>
+			                </a>
+							<h4 class="blog">blog</h4>
+						</div>
+		                <div>
+			                <a class="icon" href="https://www.youtube.com/" target="_blank">
+			                    <i class="fa-brands fa-youtube fa-xl"></i>
+			                </a>
+			                <h4 class="youtube">@glidong_1234</h4>
+						</div>
 					</div>
-	                <div>
-		                <a class="icon" href="https://www.youtube.com/" target="_blank">
-		                    <i class="fa-brands fa-youtube fa-xl"></i>
-		                </a>
-		                <h4 class="youtube">@glidong_1234</h4>
-					</div>
-				</div>
-			</div>	
-		
+				</div>	
+			</div>
+			
+			
 			<div class="artist-info">
 				<h3 id="introduce">작가 소개</h3>
 				<p id="introduce-detail">1991년에 태어난 Ayaïro는 생생하고 향수를 불러일으키는 회화 스타일로 유명한 도쿄를 기반으로 활동하는 예술가입니다. 그녀의 작품은 그녀가 태어나고 자란 일본의 사토야마 풍경을 배경으로 어린 아이들을 상징적으로 묘사합니다. 자신의 뿌리에 대한 그녀의 열정은 순수하고 다채로운 풍경으로 묘사되며, 사랑스럽지만 다소 외로운 아이들이 노는 이미지와 혼합되어 시청자 자신의 성찰과 어린 시절 추억을 불러 일으킵니다. 1991년에 태어난 Ayaïro는 생생하고 향수를 불러일으키는 회화 스타일로 유명한 도쿄를 기반으로 활동하는 예술가입니다. 그녀의 작품은 그녀가 태어나고 자란 일본의 사토야마 풍경을 배경으로 어린 아이들을 상징적으로 묘사합니다. 자신의 뿌리에 대한 그녀의 열정은 순수하고 다채로운 풍경으로 묘사되며, 사랑스럽지만 다소 외로운 아이들이 노는 이미지와 혼합되어 시청자 자신의 성찰과 어린 시절 추억을 불러 일으킵니다. 1991년에 태어난 Ayaïro는 생생하고 향수를 불러일으키는 회화 스타일로 유명한 도쿄를 기반으로 활동하는 예술가입니다. 그녀의 작품은 그녀가 태어나고 자란 일본의 사토야마 풍경을 배경으로 어린 아이들을 상징적으로 묘사합니다. 자신의 뿌리에 대한 그녀의 열정은 순수하고 다채로운 풍경으로 묘사되며, 사랑스럽지만 다소 외로운 아이들이 노는 이미지와 혼합되어 시청자 자신의 성찰과 어린 시절 추억을 불러 일으킵니다. 991년에 태어난 Ayaïro는 생생하고 향수를 불러일으키는 회화 스타일로 유명한</p>
@@ -85,7 +87,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="pagiNation">페이지네이션</div>
+		<div id="pagination">페이지네이션</div>
 	</div>
 
 
