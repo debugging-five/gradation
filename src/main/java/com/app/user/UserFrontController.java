@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.user.controller.UserEmailCheckController;
 import com.app.user.controller.UserIdCheckController;
 import com.app.user.controller.UserJoinOkController;
 import com.app.user.controller.UserjoinController;
@@ -28,6 +29,8 @@ public class UserFrontController extends HttpServlet{
 			result = new UserJoinOkController().execute(req, resp);
 		}else if(target.equals("join/id-check")) {
 			result = new UserIdCheckController().execute(req, resp);
+		}else if(target.equals("join/email-check")) {
+			result = new UserEmailCheckController().execute(req, resp);
 		}else if(target.equals("login")) {
 		}else if(target.equals("login-ok")) {
 		}else if(target.equals("login")) {
