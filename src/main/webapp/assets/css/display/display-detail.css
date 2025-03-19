@@ -19,6 +19,7 @@
     #content {
         display: flex;
         margin-top: 148px;
+        align-items: flex-start; /* 수정: sticky 요소가 정상적으로 작동하도록 함 */
     }
     
     .image-box {
@@ -28,6 +29,22 @@
         margin-right: 120px; 
         
     }
+    
+    
+#scroll {
+    position: sticky;
+    top: 20px;  /* 스크롤 시 화면 상단에서 20px 떨어진 위치에 고정 */
+}
+
+.image-box {
+    width: 560px;
+    height: 560px;
+    background-color: gray;
+}
+
+.button-position {
+    margin-top: 20px;  /* 버튼이 이미지와 겹치지 않도록 여백 추가 */
+}
     
 /* 텍스트 */
   .title {
@@ -171,3 +188,21 @@
     display: flex; /* 수평 배치 */
 }
 
+
+/* 댓글 좋아요 */
+.comment-like-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.comment-like-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.liked .comment-like-icon {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(95%) saturate(7477%) hue-rotate(358deg) brightness(94%) contrast(112%);
+}
+.liked .comment-like-count {
+    color: red;
+}

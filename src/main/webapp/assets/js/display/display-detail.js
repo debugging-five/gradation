@@ -1,3 +1,5 @@
+
+// 등록순 -----------------------------------------
 // 작품 분류 텍스트 클릭 시 select 박스 보이게 하기
 document.getElementById('filter-text').addEventListener('click', function () {
     var filterSelect = document.getElementById('filter-select');
@@ -10,7 +12,6 @@ document.querySelector('.down-image').addEventListener('click', function (event)
     var filterSelect = document.getElementById('filter-select');
     filterSelect.style.display = 'inline';
 });
-
 // 분류 항목 선택 시 down.png 유지
 document.getElementById('filter-select').addEventListener('change', function () {
     var selectedValue = this.value;
@@ -22,3 +23,22 @@ document.getElementById('filter-select').addEventListener('change', function () 
 
     this.style.display = 'none'; // select 박스 숨김
 });
+
+
+
+// 댓글 좋아요
+function toggleCommentLike(element) {
+    let likeCount = element.querySelector(".comment-like-count");
+    let currentCount = parseInt(likeCount.textContent);
+    
+    if (element.classList.contains("liked")) {
+        likeCount.textContent = currentCount - 1; // 숫자 감소
+        element.classList.remove("liked");
+    } else {
+        likeCount.textContent = currentCount + 1; // 숫자 증가
+        element.classList.add("liked");
+    }
+}
+
+
+

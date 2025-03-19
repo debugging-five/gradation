@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* 작가와 연락 팝업 */
+
 /* 배경 어둡게 */
 .modal-bg {
     display: none;
@@ -45,14 +47,16 @@
 
 /* 제목 */
 .modal-title {
-    font-weight: bold;
-    font-size: 21px;
+	font-weight: bold;
+    font-size: var(--font-size-h3);
     margin: 16px 0 0 16px;
-    
+    display: flex;
+    align-items: center; 
 }
 .messege-icon {
 	width: 21px;
 	height: 18.5px;
+	margin-left: 4px;
 }
 
 /* 입력창 */
@@ -64,6 +68,7 @@ textarea {
     border-radius: 5px;
     font-size: 14px;
     resize: none;
+    padding: 10px 0 0 10px;
 }
 
 /* 하단 영역 */
@@ -71,7 +76,7 @@ textarea {
     display: flex;
     align-items :flex-end;
     flex-direction: column;
-    margin-right: 13px;
+	margin-right: 17px;
 }
 
 /* 글자 수 표시 */
@@ -97,3 +102,74 @@ textarea {
 #sendBtn.active {
     opacity: 1;
 }
+
+
+
+
+/* 완료 팝업 */
+
+/* 전체 화면을 덮는 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달 스타일 */
+.modal-ok {
+    background: white;
+    border-radius: 5px;
+    width: 600px;
+    height: 375px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 모달 헤더 */
+.ok-icon {
+	width: 56px;
+	height: 56px;
+	color: red;
+	margin-top: 60px;
+}
+
+/* 타이틀 */
+.big-text {
+    color: red;
+    font-weight: bold;	
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* 작은 글씨 */
+.small-text1 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+.small-text2 {
+    color: gray;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* 버튼 스타일 */
+.close-btn-ok {
+	width:75px;
+	height:35px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.modal-footer-ok {
+	margin-top: 40px;	
+	margin-bottom: 40px;	
+}
+
