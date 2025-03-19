@@ -45,12 +45,45 @@
 					<p>전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
 				</div>
 			</div>
+			
+			<div id="exhibition-info">
+				<div id="university-logo">
+					<div>대학교 로고</div>
+				</div>
+				
+				<div id="university-info">
+					<div>
+						<h6>강원대학교</h6>
+					</div>
+					
+					<div>
+						<p>제 8회 졸업전시회</p>
+					</div>
+					
+					<div>
+						<p>디자인학과</p>
+					</div>
+					
+					<div>
+						<p>2025/02/22 ~ 2025/02/28</p>
+					</div>
+					
+					<div>
+						<p>강원 삼척시 중앙로 346 강원대학교 조형관 1층</p>
+					</div>
+					
+					<button>전시예정</button>
+					<button>좋아요</button>
+				</div>
+			</div>
+			
 		</div>
 		
 		<div>
 			<div id="img-background">
 				<img src="../assets/images/exhibition/university-exhibition.jpg" alt="전시회 사진"/>
 			</div>
+
 		</div>
 	</div>
 	

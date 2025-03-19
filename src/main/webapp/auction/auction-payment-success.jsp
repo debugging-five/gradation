@@ -14,12 +14,15 @@
 <div id="wrapper">
 
 	<div id="pop-up">
+		
 		<div class="bar">
-			<i class="fa-solid fa-xmark"></i>
+			<div id="icon-wrapper">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
 		</div>
 		
-		<div id="icon-wrapper">
-			<i id="icon" class="fa-regular fa-circle-check fa-3x"></i>
+		<div id="icon-wrapper2">
+			<i class="fa-regular fa-circle-check fa-3x"></i>
 		</div>
 		
 		<div id="payment-success">
