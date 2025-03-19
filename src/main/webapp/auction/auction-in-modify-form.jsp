@@ -30,7 +30,8 @@
 					<div class="input-box-wrap">
 						<div class="input-box">
 					        <h5>경매 개시<span class="star">*</span></h5>
-					        <h4 class="input-text">2025 . 01 . 21 . 8:00:00</h4>
+					        <img id="calendar" alt="달력" src="../assets/images/auction/calendar.png">
+					        <h4 id="select-time">2025 . 01 . 21 . 8:00:00</h4>
 						</div>
 					</div>
 					<div class="input-box-wrap">
@@ -52,7 +53,7 @@
 					<h5>작품제목</h5>
 					<p>멋진 고양이</p>
 				</div>
-				<div id="art-arist">
+				<div id="art-artist">
 					<h5>작가명 | 박세현</h5>
 				</div>
 				<div id="art-info">
@@ -60,11 +61,11 @@
 					<p>50 X 50</p>
 					<p>2025</p>
 				</div>
-				<div>
+				<div id="button-wrap">
 					<button id="cancel-button">취소</button>
 					<button id="modify-button">수정</button>
-					<h3>경매가 개시되면 작품 수정 및 삭제가 불가능합니다.</h3>
 				</div>
+				<h3 id="reference">경매가 개시되면 작품 수정 및 삭제가 불가능합니다.</h3>
 			</div>
 		</div>
 	</div>
