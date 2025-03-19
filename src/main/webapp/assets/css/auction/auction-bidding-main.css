@@ -131,8 +131,7 @@ body {
    width : 120px;
    height : 45px;
    border-radius : 3px;
-   cursor : pointer;
-   border : solid 1.5px #ee3333;
+   border : solid 1.5px var(--color-primary);
    font-family: var(--font-family-Pretendard-Regular);
 }
 
@@ -153,8 +152,6 @@ body {
 
 #popup-wrapper {
 	display : none;
-	justify-content : center;
-	align-items : center;
 }
 
 

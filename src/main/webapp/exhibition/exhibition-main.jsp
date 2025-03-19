@@ -12,6 +12,7 @@
 <script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
+<form action="" method="post">
 <%@ include file="../layout/header.jsp" %>
 
 <div id="wrapper">
@@ -133,9 +134,6 @@
 			
 		</div>
 		
-		
-		
-		
 		<div>
 			<div id="img-background">
 				<div>전시회 사진</div>
@@ -155,6 +153,7 @@
 </div>
 
 <%@ include file="../layout/footer.jsp" %>
+</form>
 
 </body>
 </html>

@@ -89,14 +89,15 @@
 				</button>
 				<button class="button bidding" >
 					<p>응찰</p>
+<%-- <div id="popup-wrapper">			
+		<%@ include file="./auction-bidding.jsp"%>
+	</div>  --%>
 				</button>
 			</div>
 			
 		</div>
 	</div>
 	
-
-
 
 	<div id="auction-list">
 		<div id="auction-ing">
@@ -120,10 +121,12 @@
 
 	</div>
 </div>
-	<div id="popup-wrapper">			
-		<%@ include file="./auction-bidding.jsp"%>
-	</div>
+
+
 
 <%@ include file="../layout/footer.jsp" %>
+
+
 </body>
+<script src="../assets/js/auction/auction-bidding.js" />
 </html>
