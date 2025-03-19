@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/display/display-form.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-click.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>작품 업로드</title>
 </head>
 <body>
@@ -40,21 +42,21 @@
 			        <input type="text" placeholder="작품명을 입력하세요."
 			        		style="margin-left: 49px" class="input-box">			
 				</div>
-					<div class="input-text">
-					    <label>작품 분류<span class="essential">*</span></label>
-					    <span id="category-text" style="cursor: pointer;">
-					        작품 분류를 선택하세요
-					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
-					    </span> 
-					    <select id="category-select" class="select-box" style="display: none;">
-					        <option value="회화">회화</option>
-					        <option value="조각">조각</option>
-					        <option value="한국화">한국화</option>
-					        <option value="공예">공예</option>
-					        <option value="건축">건축</option>
-					        <option value="서예">서예</option>
-					    </select>
-					</div>
+				<div id="category" class="input-text">
+				    <label>작품 분류<span class="essential">*</span></label>
+				    <div id="category-text" style="cursor: pointer;">
+				        작품 분류를 선택하세요
+				        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+				    </div> 
+				    <select id="category-select" class="select-box" style="display: none;">
+				        <option value="회화">회화</option>
+				        <option value="조각">조각</option>
+				        <option value="한국화">한국화</option>
+				        <option value="공예">공예</option>
+				        <option value="건축">건축</option>
+				        <option value="서예">서예</option>
+				    </select>
+				</div>
 				<div class="input-text">
 			        <label>작품 재료<span class="essential">*</span></label>
 			        <input type="text" placeholder="작품 재료를 입력하세요."
@@ -62,16 +64,26 @@
 				</div>
 				<div class="input-text">
 			        <label>작품 규격<span class="essential">*</span></label>
-			        <input type="text" placeholder="가로 X 세로 X 높이"
-			        		style="margin-left: 25px" class="input-box">			
+			        <div class="size-input" style="margin-left: 23px">
+					  <input type="text" placeholder="가로">
+					  <span>X</span>
+					  <input type="text" placeholder="세로">
+					  <span>X</span>
+					  <input type="text" placeholder="높이">
+					</div>		
 				</div>
+				
 				<div class="input-text">
-			        <label>제작 완료일<span class="essential">*</span></label>
-					    <span id="calender-text">
-						    <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
-						    날짜를 선택해주세요.
-						</span> 		
+				    <label>제작 완료일<span class="essential">*</span></label>
+				    <span id="calendar-text" style="cursor: pointer;" onclick="showCalendar()">
+				        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
+				        날짜를 선택해주세요.
+				    </span> 
+				    <!-- 날짜 선택을 위한 input 필드 -->
+				    <input type="date" id="date-input" class="input-box" 
+				    style="display: none;" onchange="updateDate()" >
 				</div>
+				
 			</form>
 		</div>
 	</div>
@@ -86,11 +98,34 @@
 	<!-- 취소, 등록 버튼 -->
 	<div id="buttons">
 		<button class="button-cancel">취소</button> 
-		<button class="button-upload">등록</button>
+		<button class="button-upload" onclick="openPopup()">등록</button>
 	</div>
+	
+	
+	
+	<!-- 제출 클릭 시 팝업 -->
+	<div class="modal-bg" id="modalBg">
+	    <div class="modal">
+	        <div class="modal-title">
+	        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
+	        	<span>제출하시겠습니까?</span>
+	        </div>
+	        <div class="modal-footer">
+	            <button class="sendBtn">취소</button>
+	            <button class="sendBtn">전송</button>
+	        </div>
+	    </div>
+	</div>
+	
+	
+	<!-- 제출완료 팝업 -->
+	
+	
+	
 	
 	
 </div>
 </body>
 <script type="text/javascript" src="../assets/js/display/display-form.js"></script>
+<script type="text/javascript" src="../assets/js/display/display-form-click.js"></script>
 </html>
