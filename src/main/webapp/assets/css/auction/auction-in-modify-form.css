@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body {
+	background-color: #FBFCFC;
+}
+
+#container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    width: 100%; /* 너비를 최대로 설정 */
+}
+
+#content-wrap {
+	display: flex;
+}
+
+#title {
+	margin-top: 86px;
+}
+
+#modify {
+	width : 1160px;
+	border-bottom: solid 2px var(--color-primary);
+	margin-bottom: 50px;
+}
+
+#modify > h2 {
+	color: var(--color-primary);
+	margin-bottom: 7px;
+}
+
+#image-wrap {
+	background-color: var(--color-gray500);
+	width: 560px;
+	height: 560px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 120px;
+}
+
+
+.input-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.star {
+	color: var(--color-primary);
+}
+
+#calendar{
+	width: 20px;
+	height: 20px;
+	margin-left: auto;
+	margin-right: 4px;
+}
+
+
+.input-text {
+	width: 400px;
+	text-align: right;
+	color: var(--color-gray900);
+	font-size: var(--font-size-h4);
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.input-box-wrap {
+	width: 480px;
+	margin-bottom: 48px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+.input-box-wrap > .input-box {
+	margin-bottom: 7px;
+}
+
+#art-artname {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 35px;
+	align-items: center;
+}
+#art-artname p {
+	font-size: var(--font-size-h7);
+}
+#art-artist {
+	margin-bottom: 24px;
+}
+#art-info {
+	font-size: var(--font-size-h9);
+	color: var(--color-gray900);
+	margin-bottom: 73px;
+}
+
+#button-wrap {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-end;
+	margin-bottom: 11px;
+}
+
+button {
+	width: 120px;
+	height: 45px;
+	border-radius: 3px;
+	border: solid 1.5px;
+}
+
+#cancel-button {
+	background-color: var(--color-gray100);
+	color: var(--color-primary);
+	border: solid 1.5px;
+}
+
+#modify-button {
+	background-color: var(--color-primary);
+	color: var(--color-gray100);
+}
+
+#reference {
+	text-align: right;
+	color: var(--color-gray900);
+	margin-bottom: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
