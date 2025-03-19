@@ -60,6 +60,7 @@ const joinButton = document.querySelector("#join-button");
 
 // 이메일 인증 버튼
 const emailCheckButton = document.querySelector("#email-check-button");
+const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
 
 // 쿼리스트링 파라미터 들고오기
 function getQueryParam(param) {
@@ -83,7 +84,12 @@ allOk();
 idCheckButton.addEventListener("click", () => {
 	if(id.value) {
 	    /*console.log(id.value);*/
-		location.href = 'id-check.user?userId=' + id.value;
+		if(isEmailChecked) {
+			location.href = 'id-check.user?emailCheck=true&userId=' + id.value;
+			
+		}else {
+			location.href = 'id-check.user?userId=' + id.value;			
+		}
 	}else {
 		console.log("입력 필요함")
 	}
@@ -156,11 +162,18 @@ emailCheckButton
 // 가입 버튼을 눌렀을 때 무결성 검사
 emailCheckButton.addEventListener("click",() => {
 	if(email.value) {
-		let temp = window.location.href;
-		console.log(temp);
-//		location.href= window.location.href;
+//		단순 매서드 실행, 보내고 카운트 하기
+	}else {
+		console.log("이메일 입력 필요");
 	}
 })
 
+emailCheckButtonVerify.addEventListener("click",() => {
+	if(emailcheck.value) {
+//		컨트롤러 백단 연동
+	}else {
+		console.log("인증번호 입력 필요");
+	}
+})
 
 
