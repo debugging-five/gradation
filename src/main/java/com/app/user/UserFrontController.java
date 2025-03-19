@@ -13,6 +13,7 @@ import com.app.user.controller.UserEmailCheckOkController;
 import com.app.user.controller.UserIdCheckController;
 import com.app.user.controller.UserJoinOkController;
 import com.app.user.controller.UserLoginController;
+import com.app.user.controller.UserLoginOkController;
 import com.app.user.controller.UserjoinController;
 
 public class UserFrontController extends HttpServlet{
@@ -37,7 +38,8 @@ public class UserFrontController extends HttpServlet{
 			result = new UserEmailCheckOkController().execute(req, resp);
 		}else if(target.equals("login/login-main")) {
 			result = new UserLoginController().execute(req, resp);
-		}else if(target.equals("login-ok")) {
+		}else if(target.equals("login/login-ok")) {
+			result = new UserLoginOkController().execute(req, resp);
 		}else if(target.equals("logout-ok")) {
 		}else {
 //			error 404 site

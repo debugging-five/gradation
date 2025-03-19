@@ -1,4 +1,14 @@
 // 객체 초기화
+let idCheck = document.querySelector("#id-check-ok");
+
+// 회원가입 완료시 리다이렉트 코드
+let isComplete = document.querySelector("#is-complete");
+if(isComplete.value == "true"){
+	const joinSuccess = document.querySelector("#join-success");
+	joinSuccess.style.display = 'block';
+}
+
+
 let id = document.querySelector("#id-input");
 let pw = document.querySelector("#pw-input");
 let pwCheck = document.querySelector("#pw-check-input");
@@ -32,8 +42,8 @@ const allOk = () => {
 	checkPrivate = document.querySelector("#check-private");
 	
 //	인풋박스 유효성 검사
-	
-	if(	isIdChecked == "true" &&
+
+	if(	idCheck.value == "true" &&
 	 	pw.value &&
 		pwCheck.value &&
 		uname.value &&
@@ -43,7 +53,7 @@ const allOk = () => {
 		checkUp14.checked &&
 		checkService.checked &&
 		checkNeedPrivate.checked
-		) {
+		) {			
 		joinButton.type = 'submit';
 		joinButton.style.backgroundColor = 'var(--color-primary)'
 	}else {
@@ -62,40 +72,32 @@ const joinButton = document.querySelector("#join-button");
 const emailCheckButton = document.querySelector("#email-check-button");
 const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
 
-// 쿼리스트링 파라미터 들고오기
-function getQueryParam(param) {
-	const urlParams = new URLSearchParams(window.location.search);
-	return urlParams.get(param);
-}
-
-// tempId 값 가져와서 input에 설정
-let tempId = getQueryParam('tempId');
-let isIdChecked = getQueryParam('idCheck');
-let isEmailChecked = getQueryParam('emailCheck');
-
-// 아이디 인풋에 설정
-if (tempId) {
-	document.getElementById('id-input').value = tempId;
-}
 // 검사 시작
 allOk();
-
 /*중복확인 버튼 클릭 시 컨트롤러로 리다이렉션*/
 idCheckButton.addEventListener("click", () => {
 	if(id.value) {
-	    /*console.log(id.value);*/
-		if(isEmailChecked) {
-			location.href = 'id-check.user?emailCheck=true&userId=' + id.value;
-			
-		}else {
-			location.href = 'id-check.user?userId=' + id.value;			
-		}
+			location.href = 
+			'id-check.user?userId=' + id.value +
+			'&userPassword=' + pw.value +
+			'&checkUserPassword=' + pwCheck.value +
+			'&userName=' + uname.value +
+			'&userNickname=' + nickname.value +
+			'&userPhone=' + phone.value +
+			'&userEmail=' + email.value +
+			'&checkUserEmail=' + emailcheck.value
+			;			
 	}else {
 		console.log("입력 필요함")
 	}
 });
 
 // 입력에 대한 이벤트
+id.addEventListener("input", () => {
+//	입력이 일어남 = 값이 변동됨 = 재검사 해야됨
+	idCheck.value = "false";
+	allOk();
+})
 pw.addEventListener("input", () => {
 	allOk();
 })

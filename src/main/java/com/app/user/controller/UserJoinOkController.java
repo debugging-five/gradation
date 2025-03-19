@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
@@ -18,6 +19,7 @@ public class UserJoinOkController implements Action {
 		Result result = new Result();
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = new UserVO();
+		HttpSession session = req.getSession();
 		
 		userVO.setUserId(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
@@ -37,8 +39,10 @@ public class UserJoinOkController implements Action {
 		
 		userDAO.insert(userVO);
 		
+		session.setAttribute("isComplete", "true");
+		
 		result.setRedirect(true);
-		result.setPath("login.user");
+		result.setPath("join-main.user");
 		
 		return result;
 	}

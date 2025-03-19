@@ -27,20 +27,22 @@ public class UserLoginOkController implements Action{
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		
 		userBanOk = userDAO.banCheck(userVO);
+		userEmail = userDAO.login(userVO);
 		
 		result.setRedirect(true);
-		
-		if(userBanOk == -1) {
-			result.setPath(req.getContextPath() + "/login.member?login=false");
-			return result;
-		}else if(userBanOk == 1) {
-			result.setPath(req.getContextPath() + "/login.member?login=ban");
-			return result;
-		}
-		
 		session.setAttribute("userEmail", userEmail);
 		
-		result.setPath(req.getContextPath() + "/list.product");
+		if(userBanOk == -1) {
+			result.setPath(req.getContextPath() + "/login/login-main.user?login=false");
+			return result;
+		}else if(userBanOk == 1) {
+			result.setPath(req.getContextPath() + "/login/login-main.user?login=ban");
+			return result;
+		}
+		System.out.println("로그인성공~~");
+		System.out.println(session.getAttribute("userEmail"));
+		
+		result.setPath(req.getContextPath() + "");
 		return result;
 	}
 }

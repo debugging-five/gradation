@@ -28,6 +28,11 @@ import com.app.vo.UserVO;
  		return sqlSession.selectOne("user.login", userVO);
  	}
  	public int banCheck(UserVO userVO) {
- 		return sqlSession.selectOne("user.banCheck", userVO);
+ 		int isBan = -1;
+ 		try {
+ 			isBan = sqlSession.selectOne("user.banCheck", userVO);			
+		} catch (Exception e) {
+		}
+ 		return isBan;
  	}
  }
