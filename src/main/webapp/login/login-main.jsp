@@ -51,7 +51,11 @@
 				<span>|</span>
 				<a>비밀번호 찾기</a>
 				<span>|</span>
-				<a href="../join/join-main.user">회원가입</a>
+				<a href="../join/join-main.user?
+					idCheck=none&
+					emailCheck=none&
+					emailCheckVerify=none">회원가입</a>
+					<!-- 쿼리 스트링에 인풋값 전부 넣어버리기 -->
 			</div>
 			<div>
 				<span>또는 다른 서비스 계정으로 로그인</span>

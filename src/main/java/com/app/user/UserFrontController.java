@@ -31,6 +31,8 @@ public class UserFrontController extends HttpServlet{
 			result = new UserIdCheckController().execute(req, resp);
 		}else if(target.equals("join/email-check")) {
 			result = new UserEmailCheckController().execute(req, resp);
+		}else if(target.equals("join/email-check-verify")) {
+			result = new UserEmailCheckController().execute(req, resp);
 		}else if(target.equals("login")) {
 		}else if(target.equals("login-ok")) {
 		}else if(target.equals("login")) {
