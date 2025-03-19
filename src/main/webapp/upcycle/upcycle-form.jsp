@@ -328,33 +328,40 @@
 		
     </script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const calendarIcon = document.querySelector(".calendar");
-        const textCalendar = document.querySelector(".text-calendar");
+		document.addEventListener("DOMContentLoaded", function () {
+		    const calendarIcon = document.querySelector(".calendar");
+		    const textCalendar = document.querySelector(".text-calendar");
+		
+		    // 📌 달력 input 요소 생성
+		    const calendarInput = document.createElement("input");
+		    calendarInput.type = "date";
+		    calendarInput.style.position = "absolute";
+		    calendarInput.style.border = "none";
+		    calendarInput.style.background = "transparent";
+		    calendarInput.style.opacity = "0"; // 숨김 처리
+		    calendarInput.style.pointerEvents = "none"; // 직접 클릭 방지
+		    calendarInput.style.zIndex = "-1"; // 화면에서 사라지게 설정
+		
+		    document.body.appendChild(calendarInput);
+		
+		    // 📌 아이콘 클릭 시 기본 date picker 표시
+		    calendarIcon.addEventListener("click", function () {
+		        const rect = calendarIcon.getBoundingClientRect();
+		        calendarInput.style.top = `${rect.bottom + window.scrollY}px`; // 아이콘 아래 배치
+		        calendarInput.style.left = `${rect.left + window.scrollX}px`;
+		
+		        calendarInput.showPicker(); // 기본 캘린더 표시
+		    });
+		
+		    // 📌 날짜 선택 시 text-calendar에 반영
+		    calendarInput.addEventListener("change", function () {
+		        if (calendarInput.value) {
+		            textCalendar.textContent = calendarInput.value; // 선택한 날짜 입력
+		        }
+		    });
+		});
+</script>
 
-        // 📌 달력 UI 생성
-        const calendarInput = document.createElement("input");
-        calendarInput.type = "date";
-        calendarInput.style.position = "absolute";
-        calendarInput.style.opacity = "0"; // 화면에 보이지 않도록 숨김
-        calendarInput.style.pointerEvents = "none"; // 클릭 방지
-
-        document.body.appendChild(calendarInput);
-
-        // 📌 달력 아이콘 클릭 시 달력 오픈
-        calendarIcon.addEventListener("click", function () {
-            calendarInput.showPicker(); // 기본 HTML date picker 사용
-        });
-
-        // 📌 날짜 선택 시 text-calendar 에 값 입력
-        calendarInput.addEventListener("change", function () {
-            if (calendarInput.value) {
-                textCalendar.textContent = calendarInput.value; // 선택한 날짜 입력
-            }
-        });
-    });
-    
-	</script>
     
   </body>
 </html>
