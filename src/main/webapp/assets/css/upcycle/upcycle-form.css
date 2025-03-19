@@ -87,7 +87,7 @@
   font-weight: var(font-weight-regular);
 }
 
-.container-center-horizontal {
+.container-center {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -95,7 +95,7 @@
   width: 100%;
 }
 
-.container-center-horizontal > * {
+.container-center > * {
   flex-shrink: 0;
   pointer-events: auto;
 }
@@ -114,9 +114,9 @@ input:focus {
   box-sizing: border-box;
 }
 
-/* screen - upcycleForm */
+/* screen - upcycle-form */
 
-.upcycleForm {
+.upcycle-form {
   align-items: center;
   background-color: var(--main-gray100);
   display: flex;
@@ -125,7 +125,7 @@ input:focus {
   width: 1920px;
 }
 
-.upcycleForm .flex-col {
+.upcycle-form .flex-col {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -134,7 +134,7 @@ input:focus {
   width: 1920px;
 }
 
-.upcycleForm .header {
+.upcycle-form .header {
   align-items: center;
   background-color: var(--main-gray100);
   border-bottom-style: solid;
@@ -153,21 +153,21 @@ input:focus {
   width: 1920px;
 }
 
-.upcycleForm .icon {
+.upcycle-form .icon {
   align-self: flex-end;
   height: 40px;
   margin-left: 48px;
   width: 102px;
 }
 
-.upcycleForm .overlap-group3 {
+.upcycle-form .overlap-group3 {
   height: 25px;
   margin-top: 1px;
   position: relative;
   width: 1198px;
 }
 
-.upcycleForm .navbar {
+.upcycle-form .navbar {
   align-items: flex-start;
   display: flex;
   height: 25px;
@@ -177,51 +177,51 @@ input:focus {
   top: 0;
 }
 
-.upcycleForm .navbar-link-display {
+.upcycle-form .navbar-link-display {
   min-width: 57px;
 }
 
-.upcycleForm .navbar-link-display:hover {
+.upcycle-form .navbar-link-display:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .navbar-link-artist {
+.upcycle-form .navbar-link-artist {
   margin-left: 60px;
   min-width: 42px;
 }
 
-.upcycleForm .navbar-link-artist:hover {
+.upcycle-form .navbar-link-artist:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .navbar-link-auction {
+.upcycle-form .navbar-link-auction {
   margin-left: 60px;
   min-width: 59px;
 }
 
-.upcycleForm .navbar-link-auction:hover {
+.upcycle-form .navbar-link-auction:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .navbar-link-exhibition {
+.upcycle-form .navbar-link-exhibition {
   margin-left: 60px;
   min-width: 77px;
 }
 
-.upcycleForm .navbar-link-exhibition:hover {
+.upcycle-form .navbar-link-exhibition:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .navbar-link-upcycle {
+.upcycle-form .navbar-link-upcycle {
   margin-left: 60px;
   min-width: 60px;
 }
 
-.upcycleForm .navbar-link-upcycle:hover {
+.upcycle-form .navbar-link-upcycle:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .navbar-link-sign-in {
+.upcycle-form .navbar-link-sign-in {
   align-self: flex-end;
   cursor: pointer;
   height: 24px;
@@ -233,11 +233,11 @@ input:focus {
   transition: all 0.2s ease;
 }
 
-.upcycleForm .navbar-link-sign-in:hover {
+.upcycle-form .navbar-link-sign-in:hover {
   color: var(--color-primary);
 }
 
-.upcycleForm .icon-1 {
+.upcycle-form .icon-1 {
   height: 18px;
   left: 1062px;
   position: absolute;
@@ -245,7 +245,7 @@ input:focus {
   width: 18px;
 }
 
-.upcycleForm .title {
+.upcycle-form .title {
   color: var(--color-black);
   font-weight: var(font-weight-bold);
   height: 37px;
@@ -253,9 +253,18 @@ input:focus {
   margin-top: 88px;
   min-width: 102px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'SUIT-Bold';
+  font-size: var(--font-size-h2);
+  font-style: normal;
+  font-weight: var(font-weight-bold);
+  letter-spacing: -0.12px;
+  
 }
 
-.upcycleForm .registration {
+.upcycle-form .registration {
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -263,9 +272,18 @@ input:focus {
   margin-left: 2px;
   margin-top: 71px;
   width: 1002px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'SUIT-Bold';
+  font-size: var(--font-size-h3);
+  font-style: normal;
+  font-weight: var(font-weight-bold);
+  letter-spacing: -0.08px;
+  
 }
 
-.upcycleForm .registration-1 {
+.upcycle-form .registration-1 {
   align-self: center;
   color: var(--color-primary);
   font-weight: var(font-weight-bold);
@@ -276,12 +294,12 @@ input:focus {
   width: 109px;
 }
 
-.upcycleForm .line-3 {
+.upcycle-form .line-3 {
   height: 2px;
   width: 1000px;
 }
 
-.upcycleForm .flex-row {
+.upcycle-form .flex-row {
   align-items: flex-start;
   display: flex;
   gap: 118px;
@@ -291,7 +309,7 @@ input:focus {
   min-width: 1004px;
 }
 
-.upcycleForm .upload-image {
+.upcycle-form .upload-image {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -299,40 +317,51 @@ input:focus {
   width: 482px;
 }
 
-.upcycleForm .image {
-  align-items: flex-start;
+.upcycle-form .image {
+  position: relative;
   display: flex;
-  height: 480px;
-  min-width: 482px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray500);
+  overflow: hidden;
 }
 
-.upcycleForm .overlap-group {
-  align-items: flex-end;
-  background-color: #d9d9d9;
+.upcycle-form .overlap-group {
+  width: 200px;  
+  height: 200px; 
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  min-height: 480px;
-  padding: 186px 183px;
-  width: 480px;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--color-gray500);
 }
 
-.upcycleForm .add-four {
-  align-self: center;
-  height: 48px;
-  width: 48px;
+.upcycle-form .preview-image {
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
 }
 
-.upcycleForm .text-10 {
-  color: var(--color-black);
-  font-weight: var(font-weight-semibold);
-  height: 24px;
-  line-height: 24px;
-  min-width: 113px;
-  white-space: nowrap;
+.upcycle-form .text-upload {
+  position: absolute;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.upcycleForm .text-11 {
+.upcycle-form .text-upload-ex {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -341,16 +370,26 @@ input:focus {
   text-align: center;
   white-space: nowrap;
   width: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
 }
 
-.upcycleForm .flex-col-1 {
+.upcycle-form .flex-col-school {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   align-self: flex-end;
   min-height: 520px;
   width: 404px;
 }
 
-.upcycleForm .serch-school {
+.upcycle-form .serch-school {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -359,13 +398,13 @@ input:focus {
   width: 404px;
 }
 
-.upcycleForm .flex-row-1 {
+.upcycle-form .flex-row-1 {
   align-items: flex-end;
   display: flex;
   min-width: 400px;
 }
 
-.upcycleForm .text-3 {
+.upcycle-form .text-school {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 18px;
@@ -373,13 +412,35 @@ input:focus {
   margin-bottom: 3px;
   white-space: nowrap;
   width: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
 }
 
-.upcycleForm .span {
+.upcycle-form .span-1 {
   letter-spacing: -0.01px;
+  color: var(--color-black);
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
 }
 
-.upcycleForm .x {
+.upcycle-form .span-2 {
+  letter-spacing: -0.01px;
+  color: var(--color-primary);
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+}
+
+.upcycle-form .input-school {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 18px;
@@ -387,13 +448,22 @@ input:focus {
   margin-left: 43px;
   white-space: nowrap;
   width: 169px;
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+  padding: 0;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
 }
 
-.upcycleForm .x::placeholder {
+.upcycle-form .input-school::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .overlap-group-1 {
+.upcycle-form .overlap-group-1 {
   align-items: center;
   background-color: var(--color-primary);
   border-radius: 2px;
@@ -405,22 +475,30 @@ input:focus {
   padding: 0 27px;
 }
 
-.upcycleForm .text-4 {
+.upcycle-form .text-search-address {
   color: var(--color-gray100);
   font-weight: var(font-weight-regular);
   height: 19px;
   line-height: normal;
   text-align: center;
   width: 63px;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.upcycleForm .line-10 {
+.upcycle-form .line {
   height: 1px;
   object-fit: cover;
   width: 400px;
 }
 
-.upcycleForm .search-address {
+.upcycle-form .search-address {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -430,34 +508,52 @@ input:focus {
   width: 404px;
 }
 
-.upcycleForm .flex-row-2 {
+.upcycle-form .flex-row-2 {
   align-items: flex-start;
   display: flex;
   gap: 29px;
   min-width: 392px;
 }
 
-.upcycleForm .text-5 {
+.upcycle-form .text-detail-address {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 24px;
   line-height: 24px;
   min-width: 72px;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
+  
 }
 
-.upcycleForm .x-1 {
+.upcycle-form .input-address {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 23px;
   width: 291px;
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+  padding: 0;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
 }
 
-.upcycleForm .x-1::placeholder {
+.upcycle-form .x-1::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .email {
+.upcycle-form .email {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -467,14 +563,14 @@ input:focus {
   width: 404px;
 }
 
-.upcycleForm .flex-row-3 {
+.upcycle-form .flex-row-3 {
   align-items: flex-end;
   display: flex;
   gap: 45px;
   min-width: 380px;
 }
 
-.upcycleForm .text {
+.upcycle-form .text {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -483,19 +579,62 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .x-2 {
+.upcycle-form .text-phone {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 56px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
+}
+
+.upcycle-form .text-email {
+  color: transparent;
+  font-weight: var(font-weight-semibold);
+  height: 24px;
+  line-height: 24px;
+  min-width: 56px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
+}
+
+.upcycle-form .input-email {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 19px;
   margin-bottom: 1px;
   width: 279px;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+  padding: 0;
 }
 
-.upcycleForm .x-2::placeholder {
+.upcycle-form .x-2::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .phone {
+.upcycle-form .phone {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -505,26 +644,35 @@ input:focus {
   width: 404px;
 }
 
-.upcycleForm .flex-row-4 {
+.upcycle-form .flex-row-4 {
   align-items: flex-end;
   display: flex;
   gap: 45px;
   min-width: 389px;
 }
 
-.upcycleForm .x-3 {
+.upcycle-form .input-phone {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 19px;
   margin-bottom: 1px;
   width: 288px;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+  padding: 0;
 }
 
-.upcycleForm .x-3::placeholder {
+.upcycle-form .x-3::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .pickup-date {
+.upcycle-form .pickup-date {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -534,48 +682,64 @@ input:focus {
   width: 402px;
 }
 
-.upcycleForm .flex-row-5 {
+.upcycle-form .flex-row-5 {
   align-items: flex-start;
   display: flex;
   min-width: 258px;
 }
 
-.upcycleForm .pick-up-text {
+.upcycle-form .pick-up {
   align-self: flex-end;
   display: flex;
   width: 93px;
 }
 
-.upcycleForm .group-616 {
+.upcycle-form .group-pick-up {
   display: flex;
   width: 95px;
 }
 
-.upcycleForm .text-9 {
+.upcycle-form .text-pick-up {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 18px;
   line-height: 24px;
   white-space: nowrap;
   width: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Pretendard-SemiBold';
+  font-size: var(--font-size-h5);
+  font-style: normal;
+  font-weight: var(font-weight-semibold);
+  letter-spacing: -0.07px;
 }
 
-.upcycleForm .mdi-lightcalendar {
+.upcycle-form .calendar {
   height: 20px;
   margin-left: 8px;
   width: 20px;
 }
 
-.upcycleForm .text-8 {
+.upcycle-form .text-calendar {
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
   height: 19px;
   line-height: normal;
   margin-left: 5px;
   white-space: nowrap;
+  font-family: 'Pretendard-Regular';
+  font-size: var(--font-size-h7);
+  font-style: normal;
+  font-weight: var(font-weight-regular);
+  letter-spacing: -0.06px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.upcycleForm .select-product-number {
+.upcycle-form .select-product-number {
   align-items: flex-start;
   display: flex;
   gap: 138px;
@@ -584,14 +748,14 @@ input:focus {
   min-width: 402px;
 }
 
-.upcycleForm .flex-col-2 {
+.upcycle-form .flex-col-2 {
   align-items: center;
   gap: 19px;
   min-height: 124px;
   width: 191px;
 }
 
-.upcycleForm .text-19 {
+.upcycle-form .text-19 {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -600,7 +764,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .size-category {
+.upcycle-form .size-category {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -609,7 +773,7 @@ input:focus {
   width: 151px;
 }
 
-.upcycleForm .x50cm {
+.upcycle-form .x50cm {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -618,7 +782,7 @@ input:focus {
   width: 111px;
 }
 
-.upcycleForm .x50cm--100cm {
+.upcycle-form .x50cm--100cm {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -627,7 +791,7 @@ input:focus {
   width: 145px;
 }
 
-.upcycleForm .x100cm {
+.upcycle-form .x100cm {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -636,7 +800,7 @@ input:focus {
   width: 118px;
 }
 
-.upcycleForm .product-number-container {
+.upcycle-form .product-number-container {
   align-items: flex-start;
   align-self: flex-end;
   display: flex;
@@ -645,20 +809,20 @@ input:focus {
   width: 75px;
 }
 
-.upcycleForm .product-number-large {
+.upcycle-form .product-number-large {
   align-items: center;
   display: flex;
   height: 26px;
   min-width: 75px;
 }
 
-.upcycleForm .flex-col-3 {
+.upcycle-form .flex-col-3 {
   align-items: flex-start;
   min-height: 26px;
   width: 57px;
 }
 
-.upcycleForm .text-1 {
+.upcycle-form .text-1 {
   background-color: transparent;
   border: 0;
   color: var(--color-gray900);
@@ -669,18 +833,18 @@ input:focus {
   width: 50px;
 }
 
-.upcycleForm .text-1::placeholder {
+.upcycle-form .text-1::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .line-10-1 {
+.upcycle-form .line-1 {
   height: 1px;
   margin-left: 2px;
   object-fit: cover;
   width: 55px;
 }
 
-.upcycleForm .text-20 {
+.upcycle-form .text-20 {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -689,7 +853,7 @@ input:focus {
   width: 14px;
 }
 
-.upcycleForm .product-number-middle {
+.upcycle-form .product-number-middle {
   align-items: center;
   display: flex;
   height: 28px;
@@ -697,14 +861,14 @@ input:focus {
   min-width: 75px;
 }
 
-.upcycleForm .flex-col-4 {
+.upcycle-form .flex-col-4 {
   align-items: flex-start;
   gap: 2px;
   min-height: 28px;
   width: 57px;
 }
 
-.upcycleForm .text-21 {
+.upcycle-form .text-21 {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -713,14 +877,14 @@ input:focus {
   width: 14px;
 }
 
-.upcycleForm .product-number-small {
+.upcycle-form .product-number-small {
   height: 25px;
   margin-top: 6px;
   position: relative;
   width: 75px;
 }
 
-.upcycleForm .overlap-group-2 {
+.upcycle-form .overlap-group-2 {
   height: 25px;
   left: 0;
   position: absolute;
@@ -728,7 +892,7 @@ input:focus {
   width: 59px;
 }
 
-.upcycleForm .line-109 {
+.upcycle-form .line-2 {
   height: 1px;
   left: 4px;
   object-fit: cover;
@@ -737,7 +901,7 @@ input:focus {
   width: 55px;
 }
 
-.upcycleForm .text-2 {
+.upcycle-form .text-2 {
   background-color: transparent;
   border: 0;
   color: var(--color-gray900);
@@ -751,11 +915,11 @@ input:focus {
   width: 50px;
 }
 
-.upcycleForm .text-2::placeholder {
+.upcycle-form .text-2::placeholder {
   color: var(--color-gray900);
 }
 
-.upcycleForm .text-22 {
+.upcycle-form .text-22 {
   color: var(--color-black);
   font-weight: var(font-weight-regular);
   height: 19px;
@@ -766,14 +930,14 @@ input:focus {
   width: 14px;
 }
 
-.upcycleForm .flex-col-5 {
+.upcycle-form .flex-col-5 {
   align-items: center;
   margin-top: 44px;
   min-height: 813px;
   width: 1920px;
 }
 
-.upcycleForm .material {
+.upcycle-form .material {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -783,7 +947,7 @@ input:focus {
   width: 412px;
 }
 
-.upcycleForm .text-12 {
+.upcycle-form .text-12 {
   color: transparent;
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -791,7 +955,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .flex-row-6 {
+.upcycle-form .flex-row-6 {
   align-items: center;
   align-self: center;
   display: flex;
@@ -799,7 +963,7 @@ input:focus {
   min-width: 391px;
 }
 
-.upcycleForm .text-13 {
+.upcycle-form .text-13 {
   color: var(--color-black);
   font-weight: 300;
   height: 17px;
@@ -808,11 +972,11 @@ input:focus {
   min-width: 88px;
 }
 
-.upcycleForm .rectangle-40 {
+.upcycle-form .rectangle-40 {
   margin-left: 12px;
 }
 
-.upcycleForm .text-1-1 {
+.upcycle-form .text-1-1 {
   color: var(--color-black);
   font-weight: 300;
   height: 17px;
@@ -821,7 +985,7 @@ input:focus {
   min-width: 25px;
 }
 
-.upcycleForm .text-16 {
+.upcycle-form .text-16 {
   color: var(--color-black);
   font-weight: 300;
   height: 17px;
@@ -830,7 +994,7 @@ input:focus {
   min-width: 100px;
 }
 
-.upcycleForm .significant {
+.upcycle-form .significant {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -841,7 +1005,7 @@ input:focus {
   width: 406px;
 }
 
-.upcycleForm .text-18 {
+.upcycle-form .text-18 {
   color: var(--color-black);
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -850,7 +1014,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .overlap-group2 {
+.upcycle-form .overlap-group2 {
   display: flex;
   align-items: flex-start;
   background-color: var(--color-gray100);
@@ -862,7 +1026,7 @@ input:focus {
   height: 91px;
 }
 
-.upcycleForm .x-4 {
+.upcycle-form .x-4 {
   color: var(--color-gray500);
   font-weight: var(--font-weight-light);
   width: 400px;
@@ -872,12 +1036,12 @@ input:focus {
   line-height: 1.4;
 }
 
-.upcycleForm .x-4::placeholder {
+.upcycle-form .x-4::placeholder {
   color: #c0c5c799;
   text-align: left;
 }
 
-.upcycleForm .confirm {
+.upcycle-form .confirm {
   display: flex;
   gap: 28px;
   margin-left: 720px;
@@ -885,13 +1049,13 @@ input:focus {
   width: 280px;
 }
 
-.upcycleForm .confirm-item {
+.upcycle-form .confirm-item {
   align-items: flex-start;
   display: flex;
   min-width: 127px;
 }
 
-.upcycleForm .overlap-group-3 {
+.upcycle-form .overlap-group-3 {
   align-items: flex-start;
   background-color: var(--color-gray100);
   border: 1.2px solid;
@@ -903,7 +1067,7 @@ input:focus {
   padding: 10.8px 44.8px;
 }
 
-.upcycleForm .text-6 {
+.upcycle-form .text-6 {
   color: var(--color-primary);
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -913,7 +1077,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .overlap-group1 {
+.upcycle-form .overlap-group1 {
   align-items: flex-start;
   background-color: var(--color-primary);
   border-radius: 2px;
@@ -924,7 +1088,7 @@ input:focus {
   border: none;
 }
 
-.upcycleForm .text-7 {
+.upcycle-form .text-7 {
   color: var(--color-gray100);
   font-weight: var(font-weight-semibold);
   height: 24px;
@@ -934,7 +1098,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.upcycleForm .footer {
+.upcycle-form .footer {
   align-items: center;
   background-color: transparent;
   display: flex;
@@ -945,7 +1109,7 @@ input:focus {
   width: 1920px;
 }
 
-.upcycleForm .footer-layer {
+.upcycle-form .footer-layer {
   background-color: var(--color-gray100);
   border-color: var(--color-gray500);
   border-top-style: solid;
@@ -955,7 +1119,7 @@ input:focus {
   width: 1922px;
 }
 
-.upcycleForm .footer-address {
+.upcycle-form .footer-address {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -965,13 +1129,13 @@ input:focus {
   width: 378px;
 }
 
-.upcycleForm .image-3 {
+.upcycle-form .image-3 {
   height: 45px;
   margin-left: 78px;
   width: 220px;
 }
 
-.upcycleForm .address-14-samcheo {
+.upcycle-form .address-14-samcheo {
   align-self: center;
   color: var(--color-gray900);
   font-weight: var(font-weight-regular);
@@ -982,16 +1146,16 @@ input:focus {
   width: 376px;
 }
 
-.upcycleForm .span-1 {
+.upcycle-form .span-1 {
   letter-spacing: -0.06px;
 }
 
-.upcycleForm .flex-col-6 {
+.upcycle-form .flex-col-6 {
   display: flex;
   flex-direction: column;
 }
 
-.upcycleForm .navbar-link {
+.upcycle-form .navbar-link {
   cursor: pointer;
   height: 24px;
   letter-spacing: -0.4px;
@@ -1000,7 +1164,7 @@ input:focus {
   transition: all 0.2s ease;
 }
 
-.upcycleForm .rectangle {
+.upcycle-form .rectangle {
   background-color: var(--color-gray100);
   border: 0.5px solid;
   border-color: var(--color-black);
@@ -1009,7 +1173,7 @@ input:focus {
   width: 12px;
 }
 
-.upcycleForm .x-5 {
+.upcycle-form .x-5 {
   background-color: transparent;
   border: 0;
   line-height: normal;
