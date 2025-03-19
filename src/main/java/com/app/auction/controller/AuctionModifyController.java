@@ -14,6 +14,7 @@ public class AuctionModifyController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		result.setPath("auction-in-modify-form.jsp");
 		return result;
 	}
 
