@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding-main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-not-successful-bid.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<title>경매 상세 페이지</title>
+<title>경매 유찰</title>
 </head>
 <body>
 
@@ -17,7 +16,6 @@
 	<div id="title-wrapper">	
 		<h2>auction</h2>	
 	</div>
-	
 	
 	<div id="auction-detail">
 	
@@ -32,9 +30,7 @@
 		<div id="auction-info">
 			<!-- 경매 정보1 -->
 			<div id="auction-info1">
-				<div>
-					<h2 class="title">당황한 동상</h2>
-				</div>
+				<h2 class="title">귀여운 고양이<span><유찰></span></h2>
 				<div class="artist">
 					<h3>작가명</h3>
 <!-- 					<span>|</span> -->
@@ -51,7 +47,7 @@
 			<!-- 경매 정보2 -->
 			<div id="auction-info2">
 				<div class="info">
-					<h5>마감일</h5>
+					<h5>경매개시</h5>
 					<h4>2025 . 01 . 21 . 8:00:00</h4>
 				</div>
 				<div class="info">
@@ -65,32 +61,23 @@
 			</div>
 			
 			<!-- 경매 정보3 -->
-			<div>
+
 				<div class="info">
-					<h2>마감시간</h2>
-					<h2>4일 4시간 44분 44초</h2>
+					<h3>유찰된 작품입니다.</h3>
 				</div>
-				<div class="info2 first">
-					<h3>현재 입찰가</h3>
-					<h3>KRW 550,000</h3>
+				
+				<div class="info">
+					<h3>낙찰가</h3>
 				</div>
-				<div class="info2 second">
-					<h3>최소 응찰가</h3>
-					<h3>KRW 560,000</h3>
+				
+				<div id="notice">
+					<div class="bid-price">
+						<h3>-</h3>
+					</div>
+					<button>목록으로</button>
 				</div>
-			</div>
-			
-			<div id="button-wrapper">
-				<button class="button list">
-					<p>목록으로</p>
-				</button>
-				<button class="button auto-bidding">
-					<p>자동응찰</p>
-				</button>
-				<button class="button bidding" onclick="openPopup()" >
-					<p>응찰</p>
-				</button>
-			</div>
+				
+
 		</div>
 	</div>
 
@@ -115,8 +102,11 @@
 		</div>
 
 	</div>
+
 </div>
 
 <%@ include file="../layout/footer.jsp" %>
+
+
 </body>
 </html>
