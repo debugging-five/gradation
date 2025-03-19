@@ -38,14 +38,14 @@
     src: url('./SUIT-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
-   unicode-range: U+0041-005A, U+0061-007A;
+   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 @font-face {
     font-family: 'SUIT-Regular';
     src: url('./SUIT-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
-   unicode-range: U+0041-005A, U+0061-007A;
+   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 
 :root {
