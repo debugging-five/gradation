@@ -13,6 +13,7 @@
 
 <%@ include file="../layout/header.jsp" %>
 
+
 <div id="wrapper">
 	<div id="title-wrapper">	
 		<h2>auction</h2>	
@@ -33,10 +34,12 @@
 			<div id="auction-info1">
 				<div id="title-wrapper2">
 					<h2 class="title">귀여운 고양이</h2>
-					<div>
-						<button id="button-modify">수정하기</button>
-						<button>삭제하기</button>
-					</div>
+					<form action="" method="post">
+						<div>
+							<button type="button" id="button-modify">수정하기</button>
+							<button type="button">삭제하기</button>
+						</div>
+					</form>
 				</div>
 				<div class="artist">
 					<h3>작가명</h3>
@@ -68,7 +71,6 @@
 			</div>
 			
 			<!-- 경매 정보3 -->
-
 				<div class="info">
 					<h2>경매시작</h2>
 					<h2>4일 4시간 44분 44초</h2>
@@ -111,4 +113,5 @@
 
 <%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/auction/auction-comming-soon-modify.js"></script>
 </html>
