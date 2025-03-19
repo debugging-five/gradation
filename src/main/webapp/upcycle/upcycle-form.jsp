@@ -4,8 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1920, maximum-scale=1.0" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
     <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/upcycle/upcycle-form.css" />
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
@@ -187,30 +185,30 @@
                 alt="Line 108"
               />
             </div>
-            <div class="select-product-number">
-              <div class="flex-col-2 flex-col-6">
-                <div class="text-19 valign-text-middle pretendardh4">
+            <div class="select-trash-number">
+              <div class="flex-col-2">
+                <div class="text-trash">
                   <span
-                    ><span class="span pretendard-semi-bold-mine-shaft-18px"
+                    ><span class="span-1"
                       >크기 분류(작품 개수 선택)</span
-                    ><span class="span pretendard-semi-bold-cinnabar-18px"
+                    ><span class="span-2"
                       >*</span
                     >
                   </span>
                 </div>
-                <div class="size-category pretendardh6">
-                  <div class="x50cm valign-text-middle">소형(50cm 이하)</div>
-                  <div class="x50cm--100cm valign-text-middle">
+                <div class="size-category">
+                  <div class="x50cm">소형(50cm 이하)</div>
+                  <div class="x50cm-100cm">
                     중형(50cm ~ 100cm)
                   </div>
-                  <div class="x100cm valign-text-middle">대형(100cm 이상)</div>
+                  <div class="x100cm">대형(100cm 이상)</div>
                 </div>
               </div>
-              <div class="product-number-container">
-                <div class="product-number-large">
-                  <div class="flex-col-3 flex-col-6">
+              <div class="canvas-number-container">
+                <div class="canvas-number-large">
+                  <div class="flex-col-3">
                     <input
-                      class="text-1 pretendardh6"
+                      class="text-1"
                       name="text"
                       placeholder=""
                       type="text"
@@ -220,12 +218,12 @@
                       alt="Line 107"
                     />
                   </div>
-                  <div class="text-20 valign-text-middle pretendardh6">개</div>
+                  <div class="text-20">개</div>
                 </div>
                 <div class="product-number-middle">
                   <div class="flex-col-4 flex-col-6">
                     <input
-                      class="text-1 pretendardh6"
+                      class="text-1"
                       name="text"
                       placeholder=""
                       type="text"
@@ -235,7 +233,7 @@
                       alt="Line 108"
                     />
                   </div>
-                  <div class="text-21 valign-text-middle pretendardh6">개</div>
+                  <div class="text-21">개</div>
                 </div>
                 <div class="product-number-small">
                   <div class="overlap-group-2">
@@ -245,28 +243,28 @@
                       alt="Line 109"
                     />
                     <input
-                      class="text-2 pretendardh6"
+                      class="text-2"
                       name="text"
                       placeholder=""
                       type="text"
                     />
                   </div>
-                  <div class="text-22 valign-text-middle pretendardh6">개</div>
+                  <div class="text-22">개</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex-col-5 flex-col-6">
+        <div class="flex-col-5">
           <div class="material">
-            <div class="text-12 valign-text-middle pretendardh4">
+            <div class="text-material">
               <span
-                ><span class="span pretendard-semi-bold-mine-shaft-18px"
+                ><span class="span-1"
                   >주된 재질</span
-                ><span class="span pretendard-semi-bold-cinnabar-18px">*</span>
+                ><span class="span-2">*</span>
               </span>
             </div>
-            <div class="flex-row-6 pretendardh7">
+            <div class="flex-row-6">
               	<fieldset>
 		            <label><input type="checkbox" name="material" value="canvas-paper" /> 캔버스 & 종이류</label>
 		            <label><input type="checkbox" name="material" value="wood" /> 목재</label>
@@ -277,10 +275,10 @@
             </div>
           </div>
           <div class="significant">
-            <div class="text-18 valign-text-middle pretendardh4">특이 사항</div>
+            <div class="text-significant">특이 사항</div>
             <div class="overlap-group2">
               <input
-                class="x-4 x-5 pretendardh7"
+                class="input-significant"
                 name="예_깨지기쉬움분해필요"
                 placeholder="예: 깨지기 쉬움, 분해 필요"
                 type="text"
@@ -290,12 +288,12 @@
           <div class="confirm">
             <div class="confirm-item">
               <button type="button"class="overlap-group-3">
-                 <div class="text-6 valign-text-middle pretendardh4">취소</div>
+                 <div class="text-cancel">취소</div>
               </button>
             </div>
             <div class="confirm-item">
               <button type="submit" class="overlap-group1">
-                <div class="text-7 valign-text-middle pretendardh4">신청</div>
+                <div class="text-confirm">신청</div>
               </button>
             </div>
           </div>
@@ -327,6 +325,36 @@
 	            reader.readAsDataURL(file);
 	        }
 	    }
+		
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const calendarIcon = document.querySelector(".calendar");
+        const textCalendar = document.querySelector(".text-calendar");
+
+        // 📌 달력 UI 생성
+        const calendarInput = document.createElement("input");
+        calendarInput.type = "date";
+        calendarInput.style.position = "absolute";
+        calendarInput.style.opacity = "0"; // 화면에 보이지 않도록 숨김
+        calendarInput.style.pointerEvents = "none"; // 클릭 방지
+
+        document.body.appendChild(calendarInput);
+
+        // 📌 달력 아이콘 클릭 시 달력 오픈
+        calendarIcon.addEventListener("click", function () {
+            calendarInput.showPicker(); // 기본 HTML date picker 사용
+        });
+
+        // 📌 날짜 선택 시 text-calendar 에 값 입력
+        calendarInput.addEventListener("change", function () {
+            if (calendarInput.value) {
+                textCalendar.textContent = calendarInput.value; // 선택한 날짜 입력
+            }
+        });
+    });
+    
+	</script>
+    
   </body>
 </html>
