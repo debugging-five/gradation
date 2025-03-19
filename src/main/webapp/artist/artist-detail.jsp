@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/artist/artist-detail.css" />
-
 <title>display-detail</title>
 </head>
    <script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>

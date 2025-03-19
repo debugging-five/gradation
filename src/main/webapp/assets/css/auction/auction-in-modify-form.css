@@ -1,5 +1,61 @@
 @charset "UTF-8";
 
+body {
+	background-color: #FBFCFC;
+}
+
+#container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    width: 100%; /* 너비를 최대로 설정 */
+}
+
+#content-wrap {
+	display: flex;
+}
+
 #title {
 	margin-top: 86px;
 }
+
+#modify {
+	width : 1160px;
+	border-bottom: solid 2px var(--color-primary);
+	margin-bottom: 50px;
+}
+
+#modify > h2 {
+	color: var(--color-primary);
+	margin-bottom: 7px;
+}
+
+#image-wrap {
+	background-color: var(--color-gray500);
+	width: 560px;
+	height: 560px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 120px;
+}
+
+#auction-info1 {
+	width: 480px;
+}
+
+#box1 {
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
