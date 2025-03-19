@@ -26,32 +26,36 @@
 			
 			<!-- 수정 정보 -->
 			<div id="auction-info-wrap">
-				<div id="auction-info1">
-					<div id="auction-info">
+				<form>
+					<div class="input-box-wrap">
 						<div class="input-box">
-							<h5>경매 개시</h5>
-							<div class="star">*</div>
-							<i class="fa-light fa-pen"></i>
-							<h4>2025 . 01 . 21 . 8:00:00 </h4>
-						</div>
-						<div class="input-box">
-							<h5>추정가</h5>
-							<h4>KRW 1,000,000 ~ 2,000,000</h4>
-						</div>
-						<div class="input-box">
-							<h5>시작가</h5>
-							<span class="star">*</span>
-						<h4>KRW 1,000,000</h4>
+					        <h5>경매 개시<span class="star">*</span></h5>
+					        <h4 class="input-text">2025 . 01 . 21 . 8:00:00</h4>
 						</div>
 					</div>
-					
-				</div>
-				<div>
+					<div class="input-box-wrap">
+						<div class="input-box">
+					        <h5>추정가</h5>
+					        <input class="input-text" type="text" placeholder="KRW 1,000,000 ~ 2,000,000" />			
+						</div>
+					</div>
+					<div class="input-box-wrap">
+						<div class="input-box">
+					        <h5>시작가
+					        	<span class="star">*</span>
+					        </h5>
+					        <input class="input-text" type="text" placeholder="KRW 1,000,000" />			
+						</div>
+					</div>
+				</form>
+				<div id="art-artname">
 					<h5>작품제목</h5>
 					<p>멋진 고양이</p>
+				</div>
+				<div id="art-arist">
 					<h5>작가명 | 박세현</h5>
 				</div>
-				<div>
+				<div id="art-info">
 					<p>팔레트에 아크릴물감</p>
 					<p>50 X 50</p>
 					<p>2025</p>

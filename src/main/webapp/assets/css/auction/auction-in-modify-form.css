@@ -45,12 +45,39 @@ body {
 	width: 480px;
 }
 
-#box1 {
+.input-box {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 
+.star {
+	color: var(--color-primary);
+}
 
+.input-text {
+	text-align: right;
+	color: var(--color-gray900);
+	font-size: var(--font-size-h4);
+	background: none;
+	border: none;
+	outline: none;
+}
 
+.input-box-wrap {
+	width: 480px;
+	margin-bottom: 48px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+.input-box-wrap > .input-box {
+	margin-bottom: 7px;
+}
+
+#art-artname {
+	display: flex;
+}
 
 
 
