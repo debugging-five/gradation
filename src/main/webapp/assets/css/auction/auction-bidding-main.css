@@ -151,6 +151,13 @@ body {
    color : #fbfcfc;
 }
 
+#popup-wrapper {
+	display : none;
+	justify-content : center;
+	align-items : center;
+}
+
+
 #auction-list {
    margin : 94px 0 0 0;
 }
