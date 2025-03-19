@@ -156,24 +156,22 @@ checkPrivate.addEventListener("click", () => {
 	allOk();
 });
 
-// 이메일 인증
-emailCheckButton
-
-// 가입 버튼을 눌렀을 때 무결성 검사
+// 이메일 인증 눌렀을 때 무결성 검사
 emailCheckButton.addEventListener("click",() => {
 	if(email.value) {
-//		단순 매서드 실행, 보내고 카운트 하기
+		location.href = 'email-check.user?userEmail=' + email.value;
 	}else {
 		console.log("이메일 입력 필요");
 	}
-})
+});
 
+// 
 emailCheckButtonVerify.addEventListener("click",() => {
 	if(emailcheck.value) {
 //		컨트롤러 백단 연동
 	}else {
 		console.log("인증번호 입력 필요");
 	}
-})
+});
 
 
