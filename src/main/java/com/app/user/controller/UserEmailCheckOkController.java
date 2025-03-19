@@ -9,14 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class UserjoinController implements Action{
+public class UserEmailCheckOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Result result = new Result();
-		
-		result.setPath("join-main.jsp?");
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -24,4 +24,18 @@
 		WHERE USER_ID = #{userId}
 	</select>
 	
+	<select id="banCheck" parameterType="UserVO" resultType="int">
+		SELECT USER_BAN_OK
+		FROM TBL_USER
+		WHERE USER_ID = #{userId}
+		AND USER_PASSWORD = #{userPassword}
+	</select>
+	
+	<select id="login" parameterType="UserVO" resultType="String">
+		SELECT USER_EMAIL
+		FROM TBL_USER
+		WHERE USER_ID = #{userId}
+		AND USER_PASSWORD = #{userPassword}
+	</select>
+	
 </mapper>

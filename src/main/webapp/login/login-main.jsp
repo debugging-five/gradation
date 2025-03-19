@@ -15,11 +15,11 @@
 			<h2 id="login">로그인</h2>
 		</div>
 		<div>
-			<form action="login-ok" method="post">
+			<form action="login-ok.user" method="post">
 				<div class="login-input" id="id-input">
 					<div>
 						<img class="input-image" alt="user-icon" src="../assets/images/login/user.png">
-						<input id="id-input-text" class="login-input-text" type="text" name="id" placeholder="아이디" />
+						<input id="id-input-text" class="login-input-text" type="text" name="userId" placeholder="아이디" />
 					</div>
 				</div>
 				<div>
@@ -28,7 +28,7 @@
 				<div class="login-input" id="pw-input">
 					<div>
 						<img class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
-						<input id="pw-input-text" class="login-input-text" type="password" name="password" placeholder="비밀번호" />
+						<input id="pw-input-text" class="login-input-text" type="password" name="userPassword" placeholder="비밀번호" />
 					</div>
 					<div class="input-image">
 						<img alt="eye-icon" src="../assets/images/login/closed-eye.png">
@@ -47,9 +47,9 @@
 			</form>
 		</div>	
 			<div id="login-option">
-				<a>아이디 찾기</a>
+				<a href="../login/login-find-id.jsp">아이디 찾기</a>
 				<span>|</span>
-				<a>비밀번호 찾기</a>
+				<a href="../login/login-find-password.jsp">비밀번호 찾기</a>
 				<span>|</span>
 				<a href="../join/join-main.user">회원가입</a>
 			</div>
