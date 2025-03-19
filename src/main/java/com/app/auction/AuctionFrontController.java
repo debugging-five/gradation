@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.auction.controller.AuctionModifyController;
+import com.app.auction.controller.AuctionModifyOkController;
 
 public class AuctionFrontController extends HttpServlet{
 	
@@ -15,9 +17,22 @@ public class AuctionFrontController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=utf-8;");
-			
+		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		
+		
+		if(target.equals("auction/list")) {
+//			result
+		}else if(target.equals("auction/modify")) {
+			result = new AuctionModifyController().execute(req, resp);
+		}else if(target.equals("auction/modify-ok")) {
+			result = new AuctionModifyOkController().execute(req, resp);
+		}else {
+//			전부 404
+		}
+		
+		
 		
 		if(result != null) {
 			if(result.isRedirect()) {
