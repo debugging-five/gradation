@@ -1,5 +1,5 @@
 package com.app.logic;
 
-public class MainSend {
+public class MailSend {
 
 }

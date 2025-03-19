@@ -58,6 +58,10 @@ const idCheckButton = document.querySelector("#id-check-button");
 // 회원가입 버튼
 const joinButton = document.querySelector("#join-button");
 
+// 이메일 인증 버튼
+const emailCheckButton = document.querySelector("#email-check-button");
+const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
+
 // 쿼리스트링 파라미터 들고오기
 function getQueryParam(param) {
 	const urlParams = new URLSearchParams(window.location.search);
@@ -67,6 +71,7 @@ function getQueryParam(param) {
 // tempId 값 가져와서 input에 설정
 let tempId = getQueryParam('tempId');
 let isIdChecked = getQueryParam('idCheck');
+let isEmailChecked = getQueryParam('emailCheck');
 
 // 아이디 인풋에 설정
 if (tempId) {
@@ -79,13 +84,18 @@ allOk();
 idCheckButton.addEventListener("click", () => {
 	if(id.value) {
 	    /*console.log(id.value);*/
-		location.href = 'id-check.user?userId=' + id.value;
+		if(isEmailChecked) {
+			location.href = 'id-check.user?emailCheck=true&userId=' + id.value;
+			
+		}else {
+			location.href = 'id-check.user?userId=' + id.value;			
+		}
 	}else {
 		console.log("입력 필요함")
 	}
 });
 
-// 패스워드 입력
+// 입력에 대한 이벤트
 pw.addEventListener("input", () => {
 	allOk();
 })
@@ -105,6 +115,7 @@ email.addEventListener("input", () => {
 	allOk();
 })
 
+// 체크박스 체크에 대한 이벤트
 checkAll.addEventListener("click", () => {
 	if(checkAll.checked) {
 		checkUp14.checked = true
@@ -145,6 +156,22 @@ checkPrivate.addEventListener("click", () => {
 	allOk();
 });
 
+// 이메일 인증 눌렀을 때 무결성 검사
+emailCheckButton.addEventListener("click",() => {
+	if(email.value) {
+		location.href = 'email-check.user?userEmail=' + email.value;
+	}else {
+		console.log("이메일 입력 필요");
+	}
+});
 
+// 
+emailCheckButtonVerify.addEventListener("click",() => {
+	if(emailcheck.value) {
+//		컨트롤러 백단 연동
+	}else {
+		console.log("인증번호 입력 필요");
+	}
+});
 
 

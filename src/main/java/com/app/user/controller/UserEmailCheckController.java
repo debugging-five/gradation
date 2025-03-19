@@ -8,25 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.UserDAO;
 
-public class UserIdCheckController implements Action {
+public class UserEmailCheckController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		UserDAO userDAO = new UserDAO();
-		String tempId = req.getParameter("userId");
-		String tempUrl = null;
+		MailSend mailSend = new MailSend();
 		
-		tempUrl = "join-main.user?tempId="+ tempId + "&idCheck=";
+		System.out.println(req.getParameter("userEmail"));
+//		mailSend.sendMail(req.getParameter("userEmail"), null);
 		
-		if(userDAO.idCheck(tempId) == 1){
-			result.setPath(tempUrl+"false");						
-		}else {
-			result.setPath(tempUrl+"true");			
-		}
 		result.setRedirect(true);
+		result.setPath("join-main.user");
 		return result;
 	}
 
