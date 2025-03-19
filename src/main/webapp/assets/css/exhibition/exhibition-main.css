@@ -3,7 +3,7 @@
 body {
 	width : 100%;
 	height : 100%;
-	background-color: #fbfcfc;
+	background-color: var(--color-gray100);
 }
 
 #wrapper {
@@ -26,13 +26,15 @@ body {
 }
 
 #category-wrapper span {
-	color : #6e7476;
+	color : var(--color-gray900);
 	margin : 0 65px;
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
 	cursor : pointer;
 }
 
 #category-wrapper span:hover {
-	color : #ee3333;
+	color : var(--color-primary);
 	text-decoration : underline 2px;
 }
 
@@ -40,16 +42,21 @@ body {
 	display : flex;
 	justify-content : center;
 	align-items : center;
+	background-color : #c0c5c7;
+	width : 1160px;
+	height : 561px;
+	margin : 87px 0 0 0;
 }
 
-#map-wrapper div {
+/* #map-wrapper div {
 	background-color : #c0c5c7;
 	width : 1160px;
 	height : 561px;
 	margin : 87px 0 0 0;
 	text-align : center;
+	
 }
-
+ */
 #list-wrapper {
 	display : flex;
 	gap : 105px;
@@ -67,16 +74,12 @@ body {
 
 #bar {
 	width : 492px;
-	border-bottom : solid 1px #6e7476;
+	border-bottom : solid 1px var(--color-gray900);
 	display : flex;
 }
 
 #bar-left {
 	margin : 0 0 14px 0;
-}
-
-#bar-left span {
-	color : #333333;
 }
 
 .bar-menu {
@@ -104,7 +107,7 @@ i.fa-angle-down {
 }
 
 #list-content p {
-	color : #6e7479;
+	color : var(--color-gray900);
 	font-size : 12px;
   	margin : 6px 0 0 0;
 }
@@ -114,7 +117,7 @@ i.fa-angle-down {
 	margin : 13px 0 0 0;
 }
 
-#university-logo{
+#university-logo {
 	width : 128px;
 	height : 128px;
 	background-color : var(--color-gray100);
@@ -129,6 +132,17 @@ i.fa-angle-down {
 	margin : 0 0 0 28px;
 }
 
+.info1 {
+	font-size : var(--font-size-h8);
+	font-weight : var(--font-weight-light);
+}
+
+.info2 {
+	font-size : var(--font-size-h9);
+	font-weight : var(--font-weight-light);
+	color : var(--color-gray900);
+}
+
 #img-background {
 	width : 560px;
 	height : 447px;
@@ -140,12 +154,42 @@ i.fa-angle-down {
 	justify-content : center;
 }
 
-#img-background img {
+/* #img-background img {
 	width : 461px;
 	height : 446px;
-}
+} */
 
 #button-wrapper {
+	display : flex;
+	gap : 16px;
+	margin : 4px 0 0 0;
+}
+
+#button-comming {
+	width : 196px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1px var(--color-gray900);
+	border-radius : 3px;
+	color : var(--color-gray900);
+	font-family: var(--font-family-Pretendard-Regular);
+}
+
+#button-like {
+	width : 88px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1px var(--color-primary);
+	border-radius : 3px;
+	color : var(--color-primary);
+	font-family: var(--font-family-Pretendard-Regular);
+}
+
+#button-like i {
+	margin : 0 0 0 2px;
+}
+
+#button-wrapper2 {
 	margin : 100px 0 200px 0;
 	display : flex;
 	justify-content : center;
