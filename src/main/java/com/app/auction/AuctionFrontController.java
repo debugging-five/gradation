@@ -22,11 +22,9 @@ public class AuctionFrontController extends HttpServlet{
 		Result result = null;
 		
 		
-		if(target.equals("auction/list")) {
-//			result
-		}else if(target.equals("auction/modify")) {
+		if(target.equals("auction/auction-in-modify-form")) {
 			result = new AuctionModifyController().execute(req, resp);
-		}else if(target.equals("auction/modify-ok")) {
+		}else if(target.equals("auction/auction-comming-soon-modify")) {
 			result = new AuctionModifyOkController().execute(req, resp);
 		}else {
 //			전부 404
