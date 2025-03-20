@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.UserDAO;
 import com.app.logic.MailSend;
 import com.app.logic.MakeCode;
 
@@ -20,6 +21,9 @@ public class UserEmailCheckController implements Action {
 		Result result = new Result();
 		MailSend mailSend = new MailSend();
 		MakeCode makeCode = new MakeCode();
+		UserDAO userDAO = new UserDAO();
+		HttpSession session = req.getSession();
+		
 		String code = makeCode.codeSix();
 		String userId = req.getParameter("userId");
 		String userPassword = req.getParameter("userPassword");
@@ -29,10 +33,19 @@ public class UserEmailCheckController implements Action {
 		String userPhone = req.getParameter("userPhone");
 		String userEmail = req.getParameter("userEmail");
 		String checkUserEmail = req.getParameter("checkUserEmail");
-		HttpSession session = req.getSession();
 		
-		System.out.println(req.getParameter("userEmail"));
-		mailSend.sendMail(req.getParameter("userEmail"), code);
+//		System.out.println(req.getParameter("userEmail"));
+		
+		if(userDAO.emailCheck(userEmail) == 1){
+//			이메일이 이미 존재할 때
+			session.setAttribute("emailAlready", "false");
+			System.out.println("있어");
+		}else {
+//			이메일이 없을 때
+			mailSend.sendMail(req.getParameter("userEmail"), code);
+			System.out.println("없어");
+			System.out.println(code);
+		}
 		
 		session.setAttribute("code", code);
 				

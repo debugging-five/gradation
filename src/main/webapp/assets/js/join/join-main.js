@@ -1,14 +1,11 @@
-// 객체 초기화
+// 입력제한용 변수
+let replaceChar = /[~!@\#$%^&*\()\-=+_'\;<>0-9\/.\`:\"\\,\[\]?|{}]/gi;
+let replaceNotFullKorean = /[ㄱ-ㅎㅏ-ㅣ]/gi;
+
+// 인풋 객체 초기화
 let idCheck = document.querySelector("#id-check-ok");
 let mailCode = document.querySelector("#mail-code");
-let mailCheck = "" + document.querySelector("email-check-ok").value;
-
-// 회원가입 완료시 리다이렉트 코드
-let isComplete = document.querySelector("#is-complete");
-if(isComplete.value == "true"){
-	const joinSuccess = document.querySelector("#join-success");
-	joinSuccess.style.display = 'block';
-}
+let mailCheck = document.querySelector("#email-check-ok");
 
 let id = document.querySelector("#id-input");
 let pw = document.querySelector("#pw-input");
@@ -24,6 +21,42 @@ let checkUp14 = document.querySelector("#check-up14");
 let checkService = document.querySelector("#check-service");
 let checkNeedPrivate = document.querySelector("#check-need-private");
 let checkPrivate = document.querySelector("#check-private");
+
+// 	중복 확인 버튼
+const idCheckButton = document.querySelector("#id-check-button");
+
+// 	회원가입 버튼
+const joinButton = document.querySelector("#join-button");
+
+// 	이메일 인증 전송 버튼
+const emailCheckButton = document.querySelector("#email-check-button");
+
+//	이메일 인증 버튼
+const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
+
+// 오류메세지 객체
+const needIdCheck = document.querySelector("#need-id-check");
+const alreadyUseId = document.querySelector("#already-use-id");
+const needIdValidate = document.querySelector("#need-id-validate");
+
+// 회원가입 완료시 리다이렉트 코드
+let isComplete = document.querySelector("#is-complete");
+if(isComplete.value == "true"){
+	const joinSuccess = document.querySelector("#join-success");
+	joinSuccess.style.display = 'block';
+}
+
+//	리다이렉트시 요소 처리
+//	아이디 인증 완료, 미완료
+if(idCheck.value == "true") {
+	idCheckButton.textContent = "중복 체크 완료"
+	idCheckButton.style.backgroundColor = "var(--color-primary)";
+	alreadyUseId.classList.remove("need-write");
+}
+if(idCheck.value == "false") {
+	idCheckButton.style.backgroundColor = "var(--color-gray500)";
+	alreadyUseId.classList.add("need-write");
+}
 
 //무결성 확인 함수
 const allOk = () => {
@@ -64,33 +97,28 @@ const allOk = () => {
 	}
 	
 }
-// 	중복 확인 버튼
-const idCheckButton = document.querySelector("#id-check-button");
-
-// 	회원가입 버튼
-const joinButton = document.querySelector("#join-button");
-
-// 	이메일 인증 전송 버튼
-const emailCheckButton = document.querySelector("#email-check-button");
-
-//	이메일 인증 버튼
-const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
 
 // 	검사 시작
 allOk();
 
-/*중복확인 버튼 클릭 시 컨트롤러로 리다이렉션*/
+// 아이디 중복확인 버튼 클릭
 idCheckButton.addEventListener("click", () => {
+	let idLength = id.value.length
 	if(id.value) {
-		location.href = 
-			'id-check.user?userId=' + id.value +
-			'&userPassword=' + pw.value +
-			'&checkUserPassword=' + pwCheck.value +
-			'&userName=' + uname.value +
-			'&userNickname=' + nickname.value +
-			'&userPhone=' + phone.value +
-			'&userEmail=' + email.value +
-			'&checkUserEmail=' + emailcheck.value;
+		if(idLength >= 6 && idLength <= 20) {
+			location.href = 
+				'id-check.user?userId=' + id.value +
+				'&userPassword=' + pw.value +
+				'&checkUserPassword=' + pwCheck.value +
+				'&userName=' + uname.value +
+				'&userNickname=' + nickname.value +
+				'&userPhone=' + phone.value +
+				'&userEmail=' + email.value +
+				'&checkUserEmail=' + emailcheck.value +
+				'&code=' + mailCode.value;
+		}else {
+			console.log("아이디가 6~20 아님")
+		}
 	}else {
 		console.log("입력 필요함")
 	}
@@ -107,7 +135,8 @@ emailCheckButton.addEventListener("click",() => {
 			'&userNickname=' + nickname.value +
 			'&userPhone=' + phone.value +
 			'&userEmail=' + email.value +
-			'&checkUserEmail=' + emailcheck.value;
+			'&checkUserEmail=' + emailcheck.value +
+			'&code=' + mailCode.value;
 			console.log("잘 타냐?");
 	}else {
 		console.log("이메일 입력 필요");
@@ -117,11 +146,16 @@ emailCheckButton.addEventListener("click",() => {
 //	메일인증
 emailCheckButtonVerify.addEventListener("click",() => {
 	if(emailcheck.value) {
-		if(mailCode.value == emailcheck.value) {
-			mailCheck.value = "true";
-		}else {
-			console.log("인증번호 불일치");
-		}
+		location.href =
+			'email-check-verify.user?userId=' + id.value +
+			'&userPassword=' + pw.value +
+			'&checkUserPassword=' + pwCheck.value +
+			'&userName=' + uname.value +
+			'&userNickname=' + nickname.value +
+			'&userPhone=' + phone.value +
+			'&userEmail=' + email.value +
+			'&checkUserEmail=' + emailcheck.value +
+			'&code=' + mailCode.value;
 	}else {
 		console.log("인증번호 입력 필요");
 	}
@@ -131,7 +165,9 @@ emailCheckButtonVerify.addEventListener("click",() => {
 id.addEventListener("input", () => {
 //	입력이 일어남 = 값이 변동됨 = 재검사 해야됨
 	idCheck.value = "false";
-	allOk();
+	let idLength = id.value.length 
+//	입력이 조건을 만족할 때
+	if(idLength >= 6 && idLength <= 20) allOk();
 })
 pw.addEventListener("input", () => {
 	allOk();
@@ -169,6 +205,7 @@ checkAll.addEventListener("click", () => {
 	allOk();
 })
 
+
 checkUp14.addEventListener("click", () => {
 	if(!checkUp14.checked) {
 		checkAll.checked = false
@@ -194,6 +231,25 @@ checkPrivate.addEventListener("click", () => {
 	allOk();
 });
 
-
-
-
+// 회색 회원가입 버튼 클릭 시
+joinButton.addEventListener("click", () => {
+	console.log("조건만족안됨");
+	console.log("idCheck.value:", idCheck.value);
+	if(idCheck.value != "true") {
+		needIdCheck.classList.add("need-write");
+		alreadyUseId.classList.remove("need-write");
+	}else {
+		needIdCheck.classList.remove("need-write");
+		
+	}
+	console.log("mailCheck.value:", mailCheck.value);
+	console.log("pw.value:", pw.value);
+	console.log("pwCheck.value:", pwCheck.value);
+	console.log("uname.value:", uname.value);
+	console.log("nickname.value:", nickname.value);
+	console.log("phone.value:", phone.value);
+	console.log("email.value:", email.value);
+	console.log("checkUp14.checked:", checkUp14.checked);
+	console.log("checkService.checked:", checkService.checked);
+	console.log("checkNeedPrivate.checked:", checkNeedPrivate.checked);
+})

@@ -20,6 +20,7 @@
 			<input type="hidden" id="mail-code" value="${sessionScope.code}" />
 			<input type="hidden" id="id-check-ok" value="${sessionScope.checkId}" />
 			<input type="hidden" id="email-check-ok" value="${sessionScope.checkEmail}"/>
+			<input type="hidden" id="email-already" value="${sessionScope.emailAlready}"/>
 		<form action="join-ok.user" method="post">
 			<div id="id-input-wrap">
 				<span class="user-text">아이디</span>
@@ -28,12 +29,13 @@
 				<button type="button" id="id-check-button">중복체크</button>
 			</div>
 			<div><p id="already-use-id">이미 사용중인 아이디 입니다.</p></div>
-			<div><p class="need-write" id="need-write-id">.</p></div>
+			<div><p id="need-id-check">아이디 중복체크를 진행해주세요</p></div>
+			<div><p id="need-id-validate">아이디는 6~20자 영문, 숫자로만 작성해 주세요</p></div>
 			<div>
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
 				<input type="password" id="pw-input" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.userPassword}"/>
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p class="warning-massage">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">비밀번호 확인</span>
