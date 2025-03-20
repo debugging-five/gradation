@@ -9,35 +9,24 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/mypage/my-post-list.css" />
   </head>
   <body style="margin: 0; background: #fbfcfc">
+    <%@ include file="../layout/header.jsp" %>
     <input type="hidden" id="anPageName" name="page" value="mypage-post-list" />
     <div class="container-center-horizontal">
       <div class="mypage-post-list screen">
-        <div class="navigation-header">
-          <div class="navbar suit-medium-sonic-silver-14px">
-            <img class="x2-1" src="../assets/images/mypage/my-post/--2-1-1@2x.png" alt="2 1" />
-            <div class="navbar-link-display valign-text-middle">display</div>
-            <div class="navbar-link-auction valign-text-middle">auction</div>
-            <div class="navbar-link-exhibition valign-text-middle">exhibition</div>
-            <div class="navbar-link-upcycle valign-text-middle">upcycle</div>
-            <img class="icon" src="../assets/images/mypage/my-post/icon-1@2x.png" alt="icon" />
-            <div class="navbar-link-account valign-text-middle">account</div>
-          </div>
-        </div>
         <div class="flex-row">
           <div class="view">
             <div class="my-profile my">
-              <div class="my-profile-picture">
-                <div class="pepicons-printphoto-camera-circle-filled">
-                  <div class="group">
-                    <div class="overlap-group">
-                      <img class="vector" src="../assets/images/mypage/my-post/vector-2@2x.png" alt="Vector" />
-                      <img class="group-1" src="../assets/images/mypage/my-post/group-1@2x.png" alt="Group" />
-                      <img class="vector-1" src="../assets/images/mypage/my-post/vector-3@2x.png" alt="Vector" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-26 pretendardh3">홍길동</div>
+               <div class="profile-container">
+				 <form action="profile-upload.jsp" method="post" enctype="multipart/form-data">
+				 	<div class="profile-image">
+				    	<label for="profileUpload">
+				        	<img id="profilePreview" src="<%= session.getAttribute("profileImage") != null ? request.getContextPath() + "/" + session.getAttribute("profileImage") : request.getContextPath() + "/assets/images/mypage/upload/default-profile.jpg" %>" alt="프로필 이미지">
+				        </label>
+				        <input type="file" id="profileUpload" name="profileImage" accept="image/*" onchange="this.form.submit();">
+				    </div>
+				 </form>		         
+		    </div>
+            <div class="text-26 pretendardh3">홍길동</div>
             </div>
             <div class="infomation">
               <div class="text pretendardh5">내 정보</div>
@@ -114,8 +103,22 @@
             <img class="line-115 line" src="../assets/images/mypage/my-post/line-114-1.png" alt="Line 115" />
           </div>
         </div>
-        <img class="group-384" src="../assets/images/mypage/my-post/group-384-1.png" alt="Group 384" />
+        <%@ include file="../layout/footer.jsp" %>
       </div>
     </div>
+    <script>
+        function uploadProfileImage(event) {
+            const fileInput = event.target;
+            const formData = new FormData();
+            formData.append("profileImage", fileInput.files[0]);
+
+            fetch("profile-upload.jsp", {
+                method: "POST",
+                body: formData
+            }).then(response => {
+                location.reload(); // 업로드 후 새로고침하여 변경된 이미지 반영
+            }).catch(error => console.error("Upload failed:", error));
+        }
+    </script>
   </body>
 </html>

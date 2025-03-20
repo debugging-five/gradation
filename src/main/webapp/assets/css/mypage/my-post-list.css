@@ -45,15 +45,7 @@ input:focus {
   width: 1920px;
 }
 
-.mypage-post-list .navigation-header {
-  background-color: var(--color-gray100);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-color: var(--color-gray500);
-  display: flex;
-  height: 52px;
-  width: 1920px;
-}
+
 
 .mypage-post-list .navbar {
   align-items: center;
@@ -66,63 +58,6 @@ input:focus {
 .mypage-post-list .x2-1 {
   height: 36px;
   width: 177px;
-}
-
-.mypage-post-list .navbar-link-display {
-  height: 1px;
-  letter-spacing: 1.96px;
-  line-height: 0.1px;
-  margin-bottom: 1.0px;
-  margin-left: 75px;
-  min-width: 57px;
-  text-align: center;
-}
-
-.mypage-post-list .navbar-link-auction {
-  height: 1px;
-  letter-spacing: 1.96px;
-  line-height: 0.1px;
-  margin-bottom: 1.0px;
-  margin-left: 62px;
-  min-width: 58px;
-  text-align: center;
-}
-
-.mypage-post-list .navbar-link-exhibition {
-  height: 1px;
-  letter-spacing: 1.96px;
-  line-height: 0.1px;
-  margin-bottom: 1.0px;
-  margin-left: 52px;
-  min-width: 79px;
-  text-align: center;
-}
-
-.mypage-post-list .navbar-link-upcycle {
-  height: 1px;
-  letter-spacing: 1.96px;
-  line-height: 0.1px;
-  margin-bottom: 1.0px;
-  margin-left: 51px;
-  min-width: 59px;
-  text-align: center;
-}
-
-.mypage-post-list .icon {
-  height: 18px;
-  margin-left: 593px;
-  margin-top: 3.71px;
-  width: 18px;
-}
-
-.mypage-post-list .navbar-link-account {
-  height: 1px;
-  letter-spacing: 1.96px;
-  line-height: 0.1px;
-  margin-left: 49px;
-  margin-top: 1.0px;
-  min-width: 61px;
-  text-align: center;
 }
 
 .mypage-post-list .flex-row {
@@ -149,60 +84,39 @@ input:focus {
   min-width: 178px;
 }
 
-.mypage-post-list .my-profile-picture {
-  background-image: url(../img/profile1-2-1@2x.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  height: 80px;
-  width: 80px;
-}
-
-.mypage-post-list .pepicons-printphoto-camera-circle-filled {
-  align-items: flex-end;
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  margin-left: 68.75%;
-  margin-right: 11.25%;
-  min-width: 16px;
-}
-
 .mypage-post-list .group {
   align-items: flex-start;
   display: flex;
   margin-bottom: 0;
   min-width: 16px;
 }
-
-.mypage-post-list .overlap-group {
-  height: 16px;
-  position: relative;
-  width: 16px;
+.mypage-post-list profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.mypage-post-list profile-image {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+#profileUpload {
+  display: none;
 }
 
-.mypage-post-list .vector {
-  height: 15px;
-  left: 1px;
-  position: absolute;
-  top: 1px;
-  width: 15px;
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.mypage-post-list .group-1 {
-  height: 9px;
-  left: 3px;
-  position: absolute;
-  top: 4px;
-  width: 10px;
-}
-
-.mypage-post-list .vector-1 {
-  height: 15px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 15px;
+.profile-image input {
+    display: none;
 }
 
 .mypage-post-list .text-26 {
@@ -344,7 +258,7 @@ input:focus {
   font-weight: var(--font-weight-bold);
   height: 36px;
   line-height: normal;
-  width: 334px;
+  width: 434px;
 }
 
 .mypage-post-list .text-1-1 {
