@@ -17,8 +17,10 @@
 	<div class="join-container">
 		<h2 id="join-head">회원가입</h2>
 			<input type="hidden" id="is-complete" value="${sessionScope.isComplete}" />
+			<input type="hidden" id="mail-code" value="${sessionScope.code}" />
 			<input type="hidden" id="id-check-ok" value="${sessionScope.checkId}" />
-			<input type="hidden" id="email-check-ok" />
+			<input type="hidden" id="email-check-ok" value="${sessionScope.checkEmail}"/>
+			<input type="hidden" id="email-already" value="${sessionScope.emailAlready}"/>
 		<form action="join-ok.user" method="post">
 			<div id="id-input-wrap">
 				<span class="user-text">아이디</span>
@@ -27,49 +29,51 @@
 				<button type="button" id="id-check-button">중복체크</button>
 			</div>
 			<div><p id="already-use-id">이미 사용중인 아이디 입니다.</p></div>
-			<div><p class="need-write" id="need-write-id">.</p></div>
+			<div><p id="need-id-check">아이디 중복체크를 진행해주세요</p></div>
+			<div><p id="need-id-validate">아이디는 6~20자 영문, 숫자로만 작성해 주세요</p></div>
 			<div>
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
 				<input type="password" id="pw-input" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.userPassword}"/>
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p id="need-pw-input">필수 항목입니다.</p></div>
+				<div><p id="need-pw-input-validate">비밀번호는 8~12자 영문, 숫자, 특수문자로만 작성해 주세요</p></div>
 			</div>	
 			<div>
 				<span class="user-text">비밀번호 확인</span>
 				<span class="red-star">*</span>
 				<input type="password" id="pw-check-input" name="checkUserPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.checkUserPassword}" />
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p id="need-pw-input-check">입력하신 비밀번호가 일치하지 않습니다</p></div>
 			</div>	
 			<div>
 				<span class="user-text">이름</span>
 				<span class="red-star">*</span>
 				<input type="text" id="name-input" name="userName" placeholder="이름을 입력하세요." value="${sessionScope.userName}" />
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p id="need-name-input">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">닉네임</span>
 				<input type="text" id="nickname-input" name="userNickname" placeholder="닉네임을 입력하세요." value="${sessionScope.userNickname}" />
-				<div><p class="need-write">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">휴대폰</span>
 				<span class="red-star">*</span>
 				<input type="text" id="phone-input" name="userPhone" placeholder="휴대폰 번호를 입력하세요." value="${sessionScope.userPhone}" />
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p id="need-phone-input">필수 항목입니다.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">이메일</span>
 				<span class="red-star">*</span>
 				<input type="text" id="email-input" name="userEmail" placeholder="이메일을 입력하세요." value="${sessionScope.userEmail}" />
 				<button type="button" id="email-check-button">이메일 인증</button>
-				<div><p class="need-write"> </p></div>
+				<div><p id="already-use-email">이미 사용중인 이메일 입니다.</p></div>
+				<div><p id="need-email-validate">올바른 이메일 형식을 입력해주세요.</p></div>
 			</div>	
 			<div>
 				<span class="user-text">인증번호</span>
 				<span class="red-star">*</span>
 				<input type="text" id="email-check-input" name="checkUserEmail" placeholder="인증번호를 입력하세요." value="${sessionScope.checkUserEmail}" />
 				<button type="button" id="email-check-button-verify">인증번호 확인</button>
-				<div><p class="need-write">필수 항목입니다.</p></div>
+				<div><p id="need-email-check">이메일 인증을 진행해주세요</p></div>
 			</div>	
 			
 			<div>
