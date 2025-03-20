@@ -35,6 +35,7 @@
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
 				<input type="password" id="pw-input" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.userPassword}"/>
+				<img alt="눈" id="show-password" src="../assets/images/join/close-eye.png">
 				<div><p id="need-pw-input">필수 항목입니다.</p></div>
 				<div><p id="need-pw-input-validate">비밀번호는 8~12자 영문, 숫자, 특수문자로만 작성해 주세요</p></div>
 			</div>	
@@ -42,6 +43,7 @@
 				<span class="user-text">비밀번호 확인</span>
 				<span class="red-star">*</span>
 				<input type="password" id="pw-check-input" name="checkUserPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.checkUserPassword}" />
+				<img alt="눈" id="show-password-check" src="../assets/images/join/close-eye.png">
 				<div><p id="need-pw-input-check">입력하신 비밀번호가 일치하지 않습니다</p></div>
 			</div>	
 			<div>
@@ -74,6 +76,8 @@
 				<input type="text" id="email-check-input" name="checkUserEmail" placeholder="인증번호를 입력하세요." value="${sessionScope.checkUserEmail}" />
 				<button type="button" id="email-check-button-verify">인증번호 확인</button>
 				<div><p id="need-email-check">이메일 인증을 진행해주세요</p></div>
+				<div><p id="need-email-check-input">인증번호를 입력해 주세요</p></div>
+				<div><p id="need-email-check-validate">인증번호가 틀렸습니다.</p></div>
 			</div>	
 			
 			<div>
