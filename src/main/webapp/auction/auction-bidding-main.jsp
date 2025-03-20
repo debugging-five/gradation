@@ -87,12 +87,17 @@
 				<button class="button auto-bidding">
 					<p>자동응찰</p>
 				</button>
-				<button class="button bidding" onclick="openPopup()" >
+				<button class="button bidding" >
 					<p>응찰</p>
+<%-- <div id="popup-wrapper">			
+		<%@ include file="./auction-bidding.jsp"%>
+	</div>  --%>
 				</button>
 			</div>
+			
 		</div>
 	</div>
+	
 
 	<div id="auction-list">
 		<div id="auction-ing">
@@ -117,6 +122,11 @@
 	</div>
 </div>
 
+
+
 <%@ include file="../layout/footer.jsp" %>
+
+
 </body>
+<script src="../assets/js/auction/auction-bidding.js" />
 </html>

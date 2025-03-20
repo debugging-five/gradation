@@ -61,18 +61,19 @@
 					<p>50 X 50</p>
 					<p>2025</p>
 				</div>
-				<div id="button-wrap">
-					<button id="cancel-button">취소</button>
-					<button id="modify-button">수정</button>
-				</div>
+				<form action="">
+					<div id="button-wrap">
+						<button id="cancel-button">취소</button>
+						<button id="modify-button">수정</button>
+					</div>
+				</form>
 				<h3 id="reference">경매가 개시되면 작품 수정 및 삭제가 불가능합니다.</h3>
 			</div>
 		</div>
 	</div>
 	
 	
-
-
 <%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/auction/auction-in-modify-form.js"></script>
 </html>
