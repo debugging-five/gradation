@@ -1,12 +1,13 @@
-const registerButton = document.getElementsByClassName("button register");
-
-registerButton.addEventListener("click", () => {
-	location.href = "exhibition-form.exhibition";
-});
-
 const universityLogo = document.getElementById("university-logo1");
-const backgroundImage = document.getElementsById("img-background");
+const backgroundImage = document.getElementById("img-background");
+
+const likeButton = document.querySelectorAll(".button-like");
+const heart = document.querySelector(".fa-regular fa-heart fa-2xs");
 
 universityLogo.addEventListener("click", () => {
 	backgroundImage.style.display = "block";
-	});
+});
+
+likeButton.addEventListener("click", () => {
+	heart.style.color = "red";
+});

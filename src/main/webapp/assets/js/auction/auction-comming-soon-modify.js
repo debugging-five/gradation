@@ -8,3 +8,5 @@ modifyButton.addEventListener("click", () => {
 listButton.addEventListener("click", () => {
 	location.href = 'auction-bidding-main.auction';
 });
+
+

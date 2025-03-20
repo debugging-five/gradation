@@ -120,7 +120,7 @@ i.fa-angle-down {
 	margin : 13px 0 0 0;
 }
 
-#university-logo1,#university-logo2 {
+#university-logo1, #university-logo2 {
 	width : 128px;
 	height : 128px;
 	background-color : var(--color-gray100);
@@ -129,6 +129,7 @@ i.fa-angle-down {
 	display : flex;
 	justify-content : center;
 	align-items : center;
+}
 }
 
 .university-info {

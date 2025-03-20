@@ -37,8 +37,6 @@
 				<div id="bar-left">
 					<span class="bar-menu">전체 지역</span>
 					
-					
-					<form>
 						<select id="area" name="area">
 							<option value="">전체 지역</option>
 							<option value="area1">서울</option>
@@ -57,8 +55,7 @@
 							<option value="area14">광주</option>
 							<option value="area15">제주</option>
 						</select>
-					</form>
-					
+
 					<span class="bar-menu">전시 상태</span>
 					<span>My pick</span>
 				</div>
@@ -148,8 +145,8 @@
 			
 		</div>
 		
-		<div id="img-background">
-			<div >
+		<div>
+			<div id="img-background" >
 				<div>전시회 사진</div>
 			</div>
 
@@ -170,5 +167,5 @@
 </form>
 
 </body>
-<script type="text/javascript" src="../assets/js/exhibition/exhibition-main.js" />
+<script type="text/javascript" src="../assets/js/exhibition/exhibition-main.js"></script>
 </html>
