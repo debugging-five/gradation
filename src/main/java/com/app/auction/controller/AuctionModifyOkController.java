@@ -12,11 +12,7 @@ public class AuctionModifyOkController implements Action {
     @Override
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         Result result = new Result();
-
-        // Context Path 포함하여 리디렉션 경로 설정
-        result.setPath(req.getContextPath() + "/auction-comming-soon-modify.auction");
-        result.setRedirect(true);  // 리디렉션 활성화
-        
+        result.setPath("auction-comming-soon-modify.jsp");
         return result;
     }
 }
