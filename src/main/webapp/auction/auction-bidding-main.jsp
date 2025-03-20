@@ -132,5 +132,5 @@
 
 
 </body>
-<script src="../assets/js/auction/auction-bidding.js" />
+<script type="text/javascript" src="../assets/js/auction/auction-bidding.js" />
 </html>

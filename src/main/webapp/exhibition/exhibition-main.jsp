@@ -74,12 +74,12 @@
 			</div>
 			
 			<!-- 학교1 -->
-			<div id="exhibition-info">
-				<div id="university-logo">
+			<div class="exhibition-info">
+				<div id="university-logo1">
 					<div>대학교 로고</div>
 				</div>
 				
-				<div id="university-info">
+				<div class="university-info">
 					<div>
 						<h6>강원대학교</h6>
 					</div>
@@ -101,21 +101,21 @@
 					</div>
 					
 					<div id="button-wrapper">
-						<button id="button-comming">전시예정</button>
+						<button class="button-comming">전시예정</button>
 						<div>
-							<button id="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
+							<button class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
 						</div>
 					</div>
 				</div>
 			</div>
 			
 			<!-- 학교2 -->
-			<div id="exhibition-info">
-				<div id="university-logo">
+			<div class="exhibition-info">
+				<div id="university-logo2">
 					<div>대학교 로고</div>
 				</div>
 				
-				<div id="university-info">
+				<div class="university-info">
 					<div>
 						<h6>이화여자대학교</h6>
 					</div>
@@ -137,9 +137,9 @@
 					</div>
 					
 					<div id="button-wrapper">
-						<button id="button-comming">전시중</button>
+						<button class="button-comming">전시중</button>
 						<div>
-							<button id="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
+							<button class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
 						</div>
 					</div>
 				</div>
@@ -148,8 +148,8 @@
 			
 		</div>
 		
-		<div>
-			<div id="img-background">
+		<div id="img-background">
+			<div >
 				<div>전시회 사진</div>
 			</div>
 
@@ -170,4 +170,5 @@
 </form>
 
 </body>
+<script type="text/javascript" src="../assets/js/exhibition/exhibition-main.js" />
 </html>
