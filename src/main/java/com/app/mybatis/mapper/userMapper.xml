@@ -23,6 +23,12 @@
   		FROM TBL_USER
 		WHERE USER_ID = #{userId}
 	</select>
+
+	<select id="emailCheck" parameterType="String" resultType="int">
+		SELECT COUNT(ID) 
+  		FROM TBL_USER
+		WHERE USER_EMAIL = #{userEmail}
+	</select>
 	
 	<select id="banCheck" parameterType="UserVO" resultType="int">
 		SELECT USER_BAN_OK

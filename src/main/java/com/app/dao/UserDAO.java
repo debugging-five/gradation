@@ -17,6 +17,9 @@ import com.app.vo.UserVO;
  	public int idCheck(String userId) {
  		return sqlSession.selectOne("user.idCheck", userId);
  	}
+ 	public int emailCheck(String userEmail) {
+ 		return sqlSession.selectOne("user.emailCheck", userEmail);
+ 	}
  	
  //	회원가입	
  	public void insert(UserVO userVO) {

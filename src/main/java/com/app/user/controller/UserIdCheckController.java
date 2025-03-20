@@ -17,6 +17,8 @@ public class UserIdCheckController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		UserDAO userDAO = new UserDAO();
+		HttpSession session = req.getSession();
+
 		String userId = req.getParameter("userId");
 		String userPassword = req.getParameter("userPassword");
 		String checkUserPassword = req.getParameter("checkUserPassword");
@@ -25,14 +27,13 @@ public class UserIdCheckController implements Action {
 		String userPhone = req.getParameter("userPhone");
 		String userEmail = req.getParameter("userEmail");
 		String checkUserEmail = req.getParameter("checkUserEmail");
-		HttpSession session = req.getSession();
 		
 		if(userDAO.idCheck(userId) == 1){
-//			아이디가 없을 때
-			session.setAttribute("checkId", false);
+//			아이디가 있을 때
+			session.setAttribute("checkId", "already");
 			System.out.println("있어");
 		}else {
-//			아이디가 있을 때
+//			아이디가 없을 때
 			session.setAttribute("checkId", true);
 			System.out.println("없어");
 		}
