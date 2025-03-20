@@ -89,12 +89,16 @@
 				</button>
 				<button class="button bidding" >
 					<p>응찰</p>
-<%-- <div id="popup-wrapper">			
-		<%@ include file="./auction-bidding.jsp"%>
-	</div>  --%>
+					
 				</button>
 			</div>
-			
+
+<%-- 					
+	<div id="popup-wrapper">			
+		<%@ include file="./auction-bidding.jsp"%>
+	</div> 
+
+ --%>			
 		</div>
 	</div>
 	
