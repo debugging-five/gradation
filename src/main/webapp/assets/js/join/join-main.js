@@ -1,7 +1,7 @@
 // 객체 초기화
 let idCheck = document.querySelector("#id-check-ok");
 let mailCode = document.querySelector("#mail-code");
-let mailCheck = document.querySelector("email-check-ok");
+let mailCheck = "" + document.querySelector("email-check-ok").value;
 
 // 회원가입 완료시 리다이렉트 코드
 let isComplete = document.querySelector("#is-complete");
@@ -45,6 +45,7 @@ const allOk = () => {
 //	인풋박스 유효성 검사
 
 	if(	idCheck.value == "true" &&
+		mailCheck.value == "true" &&
 	 	pw.value &&
 		pwCheck.value &&
 		uname.value &&
@@ -99,7 +100,7 @@ idCheckButton.addEventListener("click", () => {
 emailCheckButton.addEventListener("click",() => {
 	if(email.value) {
 		location.href =
-			'id-check.user?userId=' + id.value +
+			'email-check.user?userId=' + id.value +
 			'&userPassword=' + pw.value +
 			'&checkUserPassword=' + pwCheck.value +
 			'&userName=' + uname.value +
@@ -107,6 +108,7 @@ emailCheckButton.addEventListener("click",() => {
 			'&userPhone=' + phone.value +
 			'&userEmail=' + email.value +
 			'&checkUserEmail=' + emailcheck.value;
+			console.log("잘 타냐?");
 	}else {
 		console.log("이메일 입력 필요");
 	}
@@ -116,7 +118,9 @@ emailCheckButton.addEventListener("click",() => {
 emailCheckButtonVerify.addEventListener("click",() => {
 	if(emailcheck.value) {
 		if(mailCode.value == emailcheck.value) {
-			mailCheck안녕나는버그야 오늘은 여기까지 했어
+			mailCheck.value = "true";
+		}else {
+			console.log("인증번호 불일치");
 		}
 	}else {
 		console.log("인증번호 입력 필요");
@@ -145,6 +149,7 @@ phone.addEventListener("input", () => {
 	allOk();
 })
 email.addEventListener("input", () => {
+	mailCheck.value = "false";
 	allOk();
 })
 
