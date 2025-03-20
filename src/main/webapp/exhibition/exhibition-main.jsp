@@ -35,10 +35,10 @@
 		<div id="university-list">
 			<div id="bar">
 				<div id="bar-left">
-					<span class="bar-menu">전체 지역</span>
+<!-- 					<span class="bar-menu">전체 지역</span> -->
 					
 						<select id="area" name="area">
-							<option value="">전체 지역</option>
+							<option value="area">전체 지역</option>
 							<option value="area1">서울</option>
 							<option value="area2">경기</option>
 							<option value="area3">강원</option>
@@ -56,7 +56,12 @@
 							<option value="area15">제주</option>
 						</select>
 
-					<span class="bar-menu">전시 상태</span>
+					<!-- <span class="bar-menu">전시 상태</span> -->
+					<select id="state" name="state">
+						<option value="state">전시 상태</option>
+						<option value="state1">예정 전시</option>
+						<option value="state2">진행 전시</option>
+					</select>
 					<span>My pick</span>
 				</div>
 				<div id="bar-right">
