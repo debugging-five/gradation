@@ -80,7 +80,9 @@
 					<div class="comming-soon">
 						<h2>준비중인 작품입니다.</h2>
 					</div>
-					<button>목록으로</button>
+					<form action="" method="post">
+						<button type="button" id="button-list">목록으로</button>
+					</form>
 				</div>
 				
 
