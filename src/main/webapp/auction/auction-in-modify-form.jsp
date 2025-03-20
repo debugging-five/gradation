@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../layout/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-in-modify-form.css" />
-<title>auction-in-modify-form</title>
+<title>경매 수정하기</title>
 </head>
 	<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
+<%@ include file="../layout/header.jsp" %>
 
 	<div id="container">
 		<h1 id="title">auction</h1>
@@ -61,10 +61,10 @@
 					<p>50 X 50</p>
 					<p>2025</p>
 				</div>
-				<form action="">
+				<form action="" method="post">
 					<div id="button-wrap">
-						<button id="cancel-button">취소</button>
-						<button id="modify-button">수정</button>
+						<button id="cancel-button" type="button">취소</button>
+						<button id="modify-button" type="button">수정</button>
 					</div>
 				</form>
 				<h3 id="reference">경매가 개시되면 작품 수정 및 삭제가 불가능합니다.</h3>
