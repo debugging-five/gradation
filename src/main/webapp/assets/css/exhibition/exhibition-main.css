@@ -70,6 +70,7 @@ body {
 	height : 479px;
 	margin : 100px 0 0 0;
 	font-size : 16px;
+	flex : 1; 
 }
 
 #bar {
@@ -85,6 +86,20 @@ body {
 .bar-menu {
 	margin : 0 36px 0 0;
 }
+
+select {
+	border : none;
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
+	font-family: var(--font-family-Pretendard-Regular);
+}
+
+/* 
+option:hover {
+	color : red;
+}
+ */
+ 
 /* 
 i.fa-angle-down {
 	font-size : 20px;
@@ -114,12 +129,12 @@ i.fa-angle-down {
   	margin : 6px 0 0 0;
 }
 
-#exhibition-info {
+.exhibition-info {
 	display : flex;
 	margin : 13px 0 0 0;
 }
 
-#university-logo {
+#university-logo1, #university-logo2 {
 	width : 128px;
 	height : 128px;
 	background-color : var(--color-gray100);
@@ -129,8 +144,9 @@ i.fa-angle-down {
 	justify-content : center;
 	align-items : center;
 }
+}
 
-#university-info {
+.university-info {
 	margin : 0 0 0 28px;
 }
 
@@ -154,6 +170,7 @@ i.fa-angle-down {
 	display : flex;
 	align-items : center;
 	justify-content : center;
+	display : none;
 }
 
 /* #img-background img {
@@ -167,7 +184,7 @@ i.fa-angle-down {
 	margin : 4px 0 0 0;
 }
 
-#button-comming {
+.button-comming {
 	width : 196px;
 	height : 28px;
 	background-color : var(--color-gray100);
@@ -177,7 +194,7 @@ i.fa-angle-down {
 	font-family: var(--font-family-Pretendard-Regular);
 }
 
-#button-like {
+.button-like {
 	width : 88px;
 	height : 28px;
 	background-color : var(--color-gray100);
@@ -187,7 +204,7 @@ i.fa-angle-down {
 	font-family: var(--font-family-Pretendard-Regular);
 }
 
-#button-like i {
+.button-like i {
 	margin : 0 0 0 2px;
 }
 
@@ -207,7 +224,7 @@ i.fa-angle-down {
 	border : solid 1.5px #ee3333;
 	font-family: var(--font-family-Pretendard-Regular);
 	font-size : var(--font-size-h5);
-	font-weight : var(--font-weight-h5);
+	font-weight : var(--font-weight-semibold);
 }
 
 .inquiry {
