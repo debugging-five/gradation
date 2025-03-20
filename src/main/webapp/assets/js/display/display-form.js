@@ -72,3 +72,12 @@ document.getElementById('category-select').addEventListener('change', function (
 	    // 선택한 날짜 텍스트 보이기
 	    calendarText.style.display = 'inline';
 	}
+	
+	
+	
+	
+	
+
+	
+	
+	

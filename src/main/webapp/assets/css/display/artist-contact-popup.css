@@ -120,6 +120,28 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+.close-btn2 {
+	width: 16px;
+	height: 16px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    left: 286px;
+}
+/* X 버튼 아래 구분선 */
+.modal-ok::after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 1px;
+    background: #ddd;
+    position: relative;
+    top: -355px;
+    left: 0px;
+}
 
 /* 모달 스타일 */
 .modal-ok {
@@ -136,7 +158,7 @@ textarea {
 	width: 56px;
 	height: 56px;
 	color: red;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 /* 타이틀 */
