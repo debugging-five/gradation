@@ -35,5 +35,5 @@
         out.println("파일 업로드 중 오류 발생: " + e.getMessage());
     }
 
-    response.sendRedirect("my-post-list.jsp"); // 업로드 후 페이지 새로고침
+    response.sendRedirect("mypage-post-list.jsp"); // 업로드 후 페이지 새로고침
 %>
