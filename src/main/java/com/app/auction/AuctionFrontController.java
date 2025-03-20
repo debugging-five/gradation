@@ -8,8 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.auction.controller.AuctionBiddingController;
+import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
+import com.app.auction.controller.AuctionPaymentController;
 
 public class AuctionFrontController extends HttpServlet{
 	
@@ -22,10 +25,16 @@ public class AuctionFrontController extends HttpServlet{
 		Result result = null;
 		
 		
-		if(target.equals("auction/auction-in-modify-form")) {
+		if(target.equals("auction/auction-main")) {
+			result = new AuctionController().execute(req, resp);
+		}else if(target.equals("auction/auction-bidding-main")) {
+			result = new AuctionBiddingController().execute(req, resp);
+		}else if(target.equals("auction/auction-in-modify-form")) {
 			result = new AuctionModifyController().execute(req, resp);
 		}else if(target.equals("auction/auction-comming-soon-modify")) {
 			result = new AuctionModifyOkController().execute(req, resp);
+		}else if(target.equals("auction/auction-payment-main")) {
+			result = new AuctionPaymentController().execute(req, resp);
 		}else {
 //			전부 404
 		}
