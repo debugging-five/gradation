@@ -1,5 +1,7 @@
 // 객체 초기화
 let idCheck = document.querySelector("#id-check-ok");
+let mailCode = document.querySelector("#mail-code");
+let mailCheck = document.querySelector("email-check-ok");
 
 // 회원가입 완료시 리다이렉트 코드
 let isComplete = document.querySelector("#is-complete");
@@ -7,7 +9,6 @@ if(isComplete.value == "true"){
 	const joinSuccess = document.querySelector("#join-success");
 	joinSuccess.style.display = 'block';
 }
-
 
 let id = document.querySelector("#id-input");
 let pw = document.querySelector("#pw-input");
@@ -62,22 +63,25 @@ const allOk = () => {
 	}
 	
 }
-// 중복 확인 버튼
+// 	중복 확인 버튼
 const idCheckButton = document.querySelector("#id-check-button");
 
-// 회원가입 버튼
+// 	회원가입 버튼
 const joinButton = document.querySelector("#join-button");
 
-// 이메일 인증 버튼
+// 	이메일 인증 전송 버튼
 const emailCheckButton = document.querySelector("#email-check-button");
+
+//	이메일 인증 버튼
 const emailCheckButtonVerify = document.querySelector("#email-check-button-verify");
 
-// 검사 시작
+// 	검사 시작
 allOk();
+
 /*중복확인 버튼 클릭 시 컨트롤러로 리다이렉션*/
 idCheckButton.addEventListener("click", () => {
 	if(id.value) {
-			location.href = 
+		location.href = 
 			'id-check.user?userId=' + id.value +
 			'&userPassword=' + pw.value +
 			'&checkUserPassword=' + pwCheck.value +
@@ -85,10 +89,37 @@ idCheckButton.addEventListener("click", () => {
 			'&userNickname=' + nickname.value +
 			'&userPhone=' + phone.value +
 			'&userEmail=' + email.value +
-			'&checkUserEmail=' + emailcheck.value
-			;			
+			'&checkUserEmail=' + emailcheck.value;
 	}else {
 		console.log("입력 필요함")
+	}
+});
+
+// 이메일 인증 눌렀을 때 무결성 검사, 컨트롤러 태우기
+emailCheckButton.addEventListener("click",() => {
+	if(email.value) {
+		location.href =
+			'id-check.user?userId=' + id.value +
+			'&userPassword=' + pw.value +
+			'&checkUserPassword=' + pwCheck.value +
+			'&userName=' + uname.value +
+			'&userNickname=' + nickname.value +
+			'&userPhone=' + phone.value +
+			'&userEmail=' + email.value +
+			'&checkUserEmail=' + emailcheck.value;
+	}else {
+		console.log("이메일 입력 필요");
+	}
+});
+
+//	메일인증
+emailCheckButtonVerify.addEventListener("click",() => {
+	if(emailcheck.value) {
+		if(mailCode.value == emailcheck.value) {
+			mailCheck안녕나는버그야 오늘은 여기까지 했어
+		}
+	}else {
+		console.log("인증번호 입력 필요");
 	}
 });
 
@@ -158,22 +189,6 @@ checkPrivate.addEventListener("click", () => {
 	allOk();
 });
 
-// 이메일 인증 눌렀을 때 무결성 검사
-emailCheckButton.addEventListener("click",() => {
-	if(email.value) {
-		location.href = 'email-check.user?userEmail=' + email.value;
-	}else {
-		console.log("이메일 입력 필요");
-	}
-});
 
-// 
-emailCheckButtonVerify.addEventListener("click",() => {
-	if(emailcheck.value) {
-//		컨트롤러 백단 연동
-	}else {
-		console.log("인증번호 입력 필요");
-	}
-});
 
 

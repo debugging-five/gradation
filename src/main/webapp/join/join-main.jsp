@@ -17,8 +17,9 @@
 	<div class="join-container">
 		<h2 id="join-head">회원가입</h2>
 			<input type="hidden" id="is-complete" value="${sessionScope.isComplete}" />
+			<input type="hidden" id="mail-code" value="${sessionScope.code}" />
 			<input type="hidden" id="id-check-ok" value="${sessionScope.checkId}" />
-			<input type="hidden" id="email-check-ok" />
+			<input type="hidden" id="email-check-ok" value="${sessionScope.checkEmail}"/>
 		<form action="join-ok.user" method="post">
 			<div id="id-input-wrap">
 				<span class="user-text">아이디</span>

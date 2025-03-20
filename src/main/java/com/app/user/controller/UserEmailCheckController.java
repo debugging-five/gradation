@@ -34,10 +34,8 @@ public class UserEmailCheckController implements Action {
 		System.out.println(req.getParameter("userEmail"));
 		mailSend.sendMail(req.getParameter("userEmail"), code);
 		
-		result.setRedirect(true);
-		
-		
-		
+		session.setAttribute("code", code);
+				
 		session.setAttribute("userId", userId);
 		session.setAttribute("userPassword", userPassword);
 		session.setAttribute("checkUserPassword", checkUserPassword);
@@ -46,6 +44,10 @@ public class UserEmailCheckController implements Action {
 		session.setAttribute("userPhone", userPhone);
 		session.setAttribute("userEmail", userEmail);
 		session.setAttribute("checkUserEmail", checkUserEmail);
+		
+		result.setRedirect(true);
+		result.setPath("join-main.user");
+		
 		return result;
 	}
 
