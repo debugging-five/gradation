@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+.my-info {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+  width: 244px;
+  position: relative;
+}
+
+.my-profile {
+  align-items: center;
+  gap: 41px;
+  min-width: 178px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.profile-image {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  cursor: pointer;
+}
+#profileUpload {
+  display: none;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-image input {
+    display: none;
+}
+
+.text-26 {
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  margin-top: 1.0px;
+  min-height: 25px;
+  min-width: 55px;
+  white-space: nowrap;
+}
+
+.infomation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+  margin-top: 45px;
+  min-height: 138px;
+  width: 244px;
+}
+
+.text {
+  color: var(--color-black);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.update-infomation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 12px;
+  min-height: 87px;
+  width: 125px;
+}
+
+.text-1 {
+  color: var(--color-gray900);
+  cursor: pointer;
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  min-height: 19px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.text-1:hover {
+  color: var(--color-primary)
+}
+
+.line-12 {
+  margin-top: 14px;
+  width: 242px;
+}
+
+.my-perform {
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 15px;
+  min-height: 138px;
+  width: 245px;
+}
+
+.perform {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 12px;
+  min-height: 87px;
+  width: 79px;
+}
+
+.line-123 {
+  margin-top: 14px;
+  width: 243px;
+}
+
+.view-item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+  margin-top: 15px;
+  min-height: 104px;
+  width: 244px;
+}
+
+.history-auction-buy {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 12px;
+  min-height: 53px;
+  width: 64px;
+}
+
+.post-request {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 12px;
+  min-height: 53px;
+  width: 50px;
+}
+
+.text-22 {
+  color: var(--color-gray500);
+  cursor: pointer;
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  margin-left: 2px;
+  margin-top: 14px;
+  min-height: 19px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.text-22:hover {
+  color: var(--color-primary)
+}
