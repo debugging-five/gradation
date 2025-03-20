@@ -14,7 +14,8 @@
 
    <div id="pop-up">
       <!-- 팝업 상단바 x 아이콘 -->
-      <div class="bar">
+      <div class="bar" onclick="closePopup()">
+      	<img src="../assets/images/auction/close.png" alt="x" />
       </div>
       
       <div class="popup-info">
@@ -65,14 +66,17 @@
          </div>
        </div>
        
-       <div class="popup-button">
-          <div>
-             <button class="bidding">응찰하기</button>
-          </div>
-          <div>
-             <button class="back" onclick="closePopup()">돌아가기</button>
-          </div>
-       </div>
+	   <div class="popup-button">
+       		<form action="auction-payment-main.jsp" method="post">
+	          <div>
+	             <button class="bidding">응찰하기</button>
+	          </div>
+	         </form>
+	          <div>
+	             <button class="back" onclick="closePopup()">돌아가기</button>
+	          </div>
+	       </div>
+
    </div>
    
    <div id="notice">

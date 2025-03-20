@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding-main.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding-popup.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>경매 상세 페이지</title>
 </head>
@@ -90,16 +89,14 @@
             </button>
             <button class="button bidding" onclick="openPopup()" >
                <p>응찰</p>
-               
             </button>
          </div>
-
-
-         <div id="overlay"></div>
+         
          <!-- 응찰하기 팝업 -->
-          <div id="popup-wrapper">         
-            <%@ include file="./auction-bidding-popup.jsp"%>
-          </div>      
+		<div id="overlay"></div>
+		<div id="popup-wrapper">         
+		    <%@ include file="./auction-bidding-popup.jsp"%>
+		</div>    
 
           
       </div>
@@ -132,7 +129,6 @@
 
 
 <%@ include file="../layout/footer.jsp" %>
-
 
 </body>
 <script type="text/javascript" src="../assets/js/auction/auction-bidding-main.js"></script>
