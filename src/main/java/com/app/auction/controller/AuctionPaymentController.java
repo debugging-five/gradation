@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class AuctionModifyController implements Action {
+public class AuctionPaymentController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("auction-in-modify-form.jsp");
+		result.setPath("auction-payment-main.jsp");
 		return result;
 	}
 

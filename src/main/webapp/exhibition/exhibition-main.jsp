@@ -42,6 +42,20 @@
 						<select id="area" name="area">
 							<option value="">전체 지역</option>
 							<option value="area1">서울</option>
+							<option value="area2">경기</option>
+							<option value="area3">강원</option>
+							<option value="area4">인천</option>
+							<option value="area5">충남</option>
+							<option value="area6">충북</option>
+							<option value="area7">대전</option>
+							<option value="area8">경북</option>
+							<option value="area9">경남</option>
+							<option value="area10">대구</option>
+							<option value="area11">부산</option>
+							<option value="area12">전북</option>
+							<option value="area13">전남</option>
+							<option value="area14">광주</option>
+							<option value="area15">제주</option>
 						</select>
 					</form>
 					
@@ -144,8 +158,8 @@
 	
 		
 	<div id="button-wrapper2">
-		<button class="button inquiry" value="" name="">문의하기</button>
-		<button class="button register" value="" name="">학교 등록 신청</button>
+		<button type="button" class="button inquiry">문의하기</button>
+		<button type="button" class="button register">학교 등록 신청</button>
 	</div>
 	
 	
