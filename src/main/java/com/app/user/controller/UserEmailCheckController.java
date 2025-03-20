@@ -24,6 +24,8 @@ public class UserEmailCheckController implements Action {
 		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
 		
+		String checkId = req.getParameter("checkId");
+		
 		String code = makeCode.codeSix();
 		String userId = req.getParameter("userId");
 		String userPassword = req.getParameter("userPassword");
@@ -38,17 +40,18 @@ public class UserEmailCheckController implements Action {
 		
 		if(userDAO.emailCheck(userEmail) == 1){
 //			이메일이 이미 존재할 때
-			session.setAttribute("emailAlready", "false");
-			System.out.println("있어");
+			session.setAttribute("code", "");
+			session.setAttribute("emailAlready", "true");
 		}else {
 //			이메일이 없을 때
+			session.setAttribute("emailAlready", "false");
 			mailSend.sendMail(req.getParameter("userEmail"), code);
-			System.out.println("없어");
 			System.out.println(code);
+			session.setAttribute("code", code);
 		}
 		
-		session.setAttribute("code", code);
 				
+		session.setAttribute("checkId", checkId);
 		session.setAttribute("userId", userId);
 		session.setAttribute("userPassword", userPassword);
 		session.setAttribute("checkUserPassword", checkUserPassword);
