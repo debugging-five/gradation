@@ -91,12 +91,17 @@ const emailCheckDesign = () => {
 	}
 }
 
-if(emailAlready.value == "true") {
-	alreadyUseEmail.classList.add("need-write");
-	needEmailCheck.classList.remove("need-write");
-}else {
-	alreadyUseEmail.classList.remove("need-write");
+//	이메일 중복여부 검사
+const isEmailDup = () => {
+	if(emailAlready.value == "true") {
+		alreadyUseEmail.classList.add("need-write");
+		needEmailCheck.classList.remove("need-write");
+	}else {
+		alreadyUseEmail.classList.remove("need-write");
+	}	
 }
+
+//	이메일 인증여부 검사
 
 //무결성 확인 함수
 const allOk = () => {
@@ -138,12 +143,13 @@ const allOk = () => {
 	
 }
 
-// 	검사 시작
+//	기본 검사 시작
 allOk();
 idCheckDesign();
 emailCheckDesign();
+isEmailDup();
 
-// 아이디 중복확인 버튼 클릭
+//	아이디 중복확인 버튼 클릭
 idCheckButton.addEventListener("click", () => {
 	let idLength = id.value.length
 	if(id.value) {
