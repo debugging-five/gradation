@@ -74,6 +74,7 @@ textarea {
     display: none;
     border: solid 1.5px;
     font-size: var(--font-size-h7);
+    border-radius: 2px;
 }
 
 button {

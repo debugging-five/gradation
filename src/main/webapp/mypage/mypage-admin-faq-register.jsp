@@ -22,20 +22,20 @@
 						<h5>구분<span class="star">*</span></h5>
 					</div>
 				    <div id="kind">
-				        <input type="checkbox" id="art">
-				        <label for="art"><span>작품 전시</span></label>
-				
-				        <input type="checkbox" id="exhibition">
-				        <label for="exhibition"><span>전시회</span></label>
-				
-				        <input type="checkbox" id="auction">
-				        <label for="auction"><span>경매</span></label>
-				
-				        <input type="checkbox" id="mypage">
-				        <label for="mypage"><span>마이페이지</span></label>
-				
-				        <input type="checkbox" id="another">
-				        <label for="another"><span>기타</span></label>
+						<input type="radio" id="art" name="kind">
+						<label for="art" class="radio-label">작품 전시</label>
+						
+						<input type="radio" id="exhibition" name="kind">
+						<label for="exhibition" class="radio-label">전시회</label>
+						
+						<input type="radio" id="auction" name="kind">
+						<label for="auction" class="radio-label">경매</label>
+						
+						<input type="radio" id="mypage" name="kind">
+						<label for="mypage" class="radio-label">마이페이지</label>
+						
+						<input type="radio" id="another" name="kind">
+						<label for="another" class="radio-label">기타</label>
 				    </div>
 				</div>
 				<div id="title-wrap">
@@ -44,8 +44,16 @@
 					</div>
 					<input id="input-text" type="text" placeholder="제목을 입력하세요." />
 				</div>
+				<div>
+					<div class="name">
+						<h5>내용<span class="star">*</span></h5>
+					</div>
+					<textarea id="register-content" placeholder="내용을 입력하세요."></textarea>
+				</div>
+				<form action="" method="post">
+					<button id="new-register">등록</button>
+				</form>
 			</div>
-			
 		</div>
 	</div>
 	

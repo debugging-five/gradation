@@ -34,7 +34,6 @@
 					<button id="modify-faq">수정</button>
 					<button id="cancel-faq">취소</button>
 					<button id="save-faq">저장</button>
-					
 				</form>
 			</div>
 		</div>
