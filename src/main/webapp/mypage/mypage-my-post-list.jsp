@@ -11,25 +11,27 @@
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
 	<input type="hidden" id="anPageName" name="page" value="mypage-post-list" />
-	<div class="container-center">
+	<div class="container-center-horizontal">
 		<div class="mypage-post-list screen">
 			<div class="flex-row">
 			<%@ include file="mypage-info-layout.jsp"%>
 				<div class="flex-col">
-					<div class="title">내 쪽지 및 문의 / 내 쪽지</div>
-					<p class="notice pretendardh9">전송이 완료된 쪽지는 수정이 불가합니다.</p>
-					<div class="message-tabs">
-						<div class="reception-post">
-							<div class="tab-name">쪽지 수신함</div>
+					<h1 class="text-2-1 valign-text-middle pretendardh2">내 쪽지 및 문의
+						/ 내 쪽지</h1>
+					<p class="text-1-1 pretendardh9">전송이 완료된 쪽지는 수정이 불가합니다.</p>
+					<div class="overlap-group-container">
+						<div class="overlap-group-1">
+							<div class="text-2 pretendardh5">쪽지 수신함</div>
 						</div>
-						<div class="send-post">
-							<div class="tab-name">내가 보낸 쪽지</div>
+						<div class="overlap-group1">
+							<div class="text-2 pretendardh5">내가 보낸 쪽지</div>
 						</div>
 					</div>
-					<img class="line-1 line"
+					<div class="text-3 pretendardh5"></div>
+					<img class="line-114 line"
 						src="../assets/images/mypage/my-post/line-114-1.png"
-						alt="Line 1" />
-					<div class="messege-table pretendardh5">
+						alt="Line 114" />
+					<div class="navbar-link-text-container pretendardh5">
 						<div class="navbar-link-text-5">번호</div>
 						<div class="navbar-link-text-6">발신인</div>
 						<div class="navbar-link-text-7">제목</div>

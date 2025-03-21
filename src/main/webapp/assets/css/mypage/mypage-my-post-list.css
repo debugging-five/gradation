@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-.container-center {
+.container-center-horizontal {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.container-center > * {
+.container-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
 }
@@ -45,6 +45,21 @@ input:focus {
   width: 1920px;
 }
 
+
+
+.mypage-post-list .navbar {
+  align-items: center;
+  display: flex;
+  margin-left: 260px;
+  margin-top: 8px;
+  min-width: 1401px;
+}
+
+.mypage-post-list .x2-1 {
+  height: 36px;
+  width: 177px;
+}
+
 .mypage-post-list .flex-row {
   align-items: flex-start;
   display: flex;
@@ -54,6 +69,18 @@ input:focus {
   min-width: 1164px;
 }
 
+
+
+.mypage-post-list .group {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 0;
+  min-width: 16px;
+}
+
+
+
+
 .mypage-post-list .flex-col {
   align-items: center;
   display: flex;
@@ -62,25 +89,20 @@ input:focus {
   width: 802px;
 }
 
-.mypage-post-list .title {
+.mypage-post-list .text-2-1 {
   align-self: flex-start;
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2); 
-  font-weight: var(--font-weight-bold);  
   color: var(--color-black);
+  font-weight: var(--font-weight-bold);
   height: 36px;
+  line-height: normal;
   width: 434px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.mypage-post-list .notice {
+.mypage-post-list .text-1-1 {
   align-self: flex-end;
-  font-size: var(--font-size-h9);
-  line-height: var(--line-height-h9);
-  font-weight: var(--font-weight-light);
   color: var(--color-black);
+  font-weight: var(--font-weight-light);
+  line-height: normal;
   margin-right: 1px;
   margin-top: 29px;
   min-height: 14px;
@@ -88,18 +110,19 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .message-tabs {
+.mypage-post-list .overlap-group-container {
   height: 50px;
   margin-left: 1.0px;
   margin-top: 8px;
   position: relative;
   width: 801px;
-  margin-bottom: 24px;
 }
 
-.mypage-post-list .reception-post {
+.mypage-post-list .overlap-group-1 {
   align-items: flex-end;
-  background-color: var(--color-gray500);
+  background-color: var(--color-gray100);
+  border: 1px solid;
+  border-color: var(--color-gray500);
   display: flex;
   height: 50px;
   left: 0;
@@ -109,10 +132,8 @@ input:focus {
   top: 0;
 }
 
-.mypage-post-list .tab-name {
+.mypage-post-list .text-2 {
   color: var(--color-black);
-  font-size: var(--font-size-h5);
-  line-height: var(--line-height-h5);  
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
   min-height: 21px;
@@ -121,9 +142,9 @@ input:focus {
   width: 192px;
 }
 
-.mypage-post-list .send-post {
+.mypage-post-list .overlap-group1 {
   align-items: flex-start;
-  background-color: var(--color-gray100);
+  background-color: var(--color-gray500);
   border: 1px solid;
   border-color: var(--color-gray500);
   display: flex;
@@ -135,13 +156,22 @@ input:focus {
   top: 0;
 }
 
-.mypage-post-list .line-1 {
+.mypage-post-list .text-3 {
+  align-self: flex-start;
+  color: var(--color-black);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+  margin-top: 24px;
+  white-space: nowrap;
+}
+
+.mypage-post-list .line-114 {
   margin-right: 3.0px;
   margin-top: 1px;
   width: 799px;
 }
 
-.mypage-post-list .message-table {
+.mypage-post-list .navbar-link-text-container {
   align-items: flex-start;
   display: flex;
   height: 24px;
