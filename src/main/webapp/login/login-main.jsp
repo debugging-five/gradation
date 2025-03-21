@@ -9,6 +9,7 @@
 <title>gradation 로그인</title>
 </head>
 <body>
+	<%@ include file="../layout/header.jsp" %>
 
 	<div class="container">
 		<div>
@@ -18,7 +19,7 @@
 			<form action="login-ok.user" method="post">
 				<div class="login-input" id="id-input">
 					<div>
-						<img class="input-image" alt="user-icon" src="../assets/images/login/user.png">
+						<img id="id-img" class="input-image" alt="user-icon" src="../assets/images/login/user.png">
 						<input id="id-input-text" class="login-input-text" type="text" name="userId" placeholder="아이디" />
 					</div>
 				</div>
@@ -27,11 +28,11 @@
 				</div>
 				<div class="login-input" id="pw-input">
 					<div>
-						<img class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
+						<img id="pw-img" class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
 						<input id="pw-input-text" class="login-input-text" type="password" name="userPassword" placeholder="비밀번호" />
 					</div>
 					<div class="input-image">
-						<img alt="eye-icon" src="../assets/images/login/closed-eye.png">
+						<img id="show-password" alt="eye-icon" src="../assets/images/login/close-eye.png">
 					</div>
 				</div>
 				<div>
