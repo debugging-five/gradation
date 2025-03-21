@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#content-wrap {
+	width: 800px;
+}
+
+#container {
+	width: 1160px;
+	margin-top: 90px;
+	display: flex;
+	gap: 120px;
+}
+
+#category {
+	width: 242px;
+	height: 875px;
+	background-color: var(--color-gray900);
+	
+}
+
+#title {
+	margin-bottom: 50px;
+}
+
+button {
+	margin-top:70px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label{
+   display: block;
+   width: 335px;
+   height: 20px;
+   background: url('../../images/mypage/admin-faq-register/checked-gray.png') no-repeat 0 0px / contain;
+}
+
+input[type='checkbox']:checked+label{
+   background: url('../../images/mypage/checked_red.png') no-repeat 0 0px / contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
