@@ -80,7 +80,7 @@ body {
 }
 
 #bar-left {
-	margin : 0 0 14px 0;
+	margin : 0 0 16px 0;
 }
 
 .bar-menu {
@@ -144,7 +144,7 @@ i.fa-angle-down {
 	justify-content : center;
 	align-items : center;
 }
-}
+
 
 .university-info {
 	margin : 0 0 0 28px;
@@ -202,6 +202,11 @@ i.fa-angle-down {
 	border-radius : 3px;
 	color : var(--color-primary);
 	font-family: var(--font-family-Pretendard-Regular);
+}
+
+.button-like.liked {
+	color : var(--color-primary);
+	background-color : var(--color-gray100);
 }
 
 .button-like i {

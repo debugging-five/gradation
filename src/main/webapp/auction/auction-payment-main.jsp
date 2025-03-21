@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-payment-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<script src="/javascript/popup_2.js"></script>
 <title>경매 결제</title>
 </head>
 <body>
@@ -53,7 +55,7 @@
 					<h5>주소(자동완성)</h5>
 				</div>
 				<div>
-					<button>주소 검색</button>
+					<button onclick="sample6_execDaumPostcode()" value="우편번호 찾기">주소 검색</button>
 				</div>
 			</div>
 			
@@ -120,4 +122,5 @@
 
 <%@ include file="../layout/footer.jsp" %>
 </body>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </html>
