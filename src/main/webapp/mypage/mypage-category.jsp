@@ -33,10 +33,10 @@
 		<div id="category-wrapper">
 			<!-- 내 정보 -->
 			<div class="menu">
-				<h5>내 정보</h5>
-				<p>개인 정보 수정</p>
-				<p>내 작가 페이지 수정</p>
-				<p>비밀번호 변경</p>
+				<div class="menu-title">내 정보</div>
+				<div class="menu-detail">개인 정보 수정</div>
+				<div class="menu-detail">내 작가 페이지 수정</div>
+				<div class="menu-detail">비밀번호 변경</div>
 			</div>
 
 			<!-- 내 결제 내역 -->

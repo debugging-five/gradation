@@ -66,11 +66,13 @@ body {
 	margin : 15px 0 0 0;
 }
 
-.menu h5 {
+.menu-title {
+	font-size : var(--font-size-h5);
+	font-weight : var(--font-weight-simibold);
 	margin : 0 0 12px 0;
 }
 
-.menu p {
+.menu-detail {
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
 	color : var(--color-gray900);
