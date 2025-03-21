@@ -37,19 +37,29 @@ button {
 	margin-top:70px;
 }
 
+/* #kind {
+	display: flex;
+	width: 680px;
+	font-size: 
+} */
+
 input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"]+label{
-   display: block;
-   width: 335px;
-   height: 20px;
-   background: url('../../images/mypage/admin-faq-register/checked-gray.png') no-repeat 0 0px / contain;
+input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    width: 335px;
+    height: 20px;
+    background: url('../../images/mypage/admin-faq-register/checked-gray.png') no-repeat left center / 20px 20px;
+    padding: 0 0 0 20px;
+    cursor: pointer;
 }
 
+
 input[type='checkbox']:checked+label{
-   background: url('../../images/mypage/checked_red.png') no-repeat 0 0px / contain;
+   background: url('../../images/mypage/admin-faq-register/checked-red.png') no-repeat 0 0px / contain;
 }
 
 
