@@ -10,7 +10,7 @@
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="mypage-post-list" />
+	<input type="hidden" id="anPageName" name="page" value="mypage-my-post-list" />
 	<div class="container-center">
 		<div class="mypage-post-list screen">
 			<div class="flex-row">
