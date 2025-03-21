@@ -18,12 +18,13 @@ body {
 	gap: 120px;
 }
 
-#category {
+/* #category {
 	width: 242px;
 	height: 875px;
 	background-color: var(--color-gray900);
 	
-}
+} */
+
 
 #title {
 	margin-bottom: 50px;
@@ -42,13 +43,18 @@ body {
 	align-content: center;
 }
 
-#menu-kind {
-	margin-left: 86px;
+#menu-artist {
+	margin-left: 80px;
 	align-content: center;
 }
 
 #menu-title {
-	margin-left: 330px;
+	margin-left: 310px;
+	align-content: center;
+}
+
+#menu-date {
+	margin-left: 193px;
 	align-content: center;
 }
 
@@ -71,19 +77,31 @@ body {
 	text-align: center;
 	font-size: var(--font-size-h4);
 }
-.item-kind-wrap {
-	width: 80px;
+
+.item-title-wrap {                                     
+	width : 160px;
 	height: 100%;
 	align-content: center;
 	text-align: center;
-	margin-left: 40px;
+
 	font-size: var(--font-size-h7);
 }
-.item-title-wrap {
-	width: 320px;
+
+.item-comment-wrap {
+	width: 480px;
+	align-content: center;
+	font-size: var(--font-size-h7);
+}
+
+.item-title {
+	margin-left : 120px;
+}
+
+.item-date-wrap {
+	width: 80px;
 	align-content: center;
 	text-align: center;
-	margin-left: 160px;
+
 	font-size: var(--font-size-h7);
 }
 
@@ -101,34 +119,8 @@ button {
 	border: solid 1.5px;
 	border-radius: 3px;
 	margin-bottom: 200px;
+	font-family: var(--font-family-Pretendard-Regular);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
