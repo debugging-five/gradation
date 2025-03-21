@@ -1,5 +1,5 @@
 @charset "UTF-8";
-  <style>
+
       * {
         box-sizing: border-box;
       }
@@ -87,4 +87,3 @@
       .hp_shrink-0 {
         flex-shrink: 0;
       }
-    </style>
