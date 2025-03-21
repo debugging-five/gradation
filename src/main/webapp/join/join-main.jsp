@@ -131,21 +131,23 @@
 		<div id="join-success">
 			<div id="join-success-container">
 				<div id="join-success-wrap">
-					<button id="join-success-close-button" onclick="location.href='../login/login-main.user'">
-						<img class="close-icon" alt="닫기" src="../assets/images/login/close.png">
-					</button>
-					<div>
-						<img class="big-icon" alt="체크" src="../assets/images/login/red-check-circle.png">
-						<p class="h5-text-black">회원 가입이 완료되었습니다</p>
-					</div>				
-					<div>
-						<div>
-							<a class="h5-text-black" href="../login/login-main.user">메인으로</a>
-						</div>
-						<div>
-							<a class="h5-text-black" href="../login/login-main.user">로그인</a>
-						</div>
+					<div id="success-head">
+						<a id="join-success-close-button" href="../login/login-main.user">
+							<img id="close-icon" alt="닫기" src="../assets/images/login/close.png">
+						</a>
 					</div>
+						<div>
+							<img class="big-icon" alt="체크" src="../assets/images/login/red-check-circle.png">
+							<p class="h5-text-black">회원 가입이 완료되었습니다</p>
+						</div>				
+						<div>
+							<div>
+								<a class="h5-text-black" href="../login/login-main.user">메인으로</a>
+							</div>
+							<div>
+								<a class="h5-text-black" href="../login/login-main.user">로그인</a>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>

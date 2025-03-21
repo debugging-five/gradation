@@ -195,6 +195,10 @@ emailCheckDesign();
 isEmailDup();
 isEmailChecked();
 
+// !!테스트용 삭제 필!!
+const joinSuccess = document.querySelector("#join-success");
+joinSuccess.style.display = 'block';
+
 //	아이디 중복확인 버튼 클릭
 idCheckButton.addEventListener("click", () => {
 	let idLength = id.value.length
