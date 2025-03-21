@@ -37,10 +37,44 @@ button {
 	margin-top:70px;
 }
 
+#kind-wrap {
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px var(--color-gray900);
+	margin-bottom: 50px;
+}
+
 #kind {
 	display: flex;
-	width: 800px;
+	width: 680px;
+	margin-bottom: 7px;
 	font-size: var(--font-size-h7); 
+}
+
+#title-wrap {
+	width: 800px;
+	display: flex;
+}
+
+#input-text {
+	width: 680px;
+	color: var(--color-gray900);
+	font-size: var(--font-size-h7);
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.name {
+	width: 80px;
+	margin-bottom: 7px;
+}
+
+
+
+.star {
+	color: var(--color-primary);
+	font-size: var(--font-size-h5);
 }
 
 input[type="checkbox"] {
