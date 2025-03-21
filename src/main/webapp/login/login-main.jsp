@@ -18,29 +18,29 @@
 		<div>
 			<form action="login-ok.user" method="post">
 				<div class="login-input" id="id-input">
-					<div>
-						<img id="id-img" class="input-image" alt="user-icon" src="../assets/images/login/user.png">
-						<input id="id-input-text" class="login-input-text" type="text" name="userId" placeholder="아이디" />
-					</div>
+					<img id="id-img" class="input-image" alt="user-icon" src="../assets/images/login/user.png">
+					<input id="id-input-text" class="login-input-text" type="text" name="userId" placeholder="아이디" />
 				</div>
-				<div>
-					<span id="id-need-write" class="need-write">필수 항목입니다.</span>
+				<div class="warning-area">
+					<span id="id-need-write" class="warning-text">필수 항목입니다.</span>
 				</div>
 				<div class="login-input" id="pw-input">
-					<div>
-						<img id="pw-img" class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
-						<input id="pw-input-text" class="login-input-text" type="password" name="userPassword" placeholder="비밀번호" />
-					</div>
-					<div class="input-image">
+					<img id="pw-img" class="input-image" alt="password-icon" src="../assets/images/login/lock.png">
+					<input id="pw-input-text" class="login-input-text" type="password" name="userPassword" placeholder="비밀번호" />
+					<div class="input-eye-image">
 						<img id="show-password" alt="eye-icon" src="../assets/images/login/close-eye.png">
 					</div>
 				</div>
-				<div>
-					<span id="pw-need-write" class="need-write">필수 항목입니다.</span>
+				<div class="warning-area2">
+					<span id="pw-need-write" class="warning-text">필수 항목입니다.</span>
+					<span id="login-fail-wrong1" class="warning-text">아이디 또는 비밀번호를 잘못 입력했습니다.</span>
+					<span id="login-fail-wrong2" class="warning-text">입력하신 내용을 다시 확인해주세요.</span>
 				</div>
 				<div id="login-checks">
-					<input type="checkbox"><span>로그인 상태 유지</span>
-					<input type="checkbox"><span>아이디 저장</span>
+					<input id="login-save" type="checkbox">
+					<label for="login-save"><span class="check-label-span">로그인 상태 유지</span></label>
+					<input id="id-save" type="checkbox">
+					<label for="id-save"><span class="check-label-span">아이디 저장</span></label>
 				</div>
 				<div>
 					<button class="login-button" type="button"><span id="login-button-text">로그인</span></button>

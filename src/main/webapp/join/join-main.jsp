@@ -1,4 +1,3 @@
-<%@page import="com.app.vo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- jstl을 쓰는 방법 -->

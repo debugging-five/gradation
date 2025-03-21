@@ -13,6 +13,19 @@ const pwInput = document.querySelector('#pw-input');
 const idImg = document.querySelector('#id-img');
 const pwImg = document.querySelector('#pw-img');
 
+const loginFailWrong1 = document.querySelector('#login-fail-wrong1');
+const loginFailWrong2 = document.querySelector('#login-fail-wrong2');
+
+//	쿼리스트링 가져오기
+const islogin = (new URLSearchParams(window.location.search)).get("login");
+console.log("값"+islogin+"값");
+
+//로그인 실패시
+if(islogin == "false") {
+	loginFailWrong1.classList.add("need-write");
+	loginFailWrong2.classList.add("need-write");
+}
+
 const updateButtonState = () => {
     if (idInputBox.value !== '' && pwInputBox.value !== '') {
         loginButton.style.backgroundColor = '#ee3333';
@@ -23,20 +36,29 @@ const updateButtonState = () => {
     }
 };
 
-idInputBox.addEventListener('input', updateButtonState);
-pwInputBox.addEventListener('input', updateButtonState);
+// 입력이 이루어지면 로그인버튼 활성화
+idInputBox.addEventListener('input',() => {
+	loginFailWrong1.classList.remove("need-write");
+	loginFailWrong2.classList.remove("need-write");
+	updateButtonState()
+});
+pwInputBox.addEventListener('input',() => {
+	loginFailWrong1.classList.remove("need-write");
+	loginFailWrong2.classList.remove("need-write"); 
+	updateButtonState()
+});
 
 loginButton.addEventListener('click', () => {
 	// 아이디 입력 필드 처리
 	if (idInputBox.value == '') {
-		idNeedWrite.style.color = 'var(--color-warning)';
+		idNeedWrite.classList.add("need-write")
 		idInput.style.color = 'var(--color-warning)';
 		idInput.style.borderBottom = '1px solid var(--color-warning)';
-		idInputBox.classList.add('placeholder-warning');
+		idInputBox.classList.add('placeholder-warning')
 		idImg.src = "../assets/images/login/user-wrong.png";
 	} else {
 		// 아이디 입력값이 있을 경우, 스타일 복원
-		idNeedWrite.style.color = '';
+		idNeedWrite.classList.remove("need-write")
 		idInput.style.color = '';
 		idInput.style.borderBottom = '';
 		idInputBox.classList.remove('placeholder-warning');
@@ -45,14 +67,14 @@ loginButton.addEventListener('click', () => {
 	
 	// 비밀번호 입력 필드 처리
 	if (pwInputBox.value == '') {
-		pwNeedWrite.style.color = 'var(--color-warning)';
+		pwNeedWrite.classList.add("need-write")
 		pwInput.style.color = 'var(--color-warning)';
 		pwInput.style.borderBottom = '1px solid var(--color-warning)';
 		pwInputBox.classList.add('placeholder-warning');
 		pwImg.src = "../assets/images/login/lock-wrong.png";
 	} else {
 		// 비밀번호 입력값이 있을 경우, 스타일 복원
-		pwNeedWrite.style.color = '';
+		pwNeedWrite.classList.remove("need-write")
 		pwInput.style.color = '';
 		pwInput.style.borderBottom = '';
 		pwInputBox.classList.remove('placeholder-warning');
