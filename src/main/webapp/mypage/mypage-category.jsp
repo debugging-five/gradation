@@ -14,8 +14,16 @@
 	
 		<!-- 프로필 사진 + 유저 이름 -->
 		<div id="profile-wrapper">
-			<div id="profile-img">
-				<div>프로필 사진</div>
+			<div>
+				<div id="profile-img">
+					<div>프로필 사진</div>
+				</div>				
+
+				<div id="profile-update">
+				<input type="file" id="file-input" accept="image/*" />
+					<img id="update-icon" src="../assets/images/mypage/profile-update.png" alt="프로필 사진 변경"/>
+				</div> 
+				
 			</div>
 			<div id="user-name">
 				<h3>홍길동</h3>
@@ -45,14 +53,23 @@
 				<p>내 문의</p>
 			</div>
 			
-
+			<div class="menu">
+				<p id="withdrawal">회원 탈퇴</p>
+			</div>
+			
+			<div class="menu">
+				<h5>관리자 페이지</h5>
+				<p>자주 묻는 질문</p>
+				<p>1:1 문의</p>
+				<p>양식 관리</p>
+				<p>회원 문의</p>
+			</div>
+			
 		</div>
-	
-	
-	
 	
 	</div>
 </div>
 
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-category.js"></script>
 </html>
