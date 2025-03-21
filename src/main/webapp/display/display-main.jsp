@@ -1,61 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/display/display-main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Page</title>
+    <link rel="stylesheet" href="../assets/css/display/display-main.css" />
   </head>
-  <body style="margin: 0; background: #fbfcfc">
-    <input type="hidden" id="anPageName" name="page" value="display-main" />
-    <div class="display-main screen">
-      <div class="pagination-bar-long-BzVpon">
-        <img class="left-qMEQu0" src="img/left@2x.png" alt="left" />
-        <div class="x1-qMEQu0 smart-layers-pointers valign-text-middle suith4">1</div>
-        <div class="x2-qMEQu0 smart-layers-pointers valign-text-middle suith4">2</div>
-        <div class="x3-qMEQu0 smart-layers-pointers valign-text-middle suith4">3</div>
-        <div class="x4-qMEQu0 smart-layers-pointers valign-text-middle suith4">4</div>
-        <div class="x5-qMEQu0 smart-layers-pointers valign-text-middle suith4">5</div>
-        <img class="right-qMEQu0" src="img/right@2x.png" alt="right" />
-      </div>
-      <h1 class="title-BzVpon valign-text-middle suith1">display</h1>
-      <img class="group-3833-BzVpon" src="img/group-3833.png" alt="Group 3833" />
-      <div class="group-4068-BzVpon">
-        <div class="group-608-TjoCZe group-608">
-          <div class="text_label-HfzLg2 smart-layers-pointers valign-text-middle text_label pretendardh7">공예</div>
-          <div class="text_label-lsmYGB smart-layers-pointers valign-text-middle text_label pretendardh7">회화</div>
-          <div class="text_label-JVx7tw smart-layers-pointers valign-text-middle text_label pretendardh7">건축</div>
-          <div class="text_label-inq2vJ smart-layers-pointers valign-text-middle text_label pretendardh7">서예</div>
-          <div class="text_label-a6XHmG smart-layers-pointers valign-text-middle text_label pretendardh7">조각</div>
-          <div class="text_label-Wnqxvm smart-layers-pointers valign-text-middle text_label pretendardh7">한국화</div>
+  <body>
+    <main class="display-main">
+      <section class="display-content">
+        <h1 class="display-title">display</h1>
+        <nav class="navbar-wrapper">
+          <ul class="navbar">
+            <li><a href="#" class="nav-link">한국화</a></li>
+            <li><a href="#" class="nav-link">회화</a></li>
+            <li><a href="#" class="nav-link">조각</a></li>
+            <li><a href="#" class="nav-link">공예</a></li>
+            <li><a href="#" class="nav-link">건축</a></li>
+            <li><a href="#" class="nav-link">서예</a></li>
+          </ul>
+        </nav>
+        <div class="exhibition-status">
+          <button class="status-btn active">전시중</button>
+          <button class="status-btn">전시예정</button>
         </div>
-      </div>
-      <div class="group-4069-BzVpon">
-        <div class="group-4085-Hvieeq">
-          <div class="group-608-2EEA26 group-608">
-            <div class="text_label-xssJy1 smart-layers-pointers valign-text-middle text_label pretendardh7">
-              전시예정
-            </div>
-            <div class="text_label-WegWiy smart-layers-pointers valign-text-middle text_label pretendardh7">전시중</div>
-          </div>
+        <div class="upload-section">
+          <button class="upload-btn">
+            <img src="img/icon.svg" alt="Upload icon" class="upload-icon" />
+            작품 업로드
+          </button>
         </div>
-      </div>
-      <div class="group-612-BzVpon">
-        <div class="group-611-Z6I9OG">
-          <img class="down-xYxPMj" src="img/down@2x.png" alt="down" />
-          <div class="text_label-xYxPMj text_label pretendardh7">등록순</div>
+        <div class="sort-section">
+          <button class="sort-btn">
+            등록순
+            <img src="img/down.svg" alt="Sort dropdown" class="sort-icon" />
+          </button>
         </div>
-      </div>
-      <div class="add-BzVpon"><img class="icon-4HOQTb" src="img/icon@2x.png" alt="icon" /></div>
-      <div class="text_label-BzVpon text_label pretendardh7">작품 업로드</div>
-      <img class="line-2-BzVpon" src="img/line-2@2x.png" alt="Line 2" />
-      <img class="line-3-BzVpon" src="img/line-2@2x.png" alt="Line 3" />
-      <img class="line-7-BzVpon" src="img/line-2@2x.png" alt="Line 7" />
-      <img class="line-5-BzVpon" src="img/line-2@2x.png" alt="Line 5" />
-      <img class="line-6-BzVpon" src="img/line-2@2x.png" alt="Line 6" />
-      <img class="line-4-BzVpon" src="img/line-2@2x.png" alt="Line 4" />
-    </div>
+        <img class="gallery-content" src="img/group-3833.png" alt="Gallery content" />
+        <nav class="pagination" aria-label="Page navigation">
+          <button class="page-nav prev" aria-label="Previous page">
+            <img src="img/left.svg" alt="Previous" />
+          </button>
+          <ul class="page-list">
+            <li><a href="#" class="page-link">1</a></li>
+            <li><a href="#" class="page-link">2</a></li>
+            <li><a href="#" class="page-link current">3</a></li>
+            <li><a href="#" class="page-link">4</a></li>
+            <li><a href="#" class="page-link">5</a></li>
+          </ul>
+          <button class="page-nav next" aria-label="Next page">
+            <img src="img/right.svg" alt="Next" />
+          </button>
+        </nav>
+      </section>
+    </main>
   </body>
 </html>
-    
