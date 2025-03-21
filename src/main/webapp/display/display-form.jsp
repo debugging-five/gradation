@@ -34,12 +34,12 @@
 			<form>
 				<div class="input-text">
 			        <label>작가명<span class="essential">*</span></label>
-			        <input type="text" placeholder="작가명을 입력하세요."
+			        <input type="text" id="author" placeholder="작가명을 입력하세요."
 			        		style="margin-left: 49px" class="input-box">			
 				</div>
 				<div class="input-text">
 			        <label>작품명<span class="essential">*</span></label>
-			        <input type="text" placeholder="작품명을 입력하세요."
+			        <input type="text" id="title" placeholder="작품명을 입력하세요."
 			        		style="margin-left: 49px" class="input-box">			
 				</div>
 				<div id="category" class="input-text">
@@ -49,6 +49,7 @@
 				        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
 				    </div> 
 				    <select id="category-select" class="select-box" style="display: none;">
+				    	<option value="" disabled selected>분류</option>
 				        <option value="회화">회화</option>
 				        <option value="조각">조각</option>
 				        <option value="한국화">한국화</option>
@@ -59,17 +60,17 @@
 				</div>
 				<div class="input-text">
 			        <label>작품 재료<span class="essential">*</span></label>
-			        <input type="text" placeholder="작품 재료를 입력하세요."
+			        <input type="text" id="material" placeholder="작품 재료를 입력하세요."
 			        		style="margin-left: 25px" class="input-box">			
 				</div>
 				<div class="input-text">
 			        <label>작품 규격<span class="essential">*</span></label>
 			        <div class="size-input" style="margin-left: 23px">
-					  <input type="text" placeholder="가로">
+					  <input type="text" id="width" placeholder="가로">
 					  <span>X</span>
-					  <input type="text" placeholder="세로">
+					  <input type="text" id="height" placeholder="세로">
 					  <span>X</span>
-					  <input type="text" placeholder="높이">
+					  <input type="text" id="depth" placeholder="높이">
 					</div>		
 				</div>
 				
@@ -82,6 +83,7 @@
 				    <!-- 날짜 선택을 위한 input 필드 -->
 				    <input type="date" id="date-input" class="input-box" 
 				    style="display: none;" onchange="updateDate()" >
+				    <input type="date" id="completion-date" class="input-box" style="display: none;">
 				</div>
 				
 			</form>
@@ -91,7 +93,7 @@
 	<!-- 작품설명 -->
 	<div>
 		<label class="artist-info">작품설명<span class="essential">*</span></label>
-		<textarea placeholder="작품 설명을 입력하세요." class="info-typing"></textarea>	
+		<textarea id="description" placeholder="작품 설명을 입력하세요." class="info-typing"></textarea>	
 	</div>
 
 	
@@ -111,14 +113,32 @@
 	        	<span>제출하시겠습니까?</span>
 	        </div>
 	        <div class="modal-footer">
-	            <button class="sendBtn">취소</button>
-	            <button class="sendBtn">전송</button>
+	            <button class="cancel" onclick="closePopup()">취소</button>
+	            <button class="send" onclick="confirmSubmission()">확인</button>
 	        </div>
 	    </div>
 	</div>
 	
 	
 	<!-- 제출완료 팝업 -->
+		<div id="popupOverlay" class="modal-overlay" style="display: none;">
+		    <div class="modal-ok">
+		    	<button class="close-btn2" onclick="closePopup()">
+		        	<img alt="close-icon" src="../assets/images/display/close.png">
+		        </button>
+		        <div>
+		            <img class="ok-icon" alt="ok-icon" src="../assets/images/display/ok.png">
+		        </div>
+		        <div class="modal-body">
+		            <p class="big-text">제출 완료</p>
+		            <p class="small-text1">작품은 관리자 승인을 받은 후 업로드 될 예정입니다.</p>
+		            <p class="small-text2">( 승인까지 최대 2~3일이 소요될 수 있습니다. )</p>
+		        </div>
+		        <div class="modal-footer-ok">
+		            <button id="closeModalBtn" class="close-btn-ok">확인</button>
+		        </div>
+		    </div>
+		</div>
 	
 	
 	

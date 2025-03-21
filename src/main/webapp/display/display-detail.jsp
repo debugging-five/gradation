@@ -50,6 +50,9 @@
 		<!-- 문의 등록 완료 -->
 		<div id="popupOverlay" class="modal-overlay" style="display: none;">
 		    <div class="modal-ok">
+		    	<button class="close-btn2" onclick="closePopup()">
+		        	<img alt="close-icon" src="../assets/images/display/close.png">
+		        </button>
 		        <div>
 		            <img class="ok-icon" alt="ok-icon" src="../assets/images/display/ok.png">
 		        </div>
