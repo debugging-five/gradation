@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#content-wrap {
+	width: 800px;
+}
+
+#container {
+	width: 1160px;
+	margin-top: 90px;
+	display: flex;
+	gap: 120px;
+}
+
+#category {
+	width: 242px;
+	height: 875px;
+	background-color: var(--color-gray900);
+	
+}
+
+#title {
+	margin-bottom: 50px;
+}
+
+button {
+	margin-top:70px;
+	font-weight: var(--font-weight-semibold);
+}
+
+#kind-wrap {
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px var(--color-gray900);
+	margin-bottom: 50px;
+}
+
+#kind {
+	display: flex;
+	width: 680px;
+	margin-bottom: 7px;
+	font-size: var(--font-size-h7); 
+}
+
+#title-wrap {
+	width: 800px;
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px var(--color-gray900);
+	margin-bottom: 50px;
+}
+
+#input-text {
+	width: 680px;
+	color: var(--color-gray900);
+	font-size: var(--font-size-h7);
+	background: none;
+	border: none;
+	outline: none;
+	margin-bottom: 7px;
+}
+
+.name {
+	width: 80px;
+	margin-bottom: 7px;
+	margin-right: 40px;
+}
+
+.star {
+	color: var(--color-primary);
+	font-size: var(--font-size-h5);
+}
+
+#register-content {
+	width: 800px;
+	height: 300px;
+}
+
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 4px;
+    margin-top: 4px;
+    border: solid 1.5px;
+    font-size: var(--font-size-h7);
+    border-radius: 2px;
+}
+
+form {
+	text-align: right;
+}
+
+#new-register {
+	width: 125px;
+	height: 50px;
+	background-color: var(--color-primary);
+	color: var(--color-gray100);
+	font-size: var(--font-size-h5);
+	border: solid 1.5px;
+	border-radius: 3px;
+	margin-bottom: 200px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-h7);
+  color: var(--color-gray900);
+  margin-right: 40px;
+}
+
+input[type="radio"] + label::before {
+  content: ""; /* 가상 요소로 아이콘을 생성 */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../../images/mypage/admin-faq-register/checked-gray.png') no-repeat left center / 20px 20px;
+  background-size: contain;
+}
+
+input[type="radio"]:checked + label::before {
+  background: url('../../images/mypage/admin-faq-register/checked-red.png') no-repeat 0 0px / contain;
+  background-size: contain;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--color-black); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
