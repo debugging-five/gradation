@@ -4,7 +4,7 @@
   text-decoration: none;
 }
 
-.container-center-horizontal {
+.container-center {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.container-center-horizontal > * {
+.container-center > * {
   flex-shrink: 0;
   pointer-events: auto;
 }
@@ -28,9 +28,9 @@
 }
 
 .mypage-post-content {
+  display: flex;
   align-items: flex-start;
   background-color: var(--main-gray100);
-  display: flex;
   gap: 120px;
   height: 1521px;
   padding: 140.9px 372px;

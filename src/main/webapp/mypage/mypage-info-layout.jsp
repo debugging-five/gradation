@@ -25,11 +25,11 @@
 			</form>
 		</div>
 
-		<div class="text-26 pretendardh3">홍길동</div>
+		<div class="user-name">홍길동</div>
 	</div>
 	<div class="infomation">
-		<div class="text pretendardh5">내 정보</div>
-		<div class="update-infomation pretendardh7">
+		<div class="text">내 정보</div>
+		<div class="update-infomation">
 			<div class="text-1">개인 정보 수정</div>
 			<div class="text-1">내 작가페이지 수정</div>
 			<div class="text-1">비밀번호 변경</div>
@@ -39,8 +39,8 @@
 			alt="Line 125" />
 	</div>
 	<div class="my-perform my">
-		<div class="text pretendardh5">내 활동</div>
-		<div class="perform pretendardh7">
+		<div class="text">내 활동</div>
+		<div class="perform">
 			<div class="text-1">작성한 댓글</div>
 			<div class="text-1">작가와 연락</div>
 			<div class="text-1">좋아요</div>
