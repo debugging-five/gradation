@@ -3,11 +3,10 @@ const engAndNum = /^[a-zA-Z0-9]+$/;
 const passwordRange = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]*$/;
 const isEmail = /[@]/;
 
-
 // 인풋 객체 초기화
 let idCheck = document.querySelector("#id-check-ok");
 let mailCode = document.querySelector("#mail-code");
-let mailCheck = document.querySelector("#email-check-ok");
+let emailChecked = document.querySelector("#email-check-ok");
 let emailAlready = document.querySelector("#email-already");
 
 let id = document.querySelector("#id-input");
@@ -17,7 +16,7 @@ let uname = document.querySelector("#name-input");
 let nickname = document.querySelector("#nickname-input");
 let phone = document.querySelector("#phone-input");
 let email = document.querySelector("#email-input");
-let emailcheck = document.querySelector("#email-check-input");
+let emailCheck = document.querySelector("#email-check-input");
 
 let checkAll = document.querySelector("#check_all")
 let checkUp14 = document.querySelector("#check-up14");
@@ -49,7 +48,37 @@ const needPhoneInput = document.querySelector("#need-phone-input");
 const needEmailCheck = document.querySelector("#need-email-check");
 const alreadyUseEmail = document.querySelector("#already-use-email");
 const needEmailValidate = document.querySelector("#need-email-validate");
+const needEmailCheckValidate = document.querySelector("#need-email-check-validate");
 
+// 완료 메세지
+const emailCompleate = document.querySelector("#email-compleate");
+const emailCheckCompleate = document.querySelector("#email-check-compleate");
+
+
+// 눈깔 클릭
+const showPassword = document.querySelector("#show-password");
+const showPasswordCheck = document.querySelector("#show-password-check");
+
+showPassword.addEventListener("click",() => {
+	const isPw = pw.type == "password" ? true : false;
+	if(isPw) {
+		pw.type = "text"
+		showPassword.src = "../assets/images/join/open-eye.png";
+	}else {
+		pw.type = "password";
+		showPassword.src = "../assets/images/join/close-eye.png"
+	}
+})
+showPasswordCheck.addEventListener("click",() => {
+	const isPw = pwCheck.type == "password" ? true : false;
+	if(isPw) {
+		pwCheck.type = "text"
+		showPasswordCheck.src = "../assets/images/join/open-eye.png";
+	}else {
+		pwCheck.type = "password";
+		showPasswordCheck.src = "../assets/images/join/close-eye.png";
+	}
+})
 
 // 회원가입 완료시 리다이렉트 코드
 let isComplete = document.querySelector("#is-complete");
@@ -65,40 +94,60 @@ const idCheckDesign = () => {
 		idCheckButton.textContent = "중복 체크 완료"
 		idCheckButton.style.backgroundColor = "var(--color-primary)";
 		alreadyUseId.classList.remove("need-write");
-	}
-	if(idCheck.value == "already") {
+	}else if(idCheck.value == "already") {
 		idCheckButton.textContent = "중복 체크"
 		idCheckButton.style.backgroundColor = "var(--color-gray500)";
 		alreadyUseId.classList.add("need-write");
-	}	
-	if(idCheck.value == "false") {
+	}else if(idCheck.value == "false") {
 		idCheckButton.textContent = "중복 체크"
 		idCheckButton.style.backgroundColor = "var(--color-gray500)";
 		alreadyUseId.classList.remove("need-write");
-	}	
+	}
 }
 
 // 이메일 발송 완료, 미완료
 const emailCheckDesign = () => {
 	if(mailCode.value == "") {
-		console.log(mailCode.value);
 		emailCheckButton.textContent = "이메일 인증"
 		emailCheckButton.style.backgroundColor = "var(--color-gray500)";
+		emailCompleate.classList.remove("complete-write");
+		needEmailCheckValidate.classList.remove("need-write");		
 	}else {		
 		emailCheckButton.textContent = "이메일 재발송"
 		emailCheckButton.style.backgroundColor = "var(--color-primary)";
 		alreadyUseEmail.classList.remove("need-write");
+		emailCompleate.classList.add("complete-write");
 	}
 }
 
-if(emailAlready.value == "true") {
-	alreadyUseEmail.classList.add("need-write");
-	needEmailCheck.classList.remove("need-write");
-}else {
-	alreadyUseEmail.classList.remove("need-write");
+//	이메일 중복여부 검사
+const isEmailDup = () => {
+	if(emailAlready.value == "true") {
+		alreadyUseEmail.classList.add("need-write");
+		needEmailCheck.classList.remove("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
+	}else {
+		alreadyUseEmail.classList.remove("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
+	}	
 }
 
-//무결성 확인 함수
+//	이메일 인증여부 검사
+const isEmailChecked = () => {
+	if(emailChecked.value == "true") {
+		emailCheckButtonVerify.textContent = "인증 완료"
+		emailCheckButtonVerify.style.backgroundColor = "var(--color-primary)";
+		needEmailCheckValidate.classList.remove("need-write");
+		emailCheckCompleate.classList.add("complete-write");
+	}else if(emailChecked.value == "false"){
+		emailCheckButtonVerify.textContent = "인증 번호 확인"
+		emailCheckButtonVerify.style.backgroundColor = "var(--color-gray500)";
+		emailCheckCompleate.classList.remove("complete-write");
+		needEmailCheckValidate.classList.add("need-write");
+	}
+}
+
+//	무결성 확인 함수
 const allOk = () => {
 	id = document.querySelector("#id-input");
 	pw = document.querySelector("#pw-input");
@@ -107,7 +156,7 @@ const allOk = () => {
 	nickname = document.querySelector("#nickname-input");
 	phone = document.querySelector("#phone-input");
 	email = document.querySelector("#email-input");
-	emailcheck = document.querySelector("#email-check-input");
+	emailCheck = document.querySelector("#email-check-input");
 
 	checkAll = document.querySelector("#check-all")
 	checkUp14 = document.querySelector("#check-up14");
@@ -118,7 +167,8 @@ const allOk = () => {
 //	인풋박스 유효성 검사
 
 	if(	idCheck.value == "true" &&
-		mailCheck.value == "true" &&
+		emailChecked.value == "true" &&
+		pwCheck.value == pw.value &&
 	 	pw.value &&
 		pwCheck.value &&
 		uname.value &&
@@ -138,12 +188,14 @@ const allOk = () => {
 	
 }
 
-// 	검사 시작
+//	기본 검사 시작
 allOk();
 idCheckDesign();
 emailCheckDesign();
+isEmailDup();
+isEmailChecked();
 
-// 아이디 중복확인 버튼 클릭
+//	아이디 중복확인 버튼 클릭
 idCheckButton.addEventListener("click", () => {
 	let idLength = id.value.length
 	if(id.value) {
@@ -156,19 +208,20 @@ idCheckButton.addEventListener("click", () => {
 				'&userNickname=' + encodeURIComponent(nickname.value) +
 				'&userPhone=' + encodeURIComponent(phone.value) +
 				'&userEmail=' + encodeURIComponent(email.value) +
-				'&checkUserEmail=' + encodeURIComponent(emailcheck.value) +
-				'&code=' + encodeURIComponent(mailCode.value);
+				'&checkUserEmail=' + encodeURIComponent(emailCheck.value) +
+				'&code=' + encodeURIComponent(mailCode.value) +
+				'&emailChecked=' + encodeURIComponent(emailChecked.value);
+				
 		}else {
 			needIdValidate.classList.add("need-write");
+			needIdCheck.classList.remove("need-write");
 		}
 	}else {
-		console.log("입력 필요함")
 	}
 });
 
-// 이메일 인증 버튼 클릭
+// 이메일 발송 버튼 클릭
 emailCheckButton.addEventListener("click",() => {
-	
 	if(email.value) {
 		if(isEmail.test(email.value)) {
 				location.href =
@@ -179,20 +232,24 @@ emailCheckButton.addEventListener("click",() => {
 					'&userNickname=' + encodeURIComponent(nickname.value) +
 					'&userPhone=' + encodeURIComponent(phone.value) +
 					'&userEmail=' + encodeURIComponent(email.value) +
-					'&checkUserEmail=' + encodeURIComponent(emailcheck.value) +
+					'&checkUserEmail=' + encodeURIComponent(emailCheck.value) +
 					'&code=' + encodeURIComponent(mailCode.value) + 
 					'&checkId=' + encodeURIComponent(idCheck.value);							
 		}else {
-			needEmailValidate.classList.add("need-write")
+			needEmailValidate.classList.add("need-write");
+			alreadyUseEmail.classList.remove("need-write");
+			emailCompleate.classList.remove("complete-write");
 		}
 	}else {
 		needEmailValidate.classList.add("need-write")
+		alreadyUseEmail.classList.remove("need-write")
+		emailCompleate.classList.remove("complete-write");
 	}
 });
 
-//	메일인증
+//	메일코드 인증버튼 클릭
 emailCheckButtonVerify.addEventListener("click",() => {
-	if(emailcheck.value) {
+	if(emailCheck.value) {
 		location.href =
 			'email-check-verify.user?userId=' + encodeURIComponent(id.value) +
 			'&userPassword=' + encodeURIComponent(pw.value) +
@@ -201,7 +258,7 @@ emailCheckButtonVerify.addEventListener("click",() => {
 			'&userNickname=' + encodeURIComponent(nickname.value) +
 			'&userPhone=' + encodeURIComponent(phone.value) +
 			'&userEmail=' + encodeURIComponent(email.value) +
-			'&checkUserEmail=' + encodeURIComponent(emailcheck.value) +
+			'&checkUserEmail=' + encodeURIComponent(emailCheck.value) +
 			'&code=' + encodeURIComponent(mailCode.value) +
 			'&checkId=' + encodeURIComponent(idCheck.value);
 	}else {
@@ -234,7 +291,8 @@ phone.addEventListener("input", () => {
 	allOk();
 })
 email.addEventListener("input", () => {
-	mailCheck.value = "false";
+	emailChecked.value = "false";
+	mailCode.value = "";
 	allOk();
 })
 
@@ -282,10 +340,10 @@ checkPrivate.addEventListener("click", () => {
 
 // 회색 회원가입 버튼 클릭 시
 joinButton.addEventListener("click", () => {
-	console.log("조건만족안됨");
 	if(idCheck.value != "true") {
 		needIdCheck.classList.add("need-write");
 		alreadyUseId.classList.remove("need-write");
+		needIdValidate.classList.remove("need-write");
 	}else {
 		needIdCheck.classList.remove("need-write");
 	}
@@ -321,14 +379,12 @@ joinButton.addEventListener("click", () => {
 	}else {
 		needPhoneInput.classList.remove("need-write");
 	}
-	if(mailCheck.value == "" || mailCheck.value == "false") {
+	if(emailChecked.value == "" || emailChecked.value == "false") {
 		needEmailCheck.classList.add("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
 	}else {
 		needEmailCheck.classList.remove("need-write");		
+		needEmailCheckValidate.classList.remove("need-write");
 	}
-	console.log("emailAlready.value:", emailAlready.value);
-	console.log("mailCheck.value:", mailCheck.value);
-	console.log("checkUp14.checked:", checkUp14.checked);
-	console.log("checkService.checked:", checkService.checked);
-	console.log("checkNeedPrivate.checked:", checkNeedPrivate.checked);
+	console.log(emailChecked.value)
 })

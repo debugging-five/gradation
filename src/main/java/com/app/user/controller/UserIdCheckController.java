@@ -27,7 +27,7 @@ public class UserIdCheckController implements Action {
 		String userPhone = req.getParameter("userPhone");
 		String userEmail = req.getParameter("userEmail");
 		String checkUserEmail = req.getParameter("checkUserEmail");
-		
+		String emailChecked = req.getParameter("emailChecked");
 		if(userDAO.idCheck(userId) == 1){
 //			아이디가 있을 때
 			session.setAttribute("checkId", "already");
@@ -46,6 +46,7 @@ public class UserIdCheckController implements Action {
 		session.setAttribute("userPhone", userPhone);
 		session.setAttribute("userEmail", userEmail);
 		session.setAttribute("checkUserEmail", checkUserEmail);
+		session.setAttribute("checkEmail", emailChecked);
 		
 		result.setPath("join-main.user");
 		result.setRedirect(true);
