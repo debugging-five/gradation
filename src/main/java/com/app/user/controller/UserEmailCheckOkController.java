@@ -45,6 +45,7 @@ public class UserEmailCheckOkController implements Action {
 		session.setAttribute("userPhone", userPhone);
 		session.setAttribute("userEmail", userEmail);
 		session.setAttribute("checkUserEmail", checkUserEmail);
+		session.setAttribute("code", code);
 		
 		result.setRedirect(true);
 		result.setPath("join-main.user");
