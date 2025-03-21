@@ -43,12 +43,12 @@ body {
 	align-content: center;
 }
 
-#menu-title {
+#menu-artist {
 	margin-left: 80px;
 	align-content: center;
 }
 
-#menu-comment {
+#menu-title {
 	margin-left: 310px;
 	align-content: center;
 }
@@ -121,33 +121,6 @@ button {
 	margin-bottom: 200px;
 	font-family: var(--font-family-Pretendard-Regular);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
