@@ -42,9 +42,7 @@
 					</div>
 					<div class="input-box-wrap">
 						<div class="input-box">
-					        <h5>시작가
-					        	<span class="star">*</span>
-					        </h5>
+					        <h5>시작가<span class="star">*</span></h5>
 					        <input class="input-text" type="text" placeholder="KRW 1,000,000" />			
 						</div>
 					</div>
