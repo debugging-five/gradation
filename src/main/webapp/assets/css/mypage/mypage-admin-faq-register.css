@@ -37,11 +37,11 @@ button {
 	margin-top:70px;
 }
 
-/* #kind {
+#kind {
 	display: flex;
-	width: 680px;
-	font-size: 
-} */
+	width: 800px;
+	font-size: var(--font-size-h7); 
+}
 
 input[type="checkbox"] {
     display: none;
