@@ -1,9 +1,28 @@
 @charset "UTF-8";
+input{
+	border : none;
+	outline: none;
+	background-color: var(--color-gray100);
+	padding: 0;
+}
 body{
 	font-size: 0;
 	background-color: #FBFCFC;
 	width: 100%;
 	height: 100%;
+}
+
+#join-head {
+	margin-top: 142px;
+	font-size: var(--font-size-h2);
+}
+
+.input-div {
+	margin-top: 31px;
+	display: flex;
+	width: 760px;
+	height: 39px;
+	border-bottom: solid 1px var(--color-black);
 }
 
 .join-container{
@@ -14,13 +33,80 @@ body{
 }
 
 .user-text {
-	font-size: var(--font-size-h4);
+	font-size: var(--font-size-h5);
 	color: var(--color-black);
+	font-weight: var(--font-weight-semibold);
+	margin-top: 8px;
 }
 
 .red-star {
-	font-size: var(--font-size-h4);
+	font-size: var(--font-size-h5);
 	color: var(--color-primary);	
+	font-weight: var(--font-weight-semibold);
+	margin-top: 8px;
+}
+
+.input-text2 {
+	margin-left: 80px;
+	margin-top: 8px;
+	font-size: var(--font-size-h7);
+	width: 500px;
+}
+.input-text3 {
+	margin-left: 62px;
+	margin-top: 8px;
+	font-size: var(--font-size-h7);
+	width: 500px;
+}
+.input-text3-no-star {
+	margin-left: 73px;
+	margin-top: 8px;
+	font-size: var(--font-size-h7);
+	width: 500px;
+}
+.input-text4 {
+	margin-left: 47px;
+	margin-top: 8px;
+	font-size: var(--font-size-h7);
+	width: 500px;
+}
+.input-text6 {
+	margin-left: 12px;
+	margin-top: 8px;
+	font-size: var(--font-size-h7);
+	width: 500px;
+}
+
+.input-button {
+	width: 125px;
+	height: 35px;
+	margin-left: auto;
+	margin-bottom: 4px;
+	border: none;
+	border-radius: 2px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h7);
+	background-color: var(--color-gray500);
+	color: var(--color-gray100);
+}
+
+.eye-img {
+	width: 16px;
+	height: 11px;
+	margin-top: 20px;
+	margin-left: auto;
+}
+
+
+
+.warning-area {
+	background-color: var(--color-gray100);
+	width: 500px;
+	height: 19px;
+	margin-left: 120px;
+}
+.warning-text {
+	position: absolute;
 }
 
 input[type="checkbox"] {
@@ -31,11 +117,11 @@ input[type="checkbox"]+label{
 	display: block;
 	width: 335px;
 	height: 20px;
-	background: url('../../images/join/checked_off.png') no-repeat 0 0px / contain;
+	background: url('../../images/join/checked-off.png') no-repeat 0 0px / contain;
 }
 
 input[type='checkbox']:checked+label{
-	background: url('../../images/join/checked_on.png') no-repeat 0 0px / contain;
+	background: url('../../images/join/checked-on.png') no-repeat 0 0px / contain;
 }
 
 .check-label-span{
@@ -43,7 +129,7 @@ input[type='checkbox']:checked+label{
 	color : var(--color-gray500);
   	vertical-align: middle;
   	margin-left: 25px;
- 	 width: 300px;
+ 	width: 300px;
  }
  
  #join-button{
@@ -53,11 +139,17 @@ input[type='checkbox']:checked+label{
  	border-radius: 3px;
  	font-size : var(--font-size-h4);
  	color: var(--color-gray100);
+ 	margin-top: 60px;
+ 	margin-bottom: 200px;
  }
  
 .need-write{
 	font-size: var(--font-size-h9);
 	color: var(--color-warning);
+}
+.complete-write{
+	font-size: var(--font-size-h9);
+	color: var(--color-primary);
 }
 
 .h5-text-black {
@@ -100,4 +192,14 @@ input[type='checkbox']:checked+label{
 
 #join-success-close-button{
 	background-color: var(--color-gray100);
+}
+
+.checkbox-wrap {
+	margin-top: 41px;
+}
+.checkboxs-wrap {
+	margin-left: 20px;
+}
+.checkbox-label {
+	margin-top: 10px;
 }

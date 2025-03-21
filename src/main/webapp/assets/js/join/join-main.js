@@ -50,6 +50,11 @@ const alreadyUseEmail = document.querySelector("#already-use-email");
 const needEmailValidate = document.querySelector("#need-email-validate");
 const needEmailCheckValidate = document.querySelector("#need-email-check-validate");
 
+// 완료 메세지
+const emailCompleate = document.querySelector("#email-compleate");
+const emailCheckCompleate = document.querySelector("#email-check-compleate");
+
+
 // 눈깔 클릭
 const showPassword = document.querySelector("#show-password");
 const showPasswordCheck = document.querySelector("#show-password-check");
@@ -105,10 +110,13 @@ const emailCheckDesign = () => {
 	if(mailCode.value == "") {
 		emailCheckButton.textContent = "이메일 인증"
 		emailCheckButton.style.backgroundColor = "var(--color-gray500)";
+		emailCompleate.classList.remove("complete-write");
+		needEmailCheckValidate.classList.remove("need-write");		
 	}else {		
 		emailCheckButton.textContent = "이메일 재발송"
 		emailCheckButton.style.backgroundColor = "var(--color-primary)";
 		alreadyUseEmail.classList.remove("need-write");
+		emailCompleate.classList.add("complete-write");
 	}
 }
 
@@ -117,8 +125,10 @@ const isEmailDup = () => {
 	if(emailAlready.value == "true") {
 		alreadyUseEmail.classList.add("need-write");
 		needEmailCheck.classList.remove("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
 	}else {
 		alreadyUseEmail.classList.remove("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
 	}	
 }
 
@@ -128,9 +138,11 @@ const isEmailChecked = () => {
 		emailCheckButtonVerify.textContent = "인증 완료"
 		emailCheckButtonVerify.style.backgroundColor = "var(--color-primary)";
 		needEmailCheckValidate.classList.remove("need-write");
+		emailCheckCompleate.classList.add("complete-write");
 	}else if(emailChecked.value == "false"){
 		emailCheckButtonVerify.textContent = "인증 번호 확인"
 		emailCheckButtonVerify.style.backgroundColor = "var(--color-gray500)";
+		emailCheckCompleate.classList.remove("complete-write");
 		needEmailCheckValidate.classList.add("need-write");
 	}
 }
@@ -156,6 +168,7 @@ const allOk = () => {
 
 	if(	idCheck.value == "true" &&
 		emailChecked.value == "true" &&
+		pwCheck.value == pw.value &&
 	 	pw.value &&
 		pwCheck.value &&
 		uname.value &&
@@ -196,16 +209,18 @@ idCheckButton.addEventListener("click", () => {
 				'&userPhone=' + encodeURIComponent(phone.value) +
 				'&userEmail=' + encodeURIComponent(email.value) +
 				'&checkUserEmail=' + encodeURIComponent(emailCheck.value) +
-				'&code=' + encodeURIComponent(mailCode.value);
+				'&code=' + encodeURIComponent(mailCode.value) +
+				'&emailChecked=' + encodeURIComponent(emailChecked.value);
+				
 		}else {
 			needIdValidate.classList.add("need-write");
+			needIdCheck.classList.remove("need-write");
 		}
 	}else {
-		console.log("입력 필요함")
 	}
 });
 
-// 이메일 인증 버튼 클릭
+// 이메일 발송 버튼 클릭
 emailCheckButton.addEventListener("click",() => {
 	if(email.value) {
 		if(isEmail.test(email.value)) {
@@ -221,16 +236,18 @@ emailCheckButton.addEventListener("click",() => {
 					'&code=' + encodeURIComponent(mailCode.value) + 
 					'&checkId=' + encodeURIComponent(idCheck.value);							
 		}else {
-			needEmailValidate.classList.add("need-write")
-			alreadyUseEmail.classList.remove("need-write")
+			needEmailValidate.classList.add("need-write");
+			alreadyUseEmail.classList.remove("need-write");
+			emailCompleate.classList.remove("complete-write");
 		}
 	}else {
 		needEmailValidate.classList.add("need-write")
 		alreadyUseEmail.classList.remove("need-write")
+		emailCompleate.classList.remove("complete-write");
 	}
 });
 
-//	메일인증 버튼 클릭
+//	메일코드 인증버튼 클릭
 emailCheckButtonVerify.addEventListener("click",() => {
 	if(emailCheck.value) {
 		location.href =
@@ -275,6 +292,7 @@ phone.addEventListener("input", () => {
 })
 email.addEventListener("input", () => {
 	emailChecked.value = "false";
+	mailCode.value = "";
 	allOk();
 })
 
@@ -322,10 +340,10 @@ checkPrivate.addEventListener("click", () => {
 
 // 회색 회원가입 버튼 클릭 시
 joinButton.addEventListener("click", () => {
-	console.log("조건만족안됨");
 	if(idCheck.value != "true") {
 		needIdCheck.classList.add("need-write");
 		alreadyUseId.classList.remove("need-write");
+		needIdValidate.classList.remove("need-write");
 	}else {
 		needIdCheck.classList.remove("need-write");
 	}
@@ -363,7 +381,10 @@ joinButton.addEventListener("click", () => {
 	}
 	if(emailChecked.value == "" || emailChecked.value == "false") {
 		needEmailCheck.classList.add("need-write");
+		needEmailCheckValidate.classList.remove("need-write");
 	}else {
 		needEmailCheck.classList.remove("need-write");		
+		needEmailCheckValidate.classList.remove("need-write");
 	}
+	console.log(emailChecked.value)
 })
