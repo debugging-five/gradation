@@ -123,11 +123,23 @@
 	width : 1160px;
 	padding-bottom: 15px;
 }
-.comments-section textarea {
-    margin: 15px 0 10px 0;
+
+
+.textarea-container {
 	width: 1160px; 
 	height: 177px; 
+	border: solid 1px;
+	border-color: var(--color-gray900);
+    margin: 15px 0 52px 0;
+}
+.comments-section textarea {
+	margin-top: 5px;
+	width: 1158px; 
+	height: 110px;
 	resize: none;
+	border: none;
+    outline: none; /* 클릭 시 보더 박스 안 보이게 */
+    background-color: transparent; /* 배경색 투명하게 */
 }
 .comment-typing {
 	padding: 10px 0 50px 10px;
@@ -141,10 +153,12 @@
     background-color: #EE3333;
     color: white;
     cursor: pointer;
-    position: relative;
-	right: -1075px;
-    top: -60px;
+    border-radius: 2px;
+    margin-left: 1075px;
+    margin-top: 10px;
 }
+
+
 
 
 
@@ -252,4 +266,67 @@
     background: var(--color-primary);
     color: var(--color-gray100);
 }
+
+
+
+/* 등록순 드롭다운 */
+.dropdown-container-2 {
+    position: relative;
+    display: inline-block;
+    margin-left: 855px;
+}
+
+.dropdown-btn-2 {
+    background: none;
+    border: none;
+	font-size: 16px;
+    cursor: pointer;
+    margin-left: 230px;
+}
+
+.dropdown-menu-2 {
+    position: absolute;
+    top: 100%;  /* 기존에 top: 125%는 너무 아래로 내려가 있을 가능성이 있음 */
+    right: 0;   /* 기존 -100px을 제거하여 자연스럽게 위치하도록 수정 */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    list-style: none;
+    display: none; /* 기본적으로 숨김 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* 다른 요소에 가려지지 않도록 설정 */
+}
+
+.dropdown-menu-2 li {
+    cursor: pointer;
+    width: 75px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   	font-size: 16px;
+}
+
+.dropdown-menu-2 li:hover {
+    background: var(--color-primary);
+    color: var(--color-gray100);
+}
+
+/* 버튼 클릭 시 드롭다운 보이게 하기 */
+.dropdown-container-2:focus-within .dropdown-menu-2 {
+    display: block;
+}
+
+
+
+
+
+.footer-margin {
+	margin-bottom: 200px;
+}
+
+
+
+
+
 
