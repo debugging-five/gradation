@@ -29,41 +29,41 @@
 					<img class="line-1 line"
 						src="../assets/images/mypage/my-post/line-114-1.png"
 						alt="Line 1" />
-					<div class="messege-table pretendardh5">
-						<div class="navbar-link-text-5">번호</div>
-						<div class="navbar-link-text-6">발신인</div>
-						<div class="navbar-link-text-7">제목</div>
-						<div class="navbar-link-text-8">작성일</div>
+					<div class="table-message-title">
+						<div class="message-title-1">번호</div>
+						<div class="message-title-2">발신인</div>
+						<div class="message-title-3">제목</div>
+						<div class="message-title-4">작성일</div>
 					</div>
-					<img class="line-115-1"
+					<img class="line-2"
 						src="../assets/images/mypage/my-post/line-114-1.png"
-						alt="Line 115" />
-					<div class="flex-col-item">
-						<div class="number suit-regular-normal-mine-shaft-16px">1</div>
-						<div class="navbar-link-text-13 pretendardh7">보스턴 치킨</div>
-						<div class="navbar-link-text-9 pretendardh7">빌라모형에서 파리가
+						alt="Line 2" />
+					<div class="table-message-list">
+						<div class="list-number">1</div>
+						<div class="list-name">보스턴 치킨</div>
+						<div class="list-title">빌라모형에서 파리가
 							나왔습니다.</div>
 						<div
-							class="navbar-link-250123 suit-regular-normal-mine-shaft-16px">25.01.25</div>
+							class="list-date">25.01.25</div>
 					</div>
 					<img class="line-115 line"
 						src="../assets/images/mypage/my-post/line-114-1.png"
 						alt="Line 115" />
-					<div class="flex-col-item">
-						<div class="number suit-regular-normal-mine-shaft-16px">2</div>
-						<div class="navbar-link-text-12 pretendardh7">관리자</div>
-						<div class="navbar-link-text-10 pretendardh7">입찰이 완료되었습니다.</div>
+					<div class="table-message-list">
+						<div class="list-number">2</div>
+						<div class="list-name-2">관리자</div>
+						<div class="list-title-2">입찰이 완료되었습니다.</div>
 						<div
-							class="navbar-link-250124 suit-regular-normal-mine-shaft-16px">25.01.25</div>
+							class="list-date-2">25.01.25</div>
 					</div>
 					<img class="line-115 line"
 						src="../assets/images/mypage/my-post/line-114-1.png"
 						alt="Line 115" />
-					<div class="flex-col-item">
-						<div class="number suit-regular-normal-mine-shaft-16px">3</div>
-						<div class="text-14 pretendardh7">관리자</div>
-						<div class="text-11 pretendardh7">배송이 완료되었습니다.</div>
-						<div class="date suit-regular-normal-mine-shaft-16px">25.01.25</div>
+					<div class="table-message-list">
+						<div class="list-number">3</div>
+						<div class="list-name-3">관리자</div>
+						<div class="list-title-3">배송이 완료되었습니다.</div>
+						<div class="list-date-3">25.01.25</div>
 					</div>
 					<img class="line-115 line"
 						src="../assets/images/mypage/my-post/line-114-1.png"

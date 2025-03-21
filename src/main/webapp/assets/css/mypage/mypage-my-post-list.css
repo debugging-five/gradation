@@ -1,14 +1,11 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://px.animaapp.com/67d6c6bae05083e2899b7066.67d6c6bbe05083e2899b7069.3gj2aad.hcp.png");
-
 
 .screen a {
   display: contents;
   text-decoration: none;
 }
 
-.container-center-horizontal {
+.container-center {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,7 +13,7 @@
   width: 100%;
 }
 
-.container-center-horizontal > * {
+.container-center > * {
   flex-shrink: 0;
   pointer-events: auto;
 }
@@ -34,7 +31,6 @@ input:focus {
 * {
   box-sizing: border-box;
 }
-/* screen - mypage-post-list */
 
 .mypage-post-list {
   align-items: center;
@@ -43,21 +39,6 @@ input:focus {
   flex-direction: column;
   height: 1536px;
   width: 1920px;
-}
-
-
-
-.mypage-post-list .navbar {
-  align-items: center;
-  display: flex;
-  margin-left: 260px;
-  margin-top: 8px;
-  min-width: 1401px;
-}
-
-.mypage-post-list .x2-1 {
-  height: 36px;
-  width: 177px;
 }
 
 .mypage-post-list .flex-row {
@@ -69,18 +50,6 @@ input:focus {
   min-width: 1164px;
 }
 
-
-
-.mypage-post-list .group {
-  align-items: flex-start;
-  display: flex;
-  margin-bottom: 0;
-  min-width: 16px;
-}
-
-
-
-
 .mypage-post-list .flex-col {
   align-items: center;
   display: flex;
@@ -89,20 +58,25 @@ input:focus {
   width: 802px;
 }
 
-.mypage-post-list .text-2-1 {
+.mypage-post-list .title {
   align-self: flex-start;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2); 
+  font-weight: var(--font-weight-bold);  
   color: var(--color-black);
-  font-weight: var(--font-weight-bold);
   height: 36px;
-  line-height: normal;
   width: 434px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.mypage-post-list .text-1-1 {
+.mypage-post-list .notice {
   align-self: flex-end;
-  color: var(--color-black);
+  font-size: var(--font-size-h9);
+  line-height: var(--line-height-h9);
   font-weight: var(--font-weight-light);
-  line-height: normal;
+  color: var(--color-black);
   margin-right: 1px;
   margin-top: 29px;
   min-height: 14px;
@@ -110,15 +84,16 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .overlap-group-container {
+.mypage-post-list .message-tabs {
   height: 50px;
   margin-left: 1.0px;
   margin-top: 8px;
   position: relative;
   width: 801px;
+  margin-bottom: 24px;
 }
 
-.mypage-post-list .overlap-group-1 {
+.mypage-post-list .reception-post {
   align-items: flex-end;
   background-color: var(--color-gray100);
   border: 1px solid;
@@ -132,8 +107,10 @@ input:focus {
   top: 0;
 }
 
-.mypage-post-list .text-2 {
+.mypage-post-list .tab-name {
   color: var(--color-black);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);  
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
   min-height: 21px;
@@ -142,11 +119,9 @@ input:focus {
   width: 192px;
 }
 
-.mypage-post-list .overlap-group1 {
+.mypage-post-list .send-post {
   align-items: flex-start;
   background-color: var(--color-gray500);
-  border: 1px solid;
-  border-color: var(--color-gray500);
   display: flex;
   height: 50px;
   left: 399px;
@@ -156,23 +131,17 @@ input:focus {
   top: 0;
 }
 
-.mypage-post-list .text-3 {
-  align-self: flex-start;
-  color: var(--color-black);
-  font-weight: var(--font-weight-semibold);
-  line-height: 24px;
-  margin-top: 24px;
-  white-space: nowrap;
-}
-
-.mypage-post-list .line-114 {
+.mypage-post-list .line-1 {
   margin-right: 3.0px;
   margin-top: 1px;
   width: 799px;
 }
 
-.mypage-post-list .navbar-link-text-container {
+.mypage-post-list .table-message-title {
   align-items: flex-start;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);  
+  font-weight: var(--font-weight-semibold);
   display: flex;
   height: 24px;
   margin-left: 6.0px;
@@ -180,7 +149,7 @@ input:focus {
   min-width: 760px;
 }
 
-.mypage-post-list .navbar-link-text-5 {
+.mypage-post-list .message-title-1 {
   color: var(--color-black);
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
@@ -188,7 +157,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-text-6 {
+.mypage-post-list .message-title-2 {
   color: var(--color-black);
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
@@ -197,7 +166,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-text-7 {
+.mypage-post-list .message-title-3 {
   color: var(--color-black);
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
@@ -206,7 +175,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-text-8 {
+.mypage-post-list .message-title-4 {
   color: var(--color-black);
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
@@ -214,7 +183,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .line-115-1 {
+.mypage-post-list .line-2 {
   height: 1px;
   margin-right: 3.0px;
   margin-top: 12px;
@@ -222,7 +191,7 @@ input:focus {
   width: 799px;
 }
 
-.mypage-post-list .flex-col-item {
+.mypage-post-list .table-message-list {
   align-items: flex-start;
   display: flex;
   height: 20px;
@@ -231,14 +200,14 @@ input:focus {
   min-width: 755px;
 }
 
-.mypage-post-list .number {
+.mypage-post-list .list-number {
   letter-spacing: -0.06px;
   line-height: normal;
   min-height: 20px;
   width: 10px;
 }
 
-.mypage-post-list .navbar-link-text-13 {
+.mypage-post-list .list-name {
   color: var(--color-black);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -248,7 +217,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-text-9 {
+.mypage-post-list .list-title {
   color: var(--color-black);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -258,7 +227,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-250123 {
+.mypage-post-list .list-date {
   letter-spacing: -0.06px;
   line-height: normal;
   margin-left: 163px;
@@ -270,9 +239,11 @@ input:focus {
   margin-right: 3.0px;
   margin-top: 24px;
   width: 799px;
+  height: 1px;
+  object-fit: cover;
 }
 
-.mypage-post-list .navbar-link-text-12 {
+.mypage-post-list .list-name-2 {
   color: var(--color-primary);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -282,7 +253,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-text-10 {
+.mypage-post-list .list-title-2 {
   color: var(--color-black);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -292,7 +263,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .navbar-link-250124 {
+.mypage-post-list .list-date-2 {
   letter-spacing: -0.06px;
   line-height: normal;
   margin-left: 222px;
@@ -300,7 +271,7 @@ input:focus {
   width: 62px;
 }
 
-.mypage-post-list .text-14 {
+.mypage-post-list .list-name-3 {
   color: var(--color-primary);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -310,7 +281,7 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .text-11 {
+.mypage-post-list .list-title-3 {
   color: var(--color-black);
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -320,26 +291,10 @@ input:focus {
   white-space: nowrap;
 }
 
-.mypage-post-list .date {
+.mypage-post-list .list-date-3 {
   letter-spacing: -0.06px;
   line-height: normal;
   margin-left: 222px;
   min-height: 20px;
   width: 62px;
-}
-
-.mypage-post-list .group-384 {
-  height: 281px;
-  margin-top: 413px;
-  width: 1920px;
-}
-
-.mypage-post-list .line {
-  height: 1px;
-  object-fit: cover;
-}
-
-.mypage-post-list .my {
-  display: flex;
-  margin-left: 2px;
 }
