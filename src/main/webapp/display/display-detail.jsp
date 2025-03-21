@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../layout/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/display/display-detail.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/display/artist-contact-popup.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-detail-click.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>전시 상세</title>
+<%@ include file="../layout/header.jsp" %>
 </head>
 <body>
 <!-- 전체를 감싸는 래퍼 -->
@@ -24,48 +24,11 @@
 	        <!-- 좋아요 / 작가와 연락 버튼 -->
 	        <div class="button-position">
 	       		<button class="like-button">좋아요</button>
-    	   		<button class="contact-button" onclick="openPopup()">작가와 연락</button>
+	       		<a href="../upcycle/upcycling-detail.jsp">
+	    	   		<button class="contact-button">작가와 연락</button>
+	       		</a>
 	        </div>
         </div>
-        
-        
-	    <!-- 작가와 연락 팝업 -->
-		<div class="modal-bg" id="modalBg">
-		    <div class="modal">
-		        <button class="close-btn" onclick="closePopup()">
-		        	<img alt="close-icon" src="../assets/images/display/close.png">
-		        </button>
-		        <div class="modal-title">
-		        	작가와 연락
-		        	<img class="messege-icon" alt="messege-icon" src="../assets/images/display/messege.png">	
-		        </div>
-		        <textarea id="message" placeholder="쪽지를 입력하세요" onkeyup="countCharacters()"></textarea>
-		        <div class="modal-footer">
-		            <span id="charCount">0 / 500</span>
-		            <button id="sendBtn" disabled onclick="sendMessage()">전송</button>
-		        </div>
-		    </div>
-		</div>
-	
-		<!-- 문의 등록 완료 -->
-		<div id="popupOverlay" class="modal-overlay" style="display: none;">
-		    <div class="modal-ok">
-		    	<button class="close-btn2" onclick="closePopup()">
-		        	<img alt="close-icon" src="../assets/images/display/close.png">
-		        </button>
-		        <div>
-		            <img class="ok-icon" alt="ok-icon" src="../assets/images/display/ok.png">
-		        </div>
-		        <div class="modal-body">
-		            <p class="big-text">문의 등록 완료</p>
-		            <p class="small-text1">문의는 관리자 확인 후 작가에게 전달될 예정입니다.</p>
-		            <p class="small-text2">( 확인까지 최대 2~3일이 소요될 수 있습니다. )</p>
-		        </div>
-		        <div class="modal-footer-ok">
-		            <button id="closeModalBtn" class="close-btn-ok">확인</button>
-		        </div>
-		    </div>
-		</div>
         
         
         <!-- 작품 정보 -->
@@ -89,26 +52,69 @@
     	<!-- 댓글 쓰기 -->
         <div class="textarea-container">
 	        <textarea class="comment-typing" placeholder="댓글을 작성해주세요."></textarea>
-	        <button class="submit-button">등록</button>
+	        <button class="submit-button" onclick="openPopup()">등록</button>
 	    </div>
 	    
+			<!-- 등록 클릭 시 팝업 (문구 있을 시)-->
+			<div class="modal-bg" id="modalBg">
+			    <div class="modal">
+			        <div class="modal-title">
+			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
+			        	<span>댓글을 등록하시겠습니까?</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="cancel" onclick="closePopup()">취소</button>
+			            <button class="send" onclick="confirmSubmission()">확인</button>
+			        </div>
+			    </div>
+			</div>
+			<!-- 등록완료 팝업 -->
+			<div id="popupOverlay" class="modal-bg" style="display: none;">
+				<div class="modal">
+			        <div class="modal-title">
+			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/ok.png">
+			        	<span>댓글이 등록되었습니다!</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="send" onclick="closePopup()">확인</button>
+			        </div>
+			    </div>
+			</div>
+			<!-- 댓글을 입력하세요. -->
+			<div id="emptyCommentPopup" class="modal-bg" style="display: none;">
+			    <div class="modal">
+			        <div class="modal-title">
+			            <img class="question-icon" alt="question-icon" src="../assets/images/display/attention.png">
+			            <span>댓글을 입력하세요.</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="send" onclick="closePopup('emptyCommentPopup')">확인</button>
+			        </div>
+			    </div>
+			</div>
+	    
+	    
+	    
+	    
 	    <!-- 정렬 방식 -->
-	    <div class="filter-text-container">
-		    <div id="filter-text" style="cursor: pointer;">
+		<div class="dropdown-container-2">
+		    <button class="dropdown-btn-2">
 		    	등록순
-		    	<img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
-		    </div>
-	        <select id="filter-select" class="select-box" style="display: none;">
-		        <option value="등록순">등록순</option>
-		        <option value="좋아요순">좋아요순</option>
-		    </select>
+		    	<img class="down-image" alt="down-icon" src="../assets/images/display/down.png">		   
+		    </button>
+		    <ul class="dropdown-menu-2">
+		        <li class="first-upload">등록순</li>
+		        <li class="first-like">좋아요순</li>
+		    </ul>
 		</div>
+
 		
 		
         <div class="user-profile">
         	<img class="profile-image" alt="profile-image" src="../assets/images/display/cat.png">
             <p class="comment-user"><strong>user4</strong></p>
             <p>20분 전</p>
+            
       	<div class="dropdown-container">
 		    <button class="dropdown-btn">⋮</button>
 		    <ul class="dropdown-menu">
@@ -116,6 +122,7 @@
 		        <li class="delete">삭제</li>
 		    </ul>
 		</div>
+		
         </div>
 		<div class="comment-wrapper">
 		    <p class="comment">작품 잘 봤습니다.</p>
@@ -142,33 +149,12 @@
      </div>        
     
     
-    
-   
 </div>
+<div class="footer-margin"></div>
+<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/display/display-detail.js"></script>
-<script type="text/javascript" src="../assets/js/display/artist-contact-popup.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+<script type="text/javascript" src="../assets/js/display/display-detail-click.js"></script>
 
-    // 버튼 클릭 시 드롭다운 표시/숨김
-    dropdownBtn.addEventListener("click", function (event) {
-        event.stopPropagation();  // 이벤트 버블링 방지
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-    });
-
-    // 바깥 영역 클릭 시 드롭다운 닫기
-    document.addEventListener("click", function () {
-        dropdownMenu.style.display = "none";
-    });
-
-    // 드롭다운 내부 클릭 시 닫히지 않도록
-    dropdownMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
-});
-</script>
 
 </html>
