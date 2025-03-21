@@ -17,3 +17,204 @@
 	height: 618px;
 	margin-bottom: 100px;
 }
+
+
+.title-1 {
+	color: var(--color-gray100);
+	position: relative;
+	top: -520px;
+    left: 450px;
+}
+.title-2 {
+	color: var(--color-gray100);
+	position: relative;
+	top: -450px;
+    left: 600px;
+}
+
+.chepter-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 26px;
+	margin-bottom: 413px;
+}
+.chepter-1-text {
+	margin-bottom: 100px;
+}
+
+.chepter-2 {
+	margin-bottom: 232px;	
+}
+
+.chepter-3-title {
+	margin-bottom: 51px;	
+}
+.chepter-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 360px;
+}
+.chepter-3-content {
+	margin-bottom: 31px;
+}
+
+
+
+
+
+
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    left: -30px;
+    margin-bottom: 258px;
+}
+
+/* 중앙 세로 타임라인 줄 */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 55px; /* 원의 중앙에 배치 */
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+
+/* 각 단계 */
+.step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* 원과 숫자를 감싸는 컨테이너 */
+.circle-container {
+    position: relative;
+    width: 80px; /* 왼쪽 공간 확보 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: 33px;
+    top: -64px;	
+}
+
+/* 왼쪽 숫자 */
+.number {
+    position: absolute;
+    top: -8px;
+    left: -65px;
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    color: var(--color-gray900);
+}
+
+/* 원 */
+.circle {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* 세로 줄 위에 오도록 설정 */
+}
+
+.blue { background-color: #295AA0; }
+.gray { background-color: var(--color-gray500); }
+.red { background-color: var(--color-primary); }
+.white { background-color: #FFFFFF; border: solid 1px; color: var(--color-gray500);}
+.yellow { background-color: var(--color-warning); }
+
+
+/* 오른쪽 텍스트 */
+.content h3 {
+	margin-left: 15px;
+	margin-bottom: 30px;
+}
+.content h2 {
+    margin-left: 15px;
+    margin-bottom: 27px;
+	font-weight: bold;
+}
+
+.c1{
+	position: relative;
+	top: 3px;	
+}
+.c2{
+	position: relative;
+	top: 3px;
+}
+.c3{
+	position: relative;
+	top: 30px;	
+}
+.c4{
+	margin-bottom: 10px;	
+	position: relative;
+	top: 93px;	
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.c5{
+	margin-bottom: 10px;	
+	position: relative;
+	top: 38px;	
+}
+
+
+.end{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.end-text-1{
+	margin-bottom: 10px;	
+}
+.end-text-2{
+	margin-bottom: 99px;	
+}
+
+
+.buttons {
+	display: flex;
+	margin-bottom: 1000px;
+
+}
+.qna-button {
+	margin-right: 80px;	
+	width: 300px;
+	height: 60px;
+	color: var(--color-primary);
+	border: solid 1.5px;
+	border-radius: 3px;
+	background-color: #FBFCFC;
+	font-size: 18px;
+	cursor: pointer;
+}
+.upcycle-form-button {
+	width: 300px;
+	height: 60px;
+	color: #FBFCFC; 
+	border: solid 1.5px;
+	border-radius: 3px;
+	background-color: var(--color-primary);
+	font-size: 18px;
+	cursor: pointer;	
+}
+
+
+
+
+
