@@ -142,28 +142,60 @@ function validateDimensions() {
 // 제작 완료일 필수 항목 검사 함수
 function validateCompletionDate() {
     const completionDateInput = document.getElementById('completion-date');
-    const errorMessageElement = document.querySelector('.completion-date-error-message'); // 기존 에러 메시지 가져오기
+    const errorMessageElement = document.querySelector('.completion-date-error-message');
 
-    // 값이 비어 있으면 에러 메시지 표시
-    if (completionDateInput.value.trim() === "") {
+    if (!completionDateInput.value.trim()) {
         if (!errorMessageElement) {
             showError(completionDateInput, "필수 항목입니다.", 'completion-date-error-message');
+        }
+    } else {
+        if (errorMessageElement) {
+            errorMessageElement.remove();
+        }
+    }
+}
+function updateDate() {
+    const dateInput = document.getElementById('date-input');
+    const completionDateInput = document.getElementById('completion-date');
+    const calendarText = document.getElementById('calendar-text');
+
+    // date-input의 값을 completion-date에 동기화
+    completionDateInput.value = dateInput.value;
+
+    // 화면에 선택한 날짜 표시
+    calendarText.innerText = dateInput.value ? dateInput.value : "날짜를 선택해주세요.";
+
+    // 날짜가 선택되었으면 필수 검사 실행하여 에러 제거
+    validateCompletionDate();
+}
+
+// 작품 설명 필수 항목 검사
+function validateDescription() {
+    const descriptionInput = document.getElementById('description'); // 작품 설명 입력 필드
+    const errorMessageElement = document.querySelector('.description-error-message'); // 기존 에러 메시지 가져오기
+
+    // 값이 비어 있으면 에러 메시지 표시
+    if (descriptionInput.value.trim() === "") {
+        if (!errorMessageElement) {
+            showError(descriptionInput, "필수 항목입니다.", 'description-error-message');
         }
     } else {
         // 값이 있으면 에러 메시지 제거
         if (errorMessageElement) {
             errorMessageElement.remove();
-            completionDateInput.style.borderColor = ""; // 테두리 색상 복원
+            descriptionInput.style.borderColor = ""; // 테두리 색상 복원
         }
     }
 }
+
+
 
 
 // 에러 메시지를 표시하는 함수
 function showError(element, message, className) {
     let errorMessage = document.createElement("div");
     errorMessage.className = "error-message " + className; // 중복 에러 메시지 방지
-    errorMessage.style.color = "red";
+    errorMessage.style.color = "var(--color-warning)";
     errorMessage.style.fontSize = "12px";
     errorMessage.style.marginTop = "5px";
     errorMessage.innerText = message;
@@ -171,6 +203,8 @@ function showError(element, message, className) {
     element.style.borderColor = "yellow"; // 경고 색을 노란색으로 변경
     element.parentNode.appendChild(errorMessage); // 에러 메시지 추가
 }
+
+
 
 
 
@@ -183,6 +217,7 @@ document.querySelector(".button-upload").addEventListener("click", function (eve
 	validateMaterial(); // 작품 재료 검사 실행
     validateDimensions(); // 작품 규격 검사 실행
 	validateCompletionDate(); // 제작완료일 검사 실행
+	validateDescription(); // 작품설명 검사 실행
 
 	// 에러가 있으면 팝업을 띄우지 않음
 	if (document.querySelector('.author-error-message') || 
@@ -209,3 +244,5 @@ document.getElementById('height').addEventListener('input', validateDimensions);
 document.getElementById('depth').addEventListener('input', validateDimensions);
 // 제작 완료일 값 변경 시 검사 실행
 document.getElementById('completion-date').addEventListener('input', validateCompletionDate);
+// 작품 설명 값 변경 시 검사 실행
+document.getElementById('description').addEventListener('input', validateDescription);

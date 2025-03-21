@@ -80,10 +80,11 @@
 				        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
 				        날짜를 선택해주세요.
 				    </span> 
-				    <!-- 날짜 선택을 위한 input 필드 -->
-				    <input type="date" id="date-input" class="input-box" 
-				    style="display: none;" onchange="updateDate()" >
-				    <input type="date" id="completion-date" class="input-box" style="display: none;">
+				    <!-- 실제로 사용되는 input 필드 -->
+				    <input type="date" id="completion-date" class="input-box" style="visibility: hidden; position: absolute;">
+				    
+				    <!-- UI로만 쓰이는 input -->
+				    <input type="date" id="date-input" class="input-box" style="display: none;" onchange="updateDate()">
 				</div>
 				
 			</form>
