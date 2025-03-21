@@ -22,81 +22,105 @@
 			<input type="hidden" id="email-check-ok" value="${sessionScope.checkEmail}"/>
 			<input type="hidden" id="email-already" value="${sessionScope.emailAlready}"/>
 		<form action="join-ok.user" method="post">
-			<div id="id-input-wrap">
+			<div class="input-div">
 				<span class="user-text">아이디</span>
 				<span class="red-star">*</span>
-				<input type="text" id="id-input" name="userId" placeholder="6~20자 영문, 숫자" value="${sessionScope.userId}" />
-				<button type="button" id="id-check-button">중복체크</button>
+				<input type="text" class="input-text3" id="id-input" name="userId" placeholder="6~20자 영문, 숫자" value="${sessionScope.userId}" />
+				<button type="button" class="input-button" id="id-check-button">중복체크</button>
 			</div>
-			<div><p id="already-use-id">이미 사용중인 아이디 입니다.</p></div>
-			<div><p id="need-id-check">아이디 중복체크를 진행해주세요</p></div>
-			<div><p id="need-id-validate">아이디는 6~20자 영문, 숫자로만 작성해 주세요</p></div>
-			<div>
+			<div class="warning-area">
+				<div><p class="warning-text" id="already-use-id">이미 사용중인 아이디 입니다.</p></div>
+				<div><p class="warning-text" id="need-id-check">아이디 중복체크를 진행해주세요</p></div>
+				<div><p class="warning-text" id="need-id-validate">아이디는 6~20자 영문, 숫자로만 작성해 주세요</p></div>
+			</div>
+			<div class="input-div">
 				<span class="user-text">비밀번호</span>
 				<span class="red-star">*</span>
-				<input type="password" id="pw-input" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.userPassword}"/>
+				<input type="password" class="input-text4" id="pw-input" name="userPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.userPassword}"/>
+				<img alt="눈" class="eye-img" id="show-password" src="../assets/images/join/close-eye.png">
+			</div>
+			<div class="warning-area">
 				<div><p id="need-pw-input">필수 항목입니다.</p></div>
 				<div><p id="need-pw-input-validate">비밀번호는 8~12자 영문, 숫자, 특수문자로만 작성해 주세요</p></div>
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">비밀번호 확인</span>
 				<span class="red-star">*</span>
-				<input type="password" id="pw-check-input" name="checkUserPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.checkUserPassword}" />
+				<input type="password" class="input-text6" id="pw-check-input" name="checkUserPassword" placeholder="8~12자 영문, 숫자, 특수문자 " value="${sessionScope.checkUserPassword}" />
+				<img alt="눈" class="eye-img" id="show-password-check" src="../assets/images/join/close-eye.png">
+			</div>
+			<div class="warning-area">
 				<div><p id="need-pw-input-check">입력하신 비밀번호가 일치하지 않습니다</p></div>
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">이름</span>
 				<span class="red-star">*</span>
-				<input type="text" id="name-input" name="userName" placeholder="이름을 입력하세요." value="${sessionScope.userName}" />
+				<input type="text" class="input-text2" id="name-input" name="userName" placeholder="이름을 입력하세요." value="${sessionScope.userName}" />
+			</div>
+			<div class="warning-area">
 				<div><p id="need-name-input">필수 항목입니다.</p></div>
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">닉네임</span>
-				<input type="text" id="nickname-input" name="userNickname" placeholder="닉네임을 입력하세요." value="${sessionScope.userNickname}" />
+				<input type="text" class="input-text3-no-star" id="nickname-input" name="userNickname" placeholder="닉네임을 입력하세요." value="${sessionScope.userNickname}" />
+			</div>
+			<div class="warning-area">
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">휴대폰</span>
 				<span class="red-star">*</span>
-				<input type="text" id="phone-input" name="userPhone" placeholder="휴대폰 번호를 입력하세요." value="${sessionScope.userPhone}" />
+				<input type="text" class="input-text3" id="phone-input" name="userPhone" placeholder="휴대폰 번호를 입력하세요." value="${sessionScope.userPhone}" />
+			</div>
+			<div class="warning-area">
 				<div><p id="need-phone-input">필수 항목입니다.</p></div>
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">이메일</span>
 				<span class="red-star">*</span>
-				<input type="text" id="email-input" name="userEmail" placeholder="이메일을 입력하세요." value="${sessionScope.userEmail}" />
-				<button type="button" id="email-check-button">이메일 인증</button>
+				<input type="text" class="input-text3" id="email-input" name="userEmail" placeholder="이메일을 입력하세요." value="${sessionScope.userEmail}" />
+				<button type="button" class="input-button" id="email-check-button">이메일 인증</button>
+			</div>
+			<div class="warning-area">
 				<div><p id="already-use-email">이미 사용중인 이메일 입니다.</p></div>
 				<div><p id="need-email-validate">올바른 이메일 형식을 입력해주세요.</p></div>
+				<div><p id="email-compleate">인증메일이 발송되었습니다</p></div>	
 			</div>	
-			<div>
+			<div class="input-div">
 				<span class="user-text">인증번호</span>
 				<span class="red-star">*</span>
-				<input type="text" id="email-check-input" name="checkUserEmail" placeholder="인증번호를 입력하세요." value="${sessionScope.checkUserEmail}" />
-				<button type="button" id="email-check-button-verify">인증번호 확인</button>
+				<input type="text" class="input-text4" id="email-check-input" name="checkUserEmail" placeholder="인증번호를 입력하세요." value="${sessionScope.checkUserEmail}" />
+				<button type="button" class="input-button" id="email-check-button-verify">인증번호 확인</button>
+			</div>
+			<div class="warning-area">
 				<div><p id="need-email-check">이메일 인증을 진행해주세요</p></div>
+				<div><p id="need-email-check-input">인증번호를 입력해 주세요</p></div>
+				<div><p id="need-email-check-validate">인증번호가 틀렸습니다.</p></div>
+				<div><p id="email-check-compleate">인증이 완료되었습니다.</p></div>
 			</div>	
 			
-			<div>
+			<div class="checkbox-wrap">
 				<input type="checkbox" id="check-all"/>
 	  			<label for="check-all">
 	  				<span class="check-label-span">필수 및 선택 항목을 모두 포함하여 동의합니다.</span>
 	  			</label>
-				<input class="check-label" type="checkbox" id="check-up14"/>
-	  			<label for="check-up14">
-	  				<span class="check-label-span">[필수] 만 14세 이상입니다.</span>
-	  			</label>
-				<input class="check-label" type="checkbox" id="check-service"/>
-	  			<label for="check-service">
-	  				<span class="check-label-span">[필수] 서비스 약관 동의</span>
-	  			</label>
-				<input class="check-label" type="checkbox" id="check-need-private"/>
-	  			<label for="check-need-private">
-	  				<span class="check-label-span">[필수] 개인정보 수집 및 이용 동의</span>
-	  			</label>
-				<input name="agreement" class="check-label" type="checkbox" id="check-private"/>
-	  			<label for="check-private">
-	  				<span  class="check-label-span">[선택] 개인정보 수집 및 이용 동의</span>
-	  			</label>
+	  			<div class="checkboxs-wrap">
+					<input class="check-label" type="checkbox" id="check-up14"/>
+		  			<label class="checkbox-label" for="check-up14">
+		  				<span class="check-label-span">[필수] 만 14세 이상입니다.</span>
+		  			</label>
+					<input class="check-label" type="checkbox" id="check-service"/>
+		  			<label class="checkbox-label" for="check-service">
+		  				<span class="check-label-span">[필수] 서비스 약관 동의</span>
+		  			</label>
+					<input class="check-label" type="checkbox" id="check-need-private"/>
+		  			<label class="checkbox-label" for="check-need-private">
+		  				<span class="check-label-span">[필수] 개인정보 수집 및 이용 동의</span>
+		  			</label>
+					<input name="agreement" class="check-label" type="checkbox" id="check-private"/>
+		  			<label class="checkbox-label" for="check-private">
+		  				<span  class="check-label-span">[선택] 개인정보 수집 및 이용 동의</span>
+		  			</label>
+		  		</div>
 			</div>
 			
 			<div>
@@ -126,7 +150,6 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 <script type="text/javascript" src="../assets/js/join/join-main.js"></script>
 </html>
