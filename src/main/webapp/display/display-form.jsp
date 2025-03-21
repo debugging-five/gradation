@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../layout/header.jsp" %>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-click.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>작품 업로드</title>
+<%@ include file="../layout/header.jsp" %>
 </head>
 <body>
 <div id="wrapper">
@@ -142,10 +141,11 @@
 		</div>
 	
 	
-	
-	
-	
 </div>
+
+
+<div class="footer-margin"></div>
+<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/display/display-form.js"></script>
 <script type="text/javascript" src="../assets/js/display/display-form-click.js"></script>
