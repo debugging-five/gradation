@@ -83,7 +83,6 @@ body {
 	height: 100%;
 	align-content: center;
 	text-align: center;
-
 	font-size: var(--font-size-h7);
 }
 
@@ -93,17 +92,17 @@ body {
 	font-size: var(--font-size-h7);
 }
 
-.item-title {
-	margin-left : 120px;
-}
-
 .item-date-wrap {
 	width: 80px;
 	align-content: center;
 	text-align: center;
-
 	font-size: var(--font-size-h7);
 }
+
+.item-title {
+	margin-left : 120px;
+}
+
 
 form {
 	text-align: right;
@@ -116,7 +115,7 @@ button {
 	background-color: var(--color-primary);
 	color: var(--color-gray100);
 	font-size: var(--font-size-h5);
-	border: solid 1.5px;
+	border: solid 1.5px var(--color-primary);
 	border-radius: 3px;
 	margin-bottom: 200px;
 	font-family: var(--font-family-Pretendard-Regular);
