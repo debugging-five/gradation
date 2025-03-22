@@ -19,6 +19,7 @@ body {
    height : 540px;
    border : solid 1px #6e7476;
    border-radius : 5px;
+   background-color: var(--color-gray100);
 }
 
 .bar {

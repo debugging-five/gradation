@@ -32,12 +32,10 @@
       <div id="auction-info">
          <!-- 경매 정보1 -->
          <div id="auction-info1">
-            <div>
-               <h2 class="title">당황한 동상</h2>
-            </div>
+            <h2 id="title">당황한 동상</h2>
             <div class="artist">
                <h3>작가명</h3>
-<!--                <span>|</span> -->
+               <span id="span">|</span>
                <h3>홍길동</h3>
             </div>
             
@@ -65,31 +63,28 @@
          </div>
          
          <!-- 경매 정보3 -->
-         <div>
-            <div class="info">
+         <div id="auction-info3">
+            <div id="deadline">
                <h2>마감시간</h2>
                <h2>4일 4시간 44분 44초</h2>
             </div>
-            <div class="info2 first">
-               <h3>현재 입찰가</h3>
-               <h3>KRW 550,000</h3>
-            </div>
-            <div class="info2 second">
-               <h3>최소 응찰가</h3>
-               <h3>KRW 560,000</h3>
+            
+            <div id="price-wrapper">
+	            <div id="current-price">
+	               <h3>현재 입찰가</h3>
+	               <h3>KRW 550,000</h3>
+	            </div>
+	            <div id="min-price">
+	               <h3>최소 응찰가</h3>
+	               <h3>KRW 560,000</h3>
+	            </div>
             </div>
          </div>
          
          <div id="button-wrapper">
-            <button class="button list">
-               <p>목록으로</p>
-            </button>
-            <button class="button auto-bidding">
-               <p>자동응찰</p>
-            </button>
-            <button class="button bidding" onclick="openPopup()" >
-               <p>응찰</p>
-            </button>
+            <button class="button list">목록으로</button>
+            <button id="auto-bidding-button">자동응찰</button>
+            <button id="bidding-button" onclick="openPopup()">응찰</button>
          </div>
          
          <!-- 응찰하기 팝업 -->
