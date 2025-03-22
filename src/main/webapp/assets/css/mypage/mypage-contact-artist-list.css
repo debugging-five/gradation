@@ -113,11 +113,12 @@ button {
 	height: 50px;
 	background-color: var(--color-primary);
 	color: var(--color-gray100);
-	font-size: var(--font-size-h5);
 	border: solid 1.5px var(--color-primary);
 	border-radius: 3px;
 	margin-bottom: 200px;
 	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h5);
+	font-weight : var(--font-weight-semibold);
 }
 
 
