@@ -20,7 +20,7 @@ body {
 
 #auction-detail {
    width : 1160px;
-   margin : 70px auto 0 ;
+   margin : 70px 0 94px 0 ;
    gap : 120px;
 }
 
@@ -51,14 +51,19 @@ body {
    display : flex;
 }
 
+#auction-info {
+	height : 560px;
+}
+
 #auction-info1 {
    border-bottom : solid 1px #c0c5c7;
    width : 480px;
    padding : 0 0 20px 0;
 }
 
-.title {
+#title {
    font-size : 30px;
+   height : 36px;
 }
 
 .artist {
@@ -66,14 +71,17 @@ body {
     align-items: center; 
     gap: 10px;
     margin : 22px 0 0 0;
+    height : 25px;
 }
 
-.artist span {
-   font-size : 21px;
+#span {
+	font-size : var(--font-size-h3);
+	font-weight : var(--font-weight-bold);
 }
 
 .etc {
-   margin : 19px 0 0 0;
+   margin : 19px 0;
+   height : 54px;
 }
 
 .etc p{
@@ -82,75 +90,97 @@ body {
    margin : 6px 0 0 0;
 }
 
-.info {
+#deadline-info, #estimate-info, #start-info {
    display : flex;
    justify-content : space-between;
+   margin : 28px 0 0 0;
+   height : 24px;
 }
 
-.info h4, h5 {
+/* .info {
+   display : flex;
+   justify-content : space-between;
    margin : 28px 0 0 0;
 }
-
+ */
+/* .info h4, h5 {
+   margin : 28px 0 0 0;
+}
+ */
 #auction-info2 {
    border-bottom : solid 1px #c0c5c7;
    width : 480px;
-   padding : 0 0 28px 0;
+   /* padding : 0 0 28px 0; */
+}
+
+#auction-info2 p {
+	font-size : 16px;
+}
+
+#start-info {
+	margin-bottom : 28px;
 }
 
 .info h2 {
    margin : 18px 0 0 0;
 }
 
-.info2 {
-   display : flex;
-   justify-content : space-between;
+#auction-info3 {
+	margin : 16px 0 0 0;
 }
 
-.info2 h3 {
-   margin : 8px 0 0 0;
-   font-size : 21px;
-   font-weight : bold;
+#deadline {
+	display : flex;
+	justify-content : space-between;
+	height : 36px; 
 }
 
-.info2.first h3 {
-   margin : 12px 0 0 0;
-   color : var(--color-gray900);
+
+#price-wrapper {
+	margin : 12px 0 0 0;
 }
 
-.info2.second h3 {
-   color : var(--color-primary);
+#current-price {
+	display : flex;
+	justify-content : space-between; 
+	color : var(--color-gray900);
+}
+
+#min-price {
+	display : flex;
+	justify-content : space-between; 
+	margin : 8px 0 0 0;
+	color : var(--color-primary);
 }
 
 #button-wrapper {
-   margin : 26px 0 200px 0;
+   margin : 26px 0 0 0;
    display : flex;
    gap : 60px;
 }
 
-.button {
+button {
    width : 120px;
    height : 45px;
    border-radius : 3px;
    border : solid 1.5px var(--color-primary);
    font-family: var(--font-family-Pretendard-Regular);
+   font-size : var(--font-size-h5);
+   font-weight : var(--font-weight-semibold);
 }
 
-.button p {
-   font-size : var(--font-size-h5);
-   font-weight : var(--font-weight-semibold)
-}
 
 .list {
    background-color : #fbfcfc;
    color : #ee3333;
 }
 
-.auto-bidding, .bidding {
+#auto-bidding-button, #bidding-button {
    background-color : #ee3333;
    color : #fbfcfc;
 }
 
-#overlay {
+#overlay1, #overlay2 {
    display: none;
     position: fixed;
     top: 0;
@@ -161,7 +191,7 @@ body {
     z-index: 999; 
 }
 
-#popup-wrapper {
+#popup-wrapper1, #popup-wrapper2 {
    position : fixed;
     top: 50%;
     left: 50%;
@@ -173,7 +203,7 @@ body {
 }
 
 #auction-list {
-   margin : 94px 0 0 0;
+   height : 269px;
 }
 
 #auction-ing {
@@ -198,6 +228,7 @@ body {
 #art-wrapper {
 	display : flex;
 	gap : 120px;
+	margin : 38px 0 0 0;
 }
 
 

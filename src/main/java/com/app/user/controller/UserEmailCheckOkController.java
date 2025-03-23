@@ -9,8 +9,6 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.logic.MailSend;
-import com.app.logic.MakeCode;
 
 public class UserEmailCheckOkController implements Action {
 

@@ -1,4 +1,3 @@
-<%@page import="com.app.vo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- jstl을 쓰는 방법 -->
@@ -13,7 +12,7 @@
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
-
+	
 	<div class="join-container">
 		<h2 id="join-head">회원가입</h2>
 			<input type="hidden" id="is-complete" value="${sessionScope.isComplete}" />
@@ -131,24 +130,29 @@
 		<div id="join-success">
 			<div id="join-success-container">
 				<div id="join-success-wrap">
-					<button id="join-success-close-button" onclick="location.href='../login/login-main.user'">
-						<img class="close-icon" alt="닫기" src="../assets/images/login/close.png">
-					</button>
-					<div>
-						<img class="big-icon" alt="체크" src="../assets/images/login/red-check-circle.png">
-						<p class="h5-text-black">회원 가입이 완료되었습니다</p>
-					</div>				
-					<div>
-						<div>
-							<a class="h5-text-black" href="../login/login-main.user">메인으로</a>
+					<div id="success-head">
+						<div id="close">
+							<a id="join-success-close-button" href="../login/login-main.user">
+								<img id="close-icon" alt="닫기" src="../assets/images/login/close.png">
+							</a>
 						</div>
+					</div>
+					<div id="success-body">
 						<div>
-							<a class="h5-text-black" href="../login/login-main.user">로그인</a>
+							<img class="big-icon" alt="체크" src="../assets/images/login/red-check-circle.png">
+							<p class="join-success-text">회원 가입이 완료되었습니다</p>
+						</div>				
+						<div id="success-button">
+								<button class="go-main-button" onclick="location.href='../login/login-main.user'">메인으로</button>
+								<button class="go-login-button" onclick="location.href='../login/login-main.user'">로그인</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<%@ include file="../layout/footer.jsp" %>
 	</div>
 </body>
 <script type="text/javascript" src="../assets/js/join/join-main.js"></script>

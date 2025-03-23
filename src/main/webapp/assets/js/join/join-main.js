@@ -315,7 +315,10 @@ checkAll.addEventListener("click", () => {
 
 checkUp14.addEventListener("click", () => {
 	if(!checkUp14.checked) {
-		checkAll.checked = false
+		checkAll.checked = false;
+	}
+	if(checkUp14.checked && checkService.checked && checkNeedPrivate.checked && checkPrivate.checked) {
+		checkAll.checked = true;
 	}
 	allOk();
 });
@@ -323,17 +326,26 @@ checkService.addEventListener("click", () => {
 	if(!checkService.checked) {
 		checkAll.checked = false
 	}
+	if(checkUp14.checked && checkService.checked && checkNeedPrivate.checked && checkPrivate.checked) {
+			checkAll.checked = true;
+	}
 	allOk();
 });
 checkNeedPrivate.addEventListener("click", () => {
 	if(!checkNeedPrivate.checked) {
 		checkAll.checked = false
 	}
+	if(checkUp14.checked && checkService.checked && checkNeedPrivate.checked && checkPrivate.checked) {
+			checkAll.checked = true;
+	}
 	allOk();
 });
 checkPrivate.addEventListener("click", () => {
 	if(!checkPrivate.checked) {
 		checkAll.checked = false
+	}
+	if(checkUp14.checked && checkService.checked && checkNeedPrivate.checked && checkPrivate.checked) {
+			checkAll.checked = true;
 	}
 	allOk();
 });
