@@ -32,6 +32,9 @@ public class UserLoginOkController implements Action{
 		result.setRedirect(true);
 		session.setAttribute("userEmail", userEmail);
 		
+//		userBan == 0 로그인 성공
+//		userBan == -1 유저조회 불가 로그인 실패
+//		userBan == 1 정지유저 로그인 실패
 		if(userBanOk == -1) {
 			result.setPath(req.getContextPath() + "/login/login-main.user?login=false");
 			return result;
@@ -39,9 +42,11 @@ public class UserLoginOkController implements Action{
 			result.setPath(req.getContextPath() + "/login/login-main.user?login=ban");
 			return result;
 		}
-		System.out.println("로그인성공~~");
-		System.out.println(session.getAttribute("userEmail"));
-		
+
+		session.invalidate();	// 기존의 세션정보 초기화
+		session = req.getSession();
+		session.setAttribute("userEmail", userEmail);
+//		메인페이지로 
 		result.setPath(req.getContextPath() + "");
 		return result;
 	}
