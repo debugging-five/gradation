@@ -28,4 +28,13 @@
     <url-pattern>*.auction</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>MypageFrontController</servlet-name>
+	<servlet-class>com.app.mypage.MypageFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MypageFrontController</servlet-name>
+    <url-pattern>*.mypage</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

@@ -14,6 +14,7 @@ import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
 import com.app.mypage.controller.MypageContactListController;
+import com.app.mypage.controller.MypageContactWriteController;
 
 public class MypageFrontController extends HttpServlet{
 	
@@ -29,6 +30,7 @@ public class MypageFrontController extends HttpServlet{
 		if(target.equals("mypage/mypage-contact-artist-list")) {
 			result = new MypageContactListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {
+			result = new MypageContactWriteController().execute(req, resp);
 		}else if(target.equals("auction/auction-payment-main")) {
 		}else {
 //			전부 404

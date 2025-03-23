@@ -27,15 +27,64 @@
 					</div>
 				</div>
 				
-				<div id="art-list">
-					<div class="art">
-						<div class="art-img">좋아요 작품</div>
+				<div class="art-list">
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
 					</div>
-					<div class="art">
-						<div class="art-img">좋아요 작품</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
 					</div>
-					<div class="art">
-						<div class="art-img">좋아요 작품</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+				</div>
+				<div class="art-list">
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+				</div>
+				<div class="art-list">
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">좋아요 작품</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
 					</div>
 				</div>
 				
