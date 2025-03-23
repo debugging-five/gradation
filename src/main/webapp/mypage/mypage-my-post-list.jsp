@@ -98,7 +98,6 @@
 			const tabReceived = document.querySelector(".tab-received");
 			const tabSent = document.querySelector(".tab-sent");
 
-			// 클래스 토글로 색상 바꾸기
 			if (tab === "received") {
 				tabReceived.classList.add("active-tab");
 				tabSent.classList.remove("active-tab");
@@ -107,7 +106,6 @@
 				tabReceived.classList.remove("active-tab");
 			}
 
-			// 콘텐츠 토글 (옵션)
 			const contentReceived = document
 					.querySelector(".tab-received-content");
 			const contentSent = document.querySelector(".tab-sent-content");
