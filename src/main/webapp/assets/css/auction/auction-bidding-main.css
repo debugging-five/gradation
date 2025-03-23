@@ -83,12 +83,18 @@ body {
    margin : 6px 0 0 0;
 }
 
-.info {
+#deadline-info, #estimate-info, #start-info {
    display : flex;
    justify-content : space-between;
    margin : 28px 0 0 0;
 }
 
+/* .info {
+   display : flex;
+   justify-content : space-between;
+   margin : 28px 0 0 0;
+}
+ */
 /* .info h4, h5 {
    margin : 28px 0 0 0;
 }
@@ -99,7 +105,7 @@ body {
    /* padding : 0 0 28px 0; */
 }
 
-.info:last-child {
+#start-info {
 	margin-bottom : 28px;
 }
 
@@ -161,7 +167,7 @@ button {
    color : #fbfcfc;
 }
 
-#overlay {
+#overlay1, #overlay2 {
    display: none;
     position: fixed;
     top: 0;
@@ -172,7 +178,7 @@ button {
     z-index: 999; 
 }
 
-#popup-wrapper {
+#popup-wrapper1, #popup-wrapper2 {
    position : fixed;
     top: 50%;
     left: 50%;

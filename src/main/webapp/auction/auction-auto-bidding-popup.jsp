@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-bidding-popup.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/auction/auction-auto-bidding-popup.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<title>경매 응찰 팝업</title>
+<title>경매 자동응찰 팝업</title>
 </head>
 <body>
 	<div id="wrapper">
 	   <div id="pop-up">
 	      <!-- 팝업 상단바 x 아이콘 -->
-	      <div class="bar" onclick="closePopup2()">
+	      <div class="bar" onclick="closePopup1()">
 	      	<img src="../assets/images/auction/close.png" alt="x" />
 	      </div>
 	      
@@ -20,7 +20,7 @@
 	         <div class="popup-left">
 	            <div class="info">
 	               <h4>당황한 동상</h4>
-	               <h4>경매중</h4>
+	               <h4>자동응찰 경매중</h4>
 	            </div>
 	            <div class="info">
 	               <h4>마감시간</h4>
@@ -68,7 +68,7 @@
 		          </div>
 		         </form>
 		          <div>
-		             <button class="back" onclick="closePopup2()">돌아가기</button>
+		             <button class="back" onclick="closePopup1()">돌아가기</button>
 		          </div>
 		       </div>
 	       </div>

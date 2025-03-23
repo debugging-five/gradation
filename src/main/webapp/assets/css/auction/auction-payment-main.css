@@ -54,13 +54,26 @@ body {
 	margin : 0 4px;
 }
 
-.list {
+.auto-list {
 	display : flex;
 	width : 480px;
 	margin : 0 0 50px 0;
 	border-bottom : solid 1px var(--color-gray900);
 	padding : 0 0 7px 0;
 }
+
+.list {
+	display : flex;
+	width : 480px;
+/* 	margin : 0 0 50px 0;  */
+	border-bottom : solid 1px var(--color-gray900);
+	padding : 0 0 7px 0;
+}
+
+#list-wrapper {
+	margin : 0 0 50px 0;
+}
+
 
 .list2 {
 	display : flex;
@@ -88,7 +101,7 @@ body {
  	width : 480px; 
 } */
  
-.list h5 {
+.auto-list h5 {
 	margin : 0 0 0 67px;
 }
 
@@ -215,6 +228,20 @@ input[type='checkbox']:checked+label{
 	font-size : var(--font-size-h9);
 	font-weight : var(--font-weight-light);
 }
+
+
+p.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    visibility: hidden; /* 기본적으로 안 보이지만 자리 차지 */
+    height: 14px; /* 메시지가 없을 때도 일정 높이 유지 */
+}
+p.error-message.active {
+    visibility: visible; /* 오류 발생 시 보이게 설정 */
+}
+
+
 
 
 
