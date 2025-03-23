@@ -58,7 +58,7 @@
 						<span class="star">*</span>
 						<input id="address" type="text" placeholder="주소를 입력하세요." />
 					</div>
-						<p id="address-error" class="error-message">*필수 항목입니다</p>
+						<p id="address-error">*필수 항목입니다</p>
 				</div>
 				
 				<!-- 전화번호 -->

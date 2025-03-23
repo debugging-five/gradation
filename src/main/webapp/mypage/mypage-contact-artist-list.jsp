@@ -55,7 +55,7 @@
 						</div>
 					</div>
 				</div>
-				<form action="" method="post">
+				<form action="mypage-contact-artist-write.mypage" method="post">
 					<button id="add-faq">등록</button>
 				</form>
 			</div>
