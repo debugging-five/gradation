@@ -6,9 +6,15 @@
 }
 
 header {
-    background-color: #FBFCFC;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+    background-color: var(--color-gray100);
     height: 56px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* 헤더가 맨위에 */
 }
 
 nav {
@@ -17,75 +23,92 @@ nav {
     height: 100%;
 }
 
+/* 화면 내릴 때 */
+.nav-up {
+    transform: translateY(-100%);
+}
+
+/* 화면 올릴 때 */
+.nav-down {
+    transform: translateY(0);
+}
+
 .headerLogo-wrap {
     margin: 11px 52px;
-   display: flex;
+    display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
 #headerLogo {
-   width: 96px;
+    width: 96px;
     height: 34px;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 60px; /* 메뉴 간 간격 */
 }
 
 .menu li {
-    position: relative; /* 드롭다운 위치 조절 */
+    position: relative;
 }
 
 .menu li a {
     text-decoration: none;
-    color: #6E7476;
+    color: var(--color-gray900);
     font-size: 19px;
-    font-weight: normal;
+    font-weight: var(--font-weight-regular);
 }
 
 .menu li a:hover {
     text-decoration: underline;
-    color: #EE3333;
+    color: var(--color-primary);
 }
 
-/* 드롭다운 */
+/* 전체 드롭다운*/
 .dropdown {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 48px; /* 헤더라인에서 8px */
-    left: 50%; /* 중앙 정렬 */
-    transform: translateX(-50%); /* 정확한 중앙 정렬 */
-    background-color: #FBFCFC;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-gray100);
     list-style: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    border: 0.1px solid #C0C5C7;
-    padding: 10px;
+    border-radius: 3px;
+    border: 0.1px solid var(--color-gray500);
+    padding: 8px 16px; /* 메뉴 위 아래 간격 */
     transition: visibility 0.2s ease, opacity 0.2s ease;
 }
-/* 드롭다운 내부 스타일 */
+
+/* 드롭다운 항목 스타일 */
 .dropdown li {
     padding: 10px;
 }
 
+/* 피그마대로 하면 너무 큼 
+.dropdown li + li {
+    margin-top: 20px;
+}
+ */
+ 
 .dropdown li a {
-    color: #6E7476;
+    color: var(--color-gray900);
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: none !important;
     display: block;
-    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    white-space: nowrap;
 }
 
 .dropdown li a:hover {
-    background-color: #FBFCFC;
-    color: #EE3333;
+    background-color: var(--color-gray100);
+    color: var(--color-primary);
 }
 
-/* 마우스를 올렸을 때 드롭다운 표시 */
+/* 드롭다운 */
 .menu li:hover > .dropdown,
 .menu li:focus-within > .dropdown,
 .dropdown:hover {
@@ -93,33 +116,61 @@ nav {
     opacity: 1;
 }
 
-/* 대학교 전시회 드롭다운 */
+/* exhibition */
 .sub-dropdown {
-    padding: 0px 0px 0px 10px;
-    list-style: "-";
+    margin: 0px 0px 0px 12px;
+    list-style: "- ";
 }
 
-/* 로그인 섹션 */
+.sub-dropdown li {
+    padding: 8px 0;	/* 위아래 여백 줄이기 */
+    margin: 0;	/* margin 제거 */
+    line-height: 1;	 /* 줄 간격도 줄이기 */
+}
+
+.sub-dropdown li + li {
+    margin-top: 2px;	/* 항목 사이 간격 최소화 */
+}
+
 .login-section {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding-right: 13px;
+    margin-right: 52px;
+    position: relative;
 }
 
 .headerSearch {
     height: 16px;
-    cursor: pointer; /* 일단 클릭 되는 척 */
-    margin-right: 54px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.sign-in-wrap {
+    position: relative;
 }
 
 .sign-in {
     text-decoration: none;
-    color: #6E7476;
+    color: var(--color-gray900);
     font-size: 19px;
-    font-weight: normal;
+    font-weight: var(--font-weight-regular);
 }
 
 .sign-in:hover {
-    color: #EE3333;
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+.sign-in-wrap .dropdown {
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+/* sign-in-wrap 호버 시 드롭다운*/
+.sign-in-wrap:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
 }

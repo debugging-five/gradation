@@ -5,7 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/layout/header.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>header</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +20,7 @@
             <ul class="menu">
             
                 <!-- display -->
-                <li id="category1"><a href="#">display</a>
+                <li><a href="#">display</a>
                    <ul class="dropdown">
                       <!-- display 드롭다운 -->
                       <li><a href="#">전시 중인 작품</a></li>
@@ -28,10 +30,10 @@
                 </li>
                 
                 <!-- artist -->
-                <li id="category2"><a href="#">artist</a></li>
+                <li><a href="#">artist</a></li>
                 
                 <!-- auction -->
-                <li id="category3"><a href="#">auction</a>
+                <li><a href="#">auction</a>
                    <ul class="dropdown">
                       <!-- auction 드롭다운 -->
                       <li><a href="#">경매중</a></li>
@@ -41,7 +43,7 @@
                 </li>
                 
                 <!-- exhibition -->
-                <li id="category4"><a href="#">exhibition</a>
+                <li><a href="#">exhibition</a>
                    <ul class="dropdown">
                       <!-- exhibition 드롭다운 -->
                       <li><a href="#">그라데이션 전시회</a></li>
@@ -55,7 +57,7 @@
                 </li>
                 
                 <!-- upcycling -->
-                <li id="category5"><a href="#">upcycling</a>
+                <li><a href="#">upcycling</a>
                    <ul class="dropdown">
                       <!-- upcycling 드롭다운 -->
                       <li><a href="#">업사이클</a></li>
@@ -64,12 +66,21 @@
                 </li>
             </ul>
             <div class="login-section">
-               <img class="headerSearch"  src="../assets/images/layout/header/headerSearch.png" alt="search">
-               <a href="#" class="sign-in">sign in</a>
-         </div>
+			    <img class="headerSearch" src="../assets/images/layout/header/headerSearch.png" alt="search">
+			
+			    <!-- sign in 드롭다운 -->
+			    <div class="sign-in-wrap">
+			        <a href="#" class="sign-in">sign in</a>
+			        <ul class="dropdown">
+			            <li><a href="#">마이페이지</a></li>
+			            <li><a href="#">고객센터</a></li>
+			        </ul>
+			    </div>
+			</div>
         </nav>
     </header>
 </body>
+<script type="text/javascript" src="../assets/js/layout/header.js"></script>
 </html>
 
 
