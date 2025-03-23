@@ -9,34 +9,29 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.UserDAO;
-import com.app.logic.MailSend;
-import com.app.logic.MakeCode;
 
-public class UserLoginFindSendEmailController implements Action {
+public class UserLoginFindSendEmailOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		HttpSession session = req.getSession();
-		MailSend ms = new MailSend();
-		MakeCode mc = new MakeCode();
-		UserDAO userDAO = new UserDAO();
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
-		String mailCode = mc.codeSix();
+		String mailCode = req.getParameter("mailCode");
+		String userCode = req.getParameter("userCode");
 		
-//		이메일과 이름 유저 존재여부
-		session.setAttribute("mailCode", mailCode);
-		
-		ms.sendMail(userEmail,mailCode);
-//		존재 안함
-		session.setAttribute("mailCode", "false");
+		if(mailCode.equals(userCode)) {
+			req.setAttribute("isComplete", "true");
+		}else {
+			req.setAttribute("isComplete", "false");
+		}
 		session.setAttribute("userName", userName);
 		session.setAttribute("userEmail", userEmail);
+		session.setAttribute("userCode", userCode);
 		
 		result.setRedirect(true);
-		result.setPath("login-id-find.user");
+		result.setPath("login-find-id.user");
 		return result;
 	}
 
