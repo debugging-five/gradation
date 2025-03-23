@@ -81,6 +81,7 @@ body {
 
 #bar-left {
 	margin : 0 0 16px 0;
+	display : flex;
 }
 
 .bar-menu {
@@ -88,10 +89,26 @@ body {
 }
 
 select {
+	background-color : var(--color-gray100);
 	border : none;
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
 	font-family: var(--font-family-Pretendard-Regular);
+}
+
+#area-dropdown {
+	width : 73px;
+	margin : 0 36px 0 24px;
+}
+
+#state-dropdown {
+	margin : 0 32px 0 0;
+	width : 72px;
+}
+
+#my-pick {
+	margin : 0 15px 0 0;
+	width : 56px;
 }
 
 /* 
@@ -106,21 +123,20 @@ i.fa-angle-down {
 }
  */
  
- 
-#bar-right {
-	margin : 0 0 0 38px;
-}
 
 #bar-right input {
 	width : 184px;
 	height : 29px;
 	border : solid 1px #6e7476;
 	border-radius : 3px;
+	background-color : var(--color-gray100);
+	font-family: var(--font-family-Pretendard-Regular);
 }
 
 #bar-right input::placeholder {
 	padding : 0 0 0 12px;
-	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h9);
+	font-weight : var(--font-weight-light);
 }
 
 #list-content p {

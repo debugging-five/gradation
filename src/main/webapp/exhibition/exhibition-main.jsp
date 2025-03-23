@@ -36,7 +36,7 @@
 			<div id="bar">
 				<div id="bar-left">
 <!-- 					<span class="bar-menu">전체 지역</span> -->
-					
+					<div id="area-dropdown">
 						<select id="area" name="area">
 							<option value="area">전체 지역</option>
 							<option value="area1">서울</option>
@@ -55,17 +55,25 @@
 							<option value="area14">광주</option>
 							<option value="area15">제주</option>
 						</select>
+					</div>
 
 					<!-- <span class="bar-menu">전시 상태</span> -->
-					<select id="state" name="state">
-						<option value="state">전시 상태</option>
-						<option value="state1">예정 전시</option>
-						<option value="state2">진행 전시</option>
-					</select>
-					<span>My pick</span>
+					<div id="state-dropdown">
+						<select id="state" name="state">
+							<option value="state">전시 상태</option>
+							<option value="state1">예정 전시</option>
+							<option value="state2">진행 전시</option>
+						</select>
+					</div>
+					
+					<div id="my-pick">
+						<p>My pick</p>
+					</div>
+					
 				</div>
 				<div id="bar-right">
 					<input type="text" placeholder="대학교를 검색하세요." />
+<!-- 					<img src="../assets/images/exhibition/search.png" alt="돋보기" /> -->
 				</div>
 			</div>
 			

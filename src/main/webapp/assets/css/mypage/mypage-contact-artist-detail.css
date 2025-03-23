@@ -39,14 +39,16 @@ body {
 	font-weight : var(--font-weight-light);
 }
 
-#contact-title {
+#title-wrapper {
 	border-top : solid 1px var(--color-primary);
 	border-bottom : solid 1px var(--color-primary);
 	margin : 7px 0 25px 0;
 }
 
-#contact-title h3 {
+#contact-title {
 	margin : 38px 0;
+	display : flex;
+	justify-content : space-between;
 }
 
 #writer-info {
@@ -91,6 +93,35 @@ body {
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
 }
+
+
+#button-wrapper {
+	display : flex;
+	gap : 20px;
+	margin : 70px 0 0 0;
+	justify-content : flex-end;
+}
+
+button {
+	width : 120px;
+	height : 45px;
+	border : solid 1.5px var(--color-primary);
+	border-radius : 3px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h5);
+	font-weight : var(--font-weight-semibold);
+}
+
+#list-button, #delete-button {
+	background-color : var(--color-gray100);
+	color : var(--color-primary);
+}
+
+#modify-button {
+	background-color : var(--color-primary);
+	color : var(--color-gray100);
+}
+
 
 
 
