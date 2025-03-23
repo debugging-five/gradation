@@ -19,13 +19,13 @@ nav {
 
 .headerLogo-wrap {
     margin: 11px 52px;
-	display: flex;
+   display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
 #headerLogo {
-	width: 96px;
+   width: 96px;
     height: 34px;
 }
 

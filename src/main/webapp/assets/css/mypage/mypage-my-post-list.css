@@ -41,6 +41,7 @@ input:focus {
   width: 1920px;
 }
 
+
 .mypage-post-list .flex-row {
   align-items: flex-start;
   display: flex;
@@ -95,7 +96,9 @@ input:focus {
 
 .mypage-post-list .reception-post {
   align-items: flex-end;
-  background-color: var(--color-gray500);
+  background-color: var(--color-gray100);
+  border: 1px solid;
+  border-color: var(--color-gray500);
   display: flex;
   height: 50px;
   left: 0;
@@ -119,9 +122,7 @@ input:focus {
 
 .mypage-post-list .send-post {
   align-items: flex-start;
-  background-color: var(--color-gray100);
-  border: 1px solid;
-  border-color: var(--color-gray500);
+  background-color: var(--color-gray500);
   display: flex;
   height: 50px;
   left: 399px;

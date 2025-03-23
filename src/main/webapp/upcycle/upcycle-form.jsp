@@ -49,7 +49,8 @@
             <div class="image">
               <div class="overlap-group" id="upload-container">
                 <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="preview-image(event)">
-                <img id="preview-image" class="preview-image" src="../assets/images/upcycle/upcycle-form/add-four-2@2x.png" alt="preview-image"/>
+                <img id="preview-image" class="preview-image" src="../assets/images/upcycle/upcycle-form/preview
+                .png" alt="preview-image"/>
                 <div class="text-upload" id="text-upload">
                   첨부파일 업로드
                 </div>
@@ -78,7 +79,7 @@
               </div>
               <img
                 class="line"
-                src="../assets/images/upcycle/upcycle-form/line-107-11@2x.png"
+                src="../assets/images/upcycle/upcycle-form/line-4.png"
                 alt="Line 107"
               />
             </div>
@@ -103,8 +104,8 @@
               </div>
               <img
                 class="line"
-                src="../assets/images/upcycle/upcycle-form/line-107-11@2x.png"
-                alt="Line 107"
+                src="../assets/images/upcycle/upcycle-form/line-4.png"
+                alt="Line 4"
               />
             </div>
             <div class="email">
@@ -127,8 +128,8 @@
               </div>
               <img
                 class="line"
-                src="../assets/images/upcycle/upcycle-form/line-107-11@2x.png"
-                alt="Line 107"
+                src="../assets/images/upcycle/upcycle-form/line-4.png"
+                alt="Line 4"
               />
             </div>
             <div class="phone">
@@ -151,8 +152,8 @@
               </div>
               <img
                 class="line"
-                src="../assets/images/upcycle/upcycle-form/line-107-11@2x.png"
-                alt="Line 107"
+                src="../assets/images/upcycle/upcycle-form/line-4.png"
+                alt="Line 4"
               />
             </div>
             <div class="pickup-date">
@@ -172,7 +173,7 @@
                 </div>
                 <img
                   class="calendar"
-                  src="../assets/images/upcycle/upcycle-form/mdi-light-calendar-2@2x.png"
+                  src="../assets/images/upcycle/upcycle-form/calendar.png"
                   alt="calendar"
                 />
                 <div class="text-calendar">
@@ -181,7 +182,7 @@
               </div>
               <img
                 class="line"
-                src="../assets/images/upcycle/upcycle-form/line-107-11@2x.png"
+                src="../assets/images/upcycle/upcycle-form/line-4.png"
                 alt="Line 108"
               />
             </div>
@@ -214,8 +215,8 @@
                       type="text"
                     /><img
                       class="line-1"
-                      src="../assets/images/upcycle/upcycle-form/line-107-10@2x.png"
-                      alt="Line 107"
+                      src="../assets/images/upcycle/upcycle-form/line-3.png"
+                      alt="Line 3"
                     />
                   </div>
                   <div class="text-20">개</div>
@@ -229,7 +230,7 @@
                       type="text"
                     /><img
                       class="line-1"
-                      src="../assets/images/upcycle/upcycle-form/line-107-10@2x.png"
+                      src="../assets/images/upcycle/upcycle-form/line-3.png"
                       alt="Line 108"
                     />
                   </div>
@@ -239,7 +240,7 @@
                   <div class="overlap-group-2">
                     <img
                       class="line-2"
-                      src="../assets/images/upcycle/upcycle-form/line-107-10@2x.png"
+                      src="../assets/images/upcycle/upcycle-form/line-3.png"
                       alt="Line 109"
                     />
                     <input

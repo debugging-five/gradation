@@ -51,6 +51,8 @@ body {
 
 .star {
 	color: var(--color-primary);
+	font-size: var(--font-size-h5);
+	margin-bottom: 10px;
 }
 
 #calendar{
