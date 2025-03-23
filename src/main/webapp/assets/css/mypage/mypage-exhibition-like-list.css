@@ -33,17 +33,17 @@ body {
 	margin : 50px 0 0 0;
 }
 
-#like-art {
+#like-exhibition {
 	width : 423px;
 	height : 50px;
 	background-color : var(--color-gray500);
 	border : solid 1px var(--color-gray500);
 	display : flex;
 	align-items : center;
-	justify-content : center;  
+	justify-content : center;
 }
 
-#like-exhibition {
+#like-art {
 	width : 423px;
 	height : 50px;
 	background-color : var(--color-gray100);
@@ -81,10 +81,6 @@ body {
 	align-items : center;
 	justify-content : center;  
 	color : var(--color-gray100);
-}
-
-.art-img:hover {
-	background-color : rgba(238, 51, 51, 0.8);
 }
 
 .like-count {
