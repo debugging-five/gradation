@@ -20,7 +20,7 @@ body {
 
 #auction-detail {
    width : 1160px;
-   margin : 70px auto 0 ;
+   margin : 70px 0 94px 0 ;
    gap : 120px;
 }
 
@@ -51,6 +51,10 @@ body {
    display : flex;
 }
 
+#auction-info {
+	height : 560px;
+}
+
 #auction-info1 {
    border-bottom : solid 1px #c0c5c7;
    width : 480px;
@@ -59,6 +63,7 @@ body {
 
 #title {
    font-size : 30px;
+   height : 36px;
 }
 
 .artist {
@@ -66,6 +71,7 @@ body {
     align-items: center; 
     gap: 10px;
     margin : 22px 0 0 0;
+    height : 25px;
 }
 
 #span {
@@ -74,7 +80,8 @@ body {
 }
 
 .etc {
-   margin : 19px 0 0 0;
+   margin : 19px 0;
+   height : 54px;
 }
 
 .etc p{
@@ -87,6 +94,7 @@ body {
    display : flex;
    justify-content : space-between;
    margin : 28px 0 0 0;
+   height : 24px;
 }
 
 /* .info {
@@ -105,6 +113,10 @@ body {
    /* padding : 0 0 28px 0; */
 }
 
+#auction-info2 p {
+	font-size : 16px;
+}
+
 #start-info {
 	margin-bottom : 28px;
 }
@@ -119,7 +131,8 @@ body {
 
 #deadline {
 	display : flex;
-	justify-content : space-between; 
+	justify-content : space-between;
+	height : 36px; 
 }
 
 
@@ -141,7 +154,7 @@ body {
 }
 
 #button-wrapper {
-   margin : 26px 0 200px 0;
+   margin : 26px 0 0 0;
    display : flex;
    gap : 60px;
 }
@@ -152,7 +165,7 @@ button {
    border-radius : 3px;
    border : solid 1.5px var(--color-primary);
    font-family: var(--font-family-Pretendard-Regular);
-      font-size : var(--font-size-h5);
+   font-size : var(--font-size-h5);
    font-weight : var(--font-weight-semibold);
 }
 
@@ -190,7 +203,7 @@ button {
 }
 
 #auction-list {
-   margin : 94px 0 0 0;
+   height : 269px;
 }
 
 #auction-ing {
@@ -215,6 +228,7 @@ button {
 #art-wrapper {
 	display : flex;
 	gap : 120px;
+	margin : 38px 0 0 0;
 }
 
 

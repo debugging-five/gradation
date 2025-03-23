@@ -48,15 +48,15 @@
 	         <div id="auction-info2">
 	            <div id="deadline-info">
 	               <h5>마감일</h5>
-	               <h4>2025 . 01 . 21 . 8:00:00</h4>
+	               <p>2025 . 01 . 21 . 8:00:00</p>
 	            </div>
 	            <div id="estimate-info">
 	               <h5>추정가</h5>
-	               <h4>KRW 1,000,000 ~ 2,000,000</h4>
+	               <p>KRW 1,000,000 ~ 2,000,000</p>
 	            </div>
 	            <div id="start-info">
 	               <h5>시작가</h5>
-	               <h4>KRW 500,000</h4>
+	               <p>KRW 500,000</p>
 	            </div>
 	         </div>
 	         
@@ -98,7 +98,6 @@
 			    <%@ include file="./auction-bidding-popup.jsp"%>
 			</div>    
 	      </div>
-	   </div>
 	   
 	
 	   <div id="auction-list">
@@ -120,8 +119,8 @@
 	         </div>
 	      </div>
 	   </div>
-	</div>
-
+   </div>
+	
 <%@ include file="../layout/footer.jsp" %>
 
 </body>
