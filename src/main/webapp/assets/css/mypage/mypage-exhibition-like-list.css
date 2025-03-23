@@ -33,7 +33,7 @@ body {
 	margin : 50px 0 0 0;
 }
 
-#like-art {
+#like-exhibition {
 	width : 423px;
 	height : 50px;
 	background-color : var(--color-gray500);
@@ -43,7 +43,7 @@ body {
 	justify-content : center;  
 }
 
-#like-exhibition {
+#like-art {
 	width : 423px;
 	height : 50px;
 	background-color : var(--color-gray100);
