@@ -22,9 +22,11 @@
 					<div id="like-art">
 						<h5>작품 좋아요</h5>
 					</div>
-					<div id="like-exhibition">
-						<h5>전시회 좋아요</h5>
-					</div>
+					<form action="mypage-exhibition-like-list.mypage" method="post">
+						<button id="like-exhibition">
+							<h5>전시회 좋아요</h5>
+						</button>
+					</form>
 				</div>
 				
 				<div class="art-list">

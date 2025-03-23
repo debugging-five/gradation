@@ -19,9 +19,11 @@
 				<h2 id="title">좋아요 / 전시회 좋아요</h2>
 				
 				<div id="like-type">
-					<div id="like-art">
-						<h5>작품 좋아요</h5>
-					</div>
+					<form action="mypage-art-like-list.mypage" method="post">
+						<button id="like-art">
+							<h5>작품 좋아요</h5>
+						</button>
+					</form>
 					<div id="like-exhibition">
 						<h5>전시회 좋아요</h5>
 					</div>
