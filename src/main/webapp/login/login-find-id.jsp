@@ -11,12 +11,14 @@
 <body>
 	<div class="find-id-container">
 		<h2>아이디 찾기</h2>
-		<form action="find-id" method="post">
-			input
+			<input type="hidden" id="is-complete" value="${sessionScope.isComplete}"/>
+			<input type="hidden" id="mail-code" value="${sessionScope.mailCode}" />
+			<input type="hidden" id="check-email" value="${sessionScope.checkEmail}"/>
+		<form action="login-find-id-ok.user" method="post">
 			<div>
 				<span>이름</span>
 				<span>*</span>
-				<input type="text" placeholder="이름을 입력하세요" value="${sessionScope.userName}">
+				<input id="user-name" type="text" placeholder="이름을 입력하세요" value="${sessionScope.userName}">
 			</div>
 			<div>
 				<span>이메일</span>
@@ -52,7 +54,7 @@
 					
 					<div>
 						<a href="./login-find-password.jsp">비밀번호 찾기</a>
-						<a href="./login-main.jsp">로그인</a>
+						<a href="./login-main.user">로그인</a>
 					</div>
 				</div>
 			</div>
