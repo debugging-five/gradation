@@ -161,21 +161,39 @@ i.fa-angle-down {
 	align-items : center;
 }
 
+.logo-img {
+	width : 84px;
+	height : 84px;
+}
+
 
 .university-info {
 	margin : 0 0 0 28px;
 }
 
+.university-info h6 {
+	height : 21px;
+}
+
 .info1 {
 	font-size : var(--font-size-h8);
 	font-weight : var(--font-weight-light);
+	height : 17px;
+	margin : 0 0 2px 0;
 }
 
 .info2 {
 	font-size : var(--font-size-h9);
 	font-weight : var(--font-weight-light);
 	color : var(--color-gray900);
+	height : 14px;
+	margin : 0 0 4px 0;
 }
+
+.major {
+	margin : 0 0 8px 0;
+}
+
 
 #img-background {
 	width : 560px;

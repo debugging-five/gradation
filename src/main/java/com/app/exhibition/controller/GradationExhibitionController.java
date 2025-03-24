@@ -17,5 +17,4 @@ public class GradationExhibitionController implements Action {
 		result.setPath("gradation-exhibition-main.jsp");
 		return result;
 	}
-
 }
