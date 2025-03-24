@@ -117,7 +117,7 @@
     
 	<div class="buttons">
 	    <button class="qna-button">문의하기</button>
-	    <a href="../upcycling/upcycling-form.upcycling">
+	    <a href="../upcycling/upcycling-form.upcycling"> 
 		    <button class="upcycling-form-button">업사이클 신청</button>
 	    </a>
 	</div>
