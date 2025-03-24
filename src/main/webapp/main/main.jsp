@@ -22,6 +22,10 @@
 		    <div class="image-box"><img src="../assets/images/main/main-image2.png" alt="main-image2"></div>
 		    <div class="image-box"><img src="../assets/images/main/main-image3.png" alt="main-image3"></div>
 		    <div class="image-box"><img src="../assets/images/main/main-image4.png" alt="main-image4"></div>
+		    <div class="image-box"><img src="../assets/images/main/main-image1.png" alt="main-image1"></div>
+		    <div class="image-box"><img src="../assets/images/main/main-image2.png" alt="main-image2"></div>
+		    <div class="image-box"><img src="../assets/images/main/main-image3.png" alt="main-image3"></div>
+		    <div class="image-box"><img src="../assets/images/main/main-image4.png" alt="main-image4"></div>
 		  </div>
 		</div>
 		<div id="main-text-wrap">
