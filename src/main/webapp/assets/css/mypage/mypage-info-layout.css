@@ -8,6 +8,7 @@
   min-height: 700px;
   width: 244px;
   position: relative;
+  z-index: 1;
 }
 
 .my-profile {
@@ -19,7 +20,6 @@
 .profile-container {
   display: flex;
   flex-direction: column;
-
 }
 
 .profile-image {
@@ -28,7 +28,6 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ddd;
-  cursor: pointer;
 }
 #profileUpload {
   display: none;
@@ -39,6 +38,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .profile-image input {
@@ -66,9 +66,10 @@
   margin-top: 45px;
   min-height: 138px;
   width: 244px;
+  border-bottom: solid 1.5px var(--color-gray900);
 }
 
-.text {
+.section {
   color: var(--color-black);
   font-weight: var(--font-weight-semibold);
   line-height: 24px;
@@ -91,7 +92,7 @@
   font-weight: var(--font-weight-regular);
 }
 
-.text-1 {
+.sidebar-link {
   color: var(--color-gray900);
   cursor: pointer;
   font-weight: var(--font-weight-regular);
@@ -101,13 +102,8 @@
   white-space: nowrap;
 }
 
-.text-1:hover {
+.sidebar-link:hover {
   color: var(--color-primary)
-}
-
-.line-12 {
-  margin-top: 14px;
-  width: 242px;
 }
 
 .my-perform {
@@ -116,7 +112,7 @@
   margin-top: 15px;
   min-height: 138px;
   width: 245px;
-  
+  border-bottom: solid 1.5px var(--color-gray900);
 }
 
 .perform {
@@ -132,19 +128,16 @@
   font-weight: var(--font-weight-regular);
 }
 
-.line-123 {
-  margin-top: 14px;
-  width: 243px;
-}
-
 .view-item {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   margin-left: 2px;
   margin-top: 15px;
+  padding-bottom: 15px;
   min-height: 104px;
   width: 244px;
+  border-bottom: solid 1.5px var(--color-gray900);
 }
 
 .history-auction-buy {
@@ -167,7 +160,7 @@
   width: 50px;
 }
 
-.text-22 {
+.sidebar-logout {
   color: var(--color-gray500);
   cursor: pointer;
   font-weight: var(--font-weight-regular);
@@ -177,8 +170,11 @@
   min-height: 19px;
   transition: all 0.2s ease;
   white-space: nowrap;
+  font-size: var(--font-size-h7);
+  line-height: var(--line-height-h7);
+  font-weight: var(--font-weight-regular);
 }
 
-.text-22:hover {
+.sidebar-logout:hover {
   color: var(--color-primary)
 }
