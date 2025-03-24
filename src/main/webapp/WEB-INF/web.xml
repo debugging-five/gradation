@@ -19,6 +19,37 @@
     <url-pattern>*.user</url-pattern>
   </servlet-mapping>
   
+  <!-- main -->
+  <servlet>
+    <servlet-name>MainFrontController</servlet-name>
+    <servlet-class>com.app.main.MainFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainFrontController</servlet-name>
+    <url-pattern>*.main</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Header -->
+  <servlet>
+    <servlet-name>HeaderFrontController</servlet-name>
+    <servlet-class>com.app.header.HeaderFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HeaderFrontController</servlet-name>
+    <url-pattern>*.header</url-pattern>
+  </servlet-mapping>
+  
+  <!-- display -->
+  <servlet>
+  	<servlet-name>DisplayFrontController</servlet-name>
+	<servlet-class>com.app.display.DisplayFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayFrontController</servlet-name>
+    <url-pattern>*.display</url-pattern>
+  </servlet-mapping>
+  
+  <!-- auction -->
   <servlet>
   	<servlet-name>AuctionFrontController</servlet-name>
 	<servlet-class>com.app.auction.AuctionFrontController</servlet-class>
@@ -28,6 +59,17 @@
     <url-pattern>*.auction</url-pattern>
   </servlet-mapping>
   
+  <!-- upcycling -->
+  <servlet>
+  	<servlet-name>UpcyclingFrontController</servlet-name>
+	<servlet-class>com.app.upcycling.UpcyclingFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuctionFrontController</servlet-name>
+    <url-pattern>*.upcycling</url-pattern>
+  </servlet-mapping>
+
+<!-- mypage -->  
   <servlet>
   	<servlet-name>MypageFrontController</servlet-name>
 	<servlet-class>com.app.mypage.MypageFrontController</servlet-class>

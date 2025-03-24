@@ -1,4 +1,4 @@
-package com.app.exhibition.controller;
+package com.app.main;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 
-public class ExhibitionFrontController extends HttpServlet {
-
+public class MainFrontController extends HttpServlet{
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -18,6 +18,16 @@ public class ExhibitionFrontController extends HttpServlet {
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		
+		
+		if(target.equals("mypage/mypage-contact-artist-list")) {
+		}else if(target.equals("mypage/mypage-contact-artist-write")) {
+		}else if(target.equals("auction/auction-payment-main")) {
+		}else {
+//			전부 404
+		}
+		
+		
 		
 		if(result != null) {
 			if(result.isRedirect()) {
@@ -32,4 +42,5 @@ public class ExhibitionFrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
+
 }

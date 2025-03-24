@@ -3,6 +3,7 @@ const popup2 = document.getElementById("popup-wrapper2");
 const overlay1 = document.getElementById("overlay1");
 const overlay2 = document.getElementById("overlay2");
 const body = document.querySelector('body');
+const listButton = document.getElementById("list-button");
 
 const openPopup1 = () => {
 	popup1.style.display = "block";
@@ -26,6 +27,10 @@ const closePopup2 = () => {
 	overlay2.style.display = "none";
 	body.style.overflow = "visible";
 }
+
+listButton.addEventListener("click", () => {
+	location.href = 'auction-main.auction'; 
+});
 
 
 
