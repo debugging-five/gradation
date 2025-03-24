@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin : 142px 0 0 0;
+}
+
+#container {
+	width: 1160px;
+	display: flex;
+	gap: 120px;
+}
+
+#category {
+	width: 242px;
+	height: 875px;
+} 
+
+#title {
+	margin-bottom: 50px;
+}
+
+#user-info {
+	width : 800px;
+	display : flex;
+	justify-content : space-between; 
+	margin : 0 0 7px 0;
+}
+
+input {
+	width : 225px;
+	height : 32px;
+	border : solid 1px var(--color-gray900);
+	border-radius : 2px;
+	background-color : var(--color-gray100);
+	font-family: var(--font-family-Pretendard-Regular);
+}
+
+input::placeholder {
+	padding : 0 0 0 8px;
+}
+
+button {
+	width : 75px;
+	height : 35px;
+	background-color : var(--color-primary);
+	color : var(--color-gray100);
+	border : solid 1px var(--color-primary);
+	border-radius : 2px;
+	font-family: var(--font-family-Pretendard-Regular);
+	margin : 0 0 0 20px;
+}
+
+input {
+	width : 225px;
+	height : 32px;
+}
+
+#checkbox {
+	width : 20px;
+	height : 20px;
+}
+
+#list-wrapper {
+	margin : 0 0 200px 0;
+}
+
+#list {
+	border-top : solid 1px var(--color-gray900);
+	border-bottom : solid 1px var(--color-gray900);
+	height : 50px;
+	width : 800px;
+}
+
+#list-item {
+	display : flex;
+	align-items : center; 
+	margin : 13px 0;
+}
+
+#name {
+	width : 32px;
+	height : 24px;
+	margin : 0 0 0 40px;
+}
+
+#id {
+	width : 47px;
+	height : 24px;
+	margin : 0 0 0 100px;
+}
+
+#phone {
+	width : 63px;
+	height : 24px;
+	margin : 0 0 0 140px;
+}
+
+#state-manage {
+	height : 24px;
+	margin : 0 0 0 100px;
+}
+
+#state {
+	width : 63px;
+	height : 24px;
+	margin : 0 0 0 62px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label{
+	margin : 0 0 0 10px;
+	display: flex; 
+	align-items : center;
+	height: 20px;
+	width : 20px;
+	background: url('../../images/mypage/admin-user-manage/check1.png') no-repeat 0 0px / contain;
+	cursor: pointer;
+}
+
+input[type='checkbox']:checked+label{
+	background: url('../../images//mypage/admin-user-manage/check2.png') no-repeat 0 0px / contain;
+}
+
+#user-list-wrapper {
+	border-bottom : solid 1px var(--color-gray900);
+}
+
+#user-list {
+	display : flex;
+	align-items : center; 
+	margin : 25px 0;
+}
+
+#user-list p {
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
+	height : 19px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+#user-name {
+	width : 100px;
+	margin : 0 0 0 6px;
+}
+
+#user-id {
+	width : 180px;
+}
+
+#user-phone {
+	width : 210px;
+}
+
+select {
+	width : 75px;
+	height : 35px;
+	background-color : var(--color-gray100);
+	border-radius : 2px;
+}
+
+option {
+	text-align : center;
+	font-weight : var(--font-weight-regular);
+	font-size : var(--font-size-h7);
+	font-family: var(--font-family-Pretendard-Regular);
+}
+
+#area-dropdown {
+	width : 145px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+#user-state {
+	width : 130px;
+}
+
+.ban-comment {
+	color : var(--color-warning);
+}
+
+.ban-all {
+	color : var(--color-primary);
+}
+
+
