@@ -91,7 +91,7 @@ body {
 #contact-content {
 	width : 800px;
 	height : 240px;
-	margin : 25px 0 70px 0;
+	margin : 25px 0 60px 0;
 }
 
 #contact-content p {
@@ -115,16 +115,23 @@ button {
 	font-size : var(--font-size-h5);
 }
 
-#list-button, #delete-button {
+#list-button {
 	background-color : var(--color-gray100);
 	color : var(--color-primary);
 }
 
-#modify-button {
+#answer-button {
 	background-color : var(--color-primary);
 	color : var(--color-gray100);
 }
 
+#reply-wrap > h5 {
+	margin: 50px 0 4px 0;
+}
+
+.star {
+	color: var(--color-primary);
+}
 
 
 #reply-wrap {
@@ -140,7 +147,7 @@ button {
 	padding: 4px;
 	font-size: var(--font-size-h7);
 	border: 1.5px solid var(--color-gray500);
-	border-radius: 2px;
+	border-radius: 3px;
 	resize: none;
 }
 
@@ -157,6 +164,7 @@ button {
 	font-size: var(--font-size-h5);
 	font-family: var(--font-family-Pretendard-Regular);
 	cursor: pointer;
+	margin-top: 60px;
 }
 
 #cancel {
