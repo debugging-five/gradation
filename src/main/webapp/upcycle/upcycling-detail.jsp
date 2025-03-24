@@ -117,7 +117,7 @@
     
 	<div class="buttons">
 	    <button class="qna-button">문의하기</button>
-	    <button class="upcycle-form-button" onclick="location.href='upcycling-form.jsp'">업사이클 신청</button>
+	    <button class="upcycle-form-button" onclick="location.href='upcycle-form.jsp'">업사이클 신청</button>
 	</div>
     
 

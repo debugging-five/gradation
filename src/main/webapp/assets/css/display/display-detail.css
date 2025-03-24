@@ -26,7 +26,7 @@
     	background-color: gray;
         width: 560px;
         height: 560px;
-        margin-right: 120px; 
+        margin-right: 120px;  
         
     }
     
@@ -45,6 +45,8 @@
 .button-position {
     margin-top: 20px;  /* 버튼이 이미지와 겹치지 않도록 여백 추가 */
 }
+
+
     
 /* 텍스트 */
   .title {
@@ -125,6 +127,7 @@
 }
 
 
+
 .textarea-container {
 	width: 1160px; 
 	height: 177px; 
@@ -162,8 +165,14 @@
 
 
 
+
+
+
+.user {
+	margin-top: 72px;
+}
+
 .user-profile {
-    margin-top: 72px;
     display: flex;
 }
 .comment-user {
@@ -208,6 +217,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    display: block;
 }
 .comment-like-icon {
     width: 20px;
@@ -230,6 +240,7 @@
     position: relative;
     display: inline-block;
     margin-left: 855px;
+    display: block;
 }
 
 .dropdown-btn {
@@ -242,7 +253,6 @@
 .dropdown-menu {
     position: absolute;
     top: 125%;
-    right: -100px;
     transform: translateY(-50%);
     background: white;
     border: 1px solid #ccc;
@@ -250,6 +260,7 @@
     list-style: none;
     display: none; /* 기본적으로 숨김 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .dropdown-menu li {
@@ -317,6 +328,57 @@
     display: block;
 }
 
+
+/* 댓글 수정하기 */
+#answer-input {
+    width: 1150px; 
+    height: 200px; 
+    padding: 4px;
+    margin-top: 8px;
+    display: none;
+    border: none;
+    font-size: var(--font-size-h7);
+    border-radius: 2px;
+}
+#answer-input1{
+	position: relative;
+	border: solid 1.5px;
+    width: 1160px; 
+    height: 280px; 
+    display: none; /* 추가 */	
+    right: 35px;
+    margin-top: 8px;
+}
+.fix-comment {
+	display: flex;
+	flex-direction: column;
+}
+.fix-buttons {
+	text-align: right;
+    position: relative;
+    top: 28px;
+    right: 5px;
+}
+#cancel-faq {
+	display: none;
+	width: 75px;
+	height: 35px;
+	background-color: var(--color-gray100);
+	color: var(--color-primary);
+	font-size: var(--font-size-h5);
+	border: solid 1.5px;
+	border-radius: 3px;
+}
+#save-faq {
+	display: none;
+	width: 75px;
+	height: 35px;
+	background-color: var(--color-primary);
+	color: var(--color-gray100);
+	font-size: var(--font-size-h5);
+	border: solid 1.5px;
+	border-radius: 3px;
+}
 
 
 
