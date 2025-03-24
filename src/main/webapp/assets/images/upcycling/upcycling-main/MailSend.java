@@ -16,9 +16,9 @@ import javax.mail.internet.MimeMessage.RecipientType;
 import javax.mail.internet.MimeMultipart;
 
 public class MailSend {
-   public void sendMail(String address, String text) {
+	public void sendMail(String address, String text) {
 
-      // 메일 인코딩
+		// 메일 인코딩
         final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
         
         //원하는 메일 제목 작성
@@ -87,5 +87,6 @@ public class MailSend {
         } catch ( Exception e ) {
           e.printStackTrace();
         }
-   }
+	}
 }
+
