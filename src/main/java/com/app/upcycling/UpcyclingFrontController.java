@@ -14,6 +14,7 @@ import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
 import com.app.upcycling.controller.UpcyclingFormController;
+import com.app.upcycling.controller.UpcyclingMainController;
 
 public class UpcyclingFrontController extends HttpServlet{
 	
@@ -28,7 +29,8 @@ public class UpcyclingFrontController extends HttpServlet{
 		
 		if(target.equals("upcycling/upcycling-form")) {
 			result = new UpcyclingFormController().execute(req, resp);
-		}else if(target.equals("")) {
+		}else if(target.equals("upcycling/upcycling-main")) {
+			result = new UpcyclingMainController().execute(req, resp);
 		}else if(target.equals("")) {
 		}else if(target.equals("")) {
 		}else if(target.equals("")) {
