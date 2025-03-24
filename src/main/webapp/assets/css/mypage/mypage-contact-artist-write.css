@@ -56,6 +56,7 @@ body {
 
 input {
 	border : none;
+	outline : none;
 	background-color : var(--color-gray100);
 	font-family: var(--font-family-Pretendard-Regular);
 
@@ -64,8 +65,6 @@ input {
 input::placeholder {
 	color : var(--color-gray900);
 	font-size : var(--font-size-h7);
-	display : flex;
-	text-align : center;
 }
 
 .input-title {
