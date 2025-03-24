@@ -20,11 +20,11 @@
             <ul class="menu">
             
                 <!-- display -->
-                <li><a href="/gradation/display/display-main.display">display</a>
+                <li><a href="/gradation/display/display-main-ing.display">display</a>
                    <ul class="dropdown">
                       <!-- display 드롭다운 -->
-                      <li><a href="#">전시 중인 작품</a></li>
-                      <li><a href="#">전시 예정인 작품</a></li>
+                      <li><a href="/gradation/display/display-main-ing.display">전시 중인 작품</a></li>
+                      <li><a href="/gradation/display/display-main-comming-soon.display">전시 예정인 작품</a></li>
                       <li><a href="#">작품 업로드</a></li>
                    </ul>
                 </li>
