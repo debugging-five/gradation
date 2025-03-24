@@ -74,7 +74,7 @@
 							<span class="h5-text-black">이메일</span><span class="h4-text-black">${sessionScope.userEmail}</span>
 						</div>
 						<div id="id-button-wrap">
-							<button class="next-page-button" onclick="location.href='./login-find-password.jsp'">비밀번호 찾기</button>
+							<button class="next-page-button" onclick="location.href='./login-find-password.user'">비밀번호 찾기</button>
 							<button class="next-page-button" id="go-login" onclick="location.href='./login-main.user'">로그인</button>
 						</div>
 					</div>
