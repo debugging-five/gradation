@@ -13,6 +13,8 @@ import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
+import com.app.mypage.controller.MypageAdminQnaListCompleted;
+import com.app.mypage.controller.MypageAdminQnaListWaiting;
 import com.app.mypage.controller.MypageArtLikeListController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
@@ -37,7 +39,10 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageArtLikeListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-exhibition-like-list")) {
 			result = new MypageExhibitionLikeListController().execute(req, resp);
-	
+		}else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
+			result = new MypageAdminQnaListWaiting().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
+			result = new MypageAdminQnaListCompleted().execute(req, resp);
 		}else {
 //			전부 404
 		}
