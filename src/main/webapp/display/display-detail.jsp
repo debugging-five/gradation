@@ -28,7 +28,7 @@
         <!-- 좋아요 / 작가와 연락 버튼 -->
         <div class="button-position">
             <button class="like-button">좋아요</button>
-            <a href="../upcycle/upcycling-detail.jsp">
+            <a href="../mypage/mypage-contact-artist-write.mypage">
                 <button class="contact-button">작가와 연락</button>
             </a>
         </div>
