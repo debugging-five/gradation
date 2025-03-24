@@ -38,4 +38,14 @@ import com.app.vo.UserVO;
 		}
  		return isBan;
  	}
+ 	
+// 	아이디찾기
+ 	public String selectIdByEmailAndName(UserVO userVO) {
+ 		String result = null;
+ 		try {
+			result = sqlSession.selectOne("user.selectIdByEmailAndName", userVO);
+		} catch (Exception e) {
+		}
+ 		return result;
+ 	}
  }

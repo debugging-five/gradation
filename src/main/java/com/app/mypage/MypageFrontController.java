@@ -19,6 +19,7 @@ import com.app.mypage.controller.MypageArtLikeListController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
+import com.app.mypage.controller.MypageMainController;
 
 public class MypageFrontController extends HttpServlet{
 	
@@ -30,8 +31,9 @@ public class MypageFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		
-		if(target.equals("mypage/mypage-contact-artist-list")) {
+		if(target.equals("mypage/mypage-main")) {
+			result = new MypageMainController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-contact-artist-list")) {
 			result = new MypageContactListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {
 			result = new MypageContactWriteController().execute(req, resp);

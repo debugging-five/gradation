@@ -398,5 +398,4 @@ joinButton.addEventListener("click", () => {
 		needEmailCheck.classList.remove("need-write");		
 		needEmailCheckValidate.classList.remove("need-write");
 	}
-	console.log(emailChecked.value)
 })
