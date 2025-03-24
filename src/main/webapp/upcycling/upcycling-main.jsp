@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/upcycle/upcycling-detail.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/upcycling/upcycling-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>업사이클 메인</title>
 <%@ include file="../layout/header.jsp" %>
@@ -17,7 +17,7 @@
     <!-- 배너 -->
     <div>
     	<div class="banner">
-	    	<img alt="banner" src="../assets/images/upcycle/upcycling-detail/banner.png" >
+	    	<img alt="banner" src="../assets/images/upcycling/upcycling-main/banner.png" >
     	</div>
 		    <h1 class="title-1">"창작의 흔적이 환경과 미래를 망치는 폐기물이 되지 않도록."</h1>
 		    <h1 class="title-2">"이제는 변화를 만들어야 할 때 입니다."</h1>
@@ -27,20 +27,20 @@
     <!-- 스크롤 -->
     <div class= "chepter-1">
 		<h1 class= "chepter-1-text">"아름다움 뒤에 숨겨진 환경 문제"</h1>	
-		<img alt="banner" src="../assets/images/upcycle/upcycling-detail/chepter-1.png">
+		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-1.png">
     </div>
 
     <div class= "chepter-2">
-		<img alt="banner" src="../assets/images/upcycle/upcycling-detail/chepter-2.png">
+		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-2.png">
     </div>
     
 	<h1 class= "chepter-3-title">“폐기물이 새 생명을 얻는 순환의 과정”</h1>	
     <div class= "chepter-3">
-		<img alt="banner" src="../assets/images/upcycle/upcycling-detail/chepter-3-1.png">
+		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-3-1.png">
 		<p class="chepter-3-content">재생 캔버스, 친환경 에코백</p>
-		<img alt="banner" src="../assets/images/upcycle/upcycling-detail/chepter-3-2.png">
+		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-3-2.png">
 		<p class="chepter-3-content">재생 크레용</p>
-		<img alt="banner" src="../assets/images/upcycle/upcycling-detail/chepter-3-3.png">
+		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-3-3.png">
 		<p class="chepter-3-content">목재 프레임</p>
     </div>
     
@@ -117,7 +117,9 @@
     
 	<div class="buttons">
 	    <button class="qna-button">문의하기</button>
-	    <button class="upcycle-form-button" onclick="location.href='upcycling-form.jsp'">업사이클 신청</button>
+	    <a href="../upcycling/upcycling-form.upcycling"> 
+		    <button class="upcycling-form-button">업사이클 신청</button>
+	    </a>
 	</div>
     
 

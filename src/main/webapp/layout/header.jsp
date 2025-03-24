@@ -14,26 +14,25 @@
         <nav>
            <!-- 로고 이미지 -->
             <div class="headerLogo-wrap">
-                <a href="/gradation/main/main.header"><img id="headerLogo" src="../assets/images/layout/header/headerLogo.png" alt="headerLogo"></a>
+                <a href="/gradation/main/main.main"><img id="headerLogo" src="../assets/images/layout/header/headerLogo.png" alt="headerLogo"></a>
             </div>
             
             <ul class="menu">
             
                 <!-- display -->
-                <li><a href="/gradation/display/display-main.header">display</a>
+                <li><a href="/gradation/display/display-main-ing.display">display</a>
                    <ul class="dropdown">
                       <!-- display 드롭다운 -->
-                      <li><a href="#">전시 중인 작품</a></li>
-                      <li><a href="#">전시 예정인 작품</a></li>
-                      <li><a href="#">작품 업로드</a></li>
+                      <li><a href="/gradation/display/display-main-ing.display">전시 중인 작품</a></li>
+                      <li><a href="/gradation/display/display-main-comming-soon.display">전시 예정인 작품</a></li>
                    </ul>
                 </li>
                 
                 <!-- artist -->
-                <li><a href="#">artist</a></li>
+                <li><a href="/gradation/artist/artist-main.artist">artist</a></li>
                 
                 <!-- auction -->
-                <li><a href="#">auction</a>
+                <li><a href="/gradation/auction/auction-main.auction">auction</a>
                    <ul class="dropdown">
                       <!-- auction 드롭다운 -->
                       <li><a href="#">경매중</a></li>
@@ -43,25 +42,22 @@
                 </li>
                 
                 <!-- exhibition -->
-                <li><a href="/gradation/exhibition/exhibition-main.header">exhibition</a>
+                <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">exhibition</a>
                    <ul class="dropdown">
                       <!-- exhibition 드롭다운 -->
-                      <li><a href="#">그라데이션 전시회</a></li>
-                      <li><a href="#">대학교 전시회</a>
-                         <ul class="sub-dropdown">
-                            <li><a href="#">전시 일정</a>
-                            <li><a href="#">학교 신청</a>
-                         </ul>
+                      <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">그라데이션 전시회</a></li>
+                      <li><a href="/gradation/exhibition/university-exhibition-main.exhibition">대학교 전시회</a>
+                      <li><a href="#">학교 신청</a>
                       </li>
                    </ul>
                 </li>
                 
                 <!-- upcycling -->
-                <li><a href="/gradation/upcycle/upcycle-detail.header">upcycling</a>
+                <li><a href="/gradation/upcycling/upcycling-main.upcycling">upcycling</a>
                    <ul class="dropdown">
                       <!-- upcycling 드롭다운 -->
-                      <li><a href="#">업사이클</a></li>
-                      <li><a href="#">업사이클 신청</a></li>
+                      <li><a href="/gradation/upcycling/upcycling-main.upcycling">업사이클</a></li>
+                      <li><a href="/gradation/upcycling/upcycling-form.upcycling">업사이클 신청</a></li>
                    </ul>
                 </li>
             </ul>
@@ -70,10 +66,10 @@
 			
 			    <!-- sign in 드롭다운 -->
 			    <div class="sign-in-wrap">
-			        <a href="/gradation/login/login-main.header" class="sign-in">sign in</a>
+			        <a href="/gradation/login/login-main.user" class="sign-in">sign in</a>
 			        <ul class="dropdown">
-			            <li><a href="#">마이페이지</a></li>
-			            <li><a href="#">고객센터</a></li>
+			            <li><a href="/gradation/mypage/mypage-main.mypage">마이페이지</a></li>
+			            <li><a href="/gradation/mypage/mypage-service-center-send-qna.mypage">고객센터</a></li>
 			        </ul>
 			    </div>
 			</div>

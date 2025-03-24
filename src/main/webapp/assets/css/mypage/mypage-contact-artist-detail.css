@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
 	background-color: var(--color-gray100);
 }
@@ -8,12 +9,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin : 0 0 200px 0;
+	margin : 142px 0 0 0;
 }
 
 #container {
 	width: 1160px;
-	margin-top: 90px;
 	display: flex;
 	gap: 120px;
 }
@@ -21,11 +21,10 @@ body {
 #category {
 	width: 242px;
 	height: 875px;
-	background-color: var(--color-gray500);
 } 
 
 #title {
-	margin : 90px 0 29px 0;
+	margin-bottom: 50px;
 }
 
 #notice {
@@ -35,7 +34,7 @@ body {
 }
 
 #notice p {
-	font-size : var(--font-size-h7);
+	font-size : var(--font-size-h9);
 	font-weight : var(--font-weight-light);
 }
 

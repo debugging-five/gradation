@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.main.controller.MainController;
 
 public class MainFrontController extends HttpServlet{
 	
@@ -20,7 +21,8 @@ public class MainFrontController extends HttpServlet{
 		Result result = null;
 		
 		
-		if(target.equals("mypage/mypage-contact-artist-list")) {
+		if(target.equals("main/main")) {
+			result = new MainController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {
 		}else if(target.equals("auction/auction-payment-main")) {
 		}else {

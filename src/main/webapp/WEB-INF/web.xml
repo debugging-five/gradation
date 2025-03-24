@@ -59,13 +59,23 @@
     <url-pattern>*.auction</url-pattern>
   </servlet-mapping>
   
+  <!-- exhibition -->  
+  <servlet>
+  	<servlet-name>ExhibitionFrontController</servlet-name>
+	<servlet-class>com.app.exhibition.ExhibitionFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExhibitionFrontController</servlet-name>
+    <url-pattern>*.exhibition</url-pattern>
+  </servlet-mapping>
+  
   <!-- upcycling -->
   <servlet>
   	<servlet-name>UpcyclingFrontController</servlet-name>
 	<servlet-class>com.app.upcycling.UpcyclingFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuctionFrontController</servlet-name>
+    <servlet-name>UpcyclingFrontController</servlet-name>
     <url-pattern>*.upcycling</url-pattern>
   </servlet-mapping>
 

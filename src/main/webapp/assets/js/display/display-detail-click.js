@@ -75,3 +75,85 @@ function confirmSubmission() {
 document.querySelector("#popupOverlay .send").addEventListener("click", function () {
     closePopup("popupOverlay");
 });
+
+
+
+
+/* 기존 요소들 */
+const content = document.getElementById("question-content");
+const textarea = document.getElementById("answer-input");
+const answerInputWrapper = document.getElementById("answer-input1");
+const likeContainer = document.querySelector(".comment-like-container"); // 좋아요 버튼 컨테이너
+const dropdownContainer = document.querySelector(".dropdown-container"); // 드롭다운 버튼 컨테이너 추가
+
+/* 버튼 */
+const deleteBtn = document.getElementById("delete-faq");
+const modifyBtn = document.getElementById("modify-faq");
+const cancelBtn = document.getElementById("cancel-faq");
+const saveBtn = document.getElementById("save-faq");
+
+modifyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    /* 기존 내용을 가져와서 textarea에 삽입 */
+    textarea.value = content.textContent.trim();
+
+    /* 기존 내용 숨기고, textarea 및 answer-input1 보이게 */
+    content.style.display = "none";
+    textarea.style.display = "block";
+    answerInputWrapper.style.display = "block";
+
+    /* 좋아요 버튼 및 드롭다운 버튼 숨기기 */
+    likeContainer.style.display = "none"; 
+    dropdownContainer.style.display = "none"; // 추가된 부분
+
+    /* 기존 버튼 숨기고, 취소, 저장 버튼 보이게 */
+    deleteBtn.style.display = "none";
+    modifyBtn.style.display = "none";
+    cancelBtn.style.display = "inline-block";
+    saveBtn.style.display = "inline-block";
+});
+
+cancelBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    /* textarea 및 answer-input1 다시 숨기기 */
+    textarea.style.display = "none";
+    answerInputWrapper.style.display = "none";
+    content.style.display = "block";
+
+    /* 좋아요 버튼 및 드롭다운 버튼 다시 보이기 */
+    likeContainer.style.display = "block"; 
+    dropdownContainer.style.display = "block"; // 추가된 부분
+
+    /* 취소, 저장 버튼 숨기고 수정/삭제 버튼 다시 보이게 */
+    cancelBtn.style.display = "none";
+    saveBtn.style.display = "none";
+    deleteBtn.style.display = "inline-block";
+    modifyBtn.style.display = "inline-block";
+});
+
+saveBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    /* textarea 값 저장 후 기존 텍스트 보이기 */
+    content.textContent = textarea.value;
+
+    /* textarea 및 answer-input1 다시 숨기기 */
+    textarea.style.display = "none";
+    answerInputWrapper.style.display = "none";
+    content.style.display = "block";
+
+    /* 좋아요 버튼 및 드롭다운 버튼 다시 보이기 */
+    likeContainer.style.display = "block"; 
+    dropdownContainer.style.display = "block"; // 추가된 부분
+
+    /* 취소, 저장 버튼 숨기고 수정/삭제 버튼 다시 보이게 */
+    cancelBtn.style.display = "none";
+    saveBtn.style.display = "none";
+    deleteBtn.style.display = "inline-block";
+    modifyBtn.style.display = "inline-block";
+});
+
+
+
