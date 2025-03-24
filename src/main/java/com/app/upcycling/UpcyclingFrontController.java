@@ -1,4 +1,4 @@
-package com.app.exhibition.controller;
+package com.app.upcycling;
 
 import java.io.IOException;
 
@@ -8,9 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.auction.controller.AuctionBiddingController;
+import com.app.auction.controller.AuctionController;
+import com.app.auction.controller.AuctionModifyController;
+import com.app.auction.controller.AuctionModifyOkController;
+import com.app.auction.controller.AuctionPaymentController;
 
-public class ExhibitionFrontController extends HttpServlet {
-
+public class UpcyclingFrontController extends HttpServlet{
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -18,6 +23,18 @@ public class ExhibitionFrontController extends HttpServlet {
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		
+		
+		if(target.equals("")) {
+		}else if(target.equals("")) {
+		}else if(target.equals("")) {
+		}else if(target.equals("")) {
+		}else if(target.equals("")) {
+		}else {
+//			전부 404
+		}
+		
+		
 		
 		if(result != null) {
 			if(result.isRedirect()) {
@@ -32,4 +49,5 @@ public class ExhibitionFrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
+
 }

@@ -43,7 +43,7 @@
 	         </div>
 	   
 	         <div class="popup-right">
-	            <p>경매 작품 사진</p>
+	            <img src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg" alt="경매 작품" />
 	         </div>
 	       </div>
 	       
