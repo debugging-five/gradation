@@ -34,12 +34,10 @@
 			<div id="auction-info1">
 				<div id="title-wrapper2">
 					<h2 class="title">귀여운 고양이</h2>
-					<form action="" method="post">
-						<div>
-							<button type="button" id="button-modify">수정하기</button>
-							<button type="button">삭제하기</button>
-						</div>
-					</form>
+					<div>
+						<button type="button" id="button-modify">수정하기</button>
+						<button type="button">삭제하기</button>
+					</div>
 				</div>
 				<div class="artist">
 					<h3>작가명</h3>
@@ -80,9 +78,7 @@
 					<div class="comming-soon">
 						<h2>준비중인 작품입니다.</h2>
 					</div>
-					<form action="" method="post">
 						<button type="button" id="button-list">목록으로</button>
-					</form>
 				</div>
 				
 
