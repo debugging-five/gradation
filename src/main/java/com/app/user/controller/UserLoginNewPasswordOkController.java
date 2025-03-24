@@ -15,7 +15,7 @@ public class UserLoginNewPasswordOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		result.setPath("login-find-password.jsp");
+		result.setPath("login-main.user");
 		return result;
 	}
 

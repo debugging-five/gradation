@@ -4,7 +4,7 @@
 const findPasswordButton = document.querySelector("#find-password-button")
 
 //	인증값
-let mailCode = document.querySelector("#mail-code");
+let passwordMailCode = document.querySelector("#password-mail-code");
 let checkEmail = document.querySelector("#check-email");
 //	input 초기화
 let userId = document.querySelector("#user-id");
@@ -65,10 +65,10 @@ const checkAll = () => {
 }
 // 이메일 발송 완료, 미완료
 const emailCheckDesign = () => {
-	if(mailCode.value == "") {
+	if(passwordMailCode.value == "") {
 		emailCheckButton.textContent = "이메일 인증"
 		emailCheckButton.style.backgroundColor = "var(--color-gray500)";
-	}else if(mailCode.value == "false") {
+	}else if(passwordMailCode.value == "false") {
 		console.log("유효하지 않은 사용자")
 		needEmailValidate.classList.add("need-write");
 	}else {		
@@ -93,8 +93,7 @@ emailCheckButton.addEventListener("click",() => {
 // 인증번호 확인 버튼 클릭
 codeCheckButton.addEventListener("click",() => {
 	needEmailCheck.classList.remove("need-write");
-	if(userCode.value == mailCode.value && userCode.value != "") {
-		isComplete.value = "true";
+	if(userCode.value == passwordMailCode.value && userCode.value != "") {
 		findIdButton.type = "submit";
 		codeCheckButton.style.backgroundColor = 'var(--color-primary)'
 		emailCheckComplete.classList.add("complete-write");

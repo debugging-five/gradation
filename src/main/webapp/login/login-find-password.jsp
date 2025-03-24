@@ -13,10 +13,9 @@
 	
 	<div class="find-id-container">
 		<h2 id="find-pw-head">비밀번호 찾기</h2>
-			<input type="hidden" id="is-complete" value="${sessionScope.isComplete}"/>
-			<input type="hidden" id="mail-code" value="${sessionScope.mailCode}" />
+			<input type="hidden" id="password-mail-code" value="${sessionScope.passwordMailCode}" />
 			<input type="hidden" id="check-email" value="${sessionScope.checkEmail}"/>
-		<form action="login-find-id-ok.user" method="post">
+		<form action="login-new-password.user" method="post">
 			<div class="input-div">
 				<span class="user-text">아이디</span>
 				<span class="red-star">*</span>

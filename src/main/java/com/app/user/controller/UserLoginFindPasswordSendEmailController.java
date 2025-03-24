@@ -27,7 +27,7 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 		String userId = req.getParameter("userId");
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
-		String mailCode = mc.codeSix();
+		String passwordMailCode = mc.codeSix();
 		userVO.setUserId(userId);
 		userVO.setUserName(userName);
 		userVO.setUserEmail(userEmail);
@@ -36,9 +36,9 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 		int canPwChange = userDAO.selectByIdAndEmailAndName(userVO);
 		
 		if(canPwChange == 1) {
-			System.out.println(mailCode);
-			ms.sendMail(userEmail,mailCode);
-			session.setAttribute("mailCode", mailCode);
+			System.out.println(passwordMailCode);
+			ms.sendMail(userEmail,passwordMailCode);
+			session.setAttribute("passwordMailCode", passwordMailCode);
 			session.setAttribute("userId", userId);
 		}else {
 //			존재 안함
