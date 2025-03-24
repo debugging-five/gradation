@@ -30,6 +30,12 @@
 		WHERE USER_EMAIL = #{userEmail}
 	</select>
 	
+	<select id="selectIdByEmailAndName" parameterType="UserVO" resultType="String">
+		SELECT USER_ID
+		FROM TBL_USER
+		WHERE USER_EMAIL = #{userEmail} AND USER_NAME = #{userName}
+	</select>
+	
 	<select id="banCheck" parameterType="UserVO" resultType="int">
 		SELECT USER_BAN_OK
 		FROM TBL_USER
