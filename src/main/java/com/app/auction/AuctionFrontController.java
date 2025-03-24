@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 import com.app.auction.controller.AuctionBiddingController;
+import com.app.auction.controller.AuctionCommingController;
 import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
@@ -29,6 +30,8 @@ public class AuctionFrontController extends HttpServlet{
 			result = new AuctionController().execute(req, resp);
 		}else if(target.equals("auction/auction-bidding-main")) {
 			result = new AuctionBiddingController().execute(req, resp);
+		}else if(target.equals("auction/auction-comming-soon")) {
+			result = new AuctionCommingController().execute(req, resp);
 		}else if(target.equals("auction/auction-in-modify-form")) {
 			result = new AuctionModifyController().execute(req, resp);
 		}else if(target.equals("auction/auction-comming-soon-modify")) {

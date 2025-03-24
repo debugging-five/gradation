@@ -74,10 +74,8 @@
 					<div class="comming-soon">
 						<h2>준비중인 작품입니다.</h2>
 					</div>
-					<button>목록으로</button>
+					<button id="list-button">목록으로</button>
 				</div>
-				
-
 		</div>
 	</div>
 
@@ -107,4 +105,5 @@
 
 <%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/auction/auction-comming-soon.js"></script>
 </html>
