@@ -13,7 +13,7 @@ const needPwInput = document.querySelector("#need-pw-input");
 const needPwInputValid = document.querySelector("#need-pw-input-valid");
 const needPwInputCheck = document.querySelector("#need-pw-input-check");
 
-
+//	눈알 클릭
 showPassword.addEventListener("click",() => {
 	const isPw = pw.type == "password" ? true : false;
 	if(isPw) {
@@ -36,19 +36,46 @@ showPasswordCheck.addEventListener("click",() => {
 })
 
 // 회원가입 완료시 리다이렉트 코드
-let changeComplete = document.querySelector("#change-complete");
-if(changeComplete.value == "true"){
+const queryString = new URLSearchParams(location.search);
+let changeComplete = queryString.get("changeComplete");
+if(changeComplete) {
 	const complete = document.querySelector("#complete");
 	complete.style.display = 'block';
 }
-
+// 확인 버튼
 const changeButton = document.querySelector("#change-button");
+
 const completeCloseButton = document.querySelector("#complete-close-button");
-const complete = document.querySelector("#complete")
+
 changeButton.addEventListener("click",() => {
 	if(pw.value == "") {
-		
+		needPwInput.classList.add("need-write");
 	}else {
-		
+		needPwInput.classList.remove("need-write");
 	}
+	if(pw.value == pwCheck.value) {
+		needPwInputCheck.classList.remove("need-write");		
+	}else {
+		needPwInputCheck.classList.add("need-write");
+	}
+})
+
+const allCheck = () => {
+	if(
+		pw.value != "" && 
+		pwCheck.value != "" && 
+		pw.value == pwCheck.value
+	) {
+		changeButton.type = "submit";
+	}else {
+		changeButton.type = "button";
+	}
+} 
+
+pw.addEventListener("input", () => {
+	allCheck();
+})
+
+pwCheck.addEventListener("input", () => {
+	allCheck();
 })
