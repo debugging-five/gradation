@@ -13,7 +13,8 @@
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page"
+		value="display-main-ing" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +22,12 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text">
+								<a href="">전시중</a>
+							</div>
+							<div class="tab-text-upcoming">
+								<a href="">전시예정</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -78,41 +83,41 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-13.jpeg"
+							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
 							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-4.jpeg"
+							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
 							alt="gradation-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-8.jpeg"
+							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
 							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-3.jpeg"
+							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
 							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
+							src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
 							alt="tiger-and-waterfall" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-6.jpeg"
+							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
 							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-11.jpeg"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
 							alt="meditation-house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
+							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
 							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-14.jpeg"
+							src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
 							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-15.jpeg"
+							src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
 							alt="cat-2" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-7.jpeg"
+							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
 							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-17.jpeg"
+							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
 							alt="oh" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-18.jpeg"
+							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
 							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-19.jpeg"
+							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
 							alt="old-man-in-cafe" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-2.jpeg"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
 							alt="meditation-house-3" />
 					</div>
 				</div>
@@ -172,5 +177,6 @@
     }
   });
 </script>
+
 </body>
 </html>

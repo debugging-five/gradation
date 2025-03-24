@@ -8,12 +8,12 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/display/display-main.css" />
+	href="../assets/css/display/display-main-comming-soon.css" />
 
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page" value="display-main-comming-soon" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +21,8 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text"><a href="">전시중</a></div>
+							<div class="tab-text-upcoming"><a href="">전시예정</a></div>
 						</div>
 					</div>
 				</div>

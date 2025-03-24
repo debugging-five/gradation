@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/display/display-main.css" />
+	href="../assets/css/display/display-main-ing.css" />
 
 </head>
 <body style="margin: 0; background: #fbfcfc">
@@ -58,9 +58,18 @@
 					</div>
 					<div class="sort-options">
 						<div class="sort-select">
-							<div class="sort-label">등록순</div>
+							<div class="sort-label">정렬</div>
 							<img class="sort-icon"
-								src="../assets/images/display/art/sort.png" alt="sort" />
+								src="../assets/images/display/art/sort.png" alt="sort"
+								onclick="toggleSortDropdown()" />
+							<div class="sort-dropdown" id="sortDropdown">
+								<div class="sort-option" onclick="sortGallery('date')">
+									등록일순</div>
+								<div class="sort-option" onclick="sortGallery('name-asc')">
+									이름 오름차순</div>
+								<div class="sort-option" onclick="sortGallery('name-desc')">
+									이름 내림차순</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -122,5 +131,46 @@
 		</div>
 	</div>
 	<%@ include file="../layout/footer.jsp"%>
+	<script>
+  function toggleSortDropdown() {
+    const dropdown = document.getElementById("sortDropdown");
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+  }
+
+  function sortGallery(type) {
+    const columns = document.querySelectorAll(".gallery-column");
+
+    columns.forEach(column => {
+      const images = Array.from(column.querySelectorAll(".gallery-image"));
+
+      images.sort((a, b) => {
+        if (type === "name-asc") {
+          return a.alt.localeCompare(b.alt);
+        } else if (type === "name-desc") {
+          return b.alt.localeCompare(a.alt);
+        } else if (type === "date") {
+          const dateA = a.dataset.date || "2000-01-01";
+          const dateB = b.dataset.date || "2000-01-01";
+          return new Date(dateA) - new Date(dateB);
+        }
+      });
+
+      images.forEach(img => column.appendChild(img));
+    });
+
+    // 정렬 후 드롭다운 닫기
+    document.getElementById("sortDropdown").style.display = "none";
+  }
+
+  // 외부 클릭 시 드롭다운 닫기
+  document.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("sortDropdown");
+    const sortIcon = document.querySelector(".sort-icon");
+
+    if (!dropdown.contains(e.target) && e.target !== sortIcon) {
+      dropdown.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>

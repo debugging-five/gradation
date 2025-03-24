@@ -54,17 +54,16 @@
 			<div class="upload-image-box">
 				<div class="attachment-box"
 					onclick="document.getElementById('file-input').click();">
-					<img class="add-image" alt="add-icon"
-						src="../assets/images/display/add.png"> <span
+					<img id="upload-icon" class="add-image" alt="add-icon"
+						src="../assets/images/display/add.png" /> <span id="upload-label"
 						class="add-text">첨부파일 업로드</span>
 					<img id="preview-image" class="preview-image"
 						style="display: none;" alt="preview" /> <input type="file"
 						id="file-input" accept="image/*" style="display: none;"
-						onchange="previewImage(event)">
+						onchange="previewImage(event)" />
 				</div>
 				<p class="upload-description">(수거 신청한 폐기 작품 사진 업로드)</p>
 			</div>
-
 			<div class="school-info-wrapper">
 				<div class="school-search-field">
 					<div class="school-search-row">
@@ -159,7 +158,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-col-material">
+		<div class="section-material">
 			<div class="material-wrapper">
 				<div class="text-material">
 					<span><span class="span-1">주된 재질</span><span class="span-2">*</span>
@@ -187,7 +186,7 @@
 			<div class="confirm">
 				<div class="confirm-item">
 					<button type="button" class="cancel-button">
-						<div class="text-cancel">취소</div>
+						<div class="text-cancel"><a>취소</a></div>
 					</button>
 				</div>
 				<div class="confirm-item">
@@ -202,17 +201,18 @@
 </div>
 <script>
 function previewImage(event) {
-  const file = event.target.files[0];
-  if (!file) return;
-
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    const preview = document.getElementById("preview-image");
-    preview.src = e.target.result;
-    preview.style.display = "block";
-  };
-  reader.readAsDataURL(file);
-}
+	  const file = event.target.files[0];
+	  if (!file) return;
+	  const reader = new FileReader();
+	  reader.onload = function (e) {
+	    const preview = document.getElementById("preview-image");
+	    preview.src = e.target.result;
+	    preview.style.display = "block";
+	    document.getElementById("upload-icon").style.display = "none";
+	    document.getElementById("upload-label").style.display = "none";
+	  };
+	  reader.readAsDataURL(file);
+	}
 
   flatpickr("#pickupDateInput", {
     onChange: function(selectedDates, dateStr) {
