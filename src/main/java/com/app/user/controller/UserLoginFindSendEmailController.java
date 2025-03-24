@@ -12,6 +12,7 @@ import com.app.Result;
 import com.app.dao.UserDAO;
 import com.app.logic.MailSend;
 import com.app.logic.MakeCode;
+import com.app.vo.UserVO;
 
 public class UserLoginFindSendEmailController implements Action {
 
@@ -22,21 +23,31 @@ public class UserLoginFindSendEmailController implements Action {
 		MailSend ms = new MailSend();
 		MakeCode mc = new MakeCode();
 		UserDAO userDAO = new UserDAO();
+		UserVO userVO = new UserVO();
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
 		String mailCode = mc.codeSix();
+		System.out.println(mailCode);
+		userVO.setUserName(userName);
+		userVO.setUserEmail(userEmail);
 		
-//		이메일과 이름 유저 존재여부
-		session.setAttribute("mailCode", mailCode);
 		
-		ms.sendMail(userEmail,mailCode);
-//		존재 안함
-		session.setAttribute("mailCode", "false");
+		String userId = userDAO.selectIdByEmailAndName(userVO);
+		
+		if(userId == null) {
+//			존재 안함
+			session.setAttribute("mailCode", "false");
+		}else {
+			ms.sendMail(userEmail,mailCode);
+			session.setAttribute("mailCode", mailCode);
+			session.setAttribute("userId", userId);
+		}
+
 		session.setAttribute("userName", userName);
 		session.setAttribute("userEmail", userEmail);
 		
 		result.setRedirect(true);
-		result.setPath("login-id-find.user");
+		result.setPath("login-find-id.user");
 		return result;
 	}
 
