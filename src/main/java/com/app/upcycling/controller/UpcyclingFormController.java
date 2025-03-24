@@ -14,7 +14,7 @@ public class UpcyclingFormController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("upcycling/upcycling-form.jsp");
+		result.setPath("upcycling-form.jsp");
 		return result;
 	}
 
