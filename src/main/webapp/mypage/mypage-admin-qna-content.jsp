@@ -53,10 +53,11 @@
 				</div>
 				
 				<div id="button-wrapper">
-					<button id="delete-button" type="button">목록</button>
-					<button id="modify-button" type="button">답변하기</button>
+					<button id="list-button" type="button">목록</button>
+					<button id="answer-button" type="button">답변하기</button>
 				</div>
 				<div id="reply-wrap" style="display: none;">
+					<h5>내용<span class="star">*</span> </h5>
 					<textarea id="textarea" placeholder="내용을 입력하세요."></textarea>
 					<div id="buttons">
 						<button id="cancel" type="button">취소</button>

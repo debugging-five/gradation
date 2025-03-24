@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const replyWrap = document.getElementById('reply-wrap');
-	const replyBtn = document.getElementById('modify-button');
+	const replyBtn = document.getElementById('answer-button');
 	const cancelBtn = document.getElementById('cancel');
-	const listBtn = document.getElementById('delete-button');
+	const listBtn = document.getElementById('list-button');
 	const btnWrapper = document.getElementById('button-wrapper');
 	const registerBtn = document.getElementById('registration');
 

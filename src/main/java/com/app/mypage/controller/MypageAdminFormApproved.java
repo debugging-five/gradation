@@ -1,4 +1,4 @@
-package com.app.exhibition.controller;
+package com.app.mypage.controller;
 
 import java.io.IOException;
 
@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class GradationExhibitionController implements Action {
+public class MypageAdminFormApproved implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("gradation-exhibition-main.jsp");
+		result.setPath("mypage-admin-form-approved.jsp");
 		return result;
 	}
+
 }
