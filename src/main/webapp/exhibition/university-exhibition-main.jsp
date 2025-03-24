@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/exhibition/exhibition-main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/exhibition/university-exhibition-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
 <title>대학교 전시회 메인</title>
@@ -180,5 +180,5 @@
 </form>
 
 </body>
-<script type="text/javascript" src="../assets/js/exhibition/exhibition-main.js"></script>
+<script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
 </html>

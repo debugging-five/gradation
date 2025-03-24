@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.exhibition.controller.GradationExhibitionController;
+import com.app.exhibition.controller.UniversityExhibitionController;
 
 public class ExhibitionFrontController extends HttpServlet {
 
@@ -19,11 +21,10 @@ public class ExhibitionFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("")) {
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
+		if(target.equals("exhibition/university-exhibition-main")) {
+			result = new UniversityExhibitionController().execute(req, resp);
+		}else if(target.equals("exhibition/gradation-exhibition-main")) {
+			result = new GradationExhibitionController().execute(req, resp);
 		}else {
 //			전부 404
 		}
