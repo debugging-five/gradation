@@ -13,6 +13,7 @@ import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
+import com.app.mypage.controller.MypageContactWriteController;
 
 public class DisplayFrontController extends HttpServlet{
 	
@@ -25,7 +26,8 @@ public class DisplayFrontController extends HttpServlet{
 		Result result = null;
 		
 		
-		if(target.equals("")) {
+		if(target.equals("mypage/mypage-contact-artist-write")) {
+			result = new MypageContactWriteController().execute(req, resp);
 		}else if(target.equals("")) {
 		}else if(target.equals("")) {
 		}else if(target.equals("")) {
