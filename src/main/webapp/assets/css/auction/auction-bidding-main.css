@@ -15,7 +15,7 @@ body {
 }
 
 #title-wrapper h2 {
-   margin : 86px 0 0 0;
+   margin : 142px 0 0 0;
 }
 
 #auction-detail {
@@ -47,9 +47,7 @@ body {
    display : flex;
    justify-content : center;
    align-items : center;
-	
 }
-
 
 #auction-detail {
    display : flex;
@@ -98,7 +96,7 @@ body {
    display : flex;
    justify-content : space-between;
    margin : 28px 0 0 0;
-   height : 24px;
+   height : 20px;
 }
 
 /* .info {
