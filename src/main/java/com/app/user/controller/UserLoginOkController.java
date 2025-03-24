@@ -47,7 +47,7 @@ public class UserLoginOkController implements Action{
 		session = req.getSession();
 		session.setAttribute("userEmail", userEmail);
 //		메인페이지로 
-		result.setPath(req.getContextPath() + "");
+		result.setPath(req.getContextPath() + "/main/main.main");
 		return result;
 	}
 }

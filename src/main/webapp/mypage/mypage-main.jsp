@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mypage-main</title>
+<title>내정보</title>
 </head>
 <body>
 	
