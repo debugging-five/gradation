@@ -86,7 +86,7 @@
 			<!-- 학교1 -->
 			<div class="exhibition-info">
 				<div id="university-logo1">
-					<div>대학교 로고</div>
+					<img src="../assets/images/exhibition/university-1" alt="로고1"/>
 				</div>
 				
 				<div class="university-info">

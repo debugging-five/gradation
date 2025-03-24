@@ -17,5 +17,4 @@ public class UniversityExhibitionController implements Action {
 		result.setPath("university-exhibition-main.jsp");
 		return result;
 	}
-
 }
