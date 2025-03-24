@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/admin-form-display.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-form-display.css" />
 <title>관리자 마이페이지 / 양식관리</title>
 </head>
 <body>
