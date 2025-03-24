@@ -18,6 +18,14 @@
 			<input type="hidden" id="check-email" value="${sessionScope.checkEmail}"/>
 		<form action="login-find-id-ok.user" method="post">
 			<div class="input-div">
+				<span class="user-text">아이디</span>
+				<span class="red-star">*</span>
+				<input id="user-id" class="input-text3" type="text" placeholder="이름을 입력하세요" value="${sessionScope.userId}">
+			</div>
+			<div class="warning-area">
+				<div><p id="need-name-input">필수 항목입니다.</p></div>
+			</div>
+			<div class="input-div">
 				<span class="user-text">이름</span>
 				<span class="red-star">*</span>
 				<input id="user-name" class="input-text2" type="text" placeholder="이름을 입력하세요" value="${sessionScope.userName}">

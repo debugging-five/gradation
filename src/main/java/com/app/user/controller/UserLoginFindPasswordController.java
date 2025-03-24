@@ -17,7 +17,7 @@ public class UserLoginFindPasswordController implements Action {
 		Result result = new Result();
 		HttpSession session = req.getSession();
 		
-		session.setAttribute("mailCode", "");
+//		session.setAttribute("mailCode", "");
 		result.setPath("login-find-password.jsp");
 		return result;
 	}
