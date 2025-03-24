@@ -28,7 +28,6 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
 		String mailCode = mc.codeSix();
-		System.out.println(mailCode);
 		userVO.setUserId(userId);
 		userVO.setUserName(userName);
 		userVO.setUserEmail(userEmail);
@@ -37,6 +36,7 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 		int canPwChange = userDAO.selectByIdAndEmailAndName(userVO);
 		
 		if(canPwChange == 1) {
+			System.out.println(mailCode);
 			ms.sendMail(userEmail,mailCode);
 			session.setAttribute("mailCode", mailCode);
 			session.setAttribute("userId", userId);
