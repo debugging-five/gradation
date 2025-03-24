@@ -136,20 +136,32 @@
 	      	<div class="dropdown-container">
 			    <button class="dropdown-btn">⋮</button>
 			    <ul class="dropdown-menu">
-			        <li class="edit">수정</li>
-			        <li class="delete">삭제</li>
+			        <li id="modify-faq" class="edit">수정</li>
+			        <li id="delete-faq" class="delete">삭제</li>
 			    </ul>
 			</div>
 			
 	        </div>
 			<div class="comment-wrapper">
-			    <p class="comment">작품 잘 봤습니다.</p>
+				<div class= "fix-comment">
+				    <p id="question-content" class="comment">작품 잘 봤습니다.</p>
+				    <div id="answer-input1">
+				    	<textarea id="answer-input"></textarea>
+				    	<div class="fix-buttons">
+					  	  	<button id="cancel-faq">취소</button>
+							<button id="save-faq">저장</button>
+				    	</div>
+				    </div>
+				</div>
+					
 			    <div class="comment-like-container" onclick="toggleCommentLike(this)">
 			        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
 			        <span class="comment-like-count">0</span>
 			    </div>
 			</div>
 		</div>
+		
+		
 		
 		<div class="user">
 	        <div class="user-profile">
