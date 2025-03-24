@@ -25,7 +25,6 @@
                       <!-- display 드롭다운 -->
                       <li><a href="/gradation/display/display-main-ing.display">전시 중인 작품</a></li>
                       <li><a href="/gradation/display/display-main-comming-soon.display">전시 예정인 작품</a></li>
-                      <li><a href="#">작품 업로드</a></li>
                    </ul>
                 </li>
                 
@@ -43,11 +42,11 @@
                 </li>
                 
                 <!-- exhibition -->
-                <li><a href="/gradation/exhibition/exhibition-main.exhibition">exhibition</a>
+                <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">exhibition</a>
                    <ul class="dropdown">
                       <!-- exhibition 드롭다운 -->
-                      <li><a href="#">그라데이션 전시회</a></li>
-                      <li><a href="#">대학교 전시회</a>
+                      <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">그라데이션 전시회</a></li>
+                      <li><a href="/gradation/exhibition/university-exhibition-main.exhibition">대학교 전시회</a>
                          <ul class="sub-dropdown">
                             <li><a href="#">전시 일정</a>
                             <li><a href="#">학교 신청</a>
@@ -60,8 +59,8 @@
                 <li><a href="/gradation/upcycling/upcycling-main.upcycling">upcycling</a>
                    <ul class="dropdown">
                       <!-- upcycling 드롭다운 -->
-                      <li><a href="#">업사이클</a></li>
-                      <li><a href="#">업사이클 신청</a></li>
+                      <li><a href="/gradation/upcycling/upcycling-main.upcycling">업사이클</a></li>
+                      <li><a href="/gradation/upcycling/upcycling-form.upcycling">업사이클 신청</a></li>
                    </ul>
                 </li>
             </ul>
@@ -72,8 +71,8 @@
 			    <div class="sign-in-wrap">
 			        <a href="/gradation/login/login-main.user" class="sign-in">sign in</a>
 			        <ul class="dropdown">
-			            <li><a href="#">마이페이지</a></li>
-			            <li><a href="#">고객센터</a></li>
+			            <li><a href="/gradation/mypage/mypage-main.mypage">마이페이지</a></li>
+			            <li><a href="/gradation/mypage/mypage-service-center-send-qna.mypage">고객센터</a></li>
 			        </ul>
 			    </div>
 			</div>
