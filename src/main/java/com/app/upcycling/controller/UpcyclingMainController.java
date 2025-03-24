@@ -14,7 +14,7 @@ public class UpcyclingMainController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("upcycling/upcycling-main.jsp");
+		result.setPath("upcycling-main.jsp");
 		return result;
 	}
 
