@@ -41,23 +41,23 @@ body {
 #waiting{
 	width : 400px;
    	height : 50px;
+   	background-color : var(--color-gray500);
+   	border : solid 1px var(--color-gray500);
+   	display : flex;
+   	align-items : center;
+   	justify-content : center;
+   	cursor: pointer;
+}
+
+#completed {
+	width : 400px;
+   	height : 50px;
    	background-color : var(--color-gray100);
    	border : solid 1px var(--color-gray500);
    	display : flex;
    	align-items : center;
    	justify-content : center; 
    	font-family: var(--font-family-Pretendard-Regular);
-	cursor: pointer;
-}
-
-#completed {
-	width : 400px;
-   	height : 50px;
-   	background-color : var(--color-gray500);
-   	border : solid 1px var(--color-gray500);
-   	display : flex;
-   	align-items : center;
-   	justify-content : center;
    	cursor: pointer;
 }
 
@@ -129,6 +129,12 @@ body {
 	margin-left: 40px;
 	font-size: var(--font-size-h7);
 }
+
+.item-kind {
+	font-size: 16px;
+	font-weight: var(--font-weight-regular);
+}
+
 .item-title-wrap {
 	width: 320px;
 	align-content: center;
@@ -145,7 +151,6 @@ body {
 	margin-left: auto;
 	margin-right: 24px;
 }
-
 
 form {
 	text-align: right;
