@@ -27,7 +27,7 @@
 		<div class="infomation">
 			<div class="section">내 정보</div>
 			<div class="update-infomation">
-				<div class="sidebar-link">개인 정보 수정</div>
+				<div class="sidebar-link"><a href="">개인 정보 수정</a></div>
 				<div class="sidebar-link">내 작가페이지 수정</div>
 				<div class="sidebar-link">비밀번호 변경</div>
 			</div>
