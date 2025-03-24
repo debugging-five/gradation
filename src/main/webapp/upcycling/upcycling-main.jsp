@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
 	<!-- 상단 타이틀 -->
-    <div class="upcycle-text">upcycle</div>
+    <div class="upcycle-text">upcycling</div>
     
     <!-- 배너 -->
     <div>
