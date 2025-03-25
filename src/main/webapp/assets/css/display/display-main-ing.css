@@ -476,11 +476,11 @@
 
 .display-page .pagination-bar {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 40px;
-	margin-top: 80px;
-	width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%; 
+  gap: 20px;
 }
 
 .display-page .pagination-icon {
@@ -489,31 +489,43 @@
 	width: 20px;
 }
 
+.pagination-bar a {
+	display: inline-block;
+	text-align: center;
+	margin: 0 8px;
+	text-decoration: none;
+	color: var(--color-gray900);
+	font-weight: var(--font-weight-regular);
+	padding: 6px 12px;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
 .display-page .page-number {
-  color: var(--color-gray900);
-  cursor: pointer;
-  font-weight: var(--font-weight-regular);
-  line-height: normal;
-  text-align: center;
-  transition: all 0.2s ease;
-  padding: 4px 12px;
-  text-decoration: none;
-  margin: 0 4px;
-  border-radius: 4px;
+	color: var(--color-gray900);
+	cursor: pointer;
+	font-weight: var(--font-weight-regular);
+	line-height: normal;
+	text-align: center;
+	transition: all 0.2s ease;
+	padding: 4px 12px;
+	text-decoration: none;
+	margin: 0 4px;
+	border-radius: 4px;
 }
 
 .display-page .page-number:hover {
-  font-weight: bold;
-  color: var(--color-primary);
-  background-color: var(--color-gray100);
-  text-decoration: underline;
+	font-weight: bold;
+	color: var(--color-primary);
+	background-color: var(--color-gray100);
+	text-decoration: underline;
 }
 
 .display-page .active-page {
-  font-weight: bold;
-  background-color: var(--color-primary);
-  color: white;
-  border-radius: 4px;
+	font-weight: bold;
+	background-color: var(--color-primary);
+	color: white;
+	border-radius: 4px;
 }
 
 .display-page .column-gallery-right {
