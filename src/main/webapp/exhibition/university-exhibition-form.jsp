@@ -9,9 +9,80 @@
 <title>대학교 전시회 신청 양식</title>
 </head>
 <body>
+<%@ include file="../layout/header.jsp" %>
 	<div id="wrapper">
-	
+		<div id="title-wrapper">
+			<h2>exhibition</h2>	
+		</div>
+		
+		<div>
+			<div id="form-title">
+				<h3>registration</h3>
+			</div>
+			
+			<div id="input-form">
+				<!-- 대학명 -->
+				<div id="input-button-wrapper">
+					<div class="input-text">
+						<h5>대학명<span class="star">*</span></h5>
+						<input type="text" placeholder="학교를 선택하세요." />
+					</div>
+					<button type="button" id="search-university">학교 검색</button>
+				</div>
+				
+				<!-- 학과명 -->
+				<div class="input-wrapper">
+					<div class="input-text">
+						<h5>학과명<span class="star">*</span></h5>
+						<input type="text" placeholder="학과명을 입력하세요." />
+					</div>
+				</div>
+				
+				<!-- 상세 주소 -->
+				<div class="input-wrapper">
+					<div class="input-text2">
+						<h5>상세 주소<span class="star">*</span></h5>
+						<input type="text" placeholder="상세 주소를 입력하세요." />
+					</div>
+				</div>
+				
+				<!-- 홈페이지 -->
+				<div class="input-wrapper">
+					<div class="input-text3">
+						<h5>홈페이지<span class="star">*</span></h5>
+						<input type="text" placeholder="홈페이지 주소를 입력하세요." />
+					</div>
+				</div>
+				
+				<!-- 전시회 일정 -->
+				<div class="input-wrapper">
+					<div class="input-text4">
+						<h5>전시회 일정<span class="star">*</span></h5>
+						<input type="text" placeholder="홈페이지 주소를 입력하세요." />
+					</div>
+				</div>
+				
+				<div id="icon-hover">
+					<p>사이트에 올라갈 전시회 이미지를 첨부해주세요.</p>
+				</div>
+				
+				<!-- 첨부파일 -->
+				<div id="button-wrapper1">
+					<div id="file-wrapper">
+					 	<h5>첨부파일</h5>
+					 	<img id="icon" src="../assets/images/exhibition/notice.png" alt="아이콘" />
+					</div>
+				 	<button id="file-button">첨부파일</button>
+				</div>
+				
+				<div id="button-wrapper2">
+					<button id="cancel-button">취소</button>
+					<button id="register-button">신청</button>
+				</div>
+			</div>
+			
+		</div>
 	</div>
-
+<%@ include file="../layout/footer.jsp" %>
 </body>
 </html>
