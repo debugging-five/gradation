@@ -3,6 +3,9 @@ const backgroundImage = document.getElementById("display-none");
 const likeButtons = document.querySelectorAll(".button-like");
 const registerButton = document.querySelector(".button.register");
 const inquiryButton = document.querySelector(".button.inquiry");
+const exhibitionImage = document.querySelector("#img-wrapper img");
+const logo1 = document.getElementById("logo1"); 
+const logo2 = document.getElementById("logo2"); 
 
 universityLogo.addEventListener("click", () => {
 	backgroundImage.style.display = "block";
@@ -37,3 +40,12 @@ registerButton.addEventListener("click", () => {
 inquiryButton.addEventListener("click", () => {
 	location.href = "../mypage/mypage-service-center-send-qna.mypage";
 });
+
+logo1.addEventListener("click", function () {
+    exhibitionImage.src = "../assets/images/exhibition/university-exhibition-1.jpg";
+});
+
+logo2.addEventListener("click", function () {
+    exhibitionImage.src = "../assets/images/exhibition/university-exhibition-2.png";
+});
+
