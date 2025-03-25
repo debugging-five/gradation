@@ -8,12 +8,13 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/display/display-main.css" />
+	href="../assets/css/display/display-main-ing.css" />
 
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page"
+		value="display-category-calligraphy" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +22,12 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text">
+								<a href="../display/display-main-ing.display">전시중</a>
+							</div>
+							<div class="tab-text-upcoming">
+								<a href="../display/display-main-comming-soon.display">전시예정</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -30,22 +35,22 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="display-category-korean.jsp">한국화</a>
+								<a href="../display/display-category-korean.display">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-painting.jsp">회화</a>
+								<a href="../display/display-category-painting.display">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-sculpture.jsp">조각</a>
+								<a href="../display/display-category-sculpture.display">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-craft.jsp">공예</a>
+								<a href="../display/display-category-craft.display">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-architecture.jsp">건축</a>
+								<a href="../display/display-category-architecture.display">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-calligraphy.jsp">서예</a>
+								<a href="../display/display-category-calligraphy.display">서예</a>
 							</div>
 						</div>
 					</div>
@@ -58,9 +63,18 @@
 					</div>
 					<div class="sort-options">
 						<div class="sort-select">
-							<div class="sort-label">등록순</div>
+							<div class="sort-label">정렬</div>
 							<img class="sort-icon"
-								src="../assets/images/display/art/sort.png" alt="sort" />
+								src="../assets/images/display/art/sort.png" alt="sort"
+								onclick="toggleSortDropdown()" />
+							<div class="sort-dropdown" id="sortDropdown">
+								<div class="sort-option" onclick="sortGallery('date')">
+									등록일순</div>
+								<div class="sort-option" onclick="sortGallery('name-asc')">
+									이름 오름차순</div>
+								<div class="sort-option" onclick="sortGallery('name-desc')">
+									이름 내림차순</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -69,42 +83,42 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-13.jpeg"
-							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-4.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-8.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-3.jpeg"
-							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
-							alt="tiger-and-waterfall" />
+							src="../assets/images/display/art/calligraphy/img-calligraphy-1"
+							alt="calligraphy-1" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-2"
+							alt="calligraphy-2" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-3"
+							alt="calligraphy-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-4"
+							alt="calligraphy-4" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-5"
+							alt="calligraphy-5" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-6.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-11.jpeg"
-							alt="meditation-house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-14.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-15.jpeg"
-							alt="cat-2" />
+							src="../assets/images/display/art/calligraphy/img-calligraphy-6"
+							alt="calligraphy-6" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-7"
+							alt="calligraphy-7" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-8"
+							alt="calligraphy-8" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-9"
+							alt="calligraphy-9" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-10"
+							alt="calligraphy-10" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-7.jpeg"
-							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-17.jpeg"
-							alt="oh" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-18.jpeg"
-							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-19.jpeg"
-							alt="old-man-in-cafe" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-2.jpeg"
-							alt="meditation-house-3" />
+							src="../assets/images/display/art/calligraphy/img-calligraphy-11"
+							alt="calligraphy-11" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-12"
+							alt="calligraphy-12" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-13"
+							alt="calligraphy-13" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-14"
+							alt="calligraphy-14" /> <img class="gallery-image"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-15"
+							alt="calligraphy-15" />
 					</div>
 				</div>
 			</div>
@@ -122,5 +136,47 @@
 		</div>
 	</div>
 	<%@ include file="../layout/footer.jsp"%>
+	<script>
+  function toggleSortDropdown() {
+    const dropdown = document.getElementById("sortDropdown");
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+  }
+
+  function sortGallery(type) {
+    const columns = document.querySelectorAll(".gallery-column");
+
+    columns.forEach(column => {
+      const images = Array.from(column.querySelectorAll(".gallery-image"));
+
+      images.sort((a, b) => {
+        if (type === "name-asc") {
+          return a.alt.localeCompare(b.alt);
+        } else if (type === "name-desc") {
+          return b.alt.localeCompare(a.alt);
+        } else if (type === "date") {
+          const dateA = a.dataset.date || "2000-01-01";
+          const dateB = b.dataset.date || "2000-01-01";
+          return new Date(dateA) - new Date(dateB);
+        }
+      });
+
+      images.forEach(img => column.appendChild(img));
+    });
+
+    // 정렬 후 드롭다운 닫기
+    document.getElementById("sortDropdown").style.display = "none";
+  }
+
+  // 외부 클릭 시 드롭다운 닫기
+  document.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("sortDropdown");
+    const sortIcon = document.querySelector(".sort-icon");
+
+    if (!dropdown.contains(e.target) && e.target !== sortIcon) {
+      dropdown.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 </html>

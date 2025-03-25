@@ -22,13 +22,10 @@
 					<div class="page-title">내 쪽지 및 문의 / 내 쪽지</div>
 					<p class="message-notice">전송이 완료된 쪽지는 수정이 불가합니다.</p>
 					<div class="message-tabs">
-						<div class="tab-received active-tab"
-							onclick="switchTab('received')">
-							<div class="tab-label">쪽지 수신함</div>
-						</div>
-						<div class="tab-sent" onclick="switchTab('sent')">
-							<div class="tab-label">내가 보낸 쪽지</div>
-						</div>
+						<a href="../mypage/mypage-post-list.mypage"
+							class="tab tab-received">쪽지 수신함</a> <a
+							href="../mypage/mypage-my-post-list.mypage"
+							class="tab tab-sent active">내가 보낸 쪽지</a>
 					</div>
 					<div class="tab-content tab-received-content">
 						<div class="message-table-header">
@@ -108,28 +105,6 @@
 	</div>
 	<%@ include file="../layout/footer.jsp"%>
 	<script>
-		function switchTab(tab) {
-			const tabReceived = document.querySelector(".tab-received");
-			const tabSent = document.querySelector(".tab-sent");
-			if (tab === "received") {
-				tabReceived.classList.add("active-tab");
-				tabSent.classList.remove("active-tab");
-			} else {
-				tabSent.classList.add("active-tab");
-				tabReceived.classList.remove("active-tab");
-			}
-
-			const contentReceived = document
-					.querySelector(".tab-received-content");
-			const contentSent = document.querySelector(".tab-sent-content");
-
-			if (contentReceived && contentSent) {
-				contentReceived.style.display = tab === "received" ? "block"
-						: "none";
-				contentSent.style.display = tab === "sent" ? "block" : "none";
-			}
-		}
-		
 		document.addEventListener("DOMContentLoaded", function() {
 			const senderElements = document.querySelectorAll(".column-sender");
 
