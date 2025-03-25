@@ -64,4 +64,5 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-comments-list.js"></script>
 </html>
