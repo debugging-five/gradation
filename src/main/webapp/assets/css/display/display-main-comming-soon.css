@@ -339,18 +339,19 @@
 }
 
 .display-page .row-gallery {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 	gap: 98px;
 	height: 1850px;
-	min-width: 743px;
-	align-items: flex-start;
-	display: flex;
+	width: 100%;
 }
 
 .gallery-column {
 	display: flex;
 	flex-direction: column;
-	gap: 40px; /* 이미지 사이 간격 */
-	flex: 1;
+	gap: 40px;
+	width: 320px;
 	padding: 0 10px;
 }
 

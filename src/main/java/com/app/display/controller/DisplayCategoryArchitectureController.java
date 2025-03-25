@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class DisplayCategoryKoreanController implements Action {
+public class DisplayCategoryArchitectureController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("display-category-korean.jsp");
+		result.setPath("display-category-architecture.jsp");
 		return result;
 	}
 
