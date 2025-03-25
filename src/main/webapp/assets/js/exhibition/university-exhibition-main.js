@@ -1,5 +1,5 @@
 const universityLogo = document.getElementById("university-logo1");
-const backgroundImage = document.getElementById("img-background");
+const backgroundImage = document.getElementById("display-none");
 const likeButtons = document.querySelectorAll(".button-like");
 const registerButton = document.querySelector(".button.register");
 const inquiryButton = document.querySelector(".button.inquiry");
@@ -33,7 +33,7 @@ registerButton.addEventListener("click", () => {
 	location.href = "university-exhibition-form.exhibition";
 });
 
-/* 문의 페이지로 이동*/
+/* 마이페이지 문의 페이지로 이동*/
 inquiryButton.addEventListener("click", () => {
-	location.href = "";
+	location.href = "../mypage/mypage-service-center-send-qna.mypage";
 });

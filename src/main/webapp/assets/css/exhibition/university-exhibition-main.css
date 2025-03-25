@@ -91,15 +91,18 @@ body {
 select {
 	background-color : var(--color-gray100);
 	border : none;
-	font-size : var(--font-size-h7);
+	font-size : 16px;
 	font-weight : var(--font-weight-regular);
 	font-family: var(--font-family-Pretendard-Regular);
+	color : var(--color-black);
+	width : 73px;
+	height : 19px;
 }
 
 #area-dropdown {
-	width : 73px;
 	margin : 0 36px 0 24px;
 }
+
 
 #state-dropdown {
 	margin : 0 32px 0 0;
@@ -130,6 +133,7 @@ i.fa-angle-down {
 	border : solid 1px #6e7476;
 	border-radius : 3px;
 	background-color : var(--color-gray100);
+	color : var(--color-gray500);
 	font-family: var(--font-family-Pretendard-Regular);
 }
 
@@ -194,6 +198,9 @@ i.fa-angle-down {
 	margin : 0 0 8px 0;
 }
 
+#display-none {
+	display : none;
+}
 
 #img-background {
 	width : 560px;
@@ -202,15 +209,24 @@ i.fa-angle-down {
 	border-radius : 10px;
 	margin : 105px 0 0 0;
 	display : flex;
-	align-items : center;
 	justify-content : center;
-	display : none;
 }
 
-/* #img-background img {
-	width : 461px;
-	height : 446px;
-} */
+#img-wrapper {
+	width : 476px;
+	height : 407px;
+	background-color : var(--color-gray900);
+	display : flex;
+	justify-content : center;
+}
+
+#img-wrapper img {
+	width : 438px;
+	height : 407px;
+	display : flex;
+	align-items : center;
+	justify-content : center; 
+} 
 
 #button-wrapper {
 	display : flex;
