@@ -56,10 +56,63 @@
 							<p class="item-date">25. 01. 25</p>
 						</div>
 					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">3</h4>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-kind">절망에 빠진 동상</p>
+						</div>
+						<div class="item-comment-wrap">
+							<p class="item-title">작품 잘 봤습니다🤗</p>
+						</div>
+						<div class="item-date-wrap">
+							<p class="item-date">25. 01. 25</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">4</h4>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-kind">절망에 빠진 동상</p>
+						</div>
+						<div class="item-comment-wrap">
+							<p class="item-title">작품이 너무 멋져요👏👏</p>
+						</div>
+						<div class="item-date-wrap">
+							<p class="item-date">25. 01. 25</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">5</h4>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-kind">절망에 빠진 동상</p>
+						</div>
+						<div class="item-comment-wrap">
+							<p class="item-title">완성도가 정말 높아요 😲</p>
+						</div>
+						<div class="item-date-wrap">
+							<p class="item-date">25. 01. 25</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">6</h4>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-kind">절망에 빠진 동상</p>
+						</div>
+						<div class="item-comment-wrap">
+							<p class="item-title">작품이 너무 멋져요👏👏</p>
+						</div>
+						<div class="item-date-wrap">
+							<p class="item-date">25. 01. 25</p>
+						</div>
+					</div>
 				</div>
-				<form action="" method="post">
-					<button id="add-faq">등록</button>
-				</form>
 			</div>
 		</div>
 	</div>

@@ -12,7 +12,9 @@
 	<%@ include file="../layout/header.jsp" %>
 	<div id="container-wrap">
 		<div id="container">
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
 				<h2 id="title">내 활동 / 작가와 연락</h2>
 				<div id="notice">
