@@ -13,10 +13,16 @@ import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
+import com.app.display.controller.DisplayCategoryArchitectureController;
+import com.app.display.controller.DisplayCategoryCalligraphyController;
 import com.app.display.controller.DisplayCategoryCraftController;
 import com.app.display.controller.DisplayCategoryKoreanController;
 import com.app.display.controller.DisplayCategoryPaintingController;
+<<<<<<< HEAD
+import com.app.display.controller.DisplayCategorySculptureController;
+=======
 import com.app.display.controller.DisplayDetailController;
+>>>>>>> master
 import com.app.display.controller.DisplayMainCommingSoonController;
 import com.app.display.controller.DisplayMainIngController;
 import com.app.mypage.controller.MypageContactWriteController;

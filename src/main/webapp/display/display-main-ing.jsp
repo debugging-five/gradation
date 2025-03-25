@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +11,6 @@
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/display/display-main-ing.css" />
-
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
@@ -122,14 +123,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="pagination-bar suith4">
+			<div class="pagination-bar">
 				<img class="pagination-icon"
 					src="../assets/images/display/art/left.png" alt="left" />
-				<div class="page-number">1</div>
-				<div class="page-number">2</div>
-				<div class="page-number">3</div>
-				<div class="page-number">4</div>
-				<div class="page-number">5</div>
+				<c:forEach var="i" begin="1" end="${totalPages}">
+					<a href="display-main-ing.display?page=${i}"
+						class="page-number ${i == currentPage ? 'active-page' : ''}">
+						${i} </a>
+				</c:forEach>
 				<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
 			</div>
@@ -163,11 +164,9 @@
       images.forEach(img => column.appendChild(img));
     });
 
-    // 정렬 후 드롭다운 닫기
     document.getElementById("sortDropdown").style.display = "none";
   }
 
-  // 외부 클릭 시 드롭다운 닫기
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");
     const sortIcon = document.querySelector(".sort-icon");
