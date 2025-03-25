@@ -9,11 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageMainController implements Action{
+public class MypageModifyController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-main.jsp");
+		
+		result.setPath("mypage-modify.jsp");
 		return result;
 	}
+
 }

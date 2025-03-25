@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-main.css" />
-<title>내정보</title>
+<title>프로필 수정하기</title>
 </head>
 <body>
-<%@ include file="../layout/header.jsp" %>
+	<%@ include file="../layout/header.jsp" %>
 	
 	<div id="container-wrap">
 		<div id="container">
@@ -38,6 +36,5 @@
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
-	
 </body>
 </html>
