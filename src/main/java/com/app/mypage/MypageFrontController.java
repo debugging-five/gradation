@@ -8,13 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.mypage.controller.MypageAdminFormApproved;
-import com.app.mypage.controller.MypageAdminFormNotApproved;
-import com.app.mypage.controller.MypageAdminQnaContent;
-import com.app.mypage.controller.MypageAdminQnaContentCompleted;
-import com.app.mypage.controller.MypageAdminQnaListCompleted;
-import com.app.mypage.controller.MypageAdminQnaListWaiting;
-import com.app.mypage.controller.MypageArtLikeListController;
+import com.app.mypage.controller.MypageAdminFaqContentController;
+import com.app.mypage.controller.MypageAdminFaqListController;
+import com.app.mypage.controller.MypageAdminFaqRegisterController;
+import com.app.mypage.controller.MypageAdminFormApprovedController;
+import com.app.mypage.controller.MypageAdminFormNotApprovedController;
+import com.app.mypage.controller.MypageAdminQnaContentController;
+import com.app.mypage.controller.MypageAdminQnaContentCompletedController;
+import com.app.mypage.controller.MypageAdminQnaListCompletedController;
+import com.app.mypage.controller.MypageAdminQnaListWaitingController;
+import com.app.mypage.controller.MypageAdminUserManageController;
+import com.app.mypage.controller.MypageArtLikeListControllerController;
 import com.app.mypage.controller.MypageCommentsListController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
@@ -45,25 +49,35 @@ public class MypageFrontController extends HttpServlet{
 		}else if(target.equals("mypage/mypage-comments-list")) {
 			result = new MypageCommentsListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-art-like-list")) {
-			result = new MypageArtLikeListController().execute(req, resp);
+			result = new MypageArtLikeListControllerController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-exhibition-like-list")) {
 			result = new MypageExhibitionLikeListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
-			result = new MypageAdminQnaListWaiting().execute(req, resp);
+			result = new MypageAdminQnaListWaitingController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
-			result = new MypageAdminQnaListCompleted().execute(req, resp);
+			result = new MypageAdminQnaListCompletedController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-form-not-approved")) {
-			result = new MypageAdminFormNotApproved().execute(req, resp);
+			result = new MypageAdminFormNotApprovedController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-form-approved")) {
-			result = new MypageAdminFormApproved().execute(req, resp);
+			result = new MypageAdminFormApprovedController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-post-list")) {
 			result = new MypagePostListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-my-post-list")) {
 			result = new MypageMyPostListController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-faq-list")) {
+			result = new MypageAdminFaqListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-qna-content")) {
-			result = new MypageAdminQnaContent().execute(req, resp);
+			result = new MypageAdminQnaContentController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-qna-content-completed")) {
-			result = new MypageAdminQnaContentCompleted().execute(req, resp);
+			result = new MypageAdminQnaContentCompletedController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
+			result = new MypageAdminQnaListWaitingController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-user-manage")) {
+			result = new MypageAdminUserManageController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-faq-register")) {
+			result = new MypageAdminFaqRegisterController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-faq-content")) {
+			result = new MypageAdminFaqContentController().execute(req, resp);
 		}else {
 //			전부 404
 		}

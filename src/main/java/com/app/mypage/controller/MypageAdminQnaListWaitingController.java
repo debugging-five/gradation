@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageAdminQnaContent implements Action {
+public class MypageAdminQnaListWaitingController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-admin-qna-content.jsp");
+		result.setPath("mypage-admin-qna-list-waiting.jsp");
 		return result;
 	}
 

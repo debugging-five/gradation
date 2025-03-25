@@ -23,7 +23,7 @@
 		<!-- 경매 작품 사진-->
 		<div id="auction-img">
 			<div class="img">
-				<p>경매 작품 사진</p>
+				<img src="../assets/images/display/art/craft/img-craft-miniature-cat.jpeg" alt="경매 작품" />
 			</div>
 		</div>
 		
@@ -80,28 +80,25 @@
 	</div>
 
 	<div id="auction-list">
-		<div id="auction-ing">
-			<p>경매중인 작품</p>
-		</div>
-			
-		<div id="art-wrapper">
-			<div class="art-list">
-				<h6>경매 작품 사진</h6>
-			</div>
-			<div class="art-list">
-				<h6>경매 작품 사진</h6>
-			</div>
-			<div class="art-list">
-				<h6>경매 작품 사진</h6>
-			</div>
-			<div class="art-list">
-				<h6>경매 작품 사진</h6>
-			</div>
-		</div>
-
+	      <div id="auction-ing">
+	         <div id="auction-ing-title">경매중인 작품</div>
+	      </div>
+	      <div id="art-wrapper">
+	         <div class="art-list">
+	            <img src="../assets/images/display/art/craft/img-craft-embroidered-cat.jpeg" alt="리스트1"/>
+	         </div>
+	         <div class="art-list">
+	            <img src="../assets/images/display/art/craft/img-craft-embroidered-cat-2.jpeg" alt="리스트2"/>
+	         </div>
+	         <div class="art-list">
+	            <img src="../assets/images/display/art/craft/img-craft-object-cat.jpeg" alt="리스트3"/>
+	         </div>
+	         <div class="art-list">
+	            <img src="../assets/images/display/art/craft/img-craft-object-cat-2.jpeg" alt="리스트4"/>
+	         </div>
+	      </div>
+	   </div>
 	</div>
-
-</div>
 
 <%@ include file="../layout/footer.jsp" %>
 </body>
