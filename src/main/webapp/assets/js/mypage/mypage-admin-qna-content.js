@@ -26,4 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		/* 임시 */
 		console.log('답변 등록:', content);
 	});
+	
+	listBtn.addEventListener("click", () => {
+	    location.href = 'mypage-admin-qna-list-waiting.mypage';
+	});
+
 });
