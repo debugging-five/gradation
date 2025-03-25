@@ -2,7 +2,7 @@ var didScroll; /* 스크롤 감지 */
 var lastScrollTop = 0; /* 마지막 스크롤 위치 저장 */
 var delta = 5; /* 스크롤 감지 최소 간격 */
 var navbarHeight = $('header').outerHeight();
-const bell = document.getElementsByClassName('.header-bell');
+const bell = document.querySelector('.header-bell');
 
 /* 스크롤 감지함 */
 $(window).scroll(function(event){
@@ -35,7 +35,7 @@ function hasScrolled() {
 
 
 bell.addEventListener("click", () => {
-    location.href = 'auction-comming-soon-modify.auction';
+    location.href = 'mypage-post-list.mypage';
 });
 
 

@@ -35,6 +35,39 @@
 							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
 						</div>
 					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">2</h4>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">경매</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">3</h4>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">전시회</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">전시회 신청 방법</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h4 class="item-number">4</h4>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">전시회</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">그라데이션 전시회에 작품이 전시되는 기준</p>
+						</div>
+					</div>
 				</div>
 				<form action="" method="post">
 					<button id="add-faq">등록</button>
