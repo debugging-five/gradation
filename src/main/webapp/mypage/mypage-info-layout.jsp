@@ -27,34 +27,34 @@
 		<div class="infomation">
 			<div class="section">내 정보</div>
 			<div class="update-infomation">
-				<div class="sidebar-link"><a href="">개인 정보 수정</a></div>
-				<div class="sidebar-link">내 작가페이지 수정</div>
-				<div class="sidebar-link">비밀번호 변경</div>
+				<div class="sidebar-link"><a href="../mypage/mypage-main.mypage">개인 정보 수정</a></div>
+				<div class="sidebar-link"><a href="../artist/artist-detail-modify.artist">내 작가페이지 수정</a></div>
+				<div class="sidebar-link"><a href="../mypage/change-password.mypage">비밀번호 변경</a></div>
 			</div>
 		</div>
 		<div class="my-perform my">
 			<div class="section">내 활동</div>
 			<div class="perform">
-				<div class="sidebar-link">작성한 댓글</div>
-				<div class="sidebar-link">작가와 연락</div>
-				<div class="sidebar-link">좋아요</div>
+				<div class="sidebar-link"><a href="../mypage/mypage-comments-list.mypage">작성한 댓글</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-contact-artist-list.mypage">작가와 연락</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-art-like-list.mypage">좋아요</a></div>
 			</div>
 		</div>
 		<div class="view-item">
 			<div class="section">내 결제내역</div>
 			<div class="history-auction-buy">
-				<div class="sidebar-link">경매 내역</div>
-				<div class="sidebar-link">구매 내역</div>
+				<div class="sidebar-link"><a href="../mypage/mypage-my-auction-list.mypage">경매 내역</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-my-pay-list.mypage">구매 내역</a></div>
 			</div>
 		</div>
 		<div class="view-item">
 			<div class="section">내 쪽지 및 문의</div>
 			<div class="post-request">
-				<div class="sidebar-link">내 쪽지</div>
-				<div class="sidebar-link">내 문의</div>
+				<div class="sidebar-link"><a href="../mypage/mypage-post-list.mypage">내 쪽지</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-my-qna-list.mypage">내 문의</a></div>
 			</div>
 		</div>
-		<div class="sidebar-logout">회원 탈퇴</div>
+		<div class="sidebar-logout"><a href="../mypage/delete-ID.mypage">회원 탈퇴</a></div>
 </div>
 
 <script>
