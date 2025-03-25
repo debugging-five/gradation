@@ -5,90 +5,64 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=1920, maximum-scale=1.0" />
-<link rel="stylesheet" type="text/css"
-	href="../assets/css/exhibition/our-exhibition-past.css" />
-
+<link rel="stylesheet" type="text/css" href="../assets/css/exhibition/our-exhibition-past.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 </head>
-<body style="margin: 0; background: #fbfcfc">
-	<input type="hidden" id="anPageName" name="page"
-		value="our-exhibition-past" />
-	<div class="container-center-horizontal">
-		<div class="exhibition-past-page screen">
-			<div class="header-section">
-				<h1 class="page-title valign-text-middle suith1">exhibition</h1>
-				<div class="exhibition-title-bar">
-					<div class="exhibition-title-text valign-text-middle pretendardh3">2023
-						아트스펙트럼</div>
-					<img class="divider-line" src="img/line-3.png" alt="Line 3" />
-				</div>
-			</div>
-			<div class="main-content-row">
-				<div class="left-sidebar">
-					<div class="exhibition-list-box">
-						<div class="exhibition-list-title-box">
-							<div class="exhibition-list-title-text pretendardh5">지난 전시회</div>
-						</div>
-						<div class="exhibition-list-item">
-							<div class="exhibition-name pretendardh7">2024 필립 파레노: 보이스</div>
-						</div>
-						<div class="exhibition-list-item">
-							<div class="exhibition-name pretendardh7">2023 아트스펙트럼</div>
-						</div>
-						<div class="exhibition-list-item">
-							<div class="exhibition-name pretendardh7">2022 공예 지금</div>
-						</div>
-					</div>
-
-					<div class="gallery-column column-left">
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-							alt="house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-top-hill.jpeg"
-							alt="hill" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-2.jpeg"
-							alt="house-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house.jpeg"
-							alt="house" />
-					</div>
-
-					<div class="gallery-column column-center">
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box.jpeg"
-							alt="box-1" /> 
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box-2.jpeg"
-							alt="box-2" />
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box-3.jpeg"
-							alt="box-3" />
-					</div>
-
-					<div class="pagination-bar suith4">
-						<img class="pagination-arrow"
-							src="../assets/images/display/left.png" alt="left" />
-						<div class="page-number valign-text-middle">1</div>
-						<div class="page-number valign-text-middle">2</div>
-						<div class="page-number valign-text-middle">3</div>
-						<div class="page-number valign-text-middle">4</div>
-						<div class="page-number valign-text-middle">5</div>
-						<img class="pagination-arrow"
-							src="../assets/images/display/right.png" alt="right" />
-					</div>
-				</div>
-
-				<div class="gallery-column column-right">
-					<img class="gallery-image"
-						src="../assets/images/display/art/architecture/img-architecture-modern-2.jpeg"
-						alt="modern-2" /> <img class="gallery-image"
-						src="../assets/images/display/art/architecture/img-architecture-modern.jpeg"
-						alt="modern" /> <img class="gallery-image"
-						src="../assets/images/display/art/architecture/img-architecture-modern-3.jpeg"
-						alt="modern-3" /> <img class="gallery-image"
-						src="../assets/images/display/art/architecture/img-architecture-modern-4.jpeg"
-						alt="modern-4" />
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+  </head>
+  <body style="margin: 0; background: #fbfcfc">
+    <input type="hidden" id="anPageName" name="page" value="our-exhibition-past" />
+    <div class="container-center-horizontal">
+      <div class="our-exhibition-past screen">
+        <div class="page-header">
+          <h1 class="main-title valign-text-middle suith1">exibition</h1>
+          <div class="exhibition-name-bar group">
+            <div class="current-exhibition-name valign-text-middle pretendardh3">2023 아트스펙트럼</div>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="left-image-column">
+            <div class="exhibition-list-sidebar group">
+              <div class="sidebar-title-box overlap"><div class="text-1 pretendardh5">지난 전시회</div></div>
+              <div class="sidebar-item-box overlap">
+                <div class="sidebar-exhibition-title pretendardh7">2024 필립 파레노: 보이스</div>
+              </div>
+              <div class="sidebar-item-box overlap">
+                <div class="sidebar-exhibition-title pretendardh7">2023 아트스펙트럼</div>
+              </div>
+              <div class="sidebar-item-box overlap">
+              <div class="sidebar-exhibition-title pretendardh7">2022 공예 지금</div></div>
+            </div>
+            <div class="page-header-1 ">
+              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car.jpeg" alt="car-1" />
+              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg" alt="car-1" />
+              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg" alt="car-1" />
+              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg" alt="adrianna-geo-1rBg5YSi00c-unsplash"/>
+            </div>
+          </div>
+          <div class="page-header-2 ">
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg" alt="car-1" />
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-4.jpeg" alt="car-1" />
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-5.jpeg" alt="car-1" />
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-6.jpeg" alt="car-1" />
+          </div>
+          <div class="page-header-3 ">
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-7.jpeg" alt="car-1" />
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-8.jpeg" alt="car-1" />
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg" alt="car-1"/>
+            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg" alt="car-1" />
+          </div>
+        </div>
+        <div class="pagination-bar suith4">
+          <img class="pagination-arrow" src="../assets/images/display/art/left.png" alt="left" />
+          <div class="number valign-text-middle">1</div>
+          <div class="number valign-text-middle">2</div>
+          <div class="number valign-text-middle">3</div>
+          <div class="number valign-text-middle">4</div>
+          <div class="number valign-text-middle">5</div>
+          <img class="pagination-arrow" src="../assets/images/display/art/right.png" alt="right" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
