@@ -18,11 +18,8 @@ import com.app.display.controller.DisplayCategoryCalligraphyController;
 import com.app.display.controller.DisplayCategoryCraftController;
 import com.app.display.controller.DisplayCategoryKoreanController;
 import com.app.display.controller.DisplayCategoryPaintingController;
-<<<<<<< HEAD
 import com.app.display.controller.DisplayCategorySculptureController;
-=======
 import com.app.display.controller.DisplayDetailController;
->>>>>>> master
 import com.app.display.controller.DisplayMainCommingSoonController;
 import com.app.display.controller.DisplayMainIngController;
 import com.app.mypage.controller.MypageContactWriteController;

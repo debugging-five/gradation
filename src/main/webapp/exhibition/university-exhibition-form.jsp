@@ -60,17 +60,28 @@
 				</div>
 				
 				<!-- 전시회 일정 -->
-				<div class="input-wrapper">
+				<div class="input-wrapper2">
 					<div class="input-text4">
 						<h5>전시회 일정<span class="star">*</span></h5>
-						<input type="text" placeholder="홈페이지 주소를 입력하세요." />
 					</div>
-										<label class="pickup-label">수거 신청일<span class="required">*</span></label>
-					<div class="calendar-input-group">
-						<img class="calendar-icon"
-							src="../assets/images/upcycling/upcycling-form/calendar.png"
-							alt="calendar" /> <input type="text" id="pickupDateInput"
-							class="calendar-display-input" placeholder="날짜를 선택해주세요." readonly />
+					<div class="calendar-wrapper">
+						<div class="calendar-input-group">
+							<img class="calendar-icon"
+								src="../assets/images/upcycling/upcycling-form/calendar.png"
+								alt="calendar" />
+							<input type="text" id="pickupDateInput"
+								class="calendar-display-input" placeholder="시작일 선택 ~ " readonly />
+						</div>
+					</div>
+					<div class="calendar-wrapper">
+						<div class="calendar-input-group">
+							<img class="calendar-icon"
+								src="../assets/images/upcycling/upcycling-form/calendar.png"
+								alt="calendar" />
+							<input type="text" id="pickupDateInput2"
+								class="calendar-display-input" placeholder="종료일 선택" readonly />
+						</div>
+					</div>
 					</div>
 				</div>
 				
@@ -108,6 +119,17 @@
 
   document.querySelector(".calendar-icon").addEventListener("click", () => {
     document.getElementById("pickupDateInput").focus();
+  });
+  
+  flatpickr("#pickupDateInput2", {
+    onChange: function(selectedDates, dateStr) {
+      document.getElementById("pickupDateInput2").value = dateStr;
+    },
+    disableMobile: true
+  });
+
+  document.querySelector(".calendar-icon").addEventListener("click", () => {
+    document.getElementById("pickupDateInput2").focus();
   });
 </script>
 </body>

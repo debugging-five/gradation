@@ -195,3 +195,23 @@ button {
 	color : var(--color-gray100);
 }
 
+.calendar-icon {
+	width : 20px;
+	height : 20px;
+	margin : 0 4px 0 0;
+}
+
+
+.calendar-input-group {
+	display : flex;
+}
+
+.pickupDateInput {
+	width : 116px;
+}
+
+.calendar-wrapper {
+	width : 175px;
+	display : flex;
+	align-items : center; 
+}
