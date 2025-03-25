@@ -19,54 +19,84 @@
         <div class="page-header">
           <h1 class="main-title valign-text-middle suith1">exibition</h1>
           <div class="exhibition-name-bar group">
-            <div class="current-exhibition-name pretendardh3">2023 아트스펙트럼</div>
+            <div class="current-exhibition-name pretendardh3">2022 공예 지금</div>
           </div>
         </div>
         <div class="flex-row">
-          <div class="left-image-column">
-            <div class="exhibition-list-sidebar group">
-              <div class="sidebar-title-box overlap"><div class="text-1 pretendardh5">지난 전시회</div></div>
-              <div class="sidebar-item-box overlap">
-                <div class="sidebar-exhibition-title pretendardh7">2024 필립 파레노: 보이스</div>
-              </div>
-              <div class="sidebar-item-box overlap">
-                <div class="sidebar-exhibition-title pretendardh7">2023 아트스펙트럼</div>
-              </div>
-              <div class="sidebar-item-box overlap">
-              <div class="sidebar-exhibition-title pretendardh7">2022 공예 지금</div></div>
-            </div>
-            <div class="page-header-1 ">
-              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car.jpeg" alt="car-1" />
-              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg" alt="car-1" />
-              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg" alt="car-1" />
-              <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg" alt="adrianna-geo-1rBg5YSi00c-unsplash"/>
-            </div>
-          </div>
-          <div class="page-header-2 ">
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg" alt="car-1" />
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-4.jpeg" alt="car-1" />
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-5.jpeg" alt="car-1" />
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-6.jpeg" alt="car-1" />
-          </div>
-          <div class="page-header-3 ">
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-7.jpeg" alt="car-1" />
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-8.jpeg" alt="car-1" />
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg" alt="car-1"/>
-            <img class="car-1 image" src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg" alt="car-1" />
-          </div>
-        </div>
-        <div class="pagination-bar suith4">
-          <img class="pagination-arrow" src="../assets/images/display/art/left.png" alt="left" />
-          <c:forEach var="i" begin="1" end="${totalPages}">
-					<a href="our-exhibition-past-2023.exhibition?page=${i}"
-						class="number valign-text-middle ${i == currentPage ? 'active' : ''}">
-						${i} </a>
-				</c:forEach>
-          <img class="pagination-arrow" src="../assets/images/display/art/right.png" alt="right" />
-        </div>
-      </div>
-    </div>
-    <%@ include file="../layout/footer.jsp" %>
-  </body>
+				<div class="left-image-column">
+					<div class="exhibition-list-sidebar group">
+						<div class="sidebar-title-box overlap">
+							<div class="text-1 pretendardh5">지난 전시회</div>
+						</div>
+						<div class="sidebar-item-box overlap">
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-four.exhibition">2024 필립 파레노: 보이스</a></div>
+						</div>
+						<div class="sidebar-item-box overlap">
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-three.exhibition">2023 아트스펙트럼</a></div>
+						</div>
+						<div class="sidebar-item-box overlap">
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-two.exhibition">2022 공예 지금</a></div>
+						</div>
+					</div>
+					<div class="page-header-1 ">
+						<img class="car-1 image"
+							src="../assets/images/display/art/exhibition-past/img-handmade-8.jpeg"
+							alt="car-1" /> <img class="car-1 image"
+							src="../assets/images/display/art/exhibition-past/img-handmade-7.jpeg"
+							alt="car-1" /> <img class="car-1 image"
+							src="../assets/images/display/art/exhibition-past/img-handmade-6.jpeg"
+							alt="car-1" /> <img class="car-1 image"
+							src="../assets/images/display/art/exhibition-past/img-handmade-5.jpeg"
+							alt="adrianna-geo-1rBg5YSi00c-unsplash" />
+					</div>
+				</div>
+				<div class="page-header-2 ">
+					<img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-3.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-2.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-1.jpeg"
+						alt="car-2" />
+				</div>
+				<div class="page-header-3 ">
+					<img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-9.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-10.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-11.jpeg"
+						alt="car-1" /> <img class="car-1 image"
+						src="../assets/images/display/art/exhibition-past/img-handmade-12.jpeg"
+						alt="car-1" />
+				</div>
+			</div>
+
+			<div class="pagination-bar suith4">
+				<img class="pagination-arrow"
+					src="../assets/images/display/art/left.png" alt="left" />
+				<%
+				int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
+				int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+
+				for (int i = 1; i <= totalPages; i++) {
+				%>
+				<a href="our-exhibition-past-twenty-three.exhibition?page=<%=i%>"
+					class="<%=(i == currentPage) ? "active" : ""%>"> <%=i%>
+				</a>
+				<%
+				}
+				%>
+				<img class="pagination-arrow"
+					src="../assets/images/display/art/right.png" alt="right" />
+			</div>
+		<p>현재 페이지: <%= request.getAttribute("currentPage") %></p>
+		<p>전체 페이지 수: <%= request.getAttribute("totalPages") %></p>
+	</div>
+		</div>
+	<%@ include file="../layout/footer.jsp"%>
+</body>
 </html>
 

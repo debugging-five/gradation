@@ -125,11 +125,18 @@
 			<div class="pagination-bar">
 				<img class="pagination-icon"
 					src="../assets/images/display/art/left.png" alt="left" />
-				<c:forEach var="i" begin="1" end="${totalPages}">
-					<a href="display-main-ing.display?page=${i}"
-						class="page-number ${i == currentPage ? 'active-page' : ''}">
-						${i} </a>
-				</c:forEach>
+				<%
+				int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
+				int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+
+				for (int i = 1; i <= totalPages; i++) {
+				%>
+				<a href="display-main-ing.display?page=<%=i%>"
+					class="<%=(i == currentPage) ? "active" : ""%>"> <%=i%>
+				</a>
+				<%
+				}
+				%>
 				<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
 			</div>
