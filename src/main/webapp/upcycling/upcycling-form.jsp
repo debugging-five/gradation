@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/upcycle/upcycle-form.css" />
+	href="../assets/css/upcycling/upcycling-form.css" />
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
 	function execDaumPostcode() {
@@ -41,7 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <%@ include file="../layout/header.jsp"%>
-<input type="hidden" id="page-name" name="page" value="upcycle-form" />
+<input type="hidden" id="page-name" name="page" value="upcycling-form" />
 <div class="container-center">
 	<div class="upcycle-form screen">
 		<div class="header-wrapper">
@@ -115,7 +115,7 @@
 					<label class="pickup-label">수거 신청일<span class="required">*</span></label>
 					<div class="calendar-input-group">
 						<img class="calendar-icon"
-							src="../assets/images/upcycle/upcycle-form/calendar.png"
+							src="../assets/images/upcycling/upcycling-form/calendar.png"
 							alt="calendar" /> <input type="text" id="pickupDateInput"
 							class="calendar-display-input" placeholder="날짜를 선택해주세요." readonly />
 					</div>
@@ -186,7 +186,7 @@
 			<div class="confirm">
 				<div class="confirm-item">
 					<button type="button" class="cancel-button">
-						<div class="text-cancel"><a>취소</a></div>
+						<div class="text-cancel"><a href="../upcycling/upcycling-main.upcycling">취소</a></div>
 					</button>
 				</div>
 				<div class="confirm-item">
