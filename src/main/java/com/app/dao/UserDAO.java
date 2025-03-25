@@ -48,7 +48,7 @@ import com.app.vo.UserVO;
 		}
  		return result;
  	}
-// 	비밀번호 변경
+// 	비밀번호 변경 메일 인증
  	public int selectByIdAndEmailAndName(UserVO userVO) {
  		int result = -1;
  		try {
@@ -57,4 +57,10 @@ import com.app.vo.UserVO;
  		}
  		return result;
  	}
+ 	
+// 	비밀번호 변경
+ 	public void changePassword(UserVO userVO) {
+ 		sqlSession.update("user.changePassword", userVO);
+ 	}
+ 	
  }
