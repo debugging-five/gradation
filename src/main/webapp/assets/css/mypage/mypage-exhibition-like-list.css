@@ -96,8 +96,8 @@ body {
 }
 
 #university-logo1, #university-logo2 {
-	width : 128px;
-	height : 128px;
+	width : 157px;
+	height : 157px;
 	background-color : var(--color-gray100);
 	border : solid 1px var(--color-gray500);
 	border-radius : 10px;
@@ -107,8 +107,8 @@ body {
 }
 
 .logo-img {
-	width : 84px;
-	height : 84px;
+	width : 116px;
+	height : 116px;
 }
 
 
@@ -121,14 +121,14 @@ body {
 }
 
 .info1 {
-	font-size : var(--font-size-h8);
+	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-light);
 	height : 17px;
 	margin : 0 0 2px 0;
 }
 
 .info2 {
-	font-size : var(--font-size-h9);
+	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-light);
 	color : var(--color-gray900);
 	height : 14px;
@@ -136,7 +136,7 @@ body {
 }
 
 .major {
-	margin : 0 0 8px 0;
+	margin : 0 0 10px 0;
 }
 
 #display-none {
@@ -169,15 +169,14 @@ body {
 	justify-content : center; 
 } 
 
-#button-wrapper {
+/* #button-wrapper {
 	display : flex;
-	gap : 16px;
 	margin : 4px 0 0 0;
-}
+} */
 
 .button-comming {
 	width : 175px;
-	height : 28px;
+	height : 29px;
 	background-color : var(--color-gray100);
 	border : solid 1px var(--color-gray900);
 	border-radius : 3px;
