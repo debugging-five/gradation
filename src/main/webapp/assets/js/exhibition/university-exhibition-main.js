@@ -1,5 +1,5 @@
 const universityLogo = document.getElementById("university-logo1");
-const backgroundImage = document.getElementById("img-background");
+const backgroundImage = document.getElementById("display-none");
 const likeButtons = document.querySelectorAll(".button-like");
 const registerButton = document.querySelector(".button.register");
 const inquiryButton = document.querySelector(".button.inquiry");

@@ -190,14 +190,15 @@
 					</div>
 				</div>
 			</div>
-	
 		</div>
 		
-		<div>
+		<!-- 대학 전시회 이미지 -->
+		<div id="display-none">
 			<div id="img-background" >
-				<div>전시회 사진</div>
+				<div id="img-wrapper">
+					<img src="../assets/images/exhibition/university-exhibition-1.jpg" alt="대학교 전시회1" />
+				</div>
 			</div>
-
 		</div>
 	</div>
 	
@@ -214,6 +215,19 @@
 <%@ include file="../layout/footer.jsp" %>
 </form>
 
+  <div id="map" style="width:500px;height:400px;">
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
+  <script>
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+			// 처음 보일 때의 좌표
+      level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
+  </script>
+</div>
 </body>
 <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
 </html>
