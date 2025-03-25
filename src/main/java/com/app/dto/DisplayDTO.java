@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class DisplayDTO {
 	
-//	UserVO
+//	TBL_USER
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -34,7 +34,7 @@ public class DisplayDTO {
 	private int userBanOk;
 	private Long universityId; // 학교 테이블의 id 참조값
 	
-//	ArtVO
+//	TBL_ART
 	private String artCategoty;
 	private String artMeterial;
 	private String artSize;
@@ -43,17 +43,17 @@ public class DisplayDTO {
 	private Date artStartDate;
 	private Date artEndDate;
 	
-//	ArtImgVO
+//	TBL_ART_IMAGE
 	private String artImgName;
 	private String artImgPath;
 	private Long artId;
 	
-//	ReplyVO
+//	TBL_REPLY
 	private Long artPostId;
 	private String replyContents;
 	private Date replyDate;
 	
-//	MailVO
+//	TBL_MAIL
 	private String mailTitle;
 	private String mailContents;
 	private Timestamp mailSendTime;
@@ -61,14 +61,14 @@ public class DisplayDTO {
 	private Long sendUserId;
 	private Long recieveUserId;
 	
-//	ArtLikeVO
+//	TBL_ART_LIKE
 	private Timestamp artLikeTime;
 	
-//	ReplyLikeVO
+//	TBL_REPLY_LIKE
 	private Long replyId;
 	private Timestamp replyLikeTime;
 	
-//	ArtPostVO
+//	TBL_ART_POST
 	private Timestamp artPostDate;
 	
 	public DisplayDTO() {;}

@@ -70,7 +70,7 @@
 								src="../assets/images/upcycling/upcycling-form/calendar.png"
 								alt="calendar" />
 							<input type="text" id="pickupDateInput"
-								class="calendar-display-input" placeholder="시작일 선택 ~ " readonly />
+								class="calendar-display-input" placeholder="시작일 선택" readonly /> <span id="span">~</span>
 						</div>
 					</div>
 					<div class="calendar-wrapper">
@@ -81,7 +81,6 @@
 							<input type="text" id="pickupDateInput2"
 								class="calendar-display-input" placeholder="종료일 선택" readonly />
 						</div>
-					</div>
 					</div>
 				</div>
 				
@@ -101,7 +100,7 @@
 				</div>
 				
 				<div id="button-wrapper2">
-					<button id="cancel-button">취소</button>
+					<button type="button" id="cancel-button">취소</button>
 					<button id="register-button">신청</button>
 				</div>
 			</div>
