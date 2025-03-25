@@ -123,16 +123,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="pagination-bar suith4">
+			<div class="pagination-bar">
 				<img class="pagination-icon"
 					src="../assets/images/display/art/left.png" alt="left" />
-
 				<c:forEach var="i" begin="1" end="${totalPages}">
 					<a href="display-main-ing.display?page=${i}"
 						class="page-number ${i == currentPage ? 'active-page' : ''}">
 						${i} </a>
 				</c:forEach>
-
 				<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
 			</div>
