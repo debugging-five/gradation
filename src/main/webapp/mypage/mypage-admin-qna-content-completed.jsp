@@ -63,9 +63,7 @@
 				
 				<div id="button-wrapper">
 					<button id="list-button" type="button">목록</button>
-					<button id="answer-button" type="button">답변하기</button>
 				</div>
-				
 			</div>
 		</div>
 	</div>
