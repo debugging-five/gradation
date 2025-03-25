@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-#title-wrapper h1 {
+#title-wrapper h2 {
 	margin : 142px 0 0 0;
 }
 
@@ -105,7 +105,8 @@ input::placeholder {
 #button-wrapper1 {
 	display : flex;
 	gap : 76px;
-	margin : 4px 0 0 0;
+	margin : 50px 0 0 0;
+	align-items : center; 
 }
 
 #file-wrapper {
@@ -114,11 +115,15 @@ input::placeholder {
 	align-items : center;
 }
 
-#icon {
+#file-input {
+	display : none;
+}
+
+/* #icon {
 	width : 16px;
 	height : 16px;
 }
-
+ */
 #file-button {
 	width : 75px;
 	height : 35px;
@@ -130,12 +135,36 @@ input::placeholder {
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-light);
 }
+ 
 
-#icon-hover p {
-	font-size : var(--font-size-h9);
-	color : var(--color-gray900);
-	font-weight : var(--font-weight-light);
-	margin : 25px 0 0 76px;
+.file-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+#icon-hover {
+    display: none;
+    position: absolute;
+    top: -30px; /* 아이콘 위에 배치 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.file-container:hover #icon-hover {
+    display: block;
+}
+
+#icon {
+	width : 16px;
+	height : 16px;
+	margin : 0 0 0 4px;
 }
 
 #button-wrapper2 {
