@@ -8,11 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.auction.controller.AuctionBiddingController;
-import com.app.auction.controller.AuctionController;
-import com.app.auction.controller.AuctionModifyController;
-import com.app.auction.controller.AuctionModifyOkController;
-import com.app.auction.controller.AuctionPaymentController;
 import com.app.mypage.controller.MypageAdminFormApproved;
 import com.app.mypage.controller.MypageAdminFormNotApproved;
 import com.app.mypage.controller.MypageAdminQnaContent;
@@ -24,6 +19,7 @@ import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageMainController;
+import com.app.mypage.controller.MypageModifyController;
 import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostListController;
 
@@ -40,7 +36,7 @@ public class MypageFrontController extends HttpServlet{
 		if(target.equals("mypage/mypage-main")) {
 			result = new MypageMainController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-modify")) {
-//			result = new MypageModifyController().execute(req, resp);
+			result = new MypageModifyController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-list")) {
 			result = new MypageContactListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {

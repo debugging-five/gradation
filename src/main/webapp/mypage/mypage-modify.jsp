@@ -26,22 +26,51 @@
 						<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" value="${userNickname}"></div>
 						<button class="input-button">중복체크</button>
 					</div>
-					<div class="user-info" id=""><h5 class="user-info-title2">이름</h5><input type="text" value="${userName}"></div>
-					<div class="user-info" id=""><h5 class="user-info-title4">전화번호</h5><input type="text" value="${userPhone}"></div>
-					<div class="user-info" id=""><h5 class="user-info-title3">이메일</h5><input type="text" value="${userEmail}"></div>
-					<div class="user-info" id=""><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userId}"></div>
-					<div class="user-info" id=""><h5 class="user-info-title2">주소</h5><input type="text" value="${userAddress}"></div>
-					<div class="user-info" id=""><h5 class="user-info-title4">상세주소</h5><input type="text" value="${userDetailAddress}"></div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title2">이름</h5><input type="text" value="${userName}"></div>
+					</div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" value="${userPhone}"></div>
+						<button class="input-button">휴대폰 인증</button>
+					</div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title3">이메일</h5><input type="text" value="${userEmail}"></div>
+						<button class="input-button">이메일 인증</button>
+					</div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userId}"></div>
+						<button class="input-button">인증번호 확인</button>
+					</div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input type="text" value="${userAddress}"></div>
+						<button class="input-button">주소 검색</button>
+					</div>
+					<div class="warning-area">
+					</div>
+					<div class="user-info" id="">
+						<div class="user-info-input"><h5 class="user-info-title4">상세주소</h5><input type="text" value="${userDetailAddress}"></div>
+					</div>
+					<div class="warning-area">
+					</div>
 				</div>
 				<div class="button-wrapper">
-					<button id="modify-button" onclick="location.href='mypage-main.mypage'">수정</button>
+					<button id="modify-button" type="button">저장</button>
 				</div>
-				
-				
 			</div>
 		</div>
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-modify.js"></script>
 </html>

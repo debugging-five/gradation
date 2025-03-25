@@ -8,6 +8,8 @@ input{
 	outline: none;
 	background-color: var(--color-gray100);
 	padding: 0;
+	font-size: var(--font-size-h7);
+	padding-top: 8px;
 }
 
 #container-wrap {
@@ -36,7 +38,6 @@ input{
 
 .user-info {
 	display: flex;
-	margin-bottom: 50px;
 	border-bottom: solid 1px var(--color-gray900);
 	width: 800px;
 	height: 40px;
@@ -47,9 +48,17 @@ input{
 	display: flex;
 }
 
+.warning-area {
+	background-color: var(--color-gray100);
+	width: 500px;
+	height: 19px;
+	margin-left: 120px;
+	margin-bottom: 19px;
+}
+
 .user-info-first {
 	display: flex;
-	margin-bottom: 50px;
+	margin-bottom: 38px;
 	width: 800px;
 	height: 28px;
 }
@@ -65,12 +74,15 @@ input{
 
 .user-info-title2{
 	margin-right: 88px;
+	padding-top: 12px;
 }
 .user-info-title3{
 	margin-right: 73px;
+	padding-top: 12px;
 }
 .user-info-title4{
 	margin-right: 57px;	
+	padding-top: 12px;
 }
 
 .button-wrapper {
@@ -82,7 +94,7 @@ input{
 #modify-button {
 	width: 125px;
 	height: 50px;
-	margin-top: 50px;
+	margin-top: 63px;
 	margin-bottom: 200px;
 	font-family: var(--font-family-Pretendard-Regular);
 	font-size: var(--font-size-h5);
@@ -90,4 +102,17 @@ input{
 	background-color: var(--color-primary);
 	border-radius: 3px;
 	border: none;
+}
+
+.input-button {
+	width: 125px;
+	height: 35px;
+	margin-left: auto;
+	margin-bottom: 4px;
+	border: none;
+	border-radius: 2px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h7);
+	background-color: var(--color-gray500);
+	color: var(--color-gray100);
 }
