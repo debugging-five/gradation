@@ -13,81 +13,85 @@
 <body>
 <div id="wrapper">
 	<!-- display -->
-	<div class="display-text">display</div>
+	<div class="display-text">
+		<span>display</span>
+	</div>
 	
 	<!-- registration -->
-    <div class="registration-text">registration</div>
+    <div class="registration-text">
+    	<span>registration</span>
+    </div>
 
-	<div id="upload">
-		<!-- 첨부파일 업로드 -->
-		<div class="attachment-box" onclick="document.getElementById('file-input').click();">
-		    <img class="add-image" alt="add-icon" src="../assets/images/display/add.png">
-		    <span class="add-text">첨부파일 업로드</span>
-		    <!-- 숨겨진 파일 업로드 input -->
-		    <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
-		</div>
-
+		<div id="upload">
+			<!-- 첨부파일 업로드 -->
+			<div class="attachment-box" onclick="document.getElementById('file-input').click();">
+			    <img class="add-image" alt="add-icon" src="../assets/images/display/add.png">
+			    <span class="add-text">첨부파일 업로드</span>
+			    <!-- 숨겨진 파일 업로드 input -->
+			    <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
+			</div>
 	
-		<!-- 작가 및 작품 정보 -->
-		<div id="content">
-			<form>
-				<div class="input-text">
-			        <label>작가명<span class="essential">*</span></label>
-			        <input type="text" id="author" placeholder="작가명을 입력하세요."
-			        		style="margin-left: 49px" class="input-box">			
-				</div>
-				<div class="input-text">
-			        <label>작품명<span class="essential">*</span></label>
-			        <input type="text" id="title" placeholder="작품명을 입력하세요."
-			        		style="margin-left: 49px" class="input-box">			
-				</div>
-				<div id="category" class="input-text">
-				    <label>작품 분류<span class="essential">*</span></label>
-				    <div id="category-text" style="cursor: pointer;">
-				        작품 분류를 선택하세요
-				        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
-				    </div> 
-				    <select id="category-select" class="select-box" style="display: none;">
-				    	<option value="" disabled selected>분류</option>
-				        <option value="회화">회화</option>
-				        <option value="조각">조각</option>
-				        <option value="한국화">한국화</option>
-				        <option value="공예">공예</option>
-				        <option value="건축">건축</option>
-				        <option value="서예">서예</option>
-				    </select>
-				</div>
-				<div class="input-text">
-			        <label>작품 재료<span class="essential">*</span></label>
-			        <input type="text" id="material" placeholder="작품 재료를 입력하세요."
-			        		style="margin-left: 25px" class="input-box">			
-				</div>
-				<div class="input-text">
-			        <label>작품 규격<span class="essential">*</span></label>
-			        <div class="size-input" style="margin-left: 23px">
-					  <input type="text" id="width" placeholder="가로">
-					  <span>X</span>
-					  <input type="text" id="height" placeholder="세로">
-					  <span>X</span>
-					  <input type="text" id="depth" placeholder="높이">
-					</div>		
-				</div>
-				
-				<div class="input-text">
-				    <label>제작 완료일<span class="essential">*</span></label>
-				    <span id="calendar-text" style="cursor: pointer;" onclick="showCalendar()">
-				        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
-				        날짜를 선택해주세요.
-				    </span> 
-				    <!-- 실제로 사용되는 input 필드 -->
-				    <input type="date" id="completion-date" class="input-box" style="visibility: hidden; position: absolute;">
-				    
-				    <!-- UI로만 쓰이는 input -->
-				    <input type="date" id="date-input" class="input-box" style="display: none;" onchange="updateDate()">
-				</div>
-				
-			</form>
-		</div>
+		
+			<!-- 작가 및 작품 정보 -->
+			<div id="content">
+				<form>
+					<div class="input-text">
+				        <label>작가명<span class="essential">*</span></label>
+				        <input type="text" id="author" placeholder="작가명을 입력하세요."
+				        		style="margin-left: 49px" class="input-box">			
+					</div>
+					<div class="input-text">
+				        <label>작품명<span class="essential">*</span></label>
+				        <input type="text" id="title" placeholder="작품명을 입력하세요."
+				        		style="margin-left: 49px" class="input-box">			
+					</div>
+					<div id="category" class="input-text">
+					    <label>작품 분류<span class="essential">*</span></label>
+					    <div id="category-text" style="cursor: pointer;">
+					        작품 분류를 선택하세요
+					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+					    </div> 
+					    <select id="category-select" class="select-box" style="display: none;">
+					    	<option value="" disabled selected>분류</option>
+					        <option value="회화">회화</option>
+					        <option value="조각">조각</option>
+					        <option value="한국화">한국화</option>
+					        <option value="공예">공예</option>
+					        <option value="건축">건축</option>
+					        <option value="서예">서예</option>
+					    </select>
+					</div>
+					<div class="input-text">
+				        <label>작품 재료<span class="essential">*</span></label>
+				        <input type="text" id="material" placeholder="작품 재료를 입력하세요."
+				        		style="margin-left: 25px" class="input-box">			
+					</div>
+					<div class="input-text">
+				        <label>작품 규격<span class="essential">*</span></label>
+				        <div class="size-input" style="margin-left: 23px">
+						  <input type="text" id="width" placeholder="가로">
+						  <span>X</span>
+						  <input type="text" id="height" placeholder="세로">
+						  <span>X</span>
+						  <input type="text" id="depth" placeholder="높이">
+						</div>		
+					</div>
+					
+					<div class="input-text">
+					    <label>제작 완료일<span class="essential">*</span></label>
+					    <span id="calendar-text" style="cursor: pointer;" onclick="showCalendar()">
+					        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
+					        날짜를 선택해주세요.
+					    </span> 
+					    <!-- 실제로 사용되는 input 필드 -->
+					    <input type="date" id="completion-date" class="input-box" style="visibility: hidden; position: absolute;">
+					    
+					    <!-- UI로만 쓰이는 input -->
+					    <input type="date" id="date-input" class="input-box" style="display: none;" onchange="updateDate()">
+					</div>
+					
+				</form>
+			</div>
 	</div>
 	
 	<!-- 작품설명 -->
