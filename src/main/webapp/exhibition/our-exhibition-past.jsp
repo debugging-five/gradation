@@ -40,41 +40,52 @@
 					</div>
 
 					<div class="gallery-column column-left">
-						<img class="gallery-image" src="img/rectangle-1@2x.png"
-							alt="Rectangle 1" /> <img class="gallery-image"
-							src="img/image-19@2x.png" alt="image 19" /> <img
-							class="gallery-image" src="img/omgman.png" alt="oMgMan" /> <img
-							class="gallery-image"
-							src="img/adrianna-geo-1rbg5ysi00c-unsplash.png"
-							alt="adrianna-geo" />
+						<img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+							alt="house-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-top-hill.jpeg"
+							alt="hill" /> <img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-2.jpeg"
+							alt="house-2" /> <img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house.jpeg"
+							alt="house" />
 					</div>
 
 					<div class="gallery-column column-center">
-						<img class="gallery-image" src="img/image-19@2x.png"
-							alt="image 23" /> <img class="gallery-image"
-							src="img/image-22@2x.png" alt="image 22" />
-						<div class="empty-placeholder"></div>
-						<img class="gallery-image" src="img/image-24.png" alt="image 24" />
+						<img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-floating-box.jpeg"
+							alt="box-1" /> 
+						<img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-floating-box-2.jpeg"
+							alt="box-2" />
+						<img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-floating-box-3.jpeg"
+							alt="box-3" />
 					</div>
 
 					<div class="pagination-bar suith4">
-						<img class="pagination-arrow" src="../assets/images/display/left.png" alt="left" />
+						<img class="pagination-arrow"
+							src="../assets/images/display/left.png" alt="left" />
 						<div class="page-number valign-text-middle">1</div>
 						<div class="page-number valign-text-middle">2</div>
 						<div class="page-number valign-text-middle">3</div>
 						<div class="page-number valign-text-middle">4</div>
 						<div class="page-number valign-text-middle">5</div>
-						<img class="pagination-arrow" src="../assets/images/display/right.png" alt="right" />
+						<img class="pagination-arrow"
+							src="../assets/images/display/right.png" alt="right" />
 					</div>
 				</div>
 
 				<div class="gallery-column column-right">
-					<img class="gallery-image" src="img/image-21@2x.png" alt="image 21" />
-					<img class="gallery-image" src="img/rectangle-2@2x.png"
-						alt="Rectangle 2" /> <img class="gallery-image"
-						src="img/geordanna-cordero-5ne6mx0wvfq-unsplash.png"
-						alt="geordanna" /> <img class="gallery-image"
-						src="img/rectangle-3@2x.png" alt="Rectangle 3" />
+					<img class="gallery-image"
+						src="../assets/images/display/art/architecture/img-architecture-modern-2.jpeg"
+						alt="modern-2" /> <img class="gallery-image"
+						src="../assets/images/display/art/architecture/img-architecture-modern.jpeg"
+						alt="modern" /> <img class="gallery-image"
+						src="../assets/images/display/art/architecture/img-architecture-modern-3.jpeg"
+						alt="modern-3" /> <img class="gallery-image"
+						src="../assets/images/display/art/architecture/img-architecture-modern-4.jpeg"
+						alt="modern-4" />
 				</div>
 			</div>
 		</div>
