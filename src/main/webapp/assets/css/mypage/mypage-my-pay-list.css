@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#container {
+	width: 1160px;
+	margin-top: 142px;
+	display: flex;
+	gap: 120px;
+}
+
+#category {
+	width: 242px;
+	height: 875px;
+	background-color: var(--color-gray900);
+	margin-bottom: 200px;
+	
+}
+
+#title {
+	margin-bottom: 50px;
+}
+
+#title-kind {
+	width: 800px;
+	height: 50px;
+	margin-bottom: 50px;
+	display: flex;
+
+}
+
+#payed{
+	width : 400px;
+   	height : 50px;
+   	background-color : var(--color-gray500);
+   	border : solid 1px var(--color-gray500);
+   	display : flex;
+   	align-items : center;
+   	justify-content : center;
+   	cursor: pointer;
+}
+
+#auctioned {
+	width : 400px;
+   	height : 50px;
+   	background-color : var(--color-gray100);
+   	border : solid 1px var(--color-gray500);
+   	display : flex;
+   	align-items : center;
+   	justify-content : center; 
+   	font-family: var(--font-family-Pretendard-Regular);
+   	cursor: pointer;
+}
+
+
+
+
+#item-wrapper{
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.item-photo {
+    width: 184px; /* 원본 크기 유지 */
+    height: 246px; /* 원본 크기 유지 */
+    display: block;
+    margin: auto; /* 가운데 정렬 */
+}
+.photo-wrapper {
+    width: 246px;
+    height: 246px;
+    background-color: var(--color-gray500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#info-wrapper {
+	margin-left: 20px;
+}
+.info1 {
+
+}
+.delivery-title{
+	font-size: var(--font-size-h3);
+	font-weight: bold;
+	
+}
+.when{
+	font-size: var(--font-size-h7);	
+	margin-left: 10px;
+}
+.info2 {
+	margin-top: 20px;
+	border-bottom: solid 1px;
+	width: 365px;	
+	display: flex;
+	justify-content: space-between;
+}
+.item-title{
+	font-size: var(--font-size-h7);	
+}
+.item-name{
+	font-size: var(--font-size-h7);	
+}
+.info3 {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;	
+}
+.card-wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+.pay-title{
+	font-size: var(--font-size-h7);	
+}
+.pay-cardtype{
+	font-size: var(--font-size-h7);	
+}
+.pay-cardname{
+	font-size: var(--font-size-h7);	
+}
+.info4 {
+	margin-top: 40px;
+	border-bottom: solid 1px;
+	width: 365px;
+	display: flex;
+	justify-content: space-between;	
+}
+.price-title{
+	font-size: var(--font-size-h7);	
+}
+.price-cost{
+	font-size: var(--font-size-h7);		
+}
+
+
+
+
+
+
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+.button-1 {
+	width: 125px;
+	height: 50px;
+	background: white;
+    color: red;
+    border: solid 1px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
