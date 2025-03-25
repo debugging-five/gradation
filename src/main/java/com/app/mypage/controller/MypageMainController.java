@@ -13,7 +13,7 @@ public class MypageMainController implements Action{
 @Override
 public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 	Result result = new Result();
-	result.setPath("mypage/mypage.jsp");
+	result.setPath("mypage/mypage-main.jsp");
 	return result;
 }
 }
