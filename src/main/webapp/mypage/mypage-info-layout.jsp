@@ -58,10 +58,10 @@
 		<div class="view-item">
 			<div class="section">관리자 마이페이지</div>
 			<div class="post-request">
-				<div class="sidebar-link"><a href="">자주 묻는 질문</a></div>
-				<div class="sidebar-link"><a href="">1:1 문의</a></div>
-				<div class="sidebar-link"><a href="">양식관리</a></div>
-				<div class="sidebar-link"><a href="">회원관리</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-admin-faq-list.mypage">자주 묻는 질문</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-admin-qna-list-waiting.mypage">1:1 문의</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-admin-form-not-approved.mypage">양식관리</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-admin-user-manage.mypage">회원관리</a></div>
 			</div>
 		</div>
 </div>

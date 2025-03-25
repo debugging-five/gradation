@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageAdminFormNotApproved implements Action {
+public class MypageAdminFaqRegisterController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-admin-form-not-approved.jsp");
+		result.setPath("mypage-admin-faq-register.jsp");
 		return result;
 	}
 
