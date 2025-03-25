@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-contact-artist-list.css" />
-<title>내 활동 / 작가와 연락</title>
+<title>경매 및 구매/ 경매 내역</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
