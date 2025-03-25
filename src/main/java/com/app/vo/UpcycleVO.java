@@ -10,40 +10,22 @@ public class UpcycleVO {
 	private Date upcycleDate;
 	private String upcycleAddress;
 	private Long userId;
+	private String UpcycleImgName;
+	private String UpcycleImgPath;
 	
 	public UpcycleVO() {;}
-	
+
 	public UpcycleVO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId) {
+			Long userId, String upcycleImgName, String upcycleImgPath) {
+		super();
 		this.id = id;
 		this.upcycleCategory = upcycleCategory;
 		this.upcycleSize = upcycleSize;
 		this.upcycleDate = upcycleDate;
 		this.upcycleAddress = upcycleAddress;
 		this.userId = userId;
-	}
-
-	@Override
-	public String toString() {
-		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleVO other = (UpcycleVO) obj;
-		return Objects.equals(id, other.id);
+		UpcycleImgName = upcycleImgName;
+		UpcycleImgPath = upcycleImgPath;
 	}
 
 	public Long getId() {
@@ -93,6 +75,46 @@ public class UpcycleVO {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	
+
+	public String getUpcycleImgName() {
+		return UpcycleImgName;
+	}
+
+	public void setUpcycleImgName(String upcycleImgName) {
+		UpcycleImgName = upcycleImgName;
+	}
+
+	public String getUpcycleImgPath() {
+		return UpcycleImgPath;
+	}
+
+	public void setUpcycleImgPath(String upcycleImgPath) {
+		UpcycleImgPath = upcycleImgPath;
+	}
+
+	@Override
+	public String toString() {
+		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
+				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
+				+ ", UpcycleImgName=" + UpcycleImgName + ", UpcycleImgPath=" + UpcycleImgPath + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UpcycleVO other = (UpcycleVO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 	
 }
