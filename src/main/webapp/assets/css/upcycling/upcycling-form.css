@@ -109,36 +109,65 @@ fieldset {
 	width: 482px;
 }
 
-.upcycle-form .image {
+.upcycle-form .attachment-box {
+	width: 500px;
+	height: 500px;
+	border: 2px dashed #ccc;
+	background-color: var(--color-gray500);
 	position: relative;
+	overflow: hidden;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
-	background-color: var(--color-gray500);
-	overflow: hidden;
 }
 
-.upcycle-form .image-upload-area {
-	width: 200px;
-	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px dashed #ccc;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	background-color: var(--color-gray500);
+.upcycle-form .add-image, .add-text {
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	color: var(--color-gray600);
+}
+
+.upcycle-form .add-image {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 30px;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	color: var(--color-gray600);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	width: 24px;
+	height: 24px;
+}
+
+.upcycle-form .add-text {
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	font-family: 'Pretendard-Regular';
+}
+
+.upcycle-form .image {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	width: 24px;
+	height: 24px;
 }
 
 .upcycle-form .preview-image {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	display: none;
+	z-index: 1;
 }
 
 .upcycle-form .upload-label {
@@ -454,72 +483,55 @@ fieldset {
 }
 
 .upcycle-form .pickup-date-field {
-	align-items: flex-start;
 	display: flex;
-	flex-direction: column;
-	gap: 6px;
-	margin-top: 50px;
-	min-height: 27px;
-	width: 402px;
-	border-bottom: solid 1.5px var(--color-gray900);
+	align-items: center;
 	width: 400px;
+	border-bottom: 1.5px solid var(--color-gray900);
+	padding-bottom: 4px;
+	margin-top: 46px;
 }
 
-.upcycle-form .pickup-date-row {
-	align-items: flex-start;
-	display: flex;
-	min-width: 258px;
-}
-
-.upcycle-form .pick-up {
-	align-self: flex-end;
-	display: flex;
-	width: 93px;
-}
-
-.upcycle-form .group-pick-up {
-	display: flex;
-	width: 95px;
-}
-
-.upcycle-form .text-pick-up {
-	color: transparent;
-	font-weight: var(font-weight-semibold);
-	height: 18px;
-	line-height: 24px;
-	white-space: nowrap;
-	width: 93px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.upcycle-form .pickup-label {
+	min-width: 72px; /* 이메일, 상세주소 등과 같은 라벨 폭 */
 	font-family: 'Pretendard-SemiBold';
 	font-size: var(--font-size-h5);
-	font-style: normal;
-	font-weight: var(font-weight-semibold);
-	letter-spacing: -0.07px;
+	color: var(--color-black);
+	display: flex;
+	align-items: center;
+}
+
+.upcycle-form .required {
+	color: var(--color-primary);
+	margin-left: 4px;
+}
+
+.upcycle-form .calendar-input-group {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.upcycle-form .calendar-icon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.upcycle-form .calendar-display-input {
+	border: none;
+	background-color: transparent;
+	font-family: 'Pretendard-Regular';
+	font-size: var(--font-size-h7);
+	color: var(--color-gray900);
+	cursor: pointer;
+	width: 100%;
 }
 
 .upcycle-form .calendar {
 	height: 20px;
 	margin-left: 8px;
 	width: 20px;
-}
-
-.upcycle-form .text-calendar {
-	color: var(--color-gray900);
-	font-weight: var(font-weight-regular);
-	height: 19px;
-	line-height: normal;
-	margin-left: 5px;
-	white-space: nowrap;
-	font-family: 'Pretendard-Regular';
-	font-size: var(--font-size-h7);
-	font-style: normal;
-	font-weight: var(font-weight-regular);
-	letter-spacing: -0.06px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .upcycle-form .size-count-wrapper {
@@ -741,7 +753,7 @@ fieldset {
 	letter-spacing: -0.06px;
 }
 
-.upcycle-form .flex-col-material {
+.upcycle-form .section-material {
 	align-items: center;
 	margin-top: 44px;
 	min-height: 813px;
@@ -788,6 +800,13 @@ fieldset {
 	font-weight: 300;
 	letter-spacing: -0.06px;
 	border: none;
+}
+
+.material-checkbox-group input[type="checkbox"] {
+	vertical-align: middle;
+	margin-right: 1px;
+	margin-left: 5px;
+	margin-bottom: 2px;
 }
 
 .upcycle-form .extra-notes-field {

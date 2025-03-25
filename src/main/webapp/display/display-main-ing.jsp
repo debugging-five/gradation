@@ -14,7 +14,7 @@
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
 	<input type="hidden" id="anPageName" name="page"
-		value="display-category-painting" />
+		value="display-main-ing" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -85,40 +85,40 @@
 						<img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
 							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-urban-style.jpeg"
-							alt="urban-style" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-illustration-cat.jpeg"
-							alt="cat" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
+							alt="gradation-6" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
+							alt="gradation-7" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
 							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-catwatercolor-person-2.jpeg"
-							alt="person-2" />
+							src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
+							alt="tiger-and-waterfall" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation.jpeg"
-							alt="gradatio" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-rainy.jpeg"
-							alt="rainy" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-illustration-cat-2.jpeg"
-							alt="cat-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-bold-shapes.jpeg"
-							alt="shapes" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-interpretation.jpeg"
-							alt="interpretation" />
+							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
+							alt="korean-cat-4" /> <img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+							alt="meditation-house-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
+							alt="hanok-2" /> <img class="gallery-image"
+							src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
+							alt="object-cat" /> <img class="gallery-image"
+							src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
+							alt="cat-2" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-3.jpeg"
-							alt="gradation-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
+							alt="catwatercolor-person" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
 							alt="oh" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-illustration-cat-3.jpeg"
-							alt="cat-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
+							alt="whale" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
 							alt="old-man-in-cafe" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
-							alt="whale" />
+							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+							alt="meditation-house-3" />
 					</div>
 				</div>
 			</div>

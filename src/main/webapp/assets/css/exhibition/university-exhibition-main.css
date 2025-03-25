@@ -14,28 +14,28 @@ body {
 }
 
 #title-wrapper h2 {
-	margin : 86px 0 0 0;
+	margin : 142px 0 0 0;
 }
 
 #category-wrapper {
 	font-size : 16px;
-	margin : 35px 0 0 0;
+	margin : 35px 28px 0 0;
 	display : flex;
 	justify-content : center;
 	align-items : center;
+	color : var(--color-gray900);
 }
 
-#category-wrapper span {
+#span {
 	color : var(--color-gray900);
 	margin : 0 65px;
-	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
-	cursor : pointer;
 }
 
-#category-wrapper span:hover {
+.category:hover {
 	color : var(--color-primary);
 	text-decoration : underline 2px;
+	cursor : pointer;
 }
 
 #map-wrapper {

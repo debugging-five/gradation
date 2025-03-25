@@ -102,8 +102,11 @@
   white-space: nowrap;
 }
 
-.sidebar-link:hover {
-  color: var(--color-primary)
+.sidebar-link:hover a {
+  color: var(--color-primary);
+}
+.sidebar-link a {
+  cursor: pointer;
 }
 
 .my-perform {

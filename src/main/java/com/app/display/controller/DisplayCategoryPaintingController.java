@@ -1,4 +1,4 @@
-package com.app.user.controller;
+package com.app.display.controller;
 
 import java.io.IOException;
 
@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class UserLoginNewPasswordController implements Action {
+public class DisplayCategoryPaintingController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		
-		result.setPath("login-new-password.jsp");
+		result.setPath("display-category-painting.jsp");
 		return result;
 	}
 
