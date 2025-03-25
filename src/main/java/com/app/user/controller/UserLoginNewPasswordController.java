@@ -15,7 +15,6 @@ public class UserLoginNewPasswordController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		result.setRedirect(true);
 		result.setPath("login-new-password.jsp");
 		return result;
 	}
