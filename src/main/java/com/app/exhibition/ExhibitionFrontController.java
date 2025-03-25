@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.exhibition.controller.GradationExhibitionController;
 import com.app.exhibition.controller.UniversityExhibitionController;
+import com.app.exhibition.controller.UniversityExhibitionFormWriteController;
 
 public class ExhibitionFrontController extends HttpServlet {
 
@@ -23,6 +24,8 @@ public class ExhibitionFrontController extends HttpServlet {
 		
 		if(target.equals("exhibition/university-exhibition-main")) {
 			result = new UniversityExhibitionController().execute(req, resp);
+		}else if(target.equals("exhibition/university-exhibition-form")) {
+			result = new UniversityExhibitionFormWriteController().execute(req, resp);
 		}else if(target.equals("exhibition/gradation-exhibition-main")) {
 			result = new GradationExhibitionController().execute(req, resp);
 		}else {
