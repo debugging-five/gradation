@@ -17,7 +17,7 @@ const loginFailWrong1 = document.querySelector('#login-fail-wrong1');
 const loginFailWrong2 = document.querySelector('#login-fail-wrong2');
 
 //	쿼리스트링 가져오기
-const islogin = (new URLSearchParams(window.location.search)).get("login");
+const islogin = (new URLSearchParams(location.search)).get("login");
 console.log("값"+islogin+"값");
 
 //로그인 실패시

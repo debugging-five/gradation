@@ -19,40 +19,50 @@
 				<h2 id="title">경매 및 구매 / 구매 내역</h2>
 				<h2 id="title">배송조회</h2>
 				
-				<div id="seller-buyer-wrapper">
-					<div>
-						<div class="seller-gap1">
-							<span>택배사</span>
-							<span>한진택배</span>
+				<div id="seller-buyer-wrapper">					
+					<div id="seller-wrapper">
+						<div>
+							<img alt="product-icon" class="product-icon" src="../assets/images/mypage/product.png">
 						</div>
-						<div class="seller-gap2">
-							<span>전화번호</span>						
-							<span>1688-2234</span>						
-						</div>
-						<div class="seller-gap3">
-							<span>송장번호</span>						
-							<span>458528916333</span>						
-						</div>
-						<div class="seller-gap4">
-							<span>판매자</span>						
-							<span>박세현</span>						
+						<div>
+							<div class="seller-gap1">
+								<span>택배사</span>
+								<span>한진택배</span>
+							</div>
+							<div class="seller-gap2">
+								<span>전화번호</span>						
+								<span>1688-2234</span>						
+							</div>
+							<div class="seller-gap3">
+								<span>송장번호</span>						
+								<span>458528916333</span>						
+							</div>
+							<div class="seller-gap4">
+								<span>판매자</span>						
+								<span>박세현</span>						
+							</div>
 						</div>
 					</div>
-					<div>
-						<div class="buyer-gap1">
-							<span>받는 사람</span>	
-							<span>홍길동</span>				
+					<div id="buyer-wrapper">
+						<div>
+							<img alt="user-icon" class="user-icon" src="../assets/images/mypage/user.png">
 						</div>
-						<div id="address-wrapper" class="buyer-gap2">
-							<span>받는 주소</span>
-							<div class="address">
-								<span>서울특별시 관악구 역삼로 119 -112</span>
-								<span>스카이 캐슬 1004호</span>					
-							</div>	
-						</div>
-						<div class="buyer-gap3">
-							<span>배송 요청사항</span>
-							<span>종 + 1234</span>
+						<div>
+							<div class="buyer-gap1">
+								<span>받는 사람</span>	
+								<span>홍길동</span>				
+							</div>
+							<div id="address-wrapper" class="buyer-gap2">
+								<span>받는 주소</span>
+								<div class="address">
+									<span>서울특별시 관악구 역삼로 119 -112</span>
+									<span>스카이 캐슬 1004호</span>					
+								</div>	
+							</div>
+							<div class="buyer-gap3">
+								<span>배송 요청사항</span>
+								<span>종 + 1234</span>
+							</div>
 						</div>
 					</div>
 				</div>

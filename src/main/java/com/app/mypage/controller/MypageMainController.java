@@ -10,10 +10,10 @@ import com.app.Action;
 import com.app.Result;
 
 public class MypageMainController implements Action{
-@Override
-public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-	Result result = new Result();
-	result.setPath("mypage/mypage.jsp");
-	return result;
-}
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		Result result = new Result();
+		result.setPath("mypage-main.jsp");
+		return result;
+	}
 }
