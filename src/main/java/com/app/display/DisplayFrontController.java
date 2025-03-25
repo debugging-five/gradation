@@ -13,6 +13,11 @@ import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
+import com.app.display.controller.DisplayCategoryCraftController;
+import com.app.display.controller.DisplayCategoryKoreanController;
+import com.app.display.controller.DisplayCategoryPaintingController;
+import com.app.display.controller.DisplayMainCommingSoonController;
+import com.app.display.controller.DisplayMainIngController;
 import com.app.mypage.controller.MypageContactWriteController;
 
 public class DisplayFrontController extends HttpServlet{
@@ -28,10 +33,22 @@ public class DisplayFrontController extends HttpServlet{
 		
 		if(target.equals("mypage/mypage-contact-artist-write")) {
 			result = new MypageContactWriteController().execute(req, resp);
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
-		}else if(target.equals("")) {
+		}else if(target.equals("display/display-main-ing")) {
+			result = new DisplayMainIngController().execute(req, resp);
+		}else if(target.equals("display/display-main-comming-soon")) {
+			result = new DisplayMainCommingSoonController().execute(req, resp);
+		}else if(target.equals("display/display-category-korean")) {
+			result = new DisplayCategoryKoreanController().execute(req, resp);
+		}else if(target.equals("display/display-category-painting")) {
+			result = new DisplayCategoryPaintingController().execute(req, resp);
+		}else if(target.equals("display/display-category-sculpture")) {
+			result = new DisplayCategorySculptureController().execute(req, resp);
+		}else if(target.equals("display/display-category-craft")) {
+			result = new DisplayCategoryCraftController().execute(req, resp);
+		}else if(target.equals("display/display-category-architecture")) {
+			result = new DisplayCategoryArchitectureController().execute(req, resp);
+		}else if(target.equals("display/display-category-calligraphy")) {
+			result = new DisplayCategoryCalligraphyController().execute(req, resp);
 		}else {
 //			전부 404
 		}

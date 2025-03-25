@@ -22,6 +22,8 @@ import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageMainController;
+import com.app.mypage.controller.MypageMyPostListController;
+import com.app.mypage.controller.MypagePostListController;
 
 public class MypageFrontController extends HttpServlet{
 	
@@ -51,6 +53,11 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageAdminFormNotApproved().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-form-approved")) {
 			result = new MypageAdminFormApproved().execute(req, resp);
+		}else if(target.equals("mypage/mypage-post-list")) {
+			result = new MypagePostListController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-my-post-list")) {
+			result = new MypageMyPostListController().execute(req, resp);
+		
 		}else {
 //			전부 404
 		}

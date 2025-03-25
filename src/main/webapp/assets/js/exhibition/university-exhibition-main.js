@@ -1,6 +1,8 @@
 const universityLogo = document.getElementById("university-logo1");
 const backgroundImage = document.getElementById("img-background");
 const likeButtons = document.querySelectorAll(".button-like");
+const registerButton = document.querySelector(".button.register");
+const inquiryButton = document.querySelector(".button.inquiry");
 
 universityLogo.addEventListener("click", () => {
 	backgroundImage.style.display = "block";
@@ -24,4 +26,14 @@ likeButtons.forEach((likeButton) => {
             likeButton.style.backgroundColor = "var(--color-primary)";
         }
     })
+});
+
+/* 대학교 등록 신청 페이지로 이동*/
+registerButton.addEventListener("click", () => {
+	location.href = "university-exhibition-form.exhibition";
+});
+
+/* 문의 페이지로 이동*/
+inquiryButton.addEventListener("click", () => {
+	location.href = "";
 });

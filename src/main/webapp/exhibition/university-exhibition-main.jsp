@@ -21,9 +21,9 @@
 	</div>
 	
 	<div id="category-wrapper">
-		<span>그라데이션 전시회</span>
-		<span>|</span>
-		<span>대학교 전시회</span>
+		<p class="category">그라데이션 전시회</p>
+		<p id="span">|</p>
+		<p class="category">대학교 전시회</p>
 	</div>
 	
 	<div id="map-wrapper">
