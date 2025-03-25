@@ -170,11 +170,8 @@
       images.forEach(img => column.appendChild(img));
     });
 
-    // 정렬 후 드롭다운 닫기
     document.getElementById("sortDropdown").style.display = "none";
   }
-
-  // 외부 클릭 시 드롭다운 닫기
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");
     const sortIcon = document.querySelector(".sort-icon");
