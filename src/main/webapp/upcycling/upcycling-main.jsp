@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
 	<!-- 상단 타이틀 -->
-    <div class="upcycle-text">upcycle</div>
+    <div class="upcycle-text">upcycling</div>
     
     <!-- 배너 -->
     <div>
@@ -116,7 +116,9 @@
 	</div>
     
 	<div class="buttons">
-	    <button class="qna-button">문의하기</button>
+	 	<a href="../mypage/mypage-admin-faq-list.mypage">
+	    	<button class="qna-button">문의하기</button>
+	    </a>
 	    <a href="../upcycling/upcycling-form.upcycling"> 
 		    <button class="upcycling-form-button">업사이클 신청</button>
 	    </a>

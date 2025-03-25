@@ -181,7 +181,7 @@
         
              
     
-    
+</div>    
 </div>
 <div class="footer-margin"></div>
 <%@ include file="../layout/footer.jsp" %>
