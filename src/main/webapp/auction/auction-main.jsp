@@ -10,6 +10,7 @@
 </head>
 <body>
 	<%@ include file="../layout/header.jsp"%>
+	
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -127,6 +128,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<%@ include file="../layout/footer.jsp"%>
 </body>
 <script type="text/javascript" src="../assets/js/auction/auction-main.js"></script>

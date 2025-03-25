@@ -88,5 +88,15 @@
     <servlet-name>MypageFrontController</servlet-name>
     <url-pattern>*.mypage</url-pattern>
   </servlet-mapping>
+
+<!-- artist -->  
+  <servlet>
+  	<servlet-name>ArtistFrontController</servlet-name>
+	<servlet-class>com.app.artist.ArtistFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtistFrontController</servlet-name>
+    <url-pattern>*.artist</url-pattern>
+  </servlet-mapping>
   
 </web-app>
