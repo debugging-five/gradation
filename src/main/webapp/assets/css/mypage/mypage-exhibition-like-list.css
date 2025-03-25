@@ -90,12 +90,21 @@ body {
 	margin : 7px 0 0 0;
 }
 
-.exhibition-info {
+#list-wrapper {
 	display : flex;
-	margin : 50px 0 0 0;
+	gap : 80px;
 }
 
-#university-logo1, #university-logo2 {
+.exhibition-list {
+	margin : 50px 0 100px 0;
+}
+
+.exhibition-info {
+	display : flex;
+	margin : 0 0 20px 0;
+}
+
+.university-logo1, .university-logo2 {
 	width : 157px;
 	height : 157px;
 	background-color : var(--color-gray100);
@@ -113,7 +122,7 @@ body {
 
 
 .university-info {
-	margin : 0 0 0 28px;
+	margin : 5px 0 0 28px;
 }
 
 .university-info h5 {
@@ -131,7 +140,7 @@ body {
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-light);
 	color : var(--color-gray900);
-	height : 14px;
+	height : 19px;
 	margin : 0 0 4px 0;
 }
 
@@ -182,6 +191,7 @@ body {
 	border-radius : 3px;
 	color : var(--color-gray900);
 	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h6);
 }
 
 

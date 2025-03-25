@@ -33,7 +33,7 @@ registerButton.addEventListener("click", () => {
 	location.href = "university-exhibition-form.exhibition";
 });
 
-/* 문의 페이지로 이동*/
+/* 마이페이지 문의 페이지로 이동*/
 inquiryButton.addEventListener("click", () => {
-	location.href = "";
+	location.href = "../mypage/mypage-service-center-send-qna.mypage";
 });
