@@ -57,18 +57,19 @@
 					<button id="answer-button" type="button">답변하기</button>
 				</div>
 				<div id="reply-wrap" style="display: none;">
-					<h5>내용<span class="star">*</span> </h5>
-					<textarea id="textarea" placeholder="내용을 입력하세요."></textarea>
-					<div id="buttons">
+					<h5>내용<span class="star">*</span></h5>
+					<textarea id="textarea" name="answer" placeholder="내용을 입력하세요."></textarea>
+					<div id="button-wrapper">
 						<button id="cancel" type="button">취소</button>
-						<button id="registration" type="button">등록</button>
+						<button id="registration" type="button" onclick="showCustomAlert()">등록</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	  <%@ include file="../layout/footer.jsp" %>
+	
+	<%@ include file="mypage-admin-qna-content-registration-alert.jsp" %>
+	<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/mypage/mypage-admin-qna-content.js"></script>
 </html>
