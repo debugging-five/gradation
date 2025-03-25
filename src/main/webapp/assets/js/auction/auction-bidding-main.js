@@ -4,6 +4,7 @@ const overlay1 = document.getElementById("overlay1");
 const overlay2 = document.getElementById("overlay2");
 const body = document.querySelector('body');
 const listButton = document.getElementById("list-button");
+const artList = document.querySelectorAll(".art-list");
 
 const openPopup1 = () => {
 	popup1.style.display = "block";
@@ -31,6 +32,12 @@ const closePopup2 = () => {
 listButton.addEventListener("click", () => {
 	location.href = 'auction-main.auction'; 
 });
+
+artList.forEach((art) => {
+	art.addEventListener("click", () => {
+		location.href = "auction-bidding-main.auction";
+	})
+})
 
 
 

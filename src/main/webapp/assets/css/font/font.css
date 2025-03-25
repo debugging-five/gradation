@@ -99,6 +99,7 @@ body {
     color: var(--color-black);
     background-color: var(--color-gray100);
     line-height: 1.5;
+    letter-spacing : -0.3px;
 }
 
 h1 {
