@@ -7,12 +7,17 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/exhibition/university-exhibition-form.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>대학교 전시회 신청 양식</title>
+<!-- flatpickr CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+<!-- flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
 <%@ include file="../layout/header.jsp" %>
 	<div id="wrapper">
 		<div id="title-wrapper">
-			<h1>exhibition</h1>	
+			<h2>exhibition</h2>	
 		</div>
 		
 		<div>
@@ -55,24 +60,44 @@
 				</div>
 				
 				<!-- 전시회 일정 -->
-				<div class="input-wrapper">
+				<div class="input-wrapper2">
 					<div class="input-text4">
 						<h5>전시회 일정<span class="star">*</span></h5>
-						<input type="text" placeholder="홈페이지 주소를 입력하세요." />
+					</div>
+					<div class="calendar-wrapper">
+						<div class="calendar-input-group">
+							<img class="calendar-icon"
+								src="../assets/images/upcycling/upcycling-form/calendar.png"
+								alt="calendar" />
+							<input type="text" id="pickupDateInput"
+								class="calendar-display-input" placeholder="시작일 선택 ~ " readonly />
+						</div>
+					</div>
+					<div class="calendar-wrapper">
+						<div class="calendar-input-group">
+							<img class="calendar-icon"
+								src="../assets/images/upcycling/upcycling-form/calendar.png"
+								alt="calendar" />
+							<input type="text" id="pickupDateInput2"
+								class="calendar-display-input" placeholder="종료일 선택" readonly />
+						</div>
+					</div>
 					</div>
 				</div>
 				
-				<div id="icon-hover">
-					<p>사이트에 올라갈 전시회 이미지를 첨부해주세요.</p>
-				</div>
-				
-				<!-- 첨부파일 -->
+
 				<div id="button-wrapper1">
-					<div id="file-wrapper">
-					 	<h5>첨부파일</h5>
-					 	<img id="icon" src="../assets/images/exhibition/notice.png" alt="아이콘" />
-					</div>
-				 	<button id="file-button">첨부파일</button>
+				    <div class="file-container"> 
+				        <div id="file-wrapper">
+				            <h5>첨부파일</h5>
+				            <img id="icon" src="../assets/images/exhibition/notice.png" alt="아이콘" />
+				        </div>
+				        <div id="icon-hover">
+				            <p>사이트에 올라갈 전시회 이미지를 첨부해주세요.</p>
+				        </div>
+				    </div>
+				    <input type="file" id="file-input"/>
+				    <button id="file-button">첨부파일</button>
 				</div>
 				
 				<div id="button-wrapper2">
@@ -84,5 +109,29 @@
 		</div>
 	</div>
 <%@ include file="../layout/footer.jsp" %>
+<script>
+  flatpickr("#pickupDateInput", {
+    onChange: function(selectedDates, dateStr) {
+      document.getElementById("pickupDateInput").value = dateStr;
+    },
+    disableMobile: true
+  });
+
+  document.querySelector(".calendar-icon").addEventListener("click", () => {
+    document.getElementById("pickupDateInput").focus();
+  });
+  
+  flatpickr("#pickupDateInput2", {
+    onChange: function(selectedDates, dateStr) {
+      document.getElementById("pickupDateInput2").value = dateStr;
+    },
+    disableMobile: true
+  });
+
+  document.querySelector(".calendar-icon").addEventListener("click", () => {
+    document.getElementById("pickupDateInput2").focus();
+  });
+</script>
 </body>
+<script type="text/javascript" src="../assets/js/exhibition/university-exhibition-form.js"></script>
 </html>

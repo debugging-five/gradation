@@ -14,7 +14,7 @@ public class DisplayCategoryKoreanController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("display-catrgory-korean.jsp");
+		result.setPath("display-category-korean.jsp");
 		return result;
 	}
 

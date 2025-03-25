@@ -45,7 +45,7 @@ public class UserLoginOkController implements Action{
 
 		session.invalidate();	// 기존의 세션정보 초기화
 		session = req.getSession();
-		session.setAttribute("userEmail", userEmail);
+		session.setAttribute("loginUser", userEmail);
 //		메인페이지로 
 		result.setPath(req.getContextPath() + "/main/main.main");
 		return result;

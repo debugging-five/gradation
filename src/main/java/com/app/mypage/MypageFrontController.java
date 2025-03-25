@@ -8,13 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.auction.controller.AuctionBiddingController;
-import com.app.auction.controller.AuctionController;
-import com.app.auction.controller.AuctionModifyController;
-import com.app.auction.controller.AuctionModifyOkController;
-import com.app.auction.controller.AuctionPaymentController;
 import com.app.mypage.controller.MypageAdminFormApproved;
 import com.app.mypage.controller.MypageAdminFormNotApproved;
+import com.app.mypage.controller.MypageAdminQnaContent;
+import com.app.mypage.controller.MypageAdminQnaContentCompleted;
 import com.app.mypage.controller.MypageAdminQnaListCompleted;
 import com.app.mypage.controller.MypageAdminQnaListWaiting;
 import com.app.mypage.controller.MypageArtLikeListController;
@@ -22,6 +19,7 @@ import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageMainController;
+import com.app.mypage.controller.MypageModifyController;
 import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostListController;
 
@@ -37,6 +35,8 @@ public class MypageFrontController extends HttpServlet{
 		
 		if(target.equals("mypage/mypage-main")) {
 			result = new MypageMainController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-modify")) {
+			result = new MypageModifyController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-list")) {
 			result = new MypageContactListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {
@@ -57,7 +57,10 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypagePostListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-my-post-list")) {
 			result = new MypageMyPostListController().execute(req, resp);
-		
+		}else if(target.equals("mypage/mypage-admin-qna-content")) {
+			result = new MypageAdminQnaContent().execute(req, resp);
+		}else if(target.equals("mypage/mypage-admin-qna-content-completed")) {
+			result = new MypageAdminQnaContentCompleted().execute(req, resp);
 		}else {
 //			전부 404
 		}

@@ -89,8 +89,7 @@ body {
 
 #contact-content {
 	width : 800px;
-	height : 240px;
-	margin : 25px 0 60px 0;
+	margin-top : 25px
 }
 
 #contact-content p {
@@ -100,6 +99,7 @@ body {
 
 
 #button-wrapper {
+	margin-top: 60px;
 	display : flex;
 	gap : 20px;
 	justify-content : flex-end;
@@ -120,13 +120,18 @@ button {
 	color : var(--color-primary);
 }
 
+#list-button2 {
+	background-color : var(--color-primary);
+	color : var(--color-gray100);
+}
+
 #answer-button {
 	background-color : var(--color-primary);
 	color : var(--color-gray100);
 }
 
 #reply-wrap > h5 {
-	margin: 50px 0 4px 0;
+	margin-bottom: 4px;
 }
 
 .star {
@@ -135,9 +140,8 @@ button {
 
 #reply-wrap {
 	width: 800px;
-	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	margin-top: 50px;
 }
 
 #textarea {
@@ -150,19 +154,12 @@ button {
 	resize: none;
 }
 
-#buttons {
-	display: flex;
-	justify-content: flex-end;
-	gap: 20px;
-}
-
 #cancel, #registration {
 	width: 120px;
 	height: 45px;
 	border-radius: 3px;
 	font-size: var(--font-size-h5);
 	font-family: var(--font-family-Pretendard-Regular);
-	margin-top: 60px;
 }
 
 #cancel {
@@ -176,6 +173,9 @@ button {
 	border: 1.5px solid var(--color-primary);
 	color: var(--color-gray100);
 }
+
+/* 답변 완료 */
+
 
 
 

@@ -83,10 +83,10 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
-							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-animation-style-artwork.jpeg"
+							alt="artwork" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-catwatercolor-person-2.jpeg"
+							alt="person-2" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
 							alt="gradation-7" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
@@ -96,9 +96,9 @@
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+							src="../assets/images/display/art/painting/img-painting-bold-shapes.jpeg"
+							alt="shapes" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-ethereal-style.jpeg"
 							alt="meditation-house-3" /> <img class="gallery-image"
 							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
 							alt="hanok-2" /> <img class="gallery-image"
@@ -112,8 +112,8 @@
 						<img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
 							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
-							alt="oh" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-picnic.jpeg"
+							alt="picnic" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
 							alt="whale" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
