@@ -9,6 +9,8 @@
 <title>비밀번호 변경</title>
 </head>
 <body>
+	<%@ include file="../layout/header.jsp" %>
+	
 	<div id="new-password-container">
 		<div id="new-password-wrapper">
 			<div id="user-icon-wrap">
@@ -71,6 +73,7 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/login/login-new-password.js"></script>
 </html>
