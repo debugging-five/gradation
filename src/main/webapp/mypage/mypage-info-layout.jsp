@@ -55,6 +55,15 @@
 			</div>
 		</div>
 		<div class="sidebar-logout"><a href="../mypage/delete-ID.mypage">회원 탈퇴</a></div>
+		<div class="view-item">
+			<div class="section">관리자 마이페이지</div>
+			<div class="post-request">
+				<div class="sidebar-link"><a href="">자주 묻는 질문</a></div>
+				<div class="sidebar-link"><a href="">1:1 문의</a></div>
+				<div class="sidebar-link"><a href="">양식관리</a></div>
+				<div class="sidebar-link"><a href="">회원관리</a></div>
+			</div>
+		</div>
 </div>
 
 <script>

@@ -76,6 +76,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
 }
 
 .our-exhibition-past .line-3 {
@@ -175,8 +176,9 @@
 
 .our-exhibition-past .pagination-bar {
 	align-items: center;
-	display: inline-flex;
-	gap: 40px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 	margin-right: 1.0px;
 	margin-top: 148px;
 	position: relative;
@@ -186,6 +188,29 @@
 	height: 20px;
 	position: relative;
 	width: 20px;
+}
+
+.pagination-bar a {
+	display: inline-block;
+  margin: 0 8px; 
+  text-decoration: none;
+  color: var(--color-gray900);
+  font-weight: var(--font-weight-regular);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.pagination-bar a:hover {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.pagination-bar a.active {
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .our-exhibition-past .number {

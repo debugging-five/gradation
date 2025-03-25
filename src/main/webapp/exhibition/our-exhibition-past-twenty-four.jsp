@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +12,14 @@
 </head>
   </head>
   <body style="margin: 0; background: #fbfcfc">
-    <input type="hidden" id="anPageName" name="page" value="our-exhibition-past" />
+  <%@ include file="../layout/header.jsp" %>
+    <input type="hidden" id="anPageName" name="page" value="our-exhibition-past-twenty-four" />
     <div class="container-center-horizontal">
       <div class="our-exhibition-past screen">
         <div class="page-header">
           <h1 class="main-title valign-text-middle suith1">exibition</h1>
           <div class="exhibition-name-bar group">
-            <div class="current-exhibition-name valign-text-middle pretendardh3">2023 아트스펙트럼</div>
+            <div class="current-exhibition-name pretendardh3">2024 필립 파레노: 보이스</div>
           </div>
         </div>
         <div class="flex-row">
@@ -54,15 +57,16 @@
         </div>
         <div class="pagination-bar suith4">
           <img class="pagination-arrow" src="../assets/images/display/art/left.png" alt="left" />
-          <div class="number valign-text-middle">1</div>
-          <div class="number valign-text-middle">2</div>
-          <div class="number valign-text-middle">3</div>
-          <div class="number valign-text-middle">4</div>
-          <div class="number valign-text-middle">5</div>
+          <c:forEach var="i" begin="1" end="${totalPages}">
+					<a href="our-exhibition-past-2023.exhibition?page=${i}"
+						class="number valign-text-middle ${i == currentPage ? 'active' : ''}">
+						${i} </a>
+				</c:forEach>
           <img class="pagination-arrow" src="../assets/images/display/art/right.png" alt="right" />
         </div>
       </div>
     </div>
+    <%@ include file="../layout/footer.jsp" %>
   </body>
 </html>
 
