@@ -40,7 +40,7 @@ body {
 
 #seller-buyer-wrapper {
 	display: flex;
-	gap: 126px;
+	gap: 50px;
 	margin-bottom: 50px;
 }
 #address-wrapper{
@@ -77,7 +77,7 @@ body {
 .buyer-gap2{
     display: flex;  /* Flexbox 적용 */
 	gap: 51px;
-	margin-bottom: 27px;	
+	margin-bottom: 12px;	
 }
 .buyer-gap3{
     display: flex;  /* Flexbox 적용 */
@@ -85,7 +85,15 @@ body {
 }
 
 
-#delivery-info{
+#seller-wrapper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+#buyer-wrapper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
 }
 
 #red-box {
