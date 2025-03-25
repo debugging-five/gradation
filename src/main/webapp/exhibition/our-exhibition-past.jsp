@@ -16,7 +16,7 @@
         <div class="page-header">
           <h1 class="main-title valign-text-middle suith1">exibition</h1>
           <div class="exhibition-name-bar group">
-            <div class="current-exhibition-name valign-text-middle sidebar-exhibition-title-2 pretendardh3">2023 아트스펙트럼</div>
+            <div class="current-exhibition-name valign-text-middle pretendardh3">2023 아트스펙트럼</div>
           </div>
         </div>
         <div class="flex-row">
