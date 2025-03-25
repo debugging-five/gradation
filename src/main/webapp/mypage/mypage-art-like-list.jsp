@@ -42,33 +42,17 @@
 					</div>
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/calligraphy/img-calligraphy-2.jpeg" alt="작품2"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
-						</div>
-							<h5 class="like-count">좋아요 99개</h5>
-					</div>
-				</div>
-				<div class="art-list">
-					<div>
-						<div class="art">
-							<div class="art-img">좋아요 작품</div>
-						</div>
-							<h5 class="like-count">좋아요 99개</h5>
-					</div>
-					<div>
-						<div class="art">
-							<div class="art-img">좋아요 작품</div>
-						</div>
-							<h5 class="like-count">좋아요 99개</h5>
-					</div>
-					<div>
-						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/calligraphy/img-calligraphy-3.jpeg" alt="작품3"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>
@@ -76,19 +60,51 @@
 				<div class="art-list">
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/craft/img-craft-teapot.jpeg" alt="작품4"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/craft/img-craft-teapot-2.jpeg" alt="작품5"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/craft/img-craft-teapot-3.jpeg" alt="작품6"/>
+							</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+				</div>
+				<div class="art-list">
+					<div>
+						<div class="art">
+							<div class="art-img">
+								<img src="../assets/images/display/art/painting/img-painting-bold-shapes.jpeg" alt="작품7"/>
+							</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">
+								<img src="../assets/images/display/art/painting/img-painting-ethereal-style.jpeg" alt="작품7"/>
+							</div>
+						</div>
+							<h5 class="like-count">좋아요 99개</h5>
+					</div>
+					<div>
+						<div class="art">
+							<div class="art-img">
+								<img src="../assets/images/display/art/painting/img-painting-our-team.jpeg" alt="작품7"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>

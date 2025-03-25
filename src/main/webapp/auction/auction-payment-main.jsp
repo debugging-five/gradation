@@ -9,6 +9,31 @@
 <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 <script src="/javascript/popup_2.js"></script>
 <title>경매 결제</title>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+	function execDaumPostcode() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				var fullAddress = data.address;
+				var extraAddress = '';
+
+				if (data.addressType === 'R') {
+					if (data.bname !== '') {
+						extraAddress += data.bname;
+					}
+					if (data.buildingName !== '') {
+						extraAddress += (extraAddress !== '' ? ', '
+								+ data.buildingName : data.buildingName);
+					}
+					fullAddress += (extraAddress !== '' ? ' (' + extraAddress
+							+ ')' : '');
+				}
+
+				document.getElementById("address").value = fullAddress;
+			}
+		}).open();
+	}
+</script>
 </head>
 <body>
 
@@ -35,49 +60,52 @@
 					</div>
 				</div>
 				
+			<div id="input-form">
 				<!-- 이름 -->
-				<div class="auto-list">
-					<span class="type">이름</span>
-					<span class="star">*</span>
-					<h5>홍길동</h5>
+				<div class="input-wrapper">
+					<div class="input-text">
+						<h5>이름<span class="star">*</span></h5>
+						<input id="name" type="text" placeholder="이름을 입력하세요." />
+					</div>
+					<p id="name-error">*필수 항목입니다</p>
 				</div>
 				
 				<!-- 주소 -->
-				<div class="auto-list">
-					<span class="type">주소</span>
-					<span class="star">*</span>
-					<h5>주소(자동완성)</h5>
-				</div>
-	
-				<!-- 상세 주소 -->
-				<div id="list-wrapper"> 
-					<div class="list">
-						<span class="type">상세주소</span>
-						<span class="star">*</span>
-						<input id="address" type="text" placeholder="주소를 입력하세요." />
+				<div id="input-button-wrapper">
+					<div class="input-text">
+						<h5>주소<span class="star">*</span></h5>
+						<input id="address" type="text" placeholder="주소를 검색하세요." id="address" name="address" required/>
 					</div>
-						<p id="address-error">*필수 항목입니다</p>
+					<button type="button" id="search-address" onclick="execDaumPostcode()">주소 검색</button>
+				</div>
+				
+				<!-- 상세 주소 -->
+				<div class="input-wrapper">
+					<div class="input-text2">
+						<h5>상세 주소<span class="star">*</span></h5>
+						<input id="detail-address" type="text" placeholder="상세 주소를 입력하세요." />
+					</div>
+					<p id="detail-address-error">*필수 항목입니다</p>
 				</div>
 				
 				<!-- 전화번호 -->
-				<div id="list-wrapper">
-					<div class="list">
-						<span class="type">전화번호</span>
-						<span class="star">*</span>
+				<div class="input-wrapper">
+					<div class="input-text3">
+						<h5>전화번호<span class="star">*</span></h5>
 						<input id="phone" type="text" placeholder="전화번호를 입력하세요." />
 					</div>
-						<p id="phone-error">*필수 항목입니다</p>
+					<p id="phone-error">*필수 항목입니다</p>
 				</div>
-					
+				
 				<!-- 이메일 -->
-				<div id="list-wrapper">
-					<div class="list2">
-						<span class="type">이메일</span>
-						<span class="star">*</span>
+				<div class="input-wrapper">
+					<div class="input-text4">
+						<h5>이메일<span class="star">*</span></h5>
 						<input id="email" type="text" placeholder="이메일을 입력하세요." />
 					</div>
-						<p id="email-error">*필수 항목입니다</p>
+					<p id="email-error">*필수 항목입니다</p>
 				</div>
+			</div>
 				
 				<input class="check-label" type="checkbox" id="check-user"/>
 			  		<label class="checkbox-label" for="check-user">
@@ -114,7 +142,63 @@
 	</div>
 
 <%@ include file="../layout/footer.jsp" %>
+<script>
+	document.getElementById("upload-container").addEventListener("click",
+			function() {
+				document.getElementById("file-input").click();
+			});
+
+	document.getElementById("file-input").addEventListener("change",
+			function(event) {
+				previewImage(event);
+			});
+
+	function previewImage(event) {
+		const file = event.target.files[0];
+		if (file) {
+			const reader = new FileReader();
+			reader.onload = function(e) {
+				const preview = document.getElementById("preview-image");
+				const uploadText = document.getElementById("upload-text");
+
+				preview.src = e.target.result;
+				preview.style.display = "block";
+				uploadText.style.display = "none";
+			};
+			reader.readAsDataURL(file);
+		}
+	}
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const calendarIcon = document.querySelector(".calendar");
+		const textCalendar = document.querySelector(".text-calendar");
+
+		const calendarInput = document.createElement("input");
+		calendarInput.type = "date";
+		calendarInput.style.position = "absolute";
+		calendarInput.style.border = "none";
+		calendarInput.style.background = "transparent";
+		calendarInput.style.opacity = "0";
+		calendarInput.style.pointerEvents = "none";
+		calendarInput.style.zIndex = "-1";
+
+		document.body.appendChild(calendarInput);
+		calendarIcon.addEventListener("click", function() {
+			const rect = calendarIcon.getBoundingClientRect();
+			calendarInput.style.top = `${rect.bottom + window.scrollY}px`;
+			calendarInput.style.left = `${rect.left + window.scrollX}px`;
+
+			calendarInput.showPicker();
+		});
+
+		calendarInput.addEventListener("change", function() {
+			if (calendarInput.value) {
+				textCalendar.textContent = calendarInput.value;
+			}
+		});
+	});
+</script>
 </body>
 <script type="text/javascript" src="../assets/js/auction/auction-payment-main.js"></script>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </html>
