@@ -12,7 +12,7 @@
 <%@ include file="../layout/header.jsp" %>
 	<div id="wrapper">
 		<div id="title-wrapper">
-			<h2>exhibition</h2>	
+			<h1>exhibition</h1>	
 		</div>
 		
 		<div>
