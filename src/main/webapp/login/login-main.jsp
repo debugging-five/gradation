@@ -63,6 +63,8 @@
 				<a><img alt="google" src="../assets/images/login/google.png"></a>
 			</div>
 	</div>
+	
+	<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/login/login-main.js"></script>
 </html>
