@@ -93,38 +93,53 @@ body {
 #bar-left {
 	margin : 0 0 16px 0;
 	display : flex;
+	gap : 16px;
 }
 
 .bar-menu {
 	margin : 0 36px 0 0;
 }
 
+#bar {
+    height: 484px; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+}
+
 select {
 	background-color : var(--color-gray100);
 	border : none;
-	font-size : 16px;
+	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
 	font-family: var(--font-family-Pretendard-Regular);
 	color : var(--color-black);
-	width : 73px;
-	height : 19px;
 }
 
-#area-dropdown {
-	margin : 0 36px 0 24px;
+#area-dropdown select, #state-dropdown select {
+  text-align: center; 
 }
 
-
-#state-dropdown {
-	margin : 0 32px 0 0;
-	width : 72px;
+#area-dropdown option, #area-dropdown option {
+  text-align: center;
 }
 
 #my-pick {
-	margin : 0 15px 0 0;
+	margin : 0 16px 0 0;
 	width : 56px;
 }
 
+#bar-right {
+  position: relative; 
+}
+
+#icon1 {
+  position: absolute;
+  left: 160px; 
+  top: 35%;
+  transform: translateY(-50%); 
+  width: 16px; 
+  height: 16px; 
+}
 
 #bar-right input {
 	width : 184px;
@@ -147,6 +162,8 @@ select {
 	font-size : 12px;
   	margin : 6px 0 0 0;
   	height : 14px;
+	display : flex;
+	align-items : center;
 }
 
 #icon-wrapper {
@@ -158,6 +175,8 @@ select {
 	width : 16px;
 	height : 16px;
 	margin : 6px 4px 0 0;
+	display : flex;
+	align-items : center;
 }
 
 .exhibition-info {

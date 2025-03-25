@@ -34,7 +34,6 @@
 		<div id="university-list">
 			<div id="bar">
 				<div id="bar-left">
-<!-- 					<span class="bar-menu">전체 지역</span> -->
 					<div id="area-dropdown">
 						<select id="area" name="area">
 							<option value="area">전체 지역</option>
@@ -201,6 +200,7 @@
 			</div>
 		</div>
 	</div>
+
 	
 		
 	<div id="button-wrapper2">
