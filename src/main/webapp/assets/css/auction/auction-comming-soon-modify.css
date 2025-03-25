@@ -15,12 +15,12 @@ body {
 }
 
 #title-wrapper h2 {
-	margin : 86px 0 0 0;
+	margin : 142px 0 0 0;
 }
 
 #auction-detail {
 	width : 1160px;
-	margin : 70px auto 0 ;
+	margin : 70px auto 94px ;
 	gap : 120px;
 }
 
@@ -36,7 +36,6 @@ body {
 .img {
 	width : 420px;
 	height : 560px;
-	background-color : #c0c5c7;
 	display : flex;
 	justify-content : center;
 	align-items : center;
@@ -184,36 +183,38 @@ button {
 }
 
 #auction-list {
-	margin : 94px 0 0 0;
+   height : 269px;
+   margin : 20px 0 38px 0;
 }
 
 #auction-ing {
-	border-bottom : solid 1px var(--color-gray900);
-	width : 1200px;
+	border-bottom : solid 1px var(--color-gray500);
+	width : 1920px;
+	display : flex;
+	justify-content : center; 
 }
 
-#auction-ing p {
-	margin : 0 0 12px 0;
-	font-size : var(--font-size-h7);
+#auction-ing-title {
+	margin : 0 0 10px 0;
+	width : 1160px;
 }
 
 .art-list {
-	width : 200px;
-	height : 200px;
-	background-color : var(--color-gray500);
-	display : flex;
-	align-items : center;
-	justify-content : center;
+   width : 200px;
+   height : 200px;
+   background-color : var(--color-gray500);
+   display : flex;
+   align-items : center;
+   justify-content : center;
+   margin : 0 0 38px 0;
 }
 
 #art-wrapper {
 	display : flex;
+   	align-items : center;
+   	justify-content : center;
 	gap : 120px;
+	margin : 38px 0 ;
 }
-
-
-
-
-
 
 

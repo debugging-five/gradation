@@ -14,7 +14,9 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
 				<h2 id="title">내 활동 / 작가와 연락</h2>
 				<div id="menu">
