@@ -118,16 +118,6 @@ button {
 }
 
 #list-button {
-	background-color : var(--color-gray100);
-	color : var(--color-primary);
-}
-
-#list-button2 {
-	background-color : var(--color-primary);
-	color : var(--color-gray100);
-}
-
-#answer-button {
 	background-color : var(--color-primary);
 	color : var(--color-gray100);
 }

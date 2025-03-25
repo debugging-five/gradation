@@ -17,16 +17,13 @@ body {
 
 #container {
 	width: 1160px;
-	margin-top: 90px;
+	margin-top: 142px;
 	display: flex;
 	gap: 120px;
 }
 
 #category {
-	width: 244px;
-	height: 950px;
-	display: flex;
-	flex-direction: column;
+	margin-bottom: 200px;
 }
 
 #title {
@@ -75,10 +72,12 @@ textarea {
     border: solid 1.5px;
     font-size: var(--font-size-h7);
     border-radius: 2px;
+    resize: none;
 }
 
 button {
 	margin-top:70px;
+	gap: 20px;
 }
 
 #delete-faq {
