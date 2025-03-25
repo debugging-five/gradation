@@ -19,24 +19,35 @@ body {
 
 #category-wrapper {
 	font-size : 16px;
-	margin : 35px 28px 0 0;
+	margin : 35px 0 0 0;
 	display : flex;
 	justify-content : center;
 	align-items : center;
+}
+
+.category{
 	color : var(--color-gray900);
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
+	cursor : pointer;
 }
 
 #span {
-	color : var(--color-gray900);
 	margin : 0 65px;
+}
+
+.second-category{
+	color : var(--color-primary);
+	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
+	cursor : pointer;
+	border-bottom: solid 2px var(--color-primary);
 }
 
 .category:hover {
 	color : var(--color-primary);
-	text-decoration : underline 2px;
-	cursor : pointer;
 }
+
 
 #map-wrapper {
 	display : flex;
@@ -114,18 +125,6 @@ select {
 	width : 56px;
 }
 
-/* 
-option:hover {
-	color : red;
-}
- */
- 
-/* 
-i.fa-angle-down {
-	font-size : 20px;
-}
- */
- 
 
 #bar-right input {
 	width : 184px;
@@ -147,6 +146,18 @@ i.fa-angle-down {
 	color : var(--color-gray900);
 	font-size : 12px;
   	margin : 6px 0 0 0;
+  	height : 14px;
+}
+
+#icon-wrapper {
+	display : flex;
+	align-items : center;
+}
+
+#icon2 {
+	width : 16px;
+	height : 16px;
+	margin : 6px 4px 0 0;
 }
 
 .exhibition-info {

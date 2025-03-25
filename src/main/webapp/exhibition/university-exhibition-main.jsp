@@ -19,11 +19,10 @@
 	<div id="title-wrapper">	
 		<h2>exhibition</h2>	
 	</div>
-	
 	<div id="category-wrapper">
-		<p class="category">그라데이션 전시회</p>
-		<p id="span">|</p>
-		<p class="category">대학교 전시회</p>
+			<a href="gradation-exhibition-main.exhibition" class="a-category"><span class="category">그라데이션 전시회</span></a>
+			<span id="span">|</span>
+			<a href="university-exhibition-main.exhibition" class="a-category"><span class="second-category">대학교 전시회</span></a>
 	</div>
 	
 	<div id="map-wrapper">
@@ -73,12 +72,13 @@
 				</div>
 				<div id="bar-right">
 					<input type="text" placeholder="대학교를 검색하세요." />
-<!-- 					<img src="../assets/images/exhibition/search.png" alt="돋보기" /> -->
+ 					<img id="icon1" src="../assets/images/exhibition/search.png" alt="돋보기" />
 				</div>
 			</div>
 			
 			<div id="list-content">
-				<div>
+				<div id='icon-wrapper'>
+					<img id="icon2" src="../assets/images/exhibition/notice.png" alt="아이콘" />
 					<p>전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
 				</div>
 			</div>
