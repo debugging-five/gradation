@@ -9,13 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageAdminQnaListCompleted implements Action {
+public class MypageCommentsListController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-admin-qna-list-completed.jsp");
+		result.setPath("mypage-comments-list.jsp");
 		return result;
 	}
 
 }
+

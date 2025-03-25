@@ -195,7 +195,7 @@ button {
 	color : var(--color-gray100);
 }
 
-.calendar-icon {
+/* .calendar-icon {
 	width : 20px;
 	height : 20px;
 	margin : 0 4px 0 0;
@@ -214,4 +214,53 @@ button {
 	width : 175px;
 	display : flex;
 	align-items : center; 
+}
+
+.input-wrapper2 {
+	border-bottom : solid 1px var(--color-gray900);
+	width : 760px;
+	margin : 48px 0 0 0;
+	display : flex;
+	align-items : center; 
+}
+ */
+ 
+ .calendar-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 4px; /* 오른쪽 여백을 좀 더 여유 있게 설정 */
+}
+
+.calendar-input-group {
+	display: flex;
+	align-items: center; /* 아이콘과 입력란을 수직으로 맞춤 */
+}
+
+.calendar-wrapper {
+	width: auto; 
+	display: flex;
+	align-items: center;
+}
+ 
+.input-wrapper2 {
+	border-bottom: solid 1px var(--color-gray900);
+	width: 760px;
+	margin: 48px 0 0 0;
+	display: flex;
+	align-items: flex-start; /* 수직 정렬을 최상단에 맞춤 */
+	gap : 68px;
+}
+
+.input-text4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.calendar-display-input {
+	width: 100px;
+	padding: 6px 0;
+}
+
+#span {
+	margin : 0 0 0 34px;
 }
