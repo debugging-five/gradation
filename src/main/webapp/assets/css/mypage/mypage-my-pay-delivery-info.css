@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#container {
+	width: 1160px;
+	margin-top: 142px;
+	display: flex;
+	gap: 120px;
+}
+
+#category {
+	width: 242px;
+	height: 875px;
+	background-color: var(--color-gray900);
+	margin-bottom: 200px;
+	
+}
+
+#title {
+	margin-bottom: 50px;
+}
+
+#title-kind {
+	width: 800px;
+	height: 50px;
+	margin-bottom: 50px;
+	display: flex;
+
+}
+
+#seller-buyer-wrapper {
+	display: flex;
+	gap: 126px;
+	margin-bottom: 50px;
+}
+#address-wrapper{
+	display: flex;
+}
+.address {
+	display: flex;
+	flex-direction: column;
+}
+.seller-gap1{
+    display: flex;  /* Flexbox 적용 */
+	gap: 73px;	
+	margin-bottom: 7px;
+}
+.seller-gap2{
+    display: flex;  /* Flexbox 적용 */
+	gap: 57px;
+	margin-bottom: 7px;	
+}
+.seller-gap3{
+    display: flex;  /* Flexbox 적용 */
+	gap: 57px;
+	margin-bottom: 7px;	
+}
+.seller-gap4{
+    display: flex;  /* Flexbox 적용 */
+	gap: 73px;		
+}
+.buyer-gap1{
+    display: flex;  /* Flexbox 적용 */
+	gap: 53px;
+	margin-bottom: 7px;		
+}
+.buyer-gap2{
+    display: flex;  /* Flexbox 적용 */
+	gap: 51px;
+	margin-bottom: 27px;	
+}
+.buyer-gap3{
+    display: flex;  /* Flexbox 적용 */
+	gap: 22px;	
+}
+
+
+#delivery-info{
+}
+
+#red-box {
+	width: 800px;
+	height: 50px;
+	background-color:  var(--color-primary);
+	display: flex;
+	align-items: center;
+	padding-left: 2px;
+	color: var(--color-gray100);
+	gap: 220px;
+}
+
+
+.delivery-detail {
+	width: 800px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	padding-left: 2px;
+	gap: 118px;	
+}
+.address-now {
+	width: 100px;
+}
+.delivery-type {
+	margin-left: 58px;
+}
+
+
+
+.end-line {
+	width: 800;
+	border-bottom: solid 1px;
+	color: var(--color-primary);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
