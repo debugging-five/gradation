@@ -12,31 +12,83 @@
 	font-size: var(--font-size-h1);
 }
 
-.banner {
-	width: 1920px;
-	height: 618px;
-	margin-bottom: 100px;
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide-img {
+    width: 1920px;         /* 너비를 부모에 맞추기 */
+    height: 618px;        /* 높이를 부모에 맞추기 */
+    object-fit: cover;   /* 이미지 비율에 맞게 꽉 채우고, 잘리도록 */
+
+}
+
+.slide-text1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+.slide-text2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 
-.title-1 {
-	color: var(--color-gray100);
-	position: relative;
-	top: -520px;
-    left: 450px;
-}
-.title-2 {
-	color: var(--color-gray100);
-	position: relative;
-	top: -450px;
-    left: 600px;
-}
 
 .chepter-1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 26px;
+	margin-top: 274px;
 	margin-bottom: 413px;
 }
 .chepter-1-text {
