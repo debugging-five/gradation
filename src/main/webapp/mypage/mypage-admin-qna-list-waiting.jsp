@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-qna-list-waiting.css" />
-<title>고객센터 / 자주 묻는 질문</title>
+<title>고객센터 / 1:1 문의</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
@@ -18,7 +18,7 @@
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
-				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
+				<h2 id="title">고객센터 / 1 : 1 문의</h2>
 				<div id="title-kind">
 	               <div id="waiting">
 	                  <h5>답변 대기</h5>

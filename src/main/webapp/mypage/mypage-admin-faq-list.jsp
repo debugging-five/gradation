@@ -137,7 +137,7 @@
 						</div>
 					</div>					
 				</div>
-				<form action="" method="post">
+				<form action="mypage-admin-faq-register.mypage" method="post">
 					<button id="add-faq">등록</button>
 				</form>
 			</div>

@@ -18,7 +18,7 @@
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
-				<h2 id="title">고객센터 / 1 : 1문의</h2>
+				<h2 id="title">고객센터 / 1 : 1 문의</h2>
 				<div id="content-kind">
 					<h6>경매 관련 문의</h6>
 					<p id="notice">작가의 답변이 완료된 글은 수정이 불가합니다.</p>
