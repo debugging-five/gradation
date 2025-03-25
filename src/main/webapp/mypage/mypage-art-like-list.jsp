@@ -34,7 +34,9 @@
 				<div class="art-list">
 					<div>
 						<div class="art">
-							<div class="art-img">좋아요 작품</div>
+							<div class="art-img">
+								<img src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg" alt="작품1"/>
+							</div>
 						</div>
 							<h5 class="like-count">좋아요 99개</h5>
 					</div>
