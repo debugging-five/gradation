@@ -1,4 +1,4 @@
-package com.app.header.controller;
+package com.app.mypage.controller;
 
 import java.io.IOException;
 
@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class HeaderUpcyclingMainController implements Action {
+public class MypageArtLikeListControllerController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("upcycling-detail.jsp");
+		result.setPath("mypage-art-like-list.jsp");
 		return result;
 	}
 

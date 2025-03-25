@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageAdminFormApproved implements Action {
+public class MypageAdminFaqContentController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-admin-form-approved.jsp");
+		result.setPath("mypage-admin-faq-content.jsp");
 		return result;
 	}
 

@@ -14,7 +14,9 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
 				<h2 id="title">내 활동 / 작성한 댓글</h2>
 				<div id="menu">
@@ -64,4 +66,5 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-comments-list.js"></script>
 </html>

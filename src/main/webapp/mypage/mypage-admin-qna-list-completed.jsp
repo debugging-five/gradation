@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-qna-list-completed.css" />
-<title>고객센터 / 자주 묻는 질문</title>
+<title>고객센터 / 1 : 1 문의</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
@@ -14,9 +14,11 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
-				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
+				<h2 id="title">고객센터 / 1 : 1 문의</h2>
 				<div id="title-kind">
 	               <form action="mypage-admin-qna-list-waiting.mypage" method="post">
 	                  <button id="waiting">

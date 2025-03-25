@@ -93,7 +93,6 @@
 }
 
 .sidebar-link {
-  color: var(--color-gray900);
   cursor: pointer;
   font-weight: var(--font-weight-regular);
   line-height: normal;
@@ -104,9 +103,14 @@
 
 .sidebar-link:hover a {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 .sidebar-link a {
+   text-decoration: none;    
+  color: var(--color-black);  
+  font-weight: var(--font-weight-regular);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .my-perform {
@@ -143,6 +147,11 @@
   border-bottom: solid 1.5px var(--color-gray900);
 }
 
+.view-item:last-of-type {
+  border-bottom: none;
+}
+
+
 .history-auction-buy {
   align-items: flex-start;
   display: flex;
@@ -169,15 +178,24 @@
   font-weight: var(--font-weight-regular);
   line-height: normal;
   margin-left: 2px;
-  margin-top: 14px;
+  margin-top: 28px; 
   min-height: 19px;
   transition: all 0.2s ease;
   white-space: nowrap;
   font-size: var(--font-size-h7);
   line-height: var(--line-height-h7);
   font-weight: var(--font-weight-regular);
+  width: 244px;
+  border-bottom: solid 1.5px var(--color-gray900);
+  padding-bottom: 22px; 
 }
 
-.sidebar-logout:hover {
-  color: var(--color-primary)
+.sidebar-logout a {
+  text-decoration: none;
+  color: var(--color-gray500);
+}
+
+.sidebar-logout a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }

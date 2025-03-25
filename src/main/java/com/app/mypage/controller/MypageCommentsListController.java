@@ -1,4 +1,4 @@
-package com.app.header.controller;
+package com.app.mypage.controller;
 
 import java.io.IOException;
 
@@ -9,13 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class HeaderLoginMainController implements Action {
+public class MypageCommentsListController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("login-main.jsp");
+		result.setPath("mypage-comments-list.jsp");
 		return result;
 	}
 
 }
+
