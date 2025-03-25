@@ -13,7 +13,8 @@
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page" 
+		value="display-category-sculpture" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +22,12 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text">
+								<a href="../display/display-main-ing.display">전시중</a>
+							</div>
+							<div class="tab-text-upcoming">
+								<a href="../display/display-main-comming-soon.display">전시예정</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -30,22 +35,22 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="display-category-korean.jsp">한국화</a>
+								<a href="../display/display-category-korean.display">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-painting.jsp">회화</a>
+								<a href="../display/display-category-painting.display">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-sculpture.jsp">조각</a>
+								<a href="../display/display-category-sculpture.display">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-craft.jsp">공예</a>
+								<a href="../display/display-category-craft.display">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-architecture.jsp">건축</a>
+								<a href="../display/display-category-architecture.display">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-calligraphy.jsp">서예</a>
+								<a href="../display/display-category-calligraphy.display">서예</a>
 							</div>
 						</div>
 					</div>
@@ -79,15 +84,15 @@
 					<div class="gallery-column">
 						<img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-cat-4.jpeg"
-							alt="our-team" /> <img class="gallery-image"
+							alt="cat-4" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-cat.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
+							alt="cat" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
+							alt="furuit" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="gradation-2" /> <img class="gallery-image"
+							alt="furuit" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="tiger-and-waterfall" />
+							alt="furuit" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
@@ -96,11 +101,11 @@
 							src="../assets/images/display/art/sculpture/img-sculpture-wow.jpeg"
 							alt="meditation-house-3" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
+							alt="furuit" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
+							alt="furuit" /> <img class="gallery-image"
 							src="../assets/images/display/art/sculpture/img-sculpture-furuit.jpeg"
-							alt="cat-2" />
+							alt="furuit" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"

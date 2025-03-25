@@ -13,7 +13,8 @@
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page"
+		value="display-category-painting" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +22,12 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text">
+								<a href="../display/display-main-ing.display">전시중</a>
+							</div>
+							<div class="tab-text-upcoming">
+								<a href="../display/display-main-comming-soon.display">전시예정</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -30,22 +35,22 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="display-category-korean.jsp">한국화</a>
+								<a href="../display/display-category-korean.display">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-painting.jsp">회화</a>
+								<a href="../display/display-category-painting.display">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-sculpture.jsp">조각</a>
+								<a href="../display/display-category-sculpture.display">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-craft.jsp">공예</a>
+								<a href="../display/display-category-craft.display">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-architecture.jsp">건축</a>
+								<a href="../display/display-category-architecture.display">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-calligraphy.jsp">서예</a>
+								<a href="../display/display-category-calligraphy.display">서예</a>
 							</div>
 						</div>
 					</div>
@@ -78,42 +83,42 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
+							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
 							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-5.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-4.jpeg"
+							src="../assets/images/display/art/painting/img-painting-urban-style.jpeg"
+							alt="urban-style" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-illustration-cat.jpeg"
+							alt="cat" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
 							alt="gradation-2" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-catwatercolor-person-2.jpeg"
-							alt="tiger-and-waterfall" />
+							alt="person-2" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-illustration-cat-3.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-gradation.jpeg"
+							alt="gradatio" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-rainy.jpeg"
+							alt="rainy" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-illustration-cat-2.jpeg"
-							alt="meditation-house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-illustration-cat.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
-							alt="cat-2" />
+							alt="cat-2" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-bold-shapes.jpeg"
+							alt="shapes" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-interpretation.jpeg"
+							alt="interpretation" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-gradation-3.jpeg"
-							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation.jpeg"
-							alt="oh" /> <img class="gallery-image"
+							alt="gradation-3" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
-							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-bold-shapes.jpeg"
-							alt="old-man-in-cafe" /> <img class="gallery-image"
+							alt="oh" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-illustration-cat-3.jpeg"
+							alt="cat-3" /> <img class="gallery-image"
 							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
-							alt="meditation-house-3" />
+							alt="old-man-in-cafe" /> <img class="gallery-image"
+							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
+							alt="whale" />
 					</div>
 				</div>
 			</div>
@@ -172,5 +177,6 @@
     }
   });
 </script>
+
 </body>
 </html>

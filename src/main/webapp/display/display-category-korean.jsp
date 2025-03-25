@@ -13,7 +13,8 @@
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-	<input type="hidden" id="anPageName" name="page" value="display-main" />
+	<input type="hidden" id="anPageName" name="page"
+		value="display-category-korean" />
 	<div class="container-center-horizontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
@@ -21,8 +22,12 @@
 				<div class="tab-container">
 					<div class="tab-wrapper">
 						<div class="tab-labels">
-							<div class="tab-text">전시중</div>
-							<div class="tab-text-upcoming">전시예정</div>
+							<div class="tab-text">
+								<a href="../display/display-main-ing.display">전시중</a>
+							</div>
+							<div class="tab-text-upcoming">
+								<a href="../display/display-main-comming-soon.display">전시예정</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -30,22 +35,22 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="display-category-korean.jsp">한국화</a>
+								<a href="../display/display-category-korean.display">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-painting.jsp">회화</a>
+								<a href="../display/display-category-painting.display">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-sculpture.jsp">조각</a>
+								<a href="../display/display-category-sculpture.display">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-craft.jsp">공예</a>
+								<a href="../display/display-category-craft.display">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-architecture.jsp">건축</a>
+								<a href="../display/display-category-architecture.display">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="display-category-calligraphy.jsp">서예</a>
+								<a href="../display/display-category-calligraphy.display">서예</a>
 							</div>
 						</div>
 					</div>
@@ -78,42 +83,42 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-study-coding-3.jpeg"
-							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-study-coding-2.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
 							src="../assets/images/display/art/korean/img-korean-study-coding.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-7.jpeg"
-							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-6.jpeg"
-							alt="tiger-and-waterfall" />
-					</div>
-					<div class="gallery-column">
-						<img class="gallery-image"
+							alt="coding" /> <img class="gallery-image"
 							src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-5.jpeg"
-							alt="meditation-house-3" /> <img class="gallery-image"
+							alt="tiger-and-waterfall" /> <img class="gallery-image"
 							src="../assets/images/display/art/korean/img-korean-squirrel.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-weasel-and-boar.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-fly-dragon.jpeg"
+							alt="squirrel" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-magnolia-flowers.jpeg"
+							alt="magnolia-flowers" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-cat-2.jpeg"
 							alt="cat-2" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-lotus.jpeg"
-							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-rabbit-and-magpie.jpeg"
-							alt="oh" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-study-coding-2.jpeg"
+							alt="coding-2" /> <img class="gallery-image"
 							src="../assets/images/display/art/korean/img-korean-two-koifish.jpeg"
-							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
-							alt="old-man-in-cafe" /> <img class="gallery-image"
+							alt="koifish" /> <img class="gallery-image"
 							src="../assets/images/display/art/korean/img-korean-sansuwha.jpeg"
-							alt="meditation-house-3" />
+							alt="sansuwha" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-lotus.jpeg"
+							alt="lotus" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
+							alt="cat-4" />
+					</div>
+					<div class="gallery-column">
+						<img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-study-coding-3.jpeg"
+							alt="coding-3" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-weasel-and-boar.jpeg"
+							alt="weasel-and-boar" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-rabbit-and-magpie.jpeg"
+							alt="rabbit-and-magpie" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-fly-dragon.jpeg"
+							alt="dragon" /> <img class="gallery-image"
+							src="../assets/images/display/art/korean/img-korean-cat-7.jpeg"
+							alt="cat-7" />
 					</div>
 				</div>
 			</div>
@@ -172,5 +177,6 @@
     }
   });
 </script>
+
 </body>
 </html>
