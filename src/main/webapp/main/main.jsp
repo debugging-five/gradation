@@ -39,13 +39,25 @@
 		    <div class="swiper-slide">
 		      <img src="../assets/images/main/main-image4.png" alt="main-image4" />
 		    </div>
+		    <div class="swiper-slide">
+		      <img src="../assets/images/main/main-image1.png" alt="main-image1" />
+		    </div>
+		    <div class="swiper-slide">
+		      <img src="../assets/images/main/main-image2.png" alt="main-image2" />
+		    </div>
+		    <div class="swiper-slide">
+		      <img src="../assets/images/main/main-image3.png" alt="main-image3" />
+		    </div>
+		    <div class="swiper-slide">
+		      <img src="../assets/images/main/main-image4.png" alt="main-image4" />
+		    </div>
 		  </div>
 		</div>
 		<div id="main-text-wrap">
 	    	<p id="main-text">모든 작품들은 빛날 가치가 있습니다</p>
 	    </div>
 	  </div>
-	
+
 	<%@ include file="../layout/footer.jsp" %>
 	
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -60,13 +72,12 @@
         		delay: 0,
         		disableOnInteraction: false,
       		},
-      		freeMode: true,
-      		freeModeMomentum: false,
     	});
 	});
 </script>
 	
 </body>
+<script type="text/javascript" src="../assets/js/main/main.js"></script>
 </html>
 
 
