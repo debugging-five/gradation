@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 import com.app.exhibition.controller.GradationExhibitionController;
+import com.app.exhibition.controller.OurExhibitionPastTwentyFourController;
+import com.app.exhibition.controller.OurExhibitionPastTwentyThreeController;
+import com.app.exhibition.controller.OurExhibitionPastTwentyTwoController;
 import com.app.exhibition.controller.UniversityExhibitionController;
 import com.app.exhibition.controller.UniversityExhibitionFormWriteController;
 
@@ -28,6 +31,12 @@ public class ExhibitionFrontController extends HttpServlet {
 			result = new UniversityExhibitionFormWriteController().execute(req, resp);
 		}else if(target.equals("exhibition/gradation-exhibition-main")) {
 			result = new GradationExhibitionController().execute(req, resp);
+		}else if(target.equals("exhibition/our-exhibition-past-twenty-two")) {
+			result = new OurExhibitionPastTwentyTwoController().execute(req, resp);
+		}else if(target.equals("exhibition/our-exhibition-past-twenty-three")) {
+			result = new OurExhibitionPastTwentyThreeController().execute(req, resp);
+		}else if(target.equals("exhibition/our-exhibition-past-twenty-four")) {
+			result = new OurExhibitionPastTwentyFourController().execute(req, resp);
 		}else {
 //			전부 404
 		}
