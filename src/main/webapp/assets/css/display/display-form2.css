@@ -11,7 +11,6 @@ body {
     justify-content: center; /* 세로 중앙 정렬 */
 }
 
-
 .display-text {
 	margin-top: 148px;
 	font-size: 30px;
@@ -33,7 +32,7 @@ body {
 #upload {
 	margin-top: 50px;
 	display: flex;
-	gap: 120px;
+	justify-content: space-between;
 }
 
 /* 첨부파일 박스 */
@@ -41,6 +40,7 @@ body {
     width: 480px;   /* 가로 480px */
     height: 480px;  /* 세로 480px */
     background-color: #D9D9D9; /* 박스 배경색 */
+    margin-right: 120px;
     display: flex;
  	flex-direction: column;   /* 세로 방향으로 배치 */
     justify-content: center;  /* 수평 중앙 정렬 */

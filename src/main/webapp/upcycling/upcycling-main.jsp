@@ -15,13 +15,23 @@
     <div class="upcycle-text">upcycling</div>
     
     <!-- 배너 -->
-    <div>
-    	<div class="banner">
-	    	<img alt="banner" src="../assets/images/upcycling/upcycling-main/banner.png" >
-    	</div>
-		    <h1 class="title-1">"창작의 흔적이 환경과 미래를 망치는 폐기물이 되지 않도록."</h1>
-		    <h1 class="title-2">"이제는 변화를 만들어야 할 때 입니다."</h1>
-    </div>
+	<div class="slider-container">
+	    <div class="slider">
+           <div class="slide">
+               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner1.png" alt="Slide 1">
+               <div class="slide-text1">"창작의 흔적이 환경과 미래를 망치는 폐기물이 되지 않도록."</div>
+               <div class="slide-text2">"이제는 변화를 만들어야 할 때 입니다."</div>
+           </div>
+           <div class="slide">
+               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner2.jpg" alt="Slide 2">
+           </div>
+           <div class="slide">
+               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner1.png" alt="Slide 3">
+           </div>
+	    </div>
+	    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+	    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+	</div>
 	    
     
     <!-- 스크롤 -->
@@ -126,7 +136,7 @@
     
 
 </div>
-
 <%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/upcycling/upcycling-main.js"></script>
 </html>
