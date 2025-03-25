@@ -83,41 +83,41 @@
 				<div class="row-gallery">
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-1"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
 							alt="calligraphy-1" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-2"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-2.jpeg"
 							alt="calligraphy-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-3"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-3.jpeg"
 							alt="calligraphy-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-4"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-4.jpeg"
 							alt="calligraphy-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-5"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-5.jpeg"
 							alt="calligraphy-5" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-6"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-6.jpeg"
 							alt="calligraphy-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-7"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-7.jpeg"
 							alt="calligraphy-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-8"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-8.jpeg"
 							alt="calligraphy-8" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-9"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-9.jpeg"
 							alt="calligraphy-9" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-10"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-10.jpeg"
 							alt="calligraphy-10" />
 					</div>
 					<div class="gallery-column">
 						<img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-11"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-11.jpeg"
 							alt="calligraphy-11" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-12"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-12.jpeg"
 							alt="calligraphy-12" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-13"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-13.jpeg"
 							alt="calligraphy-13" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-14"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-14.jpeg"
 							alt="calligraphy-14" /> <img class="gallery-image"
-							src="../assets/images/display/art/calligraphy/img-calligraphy-15"
+							src="../assets/images/display/art/calligraphy/img-calligraphy-15.jpeg"
 							alt="calligraphy-15" />
 					</div>
 				</div>
