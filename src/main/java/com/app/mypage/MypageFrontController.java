@@ -15,6 +15,7 @@ import com.app.mypage.controller.MypageAdminQnaContentCompleted;
 import com.app.mypage.controller.MypageAdminQnaListCompleted;
 import com.app.mypage.controller.MypageAdminQnaListWaiting;
 import com.app.mypage.controller.MypageArtLikeListController;
+import com.app.mypage.controller.MypageCommentsListController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
@@ -41,6 +42,8 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageContactListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-contact-artist-write")) {
 			result = new MypageContactWriteController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-comments-list")) {
+			result = new MypageCommentsListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-art-like-list")) {
 			result = new MypageArtLikeListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-exhibition-like-list")) {
