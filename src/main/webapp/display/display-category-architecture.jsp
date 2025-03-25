@@ -125,11 +125,18 @@
 			<div class="pagination-bar suith4">
 				<img class="pagination-icon"
 					src="../assets/images/display/art/left.png" alt="left" />
-				<div class="page-number">1</div>
-				<div class="page-number">2</div>
-				<div class="page-number">3</div>
-				<div class="page-number">4</div>
-				<div class="page-number">5</div>
+				<%
+				int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
+				int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+
+				for (int i = 1; i <= totalPages; i++) {
+				%>
+				<a href="display-category-architecture.display?page=<%=i%>"
+					class="<%=(i == currentPage) ? "active" : ""%>"> <%=i%>
+				</a>
+				<%
+				}
+				%>
 				<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
 			</div>
@@ -163,11 +170,8 @@
       images.forEach(img => column.appendChild(img));
     });
 
-    // 정렬 후 드롭다운 닫기
     document.getElementById("sortDropdown").style.display = "none";
   }
-
-  // 외부 클릭 시 드롭다운 닫기
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");
     const sortIcon = document.querySelector(".sort-icon");

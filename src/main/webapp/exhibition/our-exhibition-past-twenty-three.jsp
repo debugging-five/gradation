@@ -32,50 +32,47 @@
 							<div class="text-1 pretendardh5">지난 전시회</div>
 						</div>
 						<div class="sidebar-item-box overlap">
-							<div class="sidebar-exhibition-title pretendardh7">2024 필립
-								파레노: 보이스</div>
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-four.exhibition">2024 필립 파레노: 보이스</a></div>
 						</div>
 						<div class="sidebar-item-box overlap">
-							<div class="sidebar-exhibition-title pretendardh7">2023
-								아트스펙트럼</div>
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-three.exhibition">2023 아트스펙트럼</a></div>
 						</div>
 						<div class="sidebar-item-box overlap">
-							<div class="sidebar-exhibition-title pretendardh7">2022 공예
-								지금</div>
+							<div class="sidebar-exhibition-title pretendardh7"><a href="../exhibition/our-exhibition-past-twenty-two.exhibition">2022 공예 지금</a></div>
 						</div>
 					</div>
 					<div class="page-header-1 ">
 						<img class="car-1 image"
-							src="../assets/images/display/art/exhibition-past/img-past-car.jpeg"
+							src="../assets/images/display/art/exhibition-past/img-spectrum.jpeg"
 							alt="car-1" /> <img class="car-1 image"
-							src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg"
+							src="../assets/images/display/art/exhibition-past/img-spectrum-3.jpeg"
 							alt="car-1" /> <img class="car-1 image"
-							src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg"
+							src="../assets/images/display/art/exhibition-past/img-spectrum-5.jpeg"
 							alt="car-1" /> <img class="car-1 image"
-							src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg"
+							src="../assets/images/display/art/exhibition-past/img-spectrum-7.jpeg"
 							alt="adrianna-geo-1rBg5YSi00c-unsplash" />
 					</div>
 				</div>
 				<div class="page-header-2 ">
 					<img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-dear.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-9.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-4.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-11.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-5.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-2.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-6.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-4.jpeg"
 						alt="car-1" />
 				</div>
 				<div class="page-header-3 ">
 					<img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-7.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-6.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-8.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-8.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-3.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-10.jpeg"
 						alt="car-1" /> <img class="car-1 image"
-						src="../assets/images/display/art/exhibition-past/img-past-car-2.jpeg"
+						src="../assets/images/display/art/exhibition-past/img-spectrum-11.jpeg"
 						alt="car-1" />
 				</div>
 			</div>

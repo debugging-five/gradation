@@ -34,6 +34,10 @@ fieldset {
 	width: 1920px;
 }
 
+.upcycle-form form {
+	display: contents;
+}
+
 .upcycle-form .header-wrapper {
 	align-items: center;
 	display: flex;
@@ -535,21 +539,23 @@ fieldset {
 }
 
 .upcycle-form .size-count-wrapper {
-	align-items: flex-start;
 	display: flex;
-	gap: 138px;
-	height: 128px;
-	margin-top: 48px;
-	min-width: 402px;
+	flex-direction: column;
+	gap: 12px;
+	justify-content: center;
+}
+
+.size-content-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 140px;
+	margin-top: 50px;
 }
 
 .upcycle-form .size-category-wrapper {
-	align-items: center;
-	gap: 19px;
-	min-height: 124px;
-	width: 191px;
 	display: flex;
 	flex-direction: column;
+	gap: 19px;
 }
 
 .upcycle-form .text-trash {
@@ -718,10 +724,11 @@ fieldset {
 }
 
 .upcycle-form .canvas-number-large {
-	height: 25px;
+	align-items: center;
+	display: flex;
+	height: 28px;
 	margin-top: 6px;
-	position: relative;
-	width: 75px;
+	min-width: 75px;
 }
 
 .upcycle-form .input-wrapper-large {
@@ -736,12 +743,9 @@ fieldset {
 
 .upcycle-form .count-large-unit {
 	color: var(--color-black);
-	font-weight: var(font-weight-regular);
+	font-weight: var(--font-weight-regular);
 	height: 19px;
-	left: 55px;
 	line-height: normal;
-	position: absolute;
-	top: 2px;
 	width: 14px;
 	display: flex;
 	flex-direction: column;
@@ -749,13 +753,13 @@ fieldset {
 	font-family: 'Pretendard-Regular';
 	font-size: var(--font-size-h7);
 	font-style: normal;
-	font-weight: var(font-weight-regular);
+	font-weight: var(--font-weight-regular);
 	letter-spacing: -0.06px;
 }
 
 .upcycle-form .section-material {
 	align-items: center;
-	margin-top: 44px;
+	margin-top: 50px;
 	min-height: 813px;
 	width: 1920px;
 	display: flex;
@@ -849,23 +853,21 @@ fieldset {
 	height: 91px;
 }
 
-.upcycle-form .extra-notes-input {
-	color: var(--color-gray500);
-	font-weight: var(--font-weight-light);
+.extra-notes-input {
 	width: 400px;
 	height: 90px;
-	text-align: left;
 	padding: 10px;
-	line-height: 1.4;
-	background-color: transparent;
-	border: 0;
-	line-height: normal;
-	padding: 0;
+	border: 1.5px solid var(--color-gray500);
+	border-radius: 2px;
+	resize: none;
 	font-family: 'Pretendard-Light';
 	font-size: var(--font-size-h8);
-	font-style: normal;
-	font-weight: 300;
-	letter-spacing: -0.06px;
+	color: var(--color-gray900);
+	line-height: 1.4;
+	background-color: transparent;
+	box-sizing: border-box;
+	overflow: auto;
+	white-space: pre-wrap;
 }
 
 .upcycle-form .confirm {
