@@ -13,16 +13,13 @@ body {
 
 #container {
 	width: 1160px;
-	margin-top: 90px;
+	margin-top: 142px;
 	display: flex;
 	gap: 120px;
 }
 
 #category {
-	width: 242px;
-	height: 875px;
-	background-color: var(--color-gray900);
-	
+	margin-bottom: 200px;
 }
 
 #title {
@@ -91,14 +88,13 @@ form {
 	text-align: right;
 }
 
-
 button {
 	width: 125px;
 	height: 50px;
 	background-color: var(--color-primary);
 	color: var(--color-gray100);
 	font-size: var(--font-size-h5);
-	border: solid 1.5px;
+	border: solid 1.5px var(--color-primary);
 	border-radius: 3px;
 	margin-bottom: 200px;
 }

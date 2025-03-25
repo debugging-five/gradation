@@ -3,6 +3,7 @@ const content = document.getElementById("question-content");
 /* 수정할 내용 */
 const textarea = document.getElementById("answer-input");
 /* 버튼 */
+const listBtn = document.getElementById("list-faq")
 const deleteBtn = document.getElementById("delete-faq");
 const modifyBtn = document.getElementById("modify-faq");
 const cancelBtn = document.getElementById("cancel-faq");
@@ -15,7 +16,7 @@ modifyBtn.addEventListener("click", (e) => {
 	/* 기존 내용 숨기고, textarea 보이게 */
     content.style.display = "none";
     textarea.style.display = "block";
-
+	listBtn.style.display = "none";
 	/* 기존 버튼 숨기고, 취소, 저장 버튼 나오게*/
 	deleteBtn.style.display = "none";
     modifyBtn.style.display = "none";
@@ -28,9 +29,10 @@ cancelBtn.addEventListener("click", (e) => {
     e.preventDefault();
     textarea.style.display = "none";
     content.style.display = "block";
-
+	
     cancelBtn.style.display = "none";
     saveBtn.style.display = "none";
+	listBtn.style.display = "inline-block";
 	deleteBtn.style.display = "inline-block";
     modifyBtn.style.display = "inline-block";
 });
@@ -43,11 +45,14 @@ saveBtn.addEventListener("click", (e) => {
 
     cancelBtn.style.display = "none";
     saveBtn.style.display = "none";
+	listBtn.style.display = "inline-block";
 	deleteBtn.style.display = "inline-block";
     modifyBtn.style.display = "inline-block";
 });
 
-
+listBtn.addEventListener("click", () => {
+	location.href = 'mypage-admin-faq-list.mypage';
+})
 
 
 

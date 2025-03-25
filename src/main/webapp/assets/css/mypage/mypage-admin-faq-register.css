@@ -23,11 +23,7 @@ body {
 }
 
 #category {
-	width: 242px;
-	height: 875px;
-	background-color: var(--color-gray900);
 	margin-bottom: 200px;
-	
 }
 
 #title {

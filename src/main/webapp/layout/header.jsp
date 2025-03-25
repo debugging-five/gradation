@@ -14,7 +14,7 @@
         <nav>
            <!-- 로고 이미지 -->
             <div class="headerLogo-wrap">
-                <a href="/gradation/main/main.main"><img id="headerLogo" src="../assets/images/layout/header/headerLogo.png" alt="headerLogo"></a>
+                <a href="/gradation/main/main.main"><img id="headerLogo" src="../assets/images/layout/header/header-logo.png" alt="header-logo"></a>
             </div>
             
             <ul class="menu">
@@ -47,7 +47,7 @@
                       <!-- exhibition 드롭다운 -->
                       <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">그라데이션 전시회</a></li>
                       <li><a href="/gradation/exhibition/university-exhibition-main.exhibition">대학교 전시회</a>
-                      <li><a href="#">학교 신청</a>
+                      <li><a href="/gradation/exhibition/university-exhibition-form.exhibition"">학교 신청</a>
                       </li>
                    </ul>
                 </li>
@@ -62,7 +62,7 @@
                 </li>
             </ul>
             <div class="login-section">
-			    <img class="headerSearch" src="../assets/images/layout/header/headerSearch.png" alt="search">
+			    <img class="header-bell" src="../assets/images/layout/header/header-bell.png" alt="header-bell">
 			
 			    <!-- sign in 드롭다운 -->
 			    <div class="sign-in-wrap">
