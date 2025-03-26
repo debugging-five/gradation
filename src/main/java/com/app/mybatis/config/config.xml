@@ -27,8 +27,11 @@
     	<typeAlias type="com.app.vo.UniversityExhibitionVO" alias="UniversityExhibitionVO" />
     	<typeAlias type="com.app.vo.UniversityLikeVO" alias="UniversityLikeVO" />
     	<typeAlias type="com.app.vo.UniversityVO" alias="UniversityVO" />
+    	<typeAlias type="com.app.vo.UniversityExhibitionImgVO" alias="UniversityExhibitionImgVO" />
     	<typeAlias type="com.app.vo.UpcycleVO" alias="UpcycleVO" />
     	<typeAlias type="com.app.vo.UserVO" alias="UserVO" />
+    	<typeAlias type="com.app.vo.AuctionBiddingVO" alias="AuctionBiddingVO" />
+    	<typeAlias type="com.app.vo.ExhibitionPastArtVO" alias="ExhibitionPastArtVO" />
     </typeAliases>
    
    <environments default="oracle">
@@ -45,28 +48,31 @@
     
     
     <mappers> 
-    	<mapper resource="com/app/mybatis/mapper/artimgMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/artlikeMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/artImgMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/artLikeMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/artMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/artpostMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/artPostMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/auctionMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/banMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/deliveryMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/faqMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/gradationexhibitionMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/gradationExhibitionMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/mailMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/majorMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/paymentcancellationMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/paymentCancellationMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/paymentMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/qnaanswerMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/qnaAnswerMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/qnaMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/replylikeMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/replyLikeMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/replyMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universityexhibitionMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universitylikeMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/universityExhibitionMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/universityLikeMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/universityMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/upcycleMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/userMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/auctionBiddingMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/exhibitionPastArtMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/universityExhibitionImgMapper.xml" />
     </mappers>
     
     
