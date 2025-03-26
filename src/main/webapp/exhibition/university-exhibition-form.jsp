@@ -7,6 +7,31 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/exhibition/university-exhibition-form.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>대학교 전시회 신청 양식</title>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+	function execDaumPostcode() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				var fullAddress = data.address;
+				var extraAddress = '';
+
+				if (data.addressType === 'R') {
+					if (data.bname !== '') {
+						extraAddress += data.bname;
+					}
+					if (data.buildingName !== '') {
+						extraAddress += (extraAddress !== '' ? ', '
+								+ data.buildingName : data.buildingName);
+					}
+					fullAddress += (extraAddress !== '' ? ' (' + extraAddress
+							+ ')' : '');
+				}
+
+				document.getElementById("address").value = fullAddress;
+			}
+		}).open();
+	}
+</script>
 <!-- flatpickr CSS -->
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
@@ -30,9 +55,9 @@
 				<div id="input-button-wrapper">
 					<div class="input-text">
 						<h5>대학명<span class="star">*</span></h5>
-						<input type="text" placeholder="학교를 선택하세요." />
+						<input type="text" placeholder="학교를 선택하세요." id="address" name="address" required/>
 					</div>
-					<button type="button" id="search-university">학교 검색</button>
+					<button type="button" id="search-university" onclick="execDaumPostcode()">학교 검색</button>
 				</div>
 				
 				<!-- 학과명 -->
