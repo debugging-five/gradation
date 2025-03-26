@@ -23,7 +23,7 @@
 			<h1>"여러분의 작품을 전시해 드립니다."</h1>
 		</div>
 		<div class="slide-container">
-			  <!-- Additional required wrapper -->
+			 
 			<div class="slide-wrapper">
 				<div class="slide-image">
 				  	<img src="../assets/images/display/art/painting/img-painting-gradation.jpeg" alt="painting-gradation">
