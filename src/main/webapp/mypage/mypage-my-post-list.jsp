@@ -17,7 +17,7 @@
 			<div class="flex-row">
 				<%@ include file="mypage-info-layout.jsp"%>
 				<div class="message-container">
-					<div class="page-title">내 쪽지 및 문의 / 내 쪽지</div>
+					<div class="page-title">내 쪽지</div>
 					<p class="message-notice">전송이 완료된 쪽지는 수정이 불가합니다.</p>
 					<div class="message-tabs">
 						<a href="../mypage/mypage-post-list.mypage"
@@ -35,20 +35,34 @@
 						<div class="message-row">
 							<div class="column-number">1</div>
 							<div class="column-sender">관리자</div>
-							<div class="column-subject">불법광고 신고 합니다.</div>
+							<div class="column-subject">
+								<a href="../mypage/mypage-post-content.mypage">불법 광고 신고합니다.</a>
+							</div>
 							<div class="column-date">25.03.10</div>
 						</div>
 						<div class="message-row">
 							<div class="column-number">2</div>
 							<div class="column-sender">김동건</div>
-							<div class="column-subject">싫어</div>
+							<div class="column-subject">
+								<a href="../mypage/mypage-post-content.mypage">싫어</a>
+							</div>
 							<div class="column-date">25.03.06</div>
 						</div>
 						<div class="message-row">
 							<div class="column-number">3</div>
 							<div class="column-sender">관리자</div>
-							<div class="column-subject">배송지 변경 요청</div>
+							<div class="column-subject">
+								<a href="../mypage/mypage-post-content.mypage">배송지 변경 요청</a>
+							</div>
 							<div class="column-date">25.02.22</div>
+						</div>
+						<div class="message-row">
+							<div class="column-number">4</div>
+							<div class="column-sender">관리자</div>
+							<div class="column-subject">
+								<a href="../mypage/mypage-post-content.mypage">가격 네고 문의</a>
+							</div>
+							<div class="column-date">25.02.20</div>
 						</div>
 					</div>
 				</div>

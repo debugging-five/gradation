@@ -1,20 +1,12 @@
 package com.app.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UpcyclingDTO {
-//	TBL_UPCYCLE_APPLICATION
+public class MyPageMyPostDTO {
+
+//	TBL_USER
 	private Long id;
-	private String upcycleCategory;
-	private String upcycleSize;
-	private Date upcycleDate;
-	private String upcycleAddress;
-	private Long userId;
-	private String UpcycleImgName;
-	private String UpcycleImgPath;
-	
-// 	TBL_USER
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -39,33 +31,28 @@ public class UpcyclingDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private Long universityId;
 	
-//  TBL_UNIVERSITY
-	private Long unibersityId;
-    private String universityName;
-    private String universityLocation;
-    private String universityLogoImgName;
-    private String universityLogoImgPath;
-    
-    public UpcyclingDTO() {;}
+//	TBL_MAIL
+	private Long mailId;
+	private String mailTitle;
+	private String mailContents;
+	private Timestamp mailSendTime;
+	private int mailIsopen;
+	private Long sendUserId;
+	private Long recieveUserId;
+	
+	public MyPageMyPostDTO () {;}
 
-	public UpcyclingDTO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId, String upcycleImgName, String upcycleImgPath, String userImgName, String userImgPath,
-			String userName, String userEmail, String uUserId, String userPassword, String userPhone,
-			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
-			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
-			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
-			int userBanOk, Long unibersityId, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath) {
+	public MyPageMyPostDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String uUserId, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId,
+			Long mailId, String mailTitle, String mailContents, Timestamp mailSendTime, int mailIsopen, Long sendUserId,
+			Long recieveUserId) {
 		super();
 		this.id = id;
-		this.upcycleCategory = upcycleCategory;
-		this.upcycleSize = upcycleSize;
-		this.upcycleDate = upcycleDate;
-		this.upcycleAddress = upcycleAddress;
-		this.userId = userId;
-		UpcycleImgName = upcycleImgName;
-		UpcycleImgPath = upcycleImgPath;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -90,11 +77,14 @@ public class UpcyclingDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.unibersityId = unibersityId;
-		this.universityName = universityName;
-		this.universityLocation = universityLocation;
-		this.universityLogoImgName = universityLogoImgName;
-		this.universityLogoImgPath = universityLogoImgPath;
+		this.universityId = universityId;
+		this.mailId = mailId;
+		this.mailTitle = mailTitle;
+		this.mailContents = mailContents;
+		this.mailSendTime = mailSendTime;
+		this.mailIsopen = mailIsopen;
+		this.sendUserId = sendUserId;
+		this.recieveUserId = recieveUserId;
 	}
 
 	public Long getId() {
@@ -103,62 +93,6 @@ public class UpcyclingDTO {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getUpcycleCategory() {
-		return upcycleCategory;
-	}
-
-	public void setUpcycleCategory(String upcycleCategory) {
-		this.upcycleCategory = upcycleCategory;
-	}
-
-	public String getUpcycleSize() {
-		return upcycleSize;
-	}
-
-	public void setUpcycleSize(String upcycleSize) {
-		this.upcycleSize = upcycleSize;
-	}
-
-	public Date getUpcycleDate() {
-		return upcycleDate;
-	}
-
-	public void setUpcycleDate(Date upcycleDate) {
-		this.upcycleDate = upcycleDate;
-	}
-
-	public String getUpcycleAddress() {
-		return upcycleAddress;
-	}
-
-	public void setUpcycleAddress(String upcycleAddress) {
-		this.upcycleAddress = upcycleAddress;
-	}
-
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUpcycleImgName() {
-		return UpcycleImgName;
-	}
-
-	public void setUpcycleImgName(String upcycleImgName) {
-		UpcycleImgName = upcycleImgName;
-	}
-
-	public String getUpcycleImgPath() {
-		return UpcycleImgPath;
-	}
-
-	public void setUpcycleImgPath(String upcycleImgPath) {
-		UpcycleImgPath = upcycleImgPath;
 	}
 
 	public String getUserImgName() {
@@ -353,62 +287,83 @@ public class UpcyclingDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUnibersityId() {
-		return unibersityId;
+	public Long getUniversityId() {
+		return universityId;
 	}
 
-	public void setUnibersityId(Long unibersityId) {
-		this.unibersityId = unibersityId;
+	public void setUniversityId(Long universityId) {
+		this.universityId = universityId;
 	}
 
-	public String getUniversityName() {
-		return universityName;
+	public Long getMailId() {
+		return mailId;
 	}
 
-	public void setUniversityName(String universityName) {
-		this.universityName = universityName;
+	public void setMailId(Long mailId) {
+		this.mailId = mailId;
 	}
 
-	public String getUniversityLocation() {
-		return universityLocation;
+	public String getMailTitle() {
+		return mailTitle;
 	}
 
-	public void setUniversityLocation(String universityLocation) {
-		this.universityLocation = universityLocation;
+	public void setMailTitle(String mailTitle) {
+		this.mailTitle = mailTitle;
 	}
 
-	public String getUniversityLogoImgName() {
-		return universityLogoImgName;
+	public String getMailContents() {
+		return mailContents;
 	}
 
-	public void setUniversityLogoImgName(String universityLogoImgName) {
-		this.universityLogoImgName = universityLogoImgName;
+	public void setMailContents(String mailContents) {
+		this.mailContents = mailContents;
 	}
 
-	public String getUniversityLogoImgPath() {
-		return universityLogoImgPath;
+	public Timestamp getMailSendTime() {
+		return mailSendTime;
 	}
 
-	public void setUniversityLogoImgPath(String universityLogoImgPath) {
-		this.universityLogoImgPath = universityLogoImgPath;
+	public void setMailSendTime(Timestamp mailSendTime) {
+		this.mailSendTime = mailSendTime;
+	}
+
+	public int getMailIsopen() {
+		return mailIsopen;
+	}
+
+	public void setMailIsopen(int mailIsopen) {
+		this.mailIsopen = mailIsopen;
+	}
+
+	public Long getSendUserId() {
+		return sendUserId;
+	}
+
+	public void setSendUserId(Long sendUserId) {
+		this.sendUserId = sendUserId;
+	}
+
+	public Long getRecieveUserId() {
+		return recieveUserId;
+	}
+
+	public void setRecieveUserId(Long recieveUserId) {
+		this.recieveUserId = recieveUserId;
 	}
 
 	@Override
 	public String toString() {
-		return "UpcyclingDTO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", UpcycleImgName=" + UpcycleImgName + ", UpcycleImgPath=" + UpcycleImgPath + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", uUserId=" + uUserId + ", userPassword=" + userPassword + ", userPhone=" + userPhone
-				+ ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", unibersityId=" + unibersityId + ", universityName=" + universityName + ", universityLocation="
-				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
-				+ universityLogoImgPath + "]";
+		return "MyPageMyPostDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword="
+				+ userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress="
+				+ userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk="
+				+ userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce
+				+ ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube
+				+ ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver="
+				+ userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk="
+				+ userBanOk + ", universityId=" + universityId + ", mailId=" + mailId + ", mailTitle=" + mailTitle
+				+ ", mailContents=" + mailContents + ", mailSendTime=" + mailSendTime + ", mailIsopen=" + mailIsopen
+				+ ", sendUserId=" + sendUserId + ", recieveUserId=" + recieveUserId + "]";
 	}
 
 	@Override
@@ -424,10 +379,10 @@ public class UpcyclingDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UpcyclingDTO other = (UpcyclingDTO) obj;
+		MyPageMyPostDTO other = (MyPageMyPostDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-
 	
-    
+	
+	
 }

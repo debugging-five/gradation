@@ -3,18 +3,10 @@ package com.app.dto;
 import java.sql.Date;
 import java.util.Objects;
 
-public class UpcyclingDTO {
-//	TBL_UPCYCLE_APPLICATION
+public class DisplayMainDTO {
+
+//	TBL_USER
 	private Long id;
-	private String upcycleCategory;
-	private String upcycleSize;
-	private Date upcycleDate;
-	private String upcycleAddress;
-	private Long userId;
-	private String UpcycleImgName;
-	private String UpcycleImgPath;
-	
-// 	TBL_USER
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -40,32 +32,33 @@ public class UpcyclingDTO {
 	private int userAdminOk;
 	private int userBanOk;
 	
-//  TBL_UNIVERSITY
-	private Long unibersityId;
-    private String universityName;
-    private String universityLocation;
-    private String universityLogoImgName;
-    private String universityLogoImgPath;
-    
-    public UpcyclingDTO() {;}
+//	TBL_ART
+	private Long artId;
+	private String artCategoty;
+	private String artTitle;
+	private String artMeterial;
+	private String artSize;
+	private String artDescription;
+	private Date artDate;
+	private Date artStartDate;
+	private Date artEndDate;
+	
+//	TBL_ART_IMAGE
+	private Long artImageId;	
+	private String artImgName;
+	private String artImgPath;
+	
+	public DisplayMainDTO() {;}
 
-	public UpcyclingDTO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId, String upcycleImgName, String upcycleImgPath, String userImgName, String userImgPath,
-			String userName, String userEmail, String uUserId, String userPassword, String userPhone,
-			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
-			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
-			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
-			int userBanOk, Long unibersityId, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath) {
+	public DisplayMainDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String uUserId, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long artId,
+			String artCategoty, String artTitle, String artMeterial, String artSize, String artDescription,
+			Date artDate, Date artStartDate, Date artEndDate, Long artImageId, String artImgName, String artImgPath) {
 		super();
 		this.id = id;
-		this.upcycleCategory = upcycleCategory;
-		this.upcycleSize = upcycleSize;
-		this.upcycleDate = upcycleDate;
-		this.upcycleAddress = upcycleAddress;
-		this.userId = userId;
-		UpcycleImgName = upcycleImgName;
-		UpcycleImgPath = upcycleImgPath;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -90,11 +83,18 @@ public class UpcyclingDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.unibersityId = unibersityId;
-		this.universityName = universityName;
-		this.universityLocation = universityLocation;
-		this.universityLogoImgName = universityLogoImgName;
-		this.universityLogoImgPath = universityLogoImgPath;
+		this.artId = artId;
+		this.artCategoty = artCategoty;
+		this.artTitle = artTitle;
+		this.artMeterial = artMeterial;
+		this.artSize = artSize;
+		this.artDescription = artDescription;
+		this.artDate = artDate;
+		this.artStartDate = artStartDate;
+		this.artEndDate = artEndDate;
+		this.artImageId = artImageId;
+		this.artImgName = artImgName;
+		this.artImgPath = artImgPath;
 	}
 
 	public Long getId() {
@@ -103,62 +103,6 @@ public class UpcyclingDTO {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getUpcycleCategory() {
-		return upcycleCategory;
-	}
-
-	public void setUpcycleCategory(String upcycleCategory) {
-		this.upcycleCategory = upcycleCategory;
-	}
-
-	public String getUpcycleSize() {
-		return upcycleSize;
-	}
-
-	public void setUpcycleSize(String upcycleSize) {
-		this.upcycleSize = upcycleSize;
-	}
-
-	public Date getUpcycleDate() {
-		return upcycleDate;
-	}
-
-	public void setUpcycleDate(Date upcycleDate) {
-		this.upcycleDate = upcycleDate;
-	}
-
-	public String getUpcycleAddress() {
-		return upcycleAddress;
-	}
-
-	public void setUpcycleAddress(String upcycleAddress) {
-		this.upcycleAddress = upcycleAddress;
-	}
-
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUpcycleImgName() {
-		return UpcycleImgName;
-	}
-
-	public void setUpcycleImgName(String upcycleImgName) {
-		UpcycleImgName = upcycleImgName;
-	}
-
-	public String getUpcycleImgPath() {
-		return UpcycleImgPath;
-	}
-
-	public void setUpcycleImgPath(String upcycleImgPath) {
-		UpcycleImgPath = upcycleImgPath;
 	}
 
 	public String getUserImgName() {
@@ -353,62 +297,116 @@ public class UpcyclingDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUnibersityId() {
-		return unibersityId;
+	public Long getArtId() {
+		return artId;
 	}
 
-	public void setUnibersityId(Long unibersityId) {
-		this.unibersityId = unibersityId;
+	public void setArtId(Long artId) {
+		this.artId = artId;
 	}
 
-	public String getUniversityName() {
-		return universityName;
+	public String getArtCategoty() {
+		return artCategoty;
 	}
 
-	public void setUniversityName(String universityName) {
-		this.universityName = universityName;
+	public void setArtCategoty(String artCategoty) {
+		this.artCategoty = artCategoty;
 	}
 
-	public String getUniversityLocation() {
-		return universityLocation;
+	public String getArtTitle() {
+		return artTitle;
 	}
 
-	public void setUniversityLocation(String universityLocation) {
-		this.universityLocation = universityLocation;
+	public void setArtTitle(String artTitle) {
+		this.artTitle = artTitle;
 	}
 
-	public String getUniversityLogoImgName() {
-		return universityLogoImgName;
+	public String getArtMeterial() {
+		return artMeterial;
 	}
 
-	public void setUniversityLogoImgName(String universityLogoImgName) {
-		this.universityLogoImgName = universityLogoImgName;
+	public void setArtMeterial(String artMeterial) {
+		this.artMeterial = artMeterial;
 	}
 
-	public String getUniversityLogoImgPath() {
-		return universityLogoImgPath;
+	public String getArtSize() {
+		return artSize;
 	}
 
-	public void setUniversityLogoImgPath(String universityLogoImgPath) {
-		this.universityLogoImgPath = universityLogoImgPath;
+	public void setArtSize(String artSize) {
+		this.artSize = artSize;
+	}
+
+	public String getArtDescription() {
+		return artDescription;
+	}
+
+	public void setArtDescription(String artDescription) {
+		this.artDescription = artDescription;
+	}
+
+	public Date getArtDate() {
+		return artDate;
+	}
+
+	public void setArtDate(Date artDate) {
+		this.artDate = artDate;
+	}
+
+	public Date getArtStartDate() {
+		return artStartDate;
+	}
+
+	public void setArtStartDate(Date artStartDate) {
+		this.artStartDate = artStartDate;
+	}
+
+	public Date getArtEndDate() {
+		return artEndDate;
+	}
+
+	public void setArtEndDate(Date artEndDate) {
+		this.artEndDate = artEndDate;
+	}
+
+	public Long getArtImageId() {
+		return artImageId;
+	}
+
+	public void setArtImageId(Long artImageId) {
+		this.artImageId = artImageId;
+	}
+
+	public String getArtImgName() {
+		return artImgName;
+	}
+
+	public void setArtImgName(String artImgName) {
+		this.artImgName = artImgName;
+	}
+
+	public String getArtImgPath() {
+		return artImgPath;
+	}
+
+	public void setArtImgPath(String artImgPath) {
+		this.artImgPath = artImgPath;
 	}
 
 	@Override
 	public String toString() {
-		return "UpcyclingDTO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", UpcycleImgName=" + UpcycleImgName + ", UpcycleImgPath=" + UpcycleImgPath + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", uUserId=" + uUserId + ", userPassword=" + userPassword + ", userPhone=" + userPhone
-				+ ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", unibersityId=" + unibersityId + ", universityName=" + universityName + ", universityLocation="
-				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
-				+ universityLogoImgPath + "]";
+		return "DisplayMainDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword="
+				+ userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress="
+				+ userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk="
+				+ userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce
+				+ ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube
+				+ ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver="
+				+ userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk="
+				+ userBanOk + ", artId=" + artId + ", artCategoty=" + artCategoty + ", artTitle=" + artTitle
+				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
+				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
+				+ ", artImageId=" + artImageId + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + "]";
 	}
 
 	@Override
@@ -424,10 +422,7 @@ public class UpcyclingDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UpcyclingDTO other = (UpcyclingDTO) obj;
+		DisplayMainDTO other = (DisplayMainDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-
-	
-    
 }
