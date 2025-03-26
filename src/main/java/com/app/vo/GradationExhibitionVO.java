@@ -5,38 +5,43 @@ import java.util.Objects;
 
 public class GradationExhibitionVO {
 	private Long id;
-	private String GradationExhibitionTitle;
-	private int GradationExhibitionCount;
-	private Date GradationExhibitionTime;
-	private int GradationExhibitionFee;
-	private String GradationExhibitionTel;
-	private String GradationExhibitionAddress;
-	private Date GradationExhibitionDate;
+	private String gradationExhibitionTitle;
+	private int gradationExhibitionCount;
+	private Date gradationExhibitionTime;
+	private int gradationExhibitionFee;
+	private String gradationExhibitionTel;
+	private String gradationExhibitionAddress;
+	private Date gradationExhibitionDate;
+	private String gradationExhibitionAddressImgName;
+	private String gradationExhibitionAddressImgPath;
 	
 	public GradationExhibitionVO() {;}
-	
+
 	public GradationExhibitionVO(Long id, String gradationExhibitionTitle, int gradationExhibitionCount,
 			Date gradationExhibitionTime, int gradationExhibitionFee, String gradationExhibitionTel,
-			String gradationExhibitionAddress, Date gradationExhibitionDate) {
+			String gradationExhibitionAddress, Date gradationExhibitionDate, String gradationExhibitionAddressImgName,
+			String gradationExhibitionAddressImgPath) {
 		this.id = id;
-		GradationExhibitionTitle = gradationExhibitionTitle;
-		GradationExhibitionCount = gradationExhibitionCount;
-		GradationExhibitionTime = gradationExhibitionTime;
-		GradationExhibitionFee = gradationExhibitionFee;
-		GradationExhibitionTel = gradationExhibitionTel;
-		GradationExhibitionAddress = gradationExhibitionAddress;
-		GradationExhibitionDate = gradationExhibitionDate;
+		this.gradationExhibitionTitle = gradationExhibitionTitle;
+		this.gradationExhibitionCount = gradationExhibitionCount;
+		this.gradationExhibitionTime = gradationExhibitionTime;
+		this.gradationExhibitionFee = gradationExhibitionFee;
+		this.gradationExhibitionTel = gradationExhibitionTel;
+		this.gradationExhibitionAddress = gradationExhibitionAddress;
+		this.gradationExhibitionDate = gradationExhibitionDate;
+		this.gradationExhibitionAddressImgName = gradationExhibitionAddressImgName;
+		this.gradationExhibitionAddressImgPath = gradationExhibitionAddressImgPath;
 	}
-
-
 
 	@Override
 	public String toString() {
-		return "GradationExhibitionVO [id=" + id + ", GradationExhibitionTitle=" + GradationExhibitionTitle
-				+ ", GradationExhibitionCount=" + GradationExhibitionCount + ", GradationExhibitionTime="
-				+ GradationExhibitionTime + ", GradationExhibitionFee=" + GradationExhibitionFee
-				+ ", GradationExhibitionTel=" + GradationExhibitionTel + ", GradationExhibitionAddress="
-				+ GradationExhibitionAddress + ", GradationExhibitionDate=" + GradationExhibitionDate + "]";
+		return "GradationExhibitionVO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
+				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
+				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
+				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
+				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
+				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
+				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath + "]";
 	}
 
 	@Override
@@ -65,58 +70,74 @@ public class GradationExhibitionVO {
 	}
 
 	public String getGradationExhibitionTitle() {
-		return GradationExhibitionTitle;
+		return gradationExhibitionTitle;
 	}
 
 	public void setGradationExhibitionTitle(String gradationExhibitionTitle) {
-		GradationExhibitionTitle = gradationExhibitionTitle;
+		this.gradationExhibitionTitle = gradationExhibitionTitle;
 	}
 
 	public int getGradationExhibitionCount() {
-		return GradationExhibitionCount;
+		return gradationExhibitionCount;
 	}
 
 	public void setGradationExhibitionCount(int gradationExhibitionCount) {
-		GradationExhibitionCount = gradationExhibitionCount;
+		this.gradationExhibitionCount = gradationExhibitionCount;
 	}
 
 	public Date getGradationExhibitionTime() {
-		return GradationExhibitionTime;
+		return gradationExhibitionTime;
 	}
 
 	public void setGradationExhibitionTime(Date gradationExhibitionTime) {
-		GradationExhibitionTime = gradationExhibitionTime;
+		this.gradationExhibitionTime = gradationExhibitionTime;
 	}
 
 	public int getGradationExhibitionFee() {
-		return GradationExhibitionFee;
+		return gradationExhibitionFee;
 	}
 
 	public void setGradationExhibitionFee(int gradationExhibitionFee) {
-		GradationExhibitionFee = gradationExhibitionFee;
+		this.gradationExhibitionFee = gradationExhibitionFee;
 	}
 
 	public String getGradationExhibitionTel() {
-		return GradationExhibitionTel;
+		return gradationExhibitionTel;
 	}
 
 	public void setGradationExhibitionTel(String gradationExhibitionTel) {
-		GradationExhibitionTel = gradationExhibitionTel;
+		this.gradationExhibitionTel = gradationExhibitionTel;
 	}
 
 	public String getGradationExhibitionAddress() {
-		return GradationExhibitionAddress;
+		return gradationExhibitionAddress;
 	}
 
 	public void setGradationExhibitionAddress(String gradationExhibitionAddress) {
-		GradationExhibitionAddress = gradationExhibitionAddress;
+		this.gradationExhibitionAddress = gradationExhibitionAddress;
 	}
 
 	public Date getGradationExhibitionDate() {
-		return GradationExhibitionDate;
+		return gradationExhibitionDate;
 	}
 
 	public void setGradationExhibitionDate(Date gradationExhibitionDate) {
-		GradationExhibitionDate = gradationExhibitionDate;
+		this.gradationExhibitionDate = gradationExhibitionDate;
+	}
+
+	public String getGradationExhibitionAddressImgName() {
+		return gradationExhibitionAddressImgName;
+	}
+
+	public void setGradationExhibitionAddressImgName(String gradationExhibitionAddressImgName) {
+		this.gradationExhibitionAddressImgName = gradationExhibitionAddressImgName;
+	}
+
+	public String getGradationExhibitionAddressImgPath() {
+		return gradationExhibitionAddressImgPath;
+	}
+
+	public void setGradationExhibitionAddressImgPath(String gradationExhibitionAddressImgPath) {
+		this.gradationExhibitionAddressImgPath = gradationExhibitionAddressImgPath;
 	}
 }

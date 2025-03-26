@@ -8,7 +8,7 @@ public class UserVO {
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String userId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -32,20 +32,20 @@ public class UserVO {
 	
 	public UserVO() {;}
 
-	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail, String userId,
-			String userPassword, String userPhone, String userNickName, String userAddress, String userPostalCode,
-			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
-			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
-			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId) {
+	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.userId = userId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
-		this.userNickname = userNickName;
+		this.userNickname = userNickname;
 		this.userAddress = userAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
@@ -68,14 +68,14 @@ public class UserVO {
 	@Override
 	public String toString() {
 		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userId=" + userId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickName=" + userNickname + ", userAddress=" + userAddress
-				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
-				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
-				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
-				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", universityId=" + universityId + "]";
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + "]";
 	}
 
 	@Override
@@ -135,12 +135,12 @@ public class UserVO {
 		this.userEmail = userEmail;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -159,12 +159,12 @@ public class UserVO {
 		this.userPhone = userPhone;
 	}
 
-	public String getUserNickName() {
+	public String getUserNickname() {
 		return userNickname;
 	}
 
-	public void setUserNickName(String userNickName) {
-		this.userNickname = userNickName;
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
 	}
 
 	public String getUserAddress() {
@@ -302,8 +302,4 @@ public class UserVO {
 	public void setUniversityId(Long universityId) {
 		this.universityId = universityId;
 	}
-	
-	
-
-   
 }

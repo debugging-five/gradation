@@ -8,28 +8,29 @@ public class MailVO {
 	private String mailTitle;
 	private String mailContents;
 	private Timestamp mailSendTime;
-	private int mailIsopen;
+	private int mailOpenOk;
 	private Long sendUserId;
-	private Long recieveUserId;
+	private Long receiveUserId;
 	
 	public MailVO() {;}
-	
-	public MailVO(Long id, String mailTitle, String mailContents, Timestamp mailSendTime, int mailIsopen,
-			Long sendUserId, Long recieveUserId) {
+
+	public MailVO(Long id, String mailTitle, String mailContents, Timestamp mailSendTime, int mailOpenOk,
+			Long sendUserId, Long receiveUserId) {
+		super();
 		this.id = id;
 		this.mailTitle = mailTitle;
 		this.mailContents = mailContents;
 		this.mailSendTime = mailSendTime;
-		this.mailIsopen = mailIsopen;
+		this.mailOpenOk = mailOpenOk;
 		this.sendUserId = sendUserId;
-		this.recieveUserId = recieveUserId;
+		this.receiveUserId = receiveUserId;
 	}
 
 	@Override
 	public String toString() {
 		return "MailVO [id=" + id + ", mailTitle=" + mailTitle + ", mailContents=" + mailContents + ", mailSendTime="
-				+ mailSendTime + ", mailIsopen=" + mailIsopen + ", sendUserId=" + sendUserId + ", recieveUserId="
-				+ recieveUserId + "]";
+				+ mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId=" + sendUserId + ", receiveUserId="
+				+ receiveUserId + "]";
 	}
 
 	@Override
@@ -81,12 +82,12 @@ public class MailVO {
 		this.mailSendTime = mailSendTime;
 	}
 
-	public int getMailIsopen() {
-		return mailIsopen;
+	public int getMailOpenOk() {
+		return mailOpenOk;
 	}
 
-	public void setMailIsopen(int mailIsopen) {
-		this.mailIsopen = mailIsopen;
+	public void setMailOpenOk(int mailOpenOk) {
+		this.mailOpenOk = mailOpenOk;
 	}
 
 	public Long getSendUserId() {
@@ -97,14 +98,11 @@ public class MailVO {
 		this.sendUserId = sendUserId;
 	}
 
-	public Long getRecieveUserId() {
-		return recieveUserId;
+	public Long getReceiveUserId() {
+		return receiveUserId;
 	}
 
-	public void setRecieveUserId(Long recieveUserId) {
-		this.recieveUserId = recieveUserId;
+	public void setReceiveUserId(Long receiveUserId) {
+		this.receiveUserId = receiveUserId;
 	}
-	
-	
-	
 }

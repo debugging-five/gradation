@@ -5,19 +5,22 @@ import java.util.Objects;
 public class FaqVO {
 	private Long id;
 	private String faqTitle;
-	private String FaqContent;
+	private String faqContent;
+	private String faqCategory;
 	
 	public FaqVO() {;}
-	
-	public FaqVO(Long id, String faqTitle, String faqContent) {
+
+	public FaqVO(Long id, String faqTitle, String faqContent, String faqCategory) {
 		this.id = id;
 		this.faqTitle = faqTitle;
-		FaqContent = faqContent;
+		this.faqContent = faqContent;
+		this.faqCategory = faqCategory;
 	}
 
 	@Override
 	public String toString() {
-		return "FaqVO [id=" + id + ", faqTitle=" + faqTitle + ", FaqContent=" + FaqContent + "]";
+		return "FaqVO [id=" + id + ", faqTitle=" + faqTitle + ", faqContent=" + faqContent + ", faqCategory="
+				+ faqCategory + "]";
 	}
 
 	@Override
@@ -54,10 +57,18 @@ public class FaqVO {
 	}
 
 	public String getFaqContent() {
-		return FaqContent;
+		return faqContent;
 	}
 
 	public void setFaqContent(String faqContent) {
-		FaqContent = faqContent;
+		this.faqContent = faqContent;
+	}
+
+	public String getFaqCategory() {
+		return faqCategory;
+	}
+
+	public void setFaqCategory(String faqCategory) {
+		this.faqCategory = faqCategory;
 	}
 }

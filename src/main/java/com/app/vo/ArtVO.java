@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class ArtVO {
 	private Long id;
+	private String artTitle;
 	private String artCategoty;
 	private String artMeterial;
 	private String artSize;
@@ -15,10 +16,11 @@ public class ArtVO {
 	private Long userId;
 	
 	public ArtVO() {;}
-	
-	public ArtVO(Long id, String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
-			Date artStartDate, Date artEndDate, Long userId) {
+
+	public ArtVO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
+			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId) {
 		this.id = id;
+		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
 		this.artMeterial = artMeterial;
 		this.artSize = artSize;
@@ -31,9 +33,9 @@ public class ArtVO {
 
 	@Override
 	public String toString() {
-		return "ArtVO [id=" + id + ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize="
-				+ artSize + ", artDescription=" + artDescription + ", artDate=" + artDate + ", artStartDate="
-				+ artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId + "]";
+		return "ArtVO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
+				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId + "]";
 	}
 
 	@Override
@@ -59,6 +61,14 @@ public class ArtVO {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getArtTitle() {
+		return artTitle;
+	}
+
+	public void setArtTitle(String artTitle) {
+		this.artTitle = artTitle;
 	}
 
 	public String getArtCategoty() {
@@ -124,5 +134,4 @@ public class ArtVO {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	
 }
