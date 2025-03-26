@@ -43,10 +43,8 @@
 							</div>
 						</div>
 					</div>
+					<div class="line"></div>
 					<div id="buyer-wrapper">
-						<div>
-							<img alt="user-icon" class="user-icon" src="../assets/images/mypage/user.png">
-						</div>
 						<div>
 							<div class="buyer-gap1">
 								<span>받는 사람</span>	

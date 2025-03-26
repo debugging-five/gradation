@@ -102,9 +102,9 @@ body {
 	background-color:  var(--color-primary);
 	display: flex;
 	align-items: center;
-	padding-left: 2px;
+	padding: 0 40px;
 	color: var(--color-gray100);
-	gap: 220px;
+	gap: 292px;
 }
 
 
@@ -113,17 +113,22 @@ body {
 	height: 30px;
 	display: flex;
 	align-items: center;
-	padding-left: 2px;
-	gap: 118px;	
+	padding: 0 40px;
+	gap: 172px;	
 }
 .address-now {
 	width: 100px;
+	text-align: center;
 }
 .delivery-type {
 	margin-left: 58px;
+	text-align: right;
 }
 
-
+.line{
+	border-left: solid 1px;
+	height: 120px;
+}
 
 .end-line {
 	width: 800;
