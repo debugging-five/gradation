@@ -155,13 +155,19 @@
 			</div>
 			<div id="exhibition-name-wrap">
 				<div class="exhibition-name-div">
+					<a href="../exhibition/our-exhibition-past-twenty-four.exhibition">
 					<span class="h7-text">2024 필립 파레노: 보이스</span>
+					</a>
 				</div>
 				<div class="exhibition-name-div">
+					<a href="../exhibition/our-exhibition-past-twenty-three.exhibition">
 					<span class="h5-text">2023 아트스펙트럼</span>
+					</a>
 				</div>
 				<div class="exhibition-name-div">
-					<span class="h7-text">2022 공예 지금</span>			
+					<a href="../exhibition/our-exhibition-past-twenty-two.exhibition">
+					<span class="h7-text">2022 공예 지금</span>		
+					</a>	
 				</div>
 			</div>
 			<div id="space-info-wrap">
