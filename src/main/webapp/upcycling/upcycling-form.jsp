@@ -27,7 +27,7 @@
 					<div class="registration-label">registration</div>
 				</div>
 			</div>
-			<form action="upcycling-form.upcycling" method="post"
+			<form action="upcycling-main.upcycling" method="post"
 				enctype="multipart/form-data" onsubmit="return validateForm();">
 				<div class="main-input-section">
 					<div class="upload-image-box">
