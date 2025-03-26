@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-click.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-comming-soon.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/display/display-form-click-comming-soon.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>작품 업로드</title>
 <%@ include file="../layout/header.jsp" %>
@@ -77,6 +77,19 @@
 						</div>		
 					</div>
 					
+					<div class="input-text">
+					    <label>제작 완료일<span class="essential">*</span></label>
+					    <span id="calendar-text" style="cursor: pointer;" onclick="showCalendar()">
+					        <img class="calendar-image" alt="calendar-icon" src="../assets/images/display/calendar.png">
+					        날짜를 선택해주세요.
+					    </span> 
+					    <!-- 실제로 사용되는 input 필드 -->
+					    <input type="date" id="completion-date" class="input-box" style="visibility: hidden; position: absolute;">
+					    
+					    <!-- UI로만 쓰이는 input -->
+					    <input type="date" id="date-input" class="input-box" style="display: none;" onchange="updateDate()">
+					</div>
+					
 				</form>
 			</div>
 	</div>
@@ -138,6 +151,6 @@
 <div class="footer-margin"></div>
 <%@ include file="../layout/footer.jsp" %>
 </body>
-<script type="text/javascript" src="../assets/js/display/display-form.js"></script>
-<script type="text/javascript" src="../assets/js/display/display-form-click.js"></script>
+<script type="text/javascript" src="../assets/js/display/display-form-comming-soon.js"></script>
+<script type="text/javascript" src="../assets/js/display/display-form-click-comming-soon.js"></script>
 </html>

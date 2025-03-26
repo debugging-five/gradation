@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+body {
+	background-color: #FBFCFC;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+}
+
+
+.display-text {
+	margin-top: 148px;
+	font-size: 30px;
+}
+
+/* *필수항목 */
+.essential {
+	color: #EE3333; 
+}
+
+.registration-text {
+	margin-top: 70px;
+	color: #EE3333;
+	border-bottom: solid 1px;
+	width : 1000px;
+	padding-bottom: 7px;
+}
+
+#upload {
+	margin-top: 50px;
+	display: flex;
+	gap: 120px;
+}
+
+/* 첨부파일 박스 */
+.attachment-box {
+    width: 480px;   /* 가로 480px */
+    height: 480px;  /* 세로 480px */
+    background-color: #D9D9D9; /* 박스 배경색 */
+    display: flex;
+ 	flex-direction: column;   /* 세로 방향으로 배치 */
+    justify-content: center;  /* 수평 중앙 정렬 */
+    align-items: center;      /* 수직 중앙 정렬 */
+    text-align: center; 
+    cursor: pointer; /* 마우스가 해당 영역 위에 올 때 손 모양으로 변경 */
+}
+
+
+.add-image {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 30px;
+}
+.add-text {
+	font-size: 18px;
+}
+
+
+
+#content {
+	margin-top: 15px;	
+}
+
+.input-text {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+}
+
+
+
+.input-box {
+	border: none; /* 보더 없애기 */
+    outline: none; /* 포커스 시 외곽선 없애기 (선택적) */
+    background-color: #FBFCFC;
+    font-size: 16px;
+}
+
+
+/* 작품분류 */
+.select-box {
+    width: 75px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; /* 기본적으로 선택 박스는 숨김 */
+}
+#category {
+	display: flex;
+}
+#category-text {
+    margin-left: 25px;
+    font-size: 16px;
+    color: var(--color-gray900);
+    margin-right: 10px;
+    cursor: pointer; /* 클릭 가능하게 설정 */
+}
+.down-image {
+    width: 16px;
+    height: 16px;
+    margin-left: -5px;
+    cursor: pointer; /* 클릭 가능하게 설정 */
+}
+
+/* 작품 규격 */
+.size-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.size-input input {
+  width: 35px;
+  text-align: center;
+  	border: none; /* 보더 없애기 */
+    outline: none; /* 포커스 시 외곽선 없애기 (선택적) */
+    background-color: #FBFCFC;
+    font-size: 16px;
+}
+
+
+#calendar-text {
+    margin-left: 5px;
+    font-size: 16px;
+    color: var(--color-gray900);
+    margin-right: 10px;
+    
+   
+}
+.calender-image {
+	width: 20px;
+	height: 20px;
+	margin-left: -5px;
+}
+#date-input {
+	margin-left: 5px;
+}
+
+
+
+
+/* 작품설명 제목 */
+.artist-info {
+	font-size: 18px;
+	font-weight: bold; 
+	display: block; 
+	margin: 20px 0 7px 0; 
+	
+}
+/* 작품설명 타이핑 */
+.info-typing {
+	width: 1000px; 
+	height: 200px; 
+	resize: none;
+	padding: 10px 0 0 10px;
+	font-size: 16px;
+}
+
+/* 취소, 등록 버튼 */
+#buttons {
+	margin: 0 0 0 724px;
+  	white-space: nowrap; /* 텍스트가 줄바꿈되지 않게 설정 */
+}
+.button-cancel {
+	margin: 60px 0 0 20px;
+	width: 120px;
+	height: 45px;
+	color: var(--color-primary);
+	border: solid 1.5px;
+	border-radius: 3px;
+	background-color: #FBFCFC;
+	font-size: 18px;
+	cursor: pointer;
+}
+.button-upload {
+	margin: 60px 0 0 20px;
+	width: 120px;
+	height: 45px;
+	color: #FBFCFC; 
+	border: solid 1.5px;
+	border-radius: 3px;
+	background-color: var(--color-primary);
+	font-size: 18px;
+	cursor: pointer;
+}
+
+
+
+.footer-margin {
+	margin-bottom: 200px;
+}
+

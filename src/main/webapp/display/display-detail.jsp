@@ -43,7 +43,8 @@
             <h3>작가명 ㅣ 박세현</h3>
         </div>
         <div class="likes"><!-- 좋아요 -->
-            <p>좋아요 999+개</p>
+            <span>좋아요 999+개</span>
+            <img class="grayquestion-icon" alt="grayquestion-icon" src="../assets/images/display/gray_question.png">
         </div>
         <div class="date"><!-- 제작년도 -->
             <p><strong style="margin-right: 57px">제작년도</strong> 2025</p>

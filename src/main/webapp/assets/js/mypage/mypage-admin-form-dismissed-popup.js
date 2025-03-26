@@ -1,3 +1,35 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // 팝업 열기
+    document.querySelector(".openPopupBtn").addEventListener("click", openPopup);
+
+    // 팝업 닫기
+    document.querySelectorAll(".closeBtn").forEach(button => {
+        button.addEventListener("click", function () {
+            closePopup("modalBg");
+        });
+    });
+
+    // 글자 수 체크 & 버튼 활성화
+    document.querySelector("#message").addEventListener("keyup", countCharacters);
+
+    // "전송" 버튼 클릭 시 실행되는 함수
+    document.querySelector(".sendBtn").addEventListener("click", sendMessage);
+
+    // "등록하시겠습니까?"에서 확인 버튼 클릭 시 실행되는 함수
+    document.querySelector(".send").addEventListener("click", confirmSubmission);
+
+    // "등록되었습니다!" 모달에서 확인 버튼 클릭 시 모든 팝업 닫기
+    document.querySelector("#popupOverlay .send").addEventListener("click", function () {
+        closePopup("modalBg");  // 기각 팝업 닫기
+        closePopup("popupOverlay");  // 등록 완료 팝업 닫기
+    });
+
+    // "취소" 버튼 클릭 시 실행되는 함수
+    document.querySelector(".cancel").addEventListener("click", function () {
+        closePopup("modalBg2");  // "등록하시겠습니까?" 팝업 닫기
+    });
+});
+
 // 팝업 열기
 function openPopup() {
     document.getElementById("modalBg").style.display = "flex";
@@ -14,7 +46,7 @@ function countCharacters() {
     let charCount = textArea.value.length;
     document.getElementById("charCount").textContent = charCount + " / 500";
 
-    let sendBtn = document.getElementById("sendBtn");
+    let sendBtn = document.querySelector(".sendBtn");
     if (charCount > 0 && charCount <= 500) {
         sendBtn.disabled = false;
         sendBtn.classList.add("active");
@@ -51,9 +83,3 @@ function confirmSubmission() {
     // "등록 완료!" 팝업 띄우기
     document.getElementById("popupOverlay").style.display = "flex";
 }
-
-// "등록되었습니다!" 모달에서 확인 버튼 클릭 시 모든 팝업 닫기
-document.querySelector("#popupOverlay .send").addEventListener("click", function () {
-    closePopup("modalBg");  // 기각 팝업 닫기
-    closePopup("popupOverlay");  // 등록 완료 팝업 닫기
-});
