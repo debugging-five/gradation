@@ -14,7 +14,9 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
 				<div id="kind-wrap">

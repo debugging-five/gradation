@@ -140,10 +140,10 @@ nav {
     position: relative;
 }
 
-.headerSearch {
-    height: 16px;
+.header-bell {
+    height: 24px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .sign-in-wrap {
