@@ -44,7 +44,7 @@
 				  	<img src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg" alt="painting-gradation-6">
 				</div>
 				<div class="slide-image">
-				  	<img src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg" alt="painting-gradation-7">
+				  	<img src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg" alt="painting-gradation-7">
 				</div>
 				<div class="slide-image">
 				  	<img src="../assets/images/display/art/painting/img-painting-illustration-cat.jpeg" alt="illustration-cat">
@@ -74,7 +74,7 @@
 				  	<img src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg" alt="painting-gradation-6">
 				</div>
 				<div class="slide-image">
-				  	<img src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg" alt="painting-gradation-7">
+				  	<img src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg" alt="painting-gradation-7">
 				</div>
 				<div class="slide-image">
 				  	<img src="../assets/images/display/art/painting/img-painting-illustration-cat.jpeg" alt="illustration-cat">
