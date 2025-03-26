@@ -10,22 +10,48 @@ public class UpcycleVO {
 	private Date upcycleDate;
 	private String upcycleAddress;
 	private Long userId;
-	private String UpcycleImgName;
-	private String UpcycleImgPath;
+	private String upcycleImgName;
+	private String upcycleImgPath;
+	private String upcycleSignificant;
 	
 	public UpcycleVO() {;}
 
 	public UpcycleVO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId, String upcycleImgName, String upcycleImgPath) {
-		super();
+			Long userId, String upcycleImgName, String upcycleImgPath, String upcycleSignificant) {
 		this.id = id;
 		this.upcycleCategory = upcycleCategory;
 		this.upcycleSize = upcycleSize;
 		this.upcycleDate = upcycleDate;
 		this.upcycleAddress = upcycleAddress;
 		this.userId = userId;
-		UpcycleImgName = upcycleImgName;
-		UpcycleImgPath = upcycleImgPath;
+		this.upcycleImgName = upcycleImgName;
+		this.upcycleImgPath = upcycleImgPath;
+		this.upcycleSignificant = upcycleSignificant;
+	}
+
+	@Override
+	public String toString() {
+		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
+				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
+				+ ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath + ", upcycleSignificant="
+				+ upcycleSignificant + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UpcycleVO other = (UpcycleVO) obj;
+		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -77,44 +103,26 @@ public class UpcycleVO {
 	}
 
 	public String getUpcycleImgName() {
-		return UpcycleImgName;
+		return upcycleImgName;
 	}
 
 	public void setUpcycleImgName(String upcycleImgName) {
-		UpcycleImgName = upcycleImgName;
+		this.upcycleImgName = upcycleImgName;
 	}
 
 	public String getUpcycleImgPath() {
-		return UpcycleImgPath;
+		return upcycleImgPath;
 	}
 
 	public void setUpcycleImgPath(String upcycleImgPath) {
-		UpcycleImgPath = upcycleImgPath;
+		this.upcycleImgPath = upcycleImgPath;
 	}
 
-	@Override
-	public String toString() {
-		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", UpcycleImgName=" + UpcycleImgName + ", UpcycleImgPath=" + UpcycleImgPath + "]";
+	public String getUpcycleSignificant() {
+		return upcycleSignificant;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
+	public void setUpcycleSignificant(String upcycleSignificant) {
+		this.upcycleSignificant = upcycleSignificant;
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleVO other = (UpcycleVO) obj;
-		return Objects.equals(id, other.id);
-	}
-
-	
 }

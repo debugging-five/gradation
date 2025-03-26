@@ -2,17 +2,16 @@ package com.app.vo;
 
 import java.util.Objects;
 
-public class UniversityExhibitionImageVO {
+public class UniversityExhibitionImgVO {
 	private Long id;
 	private String universityExhibitionImgName;
 	private String universityExhibitionImgPath;
 	private Long universityExhibitionId;
 	
-	public UniversityExhibitionImageVO() {;}
+	public UniversityExhibitionImgVO() {;}
 
-	public UniversityExhibitionImageVO(Long id, String universityExhibitionImgName, String universityExhibitionImgPath,
+	public UniversityExhibitionImgVO(Long id, String universityExhibitionImgName, String universityExhibitionImgPath,
 			Long universityExhibitionId) {
-		super();
 		this.id = id;
 		this.universityExhibitionImgName = universityExhibitionImgName;
 		this.universityExhibitionImgPath = universityExhibitionImgPath;
@@ -71,7 +70,7 @@ public class UniversityExhibitionImageVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UniversityExhibitionImageVO other = (UniversityExhibitionImageVO) obj;
+		UniversityExhibitionImgVO other = (UniversityExhibitionImgVO) obj;
 		return Objects.equals(id, other.id);
 	}
 	
