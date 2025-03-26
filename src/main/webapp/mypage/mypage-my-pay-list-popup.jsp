@@ -12,12 +12,12 @@
 
 
 <!-- 버튼 -->
-<button id="openModalBtn" class="open-btn">주문 상세 보기</button>
+<button class="openModalBtn open-btn">주문 상세</button>
 
 <!-- 모달 -->
-<div id="orderDetailModal" class="modal-overlay" style="display: none;">
+<div class="orderDetailModal modal-overlay" style="display: none;">
     <div class="modal">
-		<button class="close-btn" id="closeModalBtn">
+		<button class="close-btn closeModalBtn">
 		    <img class="close-icon" alt="close-icon" src="../assets/images/mypage/close.png">
 		</button>
 		<hr class="divider"> <!-- 닫기 버튼 아래 구분선 -->
@@ -68,26 +68,35 @@
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("orderDetailModal");
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
-
-    // 모달 열기
-    openModalBtn.addEventListener("click", function() {
-        modal.style.display = "flex";
+    document.querySelectorAll(".openModalBtn").forEach(button => {
+        button.addEventListener("click", function() {
+            let modal = document.querySelector(".orderDetailModal"); // 전체 문서에서 모달 찾기
+            if (modal) {
+                modal.style.display = "flex";
+            } else {
+                console.error("orderDetailModal을 찾을 수 없음!");
+            }
+        });
     });
 
-    // 모달 닫기
-    closeModalBtn.addEventListener("click", function() {
-        modal.style.display = "none";
+    document.querySelectorAll(".closeModalBtn").forEach(closeBtn => {
+        closeBtn.addEventListener("click", function() {
+            let modal = document.querySelector(".orderDetailModal"); // 전체 문서에서 모달 찾기
+            if (modal) {
+                modal.style.display = "none";
+            }
+        });
     });
 
     // ESC 키로 닫기
     window.addEventListener("keydown", function(e) {
         if (e.key === "Escape") {
-            modal.style.display = "none";
+            document.querySelectorAll(".orderDetailModal").forEach(modal => {
+                modal.style.display = "none";
+            });
         }
     });
 });
+
 </script>
 </html>

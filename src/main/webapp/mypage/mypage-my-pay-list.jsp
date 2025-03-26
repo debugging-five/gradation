@@ -54,14 +54,13 @@
     	        		</div>
 	    	        </div>
 	        	    <div class="buttons">
-	        	    	<a href="../auction/auction-payment-success.jsp"> 
-	        	    		<button class="button-1">주문 상세</button>
-	        	    	</a>
+						<%@ include file="mypage-my-pay-list-popup.jsp"%>	
 	        	    	<a href="../mypage/mypage-my-pay-delivery-info.jsp"> 
 	        	    		<button class="button-1">배송 조회</button>
 	        	    	</a>
 	        	    </div>
 	            </div>
+	           
 	            
 	            <div id="item-wrapper">
 		            <div class="photo-wrapper">
@@ -89,9 +88,7 @@
     	        		</div>
 	    	        </div>
 	        	    <div class="buttons">
-	        	    	<a href="../auction/auction-payment-success.jsp"> 
-	        	    		<button class="button-1">주문 상세</button>
-	        	    	</a>
+						<%@ include file="mypage-my-pay-list-popup.jsp"%>	
 	        	    	<a href="../mypage/mypage-my-pay-delivery-info.jsp"> 
 	        	    		<button class="button-1">배송 조회</button>
 	        	    	</a>
@@ -124,9 +121,7 @@
     	        		</div>
 	    	        </div>
 	        	    <div class="buttons">
-	        	    	<a href="../auction/auction-payment-success.jsp"> 
-	        	    		<button class="button-1">주문 상세</button>
-	        	    	</a>
+						<%@ include file="mypage-my-pay-list-popup.jsp"%>
 	        	    	<a href="../mypage/mypage-my-pay-delivery-info.jsp"> 
 	        	    		<button class="button-1">배송 조회</button>
 	        	    	</a>
@@ -141,7 +136,8 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+
 </html>
