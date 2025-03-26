@@ -77,7 +77,7 @@ body {
 .buyer-gap2{
     display: flex;  /* Flexbox 적용 */
 	gap: 51px;
-	margin-bottom: 12px;	
+	margin-bottom: 7px;	
 }
 .buyer-gap3{
     display: flex;  /* Flexbox 적용 */
@@ -104,7 +104,7 @@ body {
 	align-items: center;
 	padding: 0 40px;
 	color: var(--color-gray100);
-	gap: 292px;
+	gap: 270px;
 }
 
 
@@ -114,15 +114,14 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 0 40px;
-	gap: 172px;	
+	gap: 170px;	
 }
 .address-now {
 	width: 100px;
-	text-align: center;
 }
 .delivery-type {
 	margin-left: 58px;
-	text-align: right;
+	
 }
 
 .line{
