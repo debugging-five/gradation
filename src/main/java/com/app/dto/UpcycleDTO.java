@@ -5,11 +5,12 @@ import java.util.Objects;
 
 public class UpcycleDTO {
 //	TBL_USER
+	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -29,9 +30,11 @@ public class UpcycleDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	TBL_UPCYCLE
-	private Long id;
 	private String upcycleCategory;
 	private String upcycleSize;
 	private Date upcycleDate;
@@ -43,19 +46,20 @@ public class UpcycleDTO {
 	
 	public UpcycleDTO() {;}
 
-	public UpcycleDTO(String userImgName, String userImgPath, String userName, String userEmail, String uUserId,
-			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
-			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
-			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
-			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long id, String upcycleCategory,
-			String upcycleSize, Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName,
-			String upcycleImgPath, String upcycleSignificant) {
-		super();
+	public UpcycleDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String upcycleCategory, String upcycleSize,
+			Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName, String upcycleImgPath,
+			String upcycleSignificant) {
+		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
@@ -75,7 +79,9 @@ public class UpcycleDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.id = id;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.upcycleCategory = upcycleCategory;
 		this.upcycleSize = upcycleSize;
 		this.upcycleDate = upcycleDate;
@@ -84,6 +90,48 @@ public class UpcycleDTO {
 		this.upcycleImgName = upcycleImgName;
 		this.upcycleImgPath = upcycleImgPath;
 		this.upcycleSignificant = upcycleSignificant;
+	}
+
+	@Override
+	public String toString() {
+		return "UpcycleDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", upcycleCategory=" + upcycleCategory + ", upcycleSize="
+				+ upcycleSize + ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId="
+				+ userId + ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath
+				+ ", upcycleSignificant=" + upcycleSignificant + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UpcycleDTO other = (UpcycleDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getUserImgName() {
@@ -118,12 +166,12 @@ public class UpcycleDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -278,12 +326,28 @@ public class UpcycleDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getMajorId() {
+		return majorId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public String getUpcycleCategory() {
@@ -349,62 +413,5 @@ public class UpcycleDTO {
 	public void setUpcycleSignificant(String upcycleSignificant) {
 		this.upcycleSignificant = upcycleSignificant;
 	}
-
-	@Override
-	public String toString() {
-		return "UpcycleDTO [userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName
-				+ ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress
-				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
-				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
-				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
-				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath + ", upcycleSignificant="
-				+ upcycleSignificant + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, uUserId, upcycleAddress, upcycleCategory, upcycleDate, upcycleImgName, upcycleImgPath,
-				upcycleSignificant, upcycleSize, userAddress, userAdminOk, userAgreementOk, userBanOk, userBlog,
-				userEmail, userGoogle, userId, userImgName, userImgPath, userInstagram, userIntroduce, userKakao,
-				userMailOk, userName, userNaver, userNickname, userPassword, userPhone, userPostalCode, userRecode,
-				userSnsOk, userWriterOk, userYoutube);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleDTO other = (UpcycleDTO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(uUserId, other.uUserId)
-				&& Objects.equals(upcycleAddress, other.upcycleAddress)
-				&& Objects.equals(upcycleCategory, other.upcycleCategory)
-				&& Objects.equals(upcycleDate, other.upcycleDate)
-				&& Objects.equals(upcycleImgName, other.upcycleImgName)
-				&& Objects.equals(upcycleImgPath, other.upcycleImgPath)
-				&& Objects.equals(upcycleSignificant, other.upcycleSignificant)
-				&& Objects.equals(upcycleSize, other.upcycleSize) && Objects.equals(userAddress, other.userAddress)
-				&& userAdminOk == other.userAdminOk && userAgreementOk == other.userAgreementOk
-				&& userBanOk == other.userBanOk && Objects.equals(userBlog, other.userBlog)
-				&& Objects.equals(userEmail, other.userEmail) && Objects.equals(userGoogle, other.userGoogle)
-				&& Objects.equals(userId, other.userId) && Objects.equals(userImgName, other.userImgName)
-				&& Objects.equals(userImgPath, other.userImgPath) && Objects.equals(userInstagram, other.userInstagram)
-				&& Objects.equals(userIntroduce, other.userIntroduce) && Objects.equals(userKakao, other.userKakao)
-				&& userMailOk == other.userMailOk && Objects.equals(userName, other.userName)
-				&& Objects.equals(userNaver, other.userNaver) && Objects.equals(userNickname, other.userNickname)
-				&& Objects.equals(userPassword, other.userPassword) && Objects.equals(userPhone, other.userPhone)
-				&& Objects.equals(userPostalCode, other.userPostalCode) && Objects.equals(userRecode, other.userRecode)
-				&& userSnsOk == other.userSnsOk && userWriterOk == other.userWriterOk
-				&& Objects.equals(userYoutube, other.userYoutube);
-	}
-	
 	
 }
