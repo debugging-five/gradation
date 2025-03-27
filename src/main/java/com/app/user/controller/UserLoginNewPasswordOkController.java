@@ -21,7 +21,7 @@ public class UserLoginNewPasswordOkController implements Action {
 		UserVO userVO = new UserVO();
 		System.out.println(req.getParameter("userId"));
 		System.out.println(req.getParameter("userPassword"));
-		userVO.setUserId(req.getParameter("userId"));
+		userVO.setUserIdentification(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		
 		HttpSession session = req.getSession();

@@ -21,10 +21,10 @@ public class UserJoinOkController implements Action {
 		UserVO userVO = new UserVO();
 		HttpSession session = req.getSession();
 		
-		userVO.setUserId(req.getParameter("userId"));
+		userVO.setUserIdentification(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		userVO.setUserName(req.getParameter("userName"));
-		userVO.setUserNickName(req.getParameter("userNickname"));
+		userVO.setUserNickname(req.getParameter("userNickname"));
 		userVO.setUserPhone(req.getParameter("userPhone"));
 		userVO.setUserEmail(req.getParameter("userEmail"));
 		
