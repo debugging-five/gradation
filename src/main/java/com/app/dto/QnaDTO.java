@@ -1,11 +1,25 @@
 package com.app.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UpcycleDTO {
-//	TBL_USER
-	private Long id; // Pk
+public class QnaDTO {
+//	qnaVO
+	private Long id;
+	private String qnaTitle;
+	private String qnaContent;
+	private Timestamp qnaTime;
+	private String qnaImgName;
+	private String qnaImgPath;
+	private Long userId;
+	
+//	QnaAnswerVO
+	private String qnaAnswerTitle;
+	private String qnaAnswerContent;
+	private Timestamp qnaAnswerTime;
+	private Long qnaId;
+	
+//	UserVO
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -34,27 +48,27 @@ public class UpcycleDTO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-//	TBL_UPCYCLE
-	private String upcycleCategory;
-	private String upcycleSize;
-	private Date upcycleDate;
-	private String upcycleAddress;
-	private Long userId;
-	private String upcycleImgName;
-	private String upcycleImgPath;
-	private String upcycleSignificant;
-	
-	public UpcycleDTO() {;}
+	public QnaDTO() {;}
 
-	public UpcycleDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
-			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String upcycleCategory, String upcycleSize,
-			Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName, String upcycleImgPath,
-			String upcycleSignificant) {
+	public QnaDTO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
+			Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime, Long qnaId,
+			String userImgName, String userImgPath, String userName, String userEmail, String userIdentification,
+			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
+			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
+			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
+			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId, String userMajorImgName,
+			String userMajorImgPath) {
 		this.id = id;
+		this.qnaTitle = qnaTitle;
+		this.qnaContent = qnaContent;
+		this.qnaTime = qnaTime;
+		this.qnaImgName = qnaImgName;
+		this.qnaImgPath = qnaImgPath;
+		this.userId = userId;
+		this.qnaAnswerTitle = qnaAnswerTitle;
+		this.qnaAnswerContent = qnaAnswerContent;
+		this.qnaAnswerTime = qnaAnswerTime;
+		this.qnaId = qnaId;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -82,20 +96,15 @@ public class UpcycleDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.upcycleCategory = upcycleCategory;
-		this.upcycleSize = upcycleSize;
-		this.upcycleDate = upcycleDate;
-		this.upcycleAddress = upcycleAddress;
-		this.userId = userId;
-		this.upcycleImgName = upcycleImgName;
-		this.upcycleImgPath = upcycleImgPath;
-		this.upcycleSignificant = upcycleSignificant;
 	}
 
 	@Override
 	public String toString() {
-		return "UpcycleDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
+				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId
+				+ ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent + ", qnaAnswerTime="
+				+ qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
 				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
 				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
@@ -103,10 +112,7 @@ public class UpcycleDTO {
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
 				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", upcycleCategory=" + upcycleCategory + ", upcycleSize="
-				+ upcycleSize + ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId="
-				+ userId + ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath
-				+ ", upcycleSignificant=" + upcycleSignificant + "]";
+				+ ", userMajorImgPath=" + userMajorImgPath + "]";
 	}
 
 	@Override
@@ -122,7 +128,7 @@ public class UpcycleDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UpcycleDTO other = (UpcycleDTO) obj;
+		QnaDTO other = (QnaDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 
@@ -132,6 +138,86 @@ public class UpcycleDTO {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getQnaTitle() {
+		return qnaTitle;
+	}
+
+	public void setQnaTitle(String qnaTitle) {
+		this.qnaTitle = qnaTitle;
+	}
+
+	public String getQnaContent() {
+		return qnaContent;
+	}
+
+	public void setQnaContent(String qnaContent) {
+		this.qnaContent = qnaContent;
+	}
+
+	public Timestamp getQnaTime() {
+		return qnaTime;
+	}
+
+	public void setQnaTime(Timestamp qnaTime) {
+		this.qnaTime = qnaTime;
+	}
+
+	public String getQnaImgName() {
+		return qnaImgName;
+	}
+
+	public void setQnaImgName(String qnaImgName) {
+		this.qnaImgName = qnaImgName;
+	}
+
+	public String getQnaImgPath() {
+		return qnaImgPath;
+	}
+
+	public void setQnaImgPath(String qnaImgPath) {
+		this.qnaImgPath = qnaImgPath;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getQnaAnswerTitle() {
+		return qnaAnswerTitle;
+	}
+
+	public void setQnaAnswerTitle(String qnaAnswerTitle) {
+		this.qnaAnswerTitle = qnaAnswerTitle;
+	}
+
+	public String getQnaAnswerContent() {
+		return qnaAnswerContent;
+	}
+
+	public void setQnaAnswerContent(String qnaAnswerContent) {
+		this.qnaAnswerContent = qnaAnswerContent;
+	}
+
+	public Timestamp getQnaAnswerTime() {
+		return qnaAnswerTime;
+	}
+
+	public void setQnaAnswerTime(Timestamp qnaAnswerTime) {
+		this.qnaAnswerTime = qnaAnswerTime;
+	}
+
+	public Long getQnaId() {
+		return qnaId;
+	}
+
+	public void setQnaId(Long qnaId) {
+		this.qnaId = qnaId;
 	}
 
 	public String getUserImgName() {
@@ -348,70 +434,6 @@ public class UpcycleDTO {
 
 	public void setUserMajorImgPath(String userMajorImgPath) {
 		this.userMajorImgPath = userMajorImgPath;
-	}
-
-	public String getUpcycleCategory() {
-		return upcycleCategory;
-	}
-
-	public void setUpcycleCategory(String upcycleCategory) {
-		this.upcycleCategory = upcycleCategory;
-	}
-
-	public String getUpcycleSize() {
-		return upcycleSize;
-	}
-
-	public void setUpcycleSize(String upcycleSize) {
-		this.upcycleSize = upcycleSize;
-	}
-
-	public Date getUpcycleDate() {
-		return upcycleDate;
-	}
-
-	public void setUpcycleDate(Date upcycleDate) {
-		this.upcycleDate = upcycleDate;
-	}
-
-	public String getUpcycleAddress() {
-		return upcycleAddress;
-	}
-
-	public void setUpcycleAddress(String upcycleAddress) {
-		this.upcycleAddress = upcycleAddress;
-	}
-
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUpcycleImgName() {
-		return upcycleImgName;
-	}
-
-	public void setUpcycleImgName(String upcycleImgName) {
-		this.upcycleImgName = upcycleImgName;
-	}
-
-	public String getUpcycleImgPath() {
-		return upcycleImgPath;
-	}
-
-	public void setUpcycleImgPath(String upcycleImgPath) {
-		this.upcycleImgPath = upcycleImgPath;
-	}
-
-	public String getUpcycleSignificant() {
-		return upcycleSignificant;
-	}
-
-	public void setUpcycleSignificant(String upcycleSignificant) {
-		this.upcycleSignificant = upcycleSignificant;
 	}
 	
 }
