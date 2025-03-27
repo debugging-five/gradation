@@ -52,8 +52,8 @@
 					<div class="warning-area">
 					</div>
 					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input type="text" value="${userAddress}"></div>
-						<button class="input-button">주소 검색</button>
+						<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" value="${userAddress}" readonly/></div>
+						<button class="input-button" onclick="execDaumPostcode()" >주소 검색</button>
 					</div>
 					<div class="warning-area">
 					</div>
@@ -72,5 +72,6 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript" src="../assets/js/mypage/mypage-modify.js"></script>
 </html>

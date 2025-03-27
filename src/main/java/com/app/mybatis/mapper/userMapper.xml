@@ -3,12 +3,12 @@
 
 <mapper namespace="user">
 	<insert id="insert" parameterType="userVO">
-		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_ID, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK)
+		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK)
 		VALUES (
 			SEQ_USER.NEXTVAL,
 			#{userName},
 			#{userEmail},
-			#{userId},
+			#{userIdentification},
 			#{userPassword},
 			#{userPhone},
 			#{userNickname},
@@ -21,7 +21,7 @@
 	<select id="idCheck" parameterType="String" resultType="int">
 		SELECT COUNT(ID) 
   		FROM TBL_USER
-		WHERE USER_ID = #{userId}
+		WHERE USER_IDENTIFICATION = #{userIdentification}
 	</select>
 
 	<select id="emailCheck" parameterType="String" resultType="int">
@@ -31,7 +31,7 @@
 	</select>
 	
 	<select id="selectIdByEmailAndName" parameterType="UserVO" resultType="String">
-		SELECT USER_ID
+		SELECT USER_IDENTIFICATION
 		FROM TBL_USER
 		WHERE USER_EMAIL = #{userEmail} AND USER_NAME = #{userName}
 	</select>
@@ -39,27 +39,27 @@
 	<select id="selectByIdAndEmailAndName" parameterType="UserVO" resultType="int">
 		SELECT COUNT(ID)
 		FROM TBL_USER
-		WHERE USER_ID = #{userId} AND USER_EMAIL = #{userEmail} AND USER_NAME = #{userName}
+		WHERE USER_IDENTIFICATION = #{userIdentification} AND USER_EMAIL = #{userEmail} AND USER_NAME = #{userName}
 	</select>
 	
 	<select id="banCheck" parameterType="UserVO" resultType="int">
 		SELECT USER_BAN_OK
 		FROM TBL_USER
-		WHERE USER_ID = #{userId}
+		WHERE USER_IDENTIFICATION = #{userIdentification}
 		AND USER_PASSWORD = #{userPassword}
 	</select>
 	
 	<select id="login" parameterType="UserVO" resultType="String">
 		SELECT USER_EMAIL
 		FROM TBL_USER
-		WHERE USER_ID = #{userId}
+		WHERE USER_IDENTIFICATION = #{userIdentification}
 		AND USER_PASSWORD = #{userPassword}
 	</select>
 	
 	<update id="changePassword" parameterType="UserVO">
 		UPDATE TBL_USER 
 		SET USER_PASSWORD = #{userPassword}
-		WHERE USER_ID = #{userId}
+		WHERE USER_IDENTIFICATION = #{userIdentification}
 	</update>
 	
 </mapper>
