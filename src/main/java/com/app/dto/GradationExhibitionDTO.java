@@ -62,6 +62,9 @@ public class GradationExhibitionDTO {
 	private int userAdminOk;
 	private int userBanOk;
 	private Long universityId; // 학교 테이블의 id 참조값
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 	public GradationExhibitionDTO() {;}
 
@@ -75,7 +78,9 @@ public class GradationExhibitionDTO {
 			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
 			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
 			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
-			int userWriterOk, int userAdminOk, int userBanOk, Long universityId) {
+			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, Long majorId, String userMajorImgName,
+			String userMajorImgPath) {
+		this.id = id;
 		this.gradationExhibitionTitle = gradationExhibitionTitle;
 		this.gradationExhibitionCount = gradationExhibitionCount;
 		this.gradationExhibitionTime = gradationExhibitionTime;
@@ -123,6 +128,9 @@ public class GradationExhibitionDTO {
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
 		this.universityId = universityId;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	@Override
@@ -146,7 +154,8 @@ public class GradationExhibitionDTO {
 				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + "]";
+				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", majorId=" + majorId
+				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + "]";
 	}
 
 	@Override
@@ -548,6 +557,30 @@ public class GradationExhibitionDTO {
 
 	public void setUniversityId(Long universityId) {
 		this.universityId = universityId;
+	}
+
+	public Long getMajorId() {
+		return majorId;
+	}
+
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 }
