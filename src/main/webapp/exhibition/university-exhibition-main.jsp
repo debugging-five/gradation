@@ -251,6 +251,34 @@
 	
 </div>
 
+<section id="sliderType04">
+    <div class="slider__wrap">
+        <div class="slider__img">
+            <div class="slider__inner">
+                <div class="slider" role="group" aria-label="1/5">
+                    <img src="../assets/img/Mountian_bg01.jpg" alt="이미지6">
+                </div>
+                <div class="slider" role="group" aria-label="2/5">
+                    <img src="../assets/img/Mountian_bg02.jpg" alt="이미지7">
+                </div>
+                <div class="slider" role="group" aria-label="3/5">
+                    <img src="../assets/img/Mountian_bg03.jpg" alt="이미지8">
+                </div>
+                <div class="slider" role="group" aria-label="4/5">
+                    <img src="../assets/img/Mountian_bg04.jpg" alt="이미지9">
+                </div>
+                <div class="slider" role="group" aria-label="5/5">
+                    <img src="../assets/img/Mountian_bg05.jpg" alt="이미지10">
+                </div>
+            </div>
+        </div>
+        <div class="slider__btn">
+            <a href="#" class="prev" role="button" aria-label="왼쪽 이미지">prev</a>
+            <a href="#" class="next" role="button" aria-label="오른쪽 이미지">next</a>
+        </div>
+    </div>
+</section>
+
 <%@ include file="../layout/footer.jsp" %>
 </form>
 

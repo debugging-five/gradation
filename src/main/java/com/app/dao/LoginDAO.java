@@ -4,11 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
 
-public class UniversityLikeDAO {
+public class LoginDAO {
 	public SqlSession sqlSession;
 	
- 	public UniversityLikeDAO() {
+ 	public LoginDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
-
 }

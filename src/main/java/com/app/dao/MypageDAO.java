@@ -4,11 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
 
-public class BanDAO {
+public class MypageDAO {
 	public SqlSession sqlSession;
 	
- 	public BanDAO() {
+ 	public MypageDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
-
 }

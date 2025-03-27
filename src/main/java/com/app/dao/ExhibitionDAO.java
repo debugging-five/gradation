@@ -4,11 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
 
-public class ArtLikeDAO {
+public class ExhibitionDAO {
 	public SqlSession sqlSession;
 	
- 	public ArtLikeDAO() {
+ 	public ExhibitionDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
-
 }

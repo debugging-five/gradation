@@ -4,11 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
 
-public class GradationExhibitionDAO {
+public class UpcyclingDAO {
 	public SqlSession sqlSession;
 	
- 	public GradationExhibitionDAO() {
+ 	public UpcyclingDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
-
 }

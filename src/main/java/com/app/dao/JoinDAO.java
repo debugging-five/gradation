@@ -4,11 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
 
-public class AuctionBiddingDAO {
+public class JoinDAO {
 	public SqlSession sqlSession;
 	
- 	public AuctionBiddingDAO() {
+ 	public JoinDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
-
 }
