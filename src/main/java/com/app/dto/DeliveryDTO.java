@@ -4,25 +4,26 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Objects;
 
-public class AuctionDTO {
+public class DeliveryDTO {
+
+//	TBL_ART
+	private Long id;
+	private String artTitle;
+	private String artCategoty;
+	private String artMeterial;
+	private String artSize;
+	private String artDescription;
+	private Date artDate;
+	private Date artStartDate;
+	private Date artEndDate;
+	private Long userId;
 	
-//	AuctionVO
-	private Long id; // pk
-	private Long artId; // 작품 테이블 id 참조키
-	private Long userId; // 유저 테이블 id 참조키
-	private Date auctionStartDate; // 경매 시작 시간
-	private Long auctionStartPrice; // 시작가
-	private Long auctionEstimatePrice; // 추정가
-	private int auctionAttracted; // 본 필드는 경매낙찰여부 입니다. 0유찰 1낙찰
-	private Long auctionBidPrice; // 낙찰가
-	private Date auctionBidDate; // 경매 종료일
+//	TBL_ART_IMG
+	private String artImgName;
+	private String artImgPath;
+	private Long artId;
 	
-//	AuctionBiddingVO
-	private int auctionBiddingPrice;
-	private boolean auctionBiddingAutoOk;
-	private Timestamp auctionBiddingTime;
-	
-//	UserVO
+//	TBL_USER
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -47,12 +48,11 @@ public class AuctionDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId; // 학교 테이블의 id 참조값
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-//	DeliveryVO
+//	TBL_DELIVERY
 	private String deliveryAddress;
 	private String deliveryDetailAddress;
 	private String deliveryPostalCode;
@@ -62,53 +62,39 @@ public class AuctionDTO {
 	private String deliveryPhone;
 	private Long paymentId;
 	
-//	ArtVO
-	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
-	private String artSize;
-	private String artDescription;
-	private Date artDate;
-	private Date artStartDate;
-	private Date artEndDate;
-
-//	PaymentVO
+//	TBL_PAYMENT
+	private Long auctionId;
 	private String paymentMethod;
 	private int paymentAmount;
 	private Timestamp paymentDate;
 	private String paymentCode;
 	
-//	ArtImgVO
-	private String artImgName;
-	private String artImgPath;
-	
-	public AuctionDTO() {;}
+	public DeliveryDTO() {;}
 
-	public AuctionDTO(Long id, Long artId, Long userId, Date auctionStartDate, Long auctionStartPrice,
-			Long auctionEstimatePrice, int auctionAttracted, Long auctionBidPrice, Date auctionBidDate,
-			int auctionBiddingPrice, boolean auctionBiddingAutoOk, Timestamp auctionBiddingTime, String userImgName,
-			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
-			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
-			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
-			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
-			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, Long majorId, String userMajorImgName,
-			String userMajorImgPath, String deliveryAddress, String deliveryDetailAddress, String deliveryPostalCode,
-			String deliveryState, String deliveryMessage, String deliveryReceiver, String deliveryPhone, Long paymentId,
-			String artTitle, String artCategoty, String artMeterial, String artSize, String artDescription,
-			Date artDate, Date artStartDate, Date artEndDate, String paymentMethod, int paymentAmount,
-			Timestamp paymentDate, String paymentCode, String artImgName, String artImgPath) {
+	public DeliveryDTO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
+			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, String artImgName,
+			String artImgPath, Long artId, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String deliveryAddress, String deliveryDetailAddress,
+			String deliveryPostalCode, String deliveryState, String deliveryMessage, String deliveryReceiver,
+			String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod, int paymentAmount,
+			Timestamp paymentDate, String paymentCode) {
 		this.id = id;
-		this.artId = artId;
+		this.artTitle = artTitle;
+		this.artCategoty = artCategoty;
+		this.artMeterial = artMeterial;
+		this.artSize = artSize;
+		this.artDescription = artDescription;
+		this.artDate = artDate;
+		this.artStartDate = artStartDate;
+		this.artEndDate = artEndDate;
 		this.userId = userId;
-		this.auctionStartDate = auctionStartDate;
-		this.auctionStartPrice = auctionStartPrice;
-		this.auctionEstimatePrice = auctionEstimatePrice;
-		this.auctionAttracted = auctionAttracted;
-		this.auctionBidPrice = auctionBidPrice;
-		this.auctionBidDate = auctionBidDate;
-		this.auctionBiddingPrice = auctionBiddingPrice;
-		this.auctionBiddingAutoOk = auctionBiddingAutoOk;
-		this.auctionBiddingTime = auctionBiddingTime;
+		this.artImgName = artImgName;
+		this.artImgPath = artImgPath;
+		this.artId = artId;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -133,7 +119,6 @@ public class AuctionDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.universityId = universityId;
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
@@ -145,48 +130,34 @@ public class AuctionDTO {
 		this.deliveryReceiver = deliveryReceiver;
 		this.deliveryPhone = deliveryPhone;
 		this.paymentId = paymentId;
-		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
-		this.artSize = artSize;
-		this.artDescription = artDescription;
-		this.artDate = artDate;
-		this.artStartDate = artStartDate;
-		this.artEndDate = artEndDate;
+		this.auctionId = auctionId;
 		this.paymentMethod = paymentMethod;
 		this.paymentAmount = paymentAmount;
 		this.paymentDate = paymentDate;
 		this.paymentCode = paymentCode;
-		this.artImgName = artImgName;
-		this.artImgPath = artImgPath;
 	}
 
 	@Override
 	public String toString() {
-		return "AuctionDTO [id=" + id + ", artId=" + artId + ", userId=" + userId + ", auctionStartDate="
-				+ auctionStartDate + ", auctionStartPrice=" + auctionStartPrice + ", auctionEstimatePrice="
-				+ auctionEstimatePrice + ", auctionAttracted=" + auctionAttracted + ", auctionBidPrice="
-				+ auctionBidPrice + ", auctionBidDate=" + auctionBidDate + ", auctionBiddingPrice="
-				+ auctionBiddingPrice + ", auctionBiddingAutoOk=" + auctionBiddingAutoOk + ", auctionBiddingTime="
-				+ auctionBiddingTime + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", majorId=" + majorId
-				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath
-				+ ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress=" + deliveryDetailAddress
-				+ ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState=" + deliveryState
-				+ ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver + ", deliveryPhone="
-				+ deliveryPhone + ", paymentId=" + paymentId + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
-				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
-				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
+		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
+				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
+				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgName="
+				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
+				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="
+				+ deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState="
+				+ deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver
+				+ ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId=" + auctionId
 				+ ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
-				+ paymentDate + ", paymentCode=" + paymentCode + ", artImgName=" + artImgName + ", artImgPath="
-				+ artImgPath + "]";
+				+ paymentDate + ", paymentCode=" + paymentCode + "]";
 	}
 
 	@Override
@@ -202,7 +173,7 @@ public class AuctionDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AuctionDTO other = (AuctionDTO) obj;
+		DeliveryDTO other = (DeliveryDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 
@@ -214,12 +185,68 @@ public class AuctionDTO {
 		this.id = id;
 	}
 
-	public Long getArtId() {
-		return artId;
+	public String getArtTitle() {
+		return artTitle;
 	}
 
-	public void setArtId(Long artId) {
-		this.artId = artId;
+	public void setArtTitle(String artTitle) {
+		this.artTitle = artTitle;
+	}
+
+	public String getArtCategoty() {
+		return artCategoty;
+	}
+
+	public void setArtCategoty(String artCategoty) {
+		this.artCategoty = artCategoty;
+	}
+
+	public String getArtMeterial() {
+		return artMeterial;
+	}
+
+	public void setArtMeterial(String artMeterial) {
+		this.artMeterial = artMeterial;
+	}
+
+	public String getArtSize() {
+		return artSize;
+	}
+
+	public void setArtSize(String artSize) {
+		this.artSize = artSize;
+	}
+
+	public String getArtDescription() {
+		return artDescription;
+	}
+
+	public void setArtDescription(String artDescription) {
+		this.artDescription = artDescription;
+	}
+
+	public Date getArtDate() {
+		return artDate;
+	}
+
+	public void setArtDate(Date artDate) {
+		this.artDate = artDate;
+	}
+
+	public Date getArtStartDate() {
+		return artStartDate;
+	}
+
+	public void setArtStartDate(Date artStartDate) {
+		this.artStartDate = artStartDate;
+	}
+
+	public Date getArtEndDate() {
+		return artEndDate;
+	}
+
+	public void setArtEndDate(Date artEndDate) {
+		this.artEndDate = artEndDate;
 	}
 
 	public Long getUserId() {
@@ -230,76 +257,28 @@ public class AuctionDTO {
 		this.userId = userId;
 	}
 
-	public Date getAuctionStartDate() {
-		return auctionStartDate;
+	public String getArtImgName() {
+		return artImgName;
 	}
 
-	public void setAuctionStartDate(Date auctionStartDate) {
-		this.auctionStartDate = auctionStartDate;
+	public void setArtImgName(String artImgName) {
+		this.artImgName = artImgName;
 	}
 
-	public Long getAuctionStartPrice() {
-		return auctionStartPrice;
+	public String getArtImgPath() {
+		return artImgPath;
 	}
 
-	public void setAuctionStartPrice(Long auctionStartPrice) {
-		this.auctionStartPrice = auctionStartPrice;
+	public void setArtImgPath(String artImgPath) {
+		this.artImgPath = artImgPath;
 	}
 
-	public Long getAuctionEstimatePrice() {
-		return auctionEstimatePrice;
+	public Long getArtId() {
+		return artId;
 	}
 
-	public void setAuctionEstimatePrice(Long auctionEstimatePrice) {
-		this.auctionEstimatePrice = auctionEstimatePrice;
-	}
-
-	public int getAuctionAttracted() {
-		return auctionAttracted;
-	}
-
-	public void setAuctionAttracted(int auctionAttracted) {
-		this.auctionAttracted = auctionAttracted;
-	}
-
-	public Long getAuctionBidPrice() {
-		return auctionBidPrice;
-	}
-
-	public void setAuctionBidPrice(Long auctionBidPrice) {
-		this.auctionBidPrice = auctionBidPrice;
-	}
-
-	public Date getAuctionBidDate() {
-		return auctionBidDate;
-	}
-
-	public void setAuctionBidDate(Date auctionBidDate) {
-		this.auctionBidDate = auctionBidDate;
-	}
-
-	public int getAuctionBiddingPrice() {
-		return auctionBiddingPrice;
-	}
-
-	public void setAuctionBiddingPrice(int auctionBiddingPrice) {
-		this.auctionBiddingPrice = auctionBiddingPrice;
-	}
-
-	public boolean isAuctionBiddingAutoOk() {
-		return auctionBiddingAutoOk;
-	}
-
-	public void setAuctionBiddingAutoOk(boolean auctionBiddingAutoOk) {
-		this.auctionBiddingAutoOk = auctionBiddingAutoOk;
-	}
-
-	public Timestamp getAuctionBiddingTime() {
-		return auctionBiddingTime;
-	}
-
-	public void setAuctionBiddingTime(Timestamp auctionBiddingTime) {
-		this.auctionBiddingTime = auctionBiddingTime;
+	public void setArtId(Long artId) {
+		this.artId = artId;
 	}
 
 	public String getUserImgName() {
@@ -494,14 +473,6 @@ public class AuctionDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
-	}
-
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
-	}
-
 	public Long getMajorId() {
 		return majorId;
 	}
@@ -590,68 +561,12 @@ public class AuctionDTO {
 		this.paymentId = paymentId;
 	}
 
-	public String getArtTitle() {
-		return artTitle;
+	public Long getAuctionId() {
+		return auctionId;
 	}
 
-	public void setArtTitle(String artTitle) {
-		this.artTitle = artTitle;
-	}
-
-	public String getArtCategoty() {
-		return artCategoty;
-	}
-
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
-	}
-
-	public String getArtMeterial() {
-		return artMeterial;
-	}
-
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
-	}
-
-	public String getArtSize() {
-		return artSize;
-	}
-
-	public void setArtSize(String artSize) {
-		this.artSize = artSize;
-	}
-
-	public String getArtDescription() {
-		return artDescription;
-	}
-
-	public void setArtDescription(String artDescription) {
-		this.artDescription = artDescription;
-	}
-
-	public Date getArtDate() {
-		return artDate;
-	}
-
-	public void setArtDate(Date artDate) {
-		this.artDate = artDate;
-	}
-
-	public Date getArtStartDate() {
-		return artStartDate;
-	}
-
-	public void setArtStartDate(Date artStartDate) {
-		this.artStartDate = artStartDate;
-	}
-
-	public Date getArtEndDate() {
-		return artEndDate;
-	}
-
-	public void setArtEndDate(Date artEndDate) {
-		this.artEndDate = artEndDate;
+	public void setAuctionId(Long auctionId) {
+		this.auctionId = auctionId;
 	}
 
 	public String getPaymentMethod() {
@@ -684,22 +599,6 @@ public class AuctionDTO {
 
 	public void setPaymentCode(String paymentCode) {
 		this.paymentCode = paymentCode;
-	}
-
-	public String getArtImgName() {
-		return artImgName;
-	}
-
-	public void setArtImgName(String artImgName) {
-		this.artImgName = artImgName;
-	}
-
-	public String getArtImgPath() {
-		return artImgPath;
-	}
-
-	public void setArtImgPath(String artImgPath) {
-		this.artImgPath = artImgPath;
 	}
 	
 }

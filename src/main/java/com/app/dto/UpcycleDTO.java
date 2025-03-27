@@ -3,6 +3,7 @@ package com.app.dto;
 import java.sql.Date;
 import java.util.Objects;
 
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 public class UpcyclingDTO {
 //	TBL_UPCYCLE_APPLICATION
 	private Long id;
@@ -16,11 +17,16 @@ public class UpcyclingDTO {
 	private String upcycleSifnificant; 
 	
 // 	TBL_USER
+=======
+public class UpcycleDTO {
+//	TBL_USER
+	private Long id; // Pk
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -40,7 +46,11 @@ public class UpcyclingDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 //  TBL_UNIVERSITY
 	private Long unibersityId;
     private String universityName;
@@ -68,11 +78,34 @@ public class UpcyclingDTO {
 		this.upcycleImgName = upcycleImgName;
 		this.upcycleImgPath = upcycleImgPath;
 		this.upcycleSifnificant = upcycleSifnificant;
+=======
+//	TBL_UPCYCLE
+	private String upcycleCategory;
+	private String upcycleSize;
+	private Date upcycleDate;
+	private String upcycleAddress;
+	private Long userId;
+	private String upcycleImgName;
+	private String upcycleImgPath;
+	private String upcycleSignificant;
+	
+	public UpcycleDTO() {;}
+
+	public UpcycleDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String upcycleCategory, String upcycleSize,
+			Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName, String upcycleImgPath,
+			String upcycleSignificant) {
+		this.id = id;
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
@@ -92,11 +125,59 @@ public class UpcyclingDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 		this.unibersityId = unibersityId;
 		this.universityName = universityName;
 		this.universityLocation = universityLocation;
 		this.universityLogoImgName = universityLogoImgName;
 		this.universityLogoImgPath = universityLogoImgPath;
+=======
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
+		this.upcycleCategory = upcycleCategory;
+		this.upcycleSize = upcycleSize;
+		this.upcycleDate = upcycleDate;
+		this.upcycleAddress = upcycleAddress;
+		this.userId = userId;
+		this.upcycleImgName = upcycleImgName;
+		this.upcycleImgPath = upcycleImgPath;
+		this.upcycleSignificant = upcycleSignificant;
+	}
+
+	@Override
+	public String toString() {
+		return "UpcycleDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", upcycleCategory=" + upcycleCategory + ", upcycleSize="
+				+ upcycleSize + ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId="
+				+ userId + ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath
+				+ ", upcycleSignificant=" + upcycleSignificant + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UpcycleDTO other = (UpcycleDTO) obj;
+		return Objects.equals(id, other.id);
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 	}
 
 	public Long getId() {
@@ -107,6 +188,7 @@ public class UpcyclingDTO {
 		this.id = id;
 	}
 
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 	public String getUpcycleCategory() {
 		return upcycleCategory;
 	}
@@ -171,6 +253,8 @@ public class UpcyclingDTO {
 		this.upcycleSifnificant = upcycleSifnificant;
 	}
 
+=======
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 	public String getUserImgName() {
 		return userImgName;
 	}
@@ -203,12 +287,12 @@ public class UpcyclingDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -363,6 +447,7 @@ public class UpcyclingDTO {
 		this.userBanOk = userBanOk;
 	}
 
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 	public Long getUnibersityId() {
 		return unibersityId;
 	}
@@ -373,36 +458,41 @@ public class UpcyclingDTO {
 
 	public String getUniversityName() {
 		return universityName;
+=======
+	public Long getMajorId() {
+		return majorId;
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 	}
 
-	public void setUniversityName(String universityName) {
-		this.universityName = universityName;
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
 	}
 
-	public String getUniversityLocation() {
-		return universityLocation;
+	public String getUserMajorImgName() {
+		return userMajorImgName;
 	}
 
-	public void setUniversityLocation(String universityLocation) {
-		this.universityLocation = universityLocation;
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
 	}
 
-	public String getUniversityLogoImgName() {
-		return universityLogoImgName;
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
 	}
 
-	public void setUniversityLogoImgName(String universityLogoImgName) {
-		this.universityLogoImgName = universityLogoImgName;
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public String getUniversityLogoImgPath() {
-		return universityLogoImgPath;
+	public String getUpcycleCategory() {
+		return upcycleCategory;
 	}
 
-	public void setUniversityLogoImgPath(String universityLogoImgPath) {
-		this.universityLogoImgPath = universityLogoImgPath;
+	public void setUpcycleCategory(String upcycleCategory) {
+		this.upcycleCategory = upcycleCategory;
 	}
 
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 	@Override
 	public String toString() {
 		return "UpcyclingDTO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
@@ -419,25 +509,69 @@ public class UpcyclingDTO {
 				+ ", unibersityId=" + unibersityId + ", universityName=" + universityName + ", universityLocation="
 				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
 				+ universityLogoImgPath + "]";
+=======
+	public String getUpcycleSize() {
+		return upcycleSize;
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
+	public void setUpcycleSize(String upcycleSize) {
+		this.upcycleSize = upcycleSize;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcyclingDTO other = (UpcyclingDTO) obj;
-		return Objects.equals(id, other.id);
+	public Date getUpcycleDate() {
+		return upcycleDate;
 	}
+
+	public void setUpcycleDate(Date upcycleDate) {
+		this.upcycleDate = upcycleDate;
+	}
+
+	public String getUpcycleAddress() {
+		return upcycleAddress;
+	}
+
+	public void setUpcycleAddress(String upcycleAddress) {
+		this.upcycleAddress = upcycleAddress;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUpcycleImgName() {
+		return upcycleImgName;
+	}
+
+	public void setUpcycleImgName(String upcycleImgName) {
+		this.upcycleImgName = upcycleImgName;
+	}
+
+	public String getUpcycleImgPath() {
+		return upcycleImgPath;
+	}
+
+	public void setUpcycleImgPath(String upcycleImgPath) {
+		this.upcycleImgPath = upcycleImgPath;
+	}
+
+	public String getUpcycleSignificant() {
+		return upcycleSignificant;
+	}
+
+	public void setUpcycleSignificant(String upcycleSignificant) {
+		this.upcycleSignificant = upcycleSignificant;
+	}
+<<<<<<< HEAD:src/main/java/com/app/dto/UpcyclingDTO.java
 
     
     
 	}
+=======
+	
+}
+>>>>>>> master:src/main/java/com/app/dto/UpcycleDTO.java

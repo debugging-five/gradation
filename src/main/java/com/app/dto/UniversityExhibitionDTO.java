@@ -1,8 +1,10 @@
-package com.app.vo;
+package com.app.dto;
 
+import java.sql.Date;
 import java.util.Objects;
 
-public class UserVO {
+public class UniversityExhibitionDTO {
+//	user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -32,14 +34,36 @@ public class UserVO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-	public UserVO() {;}
+//	university
+	private String universityName;
+	private String universityLocation;
+	private String universityLogoImgName;
+	private String universityLogoImgPath;
+	private String universityHomepage;
+	
+//	UniversityExhibition
+	private Date universityExhibitionDate;
+	private String universityExhibitionState;
+	private String universityExhibitionTitle;
+	private String universityExhibitionLocation;
+	
+//	UniversityExhibitionImg
+	private String universityExhibitionImgName;
+	private String universityExhibitionImgPath;
+	private Long universityExhibitionId;
+	
+	public UniversityExhibitionDTO() {;}
 
-	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public UniversityExhibitionDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath) {
+			String userMajorImgName, String userMajorImgPath, String universityName, String universityLocation,
+			String universityLogoImgName, String universityLogoImgPath, String universityHomepage,
+			Date universityExhibitionDate, String universityExhibitionState, String universityExhibitionTitle,
+			String universityExhibitionLocation, String universityExhibitionImgName, String universityExhibitionImgPath,
+			Long universityExhibitionId) {
 		super();
 		this.id = id;
 		this.userImgName = userImgName;
@@ -69,6 +93,18 @@ public class UserVO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.universityName = universityName;
+		this.universityLocation = universityLocation;
+		this.universityLogoImgName = universityLogoImgName;
+		this.universityLogoImgPath = universityLogoImgPath;
+		this.universityHomepage = universityHomepage;
+		this.universityExhibitionDate = universityExhibitionDate;
+		this.universityExhibitionState = universityExhibitionState;
+		this.universityExhibitionTitle = universityExhibitionTitle;
+		this.universityExhibitionLocation = universityExhibitionLocation;
+		this.universityExhibitionImgName = universityExhibitionImgName;
+		this.universityExhibitionImgPath = universityExhibitionImgPath;
+		this.universityExhibitionId = universityExhibitionId;
 	}
 
 	public Long getId() {
@@ -295,10 +331,106 @@ public class UserVO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUniversityName() {
+		return universityName;
+	}
+
+	public void setUniversityName(String universityName) {
+		this.universityName = universityName;
+	}
+
+	public String getUniversityLocation() {
+		return universityLocation;
+	}
+
+	public void setUniversityLocation(String universityLocation) {
+		this.universityLocation = universityLocation;
+	}
+
+	public String getUniversityLogoImgName() {
+		return universityLogoImgName;
+	}
+
+	public void setUniversityLogoImgName(String universityLogoImgName) {
+		this.universityLogoImgName = universityLogoImgName;
+	}
+
+	public String getUniversityLogoImgPath() {
+		return universityLogoImgPath;
+	}
+
+	public void setUniversityLogoImgPath(String universityLogoImgPath) {
+		this.universityLogoImgPath = universityLogoImgPath;
+	}
+
+	public String getUniversityHomepage() {
+		return universityHomepage;
+	}
+
+	public void setUniversityHomepage(String universityHomepage) {
+		this.universityHomepage = universityHomepage;
+	}
+
+	public Date getUniversityExhibitionDate() {
+		return universityExhibitionDate;
+	}
+
+	public void setUniversityExhibitionDate(Date universityExhibitionDate) {
+		this.universityExhibitionDate = universityExhibitionDate;
+	}
+
+	public String getUniversityExhibitionState() {
+		return universityExhibitionState;
+	}
+
+	public void setUniversityExhibitionState(String universityExhibitionState) {
+		this.universityExhibitionState = universityExhibitionState;
+	}
+
+	public String getUniversityExhibitionTitle() {
+		return universityExhibitionTitle;
+	}
+
+	public void setUniversityExhibitionTitle(String universityExhibitionTitle) {
+		this.universityExhibitionTitle = universityExhibitionTitle;
+	}
+
+	public String getUniversityExhibitionLocation() {
+		return universityExhibitionLocation;
+	}
+
+	public void setUniversityExhibitionLocation(String universityExhibitionLocation) {
+		this.universityExhibitionLocation = universityExhibitionLocation;
+	}
+
+	public String getUniversityExhibitionImgName() {
+		return universityExhibitionImgName;
+	}
+
+	public void setUniversityExhibitionImgName(String universityExhibitionImgName) {
+		this.universityExhibitionImgName = universityExhibitionImgName;
+	}
+
+	public String getUniversityExhibitionImgPath() {
+		return universityExhibitionImgPath;
+	}
+
+	public void setUniversityExhibitionImgPath(String universityExhibitionImgPath) {
+		this.universityExhibitionImgPath = universityExhibitionImgPath;
+	}
+
+	public Long getUniversityExhibitionId() {
+		return universityExhibitionId;
+	}
+
+	public void setUniversityExhibitionId(Long universityExhibitionId) {
+		this.universityExhibitionId = universityExhibitionId;
+	}
+
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+		return "UniversityExhibitionDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
 				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
 				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
@@ -306,7 +438,14 @@ public class UserVO {
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
 				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + "]";
+				+ ", userMajorImgPath=" + userMajorImgPath + ", universityName=" + universityName
+				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
+				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
+				+ ", universityExhibitionDate=" + universityExhibitionDate + ", universityExhibitionState="
+				+ universityExhibitionState + ", universityExhibitionTitle=" + universityExhibitionTitle
+				+ ", universityExhibitionLocation=" + universityExhibitionLocation + ", universityExhibitionImgName="
+				+ universityExhibitionImgName + ", universityExhibitionImgPath=" + universityExhibitionImgPath
+				+ ", universityExhibitionId=" + universityExhibitionId + "]";
 	}
 
 	@Override
@@ -322,10 +461,8 @@ public class UserVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserVO other = (UserVO) obj;
+		UniversityExhibitionDTO other = (UniversityExhibitionDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 	
 }

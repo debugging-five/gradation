@@ -1,9 +1,25 @@
-package com.app.vo;
+package com.app.dto;
 
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UserVO {
-	private Long id; // Pk
+public class QnaDTO {
+//	qnaVO
+	private Long id;
+	private String qnaTitle;
+	private String qnaContent;
+	private Timestamp qnaTime;
+	private String qnaImgName;
+	private String qnaImgPath;
+	private Long userId;
+	
+//	QnaAnswerVO
+	private String qnaAnswerTitle;
+	private String qnaAnswerContent;
+	private Timestamp qnaAnswerTime;
+	private Long qnaId;
+	
+//	UserVO
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -32,16 +48,27 @@ public class UserVO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-	public UserVO() {;}
+	public QnaDTO() {;}
 
-	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
-			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath) {
-		super();
+	public QnaDTO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
+			Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime, Long qnaId,
+			String userImgName, String userImgPath, String userName, String userEmail, String userIdentification,
+			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
+			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
+			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
+			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId, String userMajorImgName,
+			String userMajorImgPath) {
 		this.id = id;
+		this.qnaTitle = qnaTitle;
+		this.qnaContent = qnaContent;
+		this.qnaTime = qnaTime;
+		this.qnaImgName = qnaImgName;
+		this.qnaImgPath = qnaImgPath;
+		this.userId = userId;
+		this.qnaAnswerTitle = qnaAnswerTitle;
+		this.qnaAnswerContent = qnaAnswerContent;
+		this.qnaAnswerTime = qnaAnswerTime;
+		this.qnaId = qnaId;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -71,12 +98,126 @@ public class UserVO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	@Override
+	public String toString() {
+		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
+				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId
+				+ ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent + ", qnaAnswerTime="
+				+ qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QnaDTO other = (QnaDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getQnaTitle() {
+		return qnaTitle;
+	}
+
+	public void setQnaTitle(String qnaTitle) {
+		this.qnaTitle = qnaTitle;
+	}
+
+	public String getQnaContent() {
+		return qnaContent;
+	}
+
+	public void setQnaContent(String qnaContent) {
+		this.qnaContent = qnaContent;
+	}
+
+	public Timestamp getQnaTime() {
+		return qnaTime;
+	}
+
+	public void setQnaTime(Timestamp qnaTime) {
+		this.qnaTime = qnaTime;
+	}
+
+	public String getQnaImgName() {
+		return qnaImgName;
+	}
+
+	public void setQnaImgName(String qnaImgName) {
+		this.qnaImgName = qnaImgName;
+	}
+
+	public String getQnaImgPath() {
+		return qnaImgPath;
+	}
+
+	public void setQnaImgPath(String qnaImgPath) {
+		this.qnaImgPath = qnaImgPath;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getQnaAnswerTitle() {
+		return qnaAnswerTitle;
+	}
+
+	public void setQnaAnswerTitle(String qnaAnswerTitle) {
+		this.qnaAnswerTitle = qnaAnswerTitle;
+	}
+
+	public String getQnaAnswerContent() {
+		return qnaAnswerContent;
+	}
+
+	public void setQnaAnswerContent(String qnaAnswerContent) {
+		this.qnaAnswerContent = qnaAnswerContent;
+	}
+
+	public Timestamp getQnaAnswerTime() {
+		return qnaAnswerTime;
+	}
+
+	public void setQnaAnswerTime(Timestamp qnaAnswerTime) {
+		this.qnaAnswerTime = qnaAnswerTime;
+	}
+
+	public Long getQnaId() {
+		return qnaId;
+	}
+
+	public void setQnaId(Long qnaId) {
+		this.qnaId = qnaId;
 	}
 
 	public String getUserImgName() {
@@ -294,38 +435,5 @@ public class UserVO {
 	public void setUserMajorImgPath(String userMajorImgPath) {
 		this.userMajorImgPath = userMajorImgPath;
 	}
-
-	@Override
-	public String toString() {
-		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserVO other = (UserVO) obj;
-		return Objects.equals(id, other.id);
-	}
-	
-	
 	
 }

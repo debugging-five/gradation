@@ -27,7 +27,10 @@ import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageMainController;
 import com.app.mypage.controller.MypageModifyController;
+import com.app.mypage.controller.MypageMyPostContentController;
 import com.app.mypage.controller.MypageMyPostListController;
+import com.app.mypage.controller.MypagePostContentController;
+import com.app.mypage.controller.MypagePostContentModifyController;
 import com.app.mypage.controller.MypagePostListController;
 
 public class MypageFrontController extends HttpServlet{
@@ -82,6 +85,12 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageAdminFaqRegisterController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-faq-content")) {
 			result = new MypageAdminFaqContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-post-content")) {
+			result = new MypagePostContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-my-post-content")) {
+			result = new MypageMyPostContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-post-content-modify")) {
+			result = new MypagePostContentModifyController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-send-post-content-modify")) {
 			result = new MyPageSendPostContentModifyController().execute(req, resp);
 		}else {

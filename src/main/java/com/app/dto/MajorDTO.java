@@ -1,11 +1,11 @@
 package com.app.dto;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.util.Objects;
 
-public class ExhibitionDTO {
-//	TBL_UNIVERSITY_EXHIBITION
+public class MajorDTO {
+	
+//	UniversityExhibitionVO
 	private Long id;
 	private Date universityExhibitionDate;
 	private String universityExhibitionState;
@@ -13,31 +13,24 @@ public class ExhibitionDTO {
 	private String universityExhibitionLocation;
 	private Long majorId;
 	
-//	TBL_UNIVERSITY_EXHIBITION_IMAGE
+//	UniversityExhibitionImgVO
 	private String universityExhibitionImgName;
 	private String universityExhibitionImgPath;
 	private Long universityExhibitionId;
 	
-//	TBL_MAJOR
-	private Long universityId;
-	private String majorName;
-	
-//	TBL_UNIVERSITY
+//	UniversityVO
 	private String universityName;
 	private String universityLocation;
 	private String universityLogoImgName;
 	private String universityLogoImgPath;
+	private String universityHomepage;
 	
-//	TBL_UNIVERSITY_LIKE
-	private Long userId;
-	private Timestamp universityLikeTime;
-	
-//	TBL_USER
+//	UserVO
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -57,19 +50,24 @@ public class ExhibitionDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
-	public ExhibitionDTO() {;}
+//	MajorVO
+	private String majorName;
+	
+	public MajorDTO() {;}
 
-	public ExhibitionDTO(Long id, Date universityExhibitionDate, String universityExhibitionState,
+	public MajorDTO(Long id, Date universityExhibitionDate, String universityExhibitionState,
 			String universityExhibitionTitle, String universityExhibitionLocation, Long majorId,
 			String universityExhibitionImgName, String universityExhibitionImgPath, Long universityExhibitionId,
-			Long universityId, String majorName, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath, Long userId, Timestamp universityLikeTime,
-			String userImgName, String userImgPath, String userName, String userEmail, String uUserId,
-			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
-			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
-			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
-			String userNaver, int userWriterOk, int userAdminOk, int userBanOk) {
+			String universityName, String universityLocation, String universityLogoImgName,
+			String universityLogoImgPath, String universityHomepage, String userImgName, String userImgPath,
+			String userName, String userEmail, String userIdentification, String userPassword, String userPhone,
+			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
+			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
+			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
+			int userBanOk, String userMajorImgName, String userMajorImgPath, String majorName) {
 		super();
 		this.id = id;
 		this.universityExhibitionDate = universityExhibitionDate;
@@ -80,19 +78,16 @@ public class ExhibitionDTO {
 		this.universityExhibitionImgName = universityExhibitionImgName;
 		this.universityExhibitionImgPath = universityExhibitionImgPath;
 		this.universityExhibitionId = universityExhibitionId;
-		this.universityId = universityId;
-		this.majorName = majorName;
 		this.universityName = universityName;
 		this.universityLocation = universityLocation;
 		this.universityLogoImgName = universityLogoImgName;
 		this.universityLogoImgPath = universityLogoImgPath;
-		this.userId = userId;
-		this.universityLikeTime = universityLikeTime;
+		this.universityHomepage = universityHomepage;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
@@ -112,6 +107,48 @@ public class ExhibitionDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
+		this.majorName = majorName;
+	}
+
+	@Override
+	public String toString() {
+		return "MajorDTO [id=" + id + ", universityExhibitionDate=" + universityExhibitionDate
+				+ ", universityExhibitionState=" + universityExhibitionState + ", universityExhibitionTitle="
+				+ universityExhibitionTitle + ", universityExhibitionLocation=" + universityExhibitionLocation
+				+ ", majorId=" + majorId + ", universityExhibitionImgName=" + universityExhibitionImgName
+				+ ", universityExhibitionImgPath=" + universityExhibitionImgPath + ", universityExhibitionId="
+				+ universityExhibitionId + ", universityName=" + universityName + ", universityLocation="
+				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
+				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + ", userImgName=" + userImgName
+				+ ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
+				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + ", majorName="
+				+ majorName + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MajorDTO other = (MajorDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -186,22 +223,6 @@ public class ExhibitionDTO {
 		this.universityExhibitionId = universityExhibitionId;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
-	}
-
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
-	}
-
-	public String getMajorName() {
-		return majorName;
-	}
-
-	public void setMajorName(String majorName) {
-		this.majorName = majorName;
-	}
-
 	public String getUniversityName() {
 		return universityName;
 	}
@@ -234,20 +255,12 @@ public class ExhibitionDTO {
 		this.universityLogoImgPath = universityLogoImgPath;
 	}
 
-	public Long getUserId() {
-		return userId;
+	public String getUniversityHomepage() {
+		return universityHomepage;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public Timestamp getUniversityLikeTime() {
-		return universityLikeTime;
-	}
-
-	public void setUniversityLikeTime(Timestamp universityLikeTime) {
-		this.universityLikeTime = universityLikeTime;
+	public void setUniversityHomepage(String universityHomepage) {
+		this.universityHomepage = universityHomepage;
 	}
 
 	public String getUserImgName() {
@@ -282,12 +295,12 @@ public class ExhibitionDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -442,42 +455,27 @@ public class ExhibitionDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	@Override
-	public String toString() {
-		return "ExhibitionDTO [id=" + id + ", universityExhibitionDate=" + universityExhibitionDate
-				+ ", universityExhibitionState=" + universityExhibitionState + ", universityExhibitionTitle="
-				+ universityExhibitionTitle + ", universityExhibitionLocation=" + universityExhibitionLocation
-				+ ", majorId=" + majorId + ", universityExhibitionImgName=" + universityExhibitionImgName
-				+ ", universityExhibitionImgPath=" + universityExhibitionImgPath + ", universityExhibitionId="
-				+ universityExhibitionId + ", universityId=" + universityId + ", majorName=" + majorName
-				+ ", universityName=" + universityName + ", universityLocation=" + universityLocation
-				+ ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
-				+ universityLogoImgPath + ", userId=" + userId + ", universityLikeTime=" + universityLikeTime
-				+ ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName
-				+ ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress
-				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
-				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
-				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
-				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk + "]";
+	public String getUserMajorImgName() {
+		return userMajorImgName;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ExhibitionDTO other = (ExhibitionDTO) obj;
-		return Objects.equals(id, other.id);
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
 	}
-	
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
+	}
+
+	public String getMajorName() {
+		return majorName;
+	}
+
+	public void setMajorName(String majorName) {
+		this.majorName = majorName;
+	}
 }
