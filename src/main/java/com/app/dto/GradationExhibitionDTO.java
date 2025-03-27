@@ -1,13 +1,27 @@
 package com.app.dto;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.util.Objects;
 
-public class DeliveryDTO {
-
-//	TBL_ART
+public class GradationExhibitionDTO {
+	
+//	GradationExhibitionVO
 	private Long id;
+	private String gradationExhibitionTitle;
+	private int gradationExhibitionCount;
+	private Date gradationExhibitionTime;
+	private int gradationExhibitionFee;
+	private String gradationExhibitionTel;
+	private String gradationExhibitionAddress;
+	private Date gradationExhibitionDate;
+	private String gradationExhibitionAddressImgName;
+	private String gradationExhibitionAddressImgPath;
+	
+//	ExhibitionPastArtVO
+	private Long gradationExhibitionId;
+	private Long artId;
+	
+//	ArtVO
 	private String artTitle;
 	private String artCategoty;
 	private String artMeterial;
@@ -18,12 +32,11 @@ public class DeliveryDTO {
 	private Date artEndDate;
 	private Long userId;
 	
-//	TBL_ART_IMG
+//	ArtImgVO
 	private String artImgName;
 	private String artImgPath;
-	private Long artId;
 	
-//	TBL_USER
+//	UserVO
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
@@ -48,41 +61,37 @@ public class DeliveryDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private Long universityId; // 학교 테이블의 id 참조값
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-//	TBL_DELIVERY
-	private String deliveryAddress;
-	private String deliveryDetailAddress;
-	private String deliveryPostalCode;
-	private String deliveryState;
-	private String deliveryMessage;
-	private String deliveryReceiver;
-	private String deliveryPhone;
-	private Long paymentId;
-	
-//	TBL_PAYMENT
-	private Long auctionId;
-	private String paymentMethod;
-	private int paymentAmount;
-	private Timestamp paymentDate;
-	private String paymentCode;
-	
-	public DeliveryDTO() {;}
+	public GradationExhibitionDTO() {;}
 
-	public DeliveryDTO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
-			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, String artImgName,
-			String artImgPath, Long artId, String userImgName, String userImgPath, String userName, String userEmail,
-			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String deliveryAddress, String deliveryDetailAddress,
-			String deliveryPostalCode, String deliveryState, String deliveryMessage, String deliveryReceiver,
-			String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod, int paymentAmount,
-			Timestamp paymentDate, String paymentCode) {
+	public GradationExhibitionDTO(Long id, String gradationExhibitionTitle, int gradationExhibitionCount,
+			Date gradationExhibitionTime, int gradationExhibitionFee, String gradationExhibitionTel,
+			String gradationExhibitionAddress, Date gradationExhibitionDate, String gradationExhibitionAddressImgName,
+			String gradationExhibitionAddressImgPath, Long gradationExhibitionId, Long artId, String artTitle,
+			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
+			Date artStartDate, Date artEndDate, Long userId, String artImgName, String artImgPath, String userImgName,
+			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
+			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
+			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
+			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
+			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, Long majorId, String userMajorImgName,
+			String userMajorImgPath) {
 		this.id = id;
+		this.gradationExhibitionTitle = gradationExhibitionTitle;
+		this.gradationExhibitionCount = gradationExhibitionCount;
+		this.gradationExhibitionTime = gradationExhibitionTime;
+		this.gradationExhibitionFee = gradationExhibitionFee;
+		this.gradationExhibitionTel = gradationExhibitionTel;
+		this.gradationExhibitionAddress = gradationExhibitionAddress;
+		this.gradationExhibitionDate = gradationExhibitionDate;
+		this.gradationExhibitionAddressImgName = gradationExhibitionAddressImgName;
+		this.gradationExhibitionAddressImgPath = gradationExhibitionAddressImgPath;
+		this.gradationExhibitionId = gradationExhibitionId;
+		this.artId = artId;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
 		this.artMeterial = artMeterial;
@@ -94,7 +103,6 @@ public class DeliveryDTO {
 		this.userId = userId;
 		this.artImgName = artImgName;
 		this.artImgPath = artImgPath;
-		this.artId = artId;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -119,45 +127,35 @@ public class DeliveryDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
+		this.universityId = universityId;
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.deliveryAddress = deliveryAddress;
-		this.deliveryDetailAddress = deliveryDetailAddress;
-		this.deliveryPostalCode = deliveryPostalCode;
-		this.deliveryState = deliveryState;
-		this.deliveryMessage = deliveryMessage;
-		this.deliveryReceiver = deliveryReceiver;
-		this.deliveryPhone = deliveryPhone;
-		this.paymentId = paymentId;
-		this.auctionId = auctionId;
-		this.paymentMethod = paymentMethod;
-		this.paymentAmount = paymentAmount;
-		this.paymentDate = paymentDate;
-		this.paymentCode = paymentCode;
 	}
 
 	@Override
 	public String toString() {
-		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
-				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
-				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="
-				+ deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState="
-				+ deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver
-				+ ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId=" + auctionId
-				+ ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
-				+ paymentDate + ", paymentCode=" + paymentCode + "]";
+		return "GradationExhibitionDTO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
+				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
+				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
+				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
+				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
+				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
+				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath
+				+ ", gradationExhibitionId=" + gradationExhibitionId + ", artId=" + artId + ", artTitle=" + artTitle
+				+ ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize=" + artSize
+				+ ", artDescription=" + artDescription + ", artDate=" + artDate + ", artStartDate=" + artStartDate
+				+ ", artEndDate=" + artEndDate + ", userId=" + userId + ", artImgName=" + artImgName + ", artImgPath="
+				+ artImgPath + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", majorId=" + majorId
+				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + "]";
 	}
 
 	@Override
@@ -173,7 +171,7 @@ public class DeliveryDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		DeliveryDTO other = (DeliveryDTO) obj;
+		GradationExhibitionDTO other = (GradationExhibitionDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 
@@ -183,6 +181,94 @@ public class DeliveryDTO {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getGradationExhibitionTitle() {
+		return gradationExhibitionTitle;
+	}
+
+	public void setGradationExhibitionTitle(String gradationExhibitionTitle) {
+		this.gradationExhibitionTitle = gradationExhibitionTitle;
+	}
+
+	public int getGradationExhibitionCount() {
+		return gradationExhibitionCount;
+	}
+
+	public void setGradationExhibitionCount(int gradationExhibitionCount) {
+		this.gradationExhibitionCount = gradationExhibitionCount;
+	}
+
+	public Date getGradationExhibitionTime() {
+		return gradationExhibitionTime;
+	}
+
+	public void setGradationExhibitionTime(Date gradationExhibitionTime) {
+		this.gradationExhibitionTime = gradationExhibitionTime;
+	}
+
+	public int getGradationExhibitionFee() {
+		return gradationExhibitionFee;
+	}
+
+	public void setGradationExhibitionFee(int gradationExhibitionFee) {
+		this.gradationExhibitionFee = gradationExhibitionFee;
+	}
+
+	public String getGradationExhibitionTel() {
+		return gradationExhibitionTel;
+	}
+
+	public void setGradationExhibitionTel(String gradationExhibitionTel) {
+		this.gradationExhibitionTel = gradationExhibitionTel;
+	}
+
+	public String getGradationExhibitionAddress() {
+		return gradationExhibitionAddress;
+	}
+
+	public void setGradationExhibitionAddress(String gradationExhibitionAddress) {
+		this.gradationExhibitionAddress = gradationExhibitionAddress;
+	}
+
+	public Date getGradationExhibitionDate() {
+		return gradationExhibitionDate;
+	}
+
+	public void setGradationExhibitionDate(Date gradationExhibitionDate) {
+		this.gradationExhibitionDate = gradationExhibitionDate;
+	}
+
+	public String getGradationExhibitionAddressImgName() {
+		return gradationExhibitionAddressImgName;
+	}
+
+	public void setGradationExhibitionAddressImgName(String gradationExhibitionAddressImgName) {
+		this.gradationExhibitionAddressImgName = gradationExhibitionAddressImgName;
+	}
+
+	public String getGradationExhibitionAddressImgPath() {
+		return gradationExhibitionAddressImgPath;
+	}
+
+	public void setGradationExhibitionAddressImgPath(String gradationExhibitionAddressImgPath) {
+		this.gradationExhibitionAddressImgPath = gradationExhibitionAddressImgPath;
+	}
+
+	public Long getGradationExhibitionId() {
+		return gradationExhibitionId;
+	}
+
+	public void setGradationExhibitionId(Long gradationExhibitionId) {
+		this.gradationExhibitionId = gradationExhibitionId;
+	}
+
+	public Long getArtId() {
+		return artId;
+	}
+
+	public void setArtId(Long artId) {
+		this.artId = artId;
 	}
 
 	public String getArtTitle() {
@@ -271,14 +357,6 @@ public class DeliveryDTO {
 
 	public void setArtImgPath(String artImgPath) {
 		this.artImgPath = artImgPath;
-	}
-
-	public Long getArtId() {
-		return artId;
-	}
-
-	public void setArtId(Long artId) {
-		this.artId = artId;
 	}
 
 	public String getUserImgName() {
@@ -473,6 +551,14 @@ public class DeliveryDTO {
 		this.userBanOk = userBanOk;
 	}
 
+	public Long getUniversityId() {
+		return universityId;
+	}
+
+	public void setUniversityId(Long universityId) {
+		this.universityId = universityId;
+	}
+
 	public Long getMajorId() {
 		return majorId;
 	}
@@ -497,108 +583,4 @@ public class DeliveryDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public String getDeliveryAddress() {
-		return deliveryAddress;
-	}
-
-	public void setDeliveryAddress(String deliveryAddress) {
-		this.deliveryAddress = deliveryAddress;
-	}
-
-	public String getDeliveryDetailAddress() {
-		return deliveryDetailAddress;
-	}
-
-	public void setDeliveryDetailAddress(String deliveryDetailAddress) {
-		this.deliveryDetailAddress = deliveryDetailAddress;
-	}
-
-	public String getDeliveryPostalCode() {
-		return deliveryPostalCode;
-	}
-
-	public void setDeliveryPostalCode(String deliveryPostalCode) {
-		this.deliveryPostalCode = deliveryPostalCode;
-	}
-
-	public String getDeliveryState() {
-		return deliveryState;
-	}
-
-	public void setDeliveryState(String deliveryState) {
-		this.deliveryState = deliveryState;
-	}
-
-	public String getDeliveryMessage() {
-		return deliveryMessage;
-	}
-
-	public void setDeliveryMessage(String deliveryMessage) {
-		this.deliveryMessage = deliveryMessage;
-	}
-
-	public String getDeliveryReceiver() {
-		return deliveryReceiver;
-	}
-
-	public void setDeliveryReceiver(String deliveryReceiver) {
-		this.deliveryReceiver = deliveryReceiver;
-	}
-
-	public String getDeliveryPhone() {
-		return deliveryPhone;
-	}
-
-	public void setDeliveryPhone(String deliveryPhone) {
-		this.deliveryPhone = deliveryPhone;
-	}
-
-	public Long getPaymentId() {
-		return paymentId;
-	}
-
-	public void setPaymentId(Long paymentId) {
-		this.paymentId = paymentId;
-	}
-
-	public Long getAuctionId() {
-		return auctionId;
-	}
-
-	public void setAuctionId(Long auctionId) {
-		this.auctionId = auctionId;
-	}
-
-	public String getPaymentMethod() {
-		return paymentMethod;
-	}
-
-	public void setPaymentMethod(String paymentMethod) {
-		this.paymentMethod = paymentMethod;
-	}
-
-	public int getPaymentAmount() {
-		return paymentAmount;
-	}
-
-	public void setPaymentAmount(int paymentAmount) {
-		this.paymentAmount = paymentAmount;
-	}
-
-	public Timestamp getPaymentDate() {
-		return paymentDate;
-	}
-
-	public void setPaymentDate(Timestamp paymentDate) {
-		this.paymentDate = paymentDate;
-	}
-
-	public String getPaymentCode() {
-		return paymentCode;
-	}
-
-	public void setPaymentCode(String paymentCode) {
-		this.paymentCode = paymentCode;
-	}
-	
 }

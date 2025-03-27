@@ -50,7 +50,8 @@ public class MajorDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	MajorVO
 	private String majorName;
@@ -66,7 +67,8 @@ public class MajorDTO {
 			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
 			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
 			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
-			int userBanOk, Long universityId, String majorName) {
+			int userBanOk, String userMajorImgName, String userMajorImgPath, String majorName) {
+		super();
 		this.id = id;
 		this.universityExhibitionDate = universityExhibitionDate;
 		this.universityExhibitionState = universityExhibitionState;
@@ -105,25 +107,9 @@ public class MajorDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.universityId = universityId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.majorName = majorName;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MajorDTO other = (MajorDTO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	@Override
@@ -144,7 +130,25 @@ public class MajorDTO {
 				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", universityId=" + universityId + ", majorName=" + majorName + "]";
+				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + ", majorName="
+				+ majorName + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MajorDTO other = (MajorDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -451,12 +455,20 @@ public class MajorDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
+	public String getUserMajorImgName() {
+		return userMajorImgName;
 	}
 
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public String getMajorName() {

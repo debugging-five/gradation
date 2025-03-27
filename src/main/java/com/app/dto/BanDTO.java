@@ -1,10 +1,10 @@
 package com.app.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UpcycleDTO {
-//	TBL_USER
+public class BanDTO {
+//	user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -34,26 +34,20 @@ public class UpcycleDTO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-//	TBL_UPCYCLE
-	private String upcycleCategory;
-	private String upcycleSize;
-	private Date upcycleDate;
-	private String upcycleAddress;
+//	ban
+	private String banReason;
+	private Timestamp banDate;
 	private Long userId;
-	private String upcycleImgName;
-	private String upcycleImgPath;
-	private String upcycleSignificant;
 	
-	public UpcycleDTO() {;}
+	public BanDTO() {;}
 
-	public UpcycleDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public BanDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String upcycleCategory, String upcycleSize,
-			Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName, String upcycleImgPath,
-			String upcycleSignificant) {
+			String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate, Long userId) {
+		super();
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -82,48 +76,9 @@ public class UpcycleDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.upcycleCategory = upcycleCategory;
-		this.upcycleSize = upcycleSize;
-		this.upcycleDate = upcycleDate;
-		this.upcycleAddress = upcycleAddress;
+		this.banReason = banReason;
+		this.banDate = banDate;
 		this.userId = userId;
-		this.upcycleImgName = upcycleImgName;
-		this.upcycleImgPath = upcycleImgPath;
-		this.upcycleSignificant = upcycleSignificant;
-	}
-
-	@Override
-	public String toString() {
-		return "UpcycleDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", upcycleCategory=" + upcycleCategory + ", upcycleSize="
-				+ upcycleSize + ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId="
-				+ userId + ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath
-				+ ", upcycleSignificant=" + upcycleSignificant + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleDTO other = (UpcycleDTO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -350,36 +305,20 @@ public class UpcycleDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public String getUpcycleCategory() {
-		return upcycleCategory;
+	public String getBanReason() {
+		return banReason;
 	}
 
-	public void setUpcycleCategory(String upcycleCategory) {
-		this.upcycleCategory = upcycleCategory;
+	public void setBanReason(String banReason) {
+		this.banReason = banReason;
 	}
 
-	public String getUpcycleSize() {
-		return upcycleSize;
+	public Timestamp getBanDate() {
+		return banDate;
 	}
 
-	public void setUpcycleSize(String upcycleSize) {
-		this.upcycleSize = upcycleSize;
-	}
-
-	public Date getUpcycleDate() {
-		return upcycleDate;
-	}
-
-	public void setUpcycleDate(Date upcycleDate) {
-		this.upcycleDate = upcycleDate;
-	}
-
-	public String getUpcycleAddress() {
-		return upcycleAddress;
-	}
-
-	public void setUpcycleAddress(String upcycleAddress) {
-		this.upcycleAddress = upcycleAddress;
+	public void setBanDate(Timestamp banDate) {
+		this.banDate = banDate;
 	}
 
 	public Long getUserId() {
@@ -390,28 +329,51 @@ public class UpcycleDTO {
 		this.userId = userId;
 	}
 
-	public String getUpcycleImgName() {
-		return upcycleImgName;
+	@Override
+	public String toString() {
+		return "BanDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate
+				+ ", userId=" + userId + "]";
 	}
 
-	public void setUpcycleImgName(String upcycleImgName) {
-		this.upcycleImgName = upcycleImgName;
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
 	}
 
-	public String getUpcycleImgPath() {
-		return upcycleImgPath;
-	}
-
-	public void setUpcycleImgPath(String upcycleImgPath) {
-		this.upcycleImgPath = upcycleImgPath;
-	}
-
-	public String getUpcycleSignificant() {
-		return upcycleSignificant;
-	}
-
-	public void setUpcycleSignificant(String upcycleSignificant) {
-		this.upcycleSignificant = upcycleSignificant;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BanDTO other = (BanDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

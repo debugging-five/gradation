@@ -6,11 +6,12 @@ import java.util.Objects;
 
 public class ArtPostDTO {
 //	TBL_USER
+	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -30,9 +31,11 @@ public class ArtPostDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	TBL_ART
-	private Long id;
 	private String artTitle;
 	private String artCategoty;
 	private String artMeterial;
@@ -66,21 +69,21 @@ public class ArtPostDTO {
 	
 	public ArtPostDTO() {;}
 
-	public ArtPostDTO(String userImgName, String userImgPath, String userName, String userEmail, String uUserId,
-			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
-			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
-			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
-			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long id, String artTitle,
-			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
-			Date artStartDate, Date artEndDate, Long userId, Timestamp artPostDate, Long artId, String artImgName,
-			String artImgPath, Timestamp artLikeTime, Long artPostId, String replyContents, Date replyDate,
-			Long replyId, Timestamp replyLikeTime) {
-		super();
+	public ArtPostDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String artTitle, String artCategoty, String artMeterial,
+			String artSize, String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId,
+			Timestamp artPostDate, Long artId, String artImgName, String artImgPath, Timestamp artLikeTime,
+			Long artPostId, String replyContents, Date replyDate, Long replyId, Timestamp replyLikeTime) {
+		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
@@ -100,7 +103,9 @@ public class ArtPostDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.id = id;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
 		this.artMeterial = artMeterial;
@@ -120,6 +125,51 @@ public class ArtPostDTO {
 		this.replyDate = replyDate;
 		this.replyId = replyId;
 		this.replyLikeTime = replyLikeTime;
+	}
+
+	@Override
+	public String toString() {
+		return "ArtPostDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
+				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
+				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId="
+				+ userId + ", artPostDate=" + artPostDate + ", artId=" + artId + ", artImgName=" + artImgName
+				+ ", artImgPath=" + artImgPath + ", artLikeTime=" + artLikeTime + ", artPostId=" + artPostId
+				+ ", replyContents=" + replyContents + ", replyDate=" + replyDate + ", replyId=" + replyId
+				+ ", replyLikeTime=" + replyLikeTime + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ArtPostDTO other = (ArtPostDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getUserImgName() {
@@ -154,12 +204,12 @@ public class ArtPostDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -314,12 +364,28 @@ public class ArtPostDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getMajorId() {
+		return majorId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public String getArtTitle() {
@@ -474,68 +540,4 @@ public class ArtPostDTO {
 		this.replyLikeTime = replyLikeTime;
 	}
 
-	@Override
-	public String toString() {
-		return "ArtPostDTO [userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName
-				+ ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress
-				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
-				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
-				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
-				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
-				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
-				+ ", artPostDate=" + artPostDate + ", artId=" + artId + ", artImgName=" + artImgName + ", artImgPath="
-				+ artImgPath + ", artLikeTime=" + artLikeTime + ", artPostId=" + artPostId + ", replyContents="
-				+ replyContents + ", replyDate=" + replyDate + ", replyId=" + replyId + ", replyLikeTime="
-				+ replyLikeTime + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(artCategoty, artDate, artDescription, artEndDate, artId, artImgName, artImgPath,
-				artLikeTime, artMeterial, artPostDate, artPostId, artSize, artStartDate, artTitle, id, replyContents,
-				replyDate, replyId, replyLikeTime, uUserId, userAddress, userAdminOk, userAgreementOk, userBanOk,
-				userBlog, userEmail, userGoogle, userId, userImgName, userImgPath, userInstagram, userIntroduce,
-				userKakao, userMailOk, userName, userNaver, userNickname, userPassword, userPhone, userPostalCode,
-				userRecode, userSnsOk, userWriterOk, userYoutube);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ArtPostDTO other = (ArtPostDTO) obj;
-		return Objects.equals(artCategoty, other.artCategoty) && Objects.equals(artDate, other.artDate)
-				&& Objects.equals(artDescription, other.artDescription) && Objects.equals(artEndDate, other.artEndDate)
-				&& Objects.equals(artId, other.artId) && Objects.equals(artImgName, other.artImgName)
-				&& Objects.equals(artImgPath, other.artImgPath) && Objects.equals(artLikeTime, other.artLikeTime)
-				&& Objects.equals(artMeterial, other.artMeterial) && Objects.equals(artPostDate, other.artPostDate)
-				&& Objects.equals(artPostId, other.artPostId) && Objects.equals(artSize, other.artSize)
-				&& Objects.equals(artStartDate, other.artStartDate) && Objects.equals(artTitle, other.artTitle)
-				&& Objects.equals(id, other.id) && Objects.equals(replyContents, other.replyContents)
-				&& Objects.equals(replyDate, other.replyDate) && Objects.equals(replyId, other.replyId)
-				&& Objects.equals(replyLikeTime, other.replyLikeTime) && Objects.equals(uUserId, other.uUserId)
-				&& Objects.equals(userAddress, other.userAddress) && userAdminOk == other.userAdminOk
-				&& userAgreementOk == other.userAgreementOk && userBanOk == other.userBanOk
-				&& Objects.equals(userBlog, other.userBlog) && Objects.equals(userEmail, other.userEmail)
-				&& Objects.equals(userGoogle, other.userGoogle) && Objects.equals(userId, other.userId)
-				&& Objects.equals(userImgName, other.userImgName) && Objects.equals(userImgPath, other.userImgPath)
-				&& Objects.equals(userInstagram, other.userInstagram)
-				&& Objects.equals(userIntroduce, other.userIntroduce) && Objects.equals(userKakao, other.userKakao)
-				&& userMailOk == other.userMailOk && Objects.equals(userName, other.userName)
-				&& Objects.equals(userNaver, other.userNaver) && Objects.equals(userNickname, other.userNickname)
-				&& Objects.equals(userPassword, other.userPassword) && Objects.equals(userPhone, other.userPhone)
-				&& Objects.equals(userPostalCode, other.userPostalCode) && Objects.equals(userRecode, other.userRecode)
-				&& userSnsOk == other.userSnsOk && userWriterOk == other.userWriterOk
-				&& Objects.equals(userYoutube, other.userYoutube);
-	}
-	
-	
 }

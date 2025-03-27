@@ -1,10 +1,10 @@
 package com.app.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UpcycleDTO {
-//	TBL_USER
+public class UniversityLikeDTO {
+//  user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -34,26 +34,29 @@ public class UpcycleDTO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-//	TBL_UPCYCLE
-	private String upcycleCategory;
-	private String upcycleSize;
-	private Date upcycleDate;
-	private String upcycleAddress;
+//	universityLike
+	private Long universityId;
 	private Long userId;
-	private String upcycleImgName;
-	private String upcycleImgPath;
-	private String upcycleSignificant;
+	private Timestamp universityLikeTime;
 	
-	public UpcycleDTO() {;}
+//	University
+	private String universityName;
+	private String universityLocation;
+	private String universityLogoImgName;
+	private String universityLogoImgPath;
+	private String universityHomepage;
+	
+	public UniversityLikeDTO() {;}
 
-	public UpcycleDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public UniversityLikeDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String upcycleCategory, String upcycleSize,
-			Date upcycleDate, String upcycleAddress, Long userId, String upcycleImgName, String upcycleImgPath,
-			String upcycleSignificant) {
+			String userMajorImgName, String userMajorImgPath, Long universityId, Long userId,
+			Timestamp universityLikeTime, String universityName, String universityLocation,
+			String universityLogoImgName, String universityLogoImgPath, String universityHomepage) {
+		super();
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -82,48 +85,14 @@ public class UpcycleDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.upcycleCategory = upcycleCategory;
-		this.upcycleSize = upcycleSize;
-		this.upcycleDate = upcycleDate;
-		this.upcycleAddress = upcycleAddress;
+		this.universityId = universityId;
 		this.userId = userId;
-		this.upcycleImgName = upcycleImgName;
-		this.upcycleImgPath = upcycleImgPath;
-		this.upcycleSignificant = upcycleSignificant;
-	}
-
-	@Override
-	public String toString() {
-		return "UpcycleDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", upcycleCategory=" + upcycleCategory + ", upcycleSize="
-				+ upcycleSize + ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId="
-				+ userId + ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath
-				+ ", upcycleSignificant=" + upcycleSignificant + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleDTO other = (UpcycleDTO) obj;
-		return Objects.equals(id, other.id);
+		this.universityLikeTime = universityLikeTime;
+		this.universityName = universityName;
+		this.universityLocation = universityLocation;
+		this.universityLogoImgName = universityLogoImgName;
+		this.universityLogoImgPath = universityLogoImgPath;
+		this.universityHomepage = universityHomepage;
 	}
 
 	public Long getId() {
@@ -350,36 +319,12 @@ public class UpcycleDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public String getUpcycleCategory() {
-		return upcycleCategory;
+	public Long getUniversityId() {
+		return universityId;
 	}
 
-	public void setUpcycleCategory(String upcycleCategory) {
-		this.upcycleCategory = upcycleCategory;
-	}
-
-	public String getUpcycleSize() {
-		return upcycleSize;
-	}
-
-	public void setUpcycleSize(String upcycleSize) {
-		this.upcycleSize = upcycleSize;
-	}
-
-	public Date getUpcycleDate() {
-		return upcycleDate;
-	}
-
-	public void setUpcycleDate(Date upcycleDate) {
-		this.upcycleDate = upcycleDate;
-	}
-
-	public String getUpcycleAddress() {
-		return upcycleAddress;
-	}
-
-	public void setUpcycleAddress(String upcycleAddress) {
-		this.upcycleAddress = upcycleAddress;
+	public void setUniversityId(Long universityId) {
+		this.universityId = universityId;
 	}
 
 	public Long getUserId() {
@@ -390,28 +335,89 @@ public class UpcycleDTO {
 		this.userId = userId;
 	}
 
-	public String getUpcycleImgName() {
-		return upcycleImgName;
+	public Timestamp getUniversityLikeTime() {
+		return universityLikeTime;
 	}
 
-	public void setUpcycleImgName(String upcycleImgName) {
-		this.upcycleImgName = upcycleImgName;
+	public void setUniversityLikeTime(Timestamp universityLikeTime) {
+		this.universityLikeTime = universityLikeTime;
 	}
 
-	public String getUpcycleImgPath() {
-		return upcycleImgPath;
+	public String getUniversityName() {
+		return universityName;
 	}
 
-	public void setUpcycleImgPath(String upcycleImgPath) {
-		this.upcycleImgPath = upcycleImgPath;
+	public void setUniversityName(String universityName) {
+		this.universityName = universityName;
 	}
 
-	public String getUpcycleSignificant() {
-		return upcycleSignificant;
+	public String getUniversityLocation() {
+		return universityLocation;
 	}
 
-	public void setUpcycleSignificant(String upcycleSignificant) {
-		this.upcycleSignificant = upcycleSignificant;
+	public void setUniversityLocation(String universityLocation) {
+		this.universityLocation = universityLocation;
 	}
+
+	public String getUniversityLogoImgName() {
+		return universityLogoImgName;
+	}
+
+	public void setUniversityLogoImgName(String universityLogoImgName) {
+		this.universityLogoImgName = universityLogoImgName;
+	}
+
+	public String getUniversityLogoImgPath() {
+		return universityLogoImgPath;
+	}
+
+	public void setUniversityLogoImgPath(String universityLogoImgPath) {
+		this.universityLogoImgPath = universityLogoImgPath;
+	}
+
+	public String getUniversityHomepage() {
+		return universityHomepage;
+	}
+
+	public void setUniversityHomepage(String universityHomepage) {
+		this.universityHomepage = universityHomepage;
+	}
+
+	@Override
+	public String toString() {
+		return "UniversityLikeDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", universityId=" + universityId + ", userId=" + userId
+				+ ", universityLikeTime=" + universityLikeTime + ", universityName=" + universityName
+				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
+				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
+				+ "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UniversityLikeDTO other = (UniversityLikeDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+	
+	
 	
 }
