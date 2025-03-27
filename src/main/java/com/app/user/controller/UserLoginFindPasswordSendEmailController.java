@@ -28,7 +28,7 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
 		String passwordMailCode = mc.codeSix();
-		userVO.setUserId(userId);
+		userVO.setUserIdentification(userId);
 		userVO.setUserName(userName);
 		userVO.setUserEmail(userEmail);
 		
