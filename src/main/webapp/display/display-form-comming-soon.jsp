@@ -94,6 +94,7 @@
 			</div>
 	</div>
 	
+	
 	<!-- 작품설명 -->
 	<div>
 		<label class="artist-info">작품설명<span class="essential">*</span></label>
