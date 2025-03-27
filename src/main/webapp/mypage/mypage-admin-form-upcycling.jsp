@@ -91,8 +91,8 @@
 					</div>
 				</div>
 				<div id="button-wrap">
-					<button id="no-button">기각</button>
-					<button id="ok-button">승인</button>
+					<%@ include file="mypage-admin-form-dismissed-popup.jsp"%>
+					<%@ include file="mypage-admin-form-approval-popup.jsp"%>
 				</div>
 			</div>
 		</div>

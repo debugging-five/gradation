@@ -5,6 +5,8 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 public class AuctionDTO {
+	
+//	AuctionVO
 	private Long id; // pk
 	private Long artId; // 작품 테이블 id 참조키
 	private Long userId; // 유저 테이블 id 참조키
@@ -25,7 +27,7 @@ public class AuctionDTO {
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
@@ -45,7 +47,10 @@ public class AuctionDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId;
+	private Long universityId; // 학교 테이블의 id 참조값
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	DeliveryVO
 	private String deliveryAddress;
@@ -79,15 +84,16 @@ public class AuctionDTO {
 	public AuctionDTO(Long id, Long artId, Long userId, Date auctionStartDate, Long auctionStartPrice,
 			Long auctionEstimatePrice, int auctionAttracted, Long auctionBidPrice, Date auctionBidDate,
 			int auctionBiddingPrice, boolean auctionBiddingAutoOk, Timestamp auctionBiddingTime, String userImgName,
-			String userImgPath, String userName, String userEmail, String uUserId, String userPassword,
+			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
 			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
 			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
 			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
-			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, String deliveryAddress,
-			String deliveryDetailAddress, String deliveryPostalCode, String deliveryState, String deliveryMessage,
-			String deliveryReceiver, String deliveryPhone, Long paymentId, String artCategoty, String artMeterial,
-			String artSize, String artDescription, Date artDate, Date artStartDate, Date artEndDate, String artImgName,
-			String artImgPath, String paymentMethod, int paymentAmount, Timestamp paymentDate, String paymentCode) {
+			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, Long majorId, String userMajorImgName,
+			String userMajorImgPath, String deliveryAddress, String deliveryDetailAddress, String deliveryPostalCode,
+			String deliveryState, String deliveryMessage, String deliveryReceiver, String deliveryPhone, Long paymentId,
+			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
+			Date artStartDate, Date artEndDate, String artImgName, String artImgPath, String paymentMethod,
+			int paymentAmount, Timestamp paymentDate, String paymentCode) {
 		this.id = id;
 		this.artId = artId;
 		this.userId = userId;
@@ -104,7 +110,7 @@ public class AuctionDTO {
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
@@ -125,6 +131,9 @@ public class AuctionDTO {
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
 		this.universityId = universityId;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.deliveryAddress = deliveryAddress;
 		this.deliveryDetailAddress = deliveryDetailAddress;
 		this.deliveryPostalCode = deliveryPostalCode;
@@ -156,22 +165,23 @@ public class AuctionDTO {
 				+ auctionBidPrice + ", auctionBidDate=" + auctionBidDate + ", auctionBiddingPrice="
 				+ auctionBiddingPrice + ", auctionBiddingAutoOk=" + auctionBiddingAutoOk + ", auctionBiddingTime="
 				+ auctionBiddingTime + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword=" + userPassword
-				+ ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress
-				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
-				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
-				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
-				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", universityId=" + universityId + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="
-				+ deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState="
-				+ deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver
-				+ ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", artCategoty=" + artCategoty
-				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
-				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
-				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", paymentMethod=" + paymentMethod
-				+ ", paymentAmount=" + paymentAmount + ", paymentDate=" + paymentDate + ", paymentCode=" + paymentCode
-				+ "]";
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", majorId=" + majorId
+				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath
+				+ ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress=" + deliveryDetailAddress
+				+ ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState=" + deliveryState
+				+ ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver + ", deliveryPhone="
+				+ deliveryPhone + ", paymentId=" + paymentId + ", artCategoty=" + artCategoty + ", artMeterial="
+				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", artImgName=" + artImgName
+				+ ", artImgPath=" + artImgPath + ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount
+				+ ", paymentDate=" + paymentDate + ", paymentCode=" + paymentCode + "]";
 	}
 
 	@Override
@@ -319,12 +329,12 @@ public class AuctionDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -485,6 +495,30 @@ public class AuctionDTO {
 
 	public void setUniversityId(Long universityId) {
 		this.universityId = universityId;
+	}
+
+	public Long getMajorId() {
+		return majorId;
+	}
+
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public String getDeliveryAddress() {
@@ -654,5 +688,5 @@ public class AuctionDTO {
 	public void setPaymentCode(String paymentCode) {
 		this.paymentCode = paymentCode;
 	}
-	
+
 }
