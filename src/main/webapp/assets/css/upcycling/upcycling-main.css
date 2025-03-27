@@ -42,14 +42,15 @@
 
 .slide-text1 {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
     text-align: center;
     border-radius: 10px;
+    width: 1500px;
 }
 .slide-text2 {
     position: absolute;
@@ -89,11 +90,40 @@
 	flex-direction: column;
 	align-items: center;
 	margin-top: 274px;
-	margin-bottom: 413px;
-}
-.chepter-1-text {
 	margin-bottom: 100px;
 }
+.chepter-1-text {
+}
+
+.chepter-1-1 {
+	display: flex;
+	margin-bottom: 413px;
+	gap: 0 30px;
+}
+.wall {
+	border-left: solid 3px;
+	height: 157px;
+}
+.chepter-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+.chepter-1-1-title {
+	font-size: var(--font-size-h1); 
+	font-weight: bold;
+}
+.chepter-1-1-content {
+	font-size: var(--font-size-h3); 	
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+
+
+
 
 .chepter-2 {
 	margin-bottom: 232px;	
@@ -242,10 +272,10 @@
 .buttons {
 	display: flex;
 	margin-bottom: 200px;
+	gap: 80px;
 
 }
 .qna-button {
-	margin-right: 80px;	
 	width: 300px;
 	height: 60px;
 	color: var(--color-primary);
