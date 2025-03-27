@@ -30,7 +30,9 @@ public class BanDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId; // 학교 테이블의 id 참조값
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	ban
 	private String banReason;
@@ -43,8 +45,8 @@ public class BanDTO {
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId,
-			String banReason, Timestamp banDate, Long userId) {
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate, Long userId) {
 		super();
 		this.id = id;
 		this.userImgName = userImgName;
@@ -71,7 +73,9 @@ public class BanDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.universityId = universityId;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.banReason = banReason;
 		this.banDate = banDate;
 		this.userId = userId;
@@ -277,12 +281,28 @@ public class BanDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
+	public Long getMajorId() {
+		return majorId;
 	}
 
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public String getBanReason() {
@@ -319,8 +339,9 @@ public class BanDTO {
 				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", banReason=" + banReason
-				+ ", banDate=" + banDate + ", userId=" + userId + "]";
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate
+				+ ", userId=" + userId + "]";
 	}
 
 	@Override
@@ -339,6 +360,8 @@ public class BanDTO {
 		BanDTO other = (BanDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
 	
 }
 

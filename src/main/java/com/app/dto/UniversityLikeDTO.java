@@ -3,8 +3,8 @@ package com.app.dto;
 import java.sql.Timestamp;
 import java.util.Objects;
 
-public class ExhibitionLikeDTO {
-//	user
+public class UniversityLikeDTO {
+//  user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -30,9 +30,12 @@ public class ExhibitionLikeDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId; // 학교 테이블의 id 참조값
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	universityLike
+	private Long universityId;
 	private Long userId;
 	private Timestamp universityLikeTime;
 	
@@ -43,14 +46,15 @@ public class ExhibitionLikeDTO {
 	private String universityLogoImgPath;
 	private String universityHomepage;
 	
-	public ExhibitionLikeDTO() {;}
+	public UniversityLikeDTO() {;}
 
-	public ExhibitionLikeDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public UniversityLikeDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId,
-			Long userId, Timestamp universityLikeTime, String universityName, String universityLocation,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, Long universityId, Long userId,
+			Timestamp universityLikeTime, String universityName, String universityLocation,
 			String universityLogoImgName, String universityLogoImgPath, String universityHomepage) {
 		super();
 		this.id = id;
@@ -78,6 +82,9 @@ public class ExhibitionLikeDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.universityId = universityId;
 		this.userId = userId;
 		this.universityLikeTime = universityLikeTime;
@@ -288,6 +295,30 @@ public class ExhibitionLikeDTO {
 		this.userBanOk = userBanOk;
 	}
 
+	public Long getMajorId() {
+		return majorId;
+	}
+
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
+	}
+
 	public Long getUniversityId() {
 		return universityId;
 	}
@@ -354,7 +385,7 @@ public class ExhibitionLikeDTO {
 
 	@Override
 	public String toString() {
-		return "ExhibitionLikeDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+		return "UniversityLikeDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
 				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
 				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
@@ -362,7 +393,8 @@ public class ExhibitionLikeDTO {
 				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", userId=" + userId
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", universityId=" + universityId + ", userId=" + userId
 				+ ", universityLikeTime=" + universityLikeTime + ", universityName=" + universityName
 				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
 				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
@@ -382,14 +414,10 @@ public class ExhibitionLikeDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ExhibitionLikeDTO other = (ExhibitionLikeDTO) obj;
+		UniversityLikeDTO other = (UniversityLikeDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 	
 	
 	
 }
-
-
-
-
