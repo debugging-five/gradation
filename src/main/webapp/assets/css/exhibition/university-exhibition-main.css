@@ -243,6 +243,21 @@ select {
 	justify-content : center;
 }
 
+#chevron-left, #chevron-right {
+	width : 24px;
+	height : 24px;
+	margin : 191px 0 0 0;
+	cursor : pointer;
+}
+
+#chevron-left {
+	margin-right : 9px;
+}
+
+#chevron-right {
+	margin-left : 9px;
+}
+
 #img-wrapper {
 	width : 476px;
 	height : 407px;

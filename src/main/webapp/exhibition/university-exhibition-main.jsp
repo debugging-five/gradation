@@ -231,9 +231,11 @@
 		<!-- 대학 전시회 이미지 -->
 		<div id="display-none">
 			<div id="img-background" >
+				<img id="chevron-left" src="../assets/images/exhibition/chevron-left.png" alt="왼쪽" />
 				<div id="img-wrapper">
 					<img src="../assets/images/exhibition/university-exhibition-1.jpg" alt="대학교 전시회1" />
 				</div>
+				<img id="chevron-right" src="../assets/images/exhibition/chevron-right.png" alt="오른쪽" />
 			</div>
 		</div>
 	</div>
