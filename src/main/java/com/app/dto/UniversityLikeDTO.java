@@ -1,8 +1,10 @@
-package com.app.vo;
+package com.app.dto;
 
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UserVO {
+public class UniversityLikeDTO {
+//  user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -32,14 +34,28 @@ public class UserVO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-	public UserVO() {;}
+//	universityLike
+	private Long universityId;
+	private Long userId;
+	private Timestamp universityLikeTime;
+	
+//	University
+	private String universityName;
+	private String universityLocation;
+	private String universityLogoImgName;
+	private String universityLogoImgPath;
+	private String universityHomepage;
+	
+	public UniversityLikeDTO() {;}
 
-	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public UniversityLikeDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath) {
+			String userMajorImgName, String userMajorImgPath, Long universityId, Long userId,
+			Timestamp universityLikeTime, String universityName, String universityLocation,
+			String universityLogoImgName, String universityLogoImgPath, String universityHomepage) {
 		super();
 		this.id = id;
 		this.userImgName = userImgName;
@@ -69,6 +85,14 @@ public class UserVO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.universityId = universityId;
+		this.userId = userId;
+		this.universityLikeTime = universityLikeTime;
+		this.universityName = universityName;
+		this.universityLocation = universityLocation;
+		this.universityLogoImgName = universityLogoImgName;
+		this.universityLogoImgPath = universityLogoImgPath;
+		this.universityHomepage = universityHomepage;
 	}
 
 	public Long getId() {
@@ -295,10 +319,74 @@ public class UserVO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public Long getUniversityId() {
+		return universityId;
+	}
+
+	public void setUniversityId(Long universityId) {
+		this.universityId = universityId;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public Timestamp getUniversityLikeTime() {
+		return universityLikeTime;
+	}
+
+	public void setUniversityLikeTime(Timestamp universityLikeTime) {
+		this.universityLikeTime = universityLikeTime;
+	}
+
+	public String getUniversityName() {
+		return universityName;
+	}
+
+	public void setUniversityName(String universityName) {
+		this.universityName = universityName;
+	}
+
+	public String getUniversityLocation() {
+		return universityLocation;
+	}
+
+	public void setUniversityLocation(String universityLocation) {
+		this.universityLocation = universityLocation;
+	}
+
+	public String getUniversityLogoImgName() {
+		return universityLogoImgName;
+	}
+
+	public void setUniversityLogoImgName(String universityLogoImgName) {
+		this.universityLogoImgName = universityLogoImgName;
+	}
+
+	public String getUniversityLogoImgPath() {
+		return universityLogoImgPath;
+	}
+
+	public void setUniversityLogoImgPath(String universityLogoImgPath) {
+		this.universityLogoImgPath = universityLogoImgPath;
+	}
+
+	public String getUniversityHomepage() {
+		return universityHomepage;
+	}
+
+	public void setUniversityHomepage(String universityHomepage) {
+		this.universityHomepage = universityHomepage;
+	}
+
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+		return "UniversityLikeDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
 				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
 				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
@@ -306,7 +394,11 @@ public class UserVO {
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
 				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + "]";
+				+ ", userMajorImgPath=" + userMajorImgPath + ", universityId=" + universityId + ", userId=" + userId
+				+ ", universityLikeTime=" + universityLikeTime + ", universityName=" + universityName
+				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
+				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
+				+ "]";
 	}
 
 	@Override
@@ -322,7 +414,7 @@ public class UserVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserVO other = (UserVO) obj;
+		UniversityLikeDTO other = (UniversityLikeDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 	

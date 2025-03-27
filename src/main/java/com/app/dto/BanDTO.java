@@ -1,8 +1,10 @@
-package com.app.vo;
+package com.app.dto;
 
+import java.sql.Timestamp;
 import java.util.Objects;
 
-public class UserVO {
+public class BanDTO {
+//	user
 	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
@@ -32,14 +34,19 @@ public class UserVO {
 	private String userMajorImgName;
 	private String userMajorImgPath;
 	
-	public UserVO() {;}
+//	ban
+	private String banReason;
+	private Timestamp banDate;
+	private Long userId;
+	
+	public BanDTO() {;}
 
-	public UserVO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
+	public BanDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath) {
+			String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate, Long userId) {
 		super();
 		this.id = id;
 		this.userImgName = userImgName;
@@ -69,6 +76,9 @@ public class UserVO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.banReason = banReason;
+		this.banDate = banDate;
+		this.userId = userId;
 	}
 
 	public Long getId() {
@@ -295,9 +305,33 @@ public class UserVO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getBanReason() {
+		return banReason;
+	}
+
+	public void setBanReason(String banReason) {
+		this.banReason = banReason;
+	}
+
+	public Timestamp getBanDate() {
+		return banDate;
+	}
+
+	public void setBanDate(Timestamp banDate) {
+		this.banDate = banDate;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+		return "BanDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
 				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
 				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
@@ -306,7 +340,8 @@ public class UserVO {
 				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
 				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
 				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + "]";
+				+ ", userMajorImgPath=" + userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate
+				+ ", userId=" + userId + "]";
 	}
 
 	@Override
@@ -322,10 +357,23 @@ public class UserVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserVO other = (UserVO) obj;
+		BanDTO other = (BanDTO) obj;
 		return Objects.equals(id, other.id);
 	}
 	
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
