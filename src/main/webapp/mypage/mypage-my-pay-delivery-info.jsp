@@ -37,16 +37,10 @@
 								<span>송장번호</span>						
 								<span>458528916333</span>						
 							</div>
-							<div class="seller-gap4">
-								<span>판매자</span>						
-								<span>박세현</span>						
-							</div>
 						</div>
 					</div>
+					<div class="line"></div>
 					<div id="buyer-wrapper">
-						<div>
-							<img alt="user-icon" class="user-icon" src="../assets/images/mypage/user.png">
-						</div>
 						<div>
 							<div class="buyer-gap1">
 								<span>받는 사람</span>	
@@ -89,12 +83,12 @@
 						<span class="delivery-type">배송중(입고)</span>
 					</div>
 					<div class="delivery-detail">
-						<span>2월 14, 2025 12:05</span>
+						<span class="time">2월 14, 2025 12:05</span>
 						<span class="address-now">칠곡HUB</span>
 						<span class="delivery-type">배송중(출고)</span>
 					</div>
 					<div class="delivery-detail">
-						<span>2월 14, 2025 12:05</span>
+						<span class="time">2월 14, 2025 12:05</span>
 						<span class="address-now">칠곡HUB</span>
 						<span class="delivery-type">배송중(입고)</span>
 					</div>
