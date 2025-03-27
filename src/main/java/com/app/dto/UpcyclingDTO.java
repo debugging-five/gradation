@@ -11,8 +11,9 @@ public class UpcyclingDTO {
 	private Date upcycleDate;
 	private String upcycleAddress;
 	private Long userId;
-	private String UpcycleImgName;
-	private String UpcycleImgPath;
+	private String upcycleImgName;
+	private String upcycleImgPath;
+	private String upcycleSifnificant; 
 	
 // 	TBL_USER
 	private String userImgName;
@@ -50,13 +51,13 @@ public class UpcyclingDTO {
     public UpcyclingDTO() {;}
 
 	public UpcyclingDTO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId, String upcycleImgName, String upcycleImgPath, String userImgName, String userImgPath,
-			String userName, String userEmail, String uUserId, String userPassword, String userPhone,
-			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
-			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
-			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
-			int userBanOk, Long unibersityId, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath) {
+			Long userId, String upcycleImgName, String upcycleImgPath, String upcycleSifnificant, String userImgName,
+			String userImgPath, String userName, String userEmail, String uUserId, String userPassword,
+			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
+			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
+			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
+			int userWriterOk, int userAdminOk, int userBanOk, Long unibersityId, String universityName,
+			String universityLocation, String universityLogoImgName, String universityLogoImgPath) {
 		super();
 		this.id = id;
 		this.upcycleCategory = upcycleCategory;
@@ -64,8 +65,9 @@ public class UpcyclingDTO {
 		this.upcycleDate = upcycleDate;
 		this.upcycleAddress = upcycleAddress;
 		this.userId = userId;
-		UpcycleImgName = upcycleImgName;
-		UpcycleImgPath = upcycleImgPath;
+		this.upcycleImgName = upcycleImgName;
+		this.upcycleImgPath = upcycleImgPath;
+		this.upcycleSifnificant = upcycleSifnificant;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
@@ -146,19 +148,27 @@ public class UpcyclingDTO {
 	}
 
 	public String getUpcycleImgName() {
-		return UpcycleImgName;
+		return upcycleImgName;
 	}
 
 	public void setUpcycleImgName(String upcycleImgName) {
-		UpcycleImgName = upcycleImgName;
+		this.upcycleImgName = upcycleImgName;
 	}
 
 	public String getUpcycleImgPath() {
-		return UpcycleImgPath;
+		return upcycleImgPath;
 	}
 
 	public void setUpcycleImgPath(String upcycleImgPath) {
-		UpcycleImgPath = upcycleImgPath;
+		this.upcycleImgPath = upcycleImgPath;
+	}
+
+	public String getUpcycleSifnificant() {
+		return upcycleSifnificant;
+	}
+
+	public void setUpcycleSifnificant(String upcycleSifnificant) {
+		this.upcycleSifnificant = upcycleSifnificant;
 	}
 
 	public String getUserImgName() {
@@ -397,14 +407,14 @@ public class UpcyclingDTO {
 	public String toString() {
 		return "UpcyclingDTO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
 				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", UpcycleImgName=" + UpcycleImgName + ", UpcycleImgPath=" + UpcycleImgPath + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", uUserId=" + uUserId + ", userPassword=" + userPassword + ", userPhone=" + userPhone
-				+ ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath + ", upcycleSifnificant="
+				+ upcycleSifnificant + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword=" + userPassword
+				+ ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress
+				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
+				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
+				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
+				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", unibersityId=" + unibersityId + ", universityName=" + universityName + ", universityLocation="
 				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
@@ -428,6 +438,6 @@ public class UpcyclingDTO {
 		return Objects.equals(id, other.id);
 	}
 
-	
     
-}
+    
+	}

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.mypage.controller.MyPageSendPostContentModifyController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
 import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
@@ -81,6 +82,8 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageAdminFaqRegisterController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-faq-content")) {
 			result = new MypageAdminFaqContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-send-post-content-modify")) {
+			result = new MyPageSendPostContentModifyController().execute(req, resp);
 		}else {
 //			전부 404
 		}

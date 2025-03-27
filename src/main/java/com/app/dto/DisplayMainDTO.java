@@ -34,8 +34,8 @@ public class DisplayMainDTO {
 	
 //	TBL_ART
 	private Long artId;
-	private String artCategoty;
 	private String artTitle;
+	private String artCategoty;
 	private String artMeterial;
 	private String artSize;
 	private String artDescription;
