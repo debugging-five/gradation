@@ -129,6 +129,11 @@ select {
 #my-pick {
 	margin : 0 16px 0 0;
 	width : 56px;
+	cursor : pointer;
+}
+
+#my-pick:hover {
+	color : var(--color-primary);
 }
 
 #bar-right {
@@ -337,3 +342,92 @@ select {
 	background-color : #ee3333;
 	color : #fbfcfc;
 }
+
+/*===================*/
+.exhibition-card {
+	display : flex;
+	gap : 28px;
+	height : 128px;
+	margin : 12px 0 0 0;
+}
+
+.logo-wrapper img {
+	width : 84px;
+	height : 84px;
+}
+
+.logo-wrapper {
+	width : 128px;
+	height : 128px;
+	border : solid 1px var(--color-gray500);
+	display : flex;
+	align-items : center;
+	justify-content : center;  
+	border-radius : 10px;
+	
+}
+
+.exhibition-info {
+	display : flex;
+	flex-direction : column;
+	margin-top : 0px;
+}
+
+
+.status-btn {
+	width : 196px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1.2px var(--color-gray900);
+	border-radius : 3px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h6);
+}
+
+.like-btn {
+	width : 88px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1.2px var(--color-primary);
+	border-radius : 3px;
+	color : var(--color-primary);
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h7);
+}
+
+.exhibition-buttons {
+	display : flex;
+	gap : 16px;
+}
+
+.exhibition-description p {
+	font-size : var(--font-size-h8);
+	height : 17px;
+}
+
+.exhibition-major p {
+	font-size : var(--font-size-h9);
+	color : var(--color-gray900);
+	height : 14px;
+}
+
+.exhibition-date p, .exhibition-location p {
+	font-size : var(--font-size-h9);
+	color : var(--color-gray900);
+	height : 14px;
+	margin : 0 0 4px 0;
+}
+
+.exhibition-title h6 {
+	height : 21px;
+}
+
+.exhibition-major {
+	margin : 0 0 8px 0;
+}
+
+
+
+
+
+
