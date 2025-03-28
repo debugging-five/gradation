@@ -69,7 +69,7 @@
 			        <a href="/gradation/login/login-main.user" class="sign-in">sign in</a>
 			        <ul class="dropdown">
 			            <li><a href="/gradation/mypage/mypage-main.mypage">마이페이지</a></li>
-			            <li><a href="/gradation/mypage/mypage-service-center-send-qna.mypage">고객센터</a></li>
+			            <li><a href="/gradation/mypage/mypage-service-center-qna-list.mypage">고객센터</a></li>
 			        </ul>
 			    </div>
 			</div>

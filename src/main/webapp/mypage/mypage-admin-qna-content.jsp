@@ -26,7 +26,7 @@
 				
 				<div id="title-wrapper">
 					<div id="contact-title">
-						<h3>경매금액을 잘못 올렸어요.</h3>
+						<h3>Q. 경매금액을 잘못 올렸어요.</h3>
 						<p>25. 01. 15</p>
 					</div>
 				</div>

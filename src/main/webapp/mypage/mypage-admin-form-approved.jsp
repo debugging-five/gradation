@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-form-approved.css" />
-<title>고객센터 / 고객 문의 목록</title>
+<title>관리자 페이지</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
@@ -18,7 +18,7 @@
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
-				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
+				<h2 id="title">관리자 마이페이지 / 양식 관리</h2>
 				<div id="title-kind">
 	               <form action="mypage-admin-form-not-approved.mypage" method="post">
 	                  <button id="waiting">

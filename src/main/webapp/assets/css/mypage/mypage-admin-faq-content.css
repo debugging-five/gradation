@@ -47,7 +47,6 @@ body {
 }
 #question-title {
 	display: flex;
-	margin-left: 4px;
 }
 #question-content {
 	font-size: var(--font-size-h7);
