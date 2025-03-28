@@ -210,6 +210,7 @@ input {
 	outline : none;
 	font-family: var(--font-family-Pretendard-Regular);
 	width : 240px;
+	background-color : var(--color-gray100);
 }
 
 input::placeholder {

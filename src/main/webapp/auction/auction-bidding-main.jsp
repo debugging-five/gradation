@@ -62,7 +62,7 @@
 	         <div id="auction-info3">
 	            <div id="deadline">
 	               <h2>마감시간</h2>
-	               <h2>4일 4시간 44분 44초</h2>
+	               <h2 id="countdown">4일 4시간 44분 44초</h2>
 	            </div>
 	            
 	            <div id="price-wrapper">

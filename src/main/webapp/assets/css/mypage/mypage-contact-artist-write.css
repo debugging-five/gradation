@@ -19,11 +19,11 @@ body {
 }
 
 #category {
-
+	margin : 0 0 200px 0;
 } 
 
 #title {
-	margin-bottom: 50px;
+	margin-bottom: 36px;
 }
 
 #notice {
@@ -33,7 +33,7 @@ body {
 }
 
 #notice p {
-	font-size : var(--font-size-h7);
+	font-size : var(--font-size-h9);
 	font-weight : var(--font-weight-light);
 }
 
@@ -85,6 +85,7 @@ textarea {
 	font-weight : var(--font-weight-regular);
 	color : var(--color-gray900);
 	padding : 10px 0 0 10px;
+	resize : none; 
 }
 
 #input-file {
