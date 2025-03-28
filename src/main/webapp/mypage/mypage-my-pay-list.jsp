@@ -14,11 +14,13 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category"></div>
+			<div id="category">
+				<%@ include file="mypage-info-layout.jsp" %>
+			</div>
 			<div id="content-wrap">
 				<h2 id="title">경매 및 구매 / 구매 내역</h2>
 				<div id="title-kind">
-	               <form action="" method="post">
+	               <form action="mypage-my-auction-list.mypage" method="post">
 	                  <button id="auctioned">
 	                     <h5>경매 내역</h5>
 	                  </button>
