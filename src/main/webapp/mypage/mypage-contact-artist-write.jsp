@@ -39,18 +39,7 @@
 					<h5>내용<span class="star">*</span></h5>
 					<textarea>내용을 입력하세요.</textarea>
 				</div>
-				
-				<div id="input-file">
-					<h5>첨부파일</h5>
-					<button id="file-button">첨부파일</button>
-				</div>
-	
-				<div class="input-wrapper">
-					<div class="input-email">
-						<h5>이메일<span class="star">*</span></h5>
-						<input type="text" placeholder="이메일을 입력하세요."/>
-					</div>
-				</div>
+
 				
 				<!-- 내 활동 / 작가와 연락 페이지로 이동 -->
 				<form action="mypage-contact-artist-list.jsp" method="post">

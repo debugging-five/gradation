@@ -3,27 +3,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
 </head>
 <body>
-<body>
-  <h1>kakaoMap</h1>
-  <div id="map" style="width:500px;height:400px;"></div>
-	// 기본적인 맵 크기를 정하는 부분 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=이 곳에 appkey를 적어주세요."></script>
-  <script>
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-			// 처음 보일 때의 좌표
-      level: 3
-    };
+	<div>Kakao 지도</div>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
+	<script type="text/javascript">
 
-    var map = new kakao.maps.Map(container, options);
-  </script>
+		window.onload = function() {
+			
+			var mapContainer = document.getElementById("map");
+			var options = {
+				center:	new kakao.maps.LatLng(33.450701, 126.570667),
+				level: 3
+			};
+			
+			kakao.maps.load(function() {
+				var map = new kakao.maps.Map(mapContainer, options);
+			});	
+	};		
 
-</body>
-
+	</script>
 </body>
 </html>

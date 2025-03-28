@@ -25,7 +25,7 @@
 				
 				<div id="title-wrapper">
 					<div id="contact-title">
-						<h3>작품이 마음에 듭니다. 후원요청합니다.</h3>
+						<h3>작품이 마음에 듭니다. 후원요청합니다.</h3> <!-- 제목은 수정 불가 -->
 						<p>25. 01. 15</p>
 					</div>
 				</div>
@@ -48,14 +48,24 @@
 				
 				<!-- 쪽지 내용 div -->
 				<div id="contact-content">
-				<p>작품이 마음에 듭니다. 후원요청합니다. 
-삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데, 왜냐하면 입체작품(비교 적 크기가 작은)의 놓이와 폭 등을 실측하기 위해서는 2개 내지는 3개의 자를 조립하 여 사용할 경우도 있기 때문이다. 줄자는 철제로 된 것 뿐만 아니라 비닐과 천과 같은 부드러운 소재로 만들어진 것도 필요하다. 이것은 종이를 소재로 했거나 깨어지기 쉬 운 공예작품과 같이 매우 조심스럽게 다루어야 할 작품을 실측하는데 유용하기 때문이다.삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데, 왜냐하면 입체작품(비교 적 크기가 작은)의 놓이와 폭 등을 실측하기 위해서는 2개 내지는 3개의 자를 조립하 여 사용할 경우도 있기 때문이다. 줄자는 철제로 된 것 뿐만 아니라 비닐과 천과 같은 부드러운 소재로 만들어진 것도 필요하다. 이것은 종이를 소재로 했거나 깨어지기 쉬 운 공예작품과 같이 매우 조심스럽게 다루어야 할 작품을 실측하는데 유용하기 때문이다.삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데, 왜냐하면 입체작품(비교 적 크기가 작은)의 놓이와 폭 등을 실측하기 위해서는 2개 내지는 3개의 자를 조립하 여 사용할 경우도 있기 때문이다. 줄자는 철제로 된 것 뿐만 아니라 비닐과 천과 같은 부드러운 소재로 만들어진 것도 필요하다. 이것은 종이를 소재로 했거나 깨어지기 쉬 운 공예작품과 같이 매우 조심스럽게 다루어야 할 작품을 실측하는데 유용하기 때문이다.</p>
+					<p id="content-text">작품이 마음에 듭니다. 후원요청합니다. 삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데...</p>
 				</div>
 				
 				<div id="button-wrapper">
 					<button id="list-button" type="button">목록</button>
 					<button id="delete-button" type="button">삭제</button>
-					<button id="modify-button" type="button">수정</button>
+					<button id="modify-button" type="button" onclick="editMode()">수정</button>
+				</div>
+				
+				<!-- 수정 상태의 입력 필드들 -->
+				<div id="edit-fields">
+					<div id="content-edit">
+						<textarea id="content-input">작품이 마음에 듭니다. 후원요청합니다. 삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데...</textarea>
+					</div>
+					<div id="save-cancel-buttons">
+						<button id="cancel-button" type="button" onclick="cancelEdit()">취소</button>
+						<button id="save-button" type="button" onclick="saveEdit()">저장</button>
+					</div>
 				</div>
 				
 			</div>

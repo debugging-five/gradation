@@ -10,4 +10,6 @@ public class AuctionDAO {
  	public AuctionDAO() {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
+ 	
+ 	
 }

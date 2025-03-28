@@ -81,4 +81,5 @@
 	</div>
 
 </body>
+<script type="text/javascript" src="../assets/js/auction/auction-bidding-popup.js"></script>
 </html>
