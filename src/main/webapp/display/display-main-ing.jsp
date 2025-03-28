@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<% String uri = request.getRequestURI();%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,10 +23,12 @@
 					<div class="tab-wrapper">
 						<div class="tab-labels">
 							<div class="tab-text">
-								<a href="../display/display-main-ing.display">전시중</a>
+								<a href="../display/display-main-ing.display"
+								 class="<%= uri.contains("display-main-ing") ? "active" : "" %>">전시중</a>
 							</div>
 							<div class="tab-text-upcoming">
-								<a href="../display/display-main-comming-soon.display">전시예정</a>
+								<a href="../display/display-main-comming-soon.display"
+								 class="<%= uri.contains("display-main-comming-soon") ? "active" : "" %>">전시예정</a>
 							</div>
 						</div>
 					</div>
@@ -35,22 +37,28 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="../display/display-category-korean.display">한국화</a>
+								<a href="../display/display-category-korean.display"
+								 class="<%= "korean".equals(request.getParameter("category")) ? "active" : "" %>">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-painting.display">회화</a>
+								<a href="../display/display-category-painting.display"
+								 class="<%= "painting".equals(request.getParameter("category")) ? "active" : "" %>">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-sculpture.display">조각</a>
+								<a href="../display/display-category-sculpture.display"
+								 class="<%= "sculpture".equals(request.getParameter("category")) ? "active" : "" %>">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-craft.display">공예</a>
+								<a href="../display/display-category-craft.display"
+								 class="<%= "craft".equals(request.getParameter("category")) ? "active" : "" %>">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-architecture.display">건축</a>
+								<a href="../display/display-category-architecture.display"
+								 class="<%= "architecture".equals(request.getParameter("category")) ? "active" : "" %>">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-calligraphy.display">서예</a>
+								<a href="../display/display-category-calligraphy.display"
+								 class="<%= "calligraphy".equals(request.getParameter("category")) ? "active" : "" %>">서예</a>
 							</div>
 						</div>
 					</div>
@@ -295,7 +303,8 @@
 				for (int i = 1; i <= totalPages; i++) {
 				%>
 				<a href="display-main-ing.display?page=<%=i%>"
-					class="<%=(i == currentPage) ? "active" : ""%>"> <%=i%>
+					 class="page-number <%= (i == currentPage) ? "active" : "" %>"> 
+					 <%=i%>
 				</a>
 				<%
 				}
@@ -338,6 +347,15 @@
 
 	  document.getElementById("sortDropdown").style.display = "none";
 	}
+  document.querySelectorAll('.category-link').forEach(link => {
+	  link.addEventListener('click', function () {
+
+	    document.querySelectorAll('.category-link').forEach(el => el.classList.remove('active'));
+
+	    this.classList.add('active');
+	  });
+	});
+
 
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");

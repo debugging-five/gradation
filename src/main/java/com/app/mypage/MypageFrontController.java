@@ -14,8 +14,8 @@ import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
 import com.app.mypage.controller.MypageAdminFormApprovedController;
 import com.app.mypage.controller.MypageAdminFormNotApprovedController;
-import com.app.mypage.controller.MypageAdminQnaContentController;
 import com.app.mypage.controller.MypageAdminQnaContentCompletedController;
+import com.app.mypage.controller.MypageAdminQnaContentController;
 import com.app.mypage.controller.MypageAdminQnaListCompletedController;
 import com.app.mypage.controller.MypageAdminQnaListWaitingController;
 import com.app.mypage.controller.MypageAdminUserManageController;
@@ -33,6 +33,15 @@ import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostContentController;
 import com.app.mypage.controller.MypagePostContentModifyController;
 import com.app.mypage.controller.MypagePostListController;
+import com.app.mypage.controller.MypageServiceCenterFaqContentController;
+import com.app.mypage.controller.MypageServiceCenterQnaContentController;
+import com.app.mypage.controller.MypageServiceCenterQnaDeleteOkController;
+import com.app.mypage.controller.MypageServiceCenterFaqListController;
+import com.app.mypage.controller.MypageServiceCenterQnaListController;
+import com.app.mypage.controller.MypageServiceCenterQnaSendController;
+import com.app.mypage.controller.MypageServiceCenterQnaSendOkController;
+import com.app.mypage.controller.MypageServiceCenterQnaUpdateController;
+import com.app.mypage.controller.MypageServiceCenterQnaUpdateOkController;
 
 public class MypageFrontController extends HttpServlet{
 	
@@ -88,6 +97,7 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageAdminFaqRegisterController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-faq-content")) {
 			result = new MypageAdminFaqContentController().execute(req, resp);
+<<<<<<< HEAD
 		}else if(target.equals("mypage/mypage-post-content")) {
 			result = new MypagePostContentController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-my-post-content")) {
@@ -96,6 +106,26 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypagePostContentModifyController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-send-post-content-modify")) {
 			result = new MyPageSendPostContentModifyController().execute(req, resp);
+=======
+		} else if(target.equals("mypage/mypage-service-center-qna-list")) {
+			result = new MypageServiceCenterQnaListController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-send")) {
+			result = new MypageServiceCenterQnaSendController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-send-ok")) {
+			result = new MypageServiceCenterQnaSendOkController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-content")) {
+			result = new MypageServiceCenterQnaContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-update")) {
+			result = new MypageServiceCenterQnaUpdateController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-update-ok")) {
+			result = new MypageServiceCenterQnaUpdateOkController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-qna-delete-ok")) {
+			result = new MypageServiceCenterQnaDeleteOkController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-faq-list")) {
+			result = new MypageServiceCenterFaqListController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-service-center-faq-content")) {
+			result = new MypageServiceCenterFaqContentController().execute(req, resp);
+>>>>>>> master
 		}else {
 //			전부 404
 		}
