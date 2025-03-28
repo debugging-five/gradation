@@ -36,7 +36,7 @@
 						<!-- 학교1 -->
 						<div class="exhibition-info">
 							<div class="university-logo1">
-								<img class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-1.png" alt="로고1" />
 							</div>
 							
 							<div class="university-info">
@@ -66,7 +66,7 @@
 						<!-- 학교2 -->
 						<div class="exhibition-info">
 							<div class="university-logo2">
-								<img class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-2.png" alt="로고2" />
 							</div>
 							
 							<div class="university-info">
@@ -96,7 +96,7 @@
 						<!-- 학교3 -->
 						<div class="exhibition-info">
 							<div class="university-logo1">
-								<img class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-1.png" alt="로고1" />
 							</div>
 							
 							<div class="university-info">
@@ -126,7 +126,7 @@
 						<!-- 학교4 -->
 						<div class="exhibition-info">
 							<div class="university-logo2">
-								<img class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-2.png" alt="로고2" />
 							</div>
 							
 							<div class="university-info">
@@ -160,7 +160,7 @@
 						<!-- 학교1 -->
 						<div class="exhibition-info">
 							<div class="university-logo1">
-								<img class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-1.png" alt="로고1" />
 							</div>
 							
 							<div class="university-info">
@@ -190,7 +190,7 @@
 						<!-- 학교2 -->
 						<div class="exhibition-info">
 							<div class="university-logo2">
-								<img class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-2.png" alt="로고2" />
 							</div>
 							
 							<div class="university-info">
@@ -220,7 +220,7 @@
 						<!-- 학교3 -->
 						<div class="exhibition-info">
 							<div class="university-logo1">
-								<img class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-1.png" alt="로고1" />
 							</div>
 							
 							<div class="university-info">
@@ -250,7 +250,7 @@
 						<!-- 학교4 -->
 						<div class="exhibition-info">
 							<div class="university-logo2">
-								<img class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" />
+								<img class="logo-img" src="../assets/images/exhibition/university-logo-2.png" alt="로고2" />
 							</div>
 							
 							<div class="university-info">

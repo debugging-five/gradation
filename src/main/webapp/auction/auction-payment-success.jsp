@@ -68,10 +68,11 @@
 			</div>
 		</div>
 		<div id="button-wrapper">
-			<button>확인</button>
+			<button type="button" id="ok-button">확인</button>
 		</div>
 	</div>
 </div>
 
 </body>
+<script type="text/javascript" src="../assets/js/auction/auction-payment-success.js"></script>
 </html>
