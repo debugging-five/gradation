@@ -9,6 +9,9 @@
 <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 <script src="/javascript/popup_2.js"></script>
 <title>경매 결제</title>
+<!-- 토스페이 -->
+<script type="text/javascript" src="https://pay.toss.im/js/v1.0.0/toss.js"></script>
+<!-- 주소검색 -->
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
 	function execDaumPostcode() {
@@ -198,6 +201,34 @@
 			}
 		});
 	});
+	
+	
+	document.getElementById("payment-button").addEventListener("click", function() {
+        // 서버에서 결제 정보를 받아옵니다
+        fetch('/api/create-toss-payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                amount: 10000,  // 결제 금액
+                orderId: '12345',  // 주문 ID (유니크한 값)
+                productName: '테스트 상품',  // 상품명
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.paymentUrl) {
+                // Toss 결제창을 열기
+                TossPayments.requestPayment('카드', {
+                    paymentUrl: data.paymentUrl,  // 서버에서 전달받은 결제 URL
+                });
+            }
+        })
+        .catch(error => {
+            console.error("결제 요청 오류:", error);
+        });
+    });
 </script>
 </body>
 <script type="text/javascript" src="../assets/js/auction/auction-payment-main.js"></script>

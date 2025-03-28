@@ -6,10 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/exhibition/university-exhibition-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
 <title>대학교 전시회 메인</title>
 </head>
-<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
 <form action="" method="post">
@@ -26,204 +24,72 @@
 	</div>
 	
 	<div id="map-wrapper">
-		<div>지도</div>
+		<div id="map" style="width:500px;height:400px;"></div>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
+		<script>
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(33.450701, 126.570667),
+				level: 3
+			};
+	
+			var map = new kakao.maps.Map(container, options);
+	</script>
 	</div>
 	
 	<!-- 대학 리스트 + 전시회 사진 -->
 	<div id="list-wrapper">
-	<div id="scroll-wrapper" >
-		<div id="university-list">
-			<div id="bar">
-				<div id="bar-left">
-					<div id="area-dropdown">
-						<select id="area" name="area">
-							<option value="area">전체 지역</option>
-							<option value="area1">서울</option>
-							<option value="area2">경기</option>
-							<option value="area3">강원</option>
-							<option value="area4">인천</option>
-							<option value="area5">충남</option>
-							<option value="area6">충북</option>
-							<option value="area7">대전</option>
-							<option value="area8">경북</option>
-							<option value="area9">경남</option>
-							<option value="area10">대구</option>
-							<option value="area11">부산</option>
-							<option value="area12">전북</option>
-							<option value="area13">전남</option>
-							<option value="area14">광주</option>
-							<option value="area15">제주</option>
-						</select>
-					</div>
+		<div id="scroll-wrapper" >
+		<div id="university-list"><div>
+		  <!-- 지역 필터링 드롭다운 -->
+		  <select id="regionFilter">
+		    <option value="">전체 지역</option>
+		    <option value="seoul">서울</option>
+		    <option value="gyeonggi">경기</option>
+		    <option value="gangwon">강원</option>
+		    <option value="incheon">인천</option>
+		  </select>
 
-					<!-- <span class="bar-menu">전시 상태</span> -->
-					<div id="state-dropdown">
-						<select id="state" name="state">
-							<option value="state">전시 상태</option>
-							<option value="state1">예정 전시</option>
-							<option value="state2">진행 전시</option>
-						</select>
-					</div>
-					
-					<div id="my-pick">
-						<p>My pick</p>
-					</div>
-					
-				</div>
-				<div id="bar-right">
-					<input type="text" placeholder="대학교를 검색하세요." />
- 					<img id="icon1" src="../assets/images/exhibition/search.png" alt="돋보기" />
-				</div>
+		  <!-- 전시 상태 필터링 드롭다운 -->
+		  <select id="statusFilter">
+		    <option value="">전시 상태</option>
+		    <option value="upcoming">예정</option>
+		    <option value="ongoing">진행 중</option>
+		  </select>
+
+		  <!-- 검색창 -->
+		  <input type="text" id="searchInput" placeholder="대학 이름 검색">
+			<div id='icon-wrapper'>
+				<img id="icon2" src="../assets/images/exhibition/notice.png" alt="아이콘" />
+				<p id="notice">전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
 			</div>
-			
-			<div id="list-content">
-				<div id='icon-wrapper'>
-					<img id="icon2" src="../assets/images/exhibition/notice.png" alt="아이콘" />
-					<p>전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
-				</div>
-			</div>
-			
-			<!-- 학교1 -->
-			<div class="exhibition-info">
-				<div id="university-logo1">
-					<img id="logo1" class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
-				</div>
-				
-				<div class="university-info">
-					<div>
-						<h6>강원대학교</h6>
-					</div>
-					
-					<div>
-						<p class="info1">제 8회 졸업전시회</p>
-					</div>
-					
-					<div>
-						<p class="info2 major">디자인학과</p>
-					</div>
-					
-					<div>
-						<p class="info2">2025/02/22 ~ 2025/02/28</p>
-					</div>
-					
-					<div>
-						<p class="info2">강원 삼척시 중앙로 346 강원대학교 조형관 1층</p>
-					</div>
-					
-					<div id="button-wrapper">
-						<button type="button" onclick="location.href='https://multidesign.kangwon.ac.kr/multidesign/community/photo-gallery.do?mode=view&articleNo=429939&title=%5B%EC%84%9C%EC%9A%B8%5D+2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'" class="button-comming">전시예정</button>
-						<div>
-							<button type="button" class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- 학교2 -->
-			<div class="exhibition-info">
-				<div id="university-logo2">
-					<img id="logo2" class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" >
-				</div>
-				
-				<div class="university-info">
-					<div>
-						<h6>이화여자대학교</h6>
-					</div>
-					
-					<div>
-						<p class="info1">제 14회 졸업전시회</p>
-					</div>
-					
-					<div>
-						<p class="info2 major">패션디자인전공</p>
-					</div>
-					
-					<div>
-						<p class="info2">2025/02/10 ~ 2025/02/15</p>
-					</div>
-					
-					<div>
-						<p class="info2">이화여자대학교 조형예술관 A동 2층 이화아트</p>
-					</div>
-					
-					<div id="button-wrapper">
-						<button type="button" onclick="location.href='http://artndesign.ewha.ac.kr/artewha/61/subview.do'"type="button" onclick="location.href='https://multidesign.kangwon.ac.kr/multidesign/community/photo-gallery.do?mode=view&articleNo=429939&title=%5B%EC%84%9C%EC%9A%B8%5D+2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'" class="button-comming">전시중</button>
-						<div>
-							<button type="button" class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
+		  <!-- 전시회 리스트 -->
+		  <div id="exhibitionList">
+		    <!-- 전시회 항목들이 여기에 표시됩니다. -->
+		  </div>
+		</div>
 			
 			<!-- 학교3 -->
 			<div class="exhibition-info">
 				<div id="university-logo1">
-					<img id="logo1" class="logo-img" src="../assets/images/exhibition/university-1.png" alt="로고1" />
+					<img id="logo1" class="logo-img" src="../assets/images/exhibition/university-logo-1.png" alt="로고1" />
 				</div>
 				
 				<div class="university-info">
-					<div>
-						<h6>강원대학교</h6>
-					</div>
-					
-					<div>
-						<p class="info1">제 8회 졸업전시회</p>
-					</div>
-					
-					<div>
-						<p class="info2 major">디자인학과</p>
-					</div>
-					
-					<div>
-						<p class="info2">2025/02/22 ~ 2025/02/28</p>
-					</div>
-					
-					<div>
-						<p class="info2">강원 삼척시 중앙로 346 강원대학교 조형관 1층</p>
-					</div>
-					
-					<div id="button-wrapper">
-						<button type="button" onclick="location.href='https://multidesign.kangwon.ac.kr/multidesign/community/photo-gallery.do?mode=view&articleNo=429939&title=%5B%EC%84%9C%EC%9A%B8%5D+2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'" class="button-comming">전시예정</button>
-						<div>
-							<button type="button" class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
-						</div>
-					</div>
+	
+
 				</div>
 				
 			</div>
 			<!-- 학교4 -->
 			<div class="exhibition-info">
 				<div id="university-logo2">
-					<img id="logo2" class="logo-img" src="../assets/images/exhibition/university-2.png" alt="로고2" >
+					<img id="logo2" class="logo-img" src="../assets/images/exhibition/university-logo-2.png" alt="로고2" >
 				</div>
 				
 				<div class="university-info">
-					<div>
-						<h6>이화여자대학교</h6>
-					</div>
-					
-					<div>
-						<p class="info1">제 14회 졸업전시회</p>
-					</div>
-					
-					<div>
-						<p class="info2 major">패션디자인전공</p>
-					</div>
-					
-					<div>
-						<p class="info2">2025/02/10 ~ 2025/02/15</p>
-					</div>
-					
-					<div>
-						<p class="info2">이화여자대학교 조형예술관 A동 2층 이화아트</p>
-					</div>
-					
-					<div id="button-wrapper">
-						<button type="button" onclick="location.href='http://artndesign.ewha.ac.kr/artewha/61/subview.do'"type="button" onclick="location.href='https://multidesign.kangwon.ac.kr/multidesign/community/photo-gallery.do?mode=view&articleNo=429939&title=%5B%EC%84%9C%EC%9A%B8%5D+2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'" class="button-comming">전시중</button>
-						<div>
-							<button type="button" class="button-like">좋아요<i class="fa-regular fa-heart fa-2xs"></i></button>
-						</div>
-					</div>
+
+
 				</div>
 			</div>
 		</div>
@@ -233,7 +99,7 @@
 			<div id="img-background" >
 				<img id="chevron-left" src="../assets/images/exhibition/chevron-left.png" alt="왼쪽" />
 				<div id="img-wrapper">
-					<img src="../assets/images/exhibition/university-exhibition-1.jpg" alt="대학교 전시회1" />
+					<img id="main-image" src="../assets/images/exhibition/university-exhibition-1.png" alt="대학교 전시회1" />
 				</div>
 				<img id="chevron-right" src="../assets/images/exhibition/chevron-right.png" alt="오른쪽" />
 			</div>
@@ -251,50 +117,9 @@
 	
 </div>
 
-<section id="sliderType04">
-    <div class="slider__wrap">
-        <div class="slider__img">
-            <div class="slider__inner">
-                <div class="slider" role="group" aria-label="1/5">
-                    <img src="../assets/img/Mountian_bg01.jpg" alt="이미지6">
-                </div>
-                <div class="slider" role="group" aria-label="2/5">
-                    <img src="../assets/img/Mountian_bg02.jpg" alt="이미지7">
-                </div>
-                <div class="slider" role="group" aria-label="3/5">
-                    <img src="../assets/img/Mountian_bg03.jpg" alt="이미지8">
-                </div>
-                <div class="slider" role="group" aria-label="4/5">
-                    <img src="../assets/img/Mountian_bg04.jpg" alt="이미지9">
-                </div>
-                <div class="slider" role="group" aria-label="5/5">
-                    <img src="../assets/img/Mountian_bg05.jpg" alt="이미지10">
-                </div>
-            </div>
-        </div>
-        <div class="slider__btn">
-            <a href="#" class="prev" role="button" aria-label="왼쪽 이미지">prev</a>
-            <a href="#" class="next" role="button" aria-label="오른쪽 이미지">next</a>
-        </div>
-    </div>
-</section>
-
 <%@ include file="../layout/footer.jsp" %>
 </form>
-
-  <div id="map" style="width:500px;height:400px;">
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
-  <script>
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-			// 처음 보일 때의 좌표
-      level: 3
-    };
-
-    var map = new kakao.maps.Map(container, options);
-  </script>
-</div>
 </body>
 <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
+
 </html>

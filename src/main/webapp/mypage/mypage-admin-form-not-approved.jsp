@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-form-not-approved.css" />
-<title>고객센터 / 고객 문의 목록</title>
+<title>관리자 페이지</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
@@ -18,7 +18,7 @@
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
-				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
+				<h2 id="title">관리자 마이페이지 / 양식 관리</h2>
 				<div id="title-kind">
 	               <div id="waiting">
 	                  <h5>미승인</h5>
@@ -84,15 +84,72 @@
 							<h6 class="item-number">4</h6>
 						</div>
 						<div class="item-kind-wrap">
-							<p class="item-kind">auction</p>
+							<p class="item-kind">exhibition</p>
 						</div>
 						<div class="item-title-wrap">
-							<p class="item-title">경매 양식 승인 요청</p>
+							<p class="item-title">대학 승인 요청</p>
 						</div>
 						<div class="item-date-wrap">
 							<h6 class="item-date">25.01.25</h6>
 						</div>
 					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h6 class="item-number">5</h6>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">exhibition</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">대학 승인 요청</p>
+						</div>
+						<div class="item-date-wrap">
+							<h6 class="item-date">25.01.25</h6>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h6 class="item-number">6</h6>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">exhibition</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">대학 승인 요청</p>
+						</div>
+						<div class="item-date-wrap">
+							<h6 class="item-date">25.01.25</h6>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h6 class="item-number">7</h6>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">exhibition</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">대학 승인 요청</p>
+						</div>
+						<div class="item-date-wrap">
+							<h6 class="item-date">25.01.25</h6>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-number-wrap">
+							<h6 class="item-number">8</h6>
+						</div>
+						<div class="item-kind-wrap">
+							<p class="item-kind">exhibition</p>
+						</div>
+						<div class="item-title-wrap">
+							<p class="item-title">대학 승인 요청</p>
+						</div>
+						<div class="item-date-wrap">
+							<h6 class="item-date">25.01.25</h6>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -100,4 +157,5 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-admin-form-not-approved.js"></script>
 </html>

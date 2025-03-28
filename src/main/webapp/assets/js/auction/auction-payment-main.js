@@ -102,3 +102,17 @@ document.getElementById("email").addEventListener("input", function() {
         emailError.style.display = "none";
     }
 });
+
+// 토스페이
+  // 결제하기 버튼 클릭 시 TossPay 결제창 호출
+  document.getElementById("payment-button").addEventListener("click", function() {
+    // TossPay 결제 API 호출 코드
+    tosspay.popup({
+      key: "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm", // TossPay에서 발급받은 API Key
+      orderId: "unique_order_id_1234", // 주문 ID (고유값)
+      amount: 999999999, // 결제 금액
+      successUrl: "http://yourwebsite.com/success", // 결제 성공 후 리디렉션 URL
+      failUrl: "http://yourwebsite.com/fail", // 결제 실패 후 리디렉션 URL
+      cancelUrl: "http://yourwebsite.com/cancel", // 결제 취소 후 리디렉션 URL
+    });
+  });
