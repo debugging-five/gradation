@@ -16,11 +16,11 @@
          <div class="footer-menu">
             <div class="menu1">
                <p class="menu-wrap">주요 기능</p>
-               <p><a href="#">작품 모아보기</a></p>
-               <p><a href="#">작가</a></p>
-               <p><a href="#">경매</a></p>
-               <p><a href="#">전시회</a></p>
-               <p><a href="#">업사이클링</a></p>
+               <p><a href="/gradation/display/display-main-ing.display">작품 모아보기</a></p>
+               <p><a href="/gradation/artist/artist-main.artist">작가</a></p>
+               <p><a href="/gradation/auction/auction-main.auction">경매</a></p>
+               <p><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">전시회</a></p>
+               <p><a href="/gradation/upcycling/upcycling-main.upcycling">업사이클링</a></p>
             </div>
             <div class="menu2">
                <p class="menu-wrap">고객 지원</p>

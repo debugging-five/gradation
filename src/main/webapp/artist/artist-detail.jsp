@@ -24,7 +24,7 @@
 					<img src="../assets/images/artist/cat 2.png" alt="프로필 이미지" />
 					<h2 class="name">홍길동</h2>
 					<h6 class="university">00대학교</h6>
-					<button>작가와 연락</button>
+					<button id="contact-writer">작가와 연락</button>
 					<div class="sns">
 						<div>
 							<a class="icon" href="https://www.instagram.com/" target="_blank">
@@ -81,15 +81,12 @@
 				</div>
 				<h3 id="art">작가 작품</h3>
 				<div id="art-details">
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
-				    <div class="image-box"></div>
+				    <div class="image-box">
+				    	<img src="../assets/images/artist/artist-detail/img-korean-two-koifish.jpeg" alt="물고기사진" />
+				    </div>
+				    <div class="image-box">
+				    	<img src="../assets/images/artist/artist-detail/img-sculpture-cat-2.jpeg" alt="고양이사진" />
+				    </div>
 				</div>
 			</div>
 		</div>
@@ -100,6 +97,7 @@
 	<%@ include file="../layout/footer.jsp" %>
 
 </body>
+<script type="text/javascript" src="../assets/js/artist/artist-detail.js"></script>
 </html>
 
 
