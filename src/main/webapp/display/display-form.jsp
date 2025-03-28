@@ -29,27 +29,32 @@
 			    <span class="add-text">첨부파일 업로드</span>
 			    <!-- 숨겨진 파일 업로드 input -->
 			    <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
+				<div class="image-error"><p>필수 항목입니다.</p></div>	
 			</div>
 	
 		
 			<!-- 작가 및 작품 정보 -->
 			<div id="content">
 				<form>
-					<div class="input-text">
+					<div class="input-author">
 				        <label>작가명<span class="essential">*</span></label>
 				        <input type="text" id="author" placeholder="작가명을 입력하세요."
-				        		style="margin-left: 49px" class="input-box">			
+				        		style="margin-left: 49px" class="input-box">		
+				        <div class="author-error error-message"><p>필수 항목입니다.</p></div>	
 					</div>
-					<div class="input-text">
+					
+					<div class="input-title">
 				        <label>작품명<span class="essential">*</span></label>
 				        <input type="text" id="title" placeholder="작품명을 입력하세요."
-				        		style="margin-left: 49px" class="input-box">			
+				        		style="margin-left: 49px" class="input-box">
+				        <div class="title-error error-message"><p>필수 항목입니다.</p></div>				
 					</div>
-					<div id="category" class="input-text">
+					
+					<div id="category" class="input-category">
 					    <label>작품 분류<span class="essential">*</span></label>
 					    <div id="category-text" style="cursor: pointer;">
 					        작품 분류를 선택하세요
-					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">
+					        <img class="down-image" alt="down-icon" src="../assets/images/display/down.png">	
 					    </div> 
 					    <select id="category-select" class="select-box" style="display: none;">
 					    	<option value="" disabled selected>분류</option>
@@ -61,40 +66,60 @@
 					        <option value="서예">서예</option>
 					    </select>
 					</div>
-					<div class="input-text">
+					<div class="category-line"></div>
+					
+					<div class="input-material">
 				        <label>작품 재료<span class="essential">*</span></label>
 				        <input type="text" id="material" placeholder="작품 재료를 입력하세요."
-				        		style="margin-left: 25px" class="input-box">			
+				        		style="margin-left: 30px" class="input-box">	
+				    	<div class="material-error"><p>필수 항목입니다.</p></div>			
 					</div>
-					<div class="input-text">
+					
+					<div class="input-size">
 				        <label>작품 규격<span class="essential">*</span></label>
-				        <div class="size-input" style="margin-left: 23px">
+				        <div class="size-input" style="margin-left: 27px">
 						  <input type="text" id="width" placeholder="가로">
 						  <span>X</span>
 						  <input type="text" id="height" placeholder="세로">
 						  <span>X</span>
 						  <input type="text" id="depth" placeholder="높이">
-						</div>		
+						</div>
+						<div class="size-error error-message"><p>필수 항목입니다.</p></div>		
 					</div>
-					
+					   	<div class="category-error error-message"><p>필수 항목입니다.</p></div>				
 				</form>
 			</div>
 	</div>
 	
+	
 	<!-- 작품설명 -->
 	<div>
 		<label class="artist-info">작품설명<span class="essential">*</span></label>
-		<textarea id="description" placeholder="작품 설명을 입력하세요." class="info-typing"></textarea>	
+		<textarea id="description" placeholder="작품 설명을 입력하세요." class="info-typing"></textarea>
+		<div class="description-error"><p>필수 항목입니다.</p></div>	
 	</div>
 
 	
 	<!-- 취소, 등록 버튼 -->
 	<div id="buttons">
-		<button class="button-cancel">취소</button> 
+		<a href="../display/display-main-ing.jsp">
+			<button class="button-cancel">취소</button> 
+		</a>
 		<button class="button-upload" onclick="openPopup()">등록</button>
 	</div>
 	
-	
+	<!-- 빈 내용일 시 팝업 -->
+	<div class="modal-bg-no" id="modalBgNo">
+	    <div class="modal-no">
+	        <div class="modal-title-no">
+	        	<img class="attention-icon" alt="attention-icon" src="../assets/images/display/attention.png">
+	        	<span>내용을 입력하세요.</span>
+	        </div>
+	        <div class="modal-footer-no">
+	            <button class="empty" onclick="closePopup()">확인</button>
+	        </div>
+	    </div>
+	</div>	
 	
 	<!-- 제출 클릭 시 팝업 -->
 	<div class="modal-bg" id="modalBg">

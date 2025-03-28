@@ -65,7 +65,7 @@ body {
 	margin-top: 15px;	
 }
 
-.input-text {
+.input-author {
 	border-bottom: solid 1px;
 	width : 400px;
 	padding-bottom: 7px;
@@ -73,6 +73,52 @@ body {
 	margin-bottom: 50px;
 	display: flex;
 	color: var(--color-black);
+}
+.input-title {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+}
+.input-category {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+}
+.input-material {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+}
+.input-size {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+}
+.input-date {
+	border-bottom: solid 1px;
+	width : 400px;
+	padding-bottom: 7px;
+	font-size: 18px;
+	margin-bottom: 50px;
+	display: flex;
+	color: var(--color-black);
+	gap: 8px;
 }
 
 
@@ -82,6 +128,7 @@ body {
     outline: none; /* 포커스 시 외곽선 없애기 (선택적) */
     background-color: #FBFCFC;
     font-size: 16px;
+    color:  var(--color-gray900);
 }
 
 
@@ -100,8 +147,8 @@ body {
 	display: flex;
 }
 #category-text {
-    margin-left: 25px;
-    font-size: 16px;
+    margin-left: 30px;
+    font-size: 17px;
     color: var(--color-gray900);
     margin-right: 10px;
     cursor: pointer; /* 클릭 가능하게 설정 */
@@ -134,7 +181,8 @@ body {
     font-size: 16px;
     color: var(--color-gray900);
     margin-right: 10px;
-    
+    display: flex;
+    align-items: center;
    
 }
 .calender-image {

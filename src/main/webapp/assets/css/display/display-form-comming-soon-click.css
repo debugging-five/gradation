@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* 제출하시겠습니까? */
-/* 배경 어둡게 */
 .modal-bg {
     display: none;
 	position: fixed;
@@ -126,6 +125,8 @@
 
 
 
+
+
 /* 제출완료 팝업 */
 /* 전체 화면을 덮는 배경 */
 .close-btn2 {
@@ -208,10 +209,6 @@
 }
 
 
-
-
-
-/* 에러 메시지 */
 .image-error {
     font-size: 12px;     
     color: var(--color-warning);       
@@ -240,11 +237,18 @@
     font-size: 12px;     
     color: var(--color-warning);       
     position: relative;
-	top: -216px;
+	top: -300px;
     right: -104px;	
     display: none;
 }
-
+.category-error2 {
+    font-size: 12px;     
+    color: var(--color-warning);       
+    position: relative;
+	top: -219px;
+    right: -104px;	
+    display: none;
+}
 .material-error {
     font-size: 12px;     
     color: var(--color-warning);       
@@ -265,7 +269,7 @@
     font-size: 12px;     
     color: var(--color-warning);       
     position: relative;
-    top: -65px;
+    top: -50px;
     right: -104px;
     display: none;
 }
