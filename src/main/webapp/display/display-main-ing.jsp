@@ -82,43 +82,206 @@
 			<div class="row-main">
 				<div class="row-gallery">
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
-							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
-							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
-							alt="tiger-and-waterfall" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-rainy.jpeg"
+									alt="rainy" data-date="2024-01-08" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">rainy</div>
+										<div class="hover-artist">박세현</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
+									alt="gradation-6" data-date="2024-01-01" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">SYSO.println(1);</div>
+										<div class="hover-artist">서민아</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
+									alt="gradation-7" data-date="2024-11-08" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">SYSO.println(2);</div>
+										<div class="hover-artist">서민아</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
+									alt="gradation-2" data-date="2024-05-18" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">SYSO.println(3);</div>
+										<div class="hover-artist">서민아</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
+									alt="tiger-and-waterfall" data-date="2024-03-21"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">멍때리는 고양이</div>
+										<div class="hover-artist">곽승민</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-							alt="meditation-house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
-							alt="cat-2" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
+									alt="our-team" data-date="2024-11-01" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">Our Team</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+									alt="meditation-house-3" data-date="2024-02-13" />
+								<div class="hover-overlay">
+									<
+									<div class="hover-text-group">
+										<div class="hover-title">Meditation</div>
+										<div class="hover-artist">이덕준</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
+									alt="hanok-2" data-date="2024-04-14"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">봄의 한옥</div>
+										<div class="hover-artist">조마루</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
+									alt="object-cat" data-date="2024-01-18"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">식빵시리즈2</div>
+										<div class="hover-artist">조냐옹</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
+									alt="cat-2" data-date="2024-09-04"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">자화상</div>
+										<div class="hover-artist">조냐옹</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
-							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
-							alt="oh" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
-							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
-							alt="old-man-in-cafe" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-							alt="meditation-house-3" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
+									alt="catwatercolor-person" data-date="2025-02-12"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">이쁘네</div>
+										<div class="hover-artist">김영수</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-oh.jpeg"
+									alt="oh" data-date="2024-12-13" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">after</div>
+										<div class="hover-artist">일러장</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-whale.jpeg"
+									alt="whale" data-date="2024-11-19"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">말도 안됨</div>
+										<div class="hover-artist">양진영</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
+									alt="old-man-in-cafe" data-date="2024-04-05"/>
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">자화상2</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-meditation-house-2.jpeg"
+									alt="meditation-house-2" data-date="2024-06-07" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">meditation</div>
+										<div class="hover-artist">이덕준</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -150,28 +313,31 @@
   }
 
   function sortGallery(type) {
-    const columns = document.querySelectorAll(".gallery-column");
+	  const columns = document.querySelectorAll(".gallery-column");
 
-    columns.forEach(column => {
-      const images = Array.from(column.querySelectorAll(".gallery-image"));
+	  columns.forEach(column => {
+	    const items = Array.from(column.querySelectorAll(".gallery-item"));
 
-      images.sort((a, b) => {
-        if (type === "name-asc") {
-          return a.alt.localeCompare(b.alt);
-        } else if (type === "name-desc") {
-          return b.alt.localeCompare(a.alt);
-        } else if (type === "date") {
-          const dateA = a.dataset.date || "2000-01-01";
-          const dateB = b.dataset.date || "2000-01-01";
-          return new Date(dateA) - new Date(dateB);
-        }
-      });
+	    items.sort((a, b) => {
+	      const altA = a.querySelector(".gallery-image").alt;
+	      const altB = b.querySelector(".gallery-image").alt;
 
-      images.forEach(img => column.appendChild(img));
-    });
+	      if (type === "name-asc") {
+	        return altA.localeCompare(altB);
+	      } else if (type === "name-desc") {
+	        return altB.localeCompare(altA);
+	      } else if (type === "date") {
+	        const dateA = a.querySelector(".gallery-image").dataset.date || "2000-01-01";
+	        const dateB = b.querySelector(".gallery-image").dataset.date || "2000-01-01";
+	        return new Date(dateA) - new Date(dateB);
+	      }
+	    });
 
-    document.getElementById("sortDropdown").style.display = "none";
-  }
+	    items.forEach(item => column.appendChild(item));
+	  });
+
+	  document.getElementById("sortDropdown").style.display = "none";
+	}
 
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");
@@ -182,6 +348,5 @@
     }
   });
 </script>
-
 </body>
 </html>
