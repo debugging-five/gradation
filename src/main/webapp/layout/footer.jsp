@@ -16,20 +16,20 @@
          <div class="footer-menu">
             <div class="menu1">
                <p class="menu-wrap">주요 기능</p>
-               <p><a href="#">작품 모아보기</a></p>
-               <p><a href="#">작가</a></p>
-               <p><a href="#">경매</a></p>
-               <p><a href="#">전시회</a></p>
-               <p><a href="#">업사이클링</a></p>
+               <p><a href="/gradation/display/display-main-ing.display">작품 모아보기</a></p>
+               <p><a href="/gradation/artist/artist-main.artist">작가</a></p>
+               <p><a href="/gradation/auction/auction-main.auction">경매</a></p>
+               <p><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">전시회</a></p>
+               <p><a href="/gradation/upcycling/upcycling-main.upcycling">업사이클링</a></p>
             </div>
             <div class="menu2">
                <p class="menu-wrap">고객 지원</p>
-               <p><a href="#">자주 묻는 질문</a></p>
-               <p><a href="#">고객센터</a></p>
+               <p><a href="/gradation/mypage/mypage-service-center-qna-list.mypage">1 : 1 문의하기</a></p>
+               <p><a href="/gradation/mypage/mypage-service-center-faq-list.mypage">자주 묻는 질문</a></p>
             </div>
             <div class="menu3">
                <p class="menu-wrap">기업 소개</p>
-               <p><a href="#">그라데이션</a></p>
+               <p><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">그라데이션</a></p>
             </div>
             <p class="icon-wrap"> 
                 <a class="icon" href="https://www.facebook.com/" target="_blank">
@@ -49,7 +49,7 @@
                <p id="info2">이용약관 | 개인정보처리방침 | 고객지원 : 이메일(rlaehdrjs@naver.com)</p>
             </div>
             <div class="footerLogo-wrap">
-                <a href="#"><img id="footerLogo" src="../assets/images/layout/footer/footerLogo.png" alt="footerLogo"></a> 
+                <a href="/gradation/main/main.main"><img id="footerLogo" src="../assets/images/layout/footer/footerLogo.png" alt="footerLogo"></a> 
             </div>
             </div>
       </div> 
