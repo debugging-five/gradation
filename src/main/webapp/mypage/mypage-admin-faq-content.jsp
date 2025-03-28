@@ -21,7 +21,6 @@
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
 				<h6 id="content-kind">경매 관련 문의</h6>
 				<div id="question-wrap">
-					<div id="question">Q.</div>
 					<h3 id="question-title">경매금액을 잘못 올렸어요.</h3>
 					<p id="question-date">25.01.15</p>
 				</div>
