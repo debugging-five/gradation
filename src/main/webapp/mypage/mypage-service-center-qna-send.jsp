@@ -172,7 +172,7 @@
 						</div>						
 					</div>
 					<div class="qna-button-div">
-						<button class="qna-button" onclick="location.href='mypage-service-center-send-qna.mypage'">문의하기</button>
+						<button class="qna-button" onclick="location.href='mypage-service-center-qna-send.mypage'">문의하기</button>
 					</div>
 				</div>
 			</div>

@@ -27,18 +27,18 @@ public class UserLoginFindSendEmailController implements Action {
 		String userName = req.getParameter("userName");
 		String userEmail = req.getParameter("userEmail");
 		String mailCode = mc.codeSix();
-		System.out.println(mailCode);
 		userVO.setUserName(userName);
 		userVO.setUserEmail(userEmail);
 		
 		
 		String userId = userDAO.selectIdByEmailAndName(userVO);
-		
+		System.out.println(userId);
 		if(userId == null) {
 //			존재 안함
 			session.setAttribute("mailCode", "false");
 		}else {
 			ms.sendMail(userEmail,mailCode);
+			System.out.println(mailCode);
 			session.setAttribute("mailCode", mailCode);
 			session.setAttribute("userId", userId);
 		}

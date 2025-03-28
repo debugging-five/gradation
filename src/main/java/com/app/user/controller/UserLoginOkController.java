@@ -23,7 +23,7 @@ public class UserLoginOkController implements Action{
 		
 		HttpSession session = req.getSession();
 		
-		userVO.setUserId(req.getParameter("userId"));
+		userVO.setUserIdentification(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
 		
 		userBanOk = userDAO.banCheck(userVO);
