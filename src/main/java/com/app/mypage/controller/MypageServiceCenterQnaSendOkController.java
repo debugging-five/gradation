@@ -16,7 +16,7 @@ public class MypageServiceCenterQnaSendOkController implements Action {
 		Result result = new Result();
 		
 		result.setRedirect(true);
-		result.setPath("mypage/mypage-service-center-list-qna.jsp");
+		result.setPath("mypage-service-center-qna-list.jsp");
 		return result;
 	}
 
