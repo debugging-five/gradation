@@ -6,10 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/exhibition/university-exhibition-main.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
 <title>대학교 전시회 메인</title>
 </head>
-<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
 <form action="" method="post">
@@ -26,7 +24,17 @@
 	</div>
 	
 	<div id="map-wrapper">
-		<div>지도</div>
+		<div id="map" style="width:500px;height:400px;"></div>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
+		<script>
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(33.450701, 126.570667),
+				level: 3
+			};
+	
+			var map = new kakao.maps.Map(container, options);
+	</script>
 	</div>
 	
 	<!-- 대학 리스트 + 전시회 사진 -->
@@ -35,7 +43,7 @@
 		<div id="university-list"><div>
 		  <!-- 지역 필터링 드롭다운 -->
 		  <select id="regionFilter">
-		    <option value="">지역 선택</option>
+		    <option value="">전체 지역</option>
 		    <option value="seoul">서울</option>
 		    <option value="gyeonggi">경기</option>
 		    <option value="gangwon">강원</option>
@@ -44,7 +52,7 @@
 
 		  <!-- 전시 상태 필터링 드롭다운 -->
 		  <select id="statusFilter">
-		    <option value="">전시 상태 선택</option>
+		    <option value="">전시 상태</option>
 		    <option value="upcoming">예정</option>
 		    <option value="ongoing">진행 중</option>
 		  </select>
@@ -53,17 +61,13 @@
 		  <input type="text" id="searchInput" placeholder="대학 이름 검색">
 			<div id='icon-wrapper'>
 				<img id="icon2" src="../assets/images/exhibition/notice.png" alt="아이콘" />
-				<p>전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
+				<p id="notice">전시 상태를 클릭 시 홈페이지로 이동합니다.</p>
 			</div>
 		  <!-- 전시회 리스트 -->
 		  <div id="exhibitionList">
 		    <!-- 전시회 항목들이 여기에 표시됩니다. -->
 		  </div>
 		</div>
-
-			
-			
-			
 			
 			<!-- 학교3 -->
 			<div class="exhibition-info">
@@ -115,20 +119,7 @@
 
 <%@ include file="../layout/footer.jsp" %>
 </form>
-
-  <div id="map" style="width:500px;height:400px;">
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
-  <script>
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-			// 처음 보일 때의 좌표
-      level: 3
-    };
-
-    var map = new kakao.maps.Map(container, options);
-  </script>
-</div>
 </body>
 <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
+
 </html>

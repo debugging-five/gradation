@@ -185,6 +185,11 @@ select {
 	margin : 0 4px 0 0;
 }
 
+#notice {
+	font-size : var(--font-size-h9);
+	color : var(--color-gray900)
+}
+
 .exhibition-info {
 	display : flex;
 	margin : 13px 0 0 0;
@@ -305,7 +310,11 @@ select {
 	font-family: var(--font-family-Pretendard-Regular);
 }
 
-.button-like.liked {
+/* .button-like.liked {
+	color : var(--color-primary);
+	background-color : var(--color-gray100);
+} */
+.like-btn.liked {
 	color : var(--color-primary);
 	background-color : var(--color-gray100);
 }

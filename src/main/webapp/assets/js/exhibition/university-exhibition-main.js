@@ -1,11 +1,13 @@
 const universityLogo = document.getElementById("university-logo1");
 const backgroundImage = document.getElementById("display-none");
-const likeButtons = document.querySelectorAll(".button-like");
+// const likeButtons = document.querySelectorAll(".button-like");
+const likeButtons = document.querySelectorAll(".like-btn");
 const registerButton = document.querySelector(".button.register");
 const inquiryButton = document.querySelector(".button.inquiry");
 const exhibitionImage = document.querySelector("#img-wrapper img");
 const logo1 = document.getElementById("logo1"); 
 const logo2 = document.getElementById("logo2"); 
+
 
 universityLogo.addEventListener("click", () => {
 	backgroundImage.style.display = "block";
@@ -88,7 +90,7 @@ const exhibitions = [
 	  status: 'upcoming',
 	  description: '서울대학교의 새로운 전시회',
 	  location : '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
-	  logo : '../assets/images/exhibition/university-logo-3.png'
+	  logo : '../assets/images/exhibition/university-logo-1.png'
   },
   {
 	  id: 2,
@@ -100,7 +102,7 @@ const exhibitions = [
 	  status: 'ongoing',
 	  description: '경기대학교의 진행 중인 전시회',
 	  location : '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
-	  logo : '../assets/images/exhibition/university-logo-3.png'
+	  logo : '../assets/images/exhibition/university-logo-2.png'
   },
   {
 	  id: 3,
@@ -112,7 +114,7 @@ const exhibitions = [
 	  status: 'upcoming',
 	  description: '강원대학교 전시회',
 	  location : '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
-	  logo : '../assets/images/exhibition/university-logo-3.png'
+	  logo : '../assets/images/exhibition/university-logo-1.png'
   },
   {
 	  id: 4,
@@ -124,7 +126,7 @@ const exhibitions = [
 	  status: 'ongoing',
 	  description: '인천대학교 전시회',
 	  location : '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
-	  logo : '../assets/images/exhibition/university-logo-3.png'
+	  logo : '../assets/images/exhibition/university-logo-2.png'
   },
 ];
 
@@ -208,7 +210,7 @@ function displayExhibitions(exhibitions) {
 	        </div>
           <div class="exhibition-buttons">
             <button class="status-btn">${exhibition.status === 'upcoming' ? '전시 예정' : '진행 중'}</button>
-            <button class="like-btn">좋아요 ♡</button>
+            <button type="button" class="like-btn">좋아요 ♡</button>
         </div>
           </div>
           
