@@ -21,7 +21,9 @@
 			
 			<!-- 이미지 -->
 			<div id="image-wrap">
-				<div id="image">작품 사진</div>
+				<div class="img">
+					<img src="../assets/images/display/art/craft/img-craft-miniature-cat-2.jpeg" alt="경매 작품"/>
+				</div>
 			</div>
 			
 			<!-- 수정 정보 -->
@@ -37,13 +39,13 @@
 					<div class="input-box-wrap">
 						<div class="input-box">
 					        <h5>추정가</h5>
-					        <input class="input-text" type="text" placeholder="KRW 1,000,000 ~ 2,000,000" />			
+					        <input class="input-text" type="number" placeholder="KRW 1,000,000 ~ 2,000,000" />			
 						</div>
 					</div>
 					<div class="input-box-wrap">
 						<div class="input-box">
 					        <h5>시작가<span class="star">*</span></h5>
-					        <input class="input-text" type="text" placeholder="KRW 1,000,000" />			
+					        <input class="input-text" type="number" placeholder="KRW 1,000,000" />			
 						</div>
 					</div>
 				</form>

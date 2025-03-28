@@ -25,8 +25,11 @@ import com.app.mypage.controller.MypageContactArtistDetailController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
+import com.app.mypage.controller.MypageFormDetailController;
 import com.app.mypage.controller.MypageMainController;
 import com.app.mypage.controller.MypageModifyController;
+import com.app.mypage.controller.MypageMyAuctionList;
+import com.app.mypage.controller.MypageMyPayList;
 import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostListController;
 import com.app.mypage.controller.MypageServiceCenterFaqContentController;
@@ -93,7 +96,7 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageAdminFaqRegisterController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-admin-faq-content")) {
 			result = new MypageAdminFaqContentController().execute(req, resp);
-		} else if(target.equals("mypage/mypage-service-center-qna-list")) {
+		}else if(target.equals("mypage/mypage-service-center-qna-list")) {
 			result = new MypageServiceCenterQnaListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-service-center-qna-send")) {
 			result = new MypageServiceCenterQnaSendController().execute(req, resp);
@@ -111,6 +114,12 @@ public class MypageFrontController extends HttpServlet{
 			result = new MypageServiceCenterFaqListController().execute(req, resp);
 		}else if(target.equals("mypage/mypage-service-center-faq-content")) {
 			result = new MypageServiceCenterFaqContentController().execute(req, resp);
+		}else if(target.equals("mypage/mypage-my-auction-list")) {
+			result = new MypageMyAuctionList().execute(req, resp);
+		}else if(target.equals("mypage/mypage-my-pay-list")) {
+			result = new MypageMyPayList().execute(req, resp);
+		}else if(target.equals("mypage/form-detail")) {
+		    result = new MypageFormDetailController().execute(req, resp);
 		}else {
 //			전부 404
 		}
