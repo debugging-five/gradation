@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-service-center-send-qna.css" />
-<title>1:1문의 작성하기</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-service-center-list-qna.css" />
+<title>고객센터 / 1:1 문의 내문의</title>
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
@@ -180,7 +180,5 @@
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
-
-	
 </body>
 </html>
