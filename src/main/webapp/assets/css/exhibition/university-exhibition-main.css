@@ -67,78 +67,59 @@ body {
 	text-align : center;
 }
  */
-#list-wrapper {
+ 
+#container {
 	display : flex;
-	gap : 105px;
-	justify-content : center; 
-	width : 1160px;
-	margin : 0 auto;
+	justify-content : space-between;
+	gap : 108px;
 }
 
-#university-list {
-	width : 492px;
-	height : 479px;
-	margin : 100px 0 0 0;
-	font-size : 16px;
-	flex : 1; 
-}
-
-#bar {
-	width : 492px;
-	border-bottom : solid 1px var(--color-gray900);
-	display : flex;
-}
-
-#bar-left {
-	margin : 0 0 16px 0;
-	display : flex;
-	gap : 16px;
-}
-
-.bar-menu {
-	margin : 0 36px 0 0;
-}
-
-#university-list {
+#university-list-wrapper {
     height: 484px; 
     overflow-y: scroll; 
     overflow-x: hidden; 
-}
-
-#scroll-wrapper {
-	flex : 1;
+    width : 492px;
+    margin : 68px 0 0 0;
+    display : flex;
+    flex-direction : column;
+    flex : 1;
 }
 
 select {
-	background-color : var(--color-gray100);
+	text-align: center;
 	border : none;
+	font-family: var(--font-family-Pretendard-Regular);
 	font-size : var(--font-size-h7);
 	font-weight : var(--font-weight-regular);
+	background-color : var(--color-gray100);
+}
+
+#bar-border {
+	border-bottom : solid 1px var(--color-gray900);
+	width : 492px;
+}
+
+#filter-wrapper {
+	display : flex;
+	gap : 32px;
+	margin : 0 0 12px 0;
+}
+
+#search-input {
+	width : 184px;
+	height : 28px;
+	border : solid 1px var(--color-gray900);
+	border-radius : 3px;
 	font-family: var(--font-family-Pretendard-Regular);
-	color : var(--color-black);
 }
 
-#area-dropdown select, #state-dropdown select {
-  text-align: center; 
+#search-input::placeholder {
+	color : var(--color-gray500);
+	font-size : var(--font-size-h9);
+	font-weight : var(--font-weight-light);
+	padding : 7px;
 }
 
-#area-dropdown option, #area-dropdown option {
-  text-align: center;
-}
-
-#my-pick {
-	margin : 0 16px 0 0;
-	width : 56px;
-	cursor : pointer;
-}
-
-#my-pick:hover {
-	color : var(--color-primary);
-}
-
-#bar-right {
-  position: relative; 
-}
 
 #icon1 {
   position: absolute;
@@ -149,29 +130,6 @@ select {
   height: 16px; 
 }
 
-#bar-right input {
-	width : 184px;
-	height : 29px;
-	border : solid 1px #6e7476;
-	border-radius : 3px;
-	background-color : var(--color-gray100);
-	color : var(--color-gray500);
-	font-family: var(--font-family-Pretendard-Regular);
-}
-
-#bar-right input::placeholder {
-	padding : 0 0 0 12px;
-	font-size : var(--font-size-h9);
-	font-weight : var(--font-weight-light);
-}
-
-#list-content p {
-	color : var(--color-gray900);
-	font-size : 12px;
-  	height : 14px;
-	display : flex;
-	align-items : center;
-}
 
 #icon-wrapper {
 	display : flex;
@@ -190,57 +148,13 @@ select {
 	color : var(--color-gray900)
 }
 
-.exhibition-info {
-	display : flex;
-	margin : 13px 0 0 0;
-}
-
-#university-logo1, #university-logo2 {
-	width : 128px;
-	height : 128px;
-	background-color : var(--color-gray100);
-	border : solid 1px var(--color-gray500);
-	border-radius : 10px;
-	display : flex;
-	justify-content : center;
-	align-items : center;
-}
-
-.logo-img {
-	width : 84px;
-	height : 84px;
-}
-
-
-.university-info {
-	margin : 0 0 0 28px;
-}
-
-.university-info h6 {
-	height : 21px;
-}
-
-.info1 {
-	font-size : var(--font-size-h8);
-	font-weight : var(--font-weight-light);
-	height : 17px;
-	margin : 0 0 2px 0;
-}
-
-.info2 {
-	font-size : var(--font-size-h9);
-	font-weight : var(--font-weight-light);
-	color : var(--color-gray900);
-	height : 14px;
-	margin : 0 0 4px 0;
-}
-
-.major {
-	margin : 0 0 8px 0;
-}
 
 #display-none {
-	display : none;
+    visibility: hidden;
+}
+
+#display-none.show {
+    visibility: visible;
 }
 
 #img-background {
@@ -290,25 +204,6 @@ select {
 	margin : 4px 0 0 0;
 }
 
-.button-comming {
-	width : 196px;
-	height : 28px;
-	background-color : var(--color-gray100);
-	border : solid 1px var(--color-gray900);
-	border-radius : 3px;
-	color : var(--color-gray900);
-	font-family: var(--font-family-Pretendard-Regular);
-}
-
-.button-like {
-	width : 88px;
-	height : 28px;
-	background-color : var(--color-gray100);
-	border : solid 1px var(--color-primary);
-	border-radius : 3px;
-	color : var(--color-primary);
-	font-family: var(--font-family-Pretendard-Regular);
-}
 
 /* .button-like.liked {
 	color : var(--color-primary);
@@ -352,17 +247,10 @@ select {
 	color : #fbfcfc;
 }
 
-/*===================*/
-.exhibition-card {
+.exhibition-wrapper {
 	display : flex;
 	gap : 28px;
-	height : 128px;
 	margin : 12px 0 0 0;
-}
-
-.logo-wrapper img {
-	width : 84px;
-	height : 84px;
 }
 
 .logo-wrapper {
@@ -373,70 +261,59 @@ select {
 	align-items : center;
 	justify-content : center;  
 	border-radius : 10px;
-	
 }
 
-.exhibition-info {
-	display : flex;
-	flex-direction : column;
-	margin-top : 0px;
+.exhibition-logo {
+	width : 84px;
+	height : 84px;
 }
 
-
-.status-btn {
-	width : 196px;
-	height : 28px;
-	background-color : var(--color-gray100);
-	border : solid 1.2px var(--color-gray900);
-	border-radius : 3px;
-	font-family: var(--font-family-Pretendard-Regular);
-	font-size : var(--font-size-h6);
+.exhibition-number {
+	height : 21px;
 }
 
-.like-btn {
-	width : 88px;
-	height : 28px;
-	background-color : var(--color-gray100);
-	border : solid 1.2px var(--color-primary);
-	border-radius : 3px;
-	color : var(--color-primary);
-	font-family: var(--font-family-Pretendard-Regular);
-	font-size : var(--font-size-h7);
-}
-
-.exhibition-buttons {
-	display : flex;
-	gap : 16px;
-}
-
-.exhibition-description p {
+.exhibition-number {
 	font-size : var(--font-size-h8);
+	margin : 2px 0;
 	height : 17px;
 }
 
-.exhibition-major p {
+.exhibition-major, .exhibition-date, .exhibition-location {
 	font-size : var(--font-size-h9);
 	color : var(--color-gray900);
 	height : 14px;
-}
-
-.exhibition-date p, .exhibition-location p {
-	font-size : var(--font-size-h9);
-	color : var(--color-gray900);
-	height : 14px;
-	margin : 0 0 4px 0;
-}
-
-.exhibition-title h6 {
-	height : 21px;
 }
 
 .exhibition-major {
 	margin : 0 0 8px 0;
 }
 
+.exhibition-date, .exhibition-location {
+	margin : 0 0 4px 0;
+}
 
+.status-button {
+	width : 196px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1.2px var(--color-gray900);
+	color : var(--color-gray900);
+	border-radius : 3px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h6);
+	font-weight : var(--font-weight-medium);
+}
 
-
+.like-button {
+	width : 88px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1.2px var(--color-primary);
+	color : var(--color-primary);
+	border-radius : 3px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
+}
 
 
