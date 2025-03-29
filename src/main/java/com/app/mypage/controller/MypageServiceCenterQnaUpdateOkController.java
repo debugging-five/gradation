@@ -16,7 +16,7 @@ public class MypageServiceCenterQnaUpdateOkController implements Action {
 		Result result = new Result();
 		
 		result.setRedirect(true);
-		result.setPath("mypage-service-center-qna-content.user");
+		result.setPath("mypage-service-center-qna-content.mypage");
 		return result;
 	}
 
