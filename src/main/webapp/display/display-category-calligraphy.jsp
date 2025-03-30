@@ -99,7 +99,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-1.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-1.jpeg"
 									alt="calli" data-date="2024-01-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -112,7 +112,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-2.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-2.jpeg"
 									alt="calli-2" data-date="2024-01-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -125,7 +125,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-3.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-3.jpeg"
 									alt="calli-3" data-date="2024-11-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -138,7 +138,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-4.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-4.jpeg"
 									alt="calli-4" data-date="2024-05-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -151,7 +151,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/korean/img-calligraphy-5.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-5.jpeg"
 									alt="calli-5" data-date="2024-03-21" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -166,7 +166,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-6.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-6.jpeg"
 									alt="calli-6" data-date="2024-11-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -179,7 +179,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-calligraphy-7.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-7.jpeg"
 									alt="calli-7" data-date="2024-02-13" />
 								<div class="hover-overlay">
 									<
@@ -193,7 +193,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-calligraphy-8.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-8.jpeg"
 									alt="calli-8" data-date="2024-04-14" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -206,7 +206,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/craft/img-calligraphy-9.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-9.jpeg"
 									alt="calli-9" data-date="2024-01-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -219,7 +219,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/sculpture/img-calligraphy-10.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-10.jpeg"
 									alt="calli-10" data-date="2024-09-04" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -234,7 +234,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-11.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-11.jpeg"
 									alt="calli-11" data-date="2025-02-12" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -247,7 +247,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-12.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-12.jpeg"
 									alt="calli-12" data-date="2024-12-13" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -260,7 +260,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-13.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-13.jpeg"
 									alt="calli-13" data-date="2024-11-19" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -273,7 +273,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-calligraphy-14.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-14.jpeg"
 									alt="calli-14" data-date="2024-04-05" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -286,7 +286,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-calligraphy-15.jpeg"
+									src="../assets/images/display/art/calligraphy/img-calligraphy-15.jpeg"
 									alt="calli-15" data-date="2024-06-07" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">

@@ -57,6 +57,26 @@
 	    	<p id="main-text">모든 작품들은 빛날 가치가 있습니다</p>
 	    </div>
 	  </div>
+	  
+	
+<div class="gallery-column" style="position: relative; overflow: hidden;">
+  <!-- 배경 애니메이션 -->
+  <div class="bg-animation" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+  </div>
+
+  <!-- 이미지 -->
+  <img class="gallery-image"
+       src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
+       alt="catwatercolor-person"
+       style="position: relative; z-index: 2; width: 100%; height: auto;" />
+</div>
+
+
+	  
 
 	<%@ include file="../layout/footer.jsp" %>
 	

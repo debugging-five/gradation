@@ -20,7 +20,7 @@
 				<%@ include file="mypage-info-layout.jsp"%>
 			</div>
 			<div class="main-content">
-				<h1 class="title">내 쪽지 및 문의 / 내 쪽지</h1>
+				<h1 class="title">내 쪽지</h1>
 				<p class="notice">전송이 완료된 쪽지는 수정이 불가합니다.</p>
 				<div class="post-title-group">
 					<div class="post-title">♚♚바둑이 오브 더 스☆톰♚♚가입시$$전원 포인트</div>
@@ -42,10 +42,10 @@
 				<div class="middle-buttons-container">
 					<div class="middle-buttons">
 						<button class="button-list"
-							onclick="location.href='mypage-post-list.jsp'">목록</button>
+							onclick="location.href='mypage-my-post-list.mypage'">목록</button>
 						<button class="button-delete" onclick="confirmDelete()">삭제</button>
 						<button class="button-reply"
-							onclick="location.href='mypage-send-post-content-modify.jsp'">답장</button>
+							onclick="location.href='mypage-send-post-content-modify.mypage'">답장</button>
 					</div>
 				</div>
 			</div>

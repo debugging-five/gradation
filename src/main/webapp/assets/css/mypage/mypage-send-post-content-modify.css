@@ -100,14 +100,14 @@
 	white-space: nowrap;
 }
 
-.mypage-send-post-content-modify .span0 {
+.mypage-send-post-content-modify .title-text {
 	color: var(--color-black);
 	font-family: var(--font-family-pretendard-semibold);
 	font-size: var(--font-size-h6);
 	letter-spacing: -0.01px;
 }
 
-.mypage-send-post-content-modify .span1 {
+.mypage-send-post-content-modify .ester {
 	color: var(--color-primary);
 	font-family: var(--font-family-pretendard-semibold);
 	font-size: var(--font-size-h6);
@@ -142,7 +142,7 @@
 	white-space: nowrap;
 }
 
-.mypage-send-post-content-modify .overlap-group {
+.mypage-send-post-content-modify .input {
 	align-items: flex-start;
 	background-color: var(--color-gray100);
 	border: 1px solid;
@@ -233,18 +233,6 @@
 	display: none;
 }
 
-.mypage-send-post-content-modify .overlap-group2 {
-	align-items: flex-start;
-	background-color: var(--color-gray100);
-	border: 1.2px solid;
-	border-color: var(--color-primary);
-	border-radius: 2px;
-	display: flex;
-	height: 35px;
-	min-width: 75px;
-	padding: 0.8px 6.8px;
-}
-
 .mypage-send-post-content-modify .attach-button {
 	background-color: var(--color-gray100);
 	border: 1.2px solid var(--color-primary);
@@ -289,7 +277,7 @@ w
 	white-space: nowrap;
 }
 
-.mypage-send-post-content-modify .overlap-group1 {
+.mypage-send-post-content-modify .send-button {
 	align-items: flex-start;
 	align-self: flex-end;
 	background-color: var(--color-gray100);
@@ -325,4 +313,73 @@ w
 .mypage-send-post-content-modify .line {
 	height: 1px;
 	object-fit: cover;
+}
+
+
+
+.mypage-send-post-content-modify-update .icon {
+  height: 42px;
+  width: 42px;
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  padding-top: 100px;
+}
+
+.popup-box {
+  width: 390px;
+  height: 190px;
+  background-color: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.popup-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.popup-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.popup-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+}
+
+.popup-button.cancel {
+  background-color: #fff;
+  color: var(--color-primary);
+}
+
+.popup-button.confirm {
+  background-color: var(--color-primary);
+  color: #fff;
 }

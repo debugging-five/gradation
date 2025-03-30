@@ -104,8 +104,14 @@ input:focus {
 .mypage-post-list .tab-received {
 	background-color: var(--color-gray500);
 	color: var(--color-black);
-	/
+	
 }
+
+.mypage-post-list .tab-content.tab-received-content {
+  width: 801px;
+  margin-left: 0;
+}
+
 
 a.tab.tab-sent.active {
 	background-color: var(--color-gray500) !important;
@@ -161,7 +167,7 @@ a.tab.tab-sent.active {
 
 .mypage-post-list .message-table-header, .mypage-post-list .message-row
 	{
-	margin-left: 20px;
+	margin-left: 10px;
 	width: 801px;
 }
 

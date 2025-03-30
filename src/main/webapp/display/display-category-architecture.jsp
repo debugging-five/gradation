@@ -99,7 +99,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-coastal-cliff.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-coastal-cliff.jpeg"
 									alt="cliff" data-date="2024-02-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -112,7 +112,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-corten.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-corten.jpeg"
 									alt="corten" data-date="2024-01-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -125,7 +125,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-corten-2.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-corten-2.jpeg"
 									alt="corten-2" data-date="2024-11-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -138,7 +138,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-floating-box.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box.jpeg"
 									alt="floating" data-date="2024-05-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -151,7 +151,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/korean/img-architecture-floating-box-2.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box-2.jpeg"
 									alt="floating-2" data-date="2024-03-21" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -166,7 +166,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-floating-box-3.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box-3.jpeg"
 									alt="floating-3" data-date="2024-11-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -206,7 +206,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/craft/img-architecture-foggy.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-foggy.jpeg"
 									alt="foggy" data-date="2024-01-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -219,7 +219,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/sculpture/img-architecture-foggy-2.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-foggy-2.jpeg"
 									alt="foggy-2" data-date="2024-09-04" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -234,7 +234,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-future.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-future.jpeg"
 									alt="미래" data-date="2025-02-12" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -247,7 +247,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-future-2.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-future-2.jpeg"
 									alt="미래2" data-date="2024-12-13" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -260,7 +260,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-future-3.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-future-3.jpeg"
 									alt="미래3" data-date="2024-11-19" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -273,7 +273,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-architecture-glass-dome.jpeg"
+									src="../assets/images/display/art/architecture/img-architecture-glass-dome.jpeg"
 									alt="dome" data-date="2024-04-05" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">

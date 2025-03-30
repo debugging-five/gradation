@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.mypage.controller.MypageSendPostContentModifyController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
 import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
@@ -30,7 +31,10 @@ import com.app.mypage.controller.MypageMainController;
 import com.app.mypage.controller.MypageModifyController;
 import com.app.mypage.controller.MypageMyAuctionList;
 import com.app.mypage.controller.MypageMyPayList;
+import com.app.mypage.controller.MypageMyPostContentController;
 import com.app.mypage.controller.MypageMyPostListController;
+import com.app.mypage.controller.MypagePostContentController;
+import com.app.mypage.controller.MypagePostContentModifyController;
 import com.app.mypage.controller.MypagePostListController;
 import com.app.mypage.controller.MypageServiceCenterFaqContentController;
 import com.app.mypage.controller.MypageServiceCenterQnaContentController;
@@ -80,8 +84,16 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageAdminFormApprovedController().execute(req, resp);
       }else if(target.equals("mypage/mypage-post-list")) {
          result = new MypagePostListController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-post-content")) {
+    	  result = new MypagePostContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-post-content-modify")) {
+    	  result = new MypagePostContentModifyController().execute(req, resp);
       }else if(target.equals("mypage/mypage-my-post-list")) {
          result = new MypageMyPostListController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-my-post-content")) {
+    	  result = new MypageMyPostContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-send-post-content-modify")) {
+    	  result = new MypageSendPostContentModifyController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-faq-list")) {
          result = new MypageAdminFaqListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-qna-content")) {

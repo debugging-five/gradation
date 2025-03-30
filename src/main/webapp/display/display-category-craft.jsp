@@ -99,11 +99,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-rainy.jpeg"
+									src="../assets/images/display/art/craft/img-craft-teapot.jpeg"
 									alt="rainy" data-date="2024-01-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">rainy</div>
+										<div class="hover-title">주전자</div>
 										<div class="hover-artist">박세현</div>
 									</div>
 								</div>
@@ -112,11 +112,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
+									src="../assets/images/display/art/craft/img-craft-teapot-2.jpeg"
 									alt="gradation-6" data-date="2024-01-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(1);</div>
+										<div class="hover-title">주전자</div>
 										<div class="hover-artist">서민아</div>
 									</div>
 								</div>
@@ -125,11 +125,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
+									src="../assets/images/display/art/craft/img-craft-teapot-3.jpeg"
 									alt="gradation-7" data-date="2024-11-08" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(2);</div>
+										<div class="hover-title">주전자</div>
 										<div class="hover-artist">서민아</div>
 									</div>
 								</div>
@@ -138,11 +138,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-cat-3.jpeg"
 									alt="gradation-2" data-date="2024-05-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(3);</div>
+										<div class="hover-title">자개고양이</div>
 										<div class="hover-artist">서민아</div>
 									</div>
 								</div>
@@ -151,11 +151,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-cat-2.jpeg"
 									alt="tiger-and-waterfall" data-date="2024-03-21" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">멍때리는 고양이</div>
+										<div class="hover-title">자개고양이</div>
 										<div class="hover-artist">곽승민</div>
 									</div>
 								</div>
@@ -166,11 +166,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-cat.jpeg"
 									alt="our-team" data-date="2024-11-01" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">Our Team</div>
+										<div class="hover-title">자개고양이</div>
 										<div class="hover-artist">김동건</div>
 									</div>
 								</div>
@@ -179,12 +179,12 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-box-3.jpeg"
 									alt="meditation-house-3" data-date="2024-02-13" />
 								<div class="hover-overlay">
 									<
 									<div class="hover-text-group">
-										<div class="hover-title">Meditation</div>
+										<div class="hover-title">자개함</div>
 										<div class="hover-artist">이덕준</div>
 									</div>
 								</div>
@@ -193,11 +193,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-box-2.jpeg"
 									alt="hanok-2" data-date="2024-04-14" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">봄의 한옥</div>
+										<div class="hover-title">자개함</div>
 										<div class="hover-artist">조마루</div>
 									</div>
 								</div>
@@ -206,11 +206,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
+									src="../assets/images/display/art/craft/img-craft-pearl-box.jpeg"
 									alt="object-cat" data-date="2024-01-18" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">식빵시리즈2</div>
+										<div class="hover-title">자개함</div>
 										<div class="hover-artist">조냐옹</div>
 									</div>
 								</div>
@@ -219,7 +219,7 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art-6.jpeg"
 									alt="cat-2" data-date="2024-09-04" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
@@ -234,12 +234,12 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art-5.jpeg"
 									alt="catwatercolor-person" data-date="2025-02-12" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">이쁘네</div>
-										<div class="hover-artist">김영수</div>
+										<div class="hover-title">종이접기</div>
+										<div class="hover-artist">조냐옹</div>
 									</div>
 								</div>
 							</div>
@@ -247,11 +247,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-oh.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art-4.jpeg"
 									alt="oh" data-date="2024-12-13" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">after</div>
+										<div class="hover-title">종이접기</div>
 										<div class="hover-artist">일러장</div>
 									</div>
 								</div>
@@ -260,11 +260,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-whale.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art-3.jpeg"
 									alt="whale" data-date="2024-11-19" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">말도 안됨</div>
+										<div class="hover-title">종이접기</div>
 										<div class="hover-artist">양진영</div>
 									</div>
 								</div>
@@ -273,11 +273,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art-2.jpeg"
 									alt="old-man-in-cafe" data-date="2024-04-05" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">자화상2</div>
+										<div class="hover-title">종이접기2</div>
 										<div class="hover-artist">김동건</div>
 									</div>
 								</div>
@@ -286,11 +286,11 @@ currentFile = currentFile.replace(".jsp", ".display");
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-meditation-house-2.jpeg"
+									src="../assets/images/display/art/craft/img-craft-paper-art.jpeg"
 									alt="meditation-house-2" data-date="2024-06-07" />
 								<div class="hover-overlay">
 									<div class="hover-text-group">
-										<div class="hover-title">meditation</div>
+										<div class="hover-title">종이접기</div>
 										<div class="hover-artist">이덕준</div>
 									</div>
 								</div>

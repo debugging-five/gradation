@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MyPageSendPostContentModifyController implements Action {
+public class MypageSendPostContentModifyController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

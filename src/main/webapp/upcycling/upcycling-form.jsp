@@ -169,64 +169,96 @@
 			<%@ include file="../layout/footer.jsp"%>
 		</div>
 	</div>
-
+	<div id="popup-confirm" class="popup-overlay" style="display: none;">
+		<div class="popup-box">
+			<img src="../assets/images/mypage/my-post/quest.png"
+				alt="question icon" class="popup-icon" />
+			<div class="popup-message">신청 하시겠습니까?</div>
+			<div class="popup-button-group">
+				<button class="popup-button cancel" onclick="hideConfirm()">취소</button>
+				<button class="popup-button confirm" onclick="showSuccessPopup()">확인</button>
+			</div>
+		</div>
+	</div>
+	<div id="popup-success" class="popup-overlay" style="display: none;">
+		<div class="popup-box">
+			<img src="../assets/images/mypage/my-post/confirm.png"
+				alt="success icon" class="popup-icon" />
+			<div class="popup-message">신청이 완료되었습니다.</div>
+			<div class="popup-button-group">
+				<button class="popup-button confirm" onclick="redirectToList()">확인</button>
+			</div>
+		</div>
+	</div>
 	<script>
-  function previewImage(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const preview = document.getElementById("preview-image");
-      preview.src = e.target.result;
-      preview.style.display = "block";
-      document.getElementById("upload-icon").style.display = "none";
-      document.getElementById("upload-label").style.display = "none";
-    };
-    reader.readAsDataURL(file);
-  }
+	function previewImage(event) {
+	   	const file = event.target.files[0];
+    	if (!file) return;
+    	const reader = new FileReader();
+    	reader.onload = function (e) {
+      		const preview = document.getElementById("preview-image");
+      		preview.src = e.target.result;
+      		preview.style.display = "block";
+      		document.getElementById("upload-icon").style.display = "none";
+      		document.getElementById("upload-label").style.display = "none";
+    	};
+    	reader.readAsDataURL(file);
+    }
 
-  flatpickr("#pickupDateInput", {
-    onChange: function (selectedDates, dateStr) {
-      document.getElementById("pickupDateInput").value = dateStr;
-    },
-    disableMobile: true
-  });
+  	flatpickr("#pickupDateInput", {
+    	onChange: function (selectedDates, dateStr) {
+      	document.getElementById("pickupDateInput").value = dateStr;
+    	},
+    	disableMobile: true
+  	});
 
-  document.querySelector(".calendar-icon").addEventListener("click", () => {
-    document.getElementById("pickupDateInput").focus();
-  });
+  	document.querySelector(".calendar-icon").addEventListener("click", () => {
+    	document.getElementById("pickupDateInput").focus();
+  	});
 
-  function validateForm() {
-	  const requiredFields = [
-	    "schoolName",
-	    "detailAddress",
-	    "email",
-	    "phone",
-	    "pickupDateInput"
-	  ];
-	  for (let id of requiredFields) {
-	    const element = document.getElementsByName(id)[0];
-	    if (!element || element.value.trim() === "") {
-	      alert("필수 항목을 모두 입력해주세요.");
-	      element.focus();
-	      return false;
-	    }
-	  }
+  	function validateForm() {
+  	  const requiredFields = [
+  	    { name: "schoolName", label: "학교명" },
+  	    { name: "detailAddress", label: "상세주소" },
+  	    { name: "email", label: "이메일" },
+  	    { name: "phone", label: "연락처" },
+  	    { name: "pickupDateInput", label: "수거 신청일" }
+  	  ];
 
-	  const checkboxes = document.querySelectorAll("input[name='material']:checked");
-	  if (checkboxes.length === 0) {
-	    alert("주된 재질을 하나 이상 선택해주세요.");
-	    return false;
-	  }
+  	  for (let field of requiredFields) {
+  	    const element = document.getElementsByName(field.name)[0];
+  	    if (!element || element.value.trim() === "") {
+  	      alert(`${field.label}을(를) 입력해주세요.`);
+  	      element.focus();
+  	      return false;
+  	    }
+  	  }
 
-	  alert("신청이 완료되었습니다.");
+  	  const checkboxes = document.querySelectorAll("input[name='material']:checked");
+  	  if (checkboxes.length === 0) {
+  	  	alert("주된 재질을 하나 이상 선택해주세요.");
+  	    return false;
+  	  }
 
-	  setTimeout(() => {
-	    document.getElementById("upcycleForm").submit();
-	  }, 100);
 
-	  return false; 
-	}
+  	  document.getElementById("popup-confirm").style.display = "flex";
+  	  return false; 
+  	}
+
+  	function hideConfirm() {
+  	  document.getElementById("popup-confirm").style.display = "none";
+  	}
+
+  	function showSuccessPopup() {
+  	  document.getElementById("popup-confirm").style.display = "none";
+  	  document.getElementById("popup-success").style.display = "flex";
+  	}
+
+  	function redirectToList() {
+
+  	  document.querySelector("form").submit();
+  	}
+
 
 
   function execDaumPostcode() {
