@@ -17,12 +17,12 @@
 		
 		<div class="bar">
 			<div id="icon-wrapper">
-				<i class="fa-solid fa-xmark"></i>
+				<img onclick="closePopup()" id="close-icon" src="../assets/images/auction/close.png" alt="닫기" />
 			</div>
 		</div>
 		
 		<div id="icon-wrapper2">
-			<i class="fa-regular fa-circle-check fa-3x"></i>
+			<img id="check-icon" src="../assets/images/auction/check.png" alt="체크" />
 		</div>
 		
 		<div id="payment-success">
@@ -32,7 +32,7 @@
 		
 		<div id="info">
 			<div id="info-left">
-				<div>경매 작품 사진</div>
+				<img src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg" alt="경매 작품" />
 			</div>
 			
 			<div id="info-right">
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<div id="button-wrapper">
-			<button type="button" id="ok-button">확인</button>
+			<button type="button" id="ok-button" onclick="closePopup()">확인</button>
 		</div>
 	</div>
 </div>

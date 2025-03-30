@@ -47,10 +47,10 @@
 	         </div>
 	       </div>
 	       
-	       <!-- 응찰가 input -->
 	       <div id="popup-info2">
 	       <div class="popup-left2">
-	          <input type="text" placeholder="응찰가를 입력해주세요."/>
+	         <input type="text" id="bid-amount" placeholder="응찰가를 입력해주세요."/>
+	         <p id="error-msg" style="color: red; font-size: 12px; display: none;">* 필수 항목입니다.</p> <!-- 에러 메시지 -->
 	         <div class="info3 bid">
 	            <h4>현재 입찰가<span>(KRW)</span></h4>
 	            <h3>550,000</h3>
@@ -64,7 +64,7 @@
 		   <div class="popup-button">
 	       		<form action="auction-payment-main.jsp" method="post">
 		          <div>
-		             <button class="bidding">응찰하기</button>
+		             <button class="bidding" id="bid-button" type="button">응찰하기</button>
 		          </div>
 		         </form>
 		          <div>

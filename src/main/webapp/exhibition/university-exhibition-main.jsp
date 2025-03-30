@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>대학교 전시회 메인</title>
 </head>
+<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
 
 	<%@ include file="../layout/header.jsp" %>
@@ -27,6 +28,16 @@
 		<!-- 카카오맵 api -->
 		<div id="map-wrapper">
 			<div id="map" style="width:500px;height:400px;"></div>
+			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
+			<script>
+				var container = document.getElementById('map');
+				var options = {
+					center: new kakao.maps.LatLng(33.450701, 126.570667),
+					level: 3
+				};
+		
+				var map = new kakao.maps.Map(container, options);
+			</script>
 		</div>
 		
 		<!-- 대학교 전시회 리스트 wrapper  -->
@@ -60,6 +71,10 @@
 					  	<option value="upcoming">진행 예정</option>
 					  	<option value="ongoing">진행 중</option>
 				  	</select>
+				  	
+				  	<div>
+				  		<p id="my-pick">My pick</p>
+				  	</div>
 				  	
 				  	<!-- 검색창 -->
 				  	<div>
@@ -96,8 +111,8 @@
 	
 		
 	<div id="button-wrapper2">
-		<button type="button" class="button inquiry">문의하기</button>
-		<button type="button" class="button register">학교 등록 신청</button>
+		<button type="button" id="inquiry-button" class="button inquiry">문의하기</button>
+		<button type="button" id="register-button" class="button register">학교 등록 신청</button>
 	</div>
 	
 	</div>

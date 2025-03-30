@@ -2,6 +2,18 @@ const exhibitionList = document.getElementById('exhibition-list');
 const regionFilter = document.getElementById('region-filter');
 const statusFilter = document.getElementById('status-filter');
 const searchInput = document.getElementById('search-input');
+const inquiryButton = document.getElementById("inquiry-button");
+const registerButton = document.getElementById("register-button");
+
+// 마이페이지 문의하기 페이지로 이동
+inquiryButton.addEventListener("click", () => {
+	location.href = "../mypage/mypage-service-center-send-qna.mypage";
+})
+
+// 대학교 등록 신청 양식 페이지로 이동
+registerButton.addEventListener("click", () => {
+	location.href = "university-exhibition-form.exhibition";
+})
 
 // 전시회 데이터 (이미지가 포함된 더미 데이터)
 const exhibitions = [
@@ -15,6 +27,7 @@ const exhibitions = [
     status: 'upcoming',
     location: '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
     logo: '../assets/images/exhibition/university-logo-1.png',
+    url: 'https://multidesign.kangwon.ac.kr/multidesign/2023-school-year.do?mode=view&articleNo=427696&title=2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+++%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C++%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'
   },
   {
     id: 2,
@@ -25,7 +38,8 @@ const exhibitions = [
     region: 'gyeonggi',
     status: 'ongoing',
     location: '강원 삼척시 중앙로 346 강원대학교 조형관 1층',
-    logo: '../assets/images/exhibition/university-logo-2.png'
+    logo: '../assets/images/exhibition/university-logo-2.png',
+  	url: 'http://artndesign.ewha.ac.kr/artewha/61/subview.do'
   },
   {
     id: 3,
@@ -36,7 +50,8 @@ const exhibitions = [
     region: 'gangwon',
     status: 'upcoming',
     location: '서울 강남구 역삼동 123-45',
-    logo: '../assets/images/exhibition/university-logo-1.png'
+    logo: '../assets/images/exhibition/university-logo-1.png',
+    url: 'https://multidesign.kangwon.ac.kr/multidesign/2023-school-year.do?mode=view&articleNo=427696&title=2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+++%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C++%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'
   },
   {
     id: 4,
@@ -47,7 +62,9 @@ const exhibitions = [
     region: 'incheon',
     status: 'ongoing',
     location: '서울 인천광역시 중구 10번지',
-    logo: '../assets/images/exhibition/university-logo-2.png'
+    logo: '../assets/images/exhibition/university-logo-2.png',
+  	url: 'http://artndesign.ewha.ac.kr/artewha/61/subview.do'
+
   },
   {
     id: 5,
@@ -58,7 +75,9 @@ const exhibitions = [
     region: 'chungnam',
     status: 'upcoming',
     location: '충남 천안시 중앙로 123번길',
-    logo: '../assets/images/exhibition/university-logo-1.png'
+    logo: '../assets/images/exhibition/university-logo-1.png',
+  	url: 'https://multidesign.kangwon.ac.kr/multidesign/2023-school-year.do?mode=view&articleNo=427696&title=2023+%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90+%EC%82%BC%EC%B2%99%EC%BA%A0%ED%8D%BC%EC%8A%A4+%EB%A9%80%ED%8B%B0%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%99%EA%B3%BC+++%EC%A0%9C8%ED%9A%8C+%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C++%E3%80%8AUNLOCK+THE+FUTURE%E3%80%8B'
+
   },
   {
     id: 6,
@@ -69,7 +88,9 @@ const exhibitions = [
     region: 'daejeon',
     status: 'ongoing',
     location: '대전 서구 둔산동 123번지',
-    logo: '../assets/images/exhibition/university-logo-2.png'
+    logo: '../assets/images/exhibition/university-logo-2.png',
+	url: 'http://artndesign.ewha.ac.kr/artewha/61/subview.do'
+
   },
 ];
 
@@ -96,7 +117,6 @@ function filterByRegion(location, selectedRegion) {
   return regions[selectedRegion] ? regions[selectedRegion].test(location) : true;
 }
 
-// 전시회 렌더링 함수
 function renderExhibitions(exhibitionData) {
   exhibitionList.innerHTML = ''; // 기존 전시회 항목 비우기
   exhibitionData.forEach(exhibition => {
@@ -106,7 +126,7 @@ function renderExhibitions(exhibitionData) {
       <div class="exhibition-wrapper">
         <div class="logo-wrapper">
           <div class="exhibition-logo">
-            <img src="${exhibition.logo}" alt="${exhibition.name}" onclick="showExhibitionDetails('${exhibition.mainImage}')">
+            <img src="${exhibition.logo}" alt="${exhibition.name}" onclick="showExhibitionDetails('${exhibition.logo}')">
           </div>
         </div>
 
@@ -127,15 +147,27 @@ function renderExhibitions(exhibitionData) {
             <p>${exhibition.location}</p>
           </div>
           <div class="button-wrapper1">
-            <button class="status-button exhibition-status ${exhibition.status}">
+            <button class="status-button" data-url="${exhibition.url}">
               ${exhibition.status === 'upcoming' ? '진행 예정' : '진행 중'}
             </button>
-            <button class="like-button">좋아요</button>
+            <button class="like-button">좋아요<i id="heart-icon" class="fa-regular fa-heart fa-xs"></i></button>
           </div>
         </div>
       </div>
     `;
     exhibitionList.appendChild(exhibitionItem);
+  });
+
+  // 상태 버튼에 클릭 이벤트 추가
+  document.querySelectorAll('.status-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+      const url = event.target.getAttribute('data-url'); // 버튼의 data-url 값 가져오기
+      if (url) {
+        window.open(url, '_blank'); // 새 창에서 학교 전시회 사이트 열기
+      } else {
+        alert('전시회 사이트 정보가 없습니다.');
+      }
+    });
   });
 }
 
@@ -254,3 +286,11 @@ rightBtn.addEventListener("click", () => {
         mainImage.src = images[currentIndex];
     }
 });
+
+
+
+  exhibitionList.addEventListener("click", function (event) {
+    if (event.target.classList.contains("like-button")) {
+      event.target.classList.toggle("liked");
+    }
+  });

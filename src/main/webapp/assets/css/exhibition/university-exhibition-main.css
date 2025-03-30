@@ -101,7 +101,7 @@ select {
 
 #filter-wrapper {
 	display : flex;
-	gap : 32px;
+	gap : 24px;
 	margin : 0 0 12px 0;
 }
 
@@ -316,4 +316,16 @@ select {
 	font-weight : var(--font-weight-regular);
 }
 
+.like-button.liked {
+  background-color: var(--color-primary);
+  color : var(--color-gray100);
+}
 
+#my-pick {
+	font-size : var(--font-size-h7);
+	cursor : pointer;
+}
+
+#heart-icon {
+	margin : 0 0 0 4px;
+}

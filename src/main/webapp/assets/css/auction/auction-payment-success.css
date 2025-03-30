@@ -18,35 +18,40 @@ body {
 	height : 588px;
 	border : solid 1px #6e7476;
 	border-radius : 5px;
+	background-color : var(--color-gray100);
 }
 
 .bar {
 	width : 688px;
 	height : 30px;
 	border-bottom : solid 1px #6e7476;
+	display : flex;
+	align-items : center; 
 }
 
 #icon-wrapper {
 	display : flex;
 	justify-content : flex-end;
-	align-items : center;
-	width : 685px;
+	width : 687px;
 }
-/* 
-#icon-wrapper i {
-	display : flex;
-	justify-content : flex-end;
+
+#close-icon {
+	width : 16px;
+	height : 16px;
+	margin : 7px;
+	cursor : pointer;
 }
- */
+
 #icon-wrapper2 {
 	display : flex;
 	justify-content : center;
 	align-items : center;
 }
 
-#icon-wrapper2 i {
-	color : var(--color-primary);
-	margin : 30px 0 0 0;
+#check-icon {
+	width : 56px;
+	height : 56px;
+	margin : 28px 0 0 0;
 }
 
 #payment-success {
@@ -67,7 +72,7 @@ body {
 	margin : 16px 0 0 20px;
 }
 
-#info-left div {
+#info-left img {
 	width : 246px;
 	height : 246px;
 	background-color : var(--color-gray500);
