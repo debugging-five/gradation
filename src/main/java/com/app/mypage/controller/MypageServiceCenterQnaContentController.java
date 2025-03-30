@@ -15,7 +15,7 @@ public class MypageServiceCenterQnaContentController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		result.setPath("mypage/mypage-service-center-qna-content.jsp");
+		result.setPath("mypage-service-center-qna-content.jsp");
 		return result;
 	}
 

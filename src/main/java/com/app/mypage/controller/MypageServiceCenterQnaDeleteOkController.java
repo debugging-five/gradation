@@ -16,7 +16,7 @@ public class MypageServiceCenterQnaDeleteOkController implements Action {
 		Result result = new Result();
 		
 		result.setRedirect(true);
-		result.setPath("mypage/mypage-service-center-qna-list.user");
+		result.setPath("mypage-service-center-qna-list.mypage");
 		return result;
 	}
 
