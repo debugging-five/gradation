@@ -2,4 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mypage">
+<!-- 회원 조회 (아이디, 닉네임, 이름, 전화번호, 이메일, 주소, 상세주소, 학교) -->
+<select id="selectUserDetails" parameterType="int" resultType="UserVO">
+    SELECT ID, USER_NICKNAME, USER_NAME, USER_PHONE, USER_EMAIL, USER_ADDRESS, USER_DETAIL_ADDRESS, MAJOR_ID   
+    FROM TBL_USER
+    WHERE ID = #{id}
+</select>
+
+<!-- 내 댓글 조회 -->
+<select id="selectReplyById" parameterType="int" resultType="ReplyVO">
+    SELECT ID, ART_POST_ID, USER_ID, REPLY_CONTENTS, REPLY_DATE
+    FROM TBL_REPLY
+    WHERE ID = #{id}
+</select>
+
+
+<!-- 내가 눌렀던 작품 좋아요 조회 -->
+<select id="selectLikesByUserId" parameterType="int" resultType="ArtLikeVO">
+    SELECT ID, ART_ID, USER_ID, ART_LIKE_TIME
+    FROM TBL_ART_LIKE
+    WHERE USER_ID = #{userId}
+</select>
+
+<!-- 유저의 경매 구매 내역 조회 -->
+<select id="selectBiddingByUserId" parameterType="int" resultType="AuctionBiddingVO">
+    SELECT AB.ID, AB.AUCTION_BIDDING_PRICE, AB.AUCTION_BIDDING_TIME, A.ART_ID, A.AUCTION_START_DATE, A.AUCTION_START_PRICE
+    FROM TBL_AUCTION_BIDDING AB
+    JOIN TBL_AUCTION A ON AB.AUCTION_ID = A.ID
+    WHERE AB.USER_ID = #{userId}
+</select>
+
+<!-- 유저의 경매 판매 내역 조회 -->
+<select id="selectAuctionByUserId" parameterType="int" resultType="AuctionVO">
+    SELECT A.ID, A.ART_ID, A.AUCTION_START_DATE, A.AUCTION_START_PRICE, A.AUCTION_ESTIMATED_PRICE, A.AUCTION_BID_PRICE
+    FROM TBL_AUCTION A
+    WHERE A.USER_ID = #{userId}
+</select>
+
 </mapper>
