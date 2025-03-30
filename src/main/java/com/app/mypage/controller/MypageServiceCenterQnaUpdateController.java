@@ -15,7 +15,7 @@ public class MypageServiceCenterQnaUpdateController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		result.setPath("mypage/mypage-service-center-qna-update.jsp");
+		result.setPath("mypage-service-center-qna-update.jsp");
 		return result;
 	}
 
