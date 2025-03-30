@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--color-gray100);
+}
+
+#container-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#content-wrap {
+	width: 800px;
+}
+
+#container {
+	width: 1160px;
+	margin-top: 142px;
+	display: flex;
+	gap: 120px;
+	margin-bottom: 200px;
+}
+
+#category {
+	width: 240px;
+	height: 152px;
+	border-bottom: solid 1px var(--color-gray900);
+	margin-bottom: 200px;
+}
+
+#category > div > a {
+	font-size: var(--font-size-h5);
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-gray900);
+}
+
+#category > div > #text-red {
+	font-size: var(--font-size-h5);
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-primary);
+}
+
+.category-div {
+	margin-bottom: 17px;
+}
+
+#title {
+	margin-bottom: 50px;
+}
+
+#content-kind {
+	margin-bottom: 30px;
+	font-weight: var(--font-weight-medium);
+}
+
+#question-wrap {
+	display: flex;
+	align-items: center;
+	margin-bottom:36px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+#question {
+	margin-left: 4px;
+	font-size: 30px;
+	font-weight: bolder;
+}
+#question-title {
+	display: flex;
+	margin-left: 4px;
+}
+#question-content {
+	font-size: var(--font-size-h7);
+}
+
+#question-date {
+	margin-left: auto;
+	font-size: var(--font-size-h7);
+}
+
+
+#answer-wrap {
+	display: flex;
+	align-items: center;
+	margin-bottom:36px;
+	margin-top:107px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+#answer {
+	color: var(--color-primary);
+	margin-left: 4px;
+	font-size: 30px;
+	font-weight: bolder;
+}
+#answer-title {
+	color: var(--color-primary);
+	display: flex;
+	margin-left: 4px;
+}
+#answer-content {
+	font-size: var(--font-size-h7);
+}
+
+#answer-date {
+	margin-left: auto;
+	font-size: var(--font-size-h7);
+}
+
+#button-div {
+	width: 800px;
+	height: 45px;
+	margin-top: 70px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.qna-button{
+	width: 120px;
+	height: 45px;
+	margin-left: 20px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h5);
+	color: var(--color-primary);
+	background-color: var(--color-gray100);
+	border-radius: 3px;
+	border: solid var(--color-primary) 1.5px;
+}
+
+.qna-button-active{
+	width: 120px;
+	height: 45px;
+	margin-left: 20px;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h5);
+	color: var(--color-gray100);
+	background-color: var(--color-primary);
+	border-radius: 3px;
+	border: none;
+}
+

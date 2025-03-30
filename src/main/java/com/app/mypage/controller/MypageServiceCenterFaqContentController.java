@@ -15,7 +15,7 @@ public class MypageServiceCenterFaqContentController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		result.setPath("mypage/mypage-service-center-faq-content.jsp");
+		result.setPath("mypage-service-center-faq-content.jsp");
 		return result;
 	}
 

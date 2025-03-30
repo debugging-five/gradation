@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-service-center-list-qna.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-service-center-qna-list.css" />
 <title>고객센터 / 1:1 문의 내문의</title>
 </head>
 <body>
@@ -18,10 +18,10 @@
 					<h1>고객센터</h1>
 				</div>
 				<div class="category-div">
-					<a id="text-red" href="">1:1 문의하기</a>
+					<a id="text-red" href="mypage-service-center-qna-list.mypage">1:1 문의하기</a>
 				</div>
 				<div class="category-div">
-					<a href="">자주묻는 질문</a>
+					<a href="mypage-service-center-faq-list.mypage">자주묻는 질문</a>
 				</div>
 			</div>
 			<div id="content-wrap">
@@ -35,7 +35,7 @@
 				</div>
 				<!-- 자주 묻는 질문  -->
 				<div id="items">
-					<div class="item">
+					<div class="item" onclick="location.href='mypage-service-center-qna-content.mypage?qnaId=1'">
 						<div class="item-number-wrap">
 							<h6 class="item-number">1</h6>
 						</div>
@@ -172,7 +172,7 @@
 						</div>						
 					</div>
 					<div class="qna-button-div">
-						<button class="qna-button" onclick="location.href='mypage-service-center-send-qna.mypage'">문의하기</button>
+						<button class="qna-button" onclick="location.href='mypage-service-center-qna-send.mypage'">문의하기</button>
 					</div>
 				</div>
 			</div>
