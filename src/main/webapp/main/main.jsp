@@ -12,51 +12,111 @@
 <body>
 	<%@ include file="../layout/header.jsp" %>
 	
-	  <div id="main">
+	<div id="main">
 		<div class="swiper mySwiper">
-		  <div class="swiper-wrapper">
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image1.png" alt="main-image1" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image2.png" alt="main-image2" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image3.png" alt="main-image3" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image4.png" alt="main-image4" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image1.png" alt="main-image1" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image2.png" alt="main-image2" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image3.png" alt="main-image3" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image4.png" alt="main-image4" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image1.png" alt="main-image1" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image2.png" alt="main-image2" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image3.png" alt="main-image3" />
-		    </div>
-		    <div class="swiper-slide">
-		      <img src="../assets/images/main/main-image4.png" alt="main-image4" />
-		    </div>
-		  </div>
+		  	<div class="swiper-wrapper">
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image1.png" alt="main-image1" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image2.png" alt="main-image2" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image3.png" alt="main-image3" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image4.png" alt="main-image4" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image1.png" alt="main-image1" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image2.png" alt="main-image2" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image3.png" alt="main-image3" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image4.png" alt="main-image4" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image1.png" alt="main-image1" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image2.png" alt="main-image2" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image3.png" alt="main-image3" />
+		    	</div>
+		    	<div class="swiper-slide">
+		      		<img src="../assets/images/main/main-image4.png" alt="main-image4" />
+		    	</div>
+			</div>
 		</div>
 		<div id="main-text-wrap">
-	    	<p id="main-text">모든 작품들은 빛날 가치가 있습니다</p>
-	    </div>
-	  </div>
+			<p id="main-text">모든 작품들은 빛날 가치가 있습니다</p>
+		</div>
+	</div>
+	  
+	  <!-- auction -->
+	<div>	  
+	<section id="auction-section">
+		<div id="auction-title-wrap">
+			<h1 id="auction-title">Gradation Auction</h1>
+			<div id="line1"></div>
+		</div>
+		<div id="auction-banner">
+			<div>
+	    		<img src="../assets/images/main/main-auction.png" alt="main-auction"/>
+	    	</div>
+	    	<div id="auction-text">
+	      		<h3>졸업작품 전문 경매 플랫폼</h3>
+	      		<h2 style="margin-top: 25px">그라데이션은 미래의 창작가를</h2>
+	      		<h2>응원할 당신을 기다립니다.</h2>
+	    	</div>
+	  	</div>
+	</section>	  
+	<section id="auction-section">
+		<div id="auction-title-wrap">
+			<h1 id="art-title">Gradation Art</h1>
+			<div id="line2"></div>
+		</div>
+		<div id="gradation-banner">
+			<div>
+	    		<img src="../assets/images/main/main-exhibition1.png" alt="main-art"/><img src="../assets/images/main/main-exhibition2.png" alt="main-art"/>
+	    	</div>
+	    	<div id="gradation-text">
+	    		<div id="text1">
+		      		<h3>세상이 알지 못한</h3>
+		      		<h2 style="margin-top: 8px">숨겨진 작품들</h2>
+		      	</div>
+		      	<div id="text2">
+		      		<h3>꿈꾸는 청춘들을</h3>
+		      		<h2 style="margin-top: 8px">만나보세요</h2>
+		      	</div>
+	    	</div>
+	  	</div>
+	</section>
+	<section id="auction-section" style="margin-bottom: 200px">
+		<div id="auction-title-wrap">
+			<h1 id="upcycling-title">Gradation Upcycling</h1>
+			<div id="line3"></div>
+		</div>
+		<div id="gradation-banner">
+			<div>
+	    		<img src="../assets/images/main/main-upcycling.png" alt="main-upcycling"/>
+	    	</div>
+	    	<div id="upcycling-text">
+	    		<div>
+		      		<h3>창작과 환경의 공존</h3>
+		      		<h2 style="margin-top: 8px">작은 노력이 큰 변화를 만들어 냅니다.</h2>
+		      	</div>
+
+	    	</div>
+	  	</div>
+	</section>
+		  
+	  
 
 	<%@ include file="../layout/footer.jsp" %>
 	

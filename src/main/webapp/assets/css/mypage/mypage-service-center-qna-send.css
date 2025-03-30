@@ -45,115 +45,32 @@ body {
 	margin-bottom: 50px;
 }
 
-#menu {
-	display: flex;
+#content-wrap {
 	width: 800px;
-	height: 50px;
-	border-top: solid 1px var(--color-gray900);
-	border-bottom: solid 1px var(--color-gray900);
 }
 
-#menu-number {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
+.h5-text {
+	font-size: var(--font-size-h5);
+	color: var(--color-black);
+	font-weight: var(--font-weight-semibold);
 }
 
-#menu-kind {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
-}
-
-#menu-status {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
-}
-
-#menu-title {
-	width: 320px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
-}
-
-#menu-date {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: auto;
-   	margin-right: 24px;
-}
-
-.item {
-	display: flex;
-	width: 800px;
-	height: 70px;
-	border-bottom: solid 1px var(--color-gray900);
-	cursor: pointer;
-}
-
-.item-number-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	font-size: var(--font-size-h4);
-}
-.item-kind-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	margin-left: 40px;
-	font-size: var(--font-size-h7);
-}
-.item-status-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	margin-left: 40px;
-	font-size: var(--font-size-h7);
-}
-.item-title-wrap {
-	width: 320px;
-	align-content: center;
-	text-align: center;
-	margin-left: 40px;
-	font-size: var(--font-size-h7);
-}
-
-.item-date-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	margin-left: auto;
-	margin-right: 24px;
+.red-star {
+	font-size: var(--font-size-h5);
+	color: var(--color-primary);	
+	font-weight: var(--font-weight-semibold);
+	margin-top: -5px;
 }
 
 
-form {
-	text-align: right;
-}
-
-.qna-button-div{
+.submit-button-div{
 	display: flex;
 	flex-direction: row-reverse;
 	margin-top: 50px;
 	margin-bottom: 200px;
 }
 
-.qna-button {
+.submit-button {
 	background-color: var(--color-primary);
 	font-size: var(--font-size-h5);
 	border: none;
@@ -163,3 +80,121 @@ form {
 	height: 50px;
 }
 
+#checkboxs-wrap {
+	display: flex;
+	height: 28px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+#checkboxs-wrap > .red-star {
+	margin-right: 28px;
+	margin-left: 0px;
+}
+
+.checkbox-label {
+	margin-left: 50px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label{
+	display: block;
+	height: 20px;
+	background: url('../../images/join/checked-off.png') no-repeat 0 0px / contain;
+}
+
+input[type='radio']:checked+label{
+	background: url('../../images/join/checked-on.png') no-repeat 0 0px / contain;
+}
+
+.check-label-span{
+	font-size: var(--font-size-h7);
+	color : var(--color-gray900);
+  	margin-left: 25px;
+ }
+ 
+#title-wrap {
+	margin-top: 31px;
+	display: flex;
+	width: 800px;
+	height: 28px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+#title-wrap > input {
+	margin-left: 78px;
+	border : none;
+	outline: none;
+	background-color: var(--color-gray100);
+	padding: 0;
+}
+
+#textarea-content {
+	margin : 50px 0 0 0;
+}
+
+textarea {
+	width : 800px;
+	height : 310px;
+	margin : 4px 0 0 0;
+	background-color : var(--color-gray100);
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size : var(--font-size-h7);
+	font-weight : var(--font-weight-regular);
+	color : var(--color-gray900);
+	padding : 10px 0 0 10px;
+	resize: none;
+}
+
+.filebox {
+	margin-top: 43px;
+}
+
+.filebox .upload-name {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    width: 78%;
+    color: #999999;
+}
+
+.filebox label {
+    display: inline-block;
+    padding: 5px 20px;
+    color: var(--color-primary);
+    vertical-align: middle;
+    background-color: var(--color-gray100);
+    cursor: pointer;
+    height: 35px;
+    margin-left: 57px;
+    border: solid 1px var(--color-primary);
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#email-wrap {
+	margin-top: 31px;
+	display: flex;
+	width: 800px;
+	height: 28px;
+	border-bottom: solid 1px var(--color-gray900);
+}
+
+#email-wrap > input {
+	margin-left: 63px;
+	border : none;
+	outline: none;
+	background-color: var(--color-gray100);
+	padding: 0;
+}

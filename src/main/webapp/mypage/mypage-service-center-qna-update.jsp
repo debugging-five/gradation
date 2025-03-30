@@ -26,7 +26,7 @@
 			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 1 : 1 문의하기</h2>
-				<form action="mypage-service-center-qna-send-ok.mypage" method="post">
+				<form action="mypage-service-center-qna-update-ok.mypage" method="post">
 					<div id="checkboxs-wrap">						
 						<span class="h5-text">구분</span>
 						<span class="red-star">*</span>
@@ -87,7 +87,7 @@
 			  		</div>
 				
 					<div class="submit-button-div">
-						<button class="submit-button" type="submit">등록</button>
+						<button class="submit-button" type="submit">수정</button>
 					</div>
 				</form>
 			</div>

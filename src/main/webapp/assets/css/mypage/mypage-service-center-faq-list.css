@@ -9,6 +9,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 80px;
 }
 
 #container {
@@ -54,43 +55,22 @@ body {
 }
 
 #menu-number {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
+	margin-left: 24px;
+	align-content: center;
 }
 
 #menu-kind {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
-}
-
-#menu-status {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
+	margin-left: 86px;
+	align-content: center;
 }
 
 #menu-title {
-	width: 320px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: 40px;
+	margin-left: 330px;
+	align-content: center;
 }
 
-#menu-date {
-	width: 80px;
-	display : flex;
-   	align-items : center;
-   	justify-content : center;
-   	margin-left: auto;
-   	margin-right: 24px;
+#items {
+	margin-bottom: 70px;
 }
 
 .item {
@@ -116,50 +96,55 @@ body {
 	margin-left: 40px;
 	font-size: var(--font-size-h7);
 }
-.item-status-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	margin-left: 40px;
-	font-size: var(--font-size-h7);
-}
 .item-title-wrap {
 	width: 320px;
 	align-content: center;
 	text-align: center;
-	margin-left: 40px;
+	margin-left: 160px;
 	font-size: var(--font-size-h7);
 }
-
-.item-date-wrap {
-	width: 80px;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	margin-left: auto;
-	margin-right: 24px;
-}
-
 
 form {
 	text-align: right;
 }
 
-.qna-button-div{
-	display: flex;
-	flex-direction: row-reverse;
-	margin-top: 50px;
+button {
+	width: 125px;
+	height: 50px;
+	background-color: var(--color-primary);
+	color: var(--color-gray100);
+	font-size: var(--font-size-h5);
+	border: solid 1.5px var(--color-primary);
+	border-radius: 3px;
 	margin-bottom: 200px;
 }
 
-.qna-button {
-	background-color: var(--color-primary);
-	font-size: var(--font-size-h5);
-	border: none;
-	border-radius: 3px;
-	color: var(--color-gray100);
-	width: 125px;
-	height: 50px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
