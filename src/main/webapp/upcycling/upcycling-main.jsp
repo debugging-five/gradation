@@ -154,7 +154,7 @@
 	</div>
     
 	<div class="buttons">
-	 	<a href="../mypage/mypage-admin-faq-list.mypage">
+	 	<a href="../mypage/mypage-service-center-qna-list.mypage">
 	    	<button class="qna-button">문의하기</button>
 	    </a>
 	    <a href="../upcycling/upcycling-form.upcycling"> 
