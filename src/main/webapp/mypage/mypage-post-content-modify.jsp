@@ -13,7 +13,7 @@
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
 	<input type="hidden" id="anPageName" name="page"
-		value="mypage-send-post-content-modify" />
+		value="mypage-post-content-modify" />
 	<div class="container-center">
 		<div class="mypage-send-post-content-modify screen">
 			<div class="view">
@@ -119,7 +119,6 @@
 				document.querySelector(".form-input-content").focus();
 				return false;
 			}
-
 			document.getElementById("popup-confirm").style.display = "flex";
 			return false;
 		}

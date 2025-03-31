@@ -46,13 +46,13 @@ public class DisplayFrontController extends HttpServlet{
 		}else if(target.equals("display/display-category-painting")) {
 			result = new DisplayCategoryPaintingController().execute(req, resp);
 		}else if(target.equals("display/display-category-sculpture")) {
-//			result = new DisplayCategorySculptureController().execute(req, resp);
+			result = new DisplayCategorySculptureController().execute(req, resp);
 		}else if(target.equals("display/display-category-craft")) {
 			result = new DisplayCategoryCraftController().execute(req, resp);
 		}else if(target.equals("display/display-category-architecture")) {
-//			result = new DisplayCategoryArchitectureController().execute(req, resp);
+			result = new DisplayCategoryArchitectureController().execute(req, resp);
 		}else if(target.equals("display/display-category-calligraphy")) {
-//			result = new DisplayCategoryCalligraphyController().execute(req, resp);
+			result = new DisplayCategoryCalligraphyController().execute(req, resp);
 		}else if(target.equals("display/display-detail")) {
 			result = new DisplayDetailController().execute(req, resp);
 		}else {

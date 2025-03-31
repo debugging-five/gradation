@@ -67,10 +67,8 @@
 .mypage-post-content .notice {
 	align-self: flex-end;
 	color: var(--color-black);
-	margin-right: 7px;
 	margin-top: 29px;
 	min-height: 14px;
-	min-width: 190px;
 	white-space: nowrap;
 	font-size: var(--font-size-h9);
 	line-height: var(--line-height-h9);
@@ -89,13 +87,12 @@
 	gap: 492px;
 	height: 100px;
 	margin-top: 8px;
-	min-width: 800px;
+	width: 100%;
 	padding: 36px 0;
 }
 
 .mypage-post-content .post-title {
 	color: var(--color-black);
-	margin-left: -1px;
 	min-height: 25px;
 	min-width: 251px;
 	white-space: nowrap;
@@ -108,8 +105,8 @@
 	align-self: center;
 	color: var(--color-black);
 	margin-bottom: 3.0px;
+	margin-right: 10px;
 	min-height: 19px;
-	min-width: 57px;
 	white-space: nowrap;
 	font-size: var(--font-size-h7);
 	line-height: var(--line-height-h7);
@@ -117,17 +114,15 @@
 }
 
 .mypage-post-content .post-user-info-group {
-	align-items: center;
-	background-color: var(--color-primary);
 	display: flex;
-	height: 50px;
-	margin-top: 25px;
-	min-width: 800px;
+	width: 100%;
+	background-color: var(--color-primary);
 	padding: 15px 10px;
-	font-size: var(--font-size-h7);
-	line-height: var(--line-height-h7);
-	font-weight: var(--font-weight-regular);
+	box-sizing: border-box;
+	margin-top: 25px;
 }
+
+
 
 .mypage-post-content .label-sender-name {
 	color: var(--color-gray100);
