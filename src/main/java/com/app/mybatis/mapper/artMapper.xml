@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="art">
-<<<<<<< HEAD
+
 
 <!--작품 업로드 (전시중) -->
 <insert id="insert" parameterType="ArtVO">
@@ -71,35 +71,3 @@
 
 
 </mapper>
-=======
-    <insert id="insertArt" parameterType="ArtVO">
-        INSERT INTO TBL_ART
-        (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION,
-         ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID)
-        VALUES (SEQ_ART.NEXTVAL, #{artTitle}, #{artCategoty}, #{artMeterial},
-                #{artSize}, #{artDescription}, #{artDate}, #{artStartDate},
-                #{artEndDate}, #{userId})
-    </insert>
-
-    <insert id="insertArtLike" parameterType="map">
-        INSERT INTO TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
-        VALUES (SEQ_ART_LIKE.NEXTVAL, #{artId}, #{userId}, SYSTIMESTAMP)
-    </insert>
-
-    <delete id="deleteArtLike" parameterType="map">
-        DELETE FROM TBL_ART_LIKE
-        WHERE ART_ID = #{artId} AND USER_ID = #{userId}
-    </delete>
-
-    <select id="selectArtDetail" parameterType="long" resultType="ArtVO">
-        SELECT * FROM TBL_ART WHERE ID = #{artId}
-    </select>
-
-    <select id="selectArtByExhibition" parameterType="long" resultType="ArtVO">
-        SELECT A.*
-        FROM TBL_ART A
-        JOIN TBL_EXHIBITION_PAST_ART EPA ON A.ID = EPA.ART_ID
-        WHERE EPA.GRADATION_EXHIBITION_ID = #{exhibitionId}
-    </select>
-</mapper>
->>>>>>> 6079d4b13d38557a07faa1fc358c97af588965f6

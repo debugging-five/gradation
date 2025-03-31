@@ -3,14 +3,6 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<<<<<<< HEAD
-<mapper namespace="artist">
-
-
-
-
-</mapper>
-=======
 <mapper namespace="com.app.dao.ArtistDAO">
 
     <!-- 작가 정보 조회 -->
@@ -52,4 +44,4 @@
     </update>
 
 </mapper>
->>>>>>> 6079d4b13d38557a07faa1fc358c97af588965f6
+
