@@ -2,4 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mypage">
+	<select id="selectMyInfo" parameterType="long"
+		resultType="com.app.vo.UserVO">
+		SELECT * FROM TBL_USER WHERE ID = #{userId}
+	</select>
+
+	<select id="selectMyReplies" parameterType="long"
+		resultType="com.app.vo.ReplyVO">
+		SELECT * FROM TBL_REPLY WHERE USER_ID = #{userId}
+	</select>
+
+	<select id="selectMyLikedArts" parameterType="long"
+		resultType="com.app.vo.ArtVO">
+		SELECT A.*
+		FROM TBL_ART A
+		JOIN TBL_ART_LIKE L ON A.ID = L.ART_ID
+		WHERE L.USER_ID = #{userId}
+	</select>
+
+	<select id="selectMyPurchases" parameterType="long"
+		resultType="com.app.dto.AuctionDTO">
+		SELECT * FROM VIEW_MY_PURCHASES WHERE USER_ID = #{userId}
+	</select>
+
+	<select id="selectMySales" parameterType="long"
+		resultType="com.app.dto.AuctionDTO">
+		SELECT * FROM VIEW_MY_SALES WHERE USER_ID = #{userId}
+	</select>
 </mapper>

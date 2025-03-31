@@ -42,10 +42,10 @@
 				<div class="middle-buttons-container">
 					<div class="middle-buttons">
 						<button class="button-list"
-							onclick="location.href='mypage-post-list.mypage'">목록</button>
+							onclick="location.href='mypage-my-post-list.mypage'">목록</button>
 						<button class="button-delete" onclick="confirmDelete()">삭제</button>
 						<button class="button-reply"
-							onclick="location.href='mypage-post-content-modify.mypage'">답장</button>
+							onclick="location.href='mypage-send-post-content-modify.mypage'">답장</button>
 					</div>
 				</div>
 			</div>

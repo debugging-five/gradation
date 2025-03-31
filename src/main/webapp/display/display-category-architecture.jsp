@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+String uri = request.getRequestURI();
+String currentFile = uri.substring(uri.lastIndexOf("/") + 1);
+currentFile = currentFile.replace(".jsp", ".display");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +15,6 @@
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/display/display-main-ing.css" />
-
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
@@ -23,10 +28,12 @@
 					<div class="tab-wrapper">
 						<div class="tab-labels">
 							<div class="tab-text">
-								<a href="../display/display-main-ing.display">전시중</a>
+								<a href="../display/display-main-ing.display"
+								 class="<%= uri.contains("display-main-ing") ? "active" : "" %>">전시중</a>
 							</div>
 							<div class="tab-text-upcoming">
-								<a href="../display/display-main-comming-soon.display">전시예정</a>
+								<a href="../display/display-main-comming-soon.display"
+								 class="<%= uri.contains("display-main-comming-soon") ? "active" : "" %>">전시예정</a>
 							</div>
 						</div>
 					</div>
@@ -35,22 +42,29 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="../display/display-category-korean.display">한국화</a>
+								<a href="../display/display-category-korean.display"
+									class="<%=currentFile.equals("display-category-korean.display") ? "active" : ""%>">
+									한국화 </a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-painting.display">회화</a>
+								<a href="../display/display-category-painting.display"
+									class="<%=currentFile.equals("display-category-painting.display") ? "active" : ""%>">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-sculpture.display">조각</a>
+								<a href="../display/display-category-sculpture.display"
+									class="<%=currentFile.equals("display-category-sculpture.display") ? "active" : ""%>">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-craft.display">공예</a>
+								<a href="../display/display-category-craft.display"
+									class="<%=currentFile.equals("display-category-craft.display") ? "active" : ""%>">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-architecture.display">건축</a>
+								<a href="../display/display-category-architecture.display"
+									class="<%=currentFile.equals("display-category-architecture.display") ? "active" : ""%>">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-calligraphy.display">서예</a>
+								<a href="../display/display-category-calligraphy.display"
+									class="<%=currentFile.equals("display-category-calligraphy.display") ? "active" : ""%>">서예</a>
 							</div>
 						</div>
 					</div>
@@ -82,47 +96,210 @@
 			<div class="row-main">
 				<div class="row-gallery">
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-coastal-cliff.jpeg"
-							alt="cliff" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box.jpeg"
-							alt="floating-box" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-glass-dome.jpeg"
-							alt="glass-dome" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-luxury-cat.jpeg"
-							alt="luxury-cat" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-coastal-cliff.jpeg"
+									alt="cliff" data-date="2024-02-08" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">부럽다</div>
+										<div class="hover-artist">박세현</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-corten.jpeg"
+									alt="corten" data-date="2024-01-01" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">corten</div>
+										<div class="hover-artist">이덕준</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-corten-2.jpeg"
+									alt="corten-2" data-date="2024-11-08" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">corten2</div>
+										<div class="hover-artist">이덕준</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box.jpeg"
+									alt="floating" data-date="2024-05-18" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">좌대</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box-2.jpeg"
+									alt="floating-2" data-date="2024-03-21" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">좌대2</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-coastal-cliff-2.jpeg"
-							alt="cliff-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box-2.jpeg"
-							alt="floating-box-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-glass-dome-2.jpeg"
-							alt="glass-dome-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-hanok-3.jpeg"
-							alt="hanok-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-luxury-cat-2.jpeg"
-							alt="luxury-cat-2" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-floating-box-3.jpeg"
+									alt="floating-3" data-date="2024-11-01" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">좌대3</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
+									alt="meditation-house-3" data-date="2024-02-13" />
+								<div class="hover-overlay">
+									<
+									<div class="hover-text-group">
+										<div class="hover-title">Meditation</div>
+										<div class="hover-artist">이덕준</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
+									alt="hanok-2" data-date="2024-04-14" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">봄의 한옥</div>
+										<div class="hover-artist">조마루</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-foggy.jpeg"
+									alt="foggy" data-date="2024-01-18" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">포지</div>
+										<div class="hover-artist">김건축</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-foggy-2.jpeg"
+									alt="foggy-2" data-date="2024-09-04" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">포지2</div>
+										<div class="hover-artist">김건축</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-coastal-cliff-3.jpeg"
-							alt="cliff-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-floating-box-3.jpeg"
-							alt="floating-box-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-glass-dome-3.jpeg"
-							alt="glass-dome-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-hanok-4.jpeg"
-							alt="hanok-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-luxury-cat-3.jpeg"
-							alt="luxury-cat-3" />
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-future.jpeg"
+									alt="미래" data-date="2025-02-12" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">우리집</div>
+										<div class="hover-artist">곽승민</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-future-2.jpeg"
+									alt="미래2" data-date="2024-12-13" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">우리집?</div>
+										<div class="hover-artist">곽승민</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-future-3.jpeg"
+									alt="미래3" data-date="2024-11-19" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">우리집 일걸?</div>
+										<div class="hover-artist">곽승민</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-glass-dome.jpeg"
+									alt="dome" data-date="2024-04-05" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">이글루</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="../assets/images/display/art/architecture/img-architecture-glass-dome-2.jpeg"
+									alt="dome-2" data-date="2024-06-07" />
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title">펭귄네</div>
+										<div class="hover-artist">김동건</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="pagination-bar suith4">
+			<div class="pagination-bar">
 				<img class="pagination-icon"
 					src="../assets/images/display/art/left.png" alt="left" />
 				<%
@@ -132,7 +309,8 @@
 				for (int i = 1; i <= totalPages; i++) {
 				%>
 				<a href="display-category-architecture.display?page=<%=i%>"
-					class="<%=(i == currentPage) ? "active" : ""%>"> <%=i%>
+					class="page-number <%=(i == currentPage) ? "active" : ""%>">
+					<%=i%>
 				</a>
 				<%
 				}
@@ -150,28 +328,41 @@
   }
 
   function sortGallery(type) {
-    const columns = document.querySelectorAll(".gallery-column");
+	  const columns = document.querySelectorAll(".gallery-column");
 
-    columns.forEach(column => {
-      const images = Array.from(column.querySelectorAll(".gallery-image"));
+	  columns.forEach(column => {
+	    const items = Array.from(column.querySelectorAll(".gallery-item"));
 
-      images.sort((a, b) => {
-        if (type === "name-asc") {
-          return a.alt.localeCompare(b.alt);
-        } else if (type === "name-desc") {
-          return b.alt.localeCompare(a.alt);
-        } else if (type === "date") {
-          const dateA = a.dataset.date || "2000-01-01";
-          const dateB = b.dataset.date || "2000-01-01";
-          return new Date(dateA) - new Date(dateB);
-        }
-      });
+	    items.sort((a, b) => {
+	      const altA = a.querySelector(".gallery-image").alt;
+	      const altB = b.querySelector(".gallery-image").alt;
 
-      images.forEach(img => column.appendChild(img));
-    });
+	      if (type === "name-asc") {
+	        return altA.localeCompare(altB);
+	      } else if (type === "name-desc") {
+	        return altB.localeCompare(altA);
+	      } else if (type === "date") {
+	        const dateA = a.querySelector(".gallery-image").dataset.date || "2000-01-01";
+	        const dateB = b.querySelector(".gallery-image").dataset.date || "2000-01-01";
+	        return new Date(dateA) - new Date(dateB);
+	      }
+	    });
 
-    document.getElementById("sortDropdown").style.display = "none";
-  }
+	    items.forEach(item => column.appendChild(item));
+	  });
+
+	  document.getElementById("sortDropdown").style.display = "none";
+	}
+  document.querySelectorAll('.category-link').forEach(link => {
+	  link.addEventListener('click', function () {
+
+	    document.querySelectorAll('.category-link').forEach(el => el.classList.remove('active'));
+
+	    this.classList.add('active');
+	  });
+	});
+
+
   document.addEventListener("click", function (e) {
     const dropdown = document.getElementById("sortDropdown");
     const sortIcon = document.querySelector(".sort-icon");
@@ -181,6 +372,5 @@
     }
   });
 </script>
-
 </body>
 </html>
