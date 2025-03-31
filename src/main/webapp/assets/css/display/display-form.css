@@ -167,8 +167,6 @@ body {
   gap: 5px;
 }
 .size-input input {
-  width: 35px;
-  text-align: center;
   	border: none; /* 보더 없애기 */
     outline: none; /* 포커스 시 외곽선 없애기 (선택적) */
     background-color: #FBFCFC;
