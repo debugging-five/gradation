@@ -5,40 +5,41 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
-import com.app.vo.UserVO;
+import com.app.vo.ArtLikeVO;
+import com.app.vo.AuctionBiddingVO;
+import com.app.vo.AuctionVO;
 import com.app.vo.ReplyVO;
-import com.app.dto.AuctionDTO;
-import com.app.vo.ArtVO;
+import com.app.vo.UserVO;
 
 public class MypageDAO {
-	private SqlSession sqlSession;
+	public SqlSession sqlSession;
+	
+ 	public MypageDAO() {
+ 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+ 	}
+ 	
+    // 회원 정보 조회
+    public UserVO selectUserDetails(int userId) {
+        return sqlSession.selectOne("user.selectUserDetails", userId);
+    }
+    
+    // 내 댓글 조회
+    public ReplyVO selectReplyById(int id) {
+        return sqlSession.selectOne("selectReplyById", id);
+    } 
+    
+    // 내가 눌렀던 작품 좋아요 조회
+    public List<ArtLikeVO> selectLikesByUserId(int userId) {
+        return sqlSession.selectList("selectLikesByUserId", userId);
+    }
+    
+    // 유저의 경매 구매 내역 조회
+    public List<AuctionBiddingVO> selectBiddingByUserId(int userId) {
+        return sqlSession.selectList("selectBiddingByUserId", userId);
+    }
 
-	public MypageDAO() {
-		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-	}
-
-	// 내 정보 조회
-	public UserVO selectMyInfo(Long userId) {
-		return sqlSession.selectOne("mypage.selectMyInfo", userId);
-	}
-
-	// 내가 남긴 댓글
-	public List<ReplyVO> selectMyReplies(Long userId) {
-		return sqlSession.selectList("mypage.selectMyReplies", userId);
-	}
-
-	// 내가 '좋아요'한 작품
-	public List<ArtVO> selectMyLikedArts(Long userId) {
-		return sqlSession.selectList("mypage.selectMyLikedArts", userId);
-	}
-
-	// 구매 내역
-	public List<AuctionDTO> selectMyPurchases(Long userId) {
-		return sqlSession.selectList("mypage.selectMyPurchases", userId);
-	}
-
-	// 판매 내역
-	public List<AuctionDTO> selectMySales(Long userId) {
-		return sqlSession.selectList("mypage.selectMySales", userId);
-	}
+    // 유저의 경매 판매 내역 조회
+    public List<AuctionVO> selectAuctionByUserId(int userId) {
+        return sqlSession.selectList("selectAuctionByUserId", userId);
+    }
 }

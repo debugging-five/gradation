@@ -1,3 +1,53 @@
+/* 댓글 등록 눌렀을때  */
+/* 댓글 등록 버튼 눌렀을 때 */
+function openPopup() {
+    let commentText = document.querySelector(".comment-typing").value.trim();
+
+    if (commentText === "") {
+        // 댓글이 비어 있으면 "댓글을 입력하세요." 팝업 띄우기
+        document.getElementById("emptyCommentPopup").style.display = "flex";
+    } else {
+        // 댓글이 있으면 "댓글을 등록하시겠습니까?" 팝업 띄우기
+        document.getElementById("modalBg").style.display = "flex";
+    }
+}
+
+// 수정 팝업 띄우기 (저장 버튼 클릭 시)
+function openUpdateCommentPopup() {
+    document.getElementById("updateCommentPopup").style.display = "flex";
+}
+
+// 특정 팝업 닫기
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+// "댓글을 등록하시겠습니까?"에서 확인 버튼을 눌렀을 때 실행
+function confirmSubmission() {
+    document.getElementById("modalBg").style.display = "none";  // 기존 모달 닫기
+    document.getElementById("popupOverlay").style.display = "flex"; // "댓글이 등록되었습니다!" 모달 띄우기
+}
+
+// "댓글이 등록되었습니다!" 모달에서 확인 버튼 클릭 시 팝업 닫기
+document.querySelector("#popupOverlay .send").addEventListener("click", function () {
+    closePopup("popupOverlay");
+});
+
+// 수정 완료 후 "댓글이 수정되었습니다!" 팝업 띄우기
+document.getElementById('save-faq').addEventListener('click', function(e) {
+    e.preventDefault(); // 기본 동작 방지 (form 제출 방지)
+
+    // 댓글 수정 완료 팝업 띄우기
+    document.getElementById('updateCommentPopup').style.display = 'flex';
+});
+
+// 팝업 닫기 함수 (수정된 팝업 포함)
+document.querySelector("#updateCommentPopup .send").addEventListener("click", function () {
+    closePopup("updateCommentPopup");
+});
+
+
+
 
 
 /* ...버튼 속에 수정과 삭제 */
@@ -23,6 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+
 /* 등록순 버튼 속에 등록순과 좋아요순 */
 document.addEventListener("DOMContentLoaded", function () {
     const dropdownBtn2 = document.querySelector(".dropdown-btn-2");
@@ -43,37 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu2.addEventListener("click", function (event) {
         event.stopPropagation();
     });
-});
-
-
-/* 댓글 등록 눌렀을때  */
-/* 댓글 등록 버튼 눌렀을 때 */
-function openPopup() {
-    let commentText = document.querySelector(".comment-typing").value.trim();
-
-    if (commentText === "") {
-        // 댓글이 비어 있으면 "댓글을 입력하세요." 팝업 띄우기
-        document.getElementById("emptyCommentPopup").style.display = "flex";
-    } else {
-        // 댓글이 있으면 "댓글을 등록하시겠습니까?" 팝업 띄우기
-        document.getElementById("modalBg").style.display = "flex";
-    }
-}
-
-// 특정 팝업 닫기
-function closePopup(id) {
-    document.getElementById(id).style.display = "none";
-}
-
-// "댓글을 등록하시겠습니까?"에서 확인 버튼을 눌렀을 때 실행
-function confirmSubmission() {
-    document.getElementById("modalBg").style.display = "none";  // 기존 모달 닫기
-    document.getElementById("popupOverlay").style.display = "flex"; // "댓글이 등록되었습니다!" 모달 띄우기
-}
-
-// "댓글이 등록되었습니다!" 모달에서 확인 버튼 클릭 시 팝업 닫기
-document.querySelector("#popupOverlay .send").addEventListener("click", function () {
-    closePopup("popupOverlay");
 });
 
 

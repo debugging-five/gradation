@@ -46,34 +46,35 @@ document.getElementById('category-select').addEventListener('change', function (
 	}
 	
 	
-	// 달력 UI 보여주기
-	function showCalendar() {
-	    var dateInput = document.getElementById('date-input');
-	    var calendarText = document.getElementById('calendar-text');
+// 달력 UI 보여주기
+function showCalendar() {
+    var dateInput = document.getElementById('date-input');
+    var calendarText = document.getElementById('calendar-text');
 
-	    // 날짜 선택 input 보이게 하기
-	    dateInput.style.display = 'inline-block';
-	    calendarText.style.display = 'none';  // "날짜를 선택해주세요" 텍스트 숨기기
-	    dateInput.focus();  // 날짜 입력 필드에 포커스를 주어 달력 UI가 바로 보이게 함
-	}
+    // 날짜 선택 input 보이게 하기
+    dateInput.style.display = 'inline-block';
+    calendarText.style.display = 'none';  // "날짜를 선택해주세요" 텍스트 숨기기
+    dateInput.focus();  // 날짜 입력 필드에 포커스를 주어 달력 UI가 바로 보이게 함
+}
 
-	// 날짜 선택 후 텍스트 업데이트
-	function updateDate() {
-	    var selectedDate = document.getElementById('date-input').value;
-	    var calendarText = document.getElementById('calendar-text');
+// 날짜 선택 후 텍스트 업데이트
+function updateDate() {
+    var selectedDate = document.getElementById('date-input').value;
+    var calendarText = document.getElementById('calendar-text');
 
-	    // 날짜가 선택되었을 때 텍스트를 선택한 날짜로 업데이트
-	    if (selectedDate) {
-	        calendarText.innerHTML = selectedDate;  // 선택한 날짜로 텍스트 변경
-	    }
+    // 날짜가 선택되었을 때 텍스트를 선택한 날짜로 업데이트
+    if (selectedDate) {
+        calendarText.innerHTML = selectedDate;  // 선택한 날짜로 텍스트 변경
+    }
 
-	    // 날짜 선택 input 숨기기
-	    dateInput.style.display = 'none';
-	    // 선택한 날짜 텍스트 보이기
-	    calendarText.style.display = 'inline';
-	}
+    // 날짜 선택 input 숨기기
+    dateInput.style.display = 'none';	
+    // 선택한 날짜 텍스트 보이기
+    calendarText.style.display = 'inline';
+}
 	
-	
+
+
 	
 	
 	

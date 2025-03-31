@@ -19,14 +19,15 @@
 	    <div class="slider">
            <div class="slide">
                <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner1.png" alt="Slide 1">
-               <div class="slide-text1">"창작의 흔적이 환경과 미래를 망치는 폐기물이 되지 않도록."</div>
-               <div class="slide-text2">"이제는 변화를 만들어야 할 때 입니다."</div>
+               <div class="slide-text1">창작의 가치는 계속됩니다.</div>
            </div>
            <div class="slide">
-               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner2.jpg" alt="Slide 2">
+               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner2.png" alt="Slide 2">
+               <div class="slide-text1">지속 가능한 예술 환경을 위한 작은 변화, 함께 만들어갑니다.</div>
            </div>
            <div class="slide">
-               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner1.png" alt="Slide 3">
+               <img class="slide-img" src="../assets/images/upcycling/upcycling-main/banner3.png" alt="Slide 3">
+               <div class="slide-text1">버려지는 작품, 새로운 가치를 입다</div>
            </div>
 	    </div>
 	    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -37,7 +38,34 @@
     <!-- 스크롤 -->
     <div class= "chepter-1">
 		<h1 class= "chepter-1-text">"아름다움 뒤에 숨겨진 환경 문제"</h1>	
-		<img alt="banner" src="../assets/images/upcycling/upcycling-main/chepter-1.png">
+    </div>
+    
+    <div class= "chepter-1-1">
+		<div class="chepter-box">
+			<div class="chepter-1-1-title">9,739회</div>
+			<div class="chepter-1-1-content">2024년 국내 미술전시회</div>
+		</div>
+		<div class= "wall"></div>
+		<div class="chepter-box">
+			<div class="chepter-1-1-title">200,000 톤</div>
+			<div class="chepter-1-1-content">한해 전시회에서 발생되는 폐기물</div>		
+		</div>
+		<div class= "wall"></div>
+		<div class="chepter-box">
+			<div class="chepter-1-1-title">화학 물질</div>
+			<div class="chepter-1-1-content">
+				<span>희석용제, 부식액, 스프레이 등</span>
+				<span>인체와 환경에 유해한 물질</span>
+			</div>		
+		</div>
+		<div class= "wall"></div>
+		<div class="chepter-box">
+			<div class="chepter-1-1-title">5%</div>
+			<div class="chepter-1-1-content">
+				<span>연간 재활용 되는</span>
+				<span>폐기물 비율</span>
+			</div>		
+		</div>
     </div>
 
     <div class= "chepter-2">
@@ -126,7 +154,7 @@
 	</div>
     
 	<div class="buttons">
-	 	<a href="../mypage/mypage-admin-faq-list.mypage">
+	 	<a href="../mypage/mypage-service-center-qna-list.mypage">
 	    	<button class="qna-button">문의하기</button>
 	    </a>
 	    <a href="../upcycling/upcycling-form.upcycling"> 
