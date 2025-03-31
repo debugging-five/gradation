@@ -69,3 +69,101 @@ body {
   	color: var(--color-gray900);
   	font-weight: var(--font-weight-bold);
 }
+
+
+/* auction  */
+#auction-section {
+	display: flex;
+  	width: 100%;
+  	margin-top: 288px;
+  	align-items: center;
+  	flex-direction: column;
+}
+
+#auction-title-wrap {
+	display: flex;
+	align-items: center;
+	width: 1160px;
+}
+
+
+
+#line1 {
+	width: 800px;
+	border-bottom: solid 2px var(--color-black);
+	margin-left: auto;
+}
+
+#auction-title, #art-title, #upcycling-title {
+  	margin-bottom: 32px;
+}
+
+#auction-title:hover, 
+#art-title:hover, 
+#upcycling-title:hover {
+	cursor: pointer;
+  	font-size: 44px;
+}
+
+#auction-banner {
+  	position: relative;
+  	width: 1160px;
+  	height: 500px;
+}
+
+#auction-text {
+	color: var(--color-gray100);
+	position: absolute;
+	top: 284px;
+	right: 36px;
+}
+
+
+#gradation-banner {
+  	position: relative;
+	display: flex;
+	gap: 0px;
+}
+
+#line2 {
+	width: 875px;
+	border-bottom: solid 2px var(--color-black);
+	margin-left: auto;
+}
+
+#gradation-text > #text1 {
+	color: var(--color-gray100);
+	position: absolute;
+	left: 48px;
+	bottom: 32px;
+}
+
+#gradation-text > #text2 {
+	color: var(--color-gray100);
+	position: absolute;
+	left: 628px;
+	bottom: 32px;
+}
+
+#line3 {
+	width: 767px;
+	border-bottom: solid 2px var(--color-black);
+	margin-left: auto;
+}
+
+#upcycling-text > div{
+	color: var(--color-gray100);
+	position: absolute;
+	left: 48px;
+	bottom: 32px;
+}
+
+
+
+
+
+
+
+
+
+

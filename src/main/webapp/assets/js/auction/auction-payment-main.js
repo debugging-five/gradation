@@ -1,3 +1,18 @@
+const popup = document.getElementById("popup-wrapper");
+const overlay = document.getElementById("overlay");
+
+const openPopup = () => {
+	popup.style.display = "block";
+	overlay.style.display = "block";
+	body.style.overflow = "hidden";
+}
+
+const closePopup = () => {
+	popup.style.display = "none";
+	overlay.style.display = "none";
+	body.style.overflow = "visible";
+}
+
 const paymentButton = document.getElementById("payment-button");
 const checkUser = document.getElementById("check-user");
 const checkPayment = document.getElementById("check-payment");
@@ -7,6 +22,12 @@ const addressError = document.getElementById("address-error");
 const detailAddressError = document.getElementById("detail-address-error");
 const phoneError = document.getElementById("phone-error");
 const emailError = document.getElementById("email-error");
+
+/*
+paymentButton.addEventListener("click", () => {
+	location.href = "auction-successful-bid.jsp"
+})
+*/
 
 function validateForm() {
     const name = document.getElementById("name").value.trim();

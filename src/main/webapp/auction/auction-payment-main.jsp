@@ -121,8 +121,13 @@
 			</div>
 	
 		</div>
-				<button id="payment-button">결제하기</button>
+				<button id="payment-button" onclick="openPopup()">결제하기</button>
 				
+	        <div id="overlay"></div>
+   			<div id="popup-wrapper">         
+			    <%@ include file="./auction-payment-success.jsp"%>
+			</div>  
+			
 	   <div id="auction-list">
 	      <div id="auction-ing">
 	         <div id="auction-ing-title">경매중인 작품</div>
