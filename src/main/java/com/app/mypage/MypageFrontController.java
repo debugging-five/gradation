@@ -25,6 +25,8 @@ import com.app.mypage.controller.MypageCommentsListController;
 import com.app.mypage.controller.MypageContactArtistDetailController;
 import com.app.mypage.controller.MypageContactListController;
 import com.app.mypage.controller.MypageContactWriteController;
+import com.app.mypage.controller.MypageDeleteIdController;
+import com.app.mypage.controller.MypageDeleteIdOkController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageFormDetailController;
 import com.app.mypage.controller.MypageMainController;
@@ -132,6 +134,10 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageMyPayList().execute(req, resp);
       }else if(target.equals("mypage/form-detail")) {
           result = new MypageFormDetailController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id")) {
+          result = new MypageDeleteIdController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id-ok")) {
+          result = new MypageDeleteIdOkController().execute(req, resp);
       }else {
 //         전부 404
       }

@@ -29,7 +29,7 @@
 		<div id="map-wrapper">
 			<div id="map" style="width:500px;height:400px;"></div>
 			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
-			<script>
+			<!-- <script>
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng(33.450701, 126.570667),
@@ -37,7 +37,7 @@
 				};
 		
 				var map = new kakao.maps.Map(container, options);
-			</script>
+			</script> -->
 		</div>
 		
 		<!-- 대학교 전시회 리스트 wrapper  -->
@@ -105,15 +105,14 @@
 			</div>
 		</div>
 	</div>
-
 	
-		
 	<div id="button-wrapper2">
 		<button type="button" id="inquiry-button" class="button inquiry">문의하기</button>
 		<button type="button" id="register-button" class="button register">학교 등록 신청</button>
 	</div>
 	
 	</div>
+	
 
 <%@ include file="../layout/footer.jsp" %>
 

@@ -26,7 +26,7 @@ public class ArtDAO {
 
     // 작품 업로드 (전시예정)
     public void insertArtForUpcomingExhibition(ArtVO artVO) {
-        sqlSession.insert("art.insert", artVO);
+        sqlSession.insert("art.insertCommingSoon", artVO);
     }
 
 

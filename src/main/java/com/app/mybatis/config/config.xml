@@ -11,9 +11,11 @@
     	<typeAlias type="com.app.vo.ArtLikeVO" alias="ArtLikeVO" />
     	<typeAlias type="com.app.vo.ArtPostVO" alias="ArtPostVO" />
     	<typeAlias type="com.app.vo.ArtVO" alias="ArtVO" />
+    	<typeAlias type="com.app.vo.AuctionBiddingVO" alias="AuctionBiddingVO" />
     	<typeAlias type="com.app.vo.AuctionVO" alias="AuctionVO" />
     	<typeAlias type="com.app.vo.BanVO" alias="BanVO" />
     	<typeAlias type="com.app.vo.DeliveryVO" alias="DeliveryVO" />
+    	<typeAlias type="com.app.vo.ExhibitionPastArtVO" alias="ExhibitionPastArtVO" />
     	<typeAlias type="com.app.vo.FaqVO" alias="FaqVO" />
     	<typeAlias type="com.app.vo.GradationExhibitionVO" alias="GradationExhibitionVO" />
     	<typeAlias type="com.app.vo.MailVO" alias="MailVO" />
@@ -24,14 +26,28 @@
     	<typeAlias type="com.app.vo.QnaVO" alias="QnaVO" />
     	<typeAlias type="com.app.vo.ReplyLikeVO" alias="ReplyLikeVO" />
     	<typeAlias type="com.app.vo.ReplyVO" alias="ReplyVO" />
+    	<typeAlias type="com.app.vo.UniversityExhibitionImgVO" alias="UniversityExhibitionImgVO" />
     	<typeAlias type="com.app.vo.UniversityExhibitionVO" alias="UniversityExhibitionVO" />
     	<typeAlias type="com.app.vo.UniversityLikeVO" alias="UniversityLikeVO" />
     	<typeAlias type="com.app.vo.UniversityVO" alias="UniversityVO" />
-    	<typeAlias type="com.app.vo.UniversityExhibitionImgVO" alias="UniversityExhibitionImgVO" />
     	<typeAlias type="com.app.vo.UpcycleVO" alias="UpcycleVO" />
     	<typeAlias type="com.app.vo.UserVO" alias="UserVO" />
-    	<typeAlias type="com.app.vo.AuctionBiddingVO" alias="AuctionBiddingVO" />
-    	<typeAlias type="com.app.vo.ExhibitionPastArtVO" alias="ExhibitionPastArtVO" />
+    	
+    	<typeAlias type="com.app.dto.ArtPostDTO" alias="ArtPostDTO" />
+    	<typeAlias type="com.app.dto.AuctionDTO" alias="AuctionDTO" />
+    	<typeAlias type="com.app.dto.BanDTO" alias="BanDTO" />
+    	<typeAlias type="com.app.dto.DeliveryDTO" alias="DeliveryDTO" />
+    	<typeAlias type="com.app.dto.DisplayMainDTO" alias="DisplayMainDTO" />
+    	<typeAlias type="com.app.dto.ExhibitionPastDTO" alias="ExhibitionPastDTO" />
+    	<typeAlias type="com.app.dto.GradationExhibitionDTO" alias="GradationExhibitionDTO" />
+    	<typeAlias type="com.app.dto.MailDTO" alias="MailDTO" />
+    	<typeAlias type="com.app.dto.MajorDTO" alias="MajorDTO" />
+    	<typeAlias type="com.app.dto.MyPageMyPostDTO" alias="MyPageMyPostDTO" />
+    	<typeAlias type="com.app.dto.QnaDTO" alias="QnaDTO" />
+    	<typeAlias type="com.app.dto.UniversityDTO" alias="UniversityDTO" />
+    	<typeAlias type="com.app.dto.UniversityExhibitionDTO" alias="UniversityExhibitionDTO" />
+    	<typeAlias type="com.app.dto.UniversityLikeDTO" alias="UniversityLikeDTO" />
+    	<typeAlias type="com.app.dto.UpcycleDTO" alias="UpcycleDTO" />
     </typeAliases>
    
    <environments default="oracle">
@@ -48,31 +64,14 @@
     
     
     <mappers> 
-    	<mapper resource="com/app/mybatis/mapper/artImgMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/artLikeMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/adminMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/artistMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/artMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/artPostMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/auctionMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/banMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/deliveryMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/faqMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/gradationExhibitionMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/mailMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/majorMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/paymentCancellationMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/paymentMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/qnaAnswerMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/qnaMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/replyLikeMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/replyMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universityExhibitionMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universityLikeMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universityMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/upcycleMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/exhibitionMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/mypageMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/upcyclingMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/userMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/auctionBiddingMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/exhibitionPastArtMapper.xml" />
-    	<mapper resource="com/app/mybatis/mapper/universityExhibitionImgMapper.xml" />
     </mappers>
     
     

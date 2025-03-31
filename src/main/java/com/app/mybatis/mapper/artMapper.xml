@@ -21,7 +21,7 @@
 </insert>
     
 <!--작품 업로드 (전시예정) -->
-<insert id="insert" parameterType="ArtVO">
+<insert id="insertCommindSoon" parameterType="ArtVO">
        INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
        VALUES (
            SEQ_ART.NEXTVAL,
@@ -62,5 +62,11 @@
 </insert>
     
 <!--전시 필터링 (WHERE 조건 추가) -->
+
+
+
+
+
+
 
 </mapper>
