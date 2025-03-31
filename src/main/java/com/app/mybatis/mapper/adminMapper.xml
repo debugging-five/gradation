@@ -2,4 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="admin">
+<!-- 
+	<select id="selectId" >
+		SELECT *
+		FROM TBL_USER
+		WHERE ID = #{id}
+	</select>
+-->
+
+	<select id="selectUserList" resultType="UserVO">
+		SELECT *
+		FROM TBL_USER
+	</select>
+	
+	<update id="udpateArtist" parameterType="UserVO">
+		UPDATE TBL_USER
+		SET USER_WRITE_OK = true
+		WHERE ID = #{id}
+	</update>
+	
+
+	<insert id="insertFaq" parameterType="FaqVO">
+		INSERT INTO TBL_FAQ
+		VALUES(SEQ_FAQ.NEXTVAL, FAQ_TITLE = #{faqTitle}, FAQ_CONTENT = #{faqContent}, FAQ_CATEGORY = #{faqCategory})
+	</insert>
+	
+	
+	 
 </mapper>
