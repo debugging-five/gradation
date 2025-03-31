@@ -264,3 +264,25 @@ button {
 #span {
 	margin : 0 0 0 34px;
 }
+
+#overlay {
+   display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(110, 116, 118, 0.3);
+    z-index: 999; 
+}
+
+#alert-wrapper {
+   position : fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    display : none;
+    z-index: 1000;
+}
