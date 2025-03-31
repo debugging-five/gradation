@@ -1,7 +1,152 @@
 @charset "UTF-8";
 
 #artist-main-container {
+	margin-top: 142px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 200px;
+}
+
+.tab-wrapper {
+	display: flex;
+	margin-top: 70px;
+}
+
+.tab-text {
+	width: 120px;
+	height: 23px;
+	text-align: center;
+}
+
+#input-div {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 26px;
+	width: 1160px;
+}
+
+#search-input {
+	width : 200px;
+	height : 29px;
+	border : solid 1px var(--color-gray900);
+	border-radius : 3px;
+	font-family: var(--font-family-Pretendard-Regular);
+	background-color : var(--color-gray100);
+	position : relative;
+}
+
+#search-input::placeholder {
+	color : var(--color-gray500);
+	font-size : var(--font-size-h9);
+	font-weight : var(--font-weight-light);
+	padding : 7px;
+}
+
+#search-icon {
+	width : 16px;
+	height : 16px;
+	position : absolute;
+	margin: 5px 5px 0 0;
+	
+}
+
+#artist-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 130px;
+	width: 1160px;	
+	height: 1590px;
+	margin-top: 75px;
+	position: relative;
+}
+
+.artist-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 300px;
+	border-radius: 15px;
+	border: solid 1px var(--color-gray900);
+	position: relative;
+	align-items: center;
+	
+}
+
+.artist-background {
+	width: 100%;
+	height: 150px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+.artist-background img {
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.artist-profile {
+	width: 56px;
+	height: 56px;
+  	position: absolute;
+  	z-index: 1;
+  	top: calc(50% - 28px);
+	left: calc(50% - 28px);
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.artist-profile img {
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.artist-name {
+	margin-top: 40px;
+}
+
+.artist-university {
+	margin-top: 20px;
+}
+
+
+.pagination-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	margin-top: 80px;
+	width: 100%;
+}
+
+.pagination-icon {
+	height: 20px;
+	position: relative;
+	width: 20px;
+}
+.page-number {
+	color: var(--color-gray900);
+	cursor: pointer;
+	font-weight: var(--font-weight-regular);
+	line-height: normal;
+	margin-top: -1.00px;
+	position: relative;
+	text-align: center;
+	transition: all 0.2s ease;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.page-number:hover {
+	color: var(--color-primary)
 }
