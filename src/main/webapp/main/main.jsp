@@ -54,6 +54,7 @@
 			</div>
 		</div>
 		<div id="main-text-wrap">
+
 			<p id="main-text">모든 작품들은 빛날 가치가 있습니다</p>
 		</div>
 	</div>
@@ -115,7 +116,6 @@
 	    	</div>
 	  	</div>
 	</section>
-		  
 	  
 
 	<%@ include file="../layout/footer.jsp" %>

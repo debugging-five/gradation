@@ -1,209 +1,224 @@
 @charset "UTF-8";
 
-
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 input:focus {
-  outline: none;
+	outline: none;
 }
 
 .screen a {
-  text-decoration: none;
+	text-decoration: none;
 }
-
 
 .container-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	pointer-events: none;
+	width: 100%;
 }
 
-.container-center > * {
-  flex-shrink: 0;
-  pointer-events: auto;
+.container-center>* {
+	flex-shrink: 0;
+	pointer-events: auto;
 }
 
 .mypage-post-list {
-  align-items: center;
-  background-color: var(--color-gray100);
-  display: flex;
-  flex-direction: column;
-  height: 1536px;
-  width: 1920px;
+	align-items: center;
+	background-color: var(--color-gray100);
+	display: flex;
+	flex-direction: column;
+	height: 1536px;
+	width: 1920px;
+	padding-top: 150px;
 }
 
 .mypage-post-list .flex-row {
-  align-items: flex-start;
-  display: flex;
-  gap: 118px;
-  height: 701px;
-  margin-top: 89px;
-  min-width: 1164px;
+	align-items: flex-start;
+	display: flex;
+	gap: 118px;
+	height: 701px;
+	margin-top: 180px;
+	min-width: 1164px;
+	min-height: 770px;
 }
 
 .mypage-post-list .message-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 445px;
-  width: 802px;
+	display: flex;
+	flex-direction: column;
+	width: 802px;
+	margin-top: -150px;
 }
 
 .mypage-post-list .page-title {
-  align-self: flex-start;
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-black);
-  height: 36px;
-  width: 434px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	align-self: flex-start;
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-black);
+	height: 36px;
+	width: 434px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .mypage-post-list .message-notice {
-  align-self: flex-end;
-  font-size: var(--font-size-h9);
-  line-height: var(--line-height-h9);
-  font-weight: var(--font-weight-light);
-  color: var(--color-black);
-  margin-right: 1px;
-  margin-top: 29px;
-  min-height: 14px;
-  min-width: 190px;
-  white-space: nowrap;
+	align-self: flex-end;
+	font-size: var(--font-size-h9);
+	line-height: var(--line-height-h9);
+	font-weight: var(--font-weight-light);
+	color: var(--color-black);
+	margin-right: 1px;
+	margin-top: 29px;
+	min-height: 14px;
+	min-width: 190px;
+	white-space: nowrap;
 }
 
-
 .mypage-post-list .message-tabs {
-  display: flex;
-  width: 801px;
-  height: 50px;
-  margin-top: 8px;
-  margin-bottom: 24px;
+	display: flex;
+	width: 801px;
+	height: 50px;
+	margin-top: 8px;
+	margin-bottom: 24px;
 }
 
 .mypage-post-list .tab {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-semibold);
-  height: 50px;
-  border: 1px solid var(--color-gray500);
-  background-color: var(--color-gray100);
-  color: var(--color-black);
-  transition: background-color 0.2s ease;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: var(--font-size-h5);
+	font-weight: var(--font-weight-semibold);
+	height: 50px;
+	border: 1px solid var(--color-gray500);
+	background-color: var(--color-gray100);
+	color: var(--color-black);
+	transition: background-color 0.2s ease;
 }
 
 a.tab.tab-sent.active {
-  background-color: var(--color-gray500) !important;
-  color: var(--color-black) !important;
+	background-color: var(--color-gray500) !important;
+	color: var(--color-black) !important;
 }
 
-
 .mypage-post-list .tab.tab-sent.active {
-  background-color: var(--color-gray500) !important;
+	background-color: var(--color-gray500) !important;
 }
 
 .mypage-post-list .tab:hover {
-  background-color: var(--color-gray300);
+	background-color: var(--color-gray300);
 }
 
 .mypage-post-list .tab.active {
-  background-color: var(--color-gray500);
+	background-color: var(--color-gray500);
 }
 
-.mypage-post-list .message-table-header,
-.mypage-post-list .message-row {
-  display: flex;
-  position: relative;
-  padding: 15px 0;
-  margin-left: 23px;
-  width: 755px;
+.mypage-post-list .message-table-header, .mypage-post-list .message-row
+	{
+	display: flex;
+	position: relative;
+	padding: 15px 0;
+	margin-left: 23px;
+	width: 755px;
 }
 
 .mypage-post-list .message-table-header {
+	height: 51px; 
 	font-weight: var(--font-weight-semibold);
 	font-size: var(--font-size-h5);
 	line-height: var(--line-height-h5);
 }
 
-.mypage-post-list .message-table-header::before,
-.mypage-post-list .message-table-header::after,
-.mypage-post-list .message-row::after {
-  content: "";
-  position: absolute;
-  left: -10px;
-  width: 801px;
-  height: 1.5px;
-  background-color: var(--color-gray900);
+.mypage-post-list .message-table-header::before, .mypage-post-list .message-table-header::after,
+	.mypage-post-list .message-row::after {
+	content: "";
+	position: absolute;
+	left: -10px;
+	width: 801px;
+	height: 1.5px;
+	background-color: var(--color-gray900);
 }
 
 .mypage-post-list .message-table-header::before {
-  top: 0;
+	top: 0;
 }
-.mypage-post-list .message-table-header::after,
-.mypage-post-list .message-row::after {
-  bottom: 0;
+
+.mypage-post-list .message-table-header::after, .mypage-post-list .message-row::after
+	{
+	bottom: 0;
 }
 
 .mypage-post-list .message-table-header, .mypage-post-list .message-row
 	{
-	margin-left: 20px;
+	margin-left: 10px;
 	width: 801px;
 }
 
+.mypage-post-list .message-row {
+	height: 69px;
+	display: flex;
+	align-items: center;
+}
+
 .mypage-post-list .column {
-  line-height: normal;
-  white-space: nowrap;
-  font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-h7);
-  color: var(--color-black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+	line-height: normal;
+	white-space: nowrap;
+	font-weight: var(--font-weight-regular);
+	font-size: var(--font-size-h7);
+	color: var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
-.mypage-post-list .column-header-number,
-.mypage-post-list .column-number {
-  width: 50px;
-  text-align: center;
-  margin-right: 60px;
+.mypage-post-list .column-header-number, .mypage-post-list .column-number
+	{
+	width: 50px;
+	text-align: center;
+	margin-right: 60px;
 }
 
-.mypage-post-list .column-header-number{
+.mypage-post-list .column-header-number {
 	margin-left: 10px;
 }
-
-.mypage-post-list .column-header-sender,
-.mypage-post-list .column-sender {
-  width: 150px;
+.mypage-post-list .column-header-sender {
+	margin-left: 2px;
+}
+.mypage-post-list .column-header-sender, .mypage-post-list .column-sender
+	{
+	width: 150px;
 }
 
 .mypage-post-list .column-header-subject {
-  width: 350px;
-  margin-left: 170px;
+	width: 350px;
+	margin-left: 160px;
 }
 
 .mypage-post-list .column-subject {
-  width: 350px;
-  margin-left: 25px;
+	width: 350px;
+	margin-left: 25px;
+	color: var(--color-black);
 }
 
-.mypage-post-list .column-header-date,
-.mypage-post-list .column-date {
-  width: 120px;
-  margin-left: 95px;
+.mypage-post-list .column-subject a:link,
+.mypage-post-list .column-subject a:visited,
+.mypage-post-list .column-subject a:hover,
+.mypage-post-list .column-subject a:active {
+  color: var(--color-black); 
+  text-decoration: none;
 }
-.mypage-post-list .column-header-date{
+
+.mypage-post-list .column-header-date, .mypage-post-list .column-date {
+	width: 120px;
+	margin-left: 95px;
+}
+
+.mypage-post-list .column-header-date {
 	margin-right: 20px;
 }
