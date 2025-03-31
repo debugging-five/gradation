@@ -192,9 +192,10 @@ function closeExhibitionDetails() {
 }
 
 // 클릭 이벤트 추가 (이미지를 클릭하거나 닫는 버튼을 추가하여 상세보기 창을 닫을 수 있도록 설정)
+/*
 document.getElementById('chevron-left').addEventListener('click', closeExhibitionDetails);
 document.getElementById('chevron-right').addEventListener('click', closeExhibitionDetails);
-
+*/
 
 // 필터링 함수
 function filterExhibitions() {
@@ -225,15 +226,12 @@ searchInput.addEventListener('input', filterExhibitions);
 renderExhibitions(exhibitions);
 
 
-
-
 // 모든 logo-wrapper 요소 선택
 const logoWrappers = document.querySelectorAll('.logo-wrapper'); 
 
 // 전시회 이미지 배열
 const exhibitionImages = [
     {
-        // 첫 번째 전시회 이미지 배열
         images: [
             "../assets/images/exhibition/university-exhibition-1.png",
             "../assets/images/exhibition/university-exhibition-2.png",
@@ -242,7 +240,6 @@ const exhibitionImages = [
         ]
     },
     {
-        // 두 번째 전시회 이미지 배열
         images: [
             "../assets/images/exhibition/university-exhibition-1.png",
             "../assets/images/exhibition/university-exhibition-2.png",
@@ -250,7 +247,30 @@ const exhibitionImages = [
             "../assets/images/exhibition/university-exhibition-4.png"
         ]
     },
-    // 추가적으로 다른 전시회의 이미지 배열을 여기에 추가할 수 있습니다.
+    {
+        images: [
+            "../assets/images/exhibition/university-exhibition-1.png",
+            "../assets/images/exhibition/university-exhibition-2.png",
+            "../assets/images/exhibition/university-exhibition-3.png",
+            "../assets/images/exhibition/university-exhibition-4.png"
+        ]
+    },
+    {
+        images: [
+            "../assets/images/exhibition/university-exhibition-1.png",
+            "../assets/images/exhibition/university-exhibition-2.png",
+            "../assets/images/exhibition/university-exhibition-3.png",
+            "../assets/images/exhibition/university-exhibition-4.png"
+        ]
+    },
+    {
+        images: [
+            "../assets/images/exhibition/university-exhibition-1.png",
+            "../assets/images/exhibition/university-exhibition-2.png",
+            "../assets/images/exhibition/university-exhibition-3.png",
+            "../assets/images/exhibition/university-exhibition-4.png"
+        ]
+    },
 ];
 
 // 현재 이미지 인덱스와 이미지 리스트를 각각 저장하는 변수
@@ -286,8 +306,6 @@ rightBtn.addEventListener("click", () => {
         mainImage.src = images[currentIndex];
     }
 });
-
-
 
   exhibitionList.addEventListener("click", function (event) {
     if (event.target.classList.contains("like-button")) {

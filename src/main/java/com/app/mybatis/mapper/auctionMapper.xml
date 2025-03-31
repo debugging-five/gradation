@@ -2,4 +2,27 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="auction">
+
+	<select id="selectId" parameterType="Long" resultType="AuctionDTO">
+		SELECT *
+		FROM TBL_AUCTION
+		WHERE ID = #{id}
+	</select>
+	
+	<select id="selectAll" resultType="AuctionDTO">
+		SELECT *
+		FROM TBL_AUCTION
+	</select> 
+
+	<update id="update" parameterType="AuctionVO">
+		UPDATE TBL_AUCTION
+		SET AUCTION_START_DATE = #{auctionStartDate}, AUCTION_ESTIMATE_PRICE = #{auctionEstimatePrice}, AUCTION_START_PRICE = #{auctionStartPrice}
+		WHERE ID = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_AUCTION
+		WHERE ID = #{id}
+	</delete>
+
 </mapper>

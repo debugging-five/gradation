@@ -71,14 +71,12 @@
 					  	<option value="upcoming">진행 예정</option>
 					  	<option value="ongoing">진행 중</option>
 				  	</select>
-				  	
-				  	<div>
-				  		<p id="my-pick">My pick</p>
-				  	</div>
+		
 				  	
 				  	<!-- 검색창 -->
 				  	<div>
 				  		<input type="text" id="search-input" placeholder="대학교를 검색하세요.">
+				  		<img id="search-icon" src="../assets/images/exhibition/search.png" alt="돋보기" />
 				  	</div>
 				</div>
 			</div>
