@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.artist.controller.ArtistDetailController;
 import com.app.artist.controller.ArtistMainController;
 
 public class ArtistFrontController extends HttpServlet{
@@ -21,7 +22,9 @@ public class ArtistFrontController extends HttpServlet{
 		
 		if(target.equals("artist/artist-main")) {
 			result = new ArtistMainController().execute(req, resp);
-		}else {
+		}else if(target.equals("artist/artist-detail")) {
+			result = new ArtistDetailController().execute(req, resp);
+		}else{
 //			error 404 site
 		}
 		
