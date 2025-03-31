@@ -78,11 +78,7 @@
 					<div class="input-size">
 				        <label>작품 규격<span class="essential">*</span></label>
 				        <div class="size-input" style="margin-left: 27px">
-						  <input type="text" id="width" placeholder="가로">
-						  <span>X</span>
-						  <input type="text" id="height" placeholder="세로">
-						  <span>X</span>
-						  <input type="text" id="depth" placeholder="높이">
+						  <input type="text" id="size" placeholder="가로 X 세로 X 높이 (cm)">
 						</div>
 						<div class="size-error error-message"><p>필수 항목입니다.</p></div>		
 					</div>

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: "material", errorClass: "material-error" },
         { id: "description", errorClass: "description-error" }
     ];
-    const sizeInputs = ["width", "height", "depth"]; // 작품 규격
+    const sizeInputs = ["size"]; // 작품 규격
 
     // 유효성 검사 함수
     function validateForm() {
