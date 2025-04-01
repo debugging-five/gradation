@@ -53,6 +53,7 @@ import com.app.mypage.controller.MypageServiceCenterQnaSendController;
 import com.app.mypage.controller.MypageServiceCenterQnaSendOkController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateOkController;
+import com.app.mypage.controller.mypageChangePasswordOkController;
 
 public class MypageFrontController extends HttpServlet{
    
@@ -87,7 +88,9 @@ public class MypageFrontController extends HttpServlet{
       }else if(target.equals("mypage/mypage-comments-list")) {
          result = new MypageCommentsListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-change-password")) {
-         result = new MypageChangePasswordController().execute(req, resp);
+          result = new MypageChangePasswordController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-change-password-ok")) {
+          result = new mypageChangePasswordOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-art-like-list")) {
          result = new MypageArtLikeListControllerController().execute(req, resp);
       }else if(target.equals("mypage/mypage-exhibition-like-list")) {

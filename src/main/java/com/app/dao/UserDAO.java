@@ -58,6 +58,10 @@ import com.app.vo.UserVO;
  		}
  		return result;
  	}
+// 	비밀번호 찾기
+ 	public String selectPassword(String userId) {
+ 		return sqlSession.selectOne("user.selectPassword", userId);
+ 	}
  	
 // 	비밀번호 변경
  	public void changePassword(UserVO userVO) {
@@ -76,6 +80,11 @@ import com.app.vo.UserVO;
 // 	회원정보 수정
  	public void updateUser(UserVO userVO) {
  		sqlSession.update("user.updateUser", userVO);
+ 	}
+ 	
+// 	회원 탈퇴
+ 	public void deleteUser(String userEmail) {
+ 		sqlSession.delete("user.deleteUser", userEmail);
  	}
  	
  }

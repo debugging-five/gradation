@@ -84,4 +84,15 @@
 		WHERE USER_IDENTIFICATION = #{userIdentification}
 	</update>
 	
+	<select id="selectPassword" parameterType="String" resultType="String">
+		SELECT USER_PASSWORD
+		FROM TBL_USER
+		WHERE USER_EMAIL = #{userEmail}
+	</select>
+	
+	<delete id="deleteUser" parameterType="String">
+		DELETE TBL_USER
+		WHERE USER_EMAIL = #{userEmail}
+	</delete>
+	
 </mapper>
