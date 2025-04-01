@@ -3,8 +3,23 @@
 
 <mapper namespace="auction">
 
+	<insert id="insert" parameterType="AuctionVO">
+		INSERT INTO TBL_AUCTION (ID, ART_ID, USER_ID, AUCTION_START_DATE, AUCTION_START_PRICE, AUUCTION_ESTIMATED_PRICE, AUCTION_ATRACTED, AUCTION_BID_PRICE, AUCTION_BID_DATE)
+		VALUES (
+			SEQ_AUCTION.NEXTVAL,
+			#{artId},
+			#{userId},
+			#{auctionStartDate},	
+			#{auctionStartPrice},	
+			#{auctionEstimatedPrice},	
+			#{auctionAttracted},	
+			#{auctionBidPrice},	
+			#{auctionBidDate}
+		)
+	</insert>
+
 	<select id="selectId" parameterType="Long" resultType="AuctionDTO">
-		SELECT *
+		SELECT ID
 		FROM TBL_AUCTION
 		WHERE ID = #{id}
 	</select>
@@ -16,7 +31,7 @@
 
 	<update id="update" parameterType="AuctionVO">
 		UPDATE TBL_AUCTION
-		SET AUCTION_START_DATE = #{auctionStartDate}, AUCTION_ESTIMATE_PRICE = #{auctionEstimatePrice}, AUCTION_START_PRICE = #{auctionStartPrice}
+		SET AUCTION_START_DATE = #{auctionStartDate}, AUCTION_ESTIMATED_PRICE = #{auctionEstimatedPrice}, AUCTION_START_PRICE = #{auctionStartPrice}
 		WHERE ID = #{id}
 	</update>
 	
@@ -24,5 +39,33 @@
 		DELETE FROM TBL_AUCTION
 		WHERE ID = #{id}
 	</delete>
+	
+	
+	
+	<!-- 메일 -->
+	
+	<select id="selectMail" parameterType="Long" resultType="MailDTO">
+		SELECT 
+			TBS.USER_NAME, TBM.MAIL_TITLE, TBM.MAIL_CONTENTS, TBM.MAIL_SEND_TIME
+		FROM TBL_MAIL TBM
+		JOIN TBL_USER TBS
+		ON TBM.SEND_USER_ID = TBS.ID
+		JOIN TBL_USER TBR
+		ON TBM.RECEIVE_USER_ID = TBR.ID
+		WHERE TBS.ID = #{id}
+	</select>
+	
+	<insert id="insertMail" parameterType="MailVO">
+		INSERT INTO TBL_MAIL 
+		VALUES (
+			SEQ_MAIL.NEXTVAL, 
+			#{mailTitle},
+			#{mailContents},
+			#{mailSendTime},
+			#{mailOpenOk},
+			#{sendUserId},
+			#{receiveUserId}
+		)
+	</insert>
 
 </mapper>

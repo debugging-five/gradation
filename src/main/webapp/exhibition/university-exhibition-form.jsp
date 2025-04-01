@@ -126,12 +126,17 @@
 				
 				<div id="button-wrapper2">
 					<button type="button" id="cancel-button">취소</button>
-					<button id="register-button">신청</button>
+					<button type="button" id="register-button" onclick="openAlert()">신청</button>
 				</div>
 			</div>
-			
 		</div>
+		
+	    <div id="overlay"></div>
+		<div id="alert-wrapper">         
+    		<%@ include file="./university-exhibition-form-alert1.jsp"%>
+		</div>    
 	</div>
+	
 <%@ include file="../layout/footer.jsp" %>
 <script>
   flatpickr("#pickupDateInput", {

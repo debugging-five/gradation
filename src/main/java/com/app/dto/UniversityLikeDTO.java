@@ -15,6 +15,7 @@ public class UniversityLikeDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -33,6 +34,8 @@ public class UniversityLikeDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	universityLike
 	private Long universityId;
@@ -50,13 +53,13 @@ public class UniversityLikeDTO {
 
 	public UniversityLikeDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, Long universityId, Long userId,
-			Timestamp universityLikeTime, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath, String universityHomepage) {
-		super();
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, Long universityId, Long userId, Timestamp universityLikeTime,
+			String universityName, String universityLocation, String universityLogoImgName,
+			String universityLogoImgPath, String universityHomepage) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -67,6 +70,7 @@ public class UniversityLikeDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -85,6 +89,8 @@ public class UniversityLikeDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.universityId = universityId;
 		this.userId = userId;
 		this.universityLikeTime = universityLikeTime;
@@ -173,6 +179,14 @@ public class UniversityLikeDTO {
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
+	}
+
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
 	}
 
 	public String getUserPostalCode() {
@@ -319,6 +333,22 @@ public class UniversityLikeDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public Long getUniversityId() {
 		return universityId;
 	}
@@ -388,13 +418,15 @@ public class UniversityLikeDTO {
 		return "UniversityLikeDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
 				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", universityId=" + universityId + ", userId=" + userId
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", universityId=" + universityId + ", userId=" + userId
 				+ ", universityLikeTime=" + universityLikeTime + ", universityName=" + universityName
 				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
 				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
@@ -417,7 +449,5 @@ public class UniversityLikeDTO {
 		UniversityLikeDTO other = (UniversityLikeDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
 }

@@ -2,30 +2,89 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="admin">
-<!-- 
-	<select id="selectId" >
-		SELECT *
-		FROM TBL_USER
-		WHERE ID = #{id}
-	</select>
--->
 
-	<select id="selectUserList" resultType="UserVO">
-		SELECT *
+	<!-- 관리자 INSERT -->
+	<insert id="insertAdminUser" parameterType="UserVO">
+		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK, USER_ADMIN_OK)			 
+		VALUES (
+			#{userName}, 
+			#{userEmail}, 
+			#{userIdentification}, 
+			#{userPassword},
+			#{userPhone}, 
+			#{userNickname}, 
+			#{userSnsOk}, 
+			#{userMailOk}, 
+			#{userAgreementOk},
+			1
+		)
+	</insert>
+
+	
+	<!-- 회원관리 회원전체 조회 -->
+	<!-- 
+	<select id="selectUserAll" resultType="BanDTO">
+		SELECT USER_NAME, USER_IDENTIFICATION, USER_PHONE, 
 		FROM TBL_USER
+	</select>
+	 -->
+	 
+	 <!-- 회원관리 회원한명 Read -->	
+	<select id="selectId" parameterType="Long" resultType="MajorDTO">
+		SELECT TBU.ID TBU.USER_IDENTIFICATION, TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL, TBU.USER_ADDRESS, TBUS.UNIVERSITY_NAME
+		FROM TBL_USER TBU
+		JOIN TBL_MAJOR TBM
+		ON TBU.MAJOR_ID = TBM.ID 
+		JOIN TBL_UNIVERSITY TBUS 
+		ON TBM.UNIVERSITY_ID = TBUS.ID
+		WHERE TBU.ID = #{id}
 	</select>
 	
-	<update id="udpateArtist" parameterType="UserVO">
+	
+	 <!-- 작가승인 -->
+	<update id="updateArtist" parameterType="UserVO">
 		UPDATE TBL_USER
 		SET USER_WRITE_OK = true
 		WHERE ID = #{id}
 	</update>
 	
-
+	
+	
+	<!-- FAQ 전체 조회 -->
+	<select id="selectFaqAll" resultType="FaqVO">
+		SELECT ID, FAQ_TITLE, FAQ_CATEGORY 
+		FROM TBL_FAQ
+		ORDER BY ID DESC
+	</select>
+	
+	<!-- FAQ 하나 조회 -->
+	<select id="selectFaqById" parameterType="Long" resultType="FaqVO">
+		SELECT ID, FAQ_TITLE, FAQ_CONTENT, FAQ_CATEGORY 
+		FROM TBL_FAQ
+		WHERE ID = #{id}
+	</select>
+	
+	<!-- FAQ 등록 -->
 	<insert id="insertFaq" parameterType="FaqVO">
 		INSERT INTO TBL_FAQ
-		VALUES(SEQ_FAQ.NEXTVAL, FAQ_TITLE = #{faqTitle}, FAQ_CONTENT = #{faqContent}, FAQ_CATEGORY = #{faqCategory})
+		VALUES(SEQ_FAQ.NEXTVAL, #{faqTitle}, #{faqContent}, #{faqCategory})
 	</insert>
+	
+	<!-- FAQ 수정 -->
+	<update id="updateFaq" parameterType="FaqVO">
+		UPDATE TBL_FAQ
+		SET FAQ_CONTENT = #{faqContent}
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- FAQ 삭제 -->
+	<delete id="deleteFaq" parameterType="Long">
+		DELETE FROM TBL_FAQ
+		WHERE ID = #{id}
+	</delete>
+		
+	
+
 	
 	
 	 

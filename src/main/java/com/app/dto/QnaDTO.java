@@ -29,6 +29,7 @@ public class QnaDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -47,17 +48,19 @@ public class QnaDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 	public QnaDTO() {;}
 
 	public QnaDTO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
 			Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime, Long qnaId,
 			String userImgName, String userImgPath, String userName, String userEmail, String userIdentification,
-			String userPassword, String userPhone, String userNickname, String userAddress, String userPostalCode,
-			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
-			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
-			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId, String userMajorImgName,
-			String userMajorImgPath) {
+			String userPassword, String userPhone, String userNickname, String userAddress, String userDetailAddress,
+			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
+			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
+			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
+			String userMajorImgName, String userMajorImgPath, String userWriterStatus, String userUniversityStatus) {
 		this.id = id;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
@@ -78,6 +81,7 @@ public class QnaDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -96,40 +100,8 @@ public class QnaDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-	}
-
-	@Override
-	public String toString() {
-		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
-				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId
-				+ ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent + ", qnaAnswerTime="
-				+ qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
-				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		QnaDTO other = (QnaDTO) obj;
-		return Objects.equals(id, other.id);
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 	}
 
 	public Long getId() {
@@ -292,6 +264,14 @@ public class QnaDTO {
 		this.userAddress = userAddress;
 	}
 
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
+	}
+
 	public String getUserPostalCode() {
 		return userPostalCode;
 	}
@@ -435,5 +415,57 @@ public class QnaDTO {
 	public void setUserMajorImgPath(String userMajorImgPath) {
 		this.userMajorImgPath = userMajorImgPath;
 	}
-	
+
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
+	@Override
+	public String toString() {
+		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
+				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId
+				+ ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent + ", qnaAnswerTime="
+				+ qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QnaDTO other = (QnaDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }

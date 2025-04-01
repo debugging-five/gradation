@@ -15,6 +15,7 @@ public class UniversityExhibitionDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -33,6 +34,8 @@ public class UniversityExhibitionDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	university
 	private String universityName;
@@ -46,6 +49,7 @@ public class UniversityExhibitionDTO {
 	private String universityExhibitionState;
 	private String universityExhibitionTitle;
 	private String universityExhibitionLocation;
+	private String universityExhibitionStatus;
 	
 //	UniversityExhibitionImg
 	private String universityExhibitionImgName;
@@ -56,15 +60,15 @@ public class UniversityExhibitionDTO {
 
 	public UniversityExhibitionDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath, String universityHomepage,
-			Date universityExhibitionDate, String universityExhibitionState, String universityExhibitionTitle,
-			String universityExhibitionLocation, String universityExhibitionImgName, String universityExhibitionImgPath,
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, String universityName, String universityLocation, String universityLogoImgName,
+			String universityLogoImgPath, String universityHomepage, Date universityExhibitionDate,
+			String universityExhibitionState, String universityExhibitionTitle, String universityExhibitionLocation,
+			String universityExhibitionStatus, String universityExhibitionImgName, String universityExhibitionImgPath,
 			Long universityExhibitionId) {
-		super();
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -75,6 +79,7 @@ public class UniversityExhibitionDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -93,6 +98,8 @@ public class UniversityExhibitionDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.universityName = universityName;
 		this.universityLocation = universityLocation;
 		this.universityLogoImgName = universityLogoImgName;
@@ -102,6 +109,7 @@ public class UniversityExhibitionDTO {
 		this.universityExhibitionState = universityExhibitionState;
 		this.universityExhibitionTitle = universityExhibitionTitle;
 		this.universityExhibitionLocation = universityExhibitionLocation;
+		this.universityExhibitionStatus = universityExhibitionStatus;
 		this.universityExhibitionImgName = universityExhibitionImgName;
 		this.universityExhibitionImgPath = universityExhibitionImgPath;
 		this.universityExhibitionId = universityExhibitionId;
@@ -185,6 +193,14 @@ public class UniversityExhibitionDTO {
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
+	}
+
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
 	}
 
 	public String getUserPostalCode() {
@@ -331,6 +347,22 @@ public class UniversityExhibitionDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public String getUniversityName() {
 		return universityName;
 	}
@@ -403,6 +435,14 @@ public class UniversityExhibitionDTO {
 		this.universityExhibitionLocation = universityExhibitionLocation;
 	}
 
+	public String getUniversityExhibitionStatus() {
+		return universityExhibitionStatus;
+	}
+
+	public void setUniversityExhibitionStatus(String universityExhibitionStatus) {
+		this.universityExhibitionStatus = universityExhibitionStatus;
+	}
+
 	public String getUniversityExhibitionImgName() {
 		return universityExhibitionImgName;
 	}
@@ -432,20 +472,22 @@ public class UniversityExhibitionDTO {
 		return "UniversityExhibitionDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
 				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", universityName=" + universityName
-				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
-				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
-				+ ", universityExhibitionDate=" + universityExhibitionDate + ", universityExhibitionState="
-				+ universityExhibitionState + ", universityExhibitionTitle=" + universityExhibitionTitle
-				+ ", universityExhibitionLocation=" + universityExhibitionLocation + ", universityExhibitionImgName="
-				+ universityExhibitionImgName + ", universityExhibitionImgPath=" + universityExhibitionImgPath
-				+ ", universityExhibitionId=" + universityExhibitionId + "]";
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", universityName=" + universityName + ", universityLocation="
+				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
+				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + ", universityExhibitionDate="
+				+ universityExhibitionDate + ", universityExhibitionState=" + universityExhibitionState
+				+ ", universityExhibitionTitle=" + universityExhibitionTitle + ", universityExhibitionLocation="
+				+ universityExhibitionLocation + ", universityExhibitionStatus=" + universityExhibitionStatus
+				+ ", universityExhibitionImgName=" + universityExhibitionImgName + ", universityExhibitionImgPath="
+				+ universityExhibitionImgPath + ", universityExhibitionId=" + universityExhibitionId + "]";
 	}
 
 	@Override
@@ -464,5 +506,6 @@ public class UniversityExhibitionDTO {
 		UniversityExhibitionDTO other = (UniversityExhibitionDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
+
 }

@@ -15,7 +15,8 @@ public class MailDTO {
 	private String sUserPassword;           
 	private String sUserPhone;              
 	private String sUserNickname;           
-	private String sUserAddress;            
+	private String sUserAddress;   
+	private String sUserDetailAddress;
 	private String sUserPostalCode;         
 	private int sUserSnsOk;                 
 	private int sUserMailOk;                
@@ -31,9 +32,11 @@ public class MailDTO {
 	private int sUserWriterOk;              
 	private int sUserAdminOk;               
 	private int sUserBanOk;                 
-	private Long smajorId;
-	private String suserMajorImgName;
-	private String suserMajorImgPath;
+	private Long sMajorId;
+	private String sUserMajorImgName;
+	private String sUserMajorImgPath;
+	private String sUserWriterStatus;
+	private String sUserUniversityStatus;
 	
 //	receiveUserVO
 	private Long rId; // Pk                 
@@ -45,7 +48,8 @@ public class MailDTO {
 	private String rUserPassword;           
 	private String rUserPhone;              
 	private String rUserNickname;           
-	private String rUserAddress;            
+	private String rUserAddress;     
+	private String rUserDetailAddress;
 	private String rUserPostalCode;         
 	private int rUserSnsOk;                 
 	private int rUserMailOk;                
@@ -61,9 +65,11 @@ public class MailDTO {
 	private int rUserWriterOk;              
 	private int rUserAdminOk;               
 	private int rUserBanOk;                 
-	private Long rmajorId;
-	private String ruserMajorImgName;
-	private String ruserMajorImgPath;	
+	private Long rMajorId;
+	private String rUserMajorImgName;
+	private String rUserMajorImgPath;	
+	private String rUserWriterStatus;
+	private String rUserUniversityStatus;
 	
 //	MailVO
 	private String mailTitle;
@@ -77,17 +83,19 @@ public class MailDTO {
 
 	public MailDTO(Long id, Long sId, String sUserImgName, String sUserImgPath, String sUserName, String sUserEmail,
 			String sUserIdentification, String sUserPassword, String sUserPhone, String sUserNickname,
-			String sUserAddress, String sUserPostalCode, int sUserSnsOk, int sUserMailOk, int sUserAgreementOk,
-			String sUserIntroduce, String sUserRecode, String sUserInstagram, String sUserYoutube, String sUserBlog,
-			String sUserKakao, String sUserGoogle, String sUserNaver, int sUserWriterOk, int sUserAdminOk,
-			int sUserBanOk, Long smajorId, String suserMajorImgName, String suserMajorImgPath, Long rId,
-			String rUserImgName, String rUserImgPath, String rUserName, String rUserEmail, String rUserIdentification,
-			String rUserPassword, String rUserPhone, String rUserNickname, String rUserAddress, String rUserPostalCode,
+			String sUserAddress, String sUserDetailAddress, String sUserPostalCode, int sUserSnsOk, int sUserMailOk,
+			int sUserAgreementOk, String sUserIntroduce, String sUserRecode, String sUserInstagram, String sUserYoutube,
+			String sUserBlog, String sUserKakao, String sUserGoogle, String sUserNaver, int sUserWriterOk,
+			int sUserAdminOk, int sUserBanOk, Long sMajorId, String sUserMajorImgName, String sUserMajorImgPath,
+			String sUserWriterStatus, String sUserUniversityStatus, Long rId, String rUserImgName, String rUserImgPath,
+			String rUserName, String rUserEmail, String rUserIdentification, String rUserPassword, String rUserPhone,
+			String rUserNickname, String rUserAddress, String rUserDetailAddress, String rUserPostalCode,
 			int rUserSnsOk, int rUserMailOk, int rUserAgreementOk, String rUserIntroduce, String rUserRecode,
 			String rUserInstagram, String rUserYoutube, String rUserBlog, String rUserKakao, String rUserGoogle,
-			String rUserNaver, int rUserWriterOk, int rUserAdminOk, int rUserBanOk, Long rmajorId,
-			String ruserMajorImgName, String ruserMajorImgPath, String mailTitle, String mailContents,
-			Timestamp mailSendTime, int mailOpenOk, Long sendUserId, Long receiveUserId) {
+			String rUserNaver, int rUserWriterOk, int rUserAdminOk, int rUserBanOk, Long rMajorId,
+			String rUserMajorImgName, String rUserMajorImgPath, String rUserWriterStatus, String rUserUniversityStatus,
+			String mailTitle, String mailContents, Timestamp mailSendTime, int mailOpenOk, Long sendUserId,
+			Long receiveUserId) {
 		Id = id;
 		this.sId = sId;
 		this.sUserImgName = sUserImgName;
@@ -99,6 +107,7 @@ public class MailDTO {
 		this.sUserPhone = sUserPhone;
 		this.sUserNickname = sUserNickname;
 		this.sUserAddress = sUserAddress;
+		this.sUserDetailAddress = sUserDetailAddress;
 		this.sUserPostalCode = sUserPostalCode;
 		this.sUserSnsOk = sUserSnsOk;
 		this.sUserMailOk = sUserMailOk;
@@ -114,9 +123,11 @@ public class MailDTO {
 		this.sUserWriterOk = sUserWriterOk;
 		this.sUserAdminOk = sUserAdminOk;
 		this.sUserBanOk = sUserBanOk;
-		this.smajorId = smajorId;
-		this.suserMajorImgName = suserMajorImgName;
-		this.suserMajorImgPath = suserMajorImgPath;
+		this.sMajorId = sMajorId;
+		this.sUserMajorImgName = sUserMajorImgName;
+		this.sUserMajorImgPath = sUserMajorImgPath;
+		this.sUserWriterStatus = sUserWriterStatus;
+		this.sUserUniversityStatus = sUserUniversityStatus;
 		this.rId = rId;
 		this.rUserImgName = rUserImgName;
 		this.rUserImgPath = rUserImgPath;
@@ -127,6 +138,7 @@ public class MailDTO {
 		this.rUserPhone = rUserPhone;
 		this.rUserNickname = rUserNickname;
 		this.rUserAddress = rUserAddress;
+		this.rUserDetailAddress = rUserDetailAddress;
 		this.rUserPostalCode = rUserPostalCode;
 		this.rUserSnsOk = rUserSnsOk;
 		this.rUserMailOk = rUserMailOk;
@@ -142,59 +154,17 @@ public class MailDTO {
 		this.rUserWriterOk = rUserWriterOk;
 		this.rUserAdminOk = rUserAdminOk;
 		this.rUserBanOk = rUserBanOk;
-		this.rmajorId = rmajorId;
-		this.ruserMajorImgName = ruserMajorImgName;
-		this.ruserMajorImgPath = ruserMajorImgPath;
+		this.rMajorId = rMajorId;
+		this.rUserMajorImgName = rUserMajorImgName;
+		this.rUserMajorImgPath = rUserMajorImgPath;
+		this.rUserWriterStatus = rUserWriterStatus;
+		this.rUserUniversityStatus = rUserUniversityStatus;
 		this.mailTitle = mailTitle;
 		this.mailContents = mailContents;
 		this.mailSendTime = mailSendTime;
 		this.mailOpenOk = mailOpenOk;
 		this.sendUserId = sendUserId;
 		this.receiveUserId = receiveUserId;
-	}
-
-	@Override
-	public String toString() {
-		return "MailDTO [Id=" + Id + ", sId=" + sId + ", sUserImgName=" + sUserImgName + ", sUserImgPath="
-				+ sUserImgPath + ", sUserName=" + sUserName + ", sUserEmail=" + sUserEmail + ", sUserIdentification="
-				+ sUserIdentification + ", sUserPassword=" + sUserPassword + ", sUserPhone=" + sUserPhone
-				+ ", sUserNickname=" + sUserNickname + ", sUserAddress=" + sUserAddress + ", sUserPostalCode="
-				+ sUserPostalCode + ", sUserSnsOk=" + sUserSnsOk + ", sUserMailOk=" + sUserMailOk
-				+ ", sUserAgreementOk=" + sUserAgreementOk + ", sUserIntroduce=" + sUserIntroduce + ", sUserRecode="
-				+ sUserRecode + ", sUserInstagram=" + sUserInstagram + ", sUserYoutube=" + sUserYoutube + ", sUserBlog="
-				+ sUserBlog + ", sUserKakao=" + sUserKakao + ", sUserGoogle=" + sUserGoogle + ", sUserNaver="
-				+ sUserNaver + ", sUserWriterOk=" + sUserWriterOk + ", sUserAdminOk=" + sUserAdminOk + ", sUserBanOk="
-				+ sUserBanOk + ", smajorId=" + smajorId + ", suserMajorImgName=" + suserMajorImgName
-				+ ", suserMajorImgPath=" + suserMajorImgPath + ", rId=" + rId + ", rUserImgName=" + rUserImgName
-				+ ", rUserImgPath=" + rUserImgPath + ", rUserName=" + rUserName + ", rUserEmail=" + rUserEmail
-				+ ", rUserIdentification=" + rUserIdentification + ", rUserPassword=" + rUserPassword + ", rUserPhone="
-				+ rUserPhone + ", rUserNickname=" + rUserNickname + ", rUserAddress=" + rUserAddress
-				+ ", rUserPostalCode=" + rUserPostalCode + ", rUserSnsOk=" + rUserSnsOk + ", rUserMailOk=" + rUserMailOk
-				+ ", rUserAgreementOk=" + rUserAgreementOk + ", rUserIntroduce=" + rUserIntroduce + ", rUserRecode="
-				+ rUserRecode + ", rUserInstagram=" + rUserInstagram + ", rUserYoutube=" + rUserYoutube + ", rUserBlog="
-				+ rUserBlog + ", rUserKakao=" + rUserKakao + ", rUserGoogle=" + rUserGoogle + ", rUserNaver="
-				+ rUserNaver + ", rUserWriterOk=" + rUserWriterOk + ", rUserAdminOk=" + rUserAdminOk + ", rUserBanOk="
-				+ rUserBanOk + ", rmajorId=" + rmajorId + ", ruserMajorImgName=" + ruserMajorImgName
-				+ ", ruserMajorImgPath=" + ruserMajorImgPath + ", mailTitle=" + mailTitle + ", mailContents="
-				+ mailContents + ", mailSendTime=" + mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId="
-				+ sendUserId + ", receiveUserId=" + receiveUserId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(Id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MailDTO other = (MailDTO) obj;
-		return Objects.equals(Id, other.Id);
 	}
 
 	public Long getId() {
@@ -283,6 +253,14 @@ public class MailDTO {
 
 	public void setsUserAddress(String sUserAddress) {
 		this.sUserAddress = sUserAddress;
+	}
+
+	public String getsUserDetailAddress() {
+		return sUserDetailAddress;
+	}
+
+	public void setsUserDetailAddress(String sUserDetailAddress) {
+		this.sUserDetailAddress = sUserDetailAddress;
 	}
 
 	public String getsUserPostalCode() {
@@ -405,28 +383,44 @@ public class MailDTO {
 		this.sUserBanOk = sUserBanOk;
 	}
 
-	public Long getSmajorId() {
-		return smajorId;
+	public Long getsMajorId() {
+		return sMajorId;
 	}
 
-	public void setSmajorId(Long smajorId) {
-		this.smajorId = smajorId;
+	public void setsMajorId(Long sMajorId) {
+		this.sMajorId = sMajorId;
 	}
 
-	public String getSuserMajorImgName() {
-		return suserMajorImgName;
+	public String getsUserMajorImgName() {
+		return sUserMajorImgName;
 	}
 
-	public void setSuserMajorImgName(String suserMajorImgName) {
-		this.suserMajorImgName = suserMajorImgName;
+	public void setsUserMajorImgName(String sUserMajorImgName) {
+		this.sUserMajorImgName = sUserMajorImgName;
 	}
 
-	public String getSuserMajorImgPath() {
-		return suserMajorImgPath;
+	public String getsUserMajorImgPath() {
+		return sUserMajorImgPath;
 	}
 
-	public void setSuserMajorImgPath(String suserMajorImgPath) {
-		this.suserMajorImgPath = suserMajorImgPath;
+	public void setsUserMajorImgPath(String sUserMajorImgPath) {
+		this.sUserMajorImgPath = sUserMajorImgPath;
+	}
+
+	public String getsUserWriterStatus() {
+		return sUserWriterStatus;
+	}
+
+	public void setsUserWriterStatus(String sUserWriterStatus) {
+		this.sUserWriterStatus = sUserWriterStatus;
+	}
+
+	public String getsUserUniversityStatus() {
+		return sUserUniversityStatus;
+	}
+
+	public void setsUserUniversityStatus(String sUserUniversityStatus) {
+		this.sUserUniversityStatus = sUserUniversityStatus;
 	}
 
 	public Long getrId() {
@@ -507,6 +501,14 @@ public class MailDTO {
 
 	public void setrUserAddress(String rUserAddress) {
 		this.rUserAddress = rUserAddress;
+	}
+
+	public String getrUserDetailAddress() {
+		return rUserDetailAddress;
+	}
+
+	public void setrUserDetailAddress(String rUserDetailAddress) {
+		this.rUserDetailAddress = rUserDetailAddress;
 	}
 
 	public String getrUserPostalCode() {
@@ -629,28 +631,44 @@ public class MailDTO {
 		this.rUserBanOk = rUserBanOk;
 	}
 
-	public Long getRmajorId() {
-		return rmajorId;
+	public Long getrMajorId() {
+		return rMajorId;
 	}
 
-	public void setRmajorId(Long rmajorId) {
-		this.rmajorId = rmajorId;
+	public void setrMajorId(Long rMajorId) {
+		this.rMajorId = rMajorId;
 	}
 
-	public String getRuserMajorImgName() {
-		return ruserMajorImgName;
+	public String getrUserMajorImgName() {
+		return rUserMajorImgName;
 	}
 
-	public void setRuserMajorImgName(String ruserMajorImgName) {
-		this.ruserMajorImgName = ruserMajorImgName;
+	public void setrUserMajorImgName(String rUserMajorImgName) {
+		this.rUserMajorImgName = rUserMajorImgName;
 	}
 
-	public String getRuserMajorImgPath() {
-		return ruserMajorImgPath;
+	public String getrUserMajorImgPath() {
+		return rUserMajorImgPath;
 	}
 
-	public void setRuserMajorImgPath(String ruserMajorImgPath) {
-		this.ruserMajorImgPath = ruserMajorImgPath;
+	public void setrUserMajorImgPath(String rUserMajorImgPath) {
+		this.rUserMajorImgPath = rUserMajorImgPath;
+	}
+
+	public String getrUserWriterStatus() {
+		return rUserWriterStatus;
+	}
+
+	public void setrUserWriterStatus(String rUserWriterStatus) {
+		this.rUserWriterStatus = rUserWriterStatus;
+	}
+
+	public String getrUserUniversityStatus() {
+		return rUserUniversityStatus;
+	}
+
+	public void setrUserUniversityStatus(String rUserUniversityStatus) {
+		this.rUserUniversityStatus = rUserUniversityStatus;
 	}
 
 	public String getMailTitle() {
@@ -700,5 +718,52 @@ public class MailDTO {
 	public void setReceiveUserId(Long receiveUserId) {
 		this.receiveUserId = receiveUserId;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "MailDTO [Id=" + Id + ", sId=" + sId + ", sUserImgName=" + sUserImgName + ", sUserImgPath="
+				+ sUserImgPath + ", sUserName=" + sUserName + ", sUserEmail=" + sUserEmail + ", sUserIdentification="
+				+ sUserIdentification + ", sUserPassword=" + sUserPassword + ", sUserPhone=" + sUserPhone
+				+ ", sUserNickname=" + sUserNickname + ", sUserAddress=" + sUserAddress + ", sUserDetailAddress="
+				+ sUserDetailAddress + ", sUserPostalCode=" + sUserPostalCode + ", sUserSnsOk=" + sUserSnsOk
+				+ ", sUserMailOk=" + sUserMailOk + ", sUserAgreementOk=" + sUserAgreementOk + ", sUserIntroduce="
+				+ sUserIntroduce + ", sUserRecode=" + sUserRecode + ", sUserInstagram=" + sUserInstagram
+				+ ", sUserYoutube=" + sUserYoutube + ", sUserBlog=" + sUserBlog + ", sUserKakao=" + sUserKakao
+				+ ", sUserGoogle=" + sUserGoogle + ", sUserNaver=" + sUserNaver + ", sUserWriterOk=" + sUserWriterOk
+				+ ", sUserAdminOk=" + sUserAdminOk + ", sUserBanOk=" + sUserBanOk + ", sMajorId=" + sMajorId
+				+ ", sUserMajorImgName=" + sUserMajorImgName + ", sUserMajorImgPath=" + sUserMajorImgPath
+				+ ", sUserWriterStatus=" + sUserWriterStatus + ", sUserUniversityStatus=" + sUserUniversityStatus
+				+ ", rId=" + rId + ", rUserImgName=" + rUserImgName + ", rUserImgPath=" + rUserImgPath + ", rUserName="
+				+ rUserName + ", rUserEmail=" + rUserEmail + ", rUserIdentification=" + rUserIdentification
+				+ ", rUserPassword=" + rUserPassword + ", rUserPhone=" + rUserPhone + ", rUserNickname=" + rUserNickname
+				+ ", rUserAddress=" + rUserAddress + ", rUserDetailAddress=" + rUserDetailAddress + ", rUserPostalCode="
+				+ rUserPostalCode + ", rUserSnsOk=" + rUserSnsOk + ", rUserMailOk=" + rUserMailOk
+				+ ", rUserAgreementOk=" + rUserAgreementOk + ", rUserIntroduce=" + rUserIntroduce + ", rUserRecode="
+				+ rUserRecode + ", rUserInstagram=" + rUserInstagram + ", rUserYoutube=" + rUserYoutube + ", rUserBlog="
+				+ rUserBlog + ", rUserKakao=" + rUserKakao + ", rUserGoogle=" + rUserGoogle + ", rUserNaver="
+				+ rUserNaver + ", rUserWriterOk=" + rUserWriterOk + ", rUserAdminOk=" + rUserAdminOk + ", rUserBanOk="
+				+ rUserBanOk + ", rMajorId=" + rMajorId + ", rUserMajorImgName=" + rUserMajorImgName
+				+ ", rUserMajorImgPath=" + rUserMajorImgPath + ", rUserWriterStatus=" + rUserWriterStatus
+				+ ", rUserUniversityStatus=" + rUserUniversityStatus + ", mailTitle=" + mailTitle + ", mailContents="
+				+ mailContents + ", mailSendTime=" + mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId="
+				+ sendUserId + ", receiveUserId=" + receiveUserId + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(Id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MailDTO other = (MailDTO) obj;
+		return Objects.equals(Id, other.Id);
+	}
+
 }

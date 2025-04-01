@@ -22,13 +22,20 @@ import com.app.mypage.controller.MypageAdminUserManageController;
 import com.app.mypage.controller.MypageArtLikeListControllerController;
 import com.app.mypage.controller.MypageChangePasswordController;
 import com.app.mypage.controller.MypageCommentsListController;
+import com.app.mypage.controller.MypageContactArtistDeleteOkController;
 import com.app.mypage.controller.MypageContactArtistDetailController;
-import com.app.mypage.controller.MypageContactListController;
-import com.app.mypage.controller.MypageContactWriteController;
+import com.app.mypage.controller.MypageContactArtistListController;
+import com.app.mypage.controller.MypageContactArtistUpdateController;
+import com.app.mypage.controller.MypageContactArtistUpdateOkController;
+import com.app.mypage.controller.MypageContactArtistWriteController;
+import com.app.mypage.controller.MypageContactArtistWriteOkController;
+import com.app.mypage.controller.MypageDeleteIdController;
+import com.app.mypage.controller.MypageDeleteIdOkController;
 import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageFormDetailController;
 import com.app.mypage.controller.MypageMainController;
 import com.app.mypage.controller.MypageModifyController;
+import com.app.mypage.controller.MypageModifyOkController;
 import com.app.mypage.controller.MypageMyAuctionList;
 import com.app.mypage.controller.MypageMyPayList;
 import com.app.mypage.controller.MypageMyPostContentController;
@@ -36,6 +43,7 @@ import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostContentController;
 import com.app.mypage.controller.MypagePostContentModifyController;
 import com.app.mypage.controller.MypagePostListController;
+import com.app.mypage.controller.MypageSendEmailController;
 import com.app.mypage.controller.MypageServiceCenterFaqContentController;
 import com.app.mypage.controller.MypageServiceCenterQnaContentController;
 import com.app.mypage.controller.MypageServiceCenterQnaDeleteOkController;
@@ -45,6 +53,7 @@ import com.app.mypage.controller.MypageServiceCenterQnaSendController;
 import com.app.mypage.controller.MypageServiceCenterQnaSendOkController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateOkController;
+import com.app.mypage.controller.mypageChangePasswordOkController;
 
 public class MypageFrontController extends HttpServlet{
    
@@ -60,16 +69,28 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageMainController().execute(req, resp);
       }else if(target.equals("mypage/mypage-modify")) {
          result = new MypageModifyController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-modify-ok")) {
+          result = new MypageModifyOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-contact-artist-list")) {
-         result = new MypageContactListController().execute(req, resp);
+         result = new MypageContactArtistListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-contact-artist-detail")) {
          result = new MypageContactArtistDetailController().execute(req, resp);
       }else if(target.equals("mypage/mypage-contact-artist-write")) {
-         result = new MypageContactWriteController().execute(req, resp);
+         result = new MypageContactArtistWriteController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-contact-artist-write-ok")) {
+    	  result = new MypageContactArtistWriteOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-contact-artist-update")) {
+    	  result = new MypageContactArtistUpdateController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-contact-artist-update-ok")) {
+    	  result = new MypageContactArtistUpdateOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-contact-artist-delete-ok")) {
+    	  result = new MypageContactArtistDeleteOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-comments-list")) {
          result = new MypageCommentsListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-change-password")) {
-         result = new MypageChangePasswordController().execute(req, resp);
+          result = new MypageChangePasswordController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-change-password-ok")) {
+          result = new mypageChangePasswordOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-art-like-list")) {
          result = new MypageArtLikeListControllerController().execute(req, resp);
       }else if(target.equals("mypage/mypage-exhibition-like-list")) {
@@ -132,6 +153,12 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageMyPayList().execute(req, resp);
       }else if(target.equals("mypage/form-detail")) {
           result = new MypageFormDetailController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id")) {
+          result = new MypageDeleteIdController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id-ok")) {
+          result = new MypageDeleteIdOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-send-email")) {
+    	  result = new MypageSendEmailController().execute(req, resp);
       }else {
 //         전부 404
       }

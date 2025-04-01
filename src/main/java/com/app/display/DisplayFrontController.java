@@ -22,7 +22,7 @@ import com.app.display.controller.DisplayCategorySculptureController;
 import com.app.display.controller.DisplayDetailController;
 import com.app.display.controller.DisplayMainCommingSoonController;
 import com.app.display.controller.DisplayMainIngController;
-import com.app.mypage.controller.MypageContactWriteController;
+import com.app.mypage.controller.MypageContactArtistWriteController;
 
 public class DisplayFrontController extends HttpServlet{
 	
@@ -36,7 +36,7 @@ public class DisplayFrontController extends HttpServlet{
 		
 		
 		if(target.equals("mypage/mypage-contact-artist-write")) {
-			result = new MypageContactWriteController().execute(req, resp);
+			result = new MypageContactArtistWriteController().execute(req, resp);
 		}else if(target.equals("display/display-main-ing")) {
 			result = new DisplayMainIngController().execute(req, resp);
 		}else if(target.equals("display/display-main-comming-soon")) {
