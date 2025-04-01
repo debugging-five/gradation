@@ -21,6 +21,7 @@ import com.app.user.controller.UserLoginFindSendEmailController;
 import com.app.user.controller.UserLoginNewPasswordController;
 import com.app.user.controller.UserLoginNewPasswordOkController;
 import com.app.user.controller.UserLoginOkController;
+import com.app.user.controller.UserLogoutController;
 import com.app.user.controller.UserjoinController;
 
 public class UserFrontController extends HttpServlet{
@@ -61,6 +62,8 @@ public class UserFrontController extends HttpServlet{
 			result = new UserLoginNewPasswordController().execute(req, resp);
 		}else if(target.equals("login/login-new-password-ok")) {
 			result = new UserLoginNewPasswordOkController().execute(req, resp);
+		}else if(target.equals("logout/logout")) {
+			result = new UserLogoutController().execute(req, resp);
 		}else {
 //			error 404 site
 		}
