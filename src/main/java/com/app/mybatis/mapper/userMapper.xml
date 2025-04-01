@@ -62,4 +62,20 @@
 		WHERE USER_IDENTIFICATION = #{userIdentification}
 	</update>
 	
+	<select id="selectUserByEmail" parameterType="String" resultType="userVO">
+		SELECT *
+		FROM TBL_USER
+		WHERE USER_EMAIL = #{userEmail}
+	</select>
+	
+	<select id="selectMajorDTOByEmail" parameterType="String" resultType="MajorDTO">
+		SELECT TU.ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_POSTAL_CODE, UNIVERSITY_NAME
+		FROM TBL_USER TU
+		JOIN TBL_MAJOR TM
+		ON TU.MAJOR_ID = TM.ID
+		JOIN TBL_UNIVERSITY TU
+		ON TM.UNIVERSITY_ID = TU.ID
+		WHERE USER_EMAIL = #{userEmail}
+	</select>
+	
 </mapper>
