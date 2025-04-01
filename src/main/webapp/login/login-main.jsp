@@ -47,21 +47,21 @@
 				</div>
 			</form>
 		</div>	
-			<div id="login-option">
-				<a href="../login/login-find-id.user">아이디 찾기</a>
-				<span>|</span>
-				<a href="../login/login-find-password.user">비밀번호 찾기</a>
-				<span>|</span>
-				<a href="../join/join-main.user">회원가입</a>
-			</div>
-			<div>
-				<span>또는 다른 서비스 계정으로 로그인</span>
-			</div>
-			<div id="sns-login">
-				<a><img alt="kakao" src="../assets/images/login/kakao.png"></a>
-				<a><img alt="naver" src="../assets/images/login/naver.png"></a>
-				<a><img alt="google" src="../assets/images/login/google.png"></a>
-			</div>
+		<div id="login-option">
+			<a href="../login/login-find-id.user">아이디 찾기</a>
+			<span>|</span>
+			<a href="../login/login-find-password.user">비밀번호 찾기</a>
+			<span>|</span>
+			<a href="../join/join-main.user">회원가입</a>
+		</div>
+		<div>
+			<span>또는 다른 서비스 계정으로 로그인</span>
+		</div>
+		<div id="sns-login">
+			<a><img alt="kakao" src="../assets/images/login/kakao.png"></a>
+			<a><img alt="naver" src="../assets/images/login/naver.png"></a>
+			<a><img alt="google" src="../assets/images/login/google.png"></a>
+		</div>
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>

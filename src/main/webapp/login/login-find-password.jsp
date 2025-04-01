@@ -55,7 +55,7 @@
 				<div><p id="email-check-compleate">인증이 완료되었습니다.</p></div>
 			</div>
 			
-			<button type="button" id="find-id-button">아이디 찾기</button>
+			<button type="button" id="find-id-button">비밀번호 찾기</button>
 		</form>
 	</div>
 	
