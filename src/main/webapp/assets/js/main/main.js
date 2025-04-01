@@ -4,15 +4,15 @@ const art = document.getElementById('art-title');
 const upcycling = document.getElementById('upcycling-title');
 
 window.addEventListener('scroll', () => {
-	text.classList.add('show');
+   text.classList.add('show');
 })
 
 auction.addEventListener('click', () => {
-	location.href = "../auction/auction-main.auction";
+   location.href = "../auction/auction-main.auction";
 })
 art.addEventListener('click', () => {
-	location.href = "../display/display-main-ing.display";
+   location.href = "../display/display-main-ing.display";
 })
 upcycling.addEventListener('click', () => {
-	location.href = "../upcycling/upcycling-main.upcycling";
+   location.href = "../upcycling/upcycling-main.upcycling";
 })
