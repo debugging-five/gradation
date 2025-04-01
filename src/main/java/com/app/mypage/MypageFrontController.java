@@ -35,6 +35,7 @@ import com.app.mypage.controller.MypageExhibitionLikeListController;
 import com.app.mypage.controller.MypageFormDetailController;
 import com.app.mypage.controller.MypageMainController;
 import com.app.mypage.controller.MypageModifyController;
+import com.app.mypage.controller.MypageModifyOkController;
 import com.app.mypage.controller.MypageMyAuctionList;
 import com.app.mypage.controller.MypageMyPayList;
 import com.app.mypage.controller.MypageMyPostContentController;
@@ -42,6 +43,7 @@ import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostContentController;
 import com.app.mypage.controller.MypagePostContentModifyController;
 import com.app.mypage.controller.MypagePostListController;
+import com.app.mypage.controller.MypageSendEmailController;
 import com.app.mypage.controller.MypageServiceCenterFaqContentController;
 import com.app.mypage.controller.MypageServiceCenterQnaContentController;
 import com.app.mypage.controller.MypageServiceCenterQnaDeleteOkController;
@@ -66,6 +68,8 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageMainController().execute(req, resp);
       }else if(target.equals("mypage/mypage-modify")) {
          result = new MypageModifyController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-modify-ok")) {
+          result = new MypageModifyOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-contact-artist-list")) {
          result = new MypageContactArtistListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-contact-artist-detail")) {
