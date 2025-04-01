@@ -150,6 +150,8 @@ public class MypageFrontController extends HttpServlet{
           result = new MypageDeleteIdController().execute(req, resp);
       }else if(target.equals("mypage/mypage-delete-id-ok")) {
           result = new MypageDeleteIdOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-send-email")) {
+    	  result = new MypageSendEmailController().execute(req, resp);
       }else {
 //         전부 404
       }
