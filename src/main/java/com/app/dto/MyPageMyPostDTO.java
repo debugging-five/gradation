@@ -6,16 +6,17 @@ import java.util.Objects;
 public class MyPageMyPostDTO {
 
 //	TBL_USER
-	private Long id;
+	private Long id; // Pk
 	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
-	private String uUserId;
+	private String userIdentification;
 	private String userPassword;
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -31,7 +32,9 @@ public class MyPageMyPostDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId;
+	private Long majorId;
+	private String userMajorImgName;
+	private String userMajorImgPath;
 	
 //	TBL_MAIL
 	private Long mailId;
@@ -45,23 +48,24 @@ public class MyPageMyPostDTO {
 	public MyPageMyPostDTO () {;}
 
 	public MyPageMyPostDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
-			String uUserId, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long universityId,
-			Long mailId, String mailTitle, String mailContents, Timestamp mailSendTime, int mailIsopen, Long sendUserId,
-			Long recieveUserId) {
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, Long mailId, String mailTitle,
+			String mailContents, Timestamp mailSendTime, int mailIsopen, Long sendUserId, Long recieveUserId) {
 		super();
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
-		this.uUserId = uUserId;
+		this.userIdentification = userIdentification;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -77,7 +81,9 @@ public class MyPageMyPostDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.universityId = universityId;
+		this.majorId = majorId;
+		this.userMajorImgName = userMajorImgName;
+		this.userMajorImgPath = userMajorImgPath;
 		this.mailId = mailId;
 		this.mailTitle = mailTitle;
 		this.mailContents = mailContents;
@@ -127,12 +133,12 @@ public class MyPageMyPostDTO {
 		this.userEmail = userEmail;
 	}
 
-	public String getuUserId() {
-		return uUserId;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setuUserId(String uUserId) {
-		this.uUserId = uUserId;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
 	public String getUserPassword() {
@@ -165,6 +171,14 @@ public class MyPageMyPostDTO {
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
+	}
+
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
 	}
 
 	public String getUserPostalCode() {
@@ -287,12 +301,28 @@ public class MyPageMyPostDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
+	public Long getMajorId() {
+		return majorId;
 	}
 
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
+	public void setMajorId(Long majorId) {
+		this.majorId = majorId;
+	}
+
+	public String getUserMajorImgName() {
+		return userMajorImgName;
+	}
+
+	public void setUserMajorImgName(String userMajorImgName) {
+		this.userMajorImgName = userMajorImgName;
+	}
+
+	public String getUserMajorImgPath() {
+		return userMajorImgPath;
+	}
+
+	public void setUserMajorImgPath(String userMajorImgPath) {
+		this.userMajorImgPath = userMajorImgPath;
 	}
 
 	public Long getMailId() {
@@ -354,16 +384,18 @@ public class MyPageMyPostDTO {
 	@Override
 	public String toString() {
 		return "MyPageMyPostDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
-				+ ", userName=" + userName + ", userEmail=" + userEmail + ", uUserId=" + uUserId + ", userPassword="
-				+ userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname + ", userAddress="
-				+ userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk="
-				+ userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce
-				+ ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube
-				+ ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver="
-				+ userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk="
-				+ userBanOk + ", universityId=" + universityId + ", mailId=" + mailId + ", mailTitle=" + mailTitle
-				+ ", mailContents=" + mailContents + ", mailSendTime=" + mailSendTime + ", mailIsopen=" + mailIsopen
-				+ ", sendUserId=" + sendUserId + ", recieveUserId=" + recieveUserId + "]";
+				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", mailId=" + mailId + ", mailTitle=" + mailTitle + ", mailContents="
+				+ mailContents + ", mailSendTime=" + mailSendTime + ", mailIsopen=" + mailIsopen + ", sendUserId="
+				+ sendUserId + ", recieveUserId=" + recieveUserId + "]";
 	}
 
 	@Override
@@ -382,7 +414,5 @@ public class MyPageMyPostDTO {
 		MyPageMyPostDTO other = (MyPageMyPostDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 	
 }
