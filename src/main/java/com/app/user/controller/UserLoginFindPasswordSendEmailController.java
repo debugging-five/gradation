@@ -39,6 +39,7 @@ public class UserLoginFindPasswordSendEmailController implements Action {
 			System.out.println(passwordMailCode);
 			ms.sendMail(userEmail,passwordMailCode);
 			session.setAttribute("passwordMailCode", passwordMailCode);
+			session.setAttribute("changePassword", "true");
 			session.setAttribute("userId", userId);
 		}else {
 //			존재 안함

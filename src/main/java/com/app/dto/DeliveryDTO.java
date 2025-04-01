@@ -24,7 +24,6 @@ public class DeliveryDTO {
 	private Long artId;
 	
 //	TBL_USER
-	private String userImgName;
 	private String userImgPath;
 	private String userName;
 	private String userEmail;
@@ -52,6 +51,8 @@ public class DeliveryDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	TBL_DELIVERY
 	private String deliveryAddress;
@@ -74,15 +75,16 @@ public class DeliveryDTO {
 
 	public DeliveryDTO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
 			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, String artImgName,
-			String artImgPath, Long artId, String userImgName, String userImgPath, String userName, String userEmail,
+			String artImgPath, Long artId, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, String deliveryAddress,
-			String deliveryDetailAddress, String deliveryPostalCode, String deliveryState, String deliveryMessage,
-			String deliveryReceiver, String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod,
-			int paymentAmount, Timestamp paymentDate, String paymentCode) {
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, String deliveryAddress, String deliveryDetailAddress,
+			String deliveryPostalCode, String deliveryState, String deliveryMessage, String deliveryReceiver,
+			String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod, int paymentAmount,
+			Timestamp paymentDate, String paymentCode) {
 		this.id = id;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
@@ -96,7 +98,6 @@ public class DeliveryDTO {
 		this.artImgName = artImgName;
 		this.artImgPath = artImgPath;
 		this.artId = artId;
-		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
 		this.userName = userName;
 		this.userEmail = userEmail;
@@ -124,6 +125,8 @@ public class DeliveryDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.deliveryAddress = deliveryAddress;
 		this.deliveryDetailAddress = deliveryDetailAddress;
 		this.deliveryPostalCode = deliveryPostalCode;
@@ -241,14 +244,6 @@ public class DeliveryDTO {
 
 	public void setArtId(Long artId) {
 		this.artId = artId;
-	}
-
-	public String getUserImgName() {
-		return userImgName;
-	}
-
-	public void setUserImgName(String userImgName) {
-		this.userImgName = userImgName;
 	}
 
 	public String getUserImgPath() {
@@ -467,6 +462,22 @@ public class DeliveryDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public String getDeliveryAddress() {
 		return deliveryAddress;
 	}
@@ -576,21 +587,22 @@ public class DeliveryDTO {
 		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
 				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
 				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
-				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userDetailAddress="
-				+ userDetailAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", deliveryAddress=" + deliveryAddress
-				+ ", deliveryDetailAddress=" + deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode
-				+ ", deliveryState=" + deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver="
-				+ deliveryReceiver + ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId="
-				+ auctionId + ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
+				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgPath="
+				+ userImgPath + ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification="
+				+ userIdentification + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname="
+				+ userNickname + ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress
+				+ ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk
+				+ ", userAgreementOk=" + userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode="
+				+ userRecode + ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog="
+				+ userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="
+				+ deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState="
+				+ deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver
+				+ ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId=" + auctionId
+				+ ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
 				+ paymentDate + ", paymentCode=" + paymentCode + "]";
 	}
 

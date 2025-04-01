@@ -20,12 +20,14 @@
 				<img id="show-password" class="eye-img" alt="눈" src="../assets/images/mypage/close-eye.png">
 			</div>
 			<div class="warning-area">
-					<div><p id="need-pw-input">필수 항목입니다.</p></div>
-			</div>	
-			<button class="big-button" onclick="location.href='../login/login-new-password.user'">비밀번호 변경</button>
+				<div><span id="need-password" class="warning-message">필수 항목입니다.</span></div>
+				<div><span id="need-password-check" class="warning-message">비밀번호가 틀렸습니다.</span></div>
+			</div>
+			<button class="big-button" id="change-password-button" type="button">비밀번호 변경</button>
 		</div>
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script type="text/javascript" src="../assets/js/mypage/mypage-change-password.js"></script>
 </html>

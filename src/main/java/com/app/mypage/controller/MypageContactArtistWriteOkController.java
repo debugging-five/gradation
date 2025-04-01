@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.AuctionDAO;
 import com.app.dao.MypageDAO;
 import com.app.dto.MailDTO;
+import com.app.vo.AuctionVO;
 
 public class MypageContactArtistWriteOkController implements Action {
 
@@ -18,12 +20,14 @@ public class MypageContactArtistWriteOkController implements Action {
 		Result result = new Result();
 		MailDTO mailDTO = new MailDTO();
 		MypageDAO mypageDAO = new MypageDAO();
+		AuctionDAO auctionDAO = new AuctionDAO();
 		
 		mailDTO.setrUserName(req.getParameter("rUserName"));
 		mailDTO.setMailTitle(req.getParameter("mailTitle"));
 		mailDTO.setMailContents(req.getParameter("mailContents"));
 		
 //		mypageDAO.insert(mailDTO);
+//		auctionDAO.;
 		
 		result.setRedirect(true);
 		result.setPath("mypage-contact-artist-list.mypage");

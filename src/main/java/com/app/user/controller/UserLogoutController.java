@@ -1,4 +1,4 @@
-package com.app.mypage.controller;
+package com.app.user.controller;
 
 import java.io.IOException;
 
@@ -9,20 +9,17 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.UserDAO;
 
-public class MypageDeleteIdOkController implements Action {
+public class UserLogoutController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
-		String loginUser = (String)session.getAttribute("loginUser");
 		
-		userDAO.deleteUser(loginUser);
+		session.invalidate();
 		
-		result.setPath("mypage-delete-id.mypage?complete=true");
+		result.setPath("../main/main.main");
 		result.setRedirect(true);
 		return result;
 	}
