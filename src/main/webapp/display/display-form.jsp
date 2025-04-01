@@ -35,7 +35,7 @@
 		
 			<!-- 작가 및 작품 정보 -->
 			<div id="content">
-				<form>
+				  <form action="art-upload" method="POST" enctype="multipart/form-data">
 					<div class="input-author">
 				        <label>작가명<span class="essential">*</span></label>
 				        <input type="text" id="author" placeholder="작가명을 입력하세요."
