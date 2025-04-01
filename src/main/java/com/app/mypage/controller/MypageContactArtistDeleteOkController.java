@@ -8,14 +8,25 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.MypageDAO;
 
-public class MypageContactListController implements Action {
+public class MypageContactArtistDeleteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-contact-artist-list.jsp");
+		MypageDAO mypageDAO = new MypageDAO();
+		
+		Long id = Long.parseLong(req.getParameter("id"));
+		
+//		작가와 연락 내역 삭제
+//		mypageDAO.delete(id);
+		
+//		작가와 연락 리스트 페이지로 이동
+		result.setRedirect(true);
+		result.setPath("mypage-contact-artist-list.mypage");
 		return result;
+		
 	}
 
 }

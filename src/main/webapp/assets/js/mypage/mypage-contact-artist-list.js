@@ -1,7 +1,8 @@
 const contactDetail = document.querySelectorAll(".item");
 
-contactDetail.forEach((contact) => {
+contactDetail.forEach((contact, i) => {
 	contact.addEventListener("click", () => {
-		location.href = "mypage-contact-artist-detail.mypage";
+		const id = i + 1; 
+	    location.href = `../mypage/mypage-contact-artist-detail.mypage?id=${id}`;
 	})
 })

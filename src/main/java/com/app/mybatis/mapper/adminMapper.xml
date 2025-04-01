@@ -3,6 +3,12 @@
 
 <mapper namespace="admin">
 
+	<select id="selectId" >
+		SELECT *
+		FROM TBL_USER
+		WHERE ID = #{id}
+	</select>
+
 	<!-- 관리자 INSERT -->
 	<insert id="insertAdminUser" parameterType="UserVO">
 		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK, USER_ADMIN_OK)			 
@@ -82,8 +88,6 @@
 		WHERE ID = #{id}
 	</delete>
 		
-	
-	
 
 	
 	

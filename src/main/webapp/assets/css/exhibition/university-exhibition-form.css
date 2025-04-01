@@ -247,7 +247,7 @@ button {
 	width: 760px;
 	margin: 48px 0 0 0;
 	display: flex;
-	align-items: flex-start; /* 수직 정렬을 최상단에 맞춤 */
+	align-items: flex-start;
 	gap : 68px;
 }
 
@@ -277,10 +277,10 @@ button {
 }
 
 #alert-wrapper {
-   position : fixed;
-    top: 50%;
+   	position : fixed;
+    top: 0; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); 
     width: 100%;
     height: auto;
     display : none;

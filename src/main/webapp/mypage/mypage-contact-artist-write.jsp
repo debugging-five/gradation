@@ -42,7 +42,8 @@
 
 				
 				<!-- 내 활동 / 작가와 연락 페이지로 이동 -->
-				<form action="mypage-contact-artist-list.jsp" method="post">
+				<!-- <form action="mypage-contact-artist-list.jsp" method="post"> -->
+				<form action="mypage-contact-artist-write-ok.mypage" method="post">
 					<div id="button-wrapper">
 						<button id="register-button">등록</button>
 					</div>
