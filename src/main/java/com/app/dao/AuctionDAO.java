@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.app.dto.AuctionDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.AuctionVO;
+import com.app.vo.MailVO;
 
 public class AuctionDAO {
 	public SqlSession sqlSession;
@@ -41,4 +42,9 @@ public class AuctionDAO {
  		sqlSession.delete("auction.delete", id);
  	}
  	
+ 	
+// 	메일 추가
+ 	public void insertMail(MailVO mailVO) {
+ 		sqlSession.insert("mypage.insertMail", mailVO);
+ 	} 
 }
