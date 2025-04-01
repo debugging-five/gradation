@@ -15,6 +15,10 @@ public class AuctionDAO {
  		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
  	}
  	
+ 	public void insert(AuctionVO auctionVO) {
+ 		sqlSession.insert("auction.insert", auctionVO);
+ 	}
+ 	
  	public Long selectId() {
  		return sqlSession.selectOne("auction.selectId");
  	}
