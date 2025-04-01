@@ -22,6 +22,12 @@ public class MypageModifyOkController implements Action {
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
 		
+		if(session.getAttribute("loginUser") == null) {
+			result.setPath("../login/login-main.user");
+			result.setRedirect(true);
+			return result;
+		}
+		
 		String userIdentification = "";
 		String userNickname = "";
 		String userName = "";

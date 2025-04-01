@@ -24,14 +24,15 @@ public class MypageMainController implements Action{
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = null;
 		
-		
-		String userEmail = (String)session.getAttribute("loginUser");
-		
-		if(userEmail == null) {
+		if(session.getAttribute("loginUser") == null) {
 			result.setPath("../login/login-main.user");
 			result.setRedirect(true);
 			return result;
 		}
+		
+		String userEmail = (String)session.getAttribute("loginUser");
+		
+		
 		
 		userVO = userDAO.selectUserByEmail(userEmail);
 		req.setAttribute("userIdentification", userVO.getUserIdentification());
