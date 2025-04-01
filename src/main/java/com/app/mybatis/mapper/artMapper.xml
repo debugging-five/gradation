@@ -61,7 +61,23 @@
     )
 </insert>
     
-<!--전시 필터링 (WHERE 조건 추가) -->
+<select id="selectDisplayList" resultType="ArtDTO">
+    SELECT 
+        A.ID AS artId,
+        A.ART_TITLE AS artTitle,
+        A.ART_CATEGORY AS artCategory,
+        A.ART_START_DATE AS artStartDate,
+        U.USER_NAME AS userName,
+        I.ART_IMG_NAME AS artImgName,
+        I.ART_IMG_PATH AS artImgPath
+    FROM TBL_ART A
+    JOIN TBL_USER U ON A.USER_ID = U.ID
+    JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
+    WHERE A.ART_START_DATE &lt;= SYSDATE
+      	AND A.ART_END_DATE &gt;= SYSDATE
+    ORDER BY A.ART_START_DATE DESC
+</select>
+
 
 
 

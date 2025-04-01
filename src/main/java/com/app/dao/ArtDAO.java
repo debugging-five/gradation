@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.dto.ArtDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.ArtLikeVO;
 import com.app.vo.ArtVO;
@@ -48,8 +49,16 @@ public class ArtDAO {
         sqlSession.insert("art.insertArtLike", artLikeVO);
     }
     
-    	
-// 	✔ 전시 필터링
+ // 전시중인 작품 목록 조회 (작품 + 이미지 + 작가 이름)
+    public List<ArtDTO> selectDisplayList(int startIndex, int pageSize) {
+        Map<String, Integer> pageInfo = new HashMap<>();
+        pageInfo.put("startIndex", startIndex);
+        pageInfo.put("pageSize", pageSize);
+        
+        return sqlSession.selectList("art.selectDisplayList", pageInfo);
+    }
+
+
  	
  	
 }
