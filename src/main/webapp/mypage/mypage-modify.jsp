@@ -21,45 +21,49 @@
 			<div id="content-wrap">
 				<h2 id="title">회원정보</h2>
 				<div id="my-infomation-container">
-					<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">${userIdentification}</span></div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" value="${userNickname}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title2">이름</h5><input type="text" value="${userName}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" value="${userPhone}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title3">이메일</h5><input type="text" value="${userEmail}"></div>
-						<button class="input-button">이메일 인증</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userCode}"></div>
-						<button class="input-button">인증번호 확인</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" value="${userAddress}" readonly/></div>
-						<button class="input-button" onclick="execDaumPostcode()" >주소 검색</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">상세주소</h5><input type="text" value="${userDetailAddress}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
+					<form action="mypage-modify-ok.mypage" method="post">
+						<input type="hidden" id="mail-code" value="${mailCode}">
+						<input type="hidden" id="user-prev-email" value="${userlogin}">
+						<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">${userIdentification}</span></div>
+						<div class="user-info">
+							<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" id="user-nickname" value="${userNickname}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title2">이름</h5><input type="text" id="user-name" value="${userName}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" id="user-phone" value="${userPhone}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title3">이메일</h5><input type="text" id="user-email" value="${userEmail}"></div>
+							<button class="input-button" id="email-send-button">이메일 인증</button>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" id="user-code" value="${userCode}"></div>
+							<button class="input-button" id="code-check-button">인증번호 확인</button>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" value="${userAddress}" readonly/></div>
+							<button class="input-button" onclick="execDaumPostcode()" >주소 검색</button>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">상세주소</h5><input type="text" id="user-detail-address" value="${userDetailAddress}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+					</form>
 				</div>
 				<div class="button-wrapper">
 					<button id="modify-button" type="button">저장</button>

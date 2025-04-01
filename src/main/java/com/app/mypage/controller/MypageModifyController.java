@@ -31,13 +31,13 @@ public class MypageModifyController implements Action {
 		req.setAttribute("userIdentification", userVO.getUserIdentification());
 
 		req.setAttribute("userNickname", req.getParameter("userNickname") == null ? userVO.getUserNickname() : req.getParameter("userNickname"));
-		req.setAttribute("userName", userVO.getUserName());
-		req.setAttribute("userEmail", userEmail);
+		req.setAttribute("userName", req.getParameter("userName") == null ? userVO.getUserName() : req.getParameter("userName"));
+		req.setAttribute("userEmail", req.getParameter("userEmail") == null ? userVO.getUserEmail() : req.getParameter("userEmail"));
 		
-		req.setAttribute("userPhone", userVO.getUserPhone());
+		req.setAttribute("userPhone", req.getParameter("userPhone") == null ? userVO.getUserPhone() : req.getParameter("userPhone"));
 		req.setAttribute("userCode", req.getParameter("userCode"));
-		req.setAttribute("userAddress", userVO.getUserAddress());
-		req.setAttribute("userDetailAddress", userVO.getUserDetailAddress());
+		req.setAttribute("userAddress", req.getParameter("userAddress") == null ? userVO.getUserAddress() : req.getParameter("userAddress"));
+		req.setAttribute("userDetailAddress", req.getParameter("userDetailAddress") == null ? userVO.getUserDetailAddress() : req.getParameter("userDetailAddress"));
 		
 		result.setPath("mypage-modify.jsp");
 		return result;
