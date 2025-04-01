@@ -34,9 +34,10 @@ public class BanDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	ban
-	private String banReason;
 	private Timestamp banDate;
 	private Long userId;
 	
@@ -47,8 +48,8 @@ public class BanDTO {
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate,
-			Long userId) {
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, Timestamp banDate, Long userId) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -78,7 +79,8 @@ public class BanDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.banReason = banReason;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.banDate = banDate;
 		this.userId = userId;
 	}
@@ -315,12 +317,20 @@ public class BanDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public String getBanReason() {
-		return banReason;
+	public String getUserWriterStatus() {
+		return userWriterStatus;
 	}
 
-	public void setBanReason(String banReason) {
-		this.banReason = banReason;
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
 	}
 
 	public Timestamp getBanDate() {
@@ -351,7 +361,8 @@ public class BanDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate + ", userId=" + userId + "]";
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", banDate=" + banDate + ", userId=" + userId + "]";
 	}
 
 	@Override
@@ -372,6 +383,4 @@ public class BanDTO {
 	}
 
 }
-
-
 

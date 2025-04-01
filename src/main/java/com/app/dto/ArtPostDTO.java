@@ -35,6 +35,8 @@ public class ArtPostDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	TBL_ART
 	private String artTitle;
@@ -55,7 +57,6 @@ public class ArtPostDTO {
 	private String artImgName;
 	private String artImgPath;
 	
-
 //	TBL_ART_LIKE
 	private Timestamp artLikeTime;
 	
@@ -69,16 +70,17 @@ public class ArtPostDTO {
 	private Timestamp replyLikeTime;
 	
 	public ArtPostDTO() {;}
-	
+
 	public ArtPostDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, String artTitle, String artCategoty,
-			String artMeterial, String artSize, String artDescription, Date artDate, Date artStartDate, Date artEndDate,
-			Long userId, Timestamp artPostDate, Long artId, String artImgName, String artImgPath, Timestamp artLikeTime,
-			Long artPostId, String replyContents, Date replyDate, Long replyId, Timestamp replyLikeTime) {
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, String artTitle, String artCategoty, String artMeterial, String artSize,
+			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, Timestamp artPostDate,
+			Long artId, String artImgName, String artImgPath, Timestamp artLikeTime, Long artPostId,
+			String replyContents, Date replyDate, Long replyId, Timestamp replyLikeTime) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -108,6 +110,8 @@ public class ArtPostDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
 		this.artMeterial = artMeterial;
@@ -361,6 +365,22 @@ public class ArtPostDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public String getArtTitle() {
 		return artTitle;
 	}
@@ -525,7 +545,8 @@ public class ArtPostDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
 				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
 				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
 				+ ", artPostDate=" + artPostDate + ", artId=" + artId + ", artImgName=" + artImgName + ", artImgPath="
@@ -551,6 +572,4 @@ public class ArtPostDTO {
 		return Objects.equals(id, other.id);
 	}
 	
-	
-
 }

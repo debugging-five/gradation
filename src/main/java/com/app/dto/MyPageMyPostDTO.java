@@ -35,6 +35,8 @@ public class MyPageMyPostDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	TBL_MAIL
 	private Long mailId;
@@ -52,9 +54,9 @@ public class MyPageMyPostDTO {
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, Long mailId, String mailTitle,
-			String mailContents, Timestamp mailSendTime, int mailIsopen, Long sendUserId, Long recieveUserId) {
-		super();
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, Long mailId, String mailTitle, String mailContents, Timestamp mailSendTime,
+			int mailIsopen, Long sendUserId, Long recieveUserId) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -84,6 +86,8 @@ public class MyPageMyPostDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.mailId = mailId;
 		this.mailTitle = mailTitle;
 		this.mailContents = mailContents;
@@ -325,6 +329,22 @@ public class MyPageMyPostDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public Long getMailId() {
 		return mailId;
 	}
@@ -393,7 +413,8 @@ public class MyPageMyPostDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", mailId=" + mailId + ", mailTitle=" + mailTitle + ", mailContents="
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", mailId=" + mailId + ", mailTitle=" + mailTitle + ", mailContents="
 				+ mailContents + ", mailSendTime=" + mailSendTime + ", mailIsopen=" + mailIsopen + ", sendUserId="
 				+ sendUserId + ", recieveUserId=" + recieveUserId + "]";
 	}
@@ -414,5 +435,5 @@ public class MyPageMyPostDTO {
 		MyPageMyPostDTO other = (MyPageMyPostDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
 }

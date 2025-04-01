@@ -34,6 +34,8 @@ public class UniversityLikeDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	universityLike
 	private Long universityId;
@@ -54,9 +56,10 @@ public class UniversityLikeDTO {
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, Long universityId, Long userId,
-			Timestamp universityLikeTime, String universityName, String universityLocation,
-			String universityLogoImgName, String universityLogoImgPath, String universityHomepage) {
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, Long universityId, Long userId, Timestamp universityLikeTime,
+			String universityName, String universityLocation, String universityLogoImgName,
+			String universityLogoImgPath, String universityHomepage) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -86,6 +89,8 @@ public class UniversityLikeDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.universityId = universityId;
 		this.userId = userId;
 		this.universityLikeTime = universityLikeTime;
@@ -328,6 +333,22 @@ public class UniversityLikeDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public Long getUniversityId() {
 		return universityId;
 	}
@@ -404,10 +425,12 @@ public class UniversityLikeDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", universityId=" + universityId + ", userId=" + userId + ", universityLikeTime="
-				+ universityLikeTime + ", universityName=" + universityName + ", universityLocation="
-				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
-				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + "]";
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", universityId=" + universityId + ", userId=" + userId
+				+ ", universityLikeTime=" + universityLikeTime + ", universityName=" + universityName
+				+ ", universityLocation=" + universityLocation + ", universityLogoImgName=" + universityLogoImgName
+				+ ", universityLogoImgPath=" + universityLogoImgPath + ", universityHomepage=" + universityHomepage
+				+ "]";
 	}
 
 	@Override

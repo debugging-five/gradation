@@ -39,5 +39,33 @@
 		DELETE FROM TBL_AUCTION
 		WHERE ID = #{id}
 	</delete>
+	
+	
+	
+	<!-- 메일 -->
+	
+	<select id="selectMail" parameterType="Long" resultType="MailDTO">
+		SELECT 
+			TBS.USER_NAME, TBM.MAIL_TITLE, TBM.MAIL_CONTENTS, TBM.MAIL_SEND_TIME
+		FROM TBL_MAIL TBM
+		JOIN TBL_USER TBS
+		ON TBM.SEND_USER_ID = TBS.ID
+		JOIN TBL_USER TBR
+		ON TBM.RECEIVE_USER_ID = TBR.ID
+		WHERE TBS.ID = #{id}
+	</select>
+	
+	<insert id="insertMail" parameterType="MailVO">
+		INSERT INTO TBL_MAIL 
+		VALUES (
+			SEQ_MAIL.NEXTVAL, 
+			#{mailTitle},
+			#{mailContents},
+			#{mailSendTime},
+			#{mailOpenOk},
+			#{sendUserId},
+			#{receiveUserId}
+		)
+	</insert>
 
 </mapper>
