@@ -35,6 +35,8 @@ public class DisplayMainDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 //	TBL_ART
 	private Long artId;
@@ -59,9 +61,10 @@ public class DisplayMainDTO {
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, Long artId, String artTitle,
-			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
-			Date artStartDate, Date artEndDate, Long artImageId, String artImgName, String artImgPath) {
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, Long artId, String artTitle, String artCategoty, String artMeterial,
+			String artSize, String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long artImageId,
+			String artImgName, String artImgPath) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -91,6 +94,8 @@ public class DisplayMainDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 		this.artId = artId;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
@@ -337,6 +342,22 @@ public class DisplayMainDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	public Long getArtId() {
 		return artId;
 	}
@@ -445,7 +466,8 @@ public class DisplayMainDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", artId=" + artId + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + ", artId=" + artId + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
 				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
 				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
 				+ ", artImageId=" + artImageId + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + "]";

@@ -13,11 +13,13 @@ public class UpcycleVO {
 	private String upcycleImgName;
 	private String upcycleImgPath;
 	private String upcycleSignificant;
+	private String upcycleStatus;
 	
 	public UpcycleVO() {;}
 
 	public UpcycleVO(Long id, String upcycleCategory, String upcycleSize, Date upcycleDate, String upcycleAddress,
-			Long userId, String upcycleImgName, String upcycleImgPath, String upcycleSignificant) {
+			Long userId, String upcycleImgName, String upcycleImgPath, String upcycleSignificant,
+			String upcycleStatus) {
 		this.id = id;
 		this.upcycleCategory = upcycleCategory;
 		this.upcycleSize = upcycleSize;
@@ -27,31 +29,7 @@ public class UpcycleVO {
 		this.upcycleImgName = upcycleImgName;
 		this.upcycleImgPath = upcycleImgPath;
 		this.upcycleSignificant = upcycleSignificant;
-	}
-
-	@Override
-	public String toString() {
-		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
-				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
-				+ ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath + ", upcycleSignificant="
-				+ upcycleSignificant + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UpcycleVO other = (UpcycleVO) obj;
-		return Objects.equals(id, other.id);
+		this.upcycleStatus = upcycleStatus;
 	}
 
 	public Long getId() {
@@ -125,4 +103,38 @@ public class UpcycleVO {
 	public void setUpcycleSignificant(String upcycleSignificant) {
 		this.upcycleSignificant = upcycleSignificant;
 	}
+
+	public String getUpcycleStatus() {
+		return upcycleStatus;
+	}
+
+	public void setUpcycleStatus(String upcycleStatus) {
+		this.upcycleStatus = upcycleStatus;
+	}
+
+	@Override
+	public String toString() {
+		return "UpcycleVO [id=" + id + ", upcycleCategory=" + upcycleCategory + ", upcycleSize=" + upcycleSize
+				+ ", upcycleDate=" + upcycleDate + ", upcycleAddress=" + upcycleAddress + ", userId=" + userId
+				+ ", upcycleImgName=" + upcycleImgName + ", upcycleImgPath=" + upcycleImgPath + ", upcycleSignificant="
+				+ upcycleSignificant + ", upcycleStatus=" + upcycleStatus + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UpcycleVO other = (UpcycleVO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }
