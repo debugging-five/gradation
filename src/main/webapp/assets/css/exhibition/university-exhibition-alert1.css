@@ -42,14 +42,14 @@ body {
 	height : 19px;
 }
 
-#button-wrapper {
+#alert-button-wrapper {
 	display : flex;
 	justify-content : center; 
 	gap : 10px;
 	margin : 24px 0 0 0;
 }
 
-#cancel-button2 {
+#alert-cancel-button {
 	width : 60px;
 	height : 25px;
 	border : solid 1.2px var(--color-primary);
@@ -61,7 +61,7 @@ body {
 	color : var(--color-primary);
 }
 
-#ok-button2 {
+#alert-ok-button {
 	width : 60px;
 	height : 25px;
 	border : solid 1.2px var(--color-primary);
