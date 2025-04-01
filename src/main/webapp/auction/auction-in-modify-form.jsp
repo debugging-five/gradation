@@ -39,7 +39,7 @@
 					<div class="input-box-wrap">
 						<div class="input-box">
 					        <h5>추정가</h5>
-					        <input class="input-text" type="number" placeholder="KRW 1,000,000 ~ 2,000,000" />			
+					        <input class="input-text" type="number" placeholder="KRW 1,000,000 ~ 2,000,000" />
 						</div>
 					</div>
 					<div class="input-box-wrap">
