@@ -30,6 +30,7 @@
 				<div class="sidebar-link"><a href="../mypage/mypage-main.mypage">개인 정보 수정</a></div>
 				<div class="sidebar-link"><a href="../artist/artist-detail-modify.artist">내 작가페이지 수정</a></div>
 				<div class="sidebar-link"><a href="../mypage/change-password.mypage">비밀번호 변경</a></div>
+				<div class="sidebar-link"><a href="../mypage/mypage-main.mypage">대학교 인증</a></div>
 			</div>
 		</div>
 		<div class="my-perform my">
