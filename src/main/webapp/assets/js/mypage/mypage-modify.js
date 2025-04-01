@@ -59,18 +59,23 @@ codeCheckButton.addEventListener('click', () => {
 	}
 })
 
-modifyButton.addEventListener('click', () => {
+console.log(userEmail.value == userPrevEmail.value);
+//	업데이트 활성화 기능 
+const checkAll = () => {
 	if(codecheck || userEmail.value == userPrevEmail.value) {
-		alert("회원정보 수정이 완료되었습니다.");
-		submit();
-	}else {
-		console.log("이메일 인증 필요")
+		modifyButton.type = 'submit';
 	}
-})
+}
+checkAll();
+
+
+modifyButton.addEventListener('click', () => {
+	console.log("이메일 인증 필요")
+});
 
 cancelButton.addEventListener('click', () => {
 	location.href='mypage-main.mypage';
-})
+});
 
 
 // 주소찾기 API

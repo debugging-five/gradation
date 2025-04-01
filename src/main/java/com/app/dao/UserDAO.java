@@ -73,4 +73,9 @@ import com.app.vo.UserVO;
  		return sqlSession.selectOne("user.selectMajorDTOByEmail", userEmail);
  	}
  	
+// 	회원정보 수정
+ 	public void updateUser(UserVO userVO) {
+ 		sqlSession.update("user.updateUser", userVO);
+ 	}
+ 	
  }
