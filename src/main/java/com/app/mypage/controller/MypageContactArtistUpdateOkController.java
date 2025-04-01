@@ -27,7 +27,8 @@ public class MypageContactArtistUpdateOkController implements Action {
 //		MypageDAO.update(mailDTO);
 		
 		result.setRedirect(true);
-//		result.setPath();
+		result.setPath("");
+		
 		return result;
 	}
 
