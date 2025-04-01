@@ -26,13 +26,13 @@ public class MypageSendEmailController implements Action {
 		HttpSession session = req.getSession();
 		String userEmail = req.getParameter("userEmail");
 		
-		String path = "userNickname=" + URLEncoder.encode(req.getParameter("userNickname"), "UTF-8") + 
-				"&userName=" + URLEncoder.encode(req.getParameter("userName"), "UTF-8") +
-				"&userPhone=" + req.getParameter("userPhone") +
-				"&userEmail=" + userEmail +
-				"&userCode=" + req.getParameter("userCode") +
-				"&userAddress=" + URLEncoder.encode(req.getParameter("userAddress"), "UTF-8") +
-				"&userDetailAddress=" + URLEncoder.encode(req.getParameter("userDetailAddress"), "UTF-8");
+		String path = "userNickname=" + (req.getParameter("userNickname") == null ? "" : URLEncoder.encode(req.getParameter("userNickname"), "UTF-8")) + 
+				"&userName=" + (req.getParameter("userName") == null ? "" : URLEncoder.encode(req.getParameter("userName"), "UTF-8")) +
+				"&userPhone=" + (req.getParameter("userPhone") == null ? "" : URLEncoder.encode(req.getParameter("userPhone"), "UTF-8")) +
+				"&userEmail=" + (userEmail == null ? "" : URLEncoder.encode(userEmail, "UTF-8") +
+				"&userCode=" + (req.getParameter("userCode") == null ? "" : URLEncoder.encode(req.getParameter("userCode"), "UTF-8")) +
+				"&userAddress=" + (req.getParameter("userAddress") == null ? "" : URLEncoder.encode(req.getParameter("userAddress"), "UTF-8")) +
+				"&userDetailAddress=" + (req.getParameter("userDetailAddress") == null ? "" : URLEncoder.encode(req.getParameter("userDetailAddress"), "UTF-8")));
 		
 		if(userDAO.emailCheck(userEmail) == 1){
 //			이메일이 이미 존재할 때

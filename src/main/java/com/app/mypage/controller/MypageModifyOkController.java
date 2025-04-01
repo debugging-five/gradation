@@ -51,11 +51,14 @@ public class MypageModifyOkController implements Action {
 		userVO.setUserEmail(userEmail);
 		userVO.setUserAddress(userAddress);
 		userVO.setUserDetailAddress(userDetailAddress);
-		System.out.println(userVO);
+//		System.out.println(userVO);
 		
 		userDAO.updateUser(userVO);
 		
-		session.setAttribute("loginUser", loginEmail);
+		session.invalidate();
+		
+		session = req.getSession();
+		session.setAttribute("loginUser", userEmail);
 		
 		result.setRedirect(true);
 		result.setPath("mypage-main.mypage");

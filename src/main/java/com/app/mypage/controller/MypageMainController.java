@@ -20,9 +20,7 @@ public class MypageMainController implements Action{
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		HttpSession session = req.getSession();
-		MypageDAO mypageDAO = new MypageDAO();
 		UserDAO userDAO = new UserDAO();
-		UserVO userVO = null;
 		
 		if(session.getAttribute("loginUser") == null) {
 			result.setPath("../login/login-main.user");
@@ -32,9 +30,9 @@ public class MypageMainController implements Action{
 		
 		String userEmail = (String)session.getAttribute("loginUser");
 		
+		System.out.println(userEmail);
 		
-		
-		userVO = userDAO.selectUserByEmail(userEmail);
+		UserVO userVO = userDAO.selectUserByEmail(userEmail);
 		req.setAttribute("userIdentification", userVO.getUserIdentification());
 		req.setAttribute("userNickname", userVO.getUserNickname() == null ? "미등록": userVO.getUserNickname());
 		req.setAttribute("userName", userVO.getUserName());

@@ -24,7 +24,7 @@
 					<div id="my-infomation-container">
 						<input type="hidden" id="mail-code" value="${sessionScope.mailCode}">
 						<input type="hidden" id="user-prev-email" value="${sessionScope.loginUser}">
-						<input type="hidden" name="userIdentification" value="${userIdentification}">
+						<input type="hidden" id="user-identification" name="userIdentification" value="${userIdentification}">
 						<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">${userIdentification}</span></div>
 						<div class="user-info">
 							<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" id="user-nickname" name="userNickname" value="${userNickname}"></div>
@@ -46,12 +46,14 @@
 							<button class="input-button" id="email-send-button" type="button">이메일 인증</button>
 						</div>
 						<div class="warning-area">
+							<span class="warning-message" id="need-email-check">변경된 이메일을 인증해주세요</span>
 						</div>
 						<div class="user-info" id="">
 							<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" id="user-code" name="userCode" value="${userCode}"></div>
-							<button class="input-button" id="code-check-button">인증번호 확인</button>
+							<button class="input-button" id="code-check-button" type="button">인증번호 확인</button>
 						</div>
 						<div class="warning-area">
+							<span class="warning-message" id="need-code-check">인증번호가 다릅니다</span>
 						</div>
 						<div class="user-info" id="">
 							<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" name="userAddress" value="${userAddress}" readonly/></div>
