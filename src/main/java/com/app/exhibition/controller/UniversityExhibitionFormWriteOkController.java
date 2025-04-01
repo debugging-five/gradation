@@ -32,7 +32,7 @@ public class UniversityExhibitionFormWriteOkController implements Action {
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
-		//		majorDTO.setUniversityExhibitionDate(new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("universityExhibitionDate")));
+//		majorDTO.setUniversityExhibitionDate(new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("universityExhibitionDate")));
 		
 //		ExhibitionDAO.insert(majorDTO);
 		

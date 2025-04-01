@@ -6,8 +6,8 @@ const comments = document.querySelectorAll(".item");
 //	})
 	
 comments.forEach((comment, i) => {
-	comment.addEventListener("click", () =>
-	 { 	const id = i + 1; 
+	comment.addEventListener("click", () => {
+		const id = i + 1; 
 	    const url = `../display/display-detail.display?id=${id}`;
 	    location.href = url;
 	})

@@ -46,6 +46,7 @@ public class GradationExhibitionDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -61,7 +62,6 @@ public class GradationExhibitionDTO {
 	private int userWriterOk;
 	private int userAdminOk;
 	private int userBanOk;
-	private Long universityId; // 학교 테이블의 id 참조값
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
@@ -75,10 +75,10 @@ public class GradationExhibitionDTO {
 			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
 			Date artStartDate, Date artEndDate, Long userId, String artImgName, String artImgPath, String userImgName,
 			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
-			String userPhone, String userNickname, String userAddress, String userPostalCode, int userSnsOk,
-			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
-			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
-			int userWriterOk, int userAdminOk, int userBanOk, Long universityId, Long majorId, String userMajorImgName,
+			String userPhone, String userNickname, String userAddress, String userDetailAddress, String userPostalCode,
+			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
+			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
+			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId, String userMajorImgName,
 			String userMajorImgPath) {
 		this.id = id;
 		this.gradationExhibitionTitle = gradationExhibitionTitle;
@@ -112,6 +112,7 @@ public class GradationExhibitionDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -127,52 +128,9 @@ public class GradationExhibitionDTO {
 		this.userWriterOk = userWriterOk;
 		this.userAdminOk = userAdminOk;
 		this.userBanOk = userBanOk;
-		this.universityId = universityId;
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-	}
-
-	@Override
-	public String toString() {
-		return "GradationExhibitionDTO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
-				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
-				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
-				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
-				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
-				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
-				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath
-				+ ", gradationExhibitionId=" + gradationExhibitionId + ", artId=" + artId + ", artTitle=" + artTitle
-				+ ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize=" + artSize
-				+ ", artDescription=" + artDescription + ", artDate=" + artDate + ", artStartDate=" + artStartDate
-				+ ", artEndDate=" + artEndDate + ", userId=" + userId + ", artImgName=" + artImgName + ", artImgPath="
-				+ artImgPath + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
-				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", universityId=" + universityId + ", majorId=" + majorId
-				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		GradationExhibitionDTO other = (GradationExhibitionDTO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -431,6 +389,14 @@ public class GradationExhibitionDTO {
 		this.userAddress = userAddress;
 	}
 
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
+	}
+
 	public String getUserPostalCode() {
 		return userPostalCode;
 	}
@@ -551,14 +517,6 @@ public class GradationExhibitionDTO {
 		this.userBanOk = userBanOk;
 	}
 
-	public Long getUniversityId() {
-		return universityId;
-	}
-
-	public void setUniversityId(Long universityId) {
-		this.universityId = universityId;
-	}
-
 	public Long getMajorId() {
 		return majorId;
 	}
@@ -581,6 +539,49 @@ public class GradationExhibitionDTO {
 
 	public void setUserMajorImgPath(String userMajorImgPath) {
 		this.userMajorImgPath = userMajorImgPath;
+	}
+
+	@Override
+	public String toString() {
+		return "GradationExhibitionDTO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
+				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
+				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
+				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
+				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
+				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
+				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath
+				+ ", gradationExhibitionId=" + gradationExhibitionId + ", artId=" + artId + ", artTitle=" + artTitle
+				+ ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize=" + artSize
+				+ ", artDescription=" + artDescription + ", artDate=" + artDate + ", artStartDate=" + artStartDate
+				+ ", artEndDate=" + artEndDate + ", userId=" + userId + ", artImgName=" + artImgName + ", artImgPath="
+				+ artImgPath + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
+				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GradationExhibitionDTO other = (GradationExhibitionDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 
 }
