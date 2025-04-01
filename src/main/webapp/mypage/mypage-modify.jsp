@@ -21,10 +21,9 @@
 			<div id="content-wrap">
 				<h2 id="title">회원정보</h2>
 				<div id="my-infomation-container">
-					<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">gradation123</span></div>
+					<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">${userIdentification}</span></div>
 					<div class="user-info" id="">
 						<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" value="${userNickname}"></div>
-						<button class="input-button">중복체크</button>
 					</div>
 					<div class="warning-area">
 					</div>
@@ -35,7 +34,6 @@
 					</div>
 					<div class="user-info" id="">
 						<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" value="${userPhone}"></div>
-						<button class="input-button">휴대폰 인증</button>
 					</div>
 					<div class="warning-area">
 					</div>
@@ -46,7 +44,7 @@
 					<div class="warning-area">
 					</div>
 					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userId}"></div>
+						<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userCode}"></div>
 						<button class="input-button">인증번호 확인</button>
 					</div>
 					<div class="warning-area">
@@ -65,6 +63,7 @@
 				</div>
 				<div class="button-wrapper">
 					<button id="modify-button" type="button">저장</button>
+					<button id="cancel-button" type="button">취소</button>
 				</div>
 			</div>
 		</div>

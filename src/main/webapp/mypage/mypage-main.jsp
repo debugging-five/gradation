@@ -27,7 +27,7 @@
 					<div class="user-info" id=""><h5 class="user-info-title4">전화번호</h5><span class="span-h7">${userPhone}</span></div>
 					<div class="user-info" id=""><h5 class="user-info-title3">이메일</h5><span class="span-h7">${userEmail}</span></div>
 					<div class="user-info" id=""><h5 class="user-info-title2">주소</h5><span class="span-h7">${userAddress}</span></div>
-					<div class="user-info" id=""><h5 class="user-info-title4">우편번호</h5><span class="span-h7">${userPostalCode}</span></div>
+					<div class="user-info" id=""><h5 class="user-info-title4">상세주소</h5><span class="span-h7">${userDetailAddress}</span></div>
 					<div class="user-info" id=""><h5 class="user-info-title2">학교</h5><span class="span-h7">${universityName}</span></div>
 				</div>
 				<div class="button-wrapper">

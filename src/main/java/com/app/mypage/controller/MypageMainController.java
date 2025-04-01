@@ -34,13 +34,13 @@ public class MypageMainController implements Action{
 		}
 		
 		userVO = userDAO.selectUserByEmail(userEmail);
-			req.setAttribute("userIdentification", userVO.getUserIdentification());
-			req.setAttribute("userNickname", userVO.getUserNickname() == null ? "미등록": userVO.getUserNickname());
-			req.setAttribute("userName", userVO.getUserName());
-			req.setAttribute("userPhone", userVO.getUserPhone());
-			req.setAttribute("userEmail", userVO.getUserEmail());
-			req.setAttribute("userAddress", userVO.getUserAddress() == null ? "미등록": userVO.getUserAddress());
-			req.setAttribute("userPostalCode", userVO.getUserPostalCode() == null ? "미등록": userVO.getUserPostalCode());
+		req.setAttribute("userIdentification", userVO.getUserIdentification());
+		req.setAttribute("userNickname", userVO.getUserNickname() == null ? "미등록": userVO.getUserNickname());
+		req.setAttribute("userName", userVO.getUserName());
+		req.setAttribute("userPhone", userVO.getUserPhone());
+		req.setAttribute("userEmail", userVO.getUserEmail());
+		req.setAttribute("userAddress", userVO.getUserAddress() == null ? "미등록": userVO.getUserAddress());
+		req.setAttribute("userDetailAddress", userVO.getUserDetailAddress() == null ? "미등록": userVO.getUserDetailAddress());
 		
 		if (userVO.getMajorId() == null) {
 			req.setAttribute("universityName", "미등록");

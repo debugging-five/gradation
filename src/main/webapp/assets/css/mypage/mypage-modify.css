@@ -104,6 +104,17 @@ input{
 	border-radius: 3px;
 	border: none;
 }
+#cancel-button {
+	width: 125px;
+	height: 50px;
+	margin: 63px 20px 200px auto;
+	font-family: var(--font-family-Pretendard-Regular);
+	font-size: var(--font-size-h5);
+	color: var(--color-primary);
+	background-color: var(--color-gray100);
+	border-radius: 3px;
+	border: solid 1px var(--color-primary);
+}
 
 .input-button {
 	width: 125px;

@@ -1,8 +1,13 @@
 
 const modifyButton = document.querySelector("#modify-button");
+const cancelButton = document.querySelector("#cancel-button");
 
 modifyButton.addEventListener('click', () => {
 	alert("회원정보 수정이 완료되었습니다.");
+	location.href='mypage-main.mypage';
+})
+
+cancelButton.addEventListener('click', () => {
 	location.href='mypage-main.mypage';
 })
 
