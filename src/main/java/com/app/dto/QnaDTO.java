@@ -48,6 +48,8 @@ public class QnaDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
+	private String userWriterStatus;
+	private String userUniversityStatus;
 	
 	public QnaDTO() {;}
 
@@ -58,7 +60,7 @@ public class QnaDTO {
 			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
 			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
 			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath) {
+			String userMajorImgName, String userMajorImgPath, String userWriterStatus, String userUniversityStatus) {
 		this.id = id;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
@@ -98,6 +100,8 @@ public class QnaDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
+		this.userWriterStatus = userWriterStatus;
+		this.userUniversityStatus = userUniversityStatus;
 	}
 
 	public Long getId() {
@@ -412,6 +416,22 @@ public class QnaDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
+	public String getUserWriterStatus() {
+		return userWriterStatus;
+	}
+
+	public void setUserWriterStatus(String userWriterStatus) {
+		this.userWriterStatus = userWriterStatus;
+	}
+
+	public String getUserUniversityStatus() {
+		return userUniversityStatus;
+	}
+
+	public void setUserUniversityStatus(String userUniversityStatus) {
+		this.userUniversityStatus = userUniversityStatus;
+	}
+
 	@Override
 	public String toString() {
 		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
@@ -427,7 +447,8 @@ public class QnaDTO {
 				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + "]";
+				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
+				+ userUniversityStatus + "]";
 	}
 
 	@Override
@@ -446,4 +467,5 @@ public class QnaDTO {
 		QnaDTO other = (QnaDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+
 }

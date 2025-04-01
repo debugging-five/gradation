@@ -27,7 +27,7 @@ public class MypageContactArtistWriteOkController implements Action {
 		mailDTO.setMailContents(req.getParameter("mailContents"));
 		
 //		mypageDAO.insert(mailDTO);
-		auctionDAO.in(mailDTO);
+//		auctionDAO.;
 		
 		result.setRedirect(true);
 		result.setPath("mypage-contact-artist-list.mypage");

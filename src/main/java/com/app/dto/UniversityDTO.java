@@ -25,6 +25,7 @@ public class UniversityDTO {
 	private String universityExhibitionTitle;
 	private String universityExhibitionLocation;
 	private Long majorId;
+	private String universityExhibitionStatus;
 	
 //	UniversityExhibitionImgVO
 	private String universityExhibitionImgName;
@@ -37,7 +38,8 @@ public class UniversityDTO {
 			String universityLogoImgPath, String universityHomepage, Long universityId, Long userId,
 			Timestamp universityLikeTime, Date universityExhibitionDate, String universityExhibitionState,
 			String universityExhibitionTitle, String universityExhibitionLocation, Long majorId,
-			String universityExhibitionImgName, String universityExhibitionImgPath, Long universityExhibitionId) {
+			String universityExhibitionStatus, String universityExhibitionImgName, String universityExhibitionImgPath,
+			Long universityExhibitionId) {
 		this.id = id;
 		this.universityName = universityName;
 		this.universityLocation = universityLocation;
@@ -52,39 +54,10 @@ public class UniversityDTO {
 		this.universityExhibitionTitle = universityExhibitionTitle;
 		this.universityExhibitionLocation = universityExhibitionLocation;
 		this.majorId = majorId;
+		this.universityExhibitionStatus = universityExhibitionStatus;
 		this.universityExhibitionImgName = universityExhibitionImgName;
 		this.universityExhibitionImgPath = universityExhibitionImgPath;
 		this.universityExhibitionId = universityExhibitionId;
-	}
-
-	@Override
-	public String toString() {
-		return "UniversityDTO [id=" + id + ", universityName=" + universityName + ", universityLocation="
-				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
-				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + ", universityId="
-				+ universityId + ", userId=" + userId + ", universityLikeTime=" + universityLikeTime
-				+ ", universityExhibitionDate=" + universityExhibitionDate + ", universityExhibitionState="
-				+ universityExhibitionState + ", universityExhibitionTitle=" + universityExhibitionTitle
-				+ ", universityExhibitionLocation=" + universityExhibitionLocation + ", majorId=" + majorId
-				+ ", universityExhibitionImgName=" + universityExhibitionImgName + ", universityExhibitionImgPath="
-				+ universityExhibitionImgPath + ", universityExhibitionId=" + universityExhibitionId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UniversityDTO other = (UniversityDTO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -199,6 +172,14 @@ public class UniversityDTO {
 		this.majorId = majorId;
 	}
 
+	public String getUniversityExhibitionStatus() {
+		return universityExhibitionStatus;
+	}
+
+	public void setUniversityExhibitionStatus(String universityExhibitionStatus) {
+		this.universityExhibitionStatus = universityExhibitionStatus;
+	}
+
 	public String getUniversityExhibitionImgName() {
 		return universityExhibitionImgName;
 	}
@@ -222,5 +203,36 @@ public class UniversityDTO {
 	public void setUniversityExhibitionId(Long universityExhibitionId) {
 		this.universityExhibitionId = universityExhibitionId;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "UniversityDTO [id=" + id + ", universityName=" + universityName + ", universityLocation="
+				+ universityLocation + ", universityLogoImgName=" + universityLogoImgName + ", universityLogoImgPath="
+				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + ", universityId="
+				+ universityId + ", userId=" + userId + ", universityLikeTime=" + universityLikeTime
+				+ ", universityExhibitionDate=" + universityExhibitionDate + ", universityExhibitionState="
+				+ universityExhibitionState + ", universityExhibitionTitle=" + universityExhibitionTitle
+				+ ", universityExhibitionLocation=" + universityExhibitionLocation + ", majorId=" + majorId
+				+ ", universityExhibitionStatus=" + universityExhibitionStatus + ", universityExhibitionImgName="
+				+ universityExhibitionImgName + ", universityExhibitionImgPath=" + universityExhibitionImgPath
+				+ ", universityExhibitionId=" + universityExhibitionId + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UniversityDTO other = (UniversityDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }
