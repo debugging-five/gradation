@@ -3,7 +3,17 @@ package com.app.dto;
 import java.sql.Date;
 import java.util.Objects;
 
-public class DisplayMainDTO {
+public class ArtDTO {
+    // TBL_ART
+	private Long artId;
+    private String artTitle;
+    private String artCategory;
+    private String artMaterial;
+    private String artSize;
+    private String artDescription;
+    private Date artDate;
+    private Date artStartDate;
+    private Date artEndDate;
 
 //	TBL_USER
 	private Long id; // Pk
@@ -35,33 +45,32 @@ public class DisplayMainDTO {
 	private Long majorId;
 	private String userMajorImgName;
 	private String userMajorImgPath;
-	
-//	TBL_ART
-	private Long artId;
-	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
-	private String artSize;
-	private String artDescription;
-	private Date artDate;
-	private Date artStartDate;
-	private Date artEndDate;
-	
-//	TBL_ART_IMAGE
-	private Long artImageId;	
-	private String artImgName;
-	private String artImgPath;
-	
-	public DisplayMainDTO() {;}
 
-	public DisplayMainDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
-			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
-			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
-			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
-			Long majorId, String userMajorImgName, String userMajorImgPath, Long artId, String artTitle,
-			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
-			Date artStartDate, Date artEndDate, Long artImageId, String artImgName, String artImgPath) {
+//	TBL_ART_IMG
+    private Long artImgId;
+    private String artImgName;
+    private String artImgPath;
+    
+    public ArtDTO() {;}
+
+	public ArtDTO(Long artId, String artTitle, String artCategory, String artMaterial, String artSize,
+			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long id, String userImgName,
+			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
+			String userPhone, String userNickname, String userAddress, String userDetailAddress, String userPostalCode,
+			int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce, String userRecode,
+			String userInstagram, String userYoutube, String userBlog, String userKakao, String userGoogle,
+			String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId, String userMajorImgName,
+			String userMajorImgPath, Long artImgId, String artImgName, String artImgPath) {
+		super();
+		this.artId = artId;
+		this.artTitle = artTitle;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
+		this.artSize = artSize;
+		this.artDescription = artDescription;
+		this.artDate = artDate;
+		this.artStartDate = artStartDate;
+		this.artEndDate = artEndDate;
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -91,18 +100,81 @@ public class DisplayMainDTO {
 		this.majorId = majorId;
 		this.userMajorImgName = userMajorImgName;
 		this.userMajorImgPath = userMajorImgPath;
-		this.artId = artId;
-		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
-		this.artSize = artSize;
-		this.artDescription = artDescription;
-		this.artDate = artDate;
-		this.artStartDate = artStartDate;
-		this.artEndDate = artEndDate;
-		this.artImageId = artImageId;
+		this.artImgId = artImgId;
 		this.artImgName = artImgName;
 		this.artImgPath = artImgPath;
+	}
+
+	public Long getArtId() {
+		return artId;
+	}
+
+	public void setArtId(Long artId) {
+		this.artId = artId;
+	}
+
+	public String getArtTitle() {
+		return artTitle;
+	}
+
+	public void setArtTitle(String artTitle) {
+		this.artTitle = artTitle;
+	}
+
+	public String getArtCategory() {
+		return artCategory;
+	}
+
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
+	}
+
+	public String getArtMaterial() {
+		return artMaterial;
+	}
+
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
+	}
+
+	public String getArtSize() {
+		return artSize;
+	}
+
+	public void setArtSize(String artSize) {
+		this.artSize = artSize;
+	}
+
+	public String getArtDescription() {
+		return artDescription;
+	}
+
+	public void setArtDescription(String artDescription) {
+		this.artDescription = artDescription;
+	}
+
+	public Date getArtDate() {
+		return artDate;
+	}
+
+	public void setArtDate(Date artDate) {
+		this.artDate = artDate;
+	}
+
+	public Date getArtStartDate() {
+		return artStartDate;
+	}
+
+	public void setArtStartDate(Date artStartDate) {
+		this.artStartDate = artStartDate;
+	}
+
+	public Date getArtEndDate() {
+		return artEndDate;
+	}
+
+	public void setArtEndDate(Date artEndDate) {
+		this.artEndDate = artEndDate;
 	}
 
 	public Long getId() {
@@ -337,84 +409,12 @@ public class DisplayMainDTO {
 		this.userMajorImgPath = userMajorImgPath;
 	}
 
-	public Long getArtId() {
-		return artId;
+	public Long getArtImgId() {
+		return artImgId;
 	}
 
-	public void setArtId(Long artId) {
-		this.artId = artId;
-	}
-
-	public String getArtTitle() {
-		return artTitle;
-	}
-
-	public void setArtTitle(String artTitle) {
-		this.artTitle = artTitle;
-	}
-
-	public String getArtCategoty() {
-		return artCategoty;
-	}
-
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
-	}
-
-	public String getArtMeterial() {
-		return artMeterial;
-	}
-
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
-	}
-
-	public String getArtSize() {
-		return artSize;
-	}
-
-	public void setArtSize(String artSize) {
-		this.artSize = artSize;
-	}
-
-	public String getArtDescription() {
-		return artDescription;
-	}
-
-	public void setArtDescription(String artDescription) {
-		this.artDescription = artDescription;
-	}
-
-	public Date getArtDate() {
-		return artDate;
-	}
-
-	public void setArtDate(Date artDate) {
-		this.artDate = artDate;
-	}
-
-	public Date getArtStartDate() {
-		return artStartDate;
-	}
-
-	public void setArtStartDate(Date artStartDate) {
-		this.artStartDate = artStartDate;
-	}
-
-	public Date getArtEndDate() {
-		return artEndDate;
-	}
-
-	public void setArtEndDate(Date artEndDate) {
-		this.artEndDate = artEndDate;
-	}
-
-	public Long getArtImageId() {
-		return artImageId;
-	}
-
-	public void setArtImageId(Long artImageId) {
-		this.artImageId = artImageId;
+	public void setArtImgId(Long artImgId) {
+		this.artImgId = artImgId;
 	}
 
 	public String getArtImgName() {
@@ -435,20 +435,20 @@ public class DisplayMainDTO {
 
 	@Override
 	public String toString() {
-		return "DisplayMainDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
-				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", artId=" + artId + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
-				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
-				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
-				+ ", artImageId=" + artImageId + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + "]";
+		return "ArtDTO [artId=" + artId + ", artTitle=" + artTitle + ", artCategory=" + artCategory + ", artMaterial="
+				+ artMaterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", id=" + id + ", userImgName="
+				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
+				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userDetailAddress="
+				+ userDetailAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", artImgId=" + artImgId + ", artImgName=" + artImgName
+				+ ", artImgPath=" + artImgPath + "]";
 	}
 
 	@Override
@@ -464,8 +464,9 @@ public class DisplayMainDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		DisplayMainDTO other = (DisplayMainDTO) obj;
+		ArtDTO other = (ArtDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-
+    
+    
 }
