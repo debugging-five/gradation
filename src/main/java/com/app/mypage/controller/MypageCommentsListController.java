@@ -15,6 +15,7 @@ public class MypageCommentsListController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		result.setPath("mypage-comments-list.jsp");
+		
 		return result;
 	}
 
