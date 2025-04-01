@@ -1,7 +1,8 @@
 package com.app.dao;
- 
- import org.apache.ibatis.session.SqlSession;
 
+import org.apache.ibatis.session.SqlSession;
+
+import com.app.dto.MajorDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.UserVO;
  
@@ -61,6 +62,20 @@ import com.app.vo.UserVO;
 // 	비밀번호 변경
  	public void changePassword(UserVO userVO) {
  		sqlSession.update("user.changePassword", userVO);
+ 	}
+ 	
+// 	유저 조회
+ 	public UserVO selectUserByEmail(String userEmail) {
+ 		return sqlSession.selectOne("user.selectUserByEmail", userEmail);
+ 	}
+ 	
+ 	public MajorDTO selectMajorDTOByEmail(String userEmail) {
+ 		return sqlSession.selectOne("user.selectMajorDTOByEmail", userEmail);
+ 	}
+ 	
+// 	회원정보 수정
+ 	public void updateUser(UserVO userVO) {
+ 		sqlSession.update("user.updateUser", userVO);
  	}
  	
  }

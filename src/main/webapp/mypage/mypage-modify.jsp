@@ -19,53 +19,59 @@
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
-				<h2 id="title">회원정보</h2>
-				<div id="my-infomation-container">
-					<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">gradation123</span></div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" value="${userNickname}"></div>
-						<button class="input-button">중복체크</button>
+				<form action="mypage-modify-ok.mypage" method="post">
+					<h2 id="title">회원정보</h2>
+					<div id="my-infomation-container">
+						<input type="hidden" id="mail-code" value="${sessionScope.mailCode}">
+						<input type="hidden" id="user-prev-email" value="${sessionScope.loginUser}">
+						<input type="hidden" id="user-identification" name="userIdentification" value="${userIdentification}">
+						<div class="user-info-first" id=""><h5>아이디</h5><span class="id-bar">|</span><span class="span-h7">${userIdentification}</span></div>
+						<div class="user-info">
+							<div class="user-info-input"><h5 class="user-info-title3">닉네임</h5><input type="text" id="user-nickname" name="userNickname" value="${userNickname}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title2">이름</h5><input type="text" id="user-name" name="userName" value="${userName}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" id="user-phone" name="userPhone" value="${userPhone}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title3">이메일</h5><input type="text" id="user-email" name="userEmail" value="${userEmail}"></div>
+							<button class="input-button" id="email-send-button" type="button">이메일 인증</button>
+						</div>
+						<div class="warning-area">
+							<span class="warning-message" id="need-email-check">변경된 이메일을 인증해주세요</span>
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" id="user-code" name="userCode" value="${userCode}"></div>
+							<button class="input-button" id="code-check-button" type="button">인증번호 확인</button>
+						</div>
+						<div class="warning-area">
+							<span class="warning-message" id="need-code-check">인증번호가 다릅니다</span>
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" name="userAddress" value="${userAddress}" readonly/></div>
+							<button class="input-button" onclick="execDaumPostcode()" type="button">주소 검색</button>
+						</div>
+						<div class="warning-area">
+						</div>
+						<div class="user-info" id="">
+							<div class="user-info-input"><h5 class="user-info-title4">상세주소</h5><input type="text" id="user-detail-address" name="userDetailAddress" value="${userDetailAddress}"></div>
+						</div>
+						<div class="warning-area">
+						</div>
 					</div>
-					<div class="warning-area">
+					<div class="button-wrapper">
+						<button id="modify-button" type="button">저장</button>
+						<button id="cancel-button" type="button">취소</button>
 					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title2">이름</h5><input type="text" value="${userName}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">전화번호</h5><input type="text" value="${userPhone}"></div>
-						<button class="input-button">휴대폰 인증</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title3">이메일</h5><input type="text" value="${userEmail}"></div>
-						<button class="input-button">이메일 인증</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">인증번호</h5><input type="text" value="${userId}"></div>
-						<button class="input-button">인증번호 확인</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title2">주소</h5><input id="address" type="text" value="${userAddress}" readonly/></div>
-						<button class="input-button" onclick="execDaumPostcode()" >주소 검색</button>
-					</div>
-					<div class="warning-area">
-					</div>
-					<div class="user-info" id="">
-						<div class="user-info-input"><h5 class="user-info-title4">상세주소</h5><input type="text" value="${userDetailAddress}"></div>
-					</div>
-					<div class="warning-area">
-					</div>
-				</div>
-				<div class="button-wrapper">
-					<button id="modify-button" type="button">저장</button>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
