@@ -31,11 +31,9 @@ public class UserIdCheckController implements Action {
 		if(userDAO.idCheck(userId) == 1){
 //			아이디가 있을 때
 			session.setAttribute("checkId", "already");
-			System.out.println("있어");
 		}else {
 //			아이디가 없을 때
 			session.setAttribute("checkId", true);
-			System.out.println("없어");
 		}
 		
 		session.setAttribute("userId", userId);
