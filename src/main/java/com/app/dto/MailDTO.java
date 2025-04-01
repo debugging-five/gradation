@@ -15,7 +15,8 @@ public class MailDTO {
 	private String sUserPassword;           
 	private String sUserPhone;              
 	private String sUserNickname;           
-	private String sUserAddress;            
+	private String sUserAddress;   
+	private String sUserDetailAddress;
 	private String sUserPostalCode;         
 	private int sUserSnsOk;                 
 	private int sUserMailOk;                
@@ -45,7 +46,8 @@ public class MailDTO {
 	private String rUserPassword;           
 	private String rUserPhone;              
 	private String rUserNickname;           
-	private String rUserAddress;            
+	private String rUserAddress;     
+	private String rUserDetailAddress;
 	private String rUserPostalCode;         
 	private int rUserSnsOk;                 
 	private int rUserMailOk;                
@@ -77,17 +79,18 @@ public class MailDTO {
 
 	public MailDTO(Long id, Long sId, String sUserImgName, String sUserImgPath, String sUserName, String sUserEmail,
 			String sUserIdentification, String sUserPassword, String sUserPhone, String sUserNickname,
-			String sUserAddress, String sUserPostalCode, int sUserSnsOk, int sUserMailOk, int sUserAgreementOk,
-			String sUserIntroduce, String sUserRecode, String sUserInstagram, String sUserYoutube, String sUserBlog,
-			String sUserKakao, String sUserGoogle, String sUserNaver, int sUserWriterOk, int sUserAdminOk,
-			int sUserBanOk, Long smajorId, String suserMajorImgName, String suserMajorImgPath, Long rId,
-			String rUserImgName, String rUserImgPath, String rUserName, String rUserEmail, String rUserIdentification,
-			String rUserPassword, String rUserPhone, String rUserNickname, String rUserAddress, String rUserPostalCode,
-			int rUserSnsOk, int rUserMailOk, int rUserAgreementOk, String rUserIntroduce, String rUserRecode,
-			String rUserInstagram, String rUserYoutube, String rUserBlog, String rUserKakao, String rUserGoogle,
-			String rUserNaver, int rUserWriterOk, int rUserAdminOk, int rUserBanOk, Long rmajorId,
-			String ruserMajorImgName, String ruserMajorImgPath, String mailTitle, String mailContents,
-			Timestamp mailSendTime, int mailOpenOk, Long sendUserId, Long receiveUserId) {
+			String sUserAddress, String sUserDetailAddress, String sUserPostalCode, int sUserSnsOk, int sUserMailOk,
+			int sUserAgreementOk, String sUserIntroduce, String sUserRecode, String sUserInstagram, String sUserYoutube,
+			String sUserBlog, String sUserKakao, String sUserGoogle, String sUserNaver, int sUserWriterOk,
+			int sUserAdminOk, int sUserBanOk, Long smajorId, String suserMajorImgName, String suserMajorImgPath,
+			Long rId, String rUserImgName, String rUserImgPath, String rUserName, String rUserEmail,
+			String rUserIdentification, String rUserPassword, String rUserPhone, String rUserNickname,
+			String rUserAddress, String rUserDetailAddress, String rUserPostalCode, int rUserSnsOk, int rUserMailOk,
+			int rUserAgreementOk, String rUserIntroduce, String rUserRecode, String rUserInstagram, String rUserYoutube,
+			String rUserBlog, String rUserKakao, String rUserGoogle, String rUserNaver, int rUserWriterOk,
+			int rUserAdminOk, int rUserBanOk, Long rmajorId, String ruserMajorImgName, String ruserMajorImgPath,
+			String mailTitle, String mailContents, Timestamp mailSendTime, int mailOpenOk, Long sendUserId,
+			Long receiveUserId) {
 		Id = id;
 		this.sId = sId;
 		this.sUserImgName = sUserImgName;
@@ -99,6 +102,7 @@ public class MailDTO {
 		this.sUserPhone = sUserPhone;
 		this.sUserNickname = sUserNickname;
 		this.sUserAddress = sUserAddress;
+		this.sUserDetailAddress = sUserDetailAddress;
 		this.sUserPostalCode = sUserPostalCode;
 		this.sUserSnsOk = sUserSnsOk;
 		this.sUserMailOk = sUserMailOk;
@@ -127,6 +131,7 @@ public class MailDTO {
 		this.rUserPhone = rUserPhone;
 		this.rUserNickname = rUserNickname;
 		this.rUserAddress = rUserAddress;
+		this.rUserDetailAddress = rUserDetailAddress;
 		this.rUserPostalCode = rUserPostalCode;
 		this.rUserSnsOk = rUserSnsOk;
 		this.rUserMailOk = rUserMailOk;
@@ -151,50 +156,6 @@ public class MailDTO {
 		this.mailOpenOk = mailOpenOk;
 		this.sendUserId = sendUserId;
 		this.receiveUserId = receiveUserId;
-	}
-
-	@Override
-	public String toString() {
-		return "MailDTO [Id=" + Id + ", sId=" + sId + ", sUserImgName=" + sUserImgName + ", sUserImgPath="
-				+ sUserImgPath + ", sUserName=" + sUserName + ", sUserEmail=" + sUserEmail + ", sUserIdentification="
-				+ sUserIdentification + ", sUserPassword=" + sUserPassword + ", sUserPhone=" + sUserPhone
-				+ ", sUserNickname=" + sUserNickname + ", sUserAddress=" + sUserAddress + ", sUserPostalCode="
-				+ sUserPostalCode + ", sUserSnsOk=" + sUserSnsOk + ", sUserMailOk=" + sUserMailOk
-				+ ", sUserAgreementOk=" + sUserAgreementOk + ", sUserIntroduce=" + sUserIntroduce + ", sUserRecode="
-				+ sUserRecode + ", sUserInstagram=" + sUserInstagram + ", sUserYoutube=" + sUserYoutube + ", sUserBlog="
-				+ sUserBlog + ", sUserKakao=" + sUserKakao + ", sUserGoogle=" + sUserGoogle + ", sUserNaver="
-				+ sUserNaver + ", sUserWriterOk=" + sUserWriterOk + ", sUserAdminOk=" + sUserAdminOk + ", sUserBanOk="
-				+ sUserBanOk + ", smajorId=" + smajorId + ", suserMajorImgName=" + suserMajorImgName
-				+ ", suserMajorImgPath=" + suserMajorImgPath + ", rId=" + rId + ", rUserImgName=" + rUserImgName
-				+ ", rUserImgPath=" + rUserImgPath + ", rUserName=" + rUserName + ", rUserEmail=" + rUserEmail
-				+ ", rUserIdentification=" + rUserIdentification + ", rUserPassword=" + rUserPassword + ", rUserPhone="
-				+ rUserPhone + ", rUserNickname=" + rUserNickname + ", rUserAddress=" + rUserAddress
-				+ ", rUserPostalCode=" + rUserPostalCode + ", rUserSnsOk=" + rUserSnsOk + ", rUserMailOk=" + rUserMailOk
-				+ ", rUserAgreementOk=" + rUserAgreementOk + ", rUserIntroduce=" + rUserIntroduce + ", rUserRecode="
-				+ rUserRecode + ", rUserInstagram=" + rUserInstagram + ", rUserYoutube=" + rUserYoutube + ", rUserBlog="
-				+ rUserBlog + ", rUserKakao=" + rUserKakao + ", rUserGoogle=" + rUserGoogle + ", rUserNaver="
-				+ rUserNaver + ", rUserWriterOk=" + rUserWriterOk + ", rUserAdminOk=" + rUserAdminOk + ", rUserBanOk="
-				+ rUserBanOk + ", rmajorId=" + rmajorId + ", ruserMajorImgName=" + ruserMajorImgName
-				+ ", ruserMajorImgPath=" + ruserMajorImgPath + ", mailTitle=" + mailTitle + ", mailContents="
-				+ mailContents + ", mailSendTime=" + mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId="
-				+ sendUserId + ", receiveUserId=" + receiveUserId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(Id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MailDTO other = (MailDTO) obj;
-		return Objects.equals(Id, other.Id);
 	}
 
 	public Long getId() {
@@ -283,6 +244,14 @@ public class MailDTO {
 
 	public void setsUserAddress(String sUserAddress) {
 		this.sUserAddress = sUserAddress;
+	}
+
+	public String getsUserDetailAddress() {
+		return sUserDetailAddress;
+	}
+
+	public void setsUserDetailAddress(String sUserDetailAddress) {
+		this.sUserDetailAddress = sUserDetailAddress;
 	}
 
 	public String getsUserPostalCode() {
@@ -509,6 +478,14 @@ public class MailDTO {
 		this.rUserAddress = rUserAddress;
 	}
 
+	public String getrUserDetailAddress() {
+		return rUserDetailAddress;
+	}
+
+	public void setrUserDetailAddress(String rUserDetailAddress) {
+		this.rUserDetailAddress = rUserDetailAddress;
+	}
+
 	public String getrUserPostalCode() {
 		return rUserPostalCode;
 	}
@@ -700,5 +677,50 @@ public class MailDTO {
 	public void setReceiveUserId(Long receiveUserId) {
 		this.receiveUserId = receiveUserId;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "MailDTO [Id=" + Id + ", sId=" + sId + ", sUserImgName=" + sUserImgName + ", sUserImgPath="
+				+ sUserImgPath + ", sUserName=" + sUserName + ", sUserEmail=" + sUserEmail + ", sUserIdentification="
+				+ sUserIdentification + ", sUserPassword=" + sUserPassword + ", sUserPhone=" + sUserPhone
+				+ ", sUserNickname=" + sUserNickname + ", sUserAddress=" + sUserAddress + ", sUserDetailAddress="
+				+ sUserDetailAddress + ", sUserPostalCode=" + sUserPostalCode + ", sUserSnsOk=" + sUserSnsOk
+				+ ", sUserMailOk=" + sUserMailOk + ", sUserAgreementOk=" + sUserAgreementOk + ", sUserIntroduce="
+				+ sUserIntroduce + ", sUserRecode=" + sUserRecode + ", sUserInstagram=" + sUserInstagram
+				+ ", sUserYoutube=" + sUserYoutube + ", sUserBlog=" + sUserBlog + ", sUserKakao=" + sUserKakao
+				+ ", sUserGoogle=" + sUserGoogle + ", sUserNaver=" + sUserNaver + ", sUserWriterOk=" + sUserWriterOk
+				+ ", sUserAdminOk=" + sUserAdminOk + ", sUserBanOk=" + sUserBanOk + ", smajorId=" + smajorId
+				+ ", suserMajorImgName=" + suserMajorImgName + ", suserMajorImgPath=" + suserMajorImgPath + ", rId="
+				+ rId + ", rUserImgName=" + rUserImgName + ", rUserImgPath=" + rUserImgPath + ", rUserName=" + rUserName
+				+ ", rUserEmail=" + rUserEmail + ", rUserIdentification=" + rUserIdentification + ", rUserPassword="
+				+ rUserPassword + ", rUserPhone=" + rUserPhone + ", rUserNickname=" + rUserNickname + ", rUserAddress="
+				+ rUserAddress + ", rUserDetailAddress=" + rUserDetailAddress + ", rUserPostalCode=" + rUserPostalCode
+				+ ", rUserSnsOk=" + rUserSnsOk + ", rUserMailOk=" + rUserMailOk + ", rUserAgreementOk="
+				+ rUserAgreementOk + ", rUserIntroduce=" + rUserIntroduce + ", rUserRecode=" + rUserRecode
+				+ ", rUserInstagram=" + rUserInstagram + ", rUserYoutube=" + rUserYoutube + ", rUserBlog=" + rUserBlog
+				+ ", rUserKakao=" + rUserKakao + ", rUserGoogle=" + rUserGoogle + ", rUserNaver=" + rUserNaver
+				+ ", rUserWriterOk=" + rUserWriterOk + ", rUserAdminOk=" + rUserAdminOk + ", rUserBanOk=" + rUserBanOk
+				+ ", rmajorId=" + rmajorId + ", ruserMajorImgName=" + ruserMajorImgName + ", ruserMajorImgPath="
+				+ ruserMajorImgPath + ", mailTitle=" + mailTitle + ", mailContents=" + mailContents + ", mailSendTime="
+				+ mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId=" + sendUserId + ", receiveUserId="
+				+ receiveUserId + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(Id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MailDTO other = (MailDTO) obj;
+		return Objects.equals(Id, other.Id);
+	}
+
 }

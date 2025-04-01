@@ -15,6 +15,7 @@ public class BanDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -43,11 +44,11 @@ public class BanDTO {
 
 	public BanDTO(Long id, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate, Long userId) {
-		super();
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, String banReason, Timestamp banDate,
+			Long userId) {
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -58,6 +59,7 @@ public class BanDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -159,6 +161,14 @@ public class BanDTO {
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
+	}
+
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
 	}
 
 	public String getUserPostalCode() {
@@ -334,14 +344,14 @@ public class BanDTO {
 		return "BanDTO [id=" + id + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
 				+ userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
 				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
-				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
-				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
-				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
-				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
-				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
-				+ ", userMajorImgPath=" + userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate
-				+ ", userId=" + userId + "]";
+				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
+				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
+				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
+				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
+				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
+				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
+				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", banReason=" + banReason + ", banDate=" + banDate + ", userId=" + userId + "]";
 	}
 
 	@Override
@@ -360,20 +370,8 @@ public class BanDTO {
 		BanDTO other = (BanDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

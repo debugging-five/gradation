@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypageCommentsListController implements Action {
+public class MypageContactArtistWriteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-comments-list.jsp");
-		
+		result.setPath("mypage-contact-artist-write.jsp");
 		return result;
 	}
 
 }
-

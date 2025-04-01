@@ -19,11 +19,10 @@
 				<p>양식을 제출하시겠습니까?</p>
 			</div>
 			
-			<div id="button-wrapper">
-				<button id="cancel-button2">취소</button>
-				<button id="ok-button2">확인</button>
+			<div id="alert-button-wrapper">
+				<button id="alert-cancel-button">취소</button>
+				<button id="alert-ok-button">확인</button>
 			</div>
-			
 		</div>
 	</div>
 

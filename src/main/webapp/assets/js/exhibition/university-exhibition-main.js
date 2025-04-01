@@ -7,7 +7,7 @@ const registerButton = document.getElementById("register-button");
 
 // 마이페이지 문의하기 페이지로 이동
 inquiryButton.addEventListener("click", () => {
-	location.href = "../mypage/mypage-service-center-send-qna.mypage";
+	location.href = "../mypage/mypage-service-center-qna-send.mypage";
 })
 
 // 대학교 등록 신청 양식 페이지로 이동
