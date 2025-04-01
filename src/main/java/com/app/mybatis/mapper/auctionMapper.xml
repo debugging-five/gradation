@@ -39,5 +39,16 @@
 		DELETE FROM TBL_AUCTION
 		WHERE ID = #{id}
 	</delete>
+	
+	<select id="selectMail" parameterType="Long" resultType="MailDTO">
+		SELECT 
+			TBS.USER_NAME, TBM.MAIL_TITLE, TBM.MAIL_CONTENTS, TBM.MAIL_SEND_TIME
+		FROM TBL_MAIL TBM
+		JOIN TBL_USER TBS
+		ON TBM.SEND_USER_ID = TBS.ID
+		JOIN TBL_USER TBR
+		ON TBM.RECEIVE_USER_ID = TBR.ID
+		WHERE TBS.ID = #{id};
+	</select>
 
 </mapper>
