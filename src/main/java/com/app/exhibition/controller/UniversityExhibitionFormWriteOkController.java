@@ -12,6 +12,10 @@ import com.app.Action;
 import com.app.Result;
 import com.app.dao.ExhibitionDAO;
 import com.app.dto.MajorDTO;
+import com.app.vo.GradationExhibitionVO;
+import com.app.vo.MajorVO;
+import com.app.vo.UniversityExhibitionVO;
+import com.app.vo.UserVO;
 
 public class UniversityExhibitionFormWriteOkController implements Action {
 
@@ -19,7 +23,7 @@ public class UniversityExhibitionFormWriteOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MajorDTO majorDTO = new MajorDTO();
-		ExhibitionDAO exhibitionDAO = new ExhibitionDAO();
+		
 
 		majorDTO.setUniversityName(req.getParameter("universityName"));
 		majorDTO.setMajorName(req.getParameter("majorName"));
@@ -32,9 +36,9 @@ public class UniversityExhibitionFormWriteOkController implements Action {
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
-		//		majorDTO.setUniversityExhibitionDate(new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("universityExhibitionDate")));
+//		majorDTO.setUniversityExhibitionDate(new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("universityExhibitionDate")));
 		
-//		ExhibitionDAO.insert(majorDTO);
+//		exhibitionDAO.insertUniversityExhibition(majorDTO);
 		
 		result.setRedirect(true);
 		result.setPath("mypage-service-center-qna-list.mypage");

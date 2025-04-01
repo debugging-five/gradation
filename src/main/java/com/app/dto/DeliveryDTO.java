@@ -33,6 +33,7 @@ public class DeliveryDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -75,13 +76,13 @@ public class DeliveryDTO {
 			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, String artImgName,
 			String artImgPath, Long artId, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String deliveryAddress, String deliveryDetailAddress,
-			String deliveryPostalCode, String deliveryState, String deliveryMessage, String deliveryReceiver,
-			String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod, int paymentAmount,
-			Timestamp paymentDate, String paymentCode) {
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, String deliveryAddress,
+			String deliveryDetailAddress, String deliveryPostalCode, String deliveryState, String deliveryMessage,
+			String deliveryReceiver, String deliveryPhone, Long paymentId, Long auctionId, String paymentMethod,
+			int paymentAmount, Timestamp paymentDate, String paymentCode) {
 		this.id = id;
 		this.artTitle = artTitle;
 		this.artCategoty = artCategoty;
@@ -104,6 +105,7 @@ public class DeliveryDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -135,46 +137,6 @@ public class DeliveryDTO {
 		this.paymentAmount = paymentAmount;
 		this.paymentDate = paymentDate;
 		this.paymentCode = paymentCode;
-	}
-
-	@Override
-	public String toString() {
-		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
-				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
-				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgName="
-				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
-				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", deliveryAddress=" + deliveryAddress + ", deliveryDetailAddress="
-				+ deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode + ", deliveryState="
-				+ deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver=" + deliveryReceiver
-				+ ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId=" + auctionId
-				+ ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
-				+ paymentDate + ", paymentCode=" + paymentCode + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		DeliveryDTO other = (DeliveryDTO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -351,6 +313,14 @@ public class DeliveryDTO {
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
+	}
+
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
 	}
 
 	public String getUserPostalCode() {
@@ -600,5 +570,45 @@ public class DeliveryDTO {
 	public void setPaymentCode(String paymentCode) {
 		this.paymentCode = paymentCode;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
+				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
+				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgName="
+				+ userImgName + ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
+				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userDetailAddress="
+				+ userDetailAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", deliveryAddress=" + deliveryAddress
+				+ ", deliveryDetailAddress=" + deliveryDetailAddress + ", deliveryPostalCode=" + deliveryPostalCode
+				+ ", deliveryState=" + deliveryState + ", deliveryMessage=" + deliveryMessage + ", deliveryReceiver="
+				+ deliveryReceiver + ", deliveryPhone=" + deliveryPhone + ", paymentId=" + paymentId + ", auctionId="
+				+ auctionId + ", paymentMethod=" + paymentMethod + ", paymentAmount=" + paymentAmount + ", paymentDate="
+				+ paymentDate + ", paymentCode=" + paymentCode + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DeliveryDTO other = (DeliveryDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }

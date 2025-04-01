@@ -9,6 +9,7 @@
 <title>대학교 전시회 메인</title>
 </head>
 <script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
 <body>
 
 	<%@ include file="../layout/header.jsp" %>
@@ -28,7 +29,6 @@
 		<!-- 카카오맵 api -->
 		<div id="map-wrapper">
 			<div id="map" style="width:500px;height:400px;"></div>
-			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec7072bec49713ff819fb34f956a5fc7"></script>
 			<!-- <script>
 				var container = document.getElementById('map');
 				var options = {

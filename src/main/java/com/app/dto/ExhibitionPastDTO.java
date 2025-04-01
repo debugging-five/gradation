@@ -41,7 +41,6 @@ public class ExhibitionPastDTO {
 			String gradationExhibitionAddressImgPath, Long exhibitionPastArtID, Long artId, String artTitle,
 			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
 			Date artStartDate, Date artEndDate, Long artImgId, String artImgName, String artImgPath) {
-		super();
 		this.id = id;
 		this.gradationExhibitionTitle = gradationExhibitionTitle;
 		this.gradationExhibitionCount = gradationExhibitionCount;

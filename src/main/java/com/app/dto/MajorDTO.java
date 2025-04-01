@@ -35,6 +35,7 @@ public class MajorDTO {
 	private String userPhone;
 	private String userNickname;
 	private String userAddress;
+	private String userDetailAddress;
 	private String userPostalCode;
 	private int userSnsOk;
 	private int userMailOk;
@@ -64,10 +65,11 @@ public class MajorDTO {
 			String universityName, String universityLocation, String universityLogoImgName,
 			String universityLogoImgPath, String universityHomepage, String userImgName, String userImgPath,
 			String userName, String userEmail, String userIdentification, String userPassword, String userPhone,
-			String userNickname, String userAddress, String userPostalCode, int userSnsOk, int userMailOk,
-			int userAgreementOk, String userIntroduce, String userRecode, String userInstagram, String userYoutube,
-			String userBlog, String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk,
-			int userBanOk, String userMajorImgName, String userMajorImgPath, String majorName) {
+			String userNickname, String userAddress, String userDetailAddress, String userPostalCode, int userSnsOk,
+			int userMailOk, int userAgreementOk, String userIntroduce, String userRecode, String userInstagram,
+			String userYoutube, String userBlog, String userKakao, String userGoogle, String userNaver,
+			int userWriterOk, int userAdminOk, int userBanOk, String userMajorImgName, String userMajorImgPath,
+			String majorName) {
 		super();
 		this.id = id;
 		this.universityExhibitionDate = universityExhibitionDate;
@@ -92,6 +94,7 @@ public class MajorDTO {
 		this.userPhone = userPhone;
 		this.userNickname = userNickname;
 		this.userAddress = userAddress;
+		this.userDetailAddress = userDetailAddress;
 		this.userPostalCode = userPostalCode;
 		this.userSnsOk = userSnsOk;
 		this.userMailOk = userMailOk;
@@ -112,6 +115,7 @@ public class MajorDTO {
 		this.majorName = majorName;
 	}
 
+
 	@Override
 	public String toString() {
 		return "MajorDTO [id=" + id + ", universityExhibitionDate=" + universityExhibitionDate
@@ -124,31 +128,14 @@ public class MajorDTO {
 				+ universityLogoImgPath + ", universityHomepage=" + universityHomepage + ", userImgName=" + userImgName
 				+ ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
 				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath=" + userMajorImgPath + ", majorName="
-				+ majorName + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MajorDTO other = (MajorDTO) obj;
-		return Objects.equals(id, other.id);
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userDetailAddress="
+				+ userDetailAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
+				+ userMajorImgPath + ", majorName=" + majorName + "]";
 	}
 
 	public Long getId() {
@@ -335,6 +322,14 @@ public class MajorDTO {
 		this.userAddress = userAddress;
 	}
 
+	public String getUserDetailAddress() {
+		return userDetailAddress;
+	}
+
+	public void setUserDetailAddress(String userDetailAddress) {
+		this.userDetailAddress = userDetailAddress;
+	}
+
 	public String getUserPostalCode() {
 		return userPostalCode;
 	}
@@ -478,4 +473,23 @@ public class MajorDTO {
 	public void setMajorName(String majorName) {
 		this.majorName = majorName;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MajorDTO other = (MajorDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	
 }
