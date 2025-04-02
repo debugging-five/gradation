@@ -9,22 +9,21 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.UserDAO;
 
-public class MypageDeleteIdOkController implements Action {
+public class MypageUniversityCertificationController implements Action{
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
-		String loginUser = (String)session.getAttribute("loginUser");
+		if(session.getAttribute("loginUser") == null) {
+			result.setPath("../login/login-main.user");
+			result.setRedirect(true);
+			return result;
+		}
 		
-		userDAO.deleteUser(loginUser);
-		
-		result.setPath("mypage-delete-id.mypage?complete=true");
-		result.setRedirect(true);
+		result.setPath("mypage-university-certification.jsp");
 		return result;
 	}
-
+	
 }

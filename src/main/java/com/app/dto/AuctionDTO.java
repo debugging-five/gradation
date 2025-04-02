@@ -723,6 +723,8 @@ public class AuctionDTO {
 		AuctionDTO other = (AuctionDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
 
 
 }

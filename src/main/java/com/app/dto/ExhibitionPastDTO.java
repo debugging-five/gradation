@@ -22,8 +22,8 @@ public class ExhibitionPastDTO {
 //	TBL_ART
 	private Long artId;
 	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
+	private String artCategory;
+	private String artMaterial;
 	private String artSize;
 	private String artDescription;
 	private Date artDate;
@@ -35,11 +35,13 @@ public class ExhibitionPastDTO {
 	private String artImgName;
 	private String artImgPath;
 
+	public ExhibitionPastDTO() {;}
+
 	public ExhibitionPastDTO(Long id, String gradationExhibitionTitle, int gradationExhibitionCount,
 			Date gradationExhibitionTime, int gradationExhibitionFee, String gradationExhibitionTel,
 			String gradationExhibitionAddress, Date gradationExhibitionDate, String gradationExhibitionAddressImgName,
 			String gradationExhibitionAddressImgPath, Long exhibitionPastArtID, Long artId, String artTitle,
-			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
+			String artCategory, String artMaterial, String artSize, String artDescription, Date artDate,
 			Date artStartDate, Date artEndDate, Long artImgId, String artImgName, String artImgPath) {
 		this.id = id;
 		this.gradationExhibitionTitle = gradationExhibitionTitle;
@@ -54,8 +56,8 @@ public class ExhibitionPastDTO {
 		this.exhibitionPastArtID = exhibitionPastArtID;
 		this.artId = artId;
 		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
 		this.artSize = artSize;
 		this.artDescription = artDescription;
 		this.artDate = artDate;
@@ -64,21 +66,6 @@ public class ExhibitionPastDTO {
 		this.artImgId = artImgId;
 		this.artImgName = artImgName;
 		this.artImgPath = artImgPath;
-	}
-
-	@Override
-	public String toString() {
-		return "ExhibitionPastDTO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
-				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
-				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
-				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
-				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
-				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
-				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath + ", exhibitionPastArtID="
-				+ exhibitionPastArtID + ", artId=" + artId + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty
-				+ ", artMeterial=" + artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription
-				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
-				+ ", artImgId=" + artImgId + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + "]";
 	}
 
 	public Long getId() {
@@ -185,20 +172,20 @@ public class ExhibitionPastDTO {
 		this.artTitle = artTitle;
 	}
 
-	public String getArtCategoty() {
-		return artCategoty;
+	public String getArtCategory() {
+		return artCategory;
 	}
 
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
 	}
 
-	public String getArtMeterial() {
-		return artMeterial;
+	public String getArtMaterial() {
+		return artMaterial;
 	}
 
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
 	}
 
 	public String getArtSize() {
@@ -266,6 +253,21 @@ public class ExhibitionPastDTO {
 	}
 
 	@Override
+	public String toString() {
+		return "ExhibitionPastDTO [id=" + id + ", gradationExhibitionTitle=" + gradationExhibitionTitle
+				+ ", gradationExhibitionCount=" + gradationExhibitionCount + ", gradationExhibitionTime="
+				+ gradationExhibitionTime + ", gradationExhibitionFee=" + gradationExhibitionFee
+				+ ", gradationExhibitionTel=" + gradationExhibitionTel + ", gradationExhibitionAddress="
+				+ gradationExhibitionAddress + ", gradationExhibitionDate=" + gradationExhibitionDate
+				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
+				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath + ", exhibitionPastArtID="
+				+ exhibitionPastArtID + ", artId=" + artId + ", artTitle=" + artTitle + ", artCategory=" + artCategory
+				+ ", artMaterial=" + artMaterial + ", artSize=" + artSize + ", artDescription=" + artDescription
+				+ ", artDate=" + artDate + ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate
+				+ ", artImgId=" + artImgId + ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + "]";
+	}
+
+	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
@@ -281,5 +283,7 @@ public class ExhibitionPastDTO {
 		ExhibitionPastDTO other = (ExhibitionPastDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
 
 }

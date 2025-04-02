@@ -2,11 +2,17 @@ const deleteButton = document.querySelector("#delete-button");
 const complete = document.querySelector("#complete");
 const backButton = document.querySelector("#back-button");
 const deleted = new URLSearchParams(window.location.search);
+const dontGo = document.querySelector("#dont-go");
 
 const goodBye = document.querySelector("#good-bye")
 
 deleteButton.addEventListener("click", () => {
-	complete.style.display = "block";
+	const checkDisplay = document.querySelector("#check-display");
+	if(checkDisplay.checked == true) {
+		complete.style.display = "block";		
+	}else {
+		dontGo.classList.add("need-write");
+	}
 })
 
 backButton.addEventListener("click", () => {
@@ -20,3 +26,4 @@ if(deleted.get("complete")) {
 }else {
 	goodBye.style.display = "none";	
 }
+

@@ -5,8 +5,10 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.dto.AuctionDTO;
+import com.app.dto.MailDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.AuctionVO;
+import com.app.vo.MailVO;
 
 public class AuctionDAO {
 	public SqlSession sqlSession;
@@ -41,4 +43,6 @@ public class AuctionDAO {
  		sqlSession.delete("auction.delete", id);
  	}
  	
+ 	
+
 }

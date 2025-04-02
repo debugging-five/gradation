@@ -27,16 +27,13 @@
 				<div id="line-area"></div>
 				<div id="matter-area">
 					<h3>개인 정보 및 기록 삭제</h3>
-					<h6>모든 개인정보와 개인 설정 기록이 삭제됩니다. 삭제된 정보는 복구할 수 없으니 필요한 데이터는 미리 백업해 두시기 
-바랍니다.</h6>
+					<h6>모든 개인정보와 개인 설정 기록이 삭제됩니다. 삭제된 정보는 복구할 수 없으니 필요한 데이터는 미리 백업해 두시기 바랍니다.</h6>
 					<h3>SNS 계정 연동 해제</h3>
 					<h6>탈퇴 시 모든 SNS 계정 연동이 해제됩니다.</h6>
 					<h3>게시물 관련</h3>
-					<h6>등록한 게시물은 탈퇴 후에도 삭제되지 않습니다. 게시물 삭제를 원하신다면 계정을 탈퇴하기 전 삭제를 원하는 게시
-물을 직접 삭제하실 수 있습니다.</h6>
+					<h6>등록한 게시물은 탈퇴 후에도 삭제되지 않습니다. 게시물 삭제를 원하신다면 계정을 탈퇴하기 전 삭제를 원하는 게시물을 직접 삭제하실 수 있습니다.</h6>
 					<h3>개인정보 보관</h3>
-					<h6>개인정보 방침에 따라 일부 개인정보가 탈퇴 후 30일까지 보관될 수 있습니다. 30일 후에도 관련 법률 및 규정에 따
-라 보관될 수 있습니다. </h6>
+					<h6>개인정보 방침에 따라 일부 개인정보가 탈퇴 후 30일까지 보관될 수 있습니다. 30일 후에도 관련 법률 및 규정에 따라 보관될 수 있습니다. </h6>
 					<h3>계정 제한 사항</h3>
 					<h6>탈퇴한 이메일 주소는 탈퇴 후 24시간 후에 다시 가입할 수 있습니다.</h6>
 				</div>
@@ -46,6 +43,9 @@
 		  			<label class="checkbox-label" for="check-display">
 		  				<span class="check-label-span"> 해당 내용을 확인하였으며, Gradation 계정 탈퇴에 동의합니다. 이 작업은 취소할 수 없습니다.</span>
 		  			</label>
+		  			<div class="warning-area">
+		  				<span class="warning-message" id="dont-go">회원 탈퇴 약관에 동의해주세요</span>
+		  			</div>
 				</div>
 				
 				<div id="button-wrap">
@@ -84,7 +84,7 @@
 		<div id="complete-container">
 			<div id="complete-wrap">
 				<div id="complete-head">
-					<a href="main-main.main" id="complete-close-button">
+					<a href="../logout/logout.user">
 						<img class="close-icon" alt="닫기" src="../assets/images/login/close.png">
 					</a>
 				</div>
@@ -98,7 +98,7 @@
 						<h6 class="complete-h6">이용해주셔서 감사합니다.</h6>
 					</div>
 					<div id="id-button-wrap2">
-						<button class="next-page-button2" id="real-delete-button" onclick="location.href='../main/main.main'">확인</button>
+						<button class="next-page-button2" id="real-delete-button" onclick="location.href='../logout/logout.user'">확인</button>
 					</div>
 				</div>
 			</div>

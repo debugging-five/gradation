@@ -35,7 +35,11 @@ function hasScrolled() {
 
 
 bell.addEventListener("click", () => {
-    location.href = 'mypage-post-list.mypage';
+	if(isLoginstatus) {
+		location.href = '/gradation/mypage/mypage-post-list.mypage';	
+	} else {
+		location.href = '/gradation/login/login-main.user';
+	}
 });
 
 

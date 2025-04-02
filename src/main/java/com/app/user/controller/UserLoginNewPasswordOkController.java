@@ -23,12 +23,16 @@ public class UserLoginNewPasswordOkController implements Action {
 		System.out.println(req.getParameter("userPassword"));
 		userVO.setUserIdentification(req.getParameter("userId"));
 		userVO.setUserPassword(req.getParameter("userPassword"));
+
+		userDAO.changePassword(userVO);
 		
 		HttpSession session = req.getSession();
 //		세션정보초기화
-		session.invalidate();
+		session.invalidate();		
 		
-		userDAO.changePassword(userVO);
+		session = req.getSession();
+		session.setAttribute("changePassword", "true");
+		
 		result.setRedirect(true);
 		result.setPath("login-new-password.user?changeComplete=true");
 		return result;

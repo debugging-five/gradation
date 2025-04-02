@@ -23,6 +23,7 @@ public class UserLoginFindSendEmailOkController implements Action {
 		
 		if(mailCode.equals(userCode)) {
 			req.setAttribute("isComplete", "true");
+			session.setAttribute("changePassword", "true");
 		}else {
 			req.setAttribute("isComplete", "false");
 		}

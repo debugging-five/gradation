@@ -2,4 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="exhibition">
+
+	<select id="selectUniversityExhibitionList" resultType="UniversityExhibitionDTO">
+		SELECT TBU.UNIVERSITY_NAME, TBU.UNIVERSITY_LOGO_IMG_NAME, TBU.UNIVERSITY_LOGO_IMG_PATH,
+		TBE.UNIVERSITY_EXHIBITION_DATE, TBE.UNIVERSITY_EXHIBITION_STATE, TBE.UNIVERSITY_EXHIBITION_TITLE, TBE.UNIVERSITY_EXHIBITION_LOCATION,
+		TBM.MAJOR_NAME 
+        FROM TBL_UNIVERSITY TBU
+        JOIN TBL_MAJOR TBM 
+        ON TBM.UNIVERSITY_ID = TBU.ID
+        JOIN TBL_UNIVERSITY_EXHIBITION TBE
+        ON TBE.MAJOR_ID = TBM.ID
+        ORDER BY TBE.UNIVERSITY_EXHIBITION_DATE DESC
+	</select>
+	
+	<insert id="insertUniversityExhibition" parameterType="UniversityExhibitionDTO">
+		INSERT INTO TBL_UNIVERSITY_EXHIBITION
+	</insert>
+
 </mapper>

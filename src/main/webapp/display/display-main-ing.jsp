@@ -4,6 +4,7 @@
 	pageEncoding="UTF-8"%>
 <%
 String uri = request.getRequestURI();
+String category = request.getParameter("category");
 %>
 <!DOCTYPE html>
 <html>
@@ -27,11 +28,11 @@ String uri = request.getRequestURI();
 					<div class="tab-wrapper">
 						<div class="tab-labels">
 							<div class="tab-text">
-								<a href="../display/display-main-ing.display"
+								<a href="../display/display-main-ing.display?page=1"
 									class="<%=uri.contains("display-main-ing") ? "active" : ""%>">전시중</a>
 							</div>
 							<div class="tab-text-upcoming">
-								<a href="../display/display-main-comming-soon.display"
+								<a href="../display/display-main-comming-soon.display?page=1"
 									class="<%=uri.contains("display-main-comming-soon") ? "active" : ""%>">전시예정</a>
 							</div>
 						</div>
@@ -41,28 +42,29 @@ String uri = request.getRequestURI();
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="../display/display-category-korean.display"
+								<a href="display-main-ing.display?category=korean"
 									class="<%="korean".equals(request.getParameter("category")) ? "active" : ""%>">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-painting.display"
+								<a href="display-main-ing.display?category=painting"
 									class="<%="painting".equals(request.getParameter("category")) ? "active" : ""%>">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-sculpture.display"
+								<a href="display-main-ing.display?category=sculpture"
 									class="<%="sculpture".equals(request.getParameter("category")) ? "active" : ""%>">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-craft.display"
+								<a href="display-main-ing.display?category=craft"
 									class="<%="craft".equals(request.getParameter("category")) ? "active" : ""%>">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-architecture.display"
+								<a href="display-main-ing.display?category=architecture"
 									class="<%="architecture".equals(request.getParameter("category")) ? "active" : ""%>">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-calligraphy.display"
+								<a href="display-main-ing.display?category=calligraphy"
 									class="<%="calligraphy".equals(request.getParameter("category")) ? "active" : ""%>">서예</a>
+
 							</div>
 						</div>
 					</div>
@@ -98,19 +100,30 @@ String uri = request.getRequestURI();
 
 					if (artList != null) {
 						int total = artList.size();
-						int itemsPerColumn = 5;
+						int columns = 3;
 
-						for (int col = 0; col < 3; col++) {
+						// 3개의 gallery-column을 먼저 생성하고, 각 리스트를 준비해
+						List<ArtDTO>[] columnData = new List[columns];
+						for (int i = 0; i < columns; i++) {
+							columnData[i] = new java.util.ArrayList<>();
+						}
+
+						// artList 전체를 순회하면서 round-robin 방식으로 분배
+						for (int i = 0; i < total; i++) {
+							columnData[i % columns].add(artList.get(i));
+						}
+
+						// 각 column 별로 출력
+						for (int col = 0; col < columns; col++) {
 					%>
 					<div class="gallery-column">
 						<%
-						for (int i = col * itemsPerColumn; i < (col + 1) * itemsPerColumn && i < total; i++) {
-							ArtDTO art = artList.get(i);
+						for (ArtDTO art : columnData[col]) {
 						%>
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
 								<img class="gallery-image"
-									src="<%=art.getArtImgPath() + art.getArtImgName()%>"
+									src="<%=request.getContextPath() + art.getArtImgPath() + art.getArtImgName()%>"
 									alt="<%=art.getArtTitle()%>"
 									data-date="<%=art.getArtStartDate()%>" />
 								<div class="hover-overlay">
@@ -132,25 +145,73 @@ String uri = request.getRequestURI();
 					%>
 
 				</div>
+				
 			</div>
-			<div class="pagination-bar">
-				<img class="pagination-icon"
-					src="../assets/images/display/art/left.png" alt="left" />
-				<%
-				int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
-				int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+				<p>현재 카테고리: <%= request.getParameter("category") %></p>
+<p>가져온 작품 수: <%= (artList != null) ? artList.size() : 0 %></p>
 
-				for (int i = 1; i <= totalPages; i++) {
+			<%
+			int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
+			int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+
+			int pageGroupSize = 5; // 한 번에 보여줄 페이지 번호 개수
+			int startPage = ((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
+			int endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+
+			int prevGroupPage = startPage - 1;
+			int nextGroupPage = endPage + 1;
+			%>
+
+			<div class="pagination-bar">
+				<%-- 왼쪽 아이콘 (이전 페이지 그룹) --%>
+				<%
+				if (startPage > 1) {
 				%>
-				<a href="display-main-ing.display?page=<%=i%>"
-					class="page-number <%=(i == currentPage) ? "active" : ""%>">
-					<%=i%>
+				<a
+					href="display-main-ing.display?page=<%=prevGroupPage%>&category=<%=category%>">
+					<img class="pagination-icon"
+					src="../assets/images/display/art/left.png" alt="left" />
+				</a>
+				<%
+				} else {
+				%>
+				<img class="pagination-icon"
+					src="../assets/images/display/art/left.png" alt="left"
+					style="opacity: 0.3; cursor: default;" />
+				<%
+				}
+				%>
+
+				<%-- 페이지 번호 출력 --%>
+				<%
+				for (int i = startPage; i <= endPage; i++) {
+				%>
+				<a
+					href="display-main-ing.display?page=<%=i%>&category=<%=category%>"
+					class="page-number <%=(i == currentPage) ? "active" : ""%>"> <%=i%>
 				</a>
 				<%
 				}
 				%>
-				<img class="pagination-icon"
+
+				<%-- 오른쪽 아이콘 (다음 페이지 그룹) --%>
+				<%
+				if (endPage < totalPages) {
+				%>
+				<a
+					href="display-main-ing.display?page=<%=nextGroupPage%>&category=<%=category%>">
+					<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
+				</a>
+				<%
+				} else {
+				%>
+				<img class="pagination-icon"
+					src="../assets/images/display/art/right.png" alt="right"
+					style="opacity: 0.3; cursor: default;" />
+				<%
+				}
+				%>
 			</div>
 		</div>
 	</div>
