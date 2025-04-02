@@ -55,7 +55,8 @@
 				<div id="input-button-wrapper">
 					<div class="input-text">
 						<h5>대학명<span class="star">*</span></h5>
-						<input type="text" placeholder="학교를 선택하세요." id="address" name="address" required/>
+				<!-- 		<input type="text" placeholder="학교를 선택하세요." id="address" name="address" required/> -->
+						<input type="text" placeholder="학교를 선택하세요." id="address" name="universityAddress" required/>
 					</div>
 					<button type="button" id="search-university" onclick="execDaumPostcode()">학교 검색</button>
 				</div>
@@ -64,7 +65,7 @@
 				<div class="input-wrapper">
 					<div class="input-text">
 						<h5>학과명<span class="star">*</span></h5>
-						<input type="text" placeholder="학과명을 입력하세요." />
+						<input type="text" name="majorName" placeholder="학과명을 입력하세요." />
 					</div>
 				</div>
 				
@@ -72,7 +73,7 @@
 				<div class="input-wrapper">
 					<div class="input-text2">
 						<h5>상세 주소<span class="star">*</span></h5>
-						<input type="text" placeholder="상세 주소를 입력하세요." />
+						<input type="text" name="universityLocation" placeholder="상세 주소를 입력하세요." />
 					</div>
 				</div>
 				
@@ -80,7 +81,7 @@
 				<div class="input-wrapper">
 					<div class="input-text3">
 						<h5>홈페이지<span class="star">*</span></h5>
-						<input type="text" placeholder="홈페이지 주소를 입력하세요." />
+						<input type="text" name="universityHomepage" placeholder="홈페이지 주소를 입력하세요." />
 					</div>
 				</div>
 				
@@ -112,7 +113,7 @@
 				<div class="input-wrapper">
 					<div class="input-text3">
 						<h5>전시회 일정<span class="star">*</span></h5>
-						<input type="text" placeholder="잔시회 날짜를 입력하세요." />
+						<input type="text" name="universityExhibitionDate" placeholder="잔시회 날짜를 입력하세요." />
 					</div>
 				</div>
 				</div>
