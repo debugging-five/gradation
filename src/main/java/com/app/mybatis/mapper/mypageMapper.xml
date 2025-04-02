@@ -39,4 +39,36 @@
     WHERE A.USER_ID = #{userId}
 </select>
 
+    <!-- 메일 등록 -->
+<!--     <insert id="insertMail" parameterType="MailVO">
+        INSERT INTO TBL_MAIL(ID, MAIL_TITLE, MAIL_CONTENTS)  
+        VALUES (
+        	SEQ_MAIL.NEXTVAL,
+        	#{mailTitle},
+        	#{mailContents}
+        )
+    </insert> -->
+    
+<!--     <insert id="insertMail" parameterType="MailVO">
+    INSERT INTO TBL_MAIL (
+        mail_title, mail_contents, mail_send_time, mail_open_ok, send_user_id, receive_user_id
+    ) VALUES (
+        #{mailTitle}, #{mailContents}, NOW(), 0, #{sendUserId}, 
+        (SELECT ID FROM TBL_USER WHERE USER_NAME = #{receiveUserName})
+    )
+</insert> -->
+
+	<insert id="insertMail" parameterType="MailVO">
+	    INSERT INTO TBL_MAIL (
+	        MAIL_TITLE, MAIL_CONTENTS, MAIL_SEND_TIME, MAIL_OPEN_OK, SEND_USER_ID, RECEIVE_USER_ID
+	    ) VALUES (
+	        #{mailTitle}, #{mailContents}, NOW(), 0, #{sendUserId}, #{receiveUserId}
+	    )
+	</insert>
+	
+	<select id="getUserIdByName" parameterType="String" resultType="Long" >
+	    SELECT ID
+	    FROM TBL_USER
+	    WHERE USER_NAME = #{userName, jdbcType=VARCHAR}
+	</select>
 </mapper>
