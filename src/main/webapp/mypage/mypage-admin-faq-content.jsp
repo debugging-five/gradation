@@ -1,3 +1,4 @@
+<%@page import="com.app.vo.FaqVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +11,10 @@
 </head>
 <body>
 	<%@ include file="../layout/header.jsp" %>
+	<%
+		FaqVO faq = (FaqVO)request.getAttribute("faq");
+	%>
+	
 	
 	<div id="container-wrap">
 		<div id="container">
@@ -19,15 +24,16 @@
 			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
-				<h6 id="content-kind">경매 관련 문의</h6>
+				<h6 id="content-kind"><%=faq.getFaqCategory() %> 관련 문의</h6>
 				<div id="question-wrap">
-					<h3 id="question-title">경매금액을 잘못 올렸어요.</h3>
-					<p id="question-date">25.01.15</p>
+					<h3 id="question-title"><%=faq.getFaqTitle() %></h3>
 				</div>
 				<p id="question-content">
-                    경매 금액을 잘못 올리셨다면, 자신의 계정으로 로그인 할 경우 경매 페이지에 수정하기 버튼을 통해 경매 금액을 수정해보세요.
+                    <%=faq.getFaqContent() %>
                 </p>
                 <textarea id="answer-input"></textarea>
+                
+                
 				<form action="" method="post">
 					<button type="button" id="list-faq">목록</button>
 					<button id="delete-faq">삭제</button>

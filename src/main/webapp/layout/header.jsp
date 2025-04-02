@@ -99,6 +99,11 @@
 			</div>
         </nav>
     </header>
+    
+    <script type="text/javascript">
+    	const isLoginstatus = <%= (userName != null) ? "true" : "false"  %>;
+    </script>
+    
 </body>
 <script type="text/javascript" src="../assets/js/layout/header.js"></script>
 </html>
