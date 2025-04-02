@@ -23,8 +23,8 @@ public class GradationExhibitionDTO {
 	
 //	ArtVO
 	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
+	private String artCategory;
+	private String artMaterial;
 	private String artSize;
 	private String artDescription;
 	private Date artDate;
@@ -74,7 +74,7 @@ public class GradationExhibitionDTO {
 			Date gradationExhibitionTime, int gradationExhibitionFee, String gradationExhibitionTel,
 			String gradationExhibitionAddress, Date gradationExhibitionDate, String gradationExhibitionAddressImgName,
 			String gradationExhibitionAddressImgPath, Long gradationExhibitionId, Long artId, String artTitle,
-			String artCategoty, String artMeterial, String artSize, String artDescription, Date artDate,
+			String artCategory, String artMaterial, String artSize, String artDescription, Date artDate,
 			Date artStartDate, Date artEndDate, Long userId, String artImgName, String artImgPath, String userImgName,
 			String userImgPath, String userName, String userEmail, String userIdentification, String userPassword,
 			String userPhone, String userNickname, String userAddress, String userDetailAddress, String userPostalCode,
@@ -95,8 +95,8 @@ public class GradationExhibitionDTO {
 		this.gradationExhibitionId = gradationExhibitionId;
 		this.artId = artId;
 		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
 		this.artSize = artSize;
 		this.artDescription = artDescription;
 		this.artDate = artDate;
@@ -241,20 +241,20 @@ public class GradationExhibitionDTO {
 		this.artTitle = artTitle;
 	}
 
-	public String getArtCategoty() {
-		return artCategoty;
+	public String getArtCategory() {
+		return artCategory;
 	}
 
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
 	}
 
-	public String getArtMeterial() {
-		return artMeterial;
+	public String getArtMaterial() {
+		return artMaterial;
 	}
 
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
 	}
 
 	public String getArtSize() {
@@ -571,7 +571,7 @@ public class GradationExhibitionDTO {
 				+ ", gradationExhibitionAddressImgName=" + gradationExhibitionAddressImgName
 				+ ", gradationExhibitionAddressImgPath=" + gradationExhibitionAddressImgPath
 				+ ", gradationExhibitionId=" + gradationExhibitionId + ", artId=" + artId + ", artTitle=" + artTitle
-				+ ", artCategoty=" + artCategoty + ", artMeterial=" + artMeterial + ", artSize=" + artSize
+				+ ", artCategory=" + artCategory + ", artMaterial=" + artMaterial + ", artSize=" + artSize
 				+ ", artDescription=" + artDescription + ", artDate=" + artDate + ", artStartDate=" + artStartDate
 				+ ", artEndDate=" + artEndDate + ", userId=" + userId + ", artImgName=" + artImgName + ", artImgPath="
 				+ artImgPath + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath + ", userName="
@@ -604,5 +604,8 @@ public class GradationExhibitionDTO {
 		GradationExhibitionDTO other = (GradationExhibitionDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
+	
 
 }

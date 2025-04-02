@@ -9,8 +9,8 @@ public class DeliveryDTO {
 //	TBL_ART
 	private Long id;
 	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
+	private String artCategory;
+	private String artMaterial;
 	private String artSize;
 	private String artDescription;
 	private Date artDate;
@@ -73,7 +73,7 @@ public class DeliveryDTO {
 	
 	public DeliveryDTO() {;}
 
-	public DeliveryDTO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
+	public DeliveryDTO(Long id, String artTitle, String artCategory, String artMaterial, String artSize,
 			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, String artImgName,
 			String artImgPath, Long artId, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
@@ -87,8 +87,8 @@ public class DeliveryDTO {
 			Timestamp paymentDate, String paymentCode) {
 		this.id = id;
 		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
 		this.artSize = artSize;
 		this.artDescription = artDescription;
 		this.artDate = artDate;
@@ -158,20 +158,20 @@ public class DeliveryDTO {
 		this.artTitle = artTitle;
 	}
 
-	public String getArtCategoty() {
-		return artCategoty;
+	public String getArtCategory() {
+		return artCategory;
 	}
 
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
 	}
 
-	public String getArtMeterial() {
-		return artMeterial;
+	public String getArtMaterial() {
+		return artMaterial;
 	}
 
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
 	}
 
 	public String getArtSize() {
@@ -584,8 +584,8 @@ public class DeliveryDTO {
 
 	@Override
 	public String toString() {
-		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+		return "DeliveryDTO [id=" + id + ", artTitle=" + artTitle + ", artCategory=" + artCategory + ", artMaterial="
+				+ artMaterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
 				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
 				+ ", artImgName=" + artImgName + ", artImgPath=" + artImgPath + ", artId=" + artId + ", userImgPath="
 				+ userImgPath + ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification="
@@ -622,5 +622,7 @@ public class DeliveryDTO {
 		DeliveryDTO other = (DeliveryDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-
+	
+	
+	
 }

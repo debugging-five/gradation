@@ -87,4 +87,9 @@ import com.app.vo.UserVO;
  		sqlSession.delete("user.deleteUser", userEmail);
  	}
  	
+// 	학교인증 요청
+ 	public void updateUserUniversityStatus(UserVO userVO) {
+ 		sqlSession.update("user.updateUserUniversityStatus", userVO);
+ 	}
+ 	
  }
