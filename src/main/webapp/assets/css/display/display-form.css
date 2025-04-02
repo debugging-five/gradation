@@ -36,6 +36,7 @@ body {
 	gap: 120px;
 }
 
+
 /* 첨부파일 박스 */
 .attachment-box {
     width: 480px;   /* 가로 480px */
@@ -200,7 +201,7 @@ body {
 	font-size: 18px;
 	font-weight: bold; 
 	display: block; 
-	margin: 20px 0 7px 0; 
+	margin: 80px 0 7px 0; 
 	
 }
 /* 작품설명 타이핑 */
