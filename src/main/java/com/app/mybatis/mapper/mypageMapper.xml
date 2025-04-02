@@ -39,4 +39,17 @@
     WHERE A.USER_ID = #{userId}
 </select>
 
+
+	<insert id="insertMail" parameterType="MailDTO">
+	    INSERT INTO TBL_MAIL (ID, MAIL_TITLE, MAIL_CONTENTS, MAIL_SEND_TIME, SEND_USER_ID, RECEIVE_USER_ID)
+	    VALUES (
+	        SEQ_MAIL.NEXTVAL, 
+	        #{mailTitle},
+	        #{mailContents},
+	        #{mailSendTime},
+	        #{sendUserId},     <!-- 보내는 사용자 ID -->
+	        #{receiveUserId}   <!-- 받는 사용자 ID -->
+	    )
+	</insert>
+	
 </mapper>

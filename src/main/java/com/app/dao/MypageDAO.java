@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.dto.MailDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.ArtLikeVO;
 import com.app.vo.AuctionBiddingVO;
@@ -42,4 +43,10 @@ public class MypageDAO {
     public List<AuctionVO> selectAuctionByUserId(int userId) {
         return sqlSession.selectList("selectAuctionByUserId", userId);
     }
+    
+// 	메일 전송
+ 	public void insertMail(MailDTO mailDTO) {
+ 		sqlSession.insert("mypage.insertMail", mailDTO);
+ 	} 
+ 	
 }

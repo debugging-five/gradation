@@ -12,6 +12,7 @@ import com.app.dao.AuctionDAO;
 import com.app.dao.MypageDAO;
 import com.app.dto.MailDTO;
 import com.app.vo.AuctionVO;
+import com.app.vo.MailVO;
 
 public class MypageContactArtistWriteOkController implements Action {
 
@@ -19,15 +20,15 @@ public class MypageContactArtistWriteOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MailDTO mailDTO = new MailDTO();
-		MypageDAO mypageDAO = new MypageDAO();
 		AuctionDAO auctionDAO = new AuctionDAO();
+		
 		
 		mailDTO.setrUserName(req.getParameter("rUserName"));
 		mailDTO.setMailTitle(req.getParameter("mailTitle"));
 		mailDTO.setMailContents(req.getParameter("mailContents"));
 		
 //		mypageDAO.insert(mailDTO);
-//		auctionDAO.;
+		auctionDAO.insertMail(mailDTO);
 		
 		result.setRedirect(true);
 		result.setPath("mypage-contact-artist-list.mypage");
