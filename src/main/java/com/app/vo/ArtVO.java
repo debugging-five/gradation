@@ -6,53 +6,30 @@ import java.util.Objects;
 public class ArtVO {
 	private Long id;
 	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
+	private String artCategory;
+	private String artMaterial;
 	private String artSize;
 	private String artDescription;
 	private Date artDate;
 	private Date artStartDate;
 	private Date artEndDate;
 	private Long userId;
-	
+
 	public ArtVO() {;}
 
-	public ArtVO(Long id, String artTitle, String artCategoty, String artMeterial, String artSize,
+	public ArtVO(Long id, String artTitle, String artCategory, String artMaterial, String artSize,
 			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId) {
+		super();
 		this.id = id;
 		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
 		this.artSize = artSize;
 		this.artDescription = artDescription;
 		this.artDate = artDate;
 		this.artStartDate = artStartDate;
 		this.artEndDate = artEndDate;
 		this.userId = userId;
-	}
-
-	@Override
-	public String toString() {
-		return "ArtVO [id=" + id + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
-				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ArtVO other = (ArtVO) obj;
-		return Objects.equals(id, other.id);
 	}
 
 	public Long getId() {
@@ -71,20 +48,20 @@ public class ArtVO {
 		this.artTitle = artTitle;
 	}
 
-	public String getArtCategoty() {
-		return artCategoty;
+	public String getArtCategory() {
+		return artCategory;
 	}
 
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
 	}
 
-	public String getArtMeterial() {
-		return artMeterial;
+	public String getArtMaterial() {
+		return artMaterial;
 	}
 
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
 	}
 
 	public String getArtSize() {
@@ -134,4 +111,35 @@ public class ArtVO {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+
+	@Override
+	public String toString() {
+		return "ArtVO [id=" + id + ", artTitle=" + artTitle + ", artCategory=" + artCategory + ", artMaterial="
+				+ artMaterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(artCategory, artDate, artDescription, artEndDate, artMaterial, artSize, artStartDate,
+				artTitle, id, userId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ArtVO other = (ArtVO) obj;
+		return Objects.equals(artCategory, other.artCategory) && Objects.equals(artDate, other.artDate)
+				&& Objects.equals(artDescription, other.artDescription) && Objects.equals(artEndDate, other.artEndDate)
+				&& Objects.equals(artMaterial, other.artMaterial) && Objects.equals(artSize, other.artSize)
+				&& Objects.equals(artStartDate, other.artStartDate) && Objects.equals(artTitle, other.artTitle)
+				&& Objects.equals(id, other.id) && Objects.equals(userId, other.userId);
+	}
+	
+	
 }

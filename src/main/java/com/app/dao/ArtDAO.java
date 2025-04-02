@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.dto.ArtPostDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.ArtLikeVO;
 import com.app.vo.ArtVO;
@@ -20,13 +21,13 @@ public class ArtDAO {
  	
 // 	✔ 작품 업로드
     // 작품 업로드 (전시중)
-    public void insertArtForExhibition(ArtVO artVO) {
-        sqlSession.insert("art.insert", artVO);
+    public void insert(ArtPostDTO artPostDTO) {
+        sqlSession.insert("art.insert", artPostDTO);
     }
 
     // 작품 업로드 (전시예정)
-    public void insertArtForUpcomingExhibition(ArtVO artVO) {
-        sqlSession.insert("art.insertCommingSoon", artVO);
+    public void insertCommingSoon(ArtPostDTO artPostDTO) {
+        sqlSession.insert("art.insertCommingSoon", artPostDTO);
     }
 
 
