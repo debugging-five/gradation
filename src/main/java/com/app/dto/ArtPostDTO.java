@@ -40,8 +40,8 @@ public class ArtPostDTO {
 	
 //	TBL_ART
 	private String artTitle;
-	private String artCategoty;
-	private String artMeterial;
+	private String artCategory;
+	private String artMaterial;
 	private String artSize;
 	private String artDescription;
 	private Date artDate;
@@ -77,7 +77,7 @@ public class ArtPostDTO {
 			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
 			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
-			String userUniversityStatus, String artTitle, String artCategoty, String artMeterial, String artSize,
+			String userUniversityStatus, String artTitle, String artCategory, String artMaterial, String artSize,
 			String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long userId, Timestamp artPostDate,
 			Long artId, String artImgName, String artImgPath, Timestamp artLikeTime, Long artPostId,
 			String replyContents, Date replyDate, Long replyId, Timestamp replyLikeTime) {
@@ -113,8 +113,8 @@ public class ArtPostDTO {
 		this.userWriterStatus = userWriterStatus;
 		this.userUniversityStatus = userUniversityStatus;
 		this.artTitle = artTitle;
-		this.artCategoty = artCategoty;
-		this.artMeterial = artMeterial;
+		this.artCategory = artCategory;
+		this.artMaterial = artMaterial;
 		this.artSize = artSize;
 		this.artDescription = artDescription;
 		this.artDate = artDate;
@@ -389,20 +389,20 @@ public class ArtPostDTO {
 		this.artTitle = artTitle;
 	}
 
-	public String getArtCategoty() {
-		return artCategoty;
+	public String getArtCategory() {
+		return artCategory;
 	}
 
-	public void setArtCategoty(String artCategoty) {
-		this.artCategoty = artCategoty;
+	public void setArtCategory(String artCategory) {
+		this.artCategory = artCategory;
 	}
 
-	public String getArtMeterial() {
-		return artMeterial;
+	public String getArtMaterial() {
+		return artMaterial;
 	}
 
-	public void setArtMeterial(String artMeterial) {
-		this.artMeterial = artMeterial;
+	public void setArtMaterial(String artMaterial) {
+		this.artMaterial = artMaterial;
 	}
 
 	public String getArtSize() {
@@ -546,8 +546,8 @@ public class ArtPostDTO {
 				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
 				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
 				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
-				+ userUniversityStatus + ", artTitle=" + artTitle + ", artCategoty=" + artCategoty + ", artMeterial="
-				+ artMeterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
+				+ userUniversityStatus + ", artTitle=" + artTitle + ", artCategory=" + artCategory + ", artMaterial="
+				+ artMaterial + ", artSize=" + artSize + ", artDescription=" + artDescription + ", artDate=" + artDate
 				+ ", artStartDate=" + artStartDate + ", artEndDate=" + artEndDate + ", userId=" + userId
 				+ ", artPostDate=" + artPostDate + ", artId=" + artId + ", artImgName=" + artImgName + ", artImgPath="
 				+ artImgPath + ", artLikeTime=" + artLikeTime + ", artPostId=" + artPostId + ", replyContents="
@@ -571,5 +571,9 @@ public class ArtPostDTO {
 		ArtPostDTO other = (ArtPostDTO) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
+	
+	
 	
 }

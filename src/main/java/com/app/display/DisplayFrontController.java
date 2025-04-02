@@ -20,6 +20,9 @@ import com.app.display.controller.DisplayCategoryKoreanController;
 import com.app.display.controller.DisplayCategoryPaintingController;
 import com.app.display.controller.DisplayCategorySculptureController;
 import com.app.display.controller.DisplayDetailController;
+import com.app.display.controller.DisplayFormCommingSoonController;
+import com.app.display.controller.DisplayFormController;
+import com.app.display.controller.DisplayFormOkController;
 import com.app.display.controller.DisplayMainCommingSoonController;
 import com.app.display.controller.DisplayMainIngController;
 import com.app.mypage.controller.MypageContactArtistWriteController;
@@ -55,6 +58,12 @@ public class DisplayFrontController extends HttpServlet{
 			result = new DisplayCategoryCalligraphyController().execute(req, resp);
 		}else if(target.equals("display/display-detail")) {
 			result = new DisplayDetailController().execute(req, resp);
+		}else if(target.equals("display/display-form")) {
+			result = new DisplayFormController().execute(req, resp);
+		}else if(target.equals("display/display-form-comming-soon")) {
+			result = new DisplayFormCommingSoonController().execute(req, resp);
+		}else if(target.equals("display/display-form-ok")) {
+			result = new DisplayFormOkController().execute(req, resp);
 		}else {
 //			전부 404
 		}
