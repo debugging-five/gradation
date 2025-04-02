@@ -3,6 +3,11 @@ const fileInput = document.getElementById("file-input");
 const cancelButton = document.getElementById("cancel-button");
 const alert = document.getElementById("alert-wrapper");
 const overlay = document.getElementById("overlay");
+const registerButton = document.getElementById("register-button");
+
+registerButton.addEventListener("click", () => {
+	location.href = "university-exhibition-main.exhibition";
+});
 
 fileButton.addEventListener("click", () => {
     fileInput.click();

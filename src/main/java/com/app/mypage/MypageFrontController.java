@@ -12,6 +12,7 @@ import com.app.mypage.controller.MypageSendPostContentModifyController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
 import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
+import com.app.mypage.controller.MypageAdminFaqRegisterOkController;
 import com.app.mypage.controller.MypageAdminFormApprovedController;
 import com.app.mypage.controller.MypageAdminFormNotApprovedController;
 import com.app.mypage.controller.MypageAdminQnaContentCompletedController;
@@ -95,14 +96,6 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageArtLikeListControllerController().execute(req, resp);
       }else if(target.equals("mypage/mypage-exhibition-like-list")) {
          result = new MypageExhibitionLikeListController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
-         result = new MypageAdminQnaListWaitingController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
-         result = new MypageAdminQnaListCompletedController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-form-not-approved")) {
-         result = new MypageAdminFormNotApprovedController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-form-approved")) {
-         result = new MypageAdminFormApprovedController().execute(req, resp);
       }else if(target.equals("mypage/mypage-post-list")) {
          result = new MypagePostListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-post-content")) {
@@ -115,50 +108,65 @@ public class MypageFrontController extends HttpServlet{
     	  result = new MypageMyPostContentController().execute(req, resp);
       }else if(target.equals("mypage/mypage-send-post-content-modify")) {
     	  result = new MypageSendPostContentModifyController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-faq-list")) {
-         result = new MypageAdminFaqListController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-qna-content")) {
-         result = new MypageAdminQnaContentController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-qna-content-completed")) {
-         result = new MypageAdminQnaContentCompletedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-list")) {
+          result = new MypageServiceCenterQnaListController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-send")) {
+          result = new MypageServiceCenterQnaSendController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-send-ok")) {
+          result = new MypageServiceCenterQnaSendOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-content")) {
+          result = new MypageServiceCenterQnaContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-update")) {
+          result = new MypageServiceCenterQnaUpdateController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-update-ok")) {
+          result = new MypageServiceCenterQnaUpdateOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-qna-delete-ok")) {
+          result = new MypageServiceCenterQnaDeleteOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-faq-list")) {
+          result = new MypageServiceCenterFaqListController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-service-center-faq-content")) {
+          result = new MypageServiceCenterFaqContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-my-auction-list")) {
+          result = new MypageMyAuctionList().execute(req, resp);
+      }else if(target.equals("mypage/mypage-my-pay-list")) {
+          result = new MypageMyPayList().execute(req, resp);
+      }else if(target.equals("mypage/form-detail")) {
+           result = new MypageFormDetailController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id")) {
+           result = new MypageDeleteIdController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-delete-id-ok")) {
+           result = new MypageDeleteIdOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-send-email")) {
+     	  result = new MypageSendEmailController().execute(req, resp);
+
+//    admin
       }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
-         result = new MypageAdminQnaListWaitingController().execute(req, resp);
+          result = new MypageAdminQnaListWaitingController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
+          result = new MypageAdminQnaListCompletedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-form-not-approved")) {
+          result = new MypageAdminFormNotApprovedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-form-approved")) {
+          result = new MypageAdminFormApprovedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-qna-content")) {
+          result = new MypageAdminQnaContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-qna-content-completed")) {
+          result = new MypageAdminQnaContentCompletedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
+          result = new MypageAdminQnaListWaitingController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-user-manage")) {
-         result = new MypageAdminUserManageController().execute(req, resp);
+          result = new MypageAdminUserManageController().execute(req, resp);   
+          
+//    admin FAQ
+      }else if(target.equals("mypage/mypage-admin-faq-list")) {
+          result = new MypageAdminFaqListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-faq-register")) {
          result = new MypageAdminFaqRegisterController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-faq-register-ok")) {
+          result = new MypageAdminFaqRegisterOkController().execute(req, resp);
+          
       }else if(target.equals("mypage/mypage-admin-faq-content")) {
          result = new MypageAdminFaqContentController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-list")) {
-         result = new MypageServiceCenterQnaListController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-send")) {
-         result = new MypageServiceCenterQnaSendController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-send-ok")) {
-         result = new MypageServiceCenterQnaSendOkController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-content")) {
-         result = new MypageServiceCenterQnaContentController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-update")) {
-         result = new MypageServiceCenterQnaUpdateController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-update-ok")) {
-         result = new MypageServiceCenterQnaUpdateOkController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-qna-delete-ok")) {
-         result = new MypageServiceCenterQnaDeleteOkController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-faq-list")) {
-         result = new MypageServiceCenterFaqListController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-service-center-faq-content")) {
-         result = new MypageServiceCenterFaqContentController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-my-auction-list")) {
-         result = new MypageMyAuctionList().execute(req, resp);
-      }else if(target.equals("mypage/mypage-my-pay-list")) {
-         result = new MypageMyPayList().execute(req, resp);
-      }else if(target.equals("mypage/form-detail")) {
-          result = new MypageFormDetailController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-delete-id")) {
-          result = new MypageDeleteIdController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-delete-id-ok")) {
-          result = new MypageDeleteIdOkController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-send-email")) {
-    	  result = new MypageSendEmailController().execute(req, resp);
       }else {
 //         전부 404
       }

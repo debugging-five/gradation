@@ -9,6 +9,7 @@
 <title>내 활동 / 작가와 연락</title>
 </head>
 <body>
+				<form action="mypage-contact-artist-write-ok.mypage" method="post">
 	<%@ include file="../layout/header.jsp" %>
 	<div id="container-wrap">
 		<div id="container">
@@ -24,35 +25,34 @@
 				<div class="input-wrapper">
 					<div class="input-artist">
 						<h5>작가명<span class="star">*</span></h5>
-						<input type="text" placeholder="작가명을 입력하세요."/>
+						<input type="text" name="receiveUserName" placeholder="작가명을 입력하세요."/>
 					</div>
 				</div>
 				
 				<div class="input-wrapper">
 					<div class="input-title">
 						<h5>제목<span class="star">*</span></h5>
-						<input type="text" placeholder="제목을 입력하세요."/>
+						<input type="text" name="mailTitle" placeholder="제목을 입력하세요."/>
 					</div>
 				</div>
 				
 				<div id="textarea-content">
 					<h5>내용<span class="star">*</span></h5>
-					<textarea>내용을 입력하세요.</textarea>
+					<textarea name="mailContents">내용을 입력하세요.</textarea>
 				</div>
 
 				
 				<!-- 내 활동 / 작가와 연락 페이지로 이동 -->
 				<!-- <form action="mypage-contact-artist-list.jsp" method="post"> -->
-				<form action="mypage-contact-artist-write-ok.mypage" method="post">
 					<div id="button-wrapper">
 						<button id="register-button">등록</button>
 					</div>
-				</form>
 			</div>
 		</div>
 	
 	
 	</div>
+				</form>
 	<%@ include file="../layout/footer.jsp" %>
 </body>
 </html>

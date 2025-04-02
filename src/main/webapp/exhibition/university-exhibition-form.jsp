@@ -85,7 +85,7 @@
 				</div>
 				
 				<!-- 전시회 일정 -->
-				<div class="input-wrapper2">
+		<!-- 		<div class="input-wrapper2">
 					<div class="input-text4">
 						<h5>전시회 일정<span class="star">*</span></h5>
 					</div>
@@ -106,7 +106,15 @@
 							<input type="text" id="pickupDateInput2"
 								class="calendar-display-input" placeholder="종료일 선택" readonly />
 						</div>
+					</div> -->
+					
+				<!-- 홈페이지 -->
+				<div class="input-wrapper">
+					<div class="input-text3">
+						<h5>전시회 일정<span class="star">*</span></h5>
+						<input type="text" placeholder="잔시회 날짜를 입력하세요." />
 					</div>
+				</div>
 				</div>
 				
 
@@ -131,10 +139,10 @@
 			</div>
 		</div>
 		
-	    <div id="overlay"></div>
+<%-- 	    <div id="overlay"></div>
 		<div id="alert-wrapper">         
     		<%@ include file="./university-exhibition-form-alert1.jsp"%>
-		</div>    
+		</div>   --%>  
 	</div>
 	
 <%@ include file="../layout/footer.jsp" %>

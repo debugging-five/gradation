@@ -22,12 +22,10 @@
 
 	
 	<!-- 회원관리 회원전체 조회 -->
-	<!-- 
-	<select id="selectUserAll" resultType="BanDTO">
-		SELECT USER_NAME, USER_IDENTIFICATION, USER_PHONE, 
+	<select id="selectUserAll" resultType="UserVO">
+		SELECT USER_NAME, USER_IDENTIFICATION, USER_PHONE, USER_BAN_OK
 		FROM TBL_USER
 	</select>
-	 -->
 	 
 	 <!-- 회원관리 회원한명 Read -->	
 	<select id="selectId" parameterType="Long" resultType="MajorDTO">
@@ -41,12 +39,47 @@
 	</select>
 	
 	
-	 <!-- 작가승인 -->
-	<update id="updateArtist" parameterType="UserVO">
+	<!-- 양식관리 -->
+	
+	<!-- 작가승인 -->
+	<update id="updateApplyArtist" parameterType="Long">
 		UPDATE TBL_USER
-		SET USER_WRITE_OK = true
+		SET USER_WRITER_STATUS = '승인'
 		WHERE ID = #{id}
 	</update>
+	
+	<!-- 작가거절 -->
+	<update id="updateRejectArtist" parameterType="Long">
+		UPDATE TBL_USER
+		SET USER_WRITER_STATUS = '거절'
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- 학생증승인 -->
+
+	<!-- 학생증거절 -->
+
+	
+	<!-- 업사이클승인 -->
+	<update id="updateApplyUpcycle" parameterType="Long">
+		UPDATE TBL_UPCYCLE
+		SET UPCYCLE_STATUS = '승인'
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- 업사이클거절 -->
+	<update id="updateRejectUpcycle" parameterType="Long">
+		UPDATE TBL_UPCYCLE
+		SET UPCYCLE_STATUS = '거절'
+		WHERE ID = #{id}
+	</update>	
+	
+	
+	
+	<!-- 대학교전시회승인 -->
+	
+	<!-- 대학교전시회거절 -->
+	
 	
 	
 	
@@ -63,6 +96,19 @@
 		FROM TBL_FAQ
 		WHERE ID = #{id}
 	</select>
+	
+	<!-- FAQ 등록한후 바로 read -->
+	<select id="selectLastFaqById" resultType="Long">
+		SELECT ID
+		FROM (
+			SELECT ID
+			FROM TBL_FAQ
+			ORDER BY ID DESC
+		)
+		WHERE ROWNUM = 1		
+	</select> 
+	
+	
 	
 	<!-- FAQ 등록 -->
 	<insert id="insertFaq" parameterType="FaqVO">
