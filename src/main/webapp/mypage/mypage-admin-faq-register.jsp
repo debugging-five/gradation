@@ -19,40 +19,42 @@
 			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
-				<div id="kind-wrap">
-					<div class="name">
-						<h5>구분<span class="star">*</span></h5>
+				
+				
+				<form action="/gradation/mypage/mypage-admin-faq-register-ok.mypage" method="post">
+					<div id="kind-wrap">
+						<div class="name">
+							<h5>구분<span class="star">*</span></h5>
+						</div>
+					    <div id="kind">
+							<input type="radio" id="art" name="faqCategory" value="작품전시">
+							<label for="art" class="radio-label">작품 전시</label>
+							
+							<input type="radio" id="exhibition" name="faqCategory" value="전시회">
+							<label for="exhibition" class="radio-label">전시회</label>
+							
+							<input type="radio" id="auction" name="faqCategory" value="경매">
+							<label for="auction" class="radio-label">경매</label>
+							
+							<input type="radio" id="mypage" name="faqCategory" value="마이페이지">
+							<label for="mypage" class="radio-label">마이페이지</label>
+							
+							<input type="radio" id="another" name="faqCategory" value="기타">
+							<label for="another" class="radio-label">기타</label>
+					    </div>
 					</div>
-				    <div id="kind">
-						<input type="radio" id="art" name="kind">
-						<label for="art" class="radio-label">작품 전시</label>
-						
-						<input type="radio" id="exhibition" name="kind">
-						<label for="exhibition" class="radio-label">전시회</label>
-						
-						<input type="radio" id="auction" name="kind">
-						<label for="auction" class="radio-label">경매</label>
-						
-						<input type="radio" id="mypage" name="kind">
-						<label for="mypage" class="radio-label">마이페이지</label>
-						
-						<input type="radio" id="another" name="kind">
-						<label for="another" class="radio-label">기타</label>
-				    </div>
-				</div>
-				<div id="title-wrap">
-					<div class="name">
-						<h5>제목<span class="star">*</span></h5>
+					<div id="title-wrap">
+						<div class="name">
+							<h5>제목<span class="star">*</span></h5>
+						</div>
+						<input id="input-text" type="text" name="faqTitle" placeholder="제목을 입력하세요." />
 					</div>
-					<input id="input-text" type="text" placeholder="제목을 입력하세요." />
-				</div>
-				<div>
-					<div class="name">
-						<h5>내용<span class="star">*</span></h5>
+					<div>
+						<div class="name">
+							<h5>내용<span class="star">*</span></h5>
+						</div>
+						<textarea id="register-content" name="faqContent" placeholder="내용을 입력하세요."></textarea>
 					</div>
-					<textarea id="register-content" placeholder="내용을 입력하세요."></textarea>
-				</div>
-				<form action="" method="post">
 					<button id="new-register">등록</button>
 				</form>
 			</div>
