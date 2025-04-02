@@ -11,7 +11,7 @@ import com.app.Result;
 import com.app.dao.AdminDAO;
 import com.app.vo.FaqVO;
 
-public class MypageAdminFaqRegisterOkController implements Action {
+public class MypageAdminFaqContentUpdateOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -19,16 +19,17 @@ public class MypageAdminFaqRegisterOkController implements Action {
 		AdminDAO adminDAO = new AdminDAO();
 		FaqVO faqVO = new FaqVO();
 		
+		faqVO.setId(Long.parseLong(req.getParameter("id")));
 		faqVO.setFaqTitle(req.getParameter("faqTitle"));
 		faqVO.setFaqContent(req.getParameter("faqContent"));
 		faqVO.setFaqCategory(req.getParameter("faqCategory"));
 		
-		adminDAO.insertFaq(faqVO);
-		Long insertedId = adminDAO.selectLastFaqById();
+		Long id = faqVO.getId();
 		
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/mypage/mypage-admin-faq-content.mypage?id=" + insertedId);
-
+		result.setPath("mypage-admin-faq-content.mypage?id=" + id);
+		adminDAO.updateFaq(faqVO);
+		
 		return result;
 	}
 
