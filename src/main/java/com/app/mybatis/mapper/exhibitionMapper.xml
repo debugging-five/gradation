@@ -15,8 +15,22 @@
         ORDER BY TBE.UNIVERSITY_EXHIBITION_DATE DESC
 	</select>
 	
-	<insert id="insertUniversityExhibition" parameterType="UniversityExhibitionDTO">
-		INSERT INTO TBL_UNIVERSITY_EXHIBITION
+	<insert id="insertUniversity" parameterType="MajorDTO" useGeneratedKeys="true" keyProperty="id">
+	    INSERT INTO TBL_UNIVERSITY (UNIVERSITY_NAME, UNIVERSITY_LOCATION, UNIVERSITY_HOMEPAGE)
+	    VALUES (#{universityName}, #{universityLocation}, #{universityHomepage})
 	</insert>
+	
+	<insert id="insertMajor" parameterType="MajorDTO" useGeneratedKeys="true" keyProperty="majorId">
+	    INSERT INTO TBL_MAJOR (MAJOR_NAME, UNIVERSITY_ID)
+	    VALUES (#{majorName}, #{id})
+	</insert>
+	
+	<insert id="insertExhibition" parameterType="MajorDTO" useGeneratedKeys="true" keyProperty="universityExhibitionId">
+	    INSERT INTO TBL_UNIVERSITY_EXHIBITION (UNIVERSITY_EXHIBITION_DATE, MAJOR_ID)
+	    VALUES (#{universityExhibitionDate}, #{majorId})
+	</insert>
+	
+	
+
 
 </mapper>

@@ -58,17 +58,38 @@
     )
 </insert> -->
 
-	<insert id="insertMail" parameterType="MailVO">
+<!--  	<insert id="insertMail" parameterType="MailVO">
 	    INSERT INTO TBL_MAIL (
-	        MAIL_TITLE, MAIL_CONTENTS, MAIL_SEND_TIME, MAIL_OPEN_OK, SEND_USER_ID, RECEIVE_USER_ID
+	        ID, MAIL_TITLE, MAIL_CONTENTS, MAIL_SEND_TIME, MAIL_OPEN_OK, SEND_USER_ID, RECEIVE_USER_ID
 	    ) VALUES (
-	        #{mailTitle}, #{mailContents}, NOW(), 0, #{sendUserId}, #{receiveUserId}
+	        SEQ_MAIL.NEXTVAL, #{mailTitle}, #{mailContents}, #{mailSendTime}, 0, #{sendUserId}, #{receiveUserId}
 	    )
-	</insert>
+	</insert>  -->
 	
-	<select id="getUserIdByName" parameterType="String" resultType="Long" >
+<!-- 	<select id="getUserIdByName" parameterType="String" resultType="Long" >
 	    SELECT ID
 	    FROM TBL_USER
 	    WHERE USER_NAME = #{userName, jdbcType=VARCHAR}
 	</select>
+	
+	<select id="getUserEmailByName" resultType="String">
+	    SELECT USER_EMAIL FROM TBL_USER WHERE USER_NAME = #{userName}
+	</select> -->
+	
+	<insert id="insertMail" parameterType="MailDTO">
+	    INSERT INTO TBL_MAIL (ID, MAIL_TITLE, MAIL_CONTENTS, RECEIVE_USER_ID, MAIL_SEND_TIME, MAIL_OPEN_OK, SEND_USER_ID)
+	    VALUES (
+	        SEQ_MAIL.NEXTVAL,
+	        #{mailTitle},
+	        #{mailContents},
+	        #{receiveUserId}, 
+	        SYSDATE,
+	        #{mailOpenOk, jdbcType=NUMERIC},
+	        #{sendUserId, jdbcType=NUMERIC}
+	    )
+	</insert>
+	
+
+
+	
 </mapper>

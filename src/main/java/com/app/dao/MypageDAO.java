@@ -1,6 +1,8 @@
 package com.app.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -45,24 +47,17 @@ public class MypageDAO {
         return sqlSession.selectList("selectAuctionByUserId", userId);
     }
     
-// 	메일 전송
- 	public void insertMail(MailVO mailVO) {
- 		sqlSession.insert("mypage.insertMail", mailVO);
- 	} 
- 	
-    public Long getUserIdByName(String userName) {
-//        return sqlSession.selectOne("mypage.getUserIdByName", userName);
-    	 System.out.println("📌 getUserIdByName() 호출됨. userName: " + userName);
-
-    	    Long userId = sqlSession.selectOne("getUserIdByName", userName);
-
-    	    System.out.println("📌 DB에서 조회된 userId: " + userId);
-
-    	    if (userId == null) {
-    	        System.out.println("❌ MyBatis에서 userId를 못 찾음!");
-    	    }
-
-    	    return userId;
+    
+    // 메일 전송
+    public void insertMail(MailDTO mailDTO) {
+    	sqlSession.insert("mypage.insertMail", mailDTO);
     }
+	 
+ 	
+	
+
+
+ 	
+ 	
  	
 }
