@@ -51,6 +51,12 @@ public class AdminDAO {
 		sqlSession.insert("admin.insertFaq", faqVO);
 	}
 	
+//	FAQ 등록 후 바로 확인
+	public Long selectLastFaqById() {
+		return sqlSession.selectOne("admin.selectLastFaqById");
+	}
+	
+	
 //	FAQ 수정
 	public void updateFaq(FaqVO faqVO) {
 		sqlSession.update("admin.updateFaq", faqVO);
