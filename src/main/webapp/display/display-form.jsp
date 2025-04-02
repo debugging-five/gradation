@@ -118,7 +118,7 @@
 			<div class="modal-bg" id="modalBg">
 			    <div class="modal">
 			        <div class="modal-title">
-			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/art/	question.png">
+			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
 			        	<span>제출하시겠습니까?</span>
 			        </div>
 			        <div class="modal-footer">

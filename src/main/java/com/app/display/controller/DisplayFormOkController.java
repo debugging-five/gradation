@@ -49,16 +49,18 @@ public class DisplayFormOkController implements Action {
 
         // 필수 값 체크
         String artTitle = multi.getParameter("artTitle");
-        String material = multi.getParameter("material");
-        String size = multi.getParameter("size");
-        String category = multi.getParameter("category");
-        String description = multi.getParameter("description");
+        String artMaterial = multi.getParameter("artMaterial");
+        String artSize = multi.getParameter("artSize");
+        String artCategory = multi.getParameter("artCategory");
+        String artDescription = multi.getParameter("artDescription");
+        
+
 
         if (artTitle == null || artTitle.trim().isEmpty() ||
-            material == null || material.trim().isEmpty() ||
-            size == null || size.trim().isEmpty() ||
-            category == null || category.trim().isEmpty() ||
-            description == null || description.trim().isEmpty()) {
+            artMaterial == null || artMaterial.trim().isEmpty() ||
+            artSize == null || artSize.trim().isEmpty() ||
+            artCategory == null || artCategory.trim().isEmpty() ||
+            artDescription == null || artDescription.trim().isEmpty()) {
             
             result.setRedirect(true);
             result.setPath("display-form.display?error=missingFields");
@@ -69,10 +71,10 @@ public class DisplayFormOkController implements Action {
         artPostDTO.setUserId(userVO.getId());
         artPostDTO.setUserName(userVO.getUserName());
         artPostDTO.setArtTitle(artTitle);
-        artPostDTO.setArtMeterial(material);
-        artPostDTO.setArtSize(size);
-        artPostDTO.setArtCategoty(category);
-        artPostDTO.setArtDescription(description);
+        artPostDTO.setArtMaterial(artMaterial);
+        artPostDTO.setArtSize(artSize);
+        artPostDTO.setArtCategory(artCategory);
+        artPostDTO.setArtDescription(artDescription);
 
         // DB에 저장
         artDAO.insert(artPostDTO);
