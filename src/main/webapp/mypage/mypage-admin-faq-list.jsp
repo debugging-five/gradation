@@ -26,117 +26,10 @@
 				</div>
 				<!-- 자주 묻는 질문  -->
 				<div id="items">
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">1</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">2</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">3</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시회 신청 방법</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">4</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">그라데이션 전시회에 작품이 전시되는 기준</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">5</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">6</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">7</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시회 신청 방법</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">8</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">그라데이션 전시회에 작품이 전시되는 기준</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">9</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">10</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>					
+					<!-- 리스트 들어올 위치 -->
 				</div>
+				
+				
 				<form action="mypage-admin-faq-register.mypage" method="post">
 					<button id="add-faq">등록</button>
 				</form>
@@ -146,7 +39,37 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-admin-faq-list.js"></script>
+<script type="text/javascript">
+	const items = document.getElementById("items");
+	const faqs = ${faqs}
+	/* data-id id가 변수처럼 사용되어 정보를 저장할 수 있다. */
+	/* \ \없이쓸시 EL문법으로 이해하기위해서 JS에서 값만 보여주기위해 앞에\을 붙인다. */
+	faqs.forEach((faq, index) => {
+		items.innerHTML += `
+			<div class="item" data-id="\${faq.id}">
+				<div class="item-number-wrap">
+					<h4 class="item-number">\${index + 1}</h4>
+				</div>
+				<div class="item-kind-wrap">
+					<p class="item-kind">\${faq.faqCategory}</p>
+				</div>
+				<div class="item-title-wrap">
+					<p class="item-title">\${faq.faqTitle}</p>
+				</div>
+			</div>
+		`;
+	});
+	
+	const itemList = document.querySelectorAll(".item")
+
+	itemList.forEach((item) => {
+	    item.addEventListener('click', () => {
+			const id = item.dataset.id;
+			location.href = 'mypage-admin-faq-content.mypage?id=' + id;		
+		});
+	});
+
+</script>
 </html>
 
 
