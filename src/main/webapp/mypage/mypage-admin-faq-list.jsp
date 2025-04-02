@@ -42,23 +42,22 @@
 <script type="text/javascript">
 	const items = document.getElementById("items");
 	const faqs = ${faqs}
-	/* data-id id가 변수처럼 사용되어 정보를 저장할 수 있다. */
-	/* \ \없이쓸시 EL문법으로 이해하기위해서 JS에서 값만 보여주기위해 앞에\을 붙인다. */
-	faqs.forEach((faq, index) => {
-		items.innerHTML += `
-			<div class="item" data-id="\${faq.id}">
-				<div class="item-number-wrap">
-					<h4 class="item-number">\${index + 1}</h4>
-				</div>
-				<div class="item-kind-wrap">
-					<p class="item-kind">\${faq.faqCategory}</p>
-				</div>
-				<div class="item-title-wrap">
-					<p class="item-title">\${faq.faqTitle}</p>
-				</div>
-			</div>
-		`;
-	});
+	
+	faqs.forEach(({id, faqCategory, faqTitle}, index) => {
+		items.innerHTML += (
+			'<div class="item" data-id="' + id + '">' +
+				'<div class="item-number-wrap">' +
+					'<h4 class="item-number">' + (index + 1) + '</h4>' + 
+				'</div>' +
+				'<div class="item-kind-wrap">' +
+					'<p class="item-kind">' + faqCategory + '</p>' +
+				'</div>' + 
+				'<div class="item-title-wrap">' +
+					'<p class="item-title">' + faqTitle + '</p>' +
+				'</div>' + 
+			'</div>'
+		)
+	})
 	
 	const itemList = document.querySelectorAll(".item")
 

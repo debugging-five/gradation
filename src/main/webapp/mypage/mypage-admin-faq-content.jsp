@@ -31,15 +31,11 @@
 				<p id="question-content">
                     <%=faq.getFaqContent() %>
                 </p>
-                <textarea id="answer-input"></textarea>
-                
                 
 				<form action="" method="post">
 					<button type="button" id="list-faq">목록</button>
-					<button id="delete-faq">삭제</button>
-					<button id="modify-faq">수정</button>
-					<button id="cancel-faq">취소</button>
-					<button id="save-faq">저장</button>
+					<button type="button" id="delete-faq">삭제</button>
+					<button type="button" id="modify-faq">수정</button>
 				</form>
 			</div>
 		</div>
@@ -49,7 +45,29 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-admin-faq-content.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+	const listBtn = document.getElementById("list-faq");
+	const deleteBtn = document.getElementById("delete-faq");
+	const modifyBtn = document.getElementById("modify-faq");
+	const id = <%=faq.getId()%>;
+	
+		listBtn.addEventListener("click", () => {
+			location.href = 'mypage-admin-faq-list.mypage';
+		});
+		
+		deleteBtn.addEventListener("click", () => {
+			location.href= 'mypage-admin-faq-delete-ok.mypage?id=' + id;
+		});
+		
+		modifyBtn.addEventListener("click", () => {
+			location.href = 'mypage-admin-faq-content-update.mypage?id=' + id;
+		});	
+});
+
+	
+
+</script>
 </html>
 
 

@@ -38,7 +38,6 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom:36px;
-	border-bottom: solid 1px;
 }
 
 #question {
@@ -48,7 +47,6 @@ body {
 }
 #question-title {
 	display: flex;
-	margin-bottom: 10px;
 }
 #question-content {
 	font-size: var(--font-size-h7);
@@ -69,7 +67,7 @@ textarea {
     height: 220px;
     padding: 4px;
     margin-top: 36px;
-    display: none;
+    display: block;
     border: solid 1.5px;
     font-size: var(--font-size-h7);
     border-radius: 2px;
@@ -79,18 +77,6 @@ textarea {
 button {
 	margin-top:70px;
 	gap: 20px;
-}
-
-#delete-faq, #list-faq {
-	width: 125px;
-	height: 50px;
-	background-color: var(--color-gray100);
-	color: var(--color-primary);
-	font-size: var(--font-size-h5);
-	border: solid 1.5px ;
-	border-radius: 3px;
-	margin-bottom: 200px;
-	margin-right: 20px;
 }
 
 #modify-faq {
@@ -105,7 +91,6 @@ button {
 }
 
 #cancel-faq {
-	display: none;
 	width: 125px;
 	height: 50px;
 	background-color: var(--color-gray100);
@@ -114,6 +99,7 @@ button {
 	border: solid 1.5px;
 	border-radius: 3px;
 	margin-bottom: 200px;
+	margin-right: 20px;
 }
 
 #save-faq {
