@@ -41,7 +41,7 @@
 	
 	<!-- 양식관리 -->
 	
-	 <!-- 작가승인 -->
+	<!-- 작가승인 -->
 	<update id="updateApplyArtist" parameterType="Long">
 		UPDATE TBL_USER
 		SET USER_WRITER_STATUS = '승인'

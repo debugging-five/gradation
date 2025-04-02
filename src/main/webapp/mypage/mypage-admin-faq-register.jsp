@@ -24,19 +24,19 @@
 						<h5>구분<span class="star">*</span></h5>
 					</div>
 				    <div id="kind">
-						<input type="radio" id="art" name="kind">
+						<input type="radio" id="art" name="kind" value="작품전시">
 						<label for="art" class="radio-label">작품 전시</label>
 						
-						<input type="radio" id="exhibition" name="kind">
+						<input type="radio" id="exhibition" name="kind" value="전시회">
 						<label for="exhibition" class="radio-label">전시회</label>
 						
-						<input type="radio" id="auction" name="kind">
+						<input type="radio" id="auction" name="kind" value="경매">
 						<label for="auction" class="radio-label">경매</label>
 						
-						<input type="radio" id="mypage" name="kind">
+						<input type="radio" id="mypage" name="kind" value="마이페이지">
 						<label for="mypage" class="radio-label">마이페이지</label>
 						
-						<input type="radio" id="another" name="kind">
+						<input type="radio" id="another" name="kind" value="기타">
 						<label for="another" class="radio-label">기타</label>
 				    </div>
 				</div>
