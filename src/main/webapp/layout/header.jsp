@@ -1,3 +1,5 @@
+<%@page import="com.app.dao.UserDAO"%>
+<%@page import="com.app.vo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +12,20 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<% 
+	String userEmail = (String) session.getAttribute("loginUser");
+	String userName = null;
+	
+	if(userEmail != null) {
+		UserDAO userDAO = new UserDAO();
+		UserVO userVO = userDAO.selectUserByEmail(userEmail);
+		if(userVO != null) {
+			userName = userVO.getUserName();
+		}
+	}
+%>
+
+
     <header>
         <nav>
            <!-- 로고 이미지 -->
@@ -63,18 +79,31 @@
             </ul>
             <div class="login-section">
 			    <img class="header-bell" src="../assets/images/layout/header/header-bell.png" alt="header-bell">
-			
-			    <!-- sign in 드롭다운 -->
-			    <div class="sign-in-wrap">
-			        <a href="/gradation/login/login-main.user" class="sign-in">sign in</a>
-			        <ul class="dropdown">
-			            <li><a href="/gradation/mypage/mypage-main.mypage">마이페이지</a></li>
-			            <li><a href="/gradation/mypage/mypage-service-center-qna-list.mypage">고객센터</a></li>
-			        </ul>
-			    </div>
+				
+				
+				<% if(userName != null) { %>
+			    	<!-- sign in 드롭다운 -->
+				    <div class="sign-in-wrap">
+				    	<span class="sign-in"><%= userName + "님" %></span>
+				        <ul class="dropdown">
+				            <li><a href="/gradation/mypage/mypage-main.mypage">마이페이지</a></li>
+				            <li><a href="/gradation/mypage/mypage-service-center-qna-list.mypage">고객센터</a></li>
+				            <li><a href="/gradation/logout/logout.user">로그아웃</a></li>
+				        </ul>
+					</div>
+				<% } else { %>
+					<div class="sigin-in-wrap">
+						<a href="/gradation/login/login-main.user" class="sign-in">sign in</a>
+					</div>
+			    <% } %>
 			</div>
         </nav>
     </header>
+    
+    <script type="text/javascript">
+    	const isLoginstatus = <%= (userName != null) ? "true" : "false"  %>;
+    </script>
+    
 </body>
 <script type="text/javascript" src="../assets/js/layout/header.js"></script>
 </html>
