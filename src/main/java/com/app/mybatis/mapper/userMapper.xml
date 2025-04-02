@@ -95,4 +95,13 @@
 		WHERE USER_EMAIL = #{userEmail}
 	</delete>
 	
+	<update id="updateUserUniversityStatus" parameterType="UserVO">
+		UPDATE TBL_USER 
+		SET 
+			USER_UNIVERSITY_STATUS = #{userUniversityStatus},
+			USER_MAJOR_IMG_NAME = #{userMajorImgName},
+			USER_MAJOR_IMG_PATH = #{userMajorImgPath}
+		WHERE USER_IDENTIFICATION = #{userIdentification}
+	</update>
+	
 </mapper>
