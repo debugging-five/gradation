@@ -60,6 +60,8 @@ public class ExhibitionDAO {
     public void insertExhibition(MajorDTO majorDTO) {
         sqlSession.insert("exhibition.insertExhibition", majorDTO);
     }
+    
+    
 
 
 }

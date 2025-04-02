@@ -13,33 +13,34 @@ import javax.servlet.http.HttpSession;
 import com.app.Action;
 import com.app.Result;
 import com.app.dao.MypageDAO;
+import com.app.dao.UserDAO;
 import com.app.dto.MailDTO;
 import com.app.vo.MailVO;
+import com.app.vo.UserVO;
 
 public class MypageContactArtistWriteOkController implements Action {
     @Override
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         Result result = new Result();
-//        HttpSession session = req.getSession();
         MypageDAO mypageDAO = new MypageDAO();
         MailDTO mailDTO = new MailDTO();
-
+        UserDAO userDAO = new UserDAO();
+        HttpSession session = req.getSession();
+        String userEmail = (String) session.getAttribute("loginUser");
+        UserVO sendUserVO = userDAO.selectUserByEmail(userEmail);
+//        System.out.println(sendUserVO);
+        UserVO receiveUserVO = userDAO.selectUserByEmail(req.getParameter("rUserEmail"));
+        System.out.println(req.getParameter("rUserEmail"));
+        System.out.println(receiveUserVO);
+//        System.out.println(sendUserVO);
+       
         
-//        mailVO.setMailTitle(req.getParameter("mailTitle"));
-//        mailVO.setMailContents(req.getParameter("mailContents"));
-//        System.out.println(req.getParameter("mailTitle"));
-//        System.out.println(req.getParameter("mailContents"));
         
-        mailDTO.setReceiveUserId(Long.parseLong(req.getParameter("receiveUserId")));
-        if (mailDTO.getSendUserId() == null) {
-            mailDTO.setSendUserId(0L);
-        }
-//        mailDTO.setrId(Long.parseLong(req.getParameter("rId")));
-//        mailDTO.setrUserName(req.getParameter("rUserName"));
+        mailDTO.setReceiveUserId(receiveUserVO.getId());
+        mailDTO.setSendUserId(sendUserVO.getId());
         mailDTO.setMailTitle(req.getParameter("mailTitle"));
         mailDTO.setMailContents(req.getParameter("mailContents"));
 
-        System.out.println("receiveUserId 값 확인: " + mailDTO.getReceiveUserId());
         
         mypageDAO.insertMail(mailDTO);
 

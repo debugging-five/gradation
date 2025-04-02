@@ -77,15 +77,15 @@
 	</select> -->
 	
 	<insert id="insertMail" parameterType="MailDTO">
-	    INSERT INTO TBL_MAIL (ID, MAIL_TITLE, MAIL_CONTENTS, RECEIVE_USER_ID, MAIL_SEND_TIME, MAIL_OPEN_OK, SEND_USER_ID)
+	    INSERT INTO TBL_MAIL
 	    VALUES (
 	        SEQ_MAIL.NEXTVAL,
 	        #{mailTitle},
 	        #{mailContents},
+	        CURRENT_TIMESTAMP,
+	        0,
 	        #{receiveUserId}, 
-	        SYSDATE,
-	        #{mailOpenOk, jdbcType=NUMERIC},
-	        #{sendUserId, jdbcType=NUMERIC}
+	        #{sendUserId}
 	    )
 	</insert>
 	
