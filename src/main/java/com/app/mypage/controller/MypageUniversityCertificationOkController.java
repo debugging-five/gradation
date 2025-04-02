@@ -26,21 +26,22 @@ public class MypageUniversityCertificationOkController implements Action{
 		
 		String filePath = "/assets/images/user/certification";
 		String directory = req.getServletContext().getRealPath(filePath);
-		System.out.println(directory);
 		int sizeLimit = 20 * 1024 * 1024; // 100mb
 		
 //		폴더가 없으면 만들기
-		File dir = new File(directory);
-		if(!dir.exists()) {
-			dir.mkdirs();
-		}
+//		File dir = new File(directory);
+//		if(!dir.exists()) {
+//			dir.mkdirs();
+//		}
+		
 		MultipartRequest multi = new MultipartRequest(req, directory, sizeLimit, "UTF-8", new DefaultFileRenamePolicy());
-		userVO.setUserUniversityStatus("승인대기");
-		userVO.setUserMajorImgName(multi.getParameter("userMajorImgName"));
+		userVO.setUserUniversityStatus("대기");
+		userVO.setUserMajorImgName(multi.getFilesystemName("userMajorImgName"));
 		userVO.setUserMajorImgPath(filePath);
 		userDAO.updateUserUniversityStatus(userVO);
 		
-		result.setPath("mypage-university-certification.jsp?certification=true");
+		result.setRedirect(true);
+		result.setPath("mypage-university-certification.mypage?certification=true");
 		return result;
 	}
 	
