@@ -30,22 +30,23 @@ public class MypageContactArtistWriteOkController implements Action {
         UserVO sendUserVO = userDAO.selectUserByEmail(userEmail);
 //        System.out.println(sendUserVO);
         UserVO receiveUserVO = userDAO.selectUserByEmail(req.getParameter("rUserEmail"));
-        System.out.println(req.getParameter("rUserEmail"));
-        System.out.println(receiveUserVO);
-//        System.out.println(sendUserVO);
+//        System.out.println(req.getParameter("rUserEmail"));
+//        System.out.println(receiveUserVO);
        
         
         
         mailDTO.setReceiveUserId(receiveUserVO.getId());
+//        System.out.println(receiveUserVO.getId());
         mailDTO.setSendUserId(sendUserVO.getId());
+//        System.out.println(sendUserVO.getId());
         mailDTO.setMailTitle(req.getParameter("mailTitle"));
         mailDTO.setMailContents(req.getParameter("mailContents"));
 
         
         mypageDAO.insertMail(mailDTO);
-
+        
         result.setRedirect(true);
-        result.setPath(req.getContextPath() + "/mypage-contact-artist-list.mypage");
+        result.setPath(req.getContextPath() + "/mypage/mypage-contact-artist-list.mypage");
 
         return result;
     }

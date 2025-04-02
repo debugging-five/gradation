@@ -52,7 +52,11 @@ public class MypageDAO {
     public void insertMail(MailDTO mailDTO) {
     	sqlSession.insert("mypage.insertMail", mailDTO);
     }
-	 
+    
+    // 메일 리스트
+    public List<MailVO> selectMailAll() {
+    	return sqlSession.selectList("mypage.selectMailAll");
+    }
  	
 	
 
