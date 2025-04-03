@@ -31,11 +31,10 @@
 							<div class="column-header-subject">제목</div>
 							<div class="column-header-date">보낸일</div>
 						</div>
-								<%
-							List<MailVO> sentMails = (List<MailVO>) request.getAttribute("sentMails");
+							<%List<MailVO> sentMails = (List<MailVO>) request.getAttribute("sentMails");
 							int count = 1;
 							for (MailVO mail : sentMails) {
-						%>
+							%>
 							<div class="message-row">
 								<div class="column-number"><%= count++ %></div>
 								<div class="column-sender"><%= mail.getReceiveUserName() %></div>
@@ -60,6 +59,8 @@
 			</div>
 		</div>
 	</div>
+	System.out.println("userId in session = " + req.getSession().getAttribute("userId"));
+	
 	<%@ include file="../layout/footer.jsp"%>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {

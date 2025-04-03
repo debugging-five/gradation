@@ -14,17 +14,19 @@ import com.app.Result;
 import com.app.dao.MailDAO;
 import com.app.vo.MailVO;
 
-@WebServlet("/mypage/mypage-post-list.mypage")
-public class MypagePostListController extends HttpServlet {
+public class MypagePostListController implements Action {
     private MailDAO mailDAO = new MailDAO();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Long loginUserId = (Long) req.getSession().getAttribute("userId");
+    public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	Long loginUserId = 1L;
+//    	Long loginUserId = (Long) req.getSession().getAttribute("userId");
         List<MailVO> receivedMails = mailDAO.findReceivedMails(loginUserId);
 
         req.setAttribute("receivedMails", receivedMails);
-        req.getRequestDispatcher("/mypage/mypage-post-list.jsp").forward(req, resp);
+
+        Result result = new Result();
+        result.setPath("/mypage/mypage-post-list.jsp");
+        return result;
     }
 }
-

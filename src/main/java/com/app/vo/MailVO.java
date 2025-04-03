@@ -13,11 +13,12 @@ public class MailVO {
 	private Long receiveUserId;
 	private String sendUserName; // 유저 이름 조회
 	private String receiveUserName;
+	private String sendUserEmail;
 	
 	public MailVO() {;}
 
 	public MailVO(Long id, String mailTitle, String mailContents, Timestamp mailSendTime, int mailOpenOk,
-			Long sendUserId, Long receiveUserId, String sendUserName, String receiveUserName) {
+			Long sendUserId, Long receiveUserId, String sendUserName, String receiveUserName, String sendUserEmail) {
 		super();
 		this.id = id;
 		this.mailTitle = mailTitle;
@@ -28,6 +29,7 @@ public class MailVO {
 		this.receiveUserId = receiveUserId;
 		this.sendUserName = sendUserName;
 		this.receiveUserName = receiveUserName;
+		this.sendUserEmail = sendUserEmail;
 	}
 
 	public Long getId() {
@@ -102,11 +104,20 @@ public class MailVO {
 		this.receiveUserName = receiveUserName;
 	}
 
+	public String getSendUserEmail() {
+		return sendUserEmail;
+	}
+
+	public void setSendUserEmail(String sendUserEmail) {
+		this.sendUserEmail = sendUserEmail;
+	}
+
 	@Override
 	public String toString() {
 		return "MailVO [id=" + id + ", mailTitle=" + mailTitle + ", mailContents=" + mailContents + ", mailSendTime="
 				+ mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId=" + sendUserId + ", receiveUserId="
-				+ receiveUserId + ", sendUserName=" + sendUserName + ", receiveUserName=" + receiveUserName + "]";
+				+ receiveUserId + ", sendUserName=" + sendUserName + ", receiveUserName=" + receiveUserName
+				+ ", sendUserEmail=" + sendUserEmail + "]";
 	}
 
 	@Override
@@ -126,6 +137,5 @@ public class MailVO {
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
 }
+			

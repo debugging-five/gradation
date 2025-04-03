@@ -37,15 +37,15 @@
 							<div class="column-header-date">보낸일</div>
 						</div>
 						<%
-						List<MailVO> sentMails = (List<MailVO>) request.getAttribute("sentMails");
+						List<MailVO> receivedMails = (List<MailVO>) request.getAttribute("receivedMails");
 						int count = 1;
-						for (MailVO mail : sentMails) {
+						for (MailVO mail : receivedMails) {
 						%>
 						<div class="message-row">
 							<div class="column-number"><%=count++%></div>
-							<div class="column-sender"><%=mail.getReceiveUserName()%></div>
+							<div class="column-sender"><%=mail.getSendUserName()%></div>
 							<div class="column-subject">
-								<a href="mypage-my-post-content.mypage?id=<%=mail.getId()%>"
+								<a href="mypage-post-content.mypage?id=<%=mail.getId()%>"
 									class="message-link"> <%=mail.getMailTitle()%>
 								</a>
 							</div>
@@ -59,6 +59,7 @@
 						<%
 						}
 						%>
+
 
 					</div>
 				</div>

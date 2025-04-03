@@ -15,7 +15,28 @@
     ORDER BY M.MAIL_SEND_TIME DESC
 </select>
 
-<select id="findById" resultType="com.app.vo.MailVO">
+<select id="findReceivedMails" resultType="com.app.vo.MailVO">
+    SELECT M.ID,
+           M.MAIL_TITLE,
+           M.MAIL_SEND_TIME,
+           M.SEND_USER_ID,
+           U.USER_NAME AS sendUserName
+    FROM TBL_MAIL M
+    JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
+    WHERE M.RECEIVE_USER_ID = #{userId}
+    ORDER BY M.MAIL_SEND_TIME DESC
+</select>
+
+<resultMap id="mailMap" type="com.app.vo.MailVO">
+    <id property="id" column="ID"/>
+    <result property="mailTitle" column="MAIL_TITLE"/>
+    <result property="mailContents" column="MAIL_CONTENTS"/>
+    <result property="mailSendTime" column="MAIL_SEND_TIME"/>
+    <result property="sendUserId" column="SEND_USER_ID"/>
+    <result property="sendUserName" column="sendUserName"/>
+</resultMap>
+
+<select id="findById" resultMap="mailMap">
     SELECT M.ID,
            M.MAIL_TITLE,
            M.MAIL_CONTENTS,
@@ -26,6 +47,8 @@
     JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
     WHERE M.ID = #{id}
 </select>
+
+
 
 
 
