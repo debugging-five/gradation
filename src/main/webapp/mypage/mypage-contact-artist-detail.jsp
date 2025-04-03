@@ -17,6 +17,9 @@
 
 <body>
 <%@ include file="../layout/header.jsp" %>
+<%
+	MailDTO mail = (MailDTO)request.getAttribute("mail");
+%>
 
 <%--   <%
 	MypageDAO mypageDAO = new MypageDAO();
@@ -69,11 +72,13 @@
 					<p id="content-text">${mail.mailContents}</p>
 				</div>
 				
-				<div id="button-wrapper">
-					<button id="list-button" type="button">목록</button>
-					<button id="delete-button" type="button">삭제</button>
-					<button id="modify-button" type="button" onclick="editMode()">수정</button>
-				</div>
+				<form action="" method="post">
+					<div id="button-wrapper">
+						<button id="list-button" type="button">목록</button>
+						<button id="delete-button" type="button">삭제</button>
+						<button id="modify-button" type="button" onclick="editMode()">수정</button>
+					</div>
+				</form>
 				
 				<!-- 수정 상태의 입력 필드들 -->
 				<div id="edit-fields">
@@ -92,5 +97,16 @@
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-detail.js"></script>
+<!-- <script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-detail.js"></script> -->
+<script type="text/javascript">
+
+	const deleteButton = document.getElementById("delete-button");
+	const id = <%=mail.getId()%>;
+	
+	deleteButton.addEventListener("click", () => {
+			location.href= 'mypage-contact-artist-delete-ok.mypage?id=' + id;
+		});
+		
+
+</script>
 </html>

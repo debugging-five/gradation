@@ -55,7 +55,7 @@
 	    )
 	</insert>
 	
-	<select id="selectMailAll"  resultType="MailDTO">
+	<select id="selectMailAll" resultType="MailDTO">
 	    SELECT TBM.ID, TBM.MAIL_TITLE, TBM.MAIL_SEND_TIME, 
 	           TBM.SEND_USER_ID, TBM.RECEIVE_USER_ID, TBM.MAIL_CONTENTS,
 	           TBU.USER_EMAIL AS rUserEmail  
@@ -74,7 +74,7 @@
 		WHERE TBM.ID = #{id}
 	</select>
 	
-	<delete id="deleteMail" parameterMap="Long">
+	<delete id="deleteMail" parameterType="Long">
 		DELETE FROM TBL_MAIL
 		WHERE ID = #{id}
 	</delete>

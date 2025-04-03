@@ -27,7 +27,6 @@ public class MypageContactArtistDetailController implements Action {
         
         req.setAttribute("sendUserVO", sendUserVO);
         
-        
 		Long id = Long.parseLong(req.getParameter("id"));
 		System.out.println(id);
 		

@@ -18,12 +18,11 @@ public class MypageContactArtistDeleteOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		
 		Long id = Long.parseLong(req.getParameter("id"));
-
 		mypageDAO.deleteMail(id);
 		
 //		작가와 연락 리스트 페이지로 이동
 		result.setRedirect(true);
-		result.setPath("mypage-contact-artist-list.mypage");
+		result.setPath(req.getContextPath() + "/mypage/mypage-contact-artist-list.mypage");
 		return result;
 		
 	}
