@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,142 +36,27 @@
 				</div>
 				<!-- 자주 묻는 질문  -->
 				<div id="items">
-					<div class="item" onclick="location.href='mypage-service-center-qna-content.mypage?qnaId=1'">
-						<div class="item-number-wrap">
-							<h6 class="item-number">1</h6>
+					
+					<c:forEach var="qna" items="${qnaList}" varStatus="status">
+						<div class="item" onclick="location.href='mypage-service-center-qna-content.mypage?qnaId=${qna.qnaId}'">
+							<div class="item-number-wrap">
+								<h6 class="item-number">${status.index + 1}</h6>
+							</div>
+							<div class="item-kind-wrap">
+								<p class="item-kind">${qna.qnaCategory}</p>
+							</div>
+							<div class="item-status-wrap">
+								<p class="item-status">${qna.qnaStatus}</p>
+							</div>
+							<div class="item-title-wrap">
+								<p class="item-title">${qna.qnaTitle}</p>
+							</div>
+							<div class="item-date-wrap">
+								<h6 class="item-date">${qna.dateData}</h6>
+							</div>
 						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">2</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">3</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">4</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">5</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">6</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>						
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">7</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>						
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h6 class="item-number">8</h6>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-status-wrap">
-							<p class="item-status">답변대기</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-						<div class="item-date-wrap">
-							<h6 class="item-date">25.01.25</h6>
-						</div>						
-					</div>
+					</c:forEach>
+					
 					<div class="qna-button-div">
 						<button class="qna-button" onclick="location.href='mypage-service-center-qna-send.mypage'">문의하기</button>
 					</div>

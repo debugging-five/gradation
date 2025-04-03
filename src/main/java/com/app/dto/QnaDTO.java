@@ -11,6 +11,7 @@ public class QnaDTO {
 	private Timestamp qnaTime;
 	private String qnaImgName;
 	private String qnaImgPath;
+	private String qnaCategory;
 	private Long userId;
 	
 //	QnaAnswerVO
@@ -51,22 +52,29 @@ public class QnaDTO {
 	private String userWriterStatus;
 	private String userUniversityStatus;
 	
+//	qnaStatus
+	private String qnaStatus;
+	private String dateData;
+	private String answerDateData;
+	
 	public QnaDTO() {;}
 
 	public QnaDTO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
-			Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime, Long qnaId,
-			String userImgName, String userImgPath, String userName, String userEmail, String userIdentification,
-			String userPassword, String userPhone, String userNickname, String userAddress, String userDetailAddress,
-			String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk, String userIntroduce,
-			String userRecode, String userInstagram, String userYoutube, String userBlog, String userKakao,
-			String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk, Long majorId,
-			String userMajorImgName, String userMajorImgPath, String userWriterStatus, String userUniversityStatus) {
+			String qnaCategory, Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime,
+			Long qnaId, String userImgName, String userImgPath, String userName, String userEmail,
+			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
+			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
+			String userIntroduce, String userRecode, String userInstagram, String userYoutube, String userBlog,
+			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
+			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
+			String userUniversityStatus, String qnaStatus, String dateData, String answerDateData) {
 		this.id = id;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
 		this.qnaTime = qnaTime;
 		this.qnaImgName = qnaImgName;
 		this.qnaImgPath = qnaImgPath;
+		this.qnaCategory = qnaCategory;
 		this.userId = userId;
 		this.qnaAnswerTitle = qnaAnswerTitle;
 		this.qnaAnswerContent = qnaAnswerContent;
@@ -102,6 +110,9 @@ public class QnaDTO {
 		this.userMajorImgPath = userMajorImgPath;
 		this.userWriterStatus = userWriterStatus;
 		this.userUniversityStatus = userUniversityStatus;
+		this.qnaStatus = qnaStatus;
+		this.dateData = dateData;
+		this.answerDateData = answerDateData;
 	}
 
 	public Long getId() {
@@ -150,6 +161,14 @@ public class QnaDTO {
 
 	public void setQnaImgPath(String qnaImgPath) {
 		this.qnaImgPath = qnaImgPath;
+	}
+
+	public String getQnaCategory() {
+		return qnaCategory;
+	}
+
+	public void setQnaCategory(String qnaCategory) {
+		this.qnaCategory = qnaCategory;
 	}
 
 	public Long getUserId() {
@@ -432,23 +451,28 @@ public class QnaDTO {
 		this.userUniversityStatus = userUniversityStatus;
 	}
 
-	@Override
-	public String toString() {
-		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
-				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId
-				+ ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent + ", qnaAnswerTime="
-				+ qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName + ", userImgPath=" + userImgPath
-				+ ", userName=" + userName + ", userEmail=" + userEmail + ", userIdentification=" + userIdentification
-				+ ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userNickname=" + userNickname
-				+ ", userAddress=" + userAddress + ", userDetailAddress=" + userDetailAddress + ", userPostalCode="
-				+ userPostalCode + ", userSnsOk=" + userSnsOk + ", userMailOk=" + userMailOk + ", userAgreementOk="
-				+ userAgreementOk + ", userIntroduce=" + userIntroduce + ", userRecode=" + userRecode
-				+ ", userInstagram=" + userInstagram + ", userYoutube=" + userYoutube + ", userBlog=" + userBlog
-				+ ", userKakao=" + userKakao + ", userGoogle=" + userGoogle + ", userNaver=" + userNaver
-				+ ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk + ", userBanOk=" + userBanOk
-				+ ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName + ", userMajorImgPath="
-				+ userMajorImgPath + ", userWriterStatus=" + userWriterStatus + ", userUniversityStatus="
-				+ userUniversityStatus + "]";
+	public String getQnaStatus() {
+		return qnaStatus;
+	}
+
+	public void setQnaStatus(String qnaStatus) {
+		this.qnaStatus = qnaStatus;
+	}
+
+	public String getDateData() {
+		return dateData;
+	}
+
+	public void setDateData(String dateData) {
+		this.dateData = dateData;
+	}
+
+	public String getAnswerDateData() {
+		return answerDateData;
+	}
+
+	public void setAnswerDateData(String answerDateData) {
+		this.answerDateData = answerDateData;
 	}
 
 	@Override
@@ -468,4 +492,26 @@ public class QnaDTO {
 		return Objects.equals(id, other.id);
 	}
 
+	@Override
+	public String toString() {
+		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
+				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", qnaCategory=" + qnaCategory
+				+ ", userId=" + userId + ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent
+				+ ", qnaAnswerTime=" + qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName
+				+ ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
+				+ ", userIdentification=" + userIdentification + ", userPassword=" + userPassword + ", userPhone="
+				+ userPhone + ", userNickname=" + userNickname + ", userAddress=" + userAddress + ", userDetailAddress="
+				+ userDetailAddress + ", userPostalCode=" + userPostalCode + ", userSnsOk=" + userSnsOk
+				+ ", userMailOk=" + userMailOk + ", userAgreementOk=" + userAgreementOk + ", userIntroduce="
+				+ userIntroduce + ", userRecode=" + userRecode + ", userInstagram=" + userInstagram + ", userYoutube="
+				+ userYoutube + ", userBlog=" + userBlog + ", userKakao=" + userKakao + ", userGoogle=" + userGoogle
+				+ ", userNaver=" + userNaver + ", userWriterOk=" + userWriterOk + ", userAdminOk=" + userAdminOk
+				+ ", userBanOk=" + userBanOk + ", majorId=" + majorId + ", userMajorImgName=" + userMajorImgName
+				+ ", userMajorImgPath=" + userMajorImgPath + ", userWriterStatus=" + userWriterStatus
+				+ ", userUniversityStatus=" + userUniversityStatus + ", qnaStatus=" + qnaStatus + ", dateData="
+				+ dateData + ", answerDateData=" + answerDateData + "]";
+	}
+
+	
+	
 }

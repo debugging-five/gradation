@@ -30,8 +30,6 @@ public class MypageMainController implements Action{
 		
 		String userEmail = (String)session.getAttribute("loginUser");
 		
-		System.out.println(userEmail);
-		
 		UserVO userVO = userDAO.selectUserByEmail(userEmail);
 		req.setAttribute("userIdentification", userVO.getUserIdentification());
 		req.setAttribute("userNickname", userVO.getUserNickname() == null ? "미등록": userVO.getUserNickname());
