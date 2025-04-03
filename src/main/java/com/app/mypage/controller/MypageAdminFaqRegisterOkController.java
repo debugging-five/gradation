@@ -26,10 +26,6 @@ public class MypageAdminFaqRegisterOkController implements Action {
 		adminDAO.insertFaq(faqVO);
 		Long insertedId = adminDAO.selectLastFaqById();
 		
-		System.out.println(req.getParameter("faqTitle"));
-		System.out.println(req.getParameter("faqContent"));
-		System.out.println(req.getParameter("faqCategory"));
-		
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/mypage/mypage-admin-faq-content.mypage?id=" + insertedId);
 

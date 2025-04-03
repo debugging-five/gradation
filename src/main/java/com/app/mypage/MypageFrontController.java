@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.mypage.controller.MypageSendPostContentModifyController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
+import com.app.mypage.controller.MypageAdminFaqContentDeleteController;
+import com.app.mypage.controller.MypageAdminFaqContentUpdateController;
+import com.app.mypage.controller.MypageAdminFaqContentUpdateOkController;
 import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
 import com.app.mypage.controller.MypageAdminFaqRegisterOkController;
@@ -21,6 +24,8 @@ import com.app.mypage.controller.MypageAdminQnaListCompletedController;
 import com.app.mypage.controller.MypageAdminQnaListWaitingController;
 import com.app.mypage.controller.MypageAdminUserManageController;
 import com.app.mypage.controller.MypageArtLikeListControllerController;
+import com.app.mypage.controller.MypageArtistDetailModifyController;
+import com.app.mypage.controller.MypageArtistDetailModifyOkController;
 import com.app.mypage.controller.MypageChangePasswordController;
 import com.app.mypage.controller.MypageCommentsListController;
 import com.app.mypage.controller.MypageContactArtistDeleteOkController;
@@ -54,6 +59,8 @@ import com.app.mypage.controller.MypageServiceCenterQnaSendController;
 import com.app.mypage.controller.MypageServiceCenterQnaSendOkController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateController;
 import com.app.mypage.controller.MypageServiceCenterQnaUpdateOkController;
+import com.app.mypage.controller.MypageUniversityCertificationController;
+import com.app.mypage.controller.MypageUniversityCertificationOkController;
 import com.app.mypage.controller.mypageChangePasswordOkController;
 
 public class MypageFrontController extends HttpServlet{
@@ -126,6 +133,14 @@ public class MypageFrontController extends HttpServlet{
           result = new MypageServiceCenterFaqListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-service-center-faq-content")) {
           result = new MypageServiceCenterFaqContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-university-certification")) {
+          result = new MypageUniversityCertificationController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-university-certification-ok")) {
+          result = new MypageUniversityCertificationOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-artist-detail-modify")) {
+          result = new MypageArtistDetailModifyController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-artist-detail-modify-ok")) {
+          result = new MypageArtistDetailModifyOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-my-auction-list")) {
           result = new MypageMyAuctionList().execute(req, resp);
       }else if(target.equals("mypage/mypage-my-pay-list")) {
@@ -139,8 +154,8 @@ public class MypageFrontController extends HttpServlet{
       }else if(target.equals("mypage/mypage-send-email")) {
      	  result = new MypageSendEmailController().execute(req, resp);
 
-//    admin
       }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
+//    admin
           result = new MypageAdminQnaListWaitingController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
           result = new MypageAdminQnaListCompletedController().execute(req, resp);
@@ -164,7 +179,12 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageAdminFaqRegisterController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-faq-register-ok")) {
           result = new MypageAdminFaqRegisterOkController().execute(req, resp);
-          
+      }else if(target.equals("mypage/mypage-admin-faq-content-update")) {
+          result = new MypageAdminFaqContentUpdateController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-faq-content-update-ok")) {
+          result = new MypageAdminFaqContentUpdateOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-faq-delete-ok")) {
+          result = new MypageAdminFaqContentDeleteController().execute(req, resp);    
       }else if(target.equals("mypage/mypage-admin-faq-content")) {
          result = new MypageAdminFaqContentController().execute(req, resp);
       }else {

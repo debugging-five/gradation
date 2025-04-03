@@ -25,7 +25,7 @@
 				<div class="input-wrapper">
 					<div class="input-artist">
 						<h5>작가명<span class="star">*</span></h5>
-						<input type="text" name="receiveUserName" placeholder="작가명을 입력하세요."/>
+						<input type="text" name="rUserEmail" placeholder="작가명을 입력하세요."/>
 					</div>
 				</div>
 				

@@ -172,6 +172,15 @@
 	      		clickable: true,
 	    	},
 	  	});
+	    verticalSwiper.el.addEventListener("wheel", (e) => {
+			if (verticalSwiper.isEnd) {
+				if (e.deltaY > 0) {
+					verticalSwiper.mousewheel.disable();
+				} else {
+					verticalSwiper.mousewheel.enable();
+				}
+			}
+		});
 	});
 
 </script>
