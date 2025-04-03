@@ -5,6 +5,7 @@
 <%@page import="com.app.dao.MypageDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +14,11 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-contact-artist-detail.css" />
 <title>내 활동 / 작가와 연락 상세 페이지</title>
 </head>
+
 <body>
 <%@ include file="../layout/header.jsp" %>
 
-<%-- <%
+<%--   <%
 	MypageDAO mypageDAO = new MypageDAO();
 	Long id = Long.parseLong(request.getParameter("id"));
 	Optional<MailDTO> foundMail = mypageDAO.selectMail(id);
@@ -24,8 +26,9 @@
 	
 	if (foundMail.isPresent()) {
 		MailDTO mail = foundMail.get();
-%> --%>
-	
+%>   --%>
+
+
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
@@ -75,7 +78,7 @@
 				<!-- 수정 상태의 입력 필드들 -->
 				<div id="edit-fields">
 					<div id="content-edit">
-						<textarea id="content-input">${mail.moailContents}</textarea>
+						<textarea id="content-input">${mail.mailContents}</textarea>
 					</div>
 					<div id="save-cancel-buttons">
 						<button id="cancel-button" type="button" onclick="cancelEdit()">취소</button>
@@ -88,7 +91,6 @@
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
-	
 </body>
 <script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-detail.js"></script>
 </html>

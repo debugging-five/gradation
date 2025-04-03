@@ -48,7 +48,6 @@ public class MypageDAO {
         return sqlSession.selectList("selectAuctionByUserId", userId);
     }
     
-    
     // 메일 전송
     public void insertMail(MailDTO mailDTO) {
     	sqlSession.insert("mypage.insertMail", mailDTO);
@@ -61,7 +60,7 @@ public class MypageDAO {
     
     // 메일 단일 조회
     public Optional<MailDTO> selectMail(Long id) {
-    	return Optional.ofNullable(sqlSession.selectOne("mail.selectMail", id));
+    	return Optional.ofNullable(sqlSession.selectOne("mypage.selectMail", id));
     }
     
  	

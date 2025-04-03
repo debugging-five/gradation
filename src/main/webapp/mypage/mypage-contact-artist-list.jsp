@@ -28,7 +28,7 @@
 				<!-- 작가와 연락 리스트 -->
 				<div id="items">
 					<c:forEach var="mail" items="${mailList}" varStatus="status">
-					    	<div class="item"  onclick="location.href ='${pageContext.request.contextPath}/mypage/mypage-contact-artist-detail?id=${mail.id}'">
+					    	<div class="item" onclick="location.href='mypage-contact-artist-detail.mypage?id=${mail.id}'">
 					            <div class="item-number-wrap">
 					                <h4>${status.index + 1}</h4>
 					            </div>
@@ -57,5 +57,8 @@
 
 	<%@ include file="../layout/footer.jsp" %>
 </body>
+<script>
+console.log('${pageContext.request.contextPath}')
+</script> 
 
 </html>
