@@ -14,16 +14,20 @@ import com.app.dto.ArtDTO;
 
 public class DisplayMainIngController implements Action {
 	private String getLocalizedCategory(String category) {
-	    switch (category) {
-	        case "korean": return "한국화";
-	        case "painting": return "회화";
-	        case "sculpture": return "조각";
-	        case "craft": return "공예";
-	        case "architecture": return "건축";
-	        case "calligraphy": return "서예";
-	        default: return null;
-	    }
-	}
+		 if (category == null || category.isEmpty()) {
+		        return null;
+		    }
+
+		    switch (category) {
+		        case "korean": return "한국화";
+		        case "painting": return "회화";
+		        case "sculpture": return "조각";
+		        case "craft": return "공예";
+		        case "architecture": return "건축";
+		        case "calligraphy": return "서예";
+		        default: return null;
+		    }
+		}
 
     @Override
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

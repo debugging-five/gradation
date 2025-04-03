@@ -71,4 +71,30 @@ public class ArtDAO {
     public int getTotalDisplayCount() {
         return sqlSession.selectOne("art.selectDisplayCount");
     }
+    
+    public int getCommingSoonCount() {
+        return sqlSession.selectOne("art.selectCommingSoonCount");
+    }
+
+    public List<ArtDTO> selectCommingSoonList(int startIndex, int pageSize) {
+        Map<String, Integer> pageInfo = new HashMap<>();
+        pageInfo.put("startRow", startIndex);
+        pageInfo.put("endRow", startIndex + pageSize);
+        return sqlSession.selectList("art.selectCommingSoonList", pageInfo);
+    }
+
+    public int getFilteredCommingSoonCount(String category) {
+        Map<String, Object> param = new HashMap<>();
+        param.put("category", category);
+        return sqlSession.selectOne("art.selectCommingSoonCountFiltered", param);
+    }
+
+    public List<ArtDTO> selectCommingSoonListFiltered(int startIndex, int pageSize, String category) {
+        Map<String, Object> pageInfo = new HashMap<>();
+        pageInfo.put("startRow", startIndex);
+        pageInfo.put("endRow", startIndex + pageSize);
+        pageInfo.put("category", category);
+        return sqlSession.selectList("art.selectCommingSoonListFiltered", pageInfo);
+    }
+
 }

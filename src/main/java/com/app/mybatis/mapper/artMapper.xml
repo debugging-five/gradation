@@ -163,6 +163,88 @@
 		WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
 	</select>
 
+<!-- 전시예정 작품 전체 개수 -->
+<select id="selectCommingSoonCount" resultType="int">
+    SELECT COUNT(*)
+    FROM TBL_ART A
+    JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
+    WHERE A.ART_START_DATE &gt; SYSDATE
+</select>
+
+<!-- 전시예정 작품 전체 조회 -->
+<select id="selectCommingSoonList" resultType="ArtDTO" parameterType="map">
+    SELECT *
+    FROM (
+        SELECT
+            A.ID AS artId,
+            A.ART_TITLE AS artTitle,
+            A.ART_CATEGORY AS artCategory,
+            A.ART_START_DATE AS artStartDate,
+            U.USER_NAME AS userName,
+            I.ART_IMG_NAME AS artImgName,
+            I.ART_IMG_PATH AS artImgPath,
+            ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE ASC) AS rnum
+        FROM TBL_ART A
+        JOIN TBL_USER U ON A.USER_ID = U.ID
+        JOIN (
+            SELECT *
+            FROM (
+                SELECT
+                    ART_ID,
+                    ART_IMG_NAME,
+                    ART_IMG_PATH,
+                    ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
+                FROM TBL_ART_IMG
+            )
+            WHERE rn = 1
+        ) I ON A.ID = I.ART_ID
+        WHERE A.ART_START_DATE &gt; SYSDATE
+    )
+    WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
+</select>
+
+<select id="selectCommingSoonCountFiltered" resultType="int" parameterType="map">
+    SELECT COUNT(*)
+    FROM TBL_ART A
+    WHERE A.ART_START_DATE &gt; SYSDATE
+    <if test="category != null and category != ''">
+        AND A.ART_CATEGORY = #{category}
+    </if>
+</select>
+
+<select id="selectCommingSoonListFiltered" resultType="ArtDTO" parameterType="map">
+    SELECT *
+    FROM (
+        SELECT
+            A.ID AS artId,
+            A.ART_TITLE AS artTitle,
+            A.ART_CATEGORY AS artCategory,
+            A.ART_START_DATE AS artStartDate,
+            U.USER_NAME AS userName,
+            I.ART_IMG_NAME AS artImgName,
+            I.ART_IMG_PATH AS artImgPath,
+            ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE ASC) AS rnum
+        FROM TBL_ART A
+        JOIN TBL_USER U ON A.USER_ID = U.ID
+        JOIN (
+            SELECT *
+            FROM (
+                SELECT
+                    ART_ID,
+                    ART_IMG_NAME,
+                    ART_IMG_PATH,
+                    ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
+                FROM TBL_ART_IMG
+            )
+            WHERE rn = 1
+        ) I ON A.ID = I.ART_ID
+        WHERE A.ART_START_DATE &gt; SYSDATE
+        <if test="category != null and category != ''">
+            AND A.ART_CATEGORY = #{category}
+        </if>
+    )
+    WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
+</select>
 
 
 

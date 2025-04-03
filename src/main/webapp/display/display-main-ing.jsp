@@ -119,21 +119,21 @@ String category = request.getParameter("category");
 						%>
 						<div class="gallery-item">
 							<div class="gallery-hover-container">
-								<img class="gallery-image"
+								<a href="display-detail.display?artId=<%=art.getArtId()%>">
+									<img class="gallery-image"
 									src="<%=request.getContextPath() + art.getArtImgPath() + art.getArtImgName()%>"
 									alt="<%=art.getArtTitle()%>"
 									data-date="<%=art.getArtStartDate()%>" />
-									
+								</a>
 								<div class="hover-overlay">
 									<div class="hover-text-group">
 										<div class="hover-title"><%=art.getArtTitle()%></div>
 										<div class="hover-artist"><%=art.getUserName()%></div>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
-<p style="color:red;"><%= art.getArtTitle() %> - <%= art.getArtCategory() %></p>
 						<%
 						} // inner loop
 						%>
@@ -144,11 +144,8 @@ String category = request.getParameter("category");
 					}
 					%>
 				</div>
-				
-			</div>
-				<p>현재 카테고리: <%= request.getParameter("category") %></p>
-<p>가져온 작품 수: <%= (artList != null) ? artList.size() : 0 %></p>
 
+			</div>
 
 			<%
 			int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
