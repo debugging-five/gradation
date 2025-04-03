@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,116 +34,19 @@
 				</div>
 				<!-- 자주 묻는 질문  -->
 				<div id="items">
-					<div class="item" onclick="location.href='mypage-service-center-faq-content.mypage?faqId=1'">
-						<div class="item-number-wrap">
-							<h4 class="item-number">1</h4>
+					<c:forEach var="faq" items="${faqList}">
+						<div class="item" onclick="location.href='mypage-service-center-faq-content.mypage?faqId=${faq.id}'">
+							<div class="item-number-wrap">
+								<h4 class="item-number">${faq.id}</h4>
+							</div>
+							<div class="item-kind-wrap">
+								<p class="item-kind">${faq.faqCategory}</p>
+							</div>
+							<div class="item-title-wrap">
+								<p class="item-title">${faq.faqTitle}</p>
+							</div>
 						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">2</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">3</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시회 신청 방법</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">4</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">그라데이션 전시회에 작품이 전시되는 기준</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">5</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">6</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">7</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시회 신청 방법</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">8</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">그라데이션 전시회에 작품이 전시되는 기준</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">9</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">전시회 관리</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">전시가 안될땐 어떻게 해야 하나요?</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">10</h4>
-						</div>
-						<div class="item-kind-wrap">
-							<p class="item-kind">경매</p>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-title">경매금액을 잘못 올렸다면 어떻게 해야 하나요?</p>
-						</div>
-					</div>					
+					</c:forEach>	
 				</div>
 			</div>
 		</div>

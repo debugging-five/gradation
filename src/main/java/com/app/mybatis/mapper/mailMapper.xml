@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mail">
+
+<select id="findSentMails" resultType="com.app.vo.MailVO">
+    SELECT M.ID,
+           M.MAIL_TITLE,
+           M.MAIL_SEND_TIME,
+           M.RECEIVE_USER_ID,
+           U.USER_NAME AS receiveUserName
+    FROM TBL_MAIL M
+    JOIN TBL_USER U ON M.RECEIVE_USER_ID = U.ID
+    WHERE M.SEND_USER_ID = #{userId}
+    ORDER BY M.MAIL_SEND_TIME DESC
+</select>
+
+<select id="findById" resultType="com.app.vo.MailVO">
+    SELECT M.ID,
+           M.MAIL_TITLE,
+           M.MAIL_CONTENTS,
+           M.MAIL_SEND_TIME,
+           M.SEND_USER_ID,
+           U.USER_NAME AS sendUserName
+    FROM TBL_MAIL M
+    JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
+    WHERE M.ID = #{id}
+</select>
+
+
+
+
+</mapper>

@@ -19,23 +19,6 @@ public class AdminDAO {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 //	FAQ 전체 조회
 	public List<FaqVO> selectFaqAll() {
 		return sqlSession.selectList("admin.selectFaqAll");

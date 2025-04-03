@@ -18,18 +18,14 @@ public class MypageAdminFaqRegisterOkController implements Action {
 		Result result = new Result();
 		AdminDAO adminDAO = new AdminDAO();
 		FaqVO faqVO = new FaqVO();
-		
+
 		faqVO.setFaqTitle(req.getParameter("faqTitle"));
 		faqVO.setFaqContent(req.getParameter("faqContent"));
 		faqVO.setFaqCategory(req.getParameter("faqCategory"));
 		
 		adminDAO.insertFaq(faqVO);
 		Long insertedId = adminDAO.selectLastFaqById();
-		
-		System.out.println(req.getParameter("faqTitle"));
-		System.out.println(req.getParameter("faqContent"));
-		System.out.println(req.getParameter("faqCategory"));
-		
+
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/mypage/mypage-admin-faq-content.mypage?id=" + insertedId);
 

@@ -87,7 +87,7 @@
 	<select id="selectFaqAll" resultType="FaqVO">
 		SELECT ID, FAQ_TITLE, FAQ_CATEGORY 
 		FROM TBL_FAQ
-		ORDER BY ID DESC
+		ORDER BY ID
 	</select>
 	
 	<!-- FAQ 하나 조회 -->

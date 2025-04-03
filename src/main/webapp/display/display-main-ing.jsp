@@ -76,20 +76,21 @@ String category = request.getParameter("category");
 							src="../assets/images/display/art/upload.png" alt="icon" /></a>
 					</div>
 					<div class="sort-options">
-						<div class="sort-select">
-							<div class="sort-label">정렬</div>
+						<div class="sort-select" onclick="toggleSortDropdown()">
+							<div class="sort-label" id="selectedSort">
+								<span id="currentSortText">등록일순</span>
+							</div>
 							<img class="sort-icon"
-								src="../assets/images/display/art/sort.png" alt="sort"
-								onclick="toggleSortDropdown()" />
+								src="../assets/images/display/art/sort.png" alt="sort" />
 							<div class="sort-dropdown" id="sortDropdown">
-								<div class="sort-option" onclick="sortGallery('date')">
-									등록일순</div>
-								<div class="sort-option" onclick="sortGallery('name-asc')">
-									이름 오름차순</div>
-								<div class="sort-option" onclick="sortGallery('name-desc')">
-									이름 내림차순</div>
+								<div class="sort-option" onclick="sortGallery('date', '등록일순')">등록일순</div>
+								<div class="sort-option"
+									onclick="sortGallery('name-asc', '오름차순')">오름차순</div>
+								<div class="sort-option"
+									onclick="sortGallery('name-desc', '내림차순')">내림차순</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -214,55 +215,52 @@ String category = request.getParameter("category");
 	</div>
 	<%@ include file="../layout/footer.jsp"%>
 	<script>
-  function toggleSortDropdown() {
+  document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.getElementById("sortDropdown");
-    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
-  }
+    const currentSortText = document.getElementById("currentSortText");
 
-  function sortGallery(type) {
-	  const columns = document.querySelectorAll(".gallery-column");
+    window.toggleSortDropdown = function () {
+      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+    };
 
-	  columns.forEach(column => {
-	    const items = Array.from(column.querySelectorAll(".gallery-item"));
+    window.sortGallery = function (type, label) {
+      const columns = document.querySelectorAll(".gallery-column");
 
-	    items.sort((a, b) => {
-	      const altA = a.querySelector(".gallery-image").alt;
-	      const altB = b.querySelector(".gallery-image").alt;
+      columns.forEach(column => {
+        const items = Array.from(column.querySelectorAll(".gallery-item"));
 
-	      if (type === "name-asc") {
-	        return altA.localeCompare(altB);
-	      } else if (type === "name-desc") {
-	        return altB.localeCompare(altA);
-	      } else if (type === "date") {
-	        const dateA = a.querySelector(".gallery-image").dataset.date || "2000-01-01";
-	        const dateB = b.querySelector(".gallery-image").dataset.date || "2000-01-01";
-	        return new Date(dateA) - new Date(dateB);
-	      }
-	    });
+        items.sort((a, b) => {
+          const altA = a.querySelector(".gallery-image").alt;
+          const altB = b.querySelector(".gallery-image").alt;
 
-	    items.forEach(item => column.appendChild(item));
-	  });
+          if (type === "name-asc") {
+            return altA.localeCompare(altB);
+          } else if (type === "name-desc") {
+            return altB.localeCompare(altA);
+          } else {
+            const dateA = new Date(a.querySelector(".gallery-image").dataset.date || "2000-01-01");
+            const dateB = new Date(b.querySelector(".gallery-image").dataset.date || "2000-01-01");
+            return dateA - dateB;
+          }
+        });
 
-	  document.getElementById("sortDropdown").style.display = "none";
-	}
-  document.querySelectorAll('.category-link').forEach(link => {
-	  link.addEventListener('click', function () {
+        items.forEach(item => column.appendChild(item));
+      });
 
-	    document.querySelectorAll('.category-link').forEach(el => el.classList.remove('active'));
-
-	    this.classList.add('active');
-	  });
-	});
-
-
-  document.addEventListener("click", function (e) {
-    const dropdown = document.getElementById("sortDropdown");
-    const sortIcon = document.querySelector(".sort-icon");
-
-    if (!dropdown.contains(e.target) && e.target !== sortIcon) {
+      if (currentSortText) currentSortText.textContent = label;
       dropdown.style.display = "none";
-    }
+    };
+
+    document.addEventListener("click", function (e) {
+      const sortSelect = document.querySelector(".sort-select");
+      if (!sortSelect.contains(e.target)) {
+        dropdown.style.display = "none";
+      }
+    });
+
+    if (currentSortText) currentSortText.textContent = "등록일순";
   });
 </script>
+
 </body>
 </html>

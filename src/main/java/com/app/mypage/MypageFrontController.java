@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.mypage.controller.MypageSendPostContentModifyController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
+import com.app.mypage.controller.MypageAdminFaqContentDeleteController;
+import com.app.mypage.controller.MypageAdminFaqContentUpdateController;
+import com.app.mypage.controller.MypageAdminFaqContentUpdateOkController;
 import com.app.mypage.controller.MypageAdminFaqListController;
 import com.app.mypage.controller.MypageAdminFaqRegisterController;
 import com.app.mypage.controller.MypageAdminFaqRegisterOkController;
@@ -176,7 +179,12 @@ public class MypageFrontController extends HttpServlet{
          result = new MypageAdminFaqRegisterController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-faq-register-ok")) {
           result = new MypageAdminFaqRegisterOkController().execute(req, resp);
-          
+      }else if(target.equals("mypage/mypage-admin-faq-content-update")) {
+          result = new MypageAdminFaqContentUpdateController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-faq-content-update-ok")) {
+          result = new MypageAdminFaqContentUpdateOkController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-faq-delete-ok")) {
+          result = new MypageAdminFaqContentDeleteController().execute(req, resp);    
       }else if(target.equals("mypage/mypage-admin-faq-content")) {
          result = new MypageAdminFaqContentController().execute(req, resp);
       }else {

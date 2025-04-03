@@ -17,13 +17,6 @@ public class UniversityExhibitionController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		ExhibitionDAO exhibitionDAO = new ExhibitionDAO();
-		
-		List<UniversityExhibitionDTO> exhibitionList = exhibitionDAO.selectUniversityExhibitionList(); // 메서드 호출
-		
-		req.setAttribute(null, exhibitionDAO);
-		
-		 req.setAttribute("exhibitionList", exhibitionList);
 		
 		result.setPath("university-exhibition-main.jsp");
 		
