@@ -30,8 +30,9 @@
 					<div id="checkboxs-wrap">						
 						<span class="h5-text">구분</span>
 						<span class="red-star">*</span>
+						<input type="hidden" id="radio-check" value="${qna.qnaCategory}"/>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-display"/>
+							<input name="qnaCategory" class="check-label" type="radio" id="check-display" />
 				  			<label class="checkbox-label" for="check-display">
 				  				<span class="check-label-span">작품전시</span>
 				  			</label>
@@ -65,26 +66,20 @@
 			  		<div id="title-wrap">
 			  			<span class="h5-text">제목</span>
 						<span class="red-star">*</span>
-			  			<input type="text" placeholder="제목을 입력하세요">
+			  			<input type="text" placeholder="제목을 입력하세요" value="${qna.qnaTitle}">
 			  		</div>
 			  		
 			  		<div id="textarea-content">
 						<h5>내용<span class="red-star">*</span></h5>
-						<textarea name="qnaContent" placeholder="내용을 입력해 주세요"></textarea>
+						<textarea name="qnaContent" placeholder="내용을 입력해 주세요">${qna.qnaContent}</textarea>
 					</div>
 					
 					<div class="filebox">
 						<span class="h5-text" >첨부파일</span>
 					    <label for="file-input">첨부파일</label>
-					    <span id="file-name"> </span>
+					    <span id="file-name">${qna.qnaImgName}</span>
 					    <input type="file" id="file-input">
 					</div>
-					
-					<div id="email-wrap">
-			  			<span class="h5-text">이메일</span>
-						<span class="red-star">*</span>
-			  			<input type="text" placeholder="이메일을 입력하세요">
-			  		</div>
 				
 					<div class="submit-button-div">
 						<button class="submit-button" type="submit">수정</button>
@@ -98,6 +93,6 @@
 
 	
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-service-center-qna-send.js">
+<script type="text/javascript" src="../assets/js/mypage/mypage-service-center-qna-update.js">
 </script>
 </html>

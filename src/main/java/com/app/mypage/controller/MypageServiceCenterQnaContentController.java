@@ -58,8 +58,6 @@ public class MypageServiceCenterQnaContentController implements Action {
 		
 		req.setAttribute("qna", qna);
 		
-		System.out.println(qna);
-		
 		result.setPath("mypage-service-center-qna-content.jsp");
 		return result;
 	}

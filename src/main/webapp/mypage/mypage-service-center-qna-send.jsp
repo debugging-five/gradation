@@ -65,12 +65,12 @@
 			  		<div id="title-wrap">
 			  			<span class="h5-text">제목</span>
 						<span class="red-star">*</span>
-			  			<input type="text" placeholder="제목을 입력하세요">
+			  			<input type="text" name="qnaTitle" id="qna-title" placeholder="제목을 입력하세요">
 			  		</div>
 			  		
 			  		<div id="textarea-content">
 						<h5>내용<span class="red-star">*</span></h5>
-						<textarea name="qnaContent" placeholder="내용을 입력해 주세요"></textarea>
+						<textarea name="qnaContent" id="qna-content" placeholder="내용을 입력해 주세요"></textarea>
 					</div>
 					
 					<div class="filebox">
@@ -79,15 +79,9 @@
 					    <span id="file-name"> </span>
 					    <input type="file" id="file-input">
 					</div>
-					
-					<div id="email-wrap">
-			  			<span class="h5-text">이메일</span>
-						<span class="red-star">*</span>
-			  			<input type="text" placeholder="이메일을 입력하세요">
-			  		</div>
 				
 					<div class="submit-button-div">
-						<button class="submit-button" type="submit">등록</button>
+						<button class="submit-button" id="submit-button" type="button">등록</button>
 					</div>
 				</form>
 			</div>
