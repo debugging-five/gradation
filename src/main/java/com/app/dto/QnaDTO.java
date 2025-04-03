@@ -6,12 +6,12 @@ import java.util.Objects;
 public class QnaDTO {
 //	qnaVO
 	private Long id;
+	private String qnaCategory;
 	private String qnaTitle;
 	private String qnaContent;
 	private Timestamp qnaTime;
 	private String qnaImgName;
 	private String qnaImgPath;
-	private String qnaCategory;
 	private Long userId;
 	
 //	QnaAnswerVO
@@ -59,8 +59,8 @@ public class QnaDTO {
 	
 	public QnaDTO() {;}
 
-	public QnaDTO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
-			String qnaCategory, Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime,
+	public QnaDTO(Long id, String qnaCategory, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName,
+			String qnaImgPath, Long userId, String qnaAnswerTitle, String qnaAnswerContent, Timestamp qnaAnswerTime,
 			Long qnaId, String userImgName, String userImgPath, String userName, String userEmail,
 			String userIdentification, String userPassword, String userPhone, String userNickname, String userAddress,
 			String userDetailAddress, String userPostalCode, int userSnsOk, int userMailOk, int userAgreementOk,
@@ -68,13 +68,14 @@ public class QnaDTO {
 			String userKakao, String userGoogle, String userNaver, int userWriterOk, int userAdminOk, int userBanOk,
 			Long majorId, String userMajorImgName, String userMajorImgPath, String userWriterStatus,
 			String userUniversityStatus, String qnaStatus, String dateData, String answerDateData) {
+		super();
 		this.id = id;
+		this.qnaCategory = qnaCategory;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
 		this.qnaTime = qnaTime;
 		this.qnaImgName = qnaImgName;
 		this.qnaImgPath = qnaImgPath;
-		this.qnaCategory = qnaCategory;
 		this.userId = userId;
 		this.qnaAnswerTitle = qnaAnswerTitle;
 		this.qnaAnswerContent = qnaAnswerContent;
@@ -123,6 +124,14 @@ public class QnaDTO {
 		this.id = id;
 	}
 
+	public String getQnaCategory() {
+		return qnaCategory;
+	}
+
+	public void setQnaCategory(String qnaCategory) {
+		this.qnaCategory = qnaCategory;
+	}
+
 	public String getQnaTitle() {
 		return qnaTitle;
 	}
@@ -161,14 +170,6 @@ public class QnaDTO {
 
 	public void setQnaImgPath(String qnaImgPath) {
 		this.qnaImgPath = qnaImgPath;
-	}
-
-	public String getQnaCategory() {
-		return qnaCategory;
-	}
-
-	public void setQnaCategory(String qnaCategory) {
-		this.qnaCategory = qnaCategory;
 	}
 
 	public Long getUserId() {
@@ -476,26 +477,9 @@ public class QnaDTO {
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		QnaDTO other = (QnaDTO) obj;
-		return Objects.equals(id, other.id);
-	}
-
-	@Override
 	public String toString() {
-		return "QnaDTO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
-				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", qnaCategory=" + qnaCategory
+		return "QnaDTO [id=" + id + ", qnaCategory=" + qnaCategory + ", qnaTitle=" + qnaTitle + ", qnaContent="
+				+ qnaContent + ", qnaTime=" + qnaTime + ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath
 				+ ", userId=" + userId + ", qnaAnswerTitle=" + qnaAnswerTitle + ", qnaAnswerContent=" + qnaAnswerContent
 				+ ", qnaAnswerTime=" + qnaAnswerTime + ", qnaId=" + qnaId + ", userImgName=" + userImgName
 				+ ", userImgPath=" + userImgPath + ", userName=" + userName + ", userEmail=" + userEmail
@@ -512,6 +496,22 @@ public class QnaDTO {
 				+ dateData + ", answerDateData=" + answerDateData + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QnaDTO other = (QnaDTO) obj;
+		return Objects.equals(id, other.id);
+	}
 	
 	
 }
