@@ -8,12 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.MypageDAO;
 
 public class MypageContactArtistDetailController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		MypageDAO mypageDAO = new MypageDAO();
+		Long id = Long.parseLong(req.getParameter("id"));
+		System.out.println(id);
+		
+		req.setAttribute("mail", mypageDAO.selectMail(id).orElseThrow(() -> {
+			throw new RuntimeException("MailDetailController user not found");
+		}));
+		
 		result.setPath("mypage-contact-artist-detail.jsp");
 		return result;
 	}

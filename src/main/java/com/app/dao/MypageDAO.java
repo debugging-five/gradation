@@ -3,6 +3,7 @@ package com.app.dao;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -54,9 +55,15 @@ public class MypageDAO {
     }
     
     // 메일 리스트
-    public List<MailVO> selectMailAll() {
+    public List<MailDTO> selectMailAll() {
     	return sqlSession.selectList("mypage.selectMailAll");
     }
+    
+    // 메일 단일 조회
+    public Optional<MailDTO> selectMail(Long id) {
+    	return Optional.ofNullable(sqlSession.selectOne("mail.selectMail", id));
+    }
+    
  	
 	
 

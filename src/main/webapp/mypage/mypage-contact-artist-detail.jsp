@@ -1,3 +1,8 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.app.dto.MailDTO"%>
+<%@page import="com.app.vo.MailVO"%>
+<%@page import="java.util.Optional"%>
+<%@page import="com.app.dao.MypageDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +15,16 @@
 </head>
 <body>
 <%@ include file="../layout/header.jsp" %>
+
+<%-- <%
+	MypageDAO mypageDAO = new MypageDAO();
+	Long id = Long.parseLong(request.getParameter("id"));
+	Optional<MailDTO> foundMail = mypageDAO.selectMail(id);
+
+	
+	if (foundMail.isPresent()) {
+		MailDTO mail = foundMail.get();
+%> --%>
 	
 	<div id="container-wrap">
 		<div id="container">
@@ -25,8 +40,8 @@
 				
 				<div id="title-wrapper">
 					<div id="contact-title">
-						<h3>작품이 마음에 듭니다. 후원요청합니다.</h3> <!-- 제목은 수정 불가 -->
-						<p>25. 01. 15</p>
+						<h3>${mail.mailTitle}</h3> <!-- 제목은 수정 불가 -->
+						<p>${mail.mailSendTime}</p>
 					</div>
 				</div>
 				
@@ -34,21 +49,21 @@
 				<div id="writer-info">
 					<div id="name">
 						<p>이름</p>
-						<p>고길동</p>
+						<p>${mail.rUserName}</p>
 					</div>
 					<div id="phone">
 						<p>연락처</p>
-						<p>010-1234-5678</p>
+						<p>${mail.rUserPhone}</p>
 					</div>
 					<div id="email">
 						<p>이메일</p>
-						<p>gradation1234@gmail.com</p>
+						<p>${mail.rUserEmail}</p>
 					</div>
 				</div>
 				
 				<!-- 쪽지 내용 div -->
 				<div id="contact-content">
-					<p id="content-text">작품이 마음에 듭니다. 후원요청합니다. 삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데...</p>
+					<p id="content-text">${mail.mailContents}</p>
 				</div>
 				
 				<div id="button-wrapper">
@@ -60,20 +75,20 @@
 				<!-- 수정 상태의 입력 필드들 -->
 				<div id="edit-fields">
 					<div id="content-edit">
-						<textarea id="content-input">작품이 마음에 듭니다. 후원요청합니다. 삼각자는 직각 삼각자 를 포함하여 여러개 여유있게 준비해 두는 것이 바람직한데...</textarea>
+						<textarea id="content-input">${mail.moailContents}</textarea>
 					</div>
 					<div id="save-cancel-buttons">
 						<button id="cancel-button" type="button" onclick="cancelEdit()">취소</button>
 						<button id="save-button" type="button" onclick="saveEdit()">저장</button>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
-
+	
 </body>
 <script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-detail.js"></script>
 </html>
