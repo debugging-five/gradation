@@ -3,86 +3,7 @@
 
 <mapper namespace="admin">
 
-	<!-- 관리자 INSERT -->
-	<insert id="insertAdminUser" parameterType="UserVO">
-		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK, USER_ADMIN_OK)			 
-		VALUES (
-			#{userName}, 
-			#{userEmail}, 
-			#{userIdentification}, 
-			#{userPassword},
-			#{userPhone}, 
-			#{userNickname}, 
-			#{userSnsOk}, 
-			#{userMailOk}, 
-			#{userAgreementOk},
-			1
-		)
-	</insert>
-
-	
-	<!-- 회원관리 회원전체 조회 -->
-	<select id="selectUserAll" resultType="UserVO">
-		SELECT USER_NAME, USER_IDENTIFICATION, USER_PHONE, USER_BAN_OK
-		FROM TBL_USER
-	</select>
-	 
-	 <!-- 회원관리 회원한명 Read -->	
-	<select id="selectId" parameterType="Long" resultType="MajorDTO">
-		SELECT TBU.ID TBU.USER_IDENTIFICATION, TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL, TBU.USER_ADDRESS, TBUS.UNIVERSITY_NAME
-		FROM TBL_USER TBU
-		JOIN TBL_MAJOR TBM
-		ON TBU.MAJOR_ID = TBM.ID 
-		JOIN TBL_UNIVERSITY TBUS 
-		ON TBM.UNIVERSITY_ID = TBUS.ID
-		WHERE TBU.ID = #{id}
-	</select>
-	
-	
-	<!-- 양식관리 -->
-	
-	<!-- 작가승인 -->
-	<update id="updateApplyArtist" parameterType="Long">
-		UPDATE TBL_USER
-		SET USER_WRITER_STATUS = '승인'
-		WHERE ID = #{id}
-	</update>
-	
-	<!-- 작가거절 -->
-	<update id="updateRejectArtist" parameterType="Long">
-		UPDATE TBL_USER
-		SET USER_WRITER_STATUS = '거절'
-		WHERE ID = #{id}
-	</update>
-	
-	<!-- 학생증승인 -->
-
-	<!-- 학생증거절 -->
-
-	
-	<!-- 업사이클승인 -->
-	<update id="updateApplyUpcycle" parameterType="Long">
-		UPDATE TBL_UPCYCLE
-		SET UPCYCLE_STATUS = '승인'
-		WHERE ID = #{id}
-	</update>
-	
-	<!-- 업사이클거절 -->
-	<update id="updateRejectUpcycle" parameterType="Long">
-		UPDATE TBL_UPCYCLE
-		SET UPCYCLE_STATUS = '거절'
-		WHERE ID = #{id}
-	</update>	
-	
-	
-	
-	<!-- 대학교전시회승인 -->
-	
-	<!-- 대학교전시회거절 -->
-	
-	
-	
-	
+	<!-- FAQ -->
 	<!-- FAQ 전체 조회 -->
 	<select id="selectFaqAll" resultType="FaqVO">
 		SELECT ID, FAQ_TITLE, FAQ_CATEGORY 
@@ -108,8 +29,6 @@
 		WHERE ROWNUM = 1		
 	</select> 
 	
-	
-	
 	<!-- FAQ 등록 -->
 	<insert id="insertFaq" parameterType="FaqVO">
 		INSERT INTO TBL_FAQ
@@ -128,6 +47,86 @@
 		DELETE FROM TBL_FAQ
 		WHERE ID = #{id}
 	</delete>
+
+
+	<!-- 1 : 1 문의 -->
+	
+
+
+
+
+
+
+
+
+
+	
+	<!-- 양식관리 -->
+	
+	<!-- 작가승인 -->
+	<update id="updateApplyArtist" parameterType="Long">
+		UPDATE TBL_USER
+		SET USER_WRITER_STATUS = '승인'
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- 작가거절 -->
+	<update id="updateRejectArtist" parameterType="Long">
+		UPDATE TBL_USER
+		SET USER_WRITER_STATUS = '거절'
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- 학생증승인 -->
+
+	<!-- 학생증거절 -->
+
+	<!-- 업사이클승인 -->
+	<update id="updateApplyUpcycle" parameterType="Long">
+		UPDATE TBL_UPCYCLE
+		SET UPCYCLE_STATUS = '승인'
+		WHERE ID = #{id}
+	</update>
+	
+	<!-- 업사이클거절 -->
+	<update id="updateRejectUpcycle" parameterType="Long">
+		UPDATE TBL_UPCYCLE
+		SET UPCYCLE_STATUS = '거절'
+		WHERE ID = #{id}
+	</update>	
+	
+	<!-- 대학교전시회승인 -->
+	
+	<!-- 대학교전시회거절 -->
+	
+	
+	
+	<!-- 회원관리 -->
+	<!-- 관리자 Update -->
+	<update id="userAdmin" parameterType="Long">
+		UPDADTE TBL_USER
+		SET USER_ADMIN_OK = 1
+		WHERE ID = ${id}
+	</update>
+	
+	<!-- 회원관리 회원전체 조회 -->
+	<select id="selectUserAll" resultType="UserVO">
+		SELECT USER_NAME, USER_IDENTIFICATION, USER_PHONE, USER_BAN_OK
+		FROM TBL_USER
+	</select>
+	 
+	 <!-- 회원관리 회원한명 Read -->	
+	<select id="selectId" parameterType="Long" resultType="MajorDTO">
+		SELECT TBU.ID TBU.USER_IDENTIFICATION, TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL, TBU.USER_ADDRESS, TBUS.UNIVERSITY_NAME
+		FROM TBL_USER TBU
+		JOIN TBL_MAJOR TBM
+		ON TBU.MAJOR_ID = TBM.ID 
+		JOIN TBL_UNIVERSITY TBUS 
+		ON TBM.UNIVERSITY_ID = TBUS.ID
+		WHERE TBU.ID = #{id}
+	</select>
+	
+
 		
 	
 
