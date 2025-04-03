@@ -179,6 +179,10 @@
 	</select>
 
 
+
+
+
+
 	<!--작품 업로드 (전시중) -->
 	<insert id="insert" parameterType="ArtPostDTO">
        INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
@@ -195,12 +199,33 @@
            #{userId}
        )
 	</insert>
+	
+	<!--작품 업로드 (전시예정) -->
+	<insert id="insertCommingSoon" parameterType="ArtDTO">
+       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
+       VALUES (
+           SEQ_ART.NEXTVAL,
+           #{artTitle},
+           #{artCategory},
+           #{artMaterial},
+           #{artSize},
+           #{artDescription},
+           CURRENT_TIMESTAMP,
+           CURRENT_TIMESTAMP, 
+           #{artEndDate},
+           #{userId}
+       )
+	</insert>
+	
+	<!-- 최신artId가져오기 -->
 	<select id="getLatestArtId" resultType="Long">
 	    SELECT ID 
 	    FROM TBL_ART 
 	    ORDER BY ART_DATE DESC
 	    FETCH FIRST 1 ROWS ONLY
 	</select>
+	
+	<!-- 이미지넣기 -->
 	<insert id="insertImg" parameterType="ArtPostDTO">
 		INSERT INTO TBL_ART_IMG (ID, ART_IMG_NAME, ART_IMG_PATH, ART_ID)
 		VALUES(
@@ -211,6 +236,7 @@
 		)
 	</insert>
 	
+	<!-- 작품 게시에 넣기 -->
 	<insert id="insertArtPost" parameterType="ArtPostDTO">
 		INSERT INTO TBL_ART_POST (ID, ART_POST_DATE, USER_ID, ART_ID)
 		VALUES(
@@ -220,25 +246,8 @@
 			#{artId}
 		)
 	</insert>
-
-    
-	<!--작품 업로드 (전시예정) -->
-	<insert id="insertCommindSoon" parameterType="ArtVO">
-	       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
-	       VALUES (
-	           SEQ_ART.NEXTVAL,
-	           #{artTitle},
-	           #{artCategory},
-	           #{artMaterial},
-	           #{artSize},
-	           #{artDescription},
-	           SYSDATE,
-	           SYSDATE,
-	           #{artEndDate},
-	           #{userId}
-	       )
-	</insert>
 	
+	<!-- 해당 아이디를 통하여 상품 뿌리기 -->
 	<select id="selectArtById" parameterType="long" resultType="ArtPostDTO">
 	    SELECT 
 	        TAP.ID,
@@ -267,7 +276,7 @@
 		FROM TBL_ART
 	</select>
 
-
+	<!-- 좋아요 -->
 	<insert id="insertArtLike" parameterType="ArtLikeVO">
 		INSERT INTO
 		TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
@@ -275,9 +284,13 @@
 		SEQ_ART_LIKE.NEXTVAL,
 		#{artId},
 		#{userId},
-		SYSDATE
+		CURRENT_TIMESTAMP
 		)
 	</insert>
-
+	
+	<!-- 좋아요 개수 조회 -->
+	<select id="selectArtLikeCount" parameterType="long" resultType="int">
+		SELECT COUNT(*) FROM TBL_ART_LIKE WHERE ART_ID = #{artId}
+	</select>
 
 </mapper>

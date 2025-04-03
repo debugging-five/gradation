@@ -29,7 +29,7 @@
         
         <!-- 좋아요 / 작가와 연락 버튼 -->
         <div class="button-position">
-            <button class="like-button">좋아요</button>
+            <button id="likeBtn" class="like-button">좋아요♡</button>
             <a href="../mypage/mypage-contact-artist-write.mypage">
                 <button class="contact-button">작가와 연락</button>
             </a>
@@ -46,7 +46,7 @@
             <span>${userName}</span>
         </div>
         <div class="likes"><!-- 좋아요 -->
-            <span>좋아요 11개</span>
+            <span>좋아요 ${likeCount}개</span>
             <div class="like100">
 	            <img class="grayquestion-icon" alt="grayquestion-icon" src="../assets/images/display/gray_question.png">
 	        	<span class="hover-text">좋아요 50개 이상 받으면 경매 개시 가능</span>

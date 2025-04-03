@@ -21,6 +21,7 @@ import com.app.display.controller.DisplayCategoryPaintingController;
 import com.app.display.controller.DisplayCategorySculptureController;
 import com.app.display.controller.DisplayDetailController;
 import com.app.display.controller.DisplayFormCommingSoonController;
+import com.app.display.controller.DisplayFormCommingSoonOkController;
 import com.app.display.controller.DisplayFormController;
 import com.app.display.controller.DisplayFormOkController;
 import com.app.display.controller.DisplayMainCommingSoonController;
@@ -60,10 +61,12 @@ public class DisplayFrontController extends HttpServlet{
 			result = new DisplayDetailController().execute(req, resp);
 		}else if(target.equals("display/display-form")) {
 			result = new DisplayFormController().execute(req, resp);
-		}else if(target.equals("display/display-form-comming-soon")) {
-			result = new DisplayFormCommingSoonController().execute(req, resp);
 		}else if(target.equals("display/display-form-ok")) {
 			result = new DisplayFormOkController().execute(req, resp);
+		}else if(target.equals("display/display-form-comming-soon")) {
+			result = new DisplayFormCommingSoonController().execute(req, resp);
+		}else if(target.equals("display/display-form-comming-soon-ok")) {
+			result = new DisplayFormCommingSoonOkController().execute(req, resp);
 		}else {
 //			전부 404
 		}

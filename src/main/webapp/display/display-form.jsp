@@ -93,7 +93,7 @@
 			<!-- 취소, 등록 버튼 -->
 			<div id="buttons">
 				<a href="../display/display-main-ing.jsp">
-					<button class="button-cancel">취소</button> 
+					<button class="button-cancel" type="button">취소</button> 
 				</a>
 				<button class="button-upload" onclick="openPopup()" type="button">등록</button>
 			</div>
