@@ -74,6 +74,12 @@
 		WHERE TBM.ID = #{id}
 	</select>
 	
+	<update id="updateMail" parameterType="MailDTO">
+		UPDATE TBL_MAIL
+		SET MAIL_CONTENTS = #{mailContents}
+		WHERE ID = #{id}
+	</update>
+	
 	<delete id="deleteMail" parameterType="Long">
 		DELETE FROM TBL_MAIL
 		WHERE ID = #{id}

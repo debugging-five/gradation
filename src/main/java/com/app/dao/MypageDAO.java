@@ -63,16 +63,17 @@ public class MypageDAO {
     	return Optional.ofNullable(sqlSession.selectOne("mypage.selectMail", id));
     }
     
+    // 메일 수정
+    public void updateMail(MailDTO mailDTO) {
+    	sqlSession.update("mypage.updateMail", mailDTO);
+    }
+    
     // 메일 삭제
     public void deleteMail(Long id) {
     	sqlSession.delete("mypage.deleteMail", id);
     }
     
  	
-	
 
-
- 	
- 	
  	
 }
