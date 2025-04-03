@@ -1,9 +1,14 @@
 package com.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.dto.MajorDTO;
+import com.app.dto.QnaDTO;
 import com.app.mybatis.config.MyBatisConfig;
+import com.app.vo.FaqVO;
+import com.app.vo.QnaVO;
 import com.app.vo.UserVO;
  
  public class UserDAO {
@@ -70,7 +75,7 @@ import com.app.vo.UserVO;
  	
 // 	유저 조회
  	public UserVO selectUserByEmail(String userEmail) {
- 		return sqlSession.selectOne("user.selectUserByEmail", userEmail);
+		return sqlSession.selectOne("user.selectUserByEmail", userEmail);
  	}
  	
  	public MajorDTO selectMajorDTOByEmail(String userEmail) {
@@ -90,6 +95,24 @@ import com.app.vo.UserVO;
 // 	학교인증 요청
  	public void updateUserUniversityStatus(UserVO userVO) {
  		sqlSession.update("user.updateUserUniversityStatus", userVO);
+ 	}
+ 	
+// 	FAQ임시
+ 	public List<FaqVO> selectFaqAll() {
+ 		return sqlSession.selectList("admin.selectFaqAll");
+ 	}
+ 	public FaqVO selectFaqById(Long faqId) {
+ 		return sqlSession.selectOne("admin.selectFaqById", faqId);
+ 	}
+ 	
+// 	본인 QNA조회
+ 	public List<QnaDTO> selectQna(String userEmail) {
+ 		return sqlSession.selectList("user.selectQna", userEmail);
+ 	}
+ 	
+// 	qna상세
+ 	public QnaDTO selectOneQna(QnaDTO qnaDTO) {
+ 		return sqlSession.selectOne("user.selectOneQna", qnaDTO);
  	}
  	
  }

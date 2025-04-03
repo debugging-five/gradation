@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class QnaVO {
 	private Long id;
+	private String qnaCategory;
 	private String qnaTitle;
 	private String qnaContent;
 	private Timestamp qnaTime;
@@ -13,10 +14,12 @@ public class QnaVO {
 	private Long userId;
 	
 	public QnaVO() {;}
-	
-	public QnaVO(Long id, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName, String qnaImgPath,
-			Long userId) {
+
+	public QnaVO(Long id, String qnaCategory, String qnaTitle, String qnaContent, Timestamp qnaTime, String qnaImgName,
+			String qnaImgPath, Long userId) {
+		super();
 		this.id = id;
+		this.qnaCategory = qnaCategory;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
 		this.qnaTime = qnaTime;
@@ -25,35 +28,20 @@ public class QnaVO {
 		this.userId = userId;
 	}
 
-	@Override
-	public String toString() {
-		return "QnaVO [id=" + id + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent + ", qnaTime=" + qnaTime
-				+ ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath + ", userId=" + userId + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		QnaVO other = (QnaVO) obj;
-		return Objects.equals(id, other.id);
-	}
-
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getQnaCategory() {
+		return qnaCategory;
+	}
+
+	public void setQnaCategory(String qnaCategory) {
+		this.qnaCategory = qnaCategory;
 	}
 
 	public String getQnaTitle() {
@@ -103,5 +91,31 @@ public class QnaVO {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+
+	@Override
+	public String toString() {
+		return "QnaVO [id=" + id + ", qnaCategory=" + qnaCategory + ", qnaTitle=" + qnaTitle + ", qnaContent="
+				+ qnaContent + ", qnaTime=" + qnaTime + ", qnaImgName=" + qnaImgName + ", qnaImgPath=" + qnaImgPath
+				+ ", userId=" + userId + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QnaVO other = (QnaVO) obj;
+		return Objects.equals(id, other.id);
+	}
 	
+	
+
 }
