@@ -1,6 +1,11 @@
+<%@page import="java.util.List"%>
+<%@page import="com.app.dto.ArtDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<% String uri = request.getRequestURI();%>
+<%
+String uri = request.getRequestURI();
+String category = request.getParameter("category");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,12 +28,12 @@
 					<div class="tab-wrapper">
 						<div class="tab-labels">
 							<div class="tab-text">
-								<a href="../display/display-main-ing.display"
-								 class="<%= uri.contains("display-main-ing") ? "active" : "" %>">전시중</a>
+								<a href="../display/display-main-ing.display?page=1"
+									class="<%=uri.contains("display-main-ing") ? "active" : ""%>">전시중</a>
 							</div>
 							<div class="tab-text-upcoming">
-								<a href="../display/display-main-comming-soon.display"
-								 class="<%= uri.contains("display-main-comming-soon") ? "active" : "" %>">전시예정</a>
+								<a href="../display/display-main-comming-soon.display?page=1"
+									class="<%=uri.contains("display-main-comming-soon") ? "active" : ""%>">전시예정</a>
 							</div>
 						</div>
 					</div>
@@ -37,28 +42,29 @@
 					<div class="category-wrapper">
 						<div class="category-list">
 							<div class="category-item ">
-								<a href="../display/display-category-korean.display"
-								 class="<%= "korean".equals(request.getParameter("category")) ? "active" : "" %>">한국화</a>
+								<a href="display-main-ing.display?category=korean"
+									class="<%="korean".equals(request.getParameter("category")) ? "active" : ""%>">한국화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-painting.display"
-								 class="<%= "painting".equals(request.getParameter("category")) ? "active" : "" %>">회화</a>
+								<a href="display-main-ing.display?category=painting"
+									class="<%="painting".equals(request.getParameter("category")) ? "active" : ""%>">회화</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-sculpture.display"
-								 class="<%= "sculpture".equals(request.getParameter("category")) ? "active" : "" %>">조각</a>
+								<a href="display-main-ing.display?category=sculpture"
+									class="<%="sculpture".equals(request.getParameter("category")) ? "active" : ""%>">조각</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-craft.display"
-								 class="<%= "craft".equals(request.getParameter("category")) ? "active" : "" %>">공예</a>
+								<a href="display-main-ing.display?category=craft"
+									class="<%="craft".equals(request.getParameter("category")) ? "active" : ""%>">공예</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-architecture.display"
-								 class="<%= "architecture".equals(request.getParameter("category")) ? "active" : "" %>">건축</a>
+								<a href="display-main-ing.display?category=architecture"
+									class="<%="architecture".equals(request.getParameter("category")) ? "active" : ""%>">건축</a>
 							</div>
 							<div class="category-item ">
-								<a href="../display/display-category-calligraphy.display"
-								 class="<%= "calligraphy".equals(request.getParameter("category")) ? "active" : "" %>">서예</a>
+								<a href="display-main-ing.display?category=calligraphy"
+									class="<%="calligraphy".equals(request.getParameter("category")) ? "active" : ""%>">서예</a>
+
 							</div>
 						</div>
 					</div>
@@ -66,7 +72,7 @@
 				<div class="row-upload-options">
 					<div class="upload-label">작품 업로드</div>
 					<div class="upload-icon-wrapper">
-						<a href="display-form.jsp"><img class="upload-icon"
+						<a href="display-form.display"><img class="upload-icon"
 							src="../assets/images/display/art/upload.png" alt="icon" /></a>
 					</div>
 					<div class="sort-options">
@@ -89,228 +95,123 @@
 			</div>
 			<div class="row-main">
 				<div class="row-gallery">
-					<div class="gallery-column">
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-rainy.jpeg"
-									alt="rainy" data-date="2024-01-08" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">rainy</div>
-										<div class="hover-artist">박세현</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
-									alt="gradation-6" data-date="2024-01-01" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(1);</div>
-										<div class="hover-artist">서민아</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
-									alt="gradation-7" data-date="2024-11-08" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(2);</div>
-										<div class="hover-artist">서민아</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
-									alt="gradation-2" data-date="2024-05-18" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">SYSO.println(3);</div>
-										<div class="hover-artist">서민아</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
-									alt="tiger-and-waterfall" data-date="2024-03-21"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">멍때리는 고양이</div>
-										<div class="hover-artist">곽승민</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="gallery-column">
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
-									alt="our-team" data-date="2024-11-01" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">Our Team</div>
-										<div class="hover-artist">김동건</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-									alt="meditation-house-3" data-date="2024-02-13" />
-								<div class="hover-overlay">
-									<
-									<div class="hover-text-group">
-										<div class="hover-title">Meditation</div>
-										<div class="hover-artist">이덕준</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
-									alt="hanok-2" data-date="2024-04-14"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">봄의 한옥</div>
-										<div class="hover-artist">조마루</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
-									alt="object-cat" data-date="2024-01-18"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">식빵시리즈2</div>
-										<div class="hover-artist">조냐옹</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
-									alt="cat-2" data-date="2024-09-04"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">자화상</div>
-										<div class="hover-artist">조냐옹</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="gallery-column">
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
-									alt="catwatercolor-person" data-date="2025-02-12"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">이쁘네</div>
-										<div class="hover-artist">김영수</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-oh.jpeg"
-									alt="oh" data-date="2024-12-13" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">after</div>
-										<div class="hover-artist">일러장</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-whale.jpeg"
-									alt="whale" data-date="2024-11-19"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">말도 안됨</div>
-										<div class="hover-artist">양진영</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
-									alt="old-man-in-cafe" data-date="2024-04-05"/>
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">자화상2</div>
-										<div class="hover-artist">김동건</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="gallery-item">
-							<div class="gallery-hover-container">
-								<img class="gallery-image"
-									src="../assets/images/display/art/architecture/img-architecture-meditation-house-2.jpeg"
-									alt="meditation-house-2" data-date="2024-06-07" />
-								<div class="hover-overlay">
-									<div class="hover-text-group">
-										<div class="hover-title">meditation</div>
-										<div class="hover-artist">이덕준</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pagination-bar">
-				<img class="pagination-icon"
-					src="../assets/images/display/art/left.png" alt="left" />
-				<%
-				int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
-				int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+					<%
+					List<ArtDTO> artList = (List<ArtDTO>) request.getAttribute("artList");
 
-				for (int i = 1; i <= totalPages; i++) {
+					if (artList != null) {
+						int total = artList.size();
+						int columns = 3;
+
+						List<ArtDTO>[] columnData = new List[columns];
+						for (int i = 0; i < columns; i++) {
+							columnData[i] = new java.util.ArrayList<>();
+						}
+
+						for (int i = 0; i < total; i++) {
+							columnData[i % columns].add(artList.get(i));
+						}
+
+						for (int col = 0; col < columns; col++) {
+					%>
+					<div class="gallery-column">
+						<%
+						for (ArtDTO art : columnData[col]) {
+						%>
+						<div class="gallery-item">
+							<div class="gallery-hover-container">
+								<img class="gallery-image"
+									src="<%=request.getContextPath() + art.getArtImgPath() + art.getArtImgName()%>"
+									alt="<%=art.getArtTitle()%>"
+									data-date="<%=art.getArtStartDate()%>" />
+									
+								<div class="hover-overlay">
+									<div class="hover-text-group">
+										<div class="hover-title"><%=art.getArtTitle()%></div>
+										<div class="hover-artist"><%=art.getUserName()%></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+<p style="color:red;"><%= art.getArtTitle() %> - <%= art.getArtCategory() %></p>
+						<%
+						} // inner loop
+						%>
+					</div>
+					<!-- gallery-column -->
+					<%
+					} // outer loop
+					}
+					%>
+				</div>
+				
+			</div>
+				<p>현재 카테고리: <%= request.getParameter("category") %></p>
+<p>가져온 작품 수: <%= (artList != null) ? artList.size() : 0 %></p>
+
+
+			<%
+			int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
+			int totalPages = (request.getAttribute("totalPages") != null) ? (int) request.getAttribute("totalPages") : 1;
+
+			int pageGroupSize = 5; // 한 번에 보여줄 페이지 번호 개수
+			int startPage = ((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
+			int endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+
+			int prevGroupPage = startPage - 1;
+			int nextGroupPage = endPage + 1;
+			%>
+
+			<div class="pagination-bar">
+				<%-- 왼쪽 아이콘 (이전 페이지 그룹) --%>
+				<%
+				if (startPage > 1) {
 				%>
-				<a href="display-main-ing.display?page=<%=i%>"
-					 class="page-number <%= (i == currentPage) ? "active" : "" %>"> 
-					 <%=i%>
+				<a
+					href="display-main-ing.display?page=<%=prevGroupPage%>&category=<%=category%>">
+					<img class="pagination-icon"
+					src="../assets/images/display/art/left.png" alt="left" />
+				</a>
+				<%
+				} else {
+				%>
+				<img class="pagination-icon"
+					src="../assets/images/display/art/left.png" alt="left"
+					style="opacity: 0.3; cursor: default;" />
+				<%
+				}
+				%>
+
+				<%-- 페이지 번호 출력 --%>
+				<%
+				for (int i = startPage; i <= endPage; i++) {
+				%>
+				<a
+					href="display-main-ing.display?page=<%=i%>&category=<%=category%>"
+					class="page-number <%=(i == currentPage) ? "active" : ""%>"> <%=i%>
 				</a>
 				<%
 				}
 				%>
-				<img class="pagination-icon"
+
+				<%-- 오른쪽 아이콘 (다음 페이지 그룹) --%>
+				<%
+				if (endPage < totalPages) {
+				%>
+				<a
+					href="display-main-ing.display?page=<%=nextGroupPage%>&category=<%=category%>">
+					<img class="pagination-icon"
 					src="../assets/images/display/art/right.png" alt="right" />
+				</a>
+				<%
+				} else {
+				%>
+				<img class="pagination-icon"
+					src="../assets/images/display/art/right.png" alt="right"
+					style="opacity: 0.3; cursor: default;" />
+				<%
+				}
+				%>
 			</div>
 		</div>
 	</div>

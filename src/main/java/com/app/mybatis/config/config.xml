@@ -48,6 +48,7 @@
     	<typeAlias type="com.app.dto.UniversityExhibitionDTO" alias="UniversityExhibitionDTO" />
     	<typeAlias type="com.app.dto.UniversityLikeDTO" alias="UniversityLikeDTO" />
     	<typeAlias type="com.app.dto.UpcycleDTO" alias="UpcycleDTO" />
+    	<typeAlias type="com.app.dto.ArtDTO" alias="ArtDTO" />
     </typeAliases>
    
    <environments default="oracle">
