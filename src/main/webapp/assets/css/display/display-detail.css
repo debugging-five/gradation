@@ -57,6 +57,8 @@
       font-weight: bold;
   }
   .artist {
+  	  display: flex;
+  	  align-items: center;
  	  margin-top: 8px;
       font-size: 21px;
       font-weight: bold;
