@@ -11,8 +11,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-contact-artist-detail.css" />
-<title>내 활동 / 작가와 연락 상세 페이지</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-contact-artist-update.css" />
+<title>내 활동 / 작가와 연락 수정 페이지</title>
 </head>
 
 <body>
@@ -47,39 +47,32 @@
 				<div id="title-wrapper">
 					<div id="contact-title">
 						<h3>${mail.mailTitle}</h3> <!-- 제목은 수정 불가 -->
-						<p>${mail.mailSendTime}</p>
 					</div>
 				</div>
 				
-				<!-- 이름, 연락처, 이메일 div -->
-				<div id="writer-info">
-					<div id="name">
-						<p>이름</p>
-						<p>${sendUserVO.userName}</p>
-					</div>
-					<div id="phone">
-						<p>연락처</p>
-						<p>${sendUserVO.userPhone}</p>
-					</div>
-					<div id="email">
-						<p>이메일</p>
-						<p>${sendUserVO.userEmail}</p>
-					</div>
-				</div>
 				
 				<!-- 쪽지 내용 div -->
-				<div id="contact-content">
-					<p id="content-text">${mail.mailContents}</p>
-				</div>
-				
-				<form action="" method="post">
-					<div id="button-wrapper">
-						<button id="list-button" type="button">목록</button>
-						<button id="delete-button" type="button">삭제</button>
-						<button id="modify-button" type="button">수정</button>
-					</div>
-				</form>
-				
+			<div id="contact-content">
+                <p id="content-text">${mail.mailContents}</p>
+            </div>
+
+            <!-- 수정 폼 -->
+            <form action="mypage-contact-artist-update-ok.mypage" method="post">
+                <!-- 숨겨진 input (글 ID) -->
+                <input type="hidden" name="id" value="${mail.id}">
+
+                <div id="edit-fields">
+                    <div id="content-edit">
+                        <textarea id="content-input" name="mailContents">${mail.mailContents}</textarea>
+                    </div>
+
+                    <div id="save-cancel-buttons">
+                        <button id="cancel-button" type="button">취소</button>
+                        <button id="save-button" type="submit">저장</button>
+                    </div>
+                </div>
+            </form>
+
 			</div>
 		</div>
 	</div>
@@ -89,26 +82,19 @@
 <!-- <script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-detail.js"></script> -->
 <script type="text/javascript">
 
-	const deleteButton = document.getElementById("delete-button");
-	const modifyButton = document.getElementById("modify-button");
-	const listButton = document.getElementById("list-button");
+	const saveButton = document.getElementById("save-button");
+	const cancelButton = document.getElementById("cancel-button");
 	const id = <%=mail.getId()%>;
-	
-	deleteButton.addEventListener("click", () => {
-		location.href= 'mypage-contact-artist-delete-ok.mypage?id=' + id;
-	});
 	
 	modifyButton.addEventListener("click", () => {
 		location.href = 'mypage-contact-artist-update.mypage?id=' + id;
 	})
 	
-	listButton.addEventListener("click", () => {
-		location.href = 'mypage-contact-artist-list.mypage' ;
+	modifyButton.addEventListener("click", () => {
+		location.href = 'mypage-contact-artist-detail.mypage?id=' + id;
 	})
 	
 	
-
 		
-
 </script>
 </html>
