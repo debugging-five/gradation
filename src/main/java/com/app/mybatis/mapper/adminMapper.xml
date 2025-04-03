@@ -3,23 +3,12 @@
 
 <mapper namespace="admin">
 
-	<!-- 관리자 INSERT -->
-	<insert id="insertAdminUser" parameterType="UserVO">
-		INSERT INTO TBL_USER (ID, USER_NAME, USER_EMAIL, USER_IDENTIFICATION, USER_PASSWORD, USER_PHONE, USER_NICKNAME, USER_SNS_OK, USER_MAIL_OK, USER_AGREEMENT_OK, USER_ADMIN_OK)			 
-		VALUES (
-			#{userName}, 
-			#{userEmail}, 
-			#{userIdentification}, 
-			#{userPassword},
-			#{userPhone}, 
-			#{userNickname}, 
-			#{userSnsOk}, 
-			#{userMailOk}, 
-			#{userAgreementOk},
-			1
-		)
-	</insert>
-
+	<!-- 관리자 Update -->
+	<update id="userAdmin" parameterType="Long">
+		UPDADTE TBL_USER
+		SET USER_ADMIN_OK = 1
+		WHERE ID = ${id}
+	</update>
 	
 	<!-- 회원관리 회원전체 조회 -->
 	<select id="selectUserAll" resultType="UserVO">

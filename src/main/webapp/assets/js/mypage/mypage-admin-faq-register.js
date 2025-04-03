@@ -1,23 +1,23 @@
-const form = document.querySelector("form");
+const form = document.querySelector("#faq-register-form");
+const button = document.querySelector("#new-register");
+const inputText = document.querySelector("#input-text");
+const registerContent = document.querySelector("#register-content");
 
-form.addEventListener('submit', (e) => {
-	const faqCategory = document.querySelector("input[name='faqCategory']:checked");
-	const title = document.getElementById("input-text").value.trim();
-	const content = document.getElementById("register-content").value.trim();
+button.addEventListener("click", () => {
+	const categorys = document.querySelector("input[name='faqCategory']:checked");
 
-	if (!faqCategory) {
-		alert("구분을 하나 선택해주세요");
-		e.preventDefault();
+	if (!categorys) {
+		alert("구분을 하나 선택해주세요.");
 		return;
 	}
-	if (!title) {
-		alert("제목을 입력해주세요");
-		e.preventDefault();
+	if (!inputText.value) {
+		alert("제목을 입력하세요.");
 		return;
 	}
-	if (!content) {
-		alert("답변 내용을 입력하세요.");
-		e.preventDefault();
+	if (!registerContent.value) {
+		alert("내용을 입력하세요.");
 		return;
 	}
+
+	form.submit();
 });
