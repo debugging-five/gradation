@@ -65,6 +65,7 @@ public class DisplayMainDTO {
 			String userUniversityStatus, Long artId, String artTitle, String artCategory, String artMaterial,
 			String artSize, String artDescription, Date artDate, Date artStartDate, Date artEndDate, Long artImageId,
 			String artImgName, String artImgPath) {
+		super();
 		this.id = id;
 		this.userImgName = userImgName;
 		this.userImgPath = userImgPath;
@@ -489,7 +490,8 @@ public class DisplayMainDTO {
 		DisplayMainDTO other = (DisplayMainDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
+
 	
 	
 }

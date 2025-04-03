@@ -38,6 +38,7 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom:36px;
+	border-bottom: solid 1px;
 }
 
 #question {
@@ -47,6 +48,7 @@ body {
 }
 #question-title {
 	display: flex;
+	margin-bottom: 10px;
 }
 #question-content {
 	font-size: var(--font-size-h7);

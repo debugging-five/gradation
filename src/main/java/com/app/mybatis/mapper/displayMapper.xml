@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="art">
+
+<select id="selectDisplayList" resultType="ArtDTO">
+    SELECT 
+        A.ID AS ART_ID,
+        A.ART_TITLE,
+        A.ART_CATEGORY,
+        A.ART_START_DATE,
+        U.USER_NAME,
+        I.ART_IMG_NAME,
+        I.ART_IMG_PATH
+    FROM TBL_ART A
+    JOIN TBL_USER U ON A.USER_ID = U.ID
+    JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
+    WHERE A.ART_START_DATE &lt;= SYSDATE
+      	AND A.ART_END_DATE &gt;= SYSDATE
+    ORDER BY A.ART_START_DATE DESC
+</select>
+
+
+</mapper>
