@@ -39,10 +39,11 @@
     <!-- 작품 정보 -->
     <div class="info-box">
         <div class="title"><!-- 제목 -->
-            <span>절망에 빠진 동상</span>
+            <span>${artTitle}</span>
         </div>
         <div class="artist"><!-- 작가명 -->
-            <h3>작가명 ㅣ 박세현</h3>
+            <h3>작가명 ㅣ </h3>
+            <span>${userName}</span>
         </div>
         <div class="likes"><!-- 좋아요 -->
             <span>좋아요 11개</span>
@@ -52,7 +53,7 @@
             </div>
         </div>
         <div class="date"><!-- 제작년도 -->
-            <p><strong style="margin-right: 57px">제작년도</strong> 2025</p>
+            <p><strong style="margin-right: 57px">제작년도</strong> ${artdate}</p>
         </div>
         <div class="ingredient"><!-- 재료 -->
             <p><strong style="margin-right: 88px">재료</strong> 돌+철</p>

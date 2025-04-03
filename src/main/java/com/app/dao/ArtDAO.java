@@ -24,6 +24,15 @@ public class ArtDAO {
     public void insert(ArtPostDTO artPostDTO) {
         sqlSession.insert("art.insert", artPostDTO);
     }
+    public void insertImg(ArtPostDTO artPostDTO) {
+        Long latestArtId = getLatestArtId();  // 최신 ID 가져오기
+        artPostDTO.setArtId(latestArtId);  // DTO에 설정
+        
+        sqlSession.insert("art.insertImg", artPostDTO);
+    }
+    public Long getLatestArtId() {
+        return sqlSession.selectOne("getLatestArtId");
+    }
 
     // 작품 업로드 (전시예정)
     public void insertCommingSoon(ArtPostDTO artPostDTO) {

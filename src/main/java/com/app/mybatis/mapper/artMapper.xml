@@ -13,12 +13,28 @@
            #{artMaterial},
            #{artSize},
            #{artDescription},
-           SYSDATE,
-           SYSDATE, 
+           CURRENT_TIMESTAMP,
+           CURRENT_TIMESTAMP, 
            NULL, 
            #{userId}
        )
 </insert>
+<select id="getLatestArtId" resultType="Long">
+    SELECT ID 
+    FROM TBL_ART 
+    ORDER BY ART_DATE DESC
+    FETCH FIRST 1 ROWS ONLY
+</select>
+<insert id="insertImg" parameterType="ArtPostDTO">
+	INSERT INTO TBL_ART_IMG (ID, ART_IMG_NAME, ART_IMG_PATH, ART_ID)
+	VALUES(
+		   SEQ_ART_IMG.NEXTVAL, 
+		   #{artImgName}, 
+		   #{artImgPath}, 
+		   #{artId}
+		   )
+</insert>
+
     
 <!--작품 업로드 (전시예정) -->
 <insert id="insertCommindSoon" parameterType="ArtVO">
