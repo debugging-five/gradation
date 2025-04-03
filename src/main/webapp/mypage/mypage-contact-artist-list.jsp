@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 	
 	<div id="container-wrap">
 		<div id="container">
-			<!-- 카테고리 include 할 위치잡음 -->
+			<!-- 카테고리 include -->
 			<div id="category">
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
@@ -25,38 +25,9 @@
 					<h5 id="menu-title">제목</h5>
 					<h5 id="menu-date">작성일</h5>
 				</div>
-				
-				<!-- 작가와 연락 리스트  -->
-				<div id="items">
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">1</h4>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-kind">홍길동</p>
-						</div>
-						<div class="item-comment-wrap">
-							<p class="item-title">작품이 마음에 듭니다. 후원요청합니다.</p>
-						</div>
-						<div class="item-date-wrap">
-							<p class="item-date">25. 01. 25</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-number-wrap">
-							<h4 class="item-number">2</h4>
-						</div>
-						<div class="item-title-wrap">
-							<p class="item-kind">홍길동</p>
-						</div>
-						<div class="item-comment-wrap">
-							<p class="item-title">선명도를 조금만 올려주셨으면 좋겠습니다. 바람이...</p>
-						</div>
-						<div class="item-date-wrap">
-							<p class="item-date">25. 01. 25</p>
-						</div>
-					</div>
-				</div>
+				<!-- 작가와 연락 리스트 -->
+				<div id="items"></div>
+
 				<form action="mypage-contact-artist-write.mypage" method="post">
 					<button id="add-faq">등록</button>
 				</form>
@@ -65,6 +36,36 @@
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
+	
+	<!-- JSON 데이터를 JavaScript에서 활용 -->
+<script type="text/javascript">
+	// JSON 데이터를 안전하게 문자열로 변환 후 JavaScript에서 파싱
+	const mails = JSON.parse('${mails}');
+
+	
+	const itemsContainer = document.getElementById("items");
+	let html = "";
+
+	mails.forEach((mail, index) => {
+		html += `
+			<div class="item">
+				<div class="item-number-wrap">
+					<h4 class="item-number">${index + 1}</h4> <!-- 1부터 증가하도록 수정 -->
+				</div>
+				<div class="item-title-wrap">
+					<p class="item-kind">${mail.receiveUserName}</p>
+				</div>
+				<div class="item-comment-wrap">
+					<p class="item-title">${mail.mailTitle}</p>
+				</div>
+				<div class="item-date-wrap">
+				</div>
+			</div>
+		`;
+	});
+
+	itemsContainer.innerHTML = html;
+</script>
+
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-contact-artist-list.js"></script>
 </html>
