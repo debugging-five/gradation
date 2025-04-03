@@ -3,45 +3,261 @@
 
 <mapper namespace="art">
 
+	<select id="selectDisplayListFiltered" resultType="ArtDTO" parameterType="map">
+	      SELECT *
+	      FROM (
+	      SELECT
+	      A.ID AS artId,
+	      A.ART_TITLE AS artTitle,
+	      A.ART_CATEGORY AS artCategory,
+	      A.ART_START_DATE AS artStartDate,
+	      U.USER_NAME AS userName,
+	      I.ART_IMG_NAME AS artImgName,
+	      I.ART_IMG_PATH AS
+	      artImgPath,
+	      ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE DESC) AS rnum
+	      FROM TBL_ART A
+	      JOIN TBL_USER U ON A.USER_ID = U.ID
+	      JOIN (
+	      SELECT *
+	      FROM (
+	      SELECT
+	      ART_ID,
+	      ART_IMG_NAME,
+	      ART_IMG_PATH,
+	      ROW_NUMBER() OVER (PARTITION BY
+	      ART_ID ORDER BY ID) AS rn
+	      FROM TBL_ART_IMG
+	      )
+	      WHERE rn = 1
+	      ) I ON A.ID =
+	      I.ART_ID
+	      WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02','YYYY-MM-DD')
+	      AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01','YYYY-MM-DD')
+	      <if test="category != null and category != ''">
+	         AND A.ART_CATEGORY = #{category}
+	      </if>
+	      )
+	      WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
+	   </select>
+	
+	   <select id="selectDisplayCountFiltered" parameterType="map" resultType="int">
+	  SELECT COUNT(*)
+	  FROM TBL_ART A
+	  WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
+	    AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
+	    <if test="category != null and category != ''">
+	      AND A.ART_CATEGORY = #{category}
+	    </if>
+	</select>
+	
+	
+	
+	
+	
+	   <select id="selectDisplayCount" resultType="int">
+	      SELECT COUNT(*) FROM TBL_ART A
+	      JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
+	      WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
+	      AND   A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
+	   </select>
+	
+	   <select id="selectDisplayList" resultType="ArtDTO"
+	      parameterType="map">
+	      SELECT *
+	      FROM (
+	      SELECT
+	      A.ID AS artId,
+	      A.ART_TITLE AS artTitle,
+	      A.ART_CATEGORY AS artCategory,
+	      A.ART_START_DATE AS artStartDate,
+	      U.USER_NAME AS userName,
+	      I.ART_IMG_NAME AS artImgName,
+	      I.ART_IMG_PATH AS artImgPath,
+	      ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE DESC) AS rnum
+	      FROM TBL_ART A
+	      JOIN TBL_USER U ON A.USER_ID = U.ID
+	      JOIN (
+	      SELECT *
+	      FROM (
+	      SELECT
+	      ART_ID,
+	      ART_IMG_NAME,
+	      ART_IMG_PATH,
+	      ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
+	      FROM TBL_ART_IMG
+	      )
+	      WHERE rn = 1
+	      ) I ON A.ID = I.ART_ID
+	      WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
+	      AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
+	      )
+	      WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
+	   </select>
+	
+	<!-- 전시예정 작품 전체 개수 -->
+	<select id="selectCommingSoonCount" resultType="int">
+	    SELECT COUNT(*)
+	    FROM TBL_ART A
+	    JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
+	    WHERE A.ART_START_DATE > SYSDATE
+	</select>
+	
+	<!-- 전시예정 작품 전체 조회 -->
+	<select id="selectCommingSoonList" resultType="ArtDTO" parameterType="map">
+	    SELECT *
+	    FROM (
+	        SELECT
+	            A.ID AS artId,
+	            A.ART_TITLE AS artTitle,
+	            A.ART_CATEGORY AS artCategory,
+	            A.ART_START_DATE AS artStartDate,
+	            U.USER_NAME AS userName,
+	            I.ART_IMG_NAME AS artImgName,
+	            I.ART_IMG_PATH AS artImgPath,
+	            ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE ASC) AS rnum
+	        FROM TBL_ART A
+	        JOIN TBL_USER U ON A.USER_ID = U.ID
+	        JOIN (
+	            SELECT *
+	            FROM (
+	                SELECT
+	                    ART_ID,
+	                    ART_IMG_NAME,
+	                    ART_IMG_PATH,
+	                    ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
+	                FROM TBL_ART_IMG
+	            )
+	            WHERE rn = 1
+	        ) I ON A.ID = I.ART_ID
+	        WHERE A.ART_START_DATE > SYSDATE
+	    )
+	    WHERE rnum > #{startRow} AND rnum &lt;= #{endRow}
+	</select>
+	
+	<select id="selectCommingSoonCountFiltered" resultType="int" parameterType="map">
+	    SELECT COUNT(*)
+	    FROM TBL_ART A
+	    WHERE A.ART_START_DATE > SYSDATE
+	    <if test="category != null and category != ''">
+	        AND A.ART_CATEGORY = #{category}
+	    </if>
+	</select>
+	
+	<select id="selectCommingSoonListFiltered" resultType="ArtDTO" parameterType="map">
+	    SELECT *
+	    FROM (
+	        SELECT
+	            A.ID AS artId,
+	            A.ART_TITLE AS artTitle,
+	            A.ART_CATEGORY AS artCategory,
+	            A.ART_START_DATE AS artStartDate,
+	            U.USER_NAME AS userName,
+	            I.ART_IMG_NAME AS artImgName,
+	            I.ART_IMG_PATH AS artImgPath,
+	            ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE ASC) AS rnum
+	        FROM TBL_ART A
+	        JOIN TBL_USER U ON A.USER_ID = U.ID
+	        JOIN (
+	            SELECT *
+	            FROM (
+	                SELECT
+	                    ART_ID,
+	                    ART_IMG_NAME,
+	                    ART_IMG_PATH,
+	                    ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
+	                FROM TBL_ART_IMG
+	            )
+	            WHERE rn = 1
+	        ) I ON A.ID = I.ART_ID
+	        WHERE A.ART_START_DATE > SYSDATE
+	        <if test="category != null and category != ''">
+	            AND A.ART_CATEGORY = #{category}
+	        </if>
+	    )
+	    WHERE rnum > #{startRow} AND rnum &lt;= #{endRow}
+	</select>
+
+
 	<!--작품 업로드 (전시중) -->
 	<insert id="insert" parameterType="ArtPostDTO">
-		INSERT INTO TBL_ART (ID,
-		ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE,
-		ART_DESCRIPTION,
-		ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )
-		VALUES (
-		SEQ_ART.NEXTVAL,
-		#{artTitle},
-		#{artCategory},
-		#{artMaterial},
-		#{artSize},
-		#{artDescription},
-		SYSDATE,
-		SYSDATE,
-		NULL,
-		#{userId}
+       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
+       VALUES (
+           SEQ_ART.NEXTVAL,
+           #{artTitle},
+           #{artCategory},
+           #{artMaterial},
+           #{artSize},
+           #{artDescription},
+           CURRENT_TIMESTAMP,
+           CURRENT_TIMESTAMP, 
+           NULL, 
+           #{userId}
+       )
+	</insert>
+	<select id="getLatestArtId" resultType="Long">
+	    SELECT ID 
+	    FROM TBL_ART 
+	    ORDER BY ART_DATE DESC
+	    FETCH FIRST 1 ROWS ONLY
+	</select>
+	<insert id="insertImg" parameterType="ArtPostDTO">
+		INSERT INTO TBL_ART_IMG (ID, ART_IMG_NAME, ART_IMG_PATH, ART_ID)
+		VALUES(
+			   SEQ_ART_IMG.NEXTVAL, 
+			   #{artImgName}, 
+			   #{artImgPath}, 
+			   #{artId}
+		)
+	</insert>
+	
+	<insert id="insertArtPost" parameterType="ArtPostDTO">
+		INSERT INTO TBL_ART_POST (ID, ART_POST_DATE, USER_ID, ART_ID)
+		VALUES(
+			SEQ_ART_POST.NEXTVAL, 
+			CURRENT_TIMESTAMP, 
+			#{userId}, 
+			#{artId}
 		)
 	</insert>
 
+    
 	<!--작품 업로드 (전시예정) -->
 	<insert id="insertCommindSoon" parameterType="ArtVO">
-		INSERT INTO TBL_ART
-		(ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE,
-		ART_DESCRIPTION,
-		ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )
-		VALUES (
-		SEQ_ART.NEXTVAL,
-		#{artTitle},
-		#{artCategory},
-		#{artMaterial},
-		#{artSize},
-		#{artDescription},
-		SYSDATE,
-		SYSDATE,
-		#{artEndDate},
-		#{userId}
-		)
+	       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
+	       VALUES (
+	           SEQ_ART.NEXTVAL,
+	           #{artTitle},
+	           #{artCategory},
+	           #{artMaterial},
+	           #{artSize},
+	           #{artDescription},
+	           SYSDATE,
+	           SYSDATE,
+	           #{artEndDate},
+	           #{userId}
+	       )
 	</insert>
+	
+	<select id="selectArtById" parameterType="long" resultType="ArtPostDTO">
+	    SELECT 
+	        TAP.ID,
+	        TA.ART_TITLE, 
+	        TAI.ART_IMG_NAME, 
+	        TAI.ART_IMG_PATH, 
+	        TU.USER_NAME, 
+	        TA.ART_DATE, 
+	        TA.ART_MATERIAL, 
+	        TA.ART_SIZE, 
+	        TA.ART_CATEGORY, 
+	        TA.ART_DESCRIPTION
+	    FROM TBL_ART_POST TAP
+	    JOIN TBL_ART TA ON TAP.ART_ID = TA.ID
+	    JOIN TBL_USER TU ON TAP.USER_ID = TU.ID
+	    JOIN TBL_ART_IMG TAI ON TAI.ART_ID = TA.ID
+	    WHERE TAP.ART_ID = #{artId}
+	</select>
+	
 
 	<select id="selectAll" resultType="ArtVO">
 		SELECT ID, ART_TITLE,
@@ -51,14 +267,6 @@
 		FROM TBL_ART
 	</select>
 
-	<select id="selectById" parameterType="int" resultType="ArtVO">
-		SELECT
-		ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION,
-		ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID
-		FROM TBL_ART
-		WHERE ID =
-		#{id}
-	</select>
 
 	<insert id="insertArtLike" parameterType="ArtLikeVO">
 		INSERT INTO
@@ -70,100 +278,6 @@
 		SYSDATE
 		)
 	</insert>
-
-	<select id="selectDisplayListFiltered" resultType="ArtDTO" parameterType="map">
-		SELECT *
-		FROM (
-		SELECT
-		A.ID AS artId,
-		A.ART_TITLE AS artTitle,
-		A.ART_CATEGORY AS artCategory,
-		A.ART_START_DATE AS artStartDate,
-		U.USER_NAME AS userName,
-		I.ART_IMG_NAME AS artImgName,
-		I.ART_IMG_PATH AS
-		artImgPath,
-		ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE DESC) AS rnum
-		FROM TBL_ART A
-		JOIN TBL_USER U ON A.USER_ID = U.ID
-		JOIN (
-		SELECT *
-		FROM (
-		SELECT
-		ART_ID,
-		ART_IMG_NAME,
-		ART_IMG_PATH,
-		ROW_NUMBER() OVER (PARTITION BY
-		ART_ID ORDER BY ID) AS rn
-		FROM TBL_ART_IMG
-		)
-		WHERE rn = 1
-		) I ON A.ID =
-		I.ART_ID
-		WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02','YYYY-MM-DD')
-		AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01','YYYY-MM-DD')
-		<if test="category != null and category != ''">
-			AND A.ART_CATEGORY = #{category}
-		</if>
-		)
-		WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
-	</select>
-
-	<select id="selectDisplayCountFiltered" parameterType="map" resultType="int">
-  SELECT COUNT(*)
-  FROM TBL_ART A
-  WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
-    AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
-    <if test="category != null and category != ''">
-      AND A.ART_CATEGORY = #{category}
-    </if>
-</select>
-
-
-
-
-
-	<select id="selectDisplayCount" resultType="int">
-		SELECT COUNT(*) FROM TBL_ART A
-		JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
-		WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
-		AND	A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
-	</select>
-
-	<select id="selectDisplayList" resultType="ArtDTO"
-		parameterType="map">
-		SELECT *
-		FROM (
-		SELECT
-		A.ID AS artId,
-		A.ART_TITLE AS artTitle,
-		A.ART_CATEGORY AS artCategory,
-		A.ART_START_DATE AS artStartDate,
-		U.USER_NAME AS userName,
-		I.ART_IMG_NAME AS artImgName,
-		I.ART_IMG_PATH AS artImgPath,
-		ROW_NUMBER() OVER (ORDER BY A.ART_START_DATE DESC) AS rnum
-		FROM TBL_ART A
-		JOIN TBL_USER U ON A.USER_ID = U.ID
-		JOIN (
-		SELECT *
-		FROM (
-		SELECT
-		ART_ID,
-		ART_IMG_NAME,
-		ART_IMG_PATH,
-		ROW_NUMBER() OVER (PARTITION BY ART_ID ORDER BY ID) AS rn
-		FROM TBL_ART_IMG
-		)
-		WHERE rn = 1
-		) I ON A.ID = I.ART_ID
-		WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
-		AND A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
-		)
-		WHERE rnum &gt; #{startRow} AND rnum &lt;= #{endRow}
-	</select>
-
-
 
 
 </mapper>
