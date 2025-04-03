@@ -125,4 +125,26 @@
 		WHERE TQ.ID = #{qnaId}
 	</select>
 	
+	<select id="selectQnaById" parameterType="Long" resultType="QnaVO">
+		SELECT *
+		FROM TBL_QNA
+		WHERE ID = #{qnaId}
+	</select>
+	
+	<insert id="insertQna" parameterType="QnaVO">
+		INSERT INTO TBL_QNA
+		VALUES (SEQ_QNA.NEXTVAL, #{qnaTitle}, #{qnaContent}, CURRENT_TIMESTAMP, #{qnaImgName}, #{qnaImgPath}, #{qnaCategory}, #{userId})
+	</insert>
+	
+	<update id="updateQna" parameterType="QnaVO">
+		UPDATE TBL_QNA 
+		SET QNA_TITLE = #{qnaTitle}, QNA_CONTENT = #{qnaContent}, QNA_TIME = CURRENT_TIMESTAMP, QNA_IMG_NAME = #{qnaImgName}, QNA_IMG_PATH = #{qnaImgPath}, QNA_CATEGORY = #{qnaCategory}
+		WHERE ID = #{id}
+	</update>
+	
+	<delete id="deleteQna" parameterType="Long">
+		DELETE FROM TBL_QNA
+		WHERE ID = #{id}
+	</delete>
+	
 </mapper>
