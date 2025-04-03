@@ -52,15 +52,15 @@
 				<div id="writer-info">
 					<div id="name">
 						<p>이름</p>
-						<p>${mail.rUserName}</p>
+						<p>${sendUserVO.userName}</p>
 					</div>
 					<div id="phone">
 						<p>연락처</p>
-						<p>${mail.rUserPhone}</p>
+						<p>${sendUserVO.userPhone}</p>
 					</div>
 					<div id="email">
 						<p>이메일</p>
-						<p>${mail.rUserEmail}</p>
+						<p>${sendUserVO.userEmail}</p>
 					</div>
 				</div>
 				

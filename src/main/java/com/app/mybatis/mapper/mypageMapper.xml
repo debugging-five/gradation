@@ -73,6 +73,11 @@
 		WHERE TBM.ID = #{id}
 	</select>
 	
+	<delete id="deleteMail" parameterMap="Long">
+		DELETE FROM TBL_MAIL
+		WHERE ID = #{id}
+	</delete>
+	
 
 
 	
