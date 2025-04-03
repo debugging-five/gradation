@@ -27,24 +27,20 @@
 			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
-				<h6 id="content-kind">경매 관련 문의</h6>
+				<h6 id="content-kind">${qna.qnaCategory} 관련 문의</h6>
 				<div id="question-wrap">
 					<div id="question"><h2>Q</h2></div>
-					<h3 id="question-title">경매금액을 잘못 올렸어요.</h3>
-					<p id="question-date">25.01.15</p>
+					<h3 id="question-title">${qna.qnaTitle}</h3>
+					<p id="question-date">${qna.dateData}</p>
 				</div>
-				<p id="question-content">
-                    제가 경매금액을 5억원에 올려야 하는데 고양이가 잘못눌러서 5원에 올려버렸습니다. 공들인 작품이 5원이되어버린다는것은 분명 슬픈 일이겠죠. 하지만 이또한 지나가리, 이 넓은 우주에 이 사소한 일 하나가 그렇게 중요하진 않겠지요. 우리는 어디에서 왔고 어디에 있고 어디로 가는걸까요..
-                </p>
+				<p id="question-content">${qna.qnaContent}</p>
                 <div id="answer-div">
 					<div id="answer-wrap">
 						<div id="answer"><h2>A</h2></div>
 						<h3 id="answer-title">답변완료</h3>
-						<p id="answer-date">25.01.15</p>
+						<p id="answer-date">${qna.answerDateData}</p>
 					</div>
-					<p id="answer-content">
-		            	경매 금액을 잘못 올리셨다면, 자신의 계정으로 로그인 할 경우 경매 페이지에 수정하기 버튼을 통해 경매 금액을 수정해보세요.
-		            </p>
+					<p id="answer-content">${qna.qnaAnswerContent}</p>
                 </div>
 
 				<div id="button-div">
