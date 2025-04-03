@@ -13,35 +13,49 @@ import com.app.dao.ArtDAO;
 import com.app.dto.ArtDTO;
 
 public class DisplayMainIngController implements Action {
+	private String getLocalizedCategory(String category) {
+	    switch (category) {
+	        case "korean": return "한국화";
+	        case "painting": return "회화";
+	        case "sculpture": return "조각";
+	        case "craft": return "공예";
+	        case "architecture": return "건축";
+	        case "calligraphy": return "서예";
+	        default: return null;
+	    }
+	}
 
-	@Override
+    @Override
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         Result result = new Result();
 
         int page = 1;
-        int pageSize = 15;
-
         String pageParam = req.getParameter("page");
-        String category = req.getParameter("category");
-
         if (pageParam != null && !pageParam.isEmpty()) {
-            page = Integer.parseInt(pageParam);
+            try {
+                page = Integer.parseInt(pageParam);
+            } catch (NumberFormatException e) {
+                page = 1;
+            }
         }
 
-        ArtDAO artDAO = new ArtDAO();
+        int pageSize = 15;
         int startIndex = (page - 1) * pageSize;
 
-        // 여기서 선언
+        String categoryParam = req.getParameter("category");
+        String category = getLocalizedCategory(categoryParam);
+        boolean isFiltered = category != null && !category.isEmpty();
+
+        ArtDAO artDAO = new ArtDAO();
+
         int totalItems;
         List<ArtDTO> artList;
 
-        // 카테고리 필터가 있을 경우
-        if (category != null && !category.isEmpty()) {
+        if (isFiltered) {
             totalItems = artDAO.getFilteredDisplayCount(category);
             artList = artDAO.selectDisplayListFiltered(startIndex, pageSize, category);
         } else {
-            // 전체 조회
-            totalItems = artDAO.getTotalDisplayCount(); // ★ artMapper에 selectDisplayList 쿼리 존재해야 함
+            totalItems = artDAO.getTotalDisplayCount();
             artList = artDAO.selectDisplayList(startIndex, pageSize);
         }
 
@@ -50,11 +64,10 @@ public class DisplayMainIngController implements Action {
         req.setAttribute("artList", artList);
         req.setAttribute("currentPage", page);
         req.setAttribute("totalPages", totalPages);
-        req.setAttribute("category", category); // JSP에서 유지용
+        req.setAttribute("category", categoryParam); 
 
         result.setPath("display-main-ing.jsp");
         result.setRedirect(false);
         return result;
-	}
-
+    }
 }

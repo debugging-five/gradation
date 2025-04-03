@@ -72,7 +72,7 @@ String category = request.getParameter("category");
 				<div class="row-upload-options">
 					<div class="upload-label">작품 업로드</div>
 					<div class="upload-icon-wrapper">
-						<a href="display-form.jsp"><img class="upload-icon"
+						<a href="display-form.display"><img class="upload-icon"
 							src="../assets/images/display/art/upload.png" alt="icon" /></a>
 					</div>
 					<div class="sort-options">
@@ -102,18 +102,15 @@ String category = request.getParameter("category");
 						int total = artList.size();
 						int columns = 3;
 
-						// 3개의 gallery-column을 먼저 생성하고, 각 리스트를 준비해
 						List<ArtDTO>[] columnData = new List[columns];
 						for (int i = 0; i < columns; i++) {
 							columnData[i] = new java.util.ArrayList<>();
 						}
 
-						// artList 전체를 순회하면서 round-robin 방식으로 분배
 						for (int i = 0; i < total; i++) {
 							columnData[i % columns].add(artList.get(i));
 						}
 
-						// 각 column 별로 출력
 						for (int col = 0; col < columns; col++) {
 					%>
 					<div class="gallery-column">
@@ -126,14 +123,17 @@ String category = request.getParameter("category");
 									src="<%=request.getContextPath() + art.getArtImgPath() + art.getArtImgName()%>"
 									alt="<%=art.getArtTitle()%>"
 									data-date="<%=art.getArtStartDate()%>" />
+									
 								<div class="hover-overlay">
 									<div class="hover-text-group">
 										<div class="hover-title"><%=art.getArtTitle()%></div>
 										<div class="hover-artist"><%=art.getUserName()%></div>
 									</div>
+									
 								</div>
 							</div>
 						</div>
+<p style="color:red;"><%= art.getArtTitle() %> - <%= art.getArtCategory() %></p>
 						<%
 						} // inner loop
 						%>
@@ -143,12 +143,12 @@ String category = request.getParameter("category");
 					} // outer loop
 					}
 					%>
-
 				</div>
 				
 			</div>
 				<p>현재 카테고리: <%= request.getParameter("category") %></p>
 <p>가져온 작품 수: <%= (artList != null) ? artList.size() : 0 %></p>
+
 
 			<%
 			int currentPage = (request.getAttribute("currentPage") != null) ? (int) request.getAttribute("currentPage") : 1;
