@@ -38,7 +38,7 @@
 				<div id="items">
 					
 					<c:forEach var="qna" items="${qnaList}" varStatus="status">
-						<div class="item" onclick="location.href='mypage-service-center-qna-content.mypage?qnaId=${qna.qnaId}'">
+						<div class="item" onclick="location.href='mypage-service-center-qna-content.mypage?contentId=${qna.qnaId}'">
 							<div class="item-number-wrap">
 								<h6 class="item-number">${status.index + 1}</h6>
 							</div>

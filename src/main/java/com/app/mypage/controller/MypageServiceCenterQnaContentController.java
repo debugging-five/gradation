@@ -18,7 +18,7 @@ public class MypageServiceCenterQnaContentController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		String qnaId = req.getParameter("qnaId");
+		String qnaId = req.getParameter("contentId");
 		
 //		로그인검증
 		HttpSession session = req.getSession();
@@ -33,7 +33,7 @@ public class MypageServiceCenterQnaContentController implements Action {
 		
 //		유효한 qna검증
 		if(qnaId == null) {
-			result.setPath("mypage-service-center-qna-list");
+			result.setPath("mypage-service-center-qna-list.mypage");
 			result.setRedirect(true);
 			return result;
 		}
@@ -43,7 +43,7 @@ public class MypageServiceCenterQnaContentController implements Action {
 		QnaDTO qna = userDAO.selectOneQna(qnaDTO);
 		
 		if(qna.getQnaAnswerTitle() == null) {
-			qna.setQnaTitle("");
+			qna.setQnaAnswerTitle(qnaId);
 		}
 		if(qna.getQnaContent() == null) {
 			qna.setQnaContent("");
@@ -55,17 +55,10 @@ public class MypageServiceCenterQnaContentController implements Action {
 		}
 		
 		qna.setDateData(new SimpleDateFormat("yy.MM.dd").format(qna.getQnaTime()));
+		
 		req.setAttribute("qna", qna);
 		
 		System.out.println(qna);
-		
-//		
-		
-		
-		
-		
-		
-		
 		
 		result.setPath("mypage-service-center-qna-content.jsp");
 		return result;

@@ -8,6 +8,7 @@ import com.app.dto.MajorDTO;
 import com.app.dto.QnaDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.FaqVO;
+import com.app.vo.QnaVO;
 import com.app.vo.UserVO;
  
  public class UserDAO {
@@ -108,6 +109,7 @@ import com.app.vo.UserVO;
  	public List<QnaDTO> selectQna(String userEmail) {
  		return sqlSession.selectList("user.selectQna", userEmail);
  	}
+ 	
 // 	qna상세
  	public QnaDTO selectOneQna(QnaDTO qnaDTO) {
  		return sqlSession.selectOne("user.selectOneQna", qnaDTO);
