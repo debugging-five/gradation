@@ -28,11 +28,14 @@ public class MypageContactArtistDetailController implements Action {
         req.setAttribute("sendUserVO", sendUserVO);
         
 		Long id = Long.parseLong(req.getParameter("id"));
-		System.out.println(id);
+//		System.out.println(id);
 		
 		req.setAttribute("mail", mypageDAO.selectMail(id).orElseThrow(() -> {
 			throw new RuntimeException("MailDetailController user not found");
 		}));
+		
+		
+		
 		
 		result.setPath("mypage-contact-artist-detail.jsp");
 		return result;
