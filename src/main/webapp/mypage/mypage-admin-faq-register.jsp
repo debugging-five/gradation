@@ -21,7 +21,7 @@
 				<h2 id="title">고객센터 / 자주 묻는 질문</h2>
 				
 				
-				<form action="/gradation/mypage/mypage-admin-faq-register-ok.mypage" method="post">
+				<form action="${pageContext.request.contextPath}/mypage/mypage-admin-faq-register-ok.mypage" method="post">
 					<div id="kind-wrap">
 						<div class="name">
 							<h5>구분<span class="star">*</span></h5>
@@ -66,6 +66,7 @@
 	<%@ include file="../layout/footer.jsp" %>
 </body>
 <script type="text/javascript" src="../assets/js/mypage/mypage-admin-faq-register.js"></script>
+
 </html>
 
 
