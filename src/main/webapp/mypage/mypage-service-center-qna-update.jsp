@@ -26,37 +26,37 @@
 			</div>
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 1 : 1 문의하기</h2>
-				<form action="mypage-service-center-qna-update-ok.mypage" method="post">
+				<form action="mypage-service-center-qna-update-ok.mypage?contentId=${qna.id}" method="post" enctype="multipart/form-data">
 					<div id="checkboxs-wrap">						
 						<span class="h5-text">구분</span>
 						<span class="red-star">*</span>
-						<input type="hidden" id="radio-check" value="${qna.qnaCategory}"/>
+						<input type="hidden" id="hidden-category" name="qnaCategory" value="${qna.qnaCategory}"/>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-display" />
+							<input name="category" class="check-label" type="radio" id="check-display" />
 				  			<label class="checkbox-label" for="check-display">
 				  				<span class="check-label-span">작품전시</span>
 				  			</label>
 						</div>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-exhibition"/>
+							<input name="category" class="check-label" type="radio" id="check-exhibition"/>
 				  			<label class="checkbox-label" for="check-exhibition">
 				  				<span class="check-label-span">전시회</span>
 				  			</label>
 						</div>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-auction"/>
+							<input name="category" class="check-label" type="radio" id="check-auction"/>
 				  			<label class="checkbox-label" for="check-auction">
 				  				<span class="check-label-span">경매</span>
 				  			</label>
 						</div>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-mypage"/>
+							<input name="category" class="check-label" type="radio" id="check-mypage"/>
 				  			<label class="checkbox-label" for="check-mypage">
 				  				<span  class="check-label-span">마이페이지</span>
 				  			</label>
 						</div>
 						<div>
-							<input name="qnaCategory" class="check-label" type="radio" id="check-others"/>
+							<input name="category" class="check-label" type="radio" id="check-others"/>
 				  			<label class="checkbox-label" for="check-others">
 				  				<span  class="check-label-span">기타</span>
 				  			</label>
@@ -66,19 +66,19 @@
 			  		<div id="title-wrap">
 			  			<span class="h5-text">제목</span>
 						<span class="red-star">*</span>
-			  			<input type="text" placeholder="제목을 입력하세요" value="${qna.qnaTitle}">
+			  			<input type="text" id="qna-title" name="qnaTitle" placeholder="제목을 입력하세요" value="${qna.qnaTitle}">
 			  		</div>
 			  		
 			  		<div id="textarea-content">
 						<h5>내용<span class="red-star">*</span></h5>
-						<textarea name="qnaContent" placeholder="내용을 입력해 주세요">${qna.qnaContent}</textarea>
+						<textarea id="qna-content" name="qnaContent" placeholder="내용을 입력해 주세요">${qna.qnaContent}</textarea>
 					</div>
 					
 					<div class="filebox">
 						<span class="h5-text" >첨부파일</span>
 					    <label for="file-input">첨부파일</label>
 					    <span id="file-name">${qna.qnaImgName}</span>
-					    <input type="file" id="file-input">
+					    <input type="file" name="qnaImgName" id="file-input">
 					</div>
 				
 					<div class="submit-button-div">

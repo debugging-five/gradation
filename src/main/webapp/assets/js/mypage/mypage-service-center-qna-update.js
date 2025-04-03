@@ -12,7 +12,7 @@ document.querySelector("#file-input").addEventListener("change", function () {
 });
 
 window.onload = () => {
-	let radioCheck = document.querySelector("#radio-check");
+	let radioCheck = document.querySelector("#hidden-category");
 	console.log(radioCheck.value);
 	switch (radioCheck.value) {
 		case("작품전시"): {
@@ -35,5 +35,5 @@ window.onload = () => {
 			checkOthers.checked = true;
 			break;
 		}
-	}	
+	}
 }

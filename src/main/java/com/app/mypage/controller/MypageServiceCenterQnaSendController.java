@@ -9,8 +9,6 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.UserDAO;
-import com.app.dto.QnaDTO;
 
 public class MypageServiceCenterQnaSendController implements Action {
 

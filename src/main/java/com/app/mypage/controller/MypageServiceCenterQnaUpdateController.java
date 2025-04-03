@@ -12,6 +12,7 @@ import com.app.Action;
 import com.app.Result;
 import com.app.dao.UserDAO;
 import com.app.dto.QnaDTO;
+import com.app.vo.QnaVO;
 
 public class MypageServiceCenterQnaUpdateController implements Action {
 
@@ -37,22 +38,18 @@ public class MypageServiceCenterQnaUpdateController implements Action {
 			result.setRedirect(true);
 			return result;
 		}
-		qnaDTO.setQnaId(Long.parseLong(qnaId));
-		qnaDTO.setUserEmail(userEmail);
+		QnaVO qnaVO = userDAO.selectQnaById(Long.parseLong(qnaId));
 		
-		QnaDTO qna = userDAO.selectOneQna(qnaDTO);
+		System.out.println(qnaVO);
 		
-		qna.setDateData(new SimpleDateFormat("yy.MM.dd").format(qna.getQnaTime()));
-		
-		if(qna.getQnaImgName() == null) {
-			qna.setQnaImgName("");
+		if(qnaVO.getQnaImgName() == null) {
+			qnaVO.setQnaImgName("");
 		}
-		if(qna.getQnaImgPath() == null) {
-			qna.setQnaImgPath("");
+		if(qnaVO.getQnaImgPath() == null) {
+			qnaVO.setQnaImgPath("");
 		}
 		
-		System.out.println(qna);
-		req.setAttribute("qna", qna);
+		req.setAttribute("qna", qnaVO);
 		
 		
 		result.setPath("mypage-service-center-qna-update.jsp");

@@ -8,6 +8,7 @@ let checkOthers = document.querySelector("#check-others");
 let qnaTitle = document.querySelector("#qna-title");
 let qnaContent = document.querySelector("#qna-content");
 	
+let hiddenCategory = document.querySelector("#hidden-category");
 
 // 파일 첨부
 document.querySelector("#file-input").addEventListener("change", function () {
@@ -31,7 +32,7 @@ const allOk = () => {
 	let checkOthers = document.querySelector("#check-others");
 	let qnaTitle = document.querySelector("#qna-title");
 	let qnaContent = document.querySelector("#qna-content");
-	
+
 	if((checkDisplay.checked == true ||
 		checkExhibition.checked == true ||
 		checkAuction.checked == true ||
@@ -43,25 +44,30 @@ const allOk = () => {
 }
 
 checkDisplay.addEventListener('click', () => {
-	allOk()
+	hiddenCategory.value = "작품전시";
+	allOk();
 });
 checkExhibition.addEventListener('click', () => {
-	allOk()
+	hiddenCategory.value = "전시회";
+	allOk();
 });
 checkAuction.addEventListener('click', () => {
-	allOk()
+	hiddenCategory.value = "경매";
+	allOk();
 });
 checkMypage.addEventListener('click', () => {
-	allOk()
+	hiddenCategory.value = "마이페이지";
+	allOk();
 });
 checkOthers.addEventListener('click', () => {
-	allOk()
+	hiddenCategory.value = "기타";
+	allOk();
 });
 
 qnaTitle.addEventListener('input', () => {
-	allOk()
+	allOk();
 });
 
 qnaContent.addEventListener('input', () => {
-	allOk()
+	allOk();
 });
