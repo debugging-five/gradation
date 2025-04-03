@@ -21,9 +21,15 @@ public class DisplayDetailController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		UserDAO userDAO = new UserDAO();
-		ArtPostDTO artPostDTO = new ArtPostDTO();
 		ArtVO artVO = new ArtVO();
 		ArtDAO artDAO = new ArtDAO();
+		String artIdParam = req.getParameter("artId");
+		Long artId = Long.parseLong(artIdParam);
+		ArtPostDTO artPostDTO = artDAO.selectArtById(artId);
+		
+		
+//		사진 출력은 imgPath에서 req.imgName 으로 출력한다.
+		
 		
 //		로그인 검사
 		HttpSession session = req.getSession();
@@ -32,14 +38,19 @@ public class DisplayDetailController implements Action {
 			result.setRedirect(true);
 			return result;
 		}
+//		유효한 작품 검증
+		if(artIdParam == null) {
+			result.setPath("../display/display-main");
+			result.setRedirect(true);
+			return result;
+		}
+		
 		
 // 		로그인된 유저 정보 가져오기
         String userEmail = (String) req.getSession().getAttribute("loginUser");
         UserVO userVO = userDAO.selectUserByEmail(userEmail);
         
 //      내용 출력
-        req.setAttribute("artImgName", artPostDTO.getArtImgName());
-        req.setAttribute("artImgPath", artPostDTO.getArtImgPath());
         req.setAttribute("artTitle", artPostDTO.getArtTitle());
         req.setAttribute("userName", userVO.getUserName());
         req.setAttribute("artDate", artPostDTO.getArtDate());
@@ -47,11 +58,12 @@ public class DisplayDetailController implements Action {
         req.setAttribute("artSize", artPostDTO.getArtSize());
         req.setAttribute("artCategory", artPostDTO.getArtCategory());
         req.setAttribute("artDescription", artPostDTO.getArtDescription());
+         
+        String artImg = "../" + artPostDTO.getArtImgPath() + artPostDTO.getArtImgName();
+        req.setAttribute("artImg", artImg);
+       
         
-        // DB에 저장 후, 생성된 artId 가져오기
-//        int artId = artDAO.selectAll(artVO);
-
-//		result.setPath("display-detail.display?artId=" + artId);
+		result.setPath("display-detail.jsp");
 		return result;
 	}
 

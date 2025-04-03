@@ -36,15 +36,23 @@ public class ArtDAO {
     public void insertCommingSoon(ArtPostDTO artPostDTO) {
         sqlSession.insert("art.insertCommingSoon", artPostDTO);
     }
+    
+    public void insertArtPost(ArtPostDTO artPostDTO) {
+        sqlSession.insert("art.insertArtPost", artPostDTO);
+    }
+    public ArtPostDTO selectArtById(Long artId) {
+        return sqlSession.selectOne("art.selectArtById", artId);
+    }
 
     // ✔ 작품 상세보기
-    public List<ArtVO> selectAllArts() {
+    public List<ArtVO> selectAll() {
         return sqlSession.selectList("art.selectAll");
     }
 
-    public ArtVO selectArtById(int id) {
-        return sqlSession.selectOne("art.selectById", id);
-    }
+	/*
+	 * public ArtVO selectArtById(Long id) { return
+	 * sqlSession.selectOne("art.selectById", id); }
+	 */
 
     // ✔ 좋아요 기능
     public void insertArtLike(ArtLikeVO artLikeVO) {
@@ -80,4 +88,7 @@ public class ArtDAO {
     public int getTotalDisplayCount() {
         return sqlSession.selectOne("art.selectDisplayCount");
     }
+    
+    
+    
 }
