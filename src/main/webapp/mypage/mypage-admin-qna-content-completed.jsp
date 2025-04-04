@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,14 +22,14 @@
 			<div id="content-wrap">
 				<h2 id="title">고객센터 / 1 : 1 문의</h2>
 				<div id="content-kind">
-					<h6>경매 관련 문의</h6>
+					<h6>${qna.qnaCategory} 관련 문의</h6>
 					<p id="notice">작가의 답변이 완료된 글은 수정이 불가합니다.</p>
 				</div>
 				
 				<div id="title-wrapper">
 					<div id="contact-title">
-						<h3>경매금액을 잘못 올렸어요.</h3>
-						<p>25. 01. 15</p>
+						<h3>Q. ${qna.qnaTitle}</h3>
+						<p>${qna.dateData}</p>
 					</div>
 				</div>
 				
@@ -35,25 +37,25 @@
 				<div id="writer-info">
 					<div id="name">
 						<p>이름</p>
-						<p>고길동</p>
+						<p>${qna.userName}</p>
 					</div>
 					<div id="phone">
 						<p>연락처</p>
-						<p>010-1234-5678</p>
+						<p>${qna.userPhone}</p>
 					</div>
 					<div id="email">
 						<p>이메일</p>
-						<p>gradation1234@gmail.com</p>
+						<p>${qna.userEmail}</p>
 					</div>
 				</div>
 				
 				<div id="contact-content">
-					<p>경매 금액을 50,000원에 올려야 하는데 500,000원에 올렸어요 어떻게 하면 수정가능할까요.</p>
+					<p>${qna.qnaContent}</p>
 				</div>
 				
 				<div id="title-wrapper2">
 					<div id="contact-title">
-						<h3>답변완료</h3>
+						<h3 style="color: var(--color-primary)">A. 답변완료</h3>
 						<p>25. 01. 15</p>
 					</div>
 				</div>
