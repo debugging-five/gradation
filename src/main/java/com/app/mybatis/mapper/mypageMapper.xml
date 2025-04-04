@@ -85,7 +85,11 @@
 		WHERE ID = #{id}
 	</delete>
 	
-
+	<!-- 대학교 전시회 좋아요 저장 -->
+	<insert id="saveLike" parameterType="UniversityDTO">
+	    INSERT INTO TBL_UNIVERSITY_LIKE (ID, USER_ID, UNIVERSITY_ID, UNIVERSITY_LIKE_TIME)
+	    VALUES (SEQ_UNIVERSITY_LIKE.NEXTVAL, #{userId}, #{universityId}, SYSDATE)
+	</insert>
 
 	
 </mapper>
