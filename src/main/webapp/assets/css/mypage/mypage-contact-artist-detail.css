@@ -154,7 +154,9 @@ button {
 
 
 
-
+#delete-button {
+    display: inline-block; 
+}
 
 
 

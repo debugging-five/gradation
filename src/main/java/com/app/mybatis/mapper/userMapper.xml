@@ -147,4 +147,8 @@
 		WHERE ID = #{id}
 	</delete>
 	
+	<select id="findEmailById" parameterType="long" resultType="string">
+    	SELECT USER_EMAIL FROM TBL_USER WHERE ID = #{id}
+	</select>
+	
 </mapper>

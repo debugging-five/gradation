@@ -1,4 +1,4 @@
-package com.app.mypage.controller;
+package com.app.display.controller;
 
 import java.io.IOException;
 
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class MypagePostContentModifyController implements Action {
+public class DisplayReplyUpdateController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("mypage-post-content-modify.jsp");
+		
+		
 		return result;
 	}
-
 }

@@ -73,6 +73,7 @@
     	<mapper resource="com/app/mybatis/mapper/mypageMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/upcyclingMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/userMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/mailMapper.xml" />
     </mappers>
     
     

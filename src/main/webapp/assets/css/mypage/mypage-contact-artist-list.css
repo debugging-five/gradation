@@ -19,7 +19,7 @@ body {
 }
 
 #category {
-
+	margin : 0 0 200px 0;
 } 
 
 
@@ -87,6 +87,7 @@ body {
 	width: 480px;
 	align-content: center;
 	font-size: var(--font-size-h7);
+	text-align: center;
 }
 
 .item-date-wrap {

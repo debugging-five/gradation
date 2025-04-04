@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,9 @@
         
         <!-- 좋아요 / 작가와 연락 버튼 -->
         <div class="button-position">
-            <button class="like-button">좋아요</button>
+        	
+            <button id="likeBtn" class="like-button" onclick="location.href='display-art-like-ok.display?artId=${artId}'">좋아요♡</button>
+            
             <a href="../mypage/mypage-contact-artist-write.mypage">
                 <button class="contact-button">작가와 연락</button>
             </a>
@@ -46,7 +49,7 @@
             <span>${userName}</span>
         </div>
         <div class="likes"><!-- 좋아요 -->
-            <span>좋아요 11개</span>
+            <span>좋아요 ${likeCount}개</span>
             <div class="like100">
 	            <img class="grayquestion-icon" alt="grayquestion-icon" src="../assets/images/display/gray_question.png">
 	        	<span class="hover-text">좋아요 50개 이상 받으면 경매 개시 가능</span>
@@ -91,58 +94,50 @@
 		        <li class="first-like">좋아요순</li>
 		    </ul>
 		</div>
-
 		
-		<div class="user">
-	        <div class="user-profile">
-	        	<img class="profile-image" alt="profile-image" src="../assets/images/display/cat.png">
-	            <p class="comment-user"><strong>user4</strong></p>
-	            <p>20분 전</p>
-	            
-		      	<div class="dropdown-container">
-				    <button class="dropdown-btn">⋮</button>
-				    <ul class="dropdown-menu">
-				        <li id="modify-faq" class="edit">수정</li>
-				        <li id="delete-faq" class="delete">삭제</li>
-				    </ul>
-				</div>
-	        </div>
-	        
-			<div class="comment-wrapper">
-				<div class= "fix-comment">
-				    <p id="question-content" class="comment">작품 잘 봤습니다.</p>
-				    <div id="answer-input1">
-				    	<textarea id="answer-input"></textarea>
-				    	<div class="fix-buttons">
-					  	  	<button id="cancel-faq">취소</button>
-							<button id="save-faq">저장</button>
-				    	</div>
+		
+
+		<c:forEach var="comment" items="${replyList}" varStatus="status">
+			<div class="user">
+		        <div class="user-profile">
+		        	<img class="profile-image" alt="profile-image" src="${userImg}"
+		        		onerror="this.onerror=null; this.src='../assets/images/display/user.png';">
+		            <p class="comment-user"><strong>${comment.userNickname}</strong></p>
+		            <p>${comment.replyDate}</p>
+		            
+			      	<div class="dropdown-container">
+					    <button class="dropdown-btn">⋮</button>
+					    <ul class="dropdown-menu">
+					        <li id="modify-faq" class="edit">수정</li>
+					        <li id="delete-faq" class="delete">삭제</li>
+					    </ul>
+					</div>
+		        </div>
+		        
+				<div class="comment-wrapper">
+					<div class= "fix-comment">
+					    <p id="question-content" class="comment">${comment.replyContents}</p>
+					    <div id="answer-input1">
+					    	<textarea id="answer-input"></textarea>
+					    	<div class="fix-buttons">
+						  	  	<button id="cancel-faq">취소</button>
+								<button id="save-faq">저장</button>
+					    	</div>
+					    </div>
+					</div>
+						
+				    <div class="comment-like-container" onclick="toggleCommentLike(this)">
+				        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
+				        <span class="comment-like-count">0</span>
 				    </div>
 				</div>
-					
-			    <div class="comment-like-container" onclick="toggleCommentLike(this)">
-			        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
-			        <span class="comment-like-count">0</span>
-			    </div>
 			</div>
-		</div>
+		</c:forEach>
 		
 		
 		
-		<div class="user">
-	        <div class="user-profile">
-	        	<img class="profile-image" alt="profile-image" src="../assets/images/display/cat.png">
-	            <p class="comment-user"><strong>user4</strong></p>
-	            <p>20분 전</p>
-	        </div>
-			<div class="comment-wrapper">
-			    <p class="comment">작품 잘 봤습니다.</p>
-			    <div class="comment-like-container" onclick="toggleCommentLike(this)">
-			        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
-			        <span class="comment-like-count">0</span>
-			    </div>
-			</div>
-		</div>
+		
+
 
         
        
@@ -200,7 +195,7 @@
 			</div>
 	    
     
-</div>    
+	</div>    
 </div>
 <div class="footer-margin"></div>
 <%@ include file="../layout/footer.jsp" %>

@@ -55,11 +55,35 @@
 	    )
 	</insert>
 	
-	<select id="selectMailAll" parameterType="Long" resultType="MailVO">
-		SELECT ID, MAIL_TITLE, MAIL_TITLE, MAIL_SEND_TIME
-		FROM TBL_MAIL
-		ORDER BY ID ASC
+	<select id="selectMailAll" resultType="MailDTO">
+	    SELECT TBM.ID, TBM.MAIL_TITLE, TBM.MAIL_SEND_TIME, 
+	           TBM.SEND_USER_ID, TBM.RECEIVE_USER_ID, TBM.MAIL_CONTENTS,
+	           TBU.USER_EMAIL AS rUserEmail, TBU.USER_EMAIL AS sUserEmail
+	    FROM TBL_MAIL TBM
+	    JOIN TBL_USER TBU
+	    ON TBM.RECEIVE_USER_ID = TBU.ID 
+	    ORDER BY TBM.ID ASC
 	</select>
+	
+	<select id="selectMail" parameterType="Long" resultType="MailDTO">
+		SELECT TBM.ID, TBM.MAIL_TITLE, TBM.MAIL_CONTENTS, TBM.MAIL_SEND_TIME,
+			TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL AS RECEIVE_USER_EMAIL
+		FROM TBL_MAIL TBM
+		JOIN TBL_USER TBU
+		ON TBM.RECEIVE_USER_ID = TBU.ID
+		WHERE TBM.ID = #{id}
+	</select>
+	
+	<update id="updateMail" parameterType="MailDTO">
+		UPDATE TBL_MAIL
+		SET MAIL_CONTENTS = #{mailContents}
+		WHERE ID = #{id}
+	</update>
+	
+	<delete id="deleteMail" parameterType="Long">
+		DELETE FROM TBL_MAIL
+		WHERE ID = #{id}
+	</delete>
 	
 
 

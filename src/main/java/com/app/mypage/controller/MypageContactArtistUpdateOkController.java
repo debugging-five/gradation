@@ -5,11 +5,14 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
 import com.app.dao.MypageDAO;
+import com.app.dao.UserDAO;
 import com.app.dto.MailDTO;
+import com.app.vo.UserVO;
 
 public class MypageContactArtistUpdateOkController implements Action {
 
@@ -23,12 +26,14 @@ public class MypageContactArtistUpdateOkController implements Action {
 		mailDTO.setrUserName(req.getParameter("rUserName"));
 		mailDTO.setMailTitle(req.getParameter("mailTitle"));
 		mailDTO.setMailContents(req.getParameter("mailContents"));
+        
+		Long id = mailDTO.getId();
+		System.out.println("id : " + id);
 		
-//		MypageDAO.update(mailDTO);
+		mypageDAO.updateMail(mailDTO);
 		
 		result.setRedirect(true);
-		result.setPath("");
-		
+		result.setPath("mypage-contact-artist-detail.mypage?id=" + id);
 		return result;
 	}
 

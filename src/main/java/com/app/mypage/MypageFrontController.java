@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 import com.app.mypage.controller.MypageSendPostContentModifyController;
+import com.app.mypage.controller.MypageSendPostContentModifyOkController;
 import com.app.mypage.controller.MypageAdminFaqContentController;
 import com.app.mypage.controller.MypageAdminFaqContentDeleteController;
 import com.app.mypage.controller.MypageAdminFaqContentUpdateController;
@@ -47,7 +48,7 @@ import com.app.mypage.controller.MypageMyPayList;
 import com.app.mypage.controller.MypageMyPostContentController;
 import com.app.mypage.controller.MypageMyPostListController;
 import com.app.mypage.controller.MypagePostContentController;
-import com.app.mypage.controller.MypagePostContentModifyController;
+import com.app.mypage.controller.MypagePostDeleteOkController;
 import com.app.mypage.controller.MypagePostListController;
 import com.app.mypage.controller.MypageSendEmailController;
 import com.app.mypage.controller.MypageServiceCenterFaqContentController;
@@ -107,14 +108,16 @@ public class MypageFrontController extends HttpServlet{
          result = new MypagePostListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-post-content")) {
     	  result = new MypagePostContentController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-post-content-modify")) {
-    	  result = new MypagePostContentModifyController().execute(req, resp);
       }else if(target.equals("mypage/mypage-my-post-list")) {
          result = new MypageMyPostListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-my-post-content")) {
     	  result = new MypageMyPostContentController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-post-delete-ok")) {
+    	    result = new MypagePostDeleteOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-send-post-content-modify")) {
     	  result = new MypageSendPostContentModifyController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-send-post-content-modify-ok")) {
+    	    result = new MypageSendPostContentModifyOkController().execute(req, resp);
       }else if(target.equals("mypage/mypage-service-center-qna-list")) {
           result = new MypageServiceCenterQnaListController().execute(req, resp);
       }else if(target.equals("mypage/mypage-service-center-qna-send")) {

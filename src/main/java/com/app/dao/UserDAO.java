@@ -134,5 +134,10 @@ import com.app.vo.UserVO;
  	public void deleteQna(long qnaId) {
  		sqlSession.delete("user.deleteQna", qnaId);
  	}
- 	
+ 	 	
+//  사용자 id로 이메일 조회
+ 	public String findEmailById(Long id) {
+ 	    return sqlSession.selectOne("user.findEmailById", id);
+ 	}
+
  }
