@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/css/font/font.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/mypage/mypage-my-post-list.css?v=999" />
+	href="../assets/css/mypage/mypage-post-list.css?v=999" />
 </head>
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
@@ -70,7 +70,6 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			const senderElements = document.querySelectorAll(".column-sender");
-
 			senderElements.forEach(function(element) {
 				if (element.textContent.trim() === "관리자") {
 					element.style.color = "#ee3333";
