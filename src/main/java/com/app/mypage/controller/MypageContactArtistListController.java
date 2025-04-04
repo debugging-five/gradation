@@ -38,6 +38,7 @@ public class MypageContactArtistListController implements Action {
 	    
 		req.setAttribute("mailList", mailList); 
 		result.setPath("mypage-contact-artist-list.jsp");
+		System.out.println("mailList" + mailList);
 	    
 	    return result;
 	}
