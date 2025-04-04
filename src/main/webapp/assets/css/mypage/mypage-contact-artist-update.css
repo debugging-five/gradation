@@ -126,6 +126,9 @@ button {
 	resize: none;
 	padding : 10px 0 0 10px;
 	font-family: var(--font-family-Pretendard-Regular);
+	margin : 25px 0 0 0 ;
+	background-color : var(--color-gray100);
+	border-radius : 3px;
 }
 
 #edit-fields {
