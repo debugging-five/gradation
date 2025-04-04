@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -104,7 +104,34 @@
 		  	
 			<!-- 전시회 리스트 -->
 			<div id="exhibition-list">
-				<!-- 전시회 항목들이 여기에 표시됩니다. -->
+				<c:forEach var="exhibition" items="${exhibitionList}">
+				<div id="list">
+		          <div id="logo-wrapper">
+		            <img id="university-logo" src="../${exhibition.universityLogoImgPath}${exhibition.universityLogoImgName}" />
+		          </div>
+		          <div id="info-wrapper">
+					<div class="university-name">
+						<h6>${exhibition.universityName}</h6>
+					</div>
+					<div class="exhibition-title">
+						<p>${exhibition.universityExhibitionTitle}</p>
+					</div>
+					<div class="exhibition-major">
+						<p>${exhibition.majorName}</p>
+					</div>
+					<div class="exhibition-date">
+						<p>${exhibition.universityExhibitionDate}</p>
+					</div>
+					<div class="exhibition-location">
+						<p>${exhibition.universityExhibitionLocation}</p>
+					</div>
+					
+					<div>
+						<button>${exhibition.universityExhibitionStatus}</button>
+					</div>
+					</div>
+				</div>	
+				</c:forEach>
 			</div>
 	</div>
 		
@@ -133,5 +160,5 @@
 <%@ include file="../layout/footer.jsp" %>
 
 </body>
-<script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
+<!-- <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script> -->
 </html>

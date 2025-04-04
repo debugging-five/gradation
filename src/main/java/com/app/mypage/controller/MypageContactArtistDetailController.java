@@ -37,6 +37,8 @@ public class MypageContactArtistDetailController implements Action {
 		
 		
 		
+		
+		
 		result.setPath("mypage-contact-artist-detail.jsp");
 		return result;
 	}

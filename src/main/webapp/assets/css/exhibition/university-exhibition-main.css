@@ -279,24 +279,26 @@ select {
 	height : 84px;
 }
 
-.exhibition-number {
+.university-name h6 {
 	height : 21px;
 }
 
-.exhibition-number {
+.exhibition-title p {
 	font-size : var(--font-size-h8);
-	margin : 2px 0;
+	font-weight : var(--font-weight-light);
 	height : 17px;
+	margin : 2px 0 0 0;
 }
 
-.exhibition-major, .exhibition-date, .exhibition-location {
+
+.exhibition-major p, .exhibition-date p, .exhibition-location p{
 	font-size : var(--font-size-h9);
 	color : var(--color-gray900);
 	height : 14px;
 }
 
 .exhibition-major {
-	margin : 0 0 8px 0;
+	margin : 2px 0 8px 0;
 }
 
 .exhibition-date, .exhibition-location {
@@ -340,3 +342,30 @@ select {
 #heart-icon {
 	margin : 0 0 0 4px;
 }
+
+#university-logo {
+	width : 84px;
+	height : 84px;
+}
+
+#logo-wrapper {
+	width : 128px;
+	height : 128px;
+	background-color : var(--color-gray100);
+	border-radius : 10px;
+	border : solid 1px var(--color-gray500);
+	display : flex;
+	justify-content : center;
+	align-items : center;  
+}
+
+#exhibition-list {
+	margin : 13px 0 0 0;
+}
+
+#list {
+	display : flex;
+	gap : 28px;
+}
+
+
