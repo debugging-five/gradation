@@ -21,13 +21,6 @@ public class MypageContactArtistUpdateOkController implements Action {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		MailDTO mailDTO = new MailDTO();
-		UserDAO userDAO = new UserDAO();
-		HttpSession session = req.getSession();
-		String userEmail = (String) session.getAttribute("loginUser");
-        UserVO sendUserVO = userDAO.selectUserByEmail(userEmail);
-        System.out.println(sendUserVO);
-        
-        req.setAttribute("sendUserVO", sendUserVO);
 		
 		mailDTO.setId(Long.parseLong(req.getParameter("id")));
 		mailDTO.setrUserName(req.getParameter("rUserName"));
@@ -35,11 +28,12 @@ public class MypageContactArtistUpdateOkController implements Action {
 		mailDTO.setMailContents(req.getParameter("mailContents"));
         
 		Long id = mailDTO.getId();
+		System.out.println("id : " + id);
+		
+		mypageDAO.updateMail(mailDTO);
 		
 		result.setRedirect(true);
 		result.setPath("mypage-contact-artist-detail.mypage?id=" + id);
-		mypageDAO.updateMail(mailDTO);
-		
 		return result;
 	}
 

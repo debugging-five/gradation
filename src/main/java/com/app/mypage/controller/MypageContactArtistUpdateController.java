@@ -11,6 +11,7 @@ import com.app.Action;
 import com.app.Result;
 import com.app.dao.MypageDAO;
 import com.app.dao.UserDAO;
+import com.app.dto.MailDTO;
 import com.app.dto.UniversityDTO;
 import com.app.vo.UserVO;
 
@@ -24,14 +25,16 @@ public class MypageContactArtistUpdateController implements Action {
 		HttpSession session = req.getSession();
 		String userEmail = (String) session.getAttribute("loginUser");
         UserVO sendUserVO = userDAO.selectUserByEmail(userEmail);
-        System.out.println(sendUserVO);
+        System.out.println("sendUserVO 확인! " + sendUserVO);
+        
         
         req.setAttribute("sendUserVO", sendUserVO);
 
 		Long id = Long.parseLong(req.getParameter("id"));
-		System.out.println(id);
+		System.out.println("id 확인! " + id);
 		
-		req.setAttribute("mypage", mypageDAO.selectMail(id).orElseThrow(() -> {
+		
+		req.setAttribute("mail", mypageDAO.selectMail(id).orElseThrow(() -> {
 			throw new RuntimeException("MailUpdateController user not found");
 		}));
 		

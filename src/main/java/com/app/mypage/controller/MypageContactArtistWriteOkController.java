@@ -3,7 +3,6 @@ package com.app.mypage.controller;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +29,7 @@ public class MypageContactArtistWriteOkController implements Action {
         UserVO sendUserVO = userDAO.selectUserByEmail(userEmail);
 //        System.out.println(sendUserVO);
         UserVO receiveUserVO = userDAO.selectUserByEmail(req.getParameter("rUserEmail"));
-//        System.out.println(req.getParameter("rUserEmail"));
+        System.out.println(req.getParameter("rUserEmail"));
 //        System.out.println(receiveUserVO);
        
         
