@@ -1,226 +1,124 @@
-.screen a {
-	display: contents;
-	text-decoration: none;
-}
-
 .container-center {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	pointer-events: none;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.container-center>* {
-	flex-shrink: 0;
-	pointer-events: auto;
+.screen {
+  width: 1200px;
+  padding: 80px 0;
 }
 
-* {
-	box-sizing: border-box;
+.flex-row {
+  display: flex;
+  gap: 80px;
+  margin-top: 90px;
 }
 
-.mypage-post-content {
-	display: flex;
-	align-items: flex-start;
-	background-color: var(--color-gray100);
-	gap: 120px;
-	height: 1521px;
-	padding: 140.9px 372px;
-	width: 1920px;
+.message-container {
+  width: 100%;
 }
 
-.mypage-post-content .view {
-	align-items: flex-start;
-	display: flex;
-	flex-direction: column;
-	margin-left: 4px;
-	margin-top: 1.06px;
-	min-height: 700px;
-	width: 244px;
+.message-header {
+  
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.mypage-post-content .main-content {
-	align-items: flex-start;
-	display: flex;
-	flex-direction: column;
-	min-height: 548px;
-	width: 808px;
+.message-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: 30px;
 }
 
-.mypage-post-content .title {
-	color: var(--color-black);
-	font-weight: 700;
-	height: 36px;
-	line-height: normal;
-	margin-left: 1.0px;
-	transform: rotate(-0.09deg);
-	width: 329px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-size: var(--font-size-h2);
-	line-height: var(--line-height-h2);
-	font-weight: var(--font-weight-bold);
+.message-notice {
+
+  font-size: var(--font-size-h9);
+  color: var(--color-black);
+
 }
 
-.mypage-post-content .notice {
-	align-self: flex-end;
-	color: var(--color-black);
-	margin-top: 29px;
-	min-height: 14px;
-	white-space: nowrap;
-	font-size: var(--font-size-h9);
-	line-height: var(--line-height-h9);
-	font-weight: var(--font-weight-light);
+.message-subject-row {
+	
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--color-gray100);
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
 }
 
-.mypage-post-content .post-title-group {
-	align-items: flex-start;
-	background-color: var(--color-gray100);
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-color: var(--color-primary);
-	border-top-style: solid;
-	border-top-width: 1px;
-	display: flex;
-	gap: 492px;
-	height: 100px;
-	margin-top: 8px;
-	width: 100%;
-	padding: 36px 0;
+.message-subject {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
 }
 
-.mypage-post-content .post-title {
-	color: var(--color-black);
-	min-height: 25px;
-	min-width: 251px;
-	white-space: nowrap;
-	font-size: var(--font-size-h3);
-	line-height: var(--line-height-h3);
-	font-weight: var(--font-weight-bold);
+.message-date {
+  font-size: var(--font-size-h7);
+  color: var(--color-black);
 }
 
-.mypage-post-content .post-date {
-	align-self: center;
-	color: var(--color-black);
-	margin-bottom: 3.0px;
-	margin-right: 10px;
-	min-height: 19px;
-	white-space: nowrap;
-	font-size: var(--font-size-h7);
-	line-height: var(--line-height-h7);
-	font-weight: var(--font-weight-regular);
+.message-meta {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  padding: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-gray100);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  white-space: nowrap;
 }
 
-.mypage-post-content .post-user-info-group {
-	display: flex;
-	width: 100%;
-	background-color: var(--color-primary);
-	padding: 15px 10px;
-	box-sizing: border-box;
-	margin-top: 25px;
+.meta-label {
+  margin-right: 20px;
+}
+
+.meta-value {
+  margin-right: 100px;
+}
+
+.message-content {
+  text-align: left;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background-color: var(--color-gray100);
+  line-height: 1.6;
+  margin-top: 30px;
+  min-height: 250px;
 }
 
 
-
-.mypage-post-content .label-sender-name {
-	color: var(--color-gray100);
-	font-weight: 400;
-	line-height: normal;
-	min-height: 16px;
-	text-align: center;
-	white-space: nowrap;
-	width: 56px;
+.message-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 40px;
 }
 
-.mypage-post-content .value-sender-name {
-	color: var(--color-gray100);
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 17px;
-	min-height: 16px;
-	text-align: center;
-	white-space: nowrap;
-	width: 85px;
+.message-buttons button {
+  width: 120px;
+  height: 45px;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.mypage-post-content .label-email {
-	align-self: flex-end;
-	color: var(--color-gray100);
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 72px;
-	min-height: 19px;
-	min-width: 56px;
-	text-align: center;
-	white-space: nowrap;
+.message-buttons button:first-child {
+  background-color: var(--color-gray100);
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
-.mypage-post-content .value-email {
-	align-self: flex-end;
-	color: var(--color-gray100);
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 17px;
-	min-height: 19px;
-	min-width: 190px;
-	text-align: center;
-	white-space: nowrap;
-}
-
-.mypage-post-content .post-body {
-	color: var(--color-black);
-	margin-top: 24px;
-	min-height: 133px;
-	width: 800px;
-	font-size: var(--font-size-h7);
-	line-height: 1.5;
-	font-weight: var(--font-weight-regular);
-}
-
-.mypage-post-content .middle-buttons-container {
-	align-self: flex-end;
-	height: 46px;
-	margin-right: 8px;
-	margin-top: 83px;
-	position: relative;
-	width: 400px;
-}
-
-.mypage-post-content .middle-buttons {
-	align-items: flex-start;
-	display: flex;
-	gap: 18px;
-	height: 46px;
-	left: 0;
-	min-width: 400px;
-	position: absolute;
-	top: 0;
-}
-
-.mypage-post-content .button-list, .mypage-post-content .button-delete,
-	.mypage-post-content .button-reply {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 45px;
-	min-width: 120px;
-	font-size: var(--font-size-h5);
-	font-weight: var(--font-weight-semibold);
-	cursor: pointer;
-	border-radius: 3px;
-}
-
-.mypage-post-content .button-list {
-	background-color: var(--color-gray100);
-	border: 1.5px solid var(--color-primary);
-	color: var(--color-primary);
-}
-
-.mypage-post-content .button-delete, .mypage-post-content .button-reply
-	{
-	background-color: var(--color-primary);
-	border: none;
-	color: var(--color-gray100);
+.message-buttons button:nth-child(2),
+.message-buttons button:nth-child(3) {
+  background-color: var(--color-primary);
+  color: var(--color-gray100);
 }
