@@ -1,7 +1,7 @@
 package com.app.display.controller;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
+import java.sql.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +16,7 @@ import com.app.vo.UserVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-public class DisplayFormOkController implements Action {
+public class DisplayFormCommingSoonOkController implements Action {
 
     @Override
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -25,15 +25,13 @@ public class DisplayFormOkController implements Action {
         ArtDAO artDAO = new ArtDAO();
         ArtPostDTO artPostDTO = new ArtPostDTO();
         
-        
-        
         // 로그인된 유저 정보 가져오기
         String userEmail = (String) req.getSession().getAttribute("loginUser");
         UserVO userVO = userDAO.selectUserByEmail(userEmail);
 
         if (userVO == null) {
             result.setRedirect(true);
-            result.setPath("display-form.display?error=userNotFound");
+            result.setPath("display-form-comming-soon.display?error=userNotFound");
             return result;
         }
 
@@ -48,7 +46,7 @@ public class DisplayFormOkController implements Action {
         } catch (IOException e) {
             e.printStackTrace();
             result.setRedirect(true);
-            result.setPath("display-form.display?error=fileUploadFailed");
+            result.setPath("display-form-comming-soon.display?error=fileUploadFailed");
             return result;
         }
 
@@ -60,6 +58,14 @@ public class DisplayFormOkController implements Action {
         String artSize = multi.getParameter("artSize");
         String artCategory = multi.getParameter("artCategory");
         String artDescription = multi.getParameter("artDescription");
+        String artEndDateStr = multi.getParameter("artEndDate");
+        Date artEndDate = null;
+        if (artEndDateStr != null && !artEndDateStr.isEmpty()) {
+            artEndDate = Date.valueOf(artEndDateStr); // 문자열을 `java.sql.Date`로 변환
+        }
+
+        
+
        
 
         // DTO에 값 설정
@@ -72,10 +78,12 @@ public class DisplayFormOkController implements Action {
         artPostDTO.setArtSize(artSize);
         artPostDTO.setArtCategory(artCategory);
         artPostDTO.setArtDescription(artDescription);
+        artPostDTO.setArtEndDate(artEndDate);
+        
         
 
         // 1. 작품 정보 먼저 저장
-        artDAO.insert(artPostDTO);
+        artDAO.insertCommingSoon(artPostDTO);
 
         // 2. 방금 저장한 작품의 최신 ID 가져오기
         Long latestArtId = artDAO.getLatestArtId();  
