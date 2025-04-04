@@ -318,6 +318,7 @@
 		JOIN TBL_ART_POST TAP 
 		ON  TR.ART_POST_ID = TAP.ID
 		WHERE TAP.ID = #{artPostId}
+		ORDER BY TR.REPLY_DATE DESC
 	</select>
 	
 	<!-- 댓글달기 -->

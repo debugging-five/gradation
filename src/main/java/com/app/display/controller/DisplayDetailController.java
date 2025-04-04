@@ -1,7 +1,11 @@
 package com.app.display.controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -67,6 +71,7 @@ public class DisplayDetailController implements Action {
         
         String userImg = "../" + artPostDTO.getUserImgPath() + artPostDTO.getUserImgName();
         req.setAttribute("userImg", userImg);
+        
         
         List<ArtPostDTO> replyList = artDAO.selectReplyList(artPostId);
 //      댓글리스트

@@ -98,39 +98,40 @@
 		
 
 		<c:forEach var="comment" items="${replyList}" varStatus="status">
-		<div class="user">
-	        <div class="user-profile">
-	        	<img class="profile-image" alt="profile-image" src="${userImg}">
-	            <p class="comment-user"><strong>${comment.userNickname}</strong></p>
-	            <p>${comment.replyDate}</p>
-	            
-		      	<div class="dropdown-container">
-				    <button class="dropdown-btn">⋮</button>
-				    <ul class="dropdown-menu">
-				        <li id="modify-faq" class="edit">수정</li>
-				        <li id="delete-faq" class="delete">삭제</li>
-				    </ul>
-				</div>
-	        </div>
-	        
-			<div class="comment-wrapper">
-				<div class= "fix-comment">
-				    <p id="question-content" class="comment">${comment.replyContents}</p>
-				    <div id="answer-input1">
-				    	<textarea id="answer-input"></textarea>
-				    	<div class="fix-buttons">
-					  	  	<button id="cancel-faq">취소</button>
-							<button id="save-faq">저장</button>
-				    	</div>
+			<div class="user">
+		        <div class="user-profile">
+		        	<img class="profile-image" alt="profile-image" src="${userImg}"
+		        		onerror="this.onerror=null; this.src='../assets/images/display/user.png';">
+		            <p class="comment-user"><strong>${comment.userNickname}</strong></p>
+		            <p>${comment.replyDate}</p>
+		            
+			      	<div class="dropdown-container">
+					    <button class="dropdown-btn">⋮</button>
+					    <ul class="dropdown-menu">
+					        <li id="modify-faq" class="edit">수정</li>
+					        <li id="delete-faq" class="delete">삭제</li>
+					    </ul>
+					</div>
+		        </div>
+		        
+				<div class="comment-wrapper">
+					<div class= "fix-comment">
+					    <p id="question-content" class="comment">${comment.replyContents}</p>
+					    <div id="answer-input1">
+					    	<textarea id="answer-input"></textarea>
+					    	<div class="fix-buttons">
+						  	  	<button id="cancel-faq">취소</button>
+								<button id="save-faq">저장</button>
+					    	</div>
+					    </div>
+					</div>
+						
+				    <div class="comment-like-container" onclick="toggleCommentLike(this)">
+				        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
+				        <span class="comment-like-count">0</span>
 				    </div>
 				</div>
-					
-			    <div class="comment-like-container" onclick="toggleCommentLike(this)">
-			        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
-			        <span class="comment-like-count">0</span>
-			    </div>
 			</div>
-		</div>
 		</c:forEach>
 		
 		
