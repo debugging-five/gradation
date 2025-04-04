@@ -35,7 +35,6 @@ public class AuctionController implements Action {
 		categoryMap.put("calligraphy", "서예");
 		
 		final String useInLambda = categoryMap.get(category);
-		System.out.println(useInLambda);
 		if(display == null) {
 			display = "bidding";
 		}
@@ -49,6 +48,7 @@ public class AuctionController implements Action {
 		req.setAttribute("category", category);
 		req.setAttribute("page", page);
 		List<AuctionDTO> auctionList = auctionDAO.selectAll();
+		List<AuctionDTO> showList = new ArrayList<AuctionDTO>();
 		Timestamp time = new Timestamp(System.currentTimeMillis());
 		
 		switch (display) {
@@ -80,10 +80,17 @@ public class AuctionController implements Action {
 		
 //		페이지 분류
 		int nowPage = Integer.parseInt(page);
-		auctionList.forEach(data -> {
-			System.out.println(nowPage);
-		});
 		
+		for(int i = (nowPage-1)*15; i < i + 15; i++) {
+			try {
+				showList.add(auctionList.get(i));
+			} catch (Exception e) {
+				break;
+			}
+		}
+		System.out.println(nowPage);
+		System.out.println(showList);
+		req.setAttribute("list", showList);
 		result.setPath("auction-main.jsp");
 		return result;
 	}

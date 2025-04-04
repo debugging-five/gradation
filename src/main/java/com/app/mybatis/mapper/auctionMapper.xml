@@ -31,6 +31,7 @@
 		ON TAU.ART_ID = TAR.ID
 		JOIN TBL_ART_IMG TAI 
 		ON TAI.ART_ID = TAR.ID
+		ORDER BY ART_DATE
 	</select> 
 
 	<update id="update" parameterType="AuctionVO">

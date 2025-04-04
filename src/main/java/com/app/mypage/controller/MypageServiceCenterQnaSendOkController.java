@@ -47,12 +47,16 @@ public class MypageServiceCenterQnaSendOkController implements Action {
 		
 		MultipartRequest multi = new MultipartRequest(req, directory, sizeLimit, "UTF-8", new DefaultFileRenamePolicy());
 		
-		qnaVO.setQnaImgName(multi.getFilesystemName("qnaImgName"));
 		qnaVO.setQnaImgPath(filePath);
 		qnaVO.setQnaCategory(multi.getParameter("qnaCategory"));
 		qnaVO.setQnaContent(multi.getParameter("qnaContent"));
 		qnaVO.setQnaTitle(multi.getParameter("qnaTitle"));
 		qnaVO.setUserId(userVO.getId());
+		if(multi.getFilesystemName("qnaImgName") == null) {
+			qnaVO.setQnaImgName("");
+		}else {
+			qnaVO.setQnaImgName(multi.getFilesystemName("qnaImgName"));			
+		}
 		
 		userDAO.insertQna(qnaVO);
 		

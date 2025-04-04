@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,8 +74,15 @@
 				</div>
 			</div>
 			<div class="auction-main">
-				
-					
+				<c:forEach var="list" items="${list}" varStatus="status">
+					<div class="art-wrap" onclick="location.href='auction-bidding-main.auction?auctionId=${list.id}'">
+						<img alt="작품이미지" id="art-img" src="..${list.artImgPath}${list.artImgName}">
+						<div class="hover-div">
+							<h3>${list.artTitle}</h3>
+							<h3></h3>
+						</div>
+					</div>
+				</c:forEach>
 			</div>
 			<div class="pagination-bar suith4">
 				<img class="pagination-icon"
