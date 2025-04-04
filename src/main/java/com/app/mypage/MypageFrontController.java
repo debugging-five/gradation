@@ -19,6 +19,8 @@ import com.app.mypage.controller.MypageAdminFaqRegisterController;
 import com.app.mypage.controller.MypageAdminFaqRegisterOkController;
 import com.app.mypage.controller.MypageAdminFormApprovedController;
 import com.app.mypage.controller.MypageAdminFormNotApprovedController;
+import com.app.mypage.controller.MypageAdminQnaContentAnswerController;
+import com.app.mypage.controller.MypageAdminQnaContentAnswerOkController;
 import com.app.mypage.controller.MypageAdminQnaContentCompletedController;
 import com.app.mypage.controller.MypageAdminQnaContentController;
 import com.app.mypage.controller.MypageAdminQnaListCompletedController;
@@ -157,21 +159,24 @@ public class MypageFrontController extends HttpServlet{
       }else if(target.equals("mypage/mypage-send-email")) {
      	  result = new MypageSendEmailController().execute(req, resp);
 
+//    admin QNA
       }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
-//    admin
           result = new MypageAdminQnaListWaitingController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-qna-list-completed")) {
           result = new MypageAdminQnaListCompletedController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-form-not-approved")) {
-          result = new MypageAdminFormNotApprovedController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-form-approved")) {
-          result = new MypageAdminFormApprovedController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-qna-content")) {
           result = new MypageAdminQnaContentController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-qna-content-completed")) {
           result = new MypageAdminQnaContentCompletedController().execute(req, resp);
-      }else if(target.equals("mypage/mypage-admin-qna-list-waiting")) {
-          result = new MypageAdminQnaListWaitingController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-qna-content-answer")) {
+          result = new MypageAdminQnaContentAnswerController().execute(req, resp);          
+      }else if(target.equals("mypage/mypage-admin-qna-content-answer-ok")) {
+          result = new MypageAdminQnaContentAnswerOkController().execute(req, resp);          
+
+      }else if(target.equals("mypage/mypage-admin-form-not-approved")) {
+          result = new MypageAdminFormNotApprovedController().execute(req, resp);
+      }else if(target.equals("mypage/mypage-admin-form-approved")) {
+          result = new MypageAdminFormApprovedController().execute(req, resp);
       }else if(target.equals("mypage/mypage-admin-user-manage")) {
           result = new MypageAdminUserManageController().execute(req, resp);   
           

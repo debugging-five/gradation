@@ -22,10 +22,7 @@ public class MypageAdminQnaContentAnswerOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		AdminDAO adminDAO = new AdminDAO();
-		Long id = Long.parseLong(req.getParameter("id"));
-//		System.out.println(id);
-		Optional<QnaDTO> qnaDTO = adminDAO.selectQnaById(id);
-		
+		QnaDTO qnaDTO = new QnaDTO();
 		UserDAO userDAO = new UserDAO();   
 		// 로그인 여부
 		HttpSession session = req.getSession();
@@ -34,7 +31,6 @@ public class MypageAdminQnaContentAnswerOkController implements Action {
 		   result.setRedirect(true);
 		   return result;
 		}
-
 		// 관리자 여부
 		String userEmail = (String)session.getAttribute("loginUser");
 		UserVO userVO = userDAO.selectUserByEmail(userEmail);   
@@ -44,16 +40,14 @@ public class MypageAdminQnaContentAnswerOkController implements Action {
 		   return result;
 		}
 		
-		QnaDTO qna = qnaDTO.orElseThrow(() -> {
-			throw new RuntimeException("QNA not found");
-		}); 
-				
-		qna.setDateData(new SimpleDateFormat("yy.MM.dd").format(qna.getQnaTime())); 
+		qnaDTO.setQnaId(Long.parseLong(req.getParameter("id")));
+		qnaDTO.setQnaAnswerContent(req.getParameter("qnaAnswerContent"));
+		qnaDTO.setQnaAnswerTitle("답변 완료");
 		
-		System.out.println(qna);
+		adminDAO.insertQnaAnswer(qnaDTO);
 		
-		req.setAttribute("qna", qna);
-		result.setPath("mypage-admin-qna-content.jsp");
+		result.setRedirect(true);
+		result.setPath(req.getContextPath() + "/mypage-admin-qna-list-completed.mypage");
 		return result;
 	}
 

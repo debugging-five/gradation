@@ -36,7 +36,6 @@ public class DisplayDetailController implements Action {
 		Long artPostId = artPostDTO.getArtPostId();
 //		String artPostIdParam = req.getParameter("artPostId");
 		List<ArtPostDTO> artPostDTOs = artDAO.selectReplyList(artPostId);
-		System.out.println(artPostDTOs);
 		
 		String artDate = new SimpleDateFormat("yyyy").format(artPostDTO.getArtDate());
 		
@@ -80,6 +79,7 @@ public class DisplayDetailController implements Action {
         req.setAttribute("userNickname", artPostDTO.getUserNickname());
         req.setAttribute("replyDate", artPostDTO.getReplyDate());
         req.setAttribute("replyContents", artPostDTO.getReplyContents());
+        req.setAttribute("userId", artPostDTO.getUserId());
        
         req.setAttribute("replyList", replyList);
         

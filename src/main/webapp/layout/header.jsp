@@ -48,12 +48,12 @@
                 <li><a href="/gradation/artist/artist-main.artist">artist</a></li>
                 
                 <!-- auction -->
-                <li><a href="/gradation/auction/auction-main.auction">auction</a>
+                <li><a href="/gradation/auction/auction-main.auction?display=bidding&category=korean&page=1">auction</a>
                    <ul class="dropdown">
                       <!-- auction 드롭다운 -->
-                      <li><a href="#">경매중</a></li>
-                      <li><a href="#">경매 예정</a></li>
-                      <li><a href="#">경매 완료</a></li>
+                      <li><a href="/gradation/auction/auction-main.auction?display=bidding&category=korean&page=1">경매중</a></li>
+                      <li><a href="/gradation/auction/auction-main.auction?display=comming&category=korean&page=1">경매 예정</a></li>
+                      <li><a href="/gradation/auction/auction-main.auction?display=complete&category=korean&page=1">경매 완료</a></li>
                    </ul>
                 </li>
                 
@@ -63,7 +63,7 @@
                       <!-- exhibition 드롭다운 -->
                       <li><a href="/gradation/exhibition/gradation-exhibition-main.exhibition">그라데이션 전시회</a></li>
                       <li><a href="/gradation/exhibition/university-exhibition-main.exhibition">대학교 전시회</a>
-                      <li><a href="/gradation/exhibition/university-exhibition-form.exhibition"">학교 신청</a>
+                      <li><a href="/gradation/exhibition/university-exhibition-form.exhibition">학교 신청</a>
                       </li>
                    </ul>
                 </li>
