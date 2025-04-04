@@ -11,14 +11,17 @@ public class MailVO {
 	private int mailOpenOk;
 	private Long sendUserId;
 	private Long receiveUserId;
-	private String sendUserName; // 유저 이름 조회
+	private String sendUserName;
 	private String receiveUserName;
 	private String sendUserEmail;
+	private String receiveUserEmail;
+	private String getSendUserEmail;
 	
 	public MailVO() {;}
 
 	public MailVO(Long id, String mailTitle, String mailContents, Timestamp mailSendTime, int mailOpenOk,
-			Long sendUserId, Long receiveUserId, String sendUserName, String receiveUserName, String sendUserEmail) {
+			Long sendUserId, Long receiveUserId, String sendUserName, String receiveUserName, String sendUserEmail,
+			String receiveUserEmail, String getSendUserEmail) {
 		super();
 		this.id = id;
 		this.mailTitle = mailTitle;
@@ -30,6 +33,8 @@ public class MailVO {
 		this.sendUserName = sendUserName;
 		this.receiveUserName = receiveUserName;
 		this.sendUserEmail = sendUserEmail;
+		this.receiveUserEmail = receiveUserEmail;
+		this.getSendUserEmail = getSendUserEmail;
 	}
 
 	public Long getId() {
@@ -112,12 +117,29 @@ public class MailVO {
 		this.sendUserEmail = sendUserEmail;
 	}
 
+	public String getReceiveUserEmail() {
+		return receiveUserEmail;
+	}
+
+	public void setReceiveUserEmail(String receiveUserEmail) {
+		this.receiveUserEmail = receiveUserEmail;
+	}
+
+	public String getGetSendUserEmail() {
+		return getSendUserEmail;
+	}
+
+	public void setGetSendUserEmail(String getSendUserEmail) {
+		this.getSendUserEmail = getSendUserEmail;
+	}
+
 	@Override
 	public String toString() {
 		return "MailVO [id=" + id + ", mailTitle=" + mailTitle + ", mailContents=" + mailContents + ", mailSendTime="
 				+ mailSendTime + ", mailOpenOk=" + mailOpenOk + ", sendUserId=" + sendUserId + ", receiveUserId="
 				+ receiveUserId + ", sendUserName=" + sendUserName + ", receiveUserName=" + receiveUserName
-				+ ", sendUserEmail=" + sendUserEmail + "]";
+				+ ", sendUserEmail=" + sendUserEmail + ", receiveUserEmail=" + receiveUserEmail + ", getSendUserEmail="
+				+ getSendUserEmail + "]";
 	}
 
 	@Override
@@ -137,5 +159,6 @@ public class MailVO {
 		return Objects.equals(id, other.id);
 	}
 
+	
 }
 			

@@ -3,54 +3,119 @@
 
 <mapper namespace="mail">
 
-<select id="findSentMails" resultType="com.app.vo.MailVO">
-    SELECT M.ID,
-           M.MAIL_TITLE,
-           M.MAIL_SEND_TIME,
-           M.RECEIVE_USER_ID,
-           U.USER_NAME AS receiveUserName
-    FROM TBL_MAIL M
-    JOIN TBL_USER U ON M.RECEIVE_USER_ID = U.ID
-    WHERE M.SEND_USER_ID = #{userId}
-    ORDER BY M.MAIL_SEND_TIME DESC
-</select>
+	<select id="findSentMails" resultType="com.app.vo.MailVO">
+		SELECT M.ID,
+		M.MAIL_TITLE,
+		M.MAIL_SEND_TIME,
+		M.RECEIVE_USER_ID,
+		U.USER_NAME AS receiveUserName
+		FROM
+		TBL_MAIL M
+		JOIN TBL_USER U ON M.RECEIVE_USER_ID = U.ID
+		WHERE
+		M.SEND_USER_ID = #{userId}
+		ORDER BY M.MAIL_SEND_TIME DESC
+	</select>
 
-<select id="findReceivedMails" resultType="com.app.vo.MailVO">
-    SELECT M.ID,
-           M.MAIL_TITLE,
-           M.MAIL_SEND_TIME,
-           M.SEND_USER_ID,
-           U.USER_NAME AS sendUserName
-    FROM TBL_MAIL M
-    JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
-    WHERE M.RECEIVE_USER_ID = #{userId}
-    ORDER BY M.MAIL_SEND_TIME DESC
-</select>
+	<select id="findReceivedMails" resultType="com.app.vo.MailVO">
+		SELECT M.ID,
+		M.MAIL_TITLE,
+		M.MAIL_SEND_TIME,
+		M.SEND_USER_ID,
+		U.USER_NAME AS
+		sendUserName
+		FROM TBL_MAIL M
+		JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
+		WHERE M.RECEIVE_USER_ID = #{userId}
+		ORDER BY M.MAIL_SEND_TIME DESC
+	</select>
 
-<resultMap id="mailMap" type="com.app.vo.MailVO">
-    <id property="id" column="ID"/>
-    <result property="mailTitle" column="MAIL_TITLE"/>
-    <result property="mailContents" column="MAIL_CONTENTS"/>
-    <result property="mailSendTime" column="MAIL_SEND_TIME"/>
-    <result property="sendUserId" column="SEND_USER_ID"/>
-    <result property="sendUserName" column="sendUserName"/>
-</resultMap>
-
-<select id="findById" resultMap="mailMap">
-    SELECT M.ID,
-           M.MAIL_TITLE,
-           M.MAIL_CONTENTS,
-           M.MAIL_SEND_TIME,
-           M.SEND_USER_ID,
-           U.USER_NAME AS sendUserName
-    FROM TBL_MAIL M
-    JOIN TBL_USER U ON M.SEND_USER_ID = U.ID
-    WHERE M.ID = #{id}
-</select>
+	<resultMap id="mailMap" type="com.app.vo.MailVO">
+		<id property="id" column="ID" />
+		<result property="mailTitle" column="MAIL_TITLE" />
+		<result property="mailContents" column="MAIL_CONTENTS" />
+		<result property="mailSendTime" column="MAIL_SEND_TIME" />
+		<result property="sendUserId" column="SEND_USER_ID" />
+		<result property="sendUserName" column="sendUserName" />
+		<result property="sendUserEmail" column="sendUserEmail" />
+	</resultMap>
 
 
+	<select id="findById" resultMap="mailMap">
+		SELECT
+		M.ID,
+		M.MAIL_TITLE,
+		M.MAIL_CONTENTS,
+		M.MAIL_SEND_TIME,
+		M.SEND_USER_ID,
+		U.USER_NAME AS sendUserName,
+		U.USER_EMAIL AS sendUserEmail
+		FROM
+		TBL_MAIL M
+		JOIN
+		TBL_USER U ON M.SEND_USER_ID = U.ID
+		WHERE
+		M.ID = #{id}
+	</select>
 
+	<delete id="delete" parameterType="long">
+		DELETE FROM TBL_MAIL WHERE ID
+		= #{id}
+	</delete>
 
+	<insert id="insertReply" parameterType="map">
+		INSERT INTO TBL_MAIL (
+		ID, MAIL_TITLE, MAIL_CONTENTS, MAIL_SEND_TIME, MAIL_OPEN_OK,
+		SEND_USER_ID, RECEIVE_USER_ID
+		)
+		SELECT SEQ_MAIL.NEXTVAL, #{mailTitle},
+		#{mailContents}, #{mailSendTime},
+		#{mailOpenOk},
+		#{sendUserId}, U.ID
+		FROM TBL_USER U
+		WHERE U.USER_EMAIL = #{receiveUserEmail}
+	</insert>
+
+	<select id="findUserIdByEmail" parameterType="String"
+		resultType="long">
+		SELECT id FROM TBL_USER WHERE user_email = #{email}
+	</select>
+
+	<insert id="sendMailByEmail" parameterType="MailVO">
+		INSERT INTO TBL_MAIL
+		(
+		id, mail_title, mail_contents, mail_send_time,
+		mail_open_ok,
+		send_user_id, receive_user_id
+		) VALUES (
+		SEQ_MAIL.NEXTVAL,
+		#{mailTitle},
+		#{mailContents},
+		SYSDATE,
+		0,
+		#{sendUserId},
+		#{receiveUserId}
+		)
+	</insert>
+
+	<insert id="insertByEmail" parameterType="com.app.vo.MailVO">
+		INSERT INTO TBL_MAIL (
+		ID,
+		MAIL_TITLE,
+		MAIL_CONTENTS,
+		MAIL_SEND_TIME,
+		SEND_USER_ID,
+		RECEIVE_USER_ID
+		)
+		VALUES (
+		SEQ_MAIL.NEXTVAL,
+		#{mailTitle},
+		#{mailContents},
+		SYSDATE,
+		#{sendUserId},
+		(SELECT ID FROM TBL_USER WHERE USER_EMAIL = #{receiveUserEmail})
+		)
+	</insert>
 
 
 </mapper>

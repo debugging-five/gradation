@@ -19,8 +19,8 @@ String category = request.getParameter("category");
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
 	<input type="hidden" id="anPageName" name="page"
-		value="display-main-ing" />
-	<div class="container-center-horizontal">
+		value="display-main-ing" />--
+	<div class="container-center-horixzontal">
 		<div class="display-page screen">
 			<div class="column-wrapper">
 				<h1 class="page-title">display</h1>
