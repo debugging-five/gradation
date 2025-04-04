@@ -74,6 +74,11 @@ public class ArtDAO {
         return sqlSession.selectList("art.selectReplyList", artPostId);
     }
     
+//  댓글 조회
+	public void updateReply(ArtPostDTO artPostDTO) {
+	    sqlSession.update("art.updateReply", artPostDTO);
+	}
+    
 //    댓글 달기
     public void insertReply(ArtPostDTO artPostDTO) {
         sqlSession.insert("art.insertReply", artPostDTO);

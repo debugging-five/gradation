@@ -79,7 +79,7 @@
         <h3 class="comments">comments</h3>
         
     	<!-- 댓글 쓰기 -->
-    	<form action="display-reply-upload-ok.display" method="post">
+    	<form action="display-reply-upload-ok.display?artId=${artId}" method="post">
 	        <div class="textarea-container">
 		        <textarea class="comment-typing" placeholder="댓글을 작성해주세요." name="replyContents"></textarea>
 		        <button class="submit-button" onclick="openPopup()" type="button">등록</button>
@@ -162,7 +162,6 @@
 		            <p class="comment-user"><strong>${comment.userNickname}</strong></p>
 		            <p>${comment.replyDate}</p> 
 		            
-			            <c:if test="${loggedInUserId == comment.userId}">
 				      	<div class="dropdown-container">
 						    <button class="dropdown-btn">⋮</button>
 						    <ul class="dropdown-menu">
@@ -170,7 +169,6 @@
 						        <li id="delete-faq" class="delete">삭제</li>
 						    </ul>
 						</div>
-					</c:if>
 		        </div>
 		        
 				<div class="comment-wrapper">
