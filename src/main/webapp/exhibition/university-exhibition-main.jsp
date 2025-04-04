@@ -9,9 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
 <title>대학교 전시회 메인</title>
 </head>
-<script src="https://kit.fontawesome.com/1e1279f541.js" crossorigin="anonymous"></script>
 <body>
-
 	<%@ include file="../layout/header.jsp" %>
 
 	<div id="wrapper">
@@ -110,8 +108,8 @@
 				       data-region="${exhibition.universityExhibitionLocation}"
 				       data-status="${exhibition.universityExhibitionState}">
 				
-				    <div id="logo-wrapper">
-				      <img id="university-logo" src="../${exhibition.universityLogoImgPath}${exhibition.universityLogoImgName}" />
+				    <div class="logo-wrapper">
+				      <img class="university-logo" src="../${exhibition.universityLogoImgPath}${exhibition.universityLogoImgName}" />
 				    </div>
 				
 				    <div id="info-wrapper">
@@ -138,13 +136,10 @@
 				        <button class="like-button">좋아요</button>
 				      </div>
 				    </div>
-				
 				  </div>  
 				</c:forEach>
-
 			</div>
 		</div>
-			
 
 		<!-- 대학 전시회 이미지 -->
 		<div id="display-none">
@@ -162,12 +157,10 @@
 		<button type="button" id="inquiry-button" class="button inquiry">문의하기</button>
 		<button type="button" id="register-button" class="button register">학교 등록 신청</button>
 	</div>
-	
 	</div>
-	
+
 
 <%@ include file="../layout/footer.jsp" %>
-
 </body>
 <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
 </html>

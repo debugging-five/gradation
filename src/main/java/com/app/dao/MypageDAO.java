@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.dto.MailDTO;
+import com.app.dto.UniversityDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.ArtLikeVO;
 import com.app.vo.AuctionBiddingVO;
@@ -73,6 +74,10 @@ public class MypageDAO {
     	sqlSession.delete("mypage.deleteMail", id);
     }
     
+    // 대학교 전시회 좋아요
+    public void saveLike(UniversityDTO universityDTO) {
+    	sqlSession.insert("mypage.saveLike", universityDTO);
+    }
  	
 
  	

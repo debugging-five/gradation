@@ -5,6 +5,24 @@ const searchInput = document.getElementById('search-input');
 const inquiryButton = document.getElementById("inquiry-button");
 const registerButton = document.getElementById("register-button");
 const mapWrapper = document.getElementById("map-wrapper");
+const likeButtons = document.querySelectorAll(".like-button");
+const logoWrapper = document.querySelectorAll(".logo-wrapper");
+const displayWrapper = document.getElementById("display-none");
+const items = document.querySelectorAll(".exhibition-item");
+
+// display-none
+logoWrapper.forEach((logo) => {
+	logo.addEventListener("click", () => {
+	displayWrapper.style.visibility = "visible";
+	})
+})
+
+// 좋아요 버튼 토글
+likeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("liked");
+  });
+});
 
 // 마이페이지 문의하기 페이지로 이동
 inquiryButton.addEventListener("click", () => {
@@ -16,73 +34,7 @@ registerButton.addEventListener("click", () => {
 	location.href = "university-exhibition-form.exhibition";
 })
 
-
-function filterByRegion(location, selectedRegion) {
-  const regions = {
-    'seoul': /서울/,
-    'gyeonggi': /경기/,
-    'gangwon': /강원/,
-    'incheon': /인천/,
-    'chungnam': /충남/,
-    'chungbuk': /충북/,
-    'daejeon': /대전/,
-    'gyeongbuk': /경북/,
-    'gyeongnam': /경남/,
-    'daegu': /대구/,
-    'busan': /부산/,
-    'jeonbuk': /전북/,
-    'jeonnam': /전남/,
-    'gwangju': /광주/,
-    'jeju': /제주/
-  };
-
-  return regions[selectedRegion] ? regions[selectedRegion].test(location) : true;
-}
-
-
-
-
-// 전시회 상세
-function showExhibitionDetails(imageSrc) {
-  const displayNone = document.getElementById('display-none');
-  const mainImage = document.getElementById('main-image');
-
-  // 클릭된 전시회 이미지
-  mainImage.src = imageSrc;
-
-  displayNone.style.visibility = 'visible';
-}
-
-function closeExhibitionDetails() {
-  const displayNone = document.getElementById('display-none');
-
-  displayNone.style.visibility = 'hidden';
-}
-
-function filterExhibitions() {
-  const selectedRegion = regionFilter.value.toLowerCase(); 
-  const selectedStatus = statusFilter.value;
-  const searchTerm = searchInput.value.toLowerCase();
-
-  const filteredExhibitions = exhibitions.filter(exhibition => {
-    const matchesRegion = selectedRegion ? filterByRegion(exhibition.location, selectedRegion) : true;
-    const matchesStatus = selectedStatus ? exhibition.status === selectedStatus : true;
-    const matchesSearch = exhibition.name.toLowerCase().includes(searchTerm);
-
-    return matchesRegion && matchesStatus && matchesSearch;
-  });
-
-  renderExhibitions(filteredExhibitions);
-}
-
-regionFilter.addEventListener('change', filterExhibitions);
-statusFilter.addEventListener('change', filterExhibitions);
-searchInput.addEventListener('input', filterExhibitions);
-
-renderExhibitions(exhibitions);
-
-const logoWrappers = document.querySelectorAll('.logo-wrapper'); 
-
+// 대학교 전시회 이미지
 const exhibitionImages = [
     {
         images: [
@@ -126,74 +78,61 @@ const exhibitionImages = [
     },
 ];
 
-let currentIndex = 0; 
-let images = []; 
-
-const mainImage = document.getElementById("main-image");
-const leftBtn = document.getElementById("chevron-left");
-const rightBtn = document.getElementById("chevron-right");
-
-logoWrappers.forEach((wrapper, index) => {
-    wrapper.addEventListener('click', function () {
-        images = exhibitionImages[index].images;
-        currentIndex = 0; // 첫 번째 이미지
-        mainImage.src = images[currentIndex]; // 첫 번째 이미지
-    });
-});
-
-leftBtn.addEventListener("click", () => {
-    if (images.length > 0) {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; 
-        mainImage.src = images[currentIndex];
-    }
-});
-
-rightBtn.addEventListener("click", () => {
-    if (images.length > 0) {
-        currentIndex = (currentIndex + 1) % images.length; 
-        mainImage.src = images[currentIndex];
-    }
-});
-
-  exhibitionList.addEventListener("click", function (event) {
-    if (event.target.classList.contains("like-button")) {
-      event.target.classList.toggle("liked");
-    }
- });
  
- 
- window.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("search-input");
-  const regionFilter = document.getElementById("region-filter");
-  const statusFilter = document.getElementById("status-filter");
-
-  // 이벤트 등록
-  searchInput.addEventListener("input", filterExhibitions);
-  regionFilter.addEventListener("change", filterExhibitions);
-  statusFilter.addEventListener("change", filterExhibitions);
+// 드롭다운, input 필터링
+window.addEventListener("DOMContentLoaded", () => {
+	const searchInput = document.getElementById("search-input");
+	const regionFilter = document.getElementById("region-filter");
+	const statusFilter = document.getElementById("status-filter");
+	
+	searchInput.addEventListener("input", filterExhibitions);
+	regionFilter.addEventListener("change", filterExhibitions);
+	statusFilter.addEventListener("change", filterExhibitions);
 });
 
-function filterExhibitions() {
-  const searchText = document.getElementById("search-input").value.toLowerCase();
-  const selectedRegion = document.getElementById("region-filter").value.toLowerCase();
-  const selectedStatus = document.getElementById("status-filter").value;
+const filterExhibitions = ()  => {
+	const searchText = document.getElementById("search-input").value;
+	const selectedRegion = document.getElementById("region-filter").value;
+	const selectedStatus = document.getElementById("status-filter").value;
 
-  const items = document.querySelectorAll(".exhibition-item");
+	const regionList = {
+		seoul : "서울",
+		gyeonggi : "경기",
+		gangwon : "강원",
+		incheon : "인천",
+		chungnam : "충남",
+		chungbuk : "충북",
+		daejeon : "대전",
+		gyeongbuk : "경북",
+		gyeongnam : "경남",
+		daegu : "대구",
+		busan : "부산",
+		jeonbuk : "전북",
+		jeonnam : "전남",
+		gwangju : "광주",
+		jeju: "제주"
+	};
 
-  items.forEach(item => {
-    const name = item.dataset.name.toLowerCase();
-    const region = item.dataset.region.toLowerCase();
-    const status = item.dataset.status;
+	 const statusList = {
+	 	upcoming : "진행 예정",
+	   	ongoing : "진행 중"
+	 };
 
-    const matchName = name.includes(searchText);
-    const matchRegion = !selectedRegion || region.includes(selectedRegion);
-    const matchStatus = !selectedStatus || status === selectedStatus;
+	items.forEach(item => {
+		const name = item.dataset.name;
+		const region = item.dataset.region;
+		const status = item.dataset.status;
 
-    if (matchName && matchRegion && matchStatus) {
-      item.style.display = "flex";
-    } else {
-      item.style.display = "none";
-    }
-  });
+		const matchName = name.includes(searchText);
+		const matchRegion = !selectedRegion || region.includes(regionList[selectedRegion]);
+		const matchStatus = !selectedStatus || status.includes(statusList[selectedStatus]);
+	
+		if (matchName && matchRegion && matchStatus) {
+		  item.style.display = "flex";
+		} else {
+		  item.style.display = "none";
+		}
+	});
 }
+
 
