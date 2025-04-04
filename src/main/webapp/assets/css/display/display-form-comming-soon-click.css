@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+#pop-up-wrapper {
+	display: flex;
+	justify-content: center;
+}
 /* 제출하시겠습니까? */
 .modal-bg {
     display: none;
