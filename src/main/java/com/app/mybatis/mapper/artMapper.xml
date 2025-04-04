@@ -288,44 +288,6 @@
 		INSERT INTO TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
 		VALUES (SEQ_ART_LIKE.NEXTVAL, #{artId}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
-<<<<<<< HEAD
-=======
-	
-	<!-- 좋아요 삭제 -->
-	<delete id="deleteArtLike" parameterType="ArtPostDTO">
-		DELETE FROM TBL_ART_LIKE WHERE ART_ID = #{artId} AND USER_ID = #{userId}
-	</delete>
-	
-	<!-- 좋아요 개수 조회 -->
-	<select id="selectArtLikeCount" parameterType="long" resultType="int">
-		SELECT COUNT(*) FROM TBL_ART_LIKE WHERE ART_ID = #{artId}
-	</select>
-	
-	<!-- 댓글 조회 -->
-	<select id="selectReplyList" parameterType="long" resultType="ArtPostDTO">
-		SELECT 
-			TAP.ID,
-			TU.USER_IMG_NAME, 
-			TU.USER_IMG_PATH,
-			TU.USER_NAME,
-			TU.USER_NICKNAME,
-			TR.REPLY_DATE,
-			TR.REPLY_CONTENTS
-		FROM TBL_USER TU
-		JOIN TBL_REPLY TR
-		ON TU.ID = TR.USER_ID
-		JOIN TBL_ART_POST TAP 
-		ON  TR.ART_POST_ID = TAP.ID
-		WHERE TAP.ID = #{artPostId}
-		ORDER BY TR.REPLY_DATE DESC
-	</select>
-	
-	<!-- 댓글달기 -->
-	<insert id="insertReply" parameterType="ArtPostDTO">
-		INSERT INTO TBL_REPLY (ID, ART_POST_ID, USER_ID, REPLY_CONTENTS, REPLY_DATE)
-		VALUES (SEQ_REPLY.NEXTVAL, #{artPostId}, #{userId}, #{replyContents}, CURRENT_TIMESTAMP);
-	</insert>
-	
->>>>>>> master
+
 
 </mapper>
