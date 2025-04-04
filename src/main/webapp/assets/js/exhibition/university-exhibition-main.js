@@ -160,3 +160,40 @@ rightBtn.addEventListener("click", () => {
       event.target.classList.toggle("liked");
     }
  });
+ 
+ 
+ window.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search-input");
+  const regionFilter = document.getElementById("region-filter");
+  const statusFilter = document.getElementById("status-filter");
+
+  // 이벤트 등록
+  searchInput.addEventListener("input", filterExhibitions);
+  regionFilter.addEventListener("change", filterExhibitions);
+  statusFilter.addEventListener("change", filterExhibitions);
+});
+
+function filterExhibitions() {
+  const searchText = document.getElementById("search-input").value.toLowerCase();
+  const selectedRegion = document.getElementById("region-filter").value.toLowerCase();
+  const selectedStatus = document.getElementById("status-filter").value;
+
+  const items = document.querySelectorAll(".exhibition-item");
+
+  items.forEach(item => {
+    const name = item.dataset.name.toLowerCase();
+    const region = item.dataset.region.toLowerCase();
+    const status = item.dataset.status;
+
+    const matchName = name.includes(searchText);
+    const matchRegion = !selectedRegion || region.includes(selectedRegion);
+    const matchStatus = !selectedStatus || status === selectedStatus;
+
+    if (matchName && matchRegion && matchStatus) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+

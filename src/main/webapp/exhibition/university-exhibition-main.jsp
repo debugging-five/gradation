@@ -104,36 +104,44 @@
 			<!-- 전시회 리스트 -->
 			<div id="exhibition-list">
 				<c:forEach var="exhibition" items="${exhibitionList}">
-					<div id="list">
-			          <div id="logo-wrapper">
-			            <img id="university-logo" src="../${exhibition.universityLogoImgPath}${exhibition.universityLogoImgName}" />
-			          </div>
-			          <div id="info-wrapper">
-						<div class="university-name">
-							<h6>${exhibition.universityName}</h6>
-						</div>
-						<div class="exhibition-title">
-							<p>${exhibition.universityExhibitionTitle}</p>
-						</div>
-						<div class="exhibition-major">
-							<p>${exhibition.majorName}</p>
-						</div>
-						<div class="exhibition-date">
-							<p>${exhibition.universityExhibitionDate}</p>
-						</div>
-						<div class="exhibition-location">
-							<p>${exhibition.universityExhibitionLocation}</p>
-						</div>
-						
-						<div id="button-wrapper">
-							<button class="status-button" onclick="location.href=`${exhibition.universityHomepage}`">
-								${exhibition.universityExhibitionState}
-							</button>
-							<button class="like-button">좋아요</button>
-						</div>
-						</div>
-					</div>	
+				  <div id="list"
+				       class="exhibition-item"
+				       data-name="${exhibition.universityName}"
+				       data-region="${exhibition.universityExhibitionLocation}"
+				       data-status="${exhibition.universityExhibitionState}">
+				
+				    <div id="logo-wrapper">
+				      <img id="university-logo" src="../${exhibition.universityLogoImgPath}${exhibition.universityLogoImgName}" />
+				    </div>
+				
+				    <div id="info-wrapper">
+				      <div class="university-name">
+				        <h6>${exhibition.universityName}</h6>
+				      </div>
+				      <div class="exhibition-title">
+				        <p>${exhibition.universityExhibitionTitle}</p>
+				      </div>
+				      <div class="exhibition-major">
+				        <p>${exhibition.majorName}</p>
+				      </div>
+				      <div class="exhibition-date">
+				        <p>${exhibition.universityExhibitionDate}</p>
+				      </div>
+				      <div class="exhibition-location">
+				        <p>${exhibition.universityExhibitionLocation}</p>
+				      </div>
+				
+				      <div id="button-wrapper">
+				        <button class="status-button" onclick="location.href='${exhibition.universityHomepage}'">
+				          ${exhibition.universityExhibitionState}
+				        </button>
+				        <button class="like-button">좋아요</button>
+				      </div>
+				    </div>
+				
+				  </div>  
 				</c:forEach>
+
 			</div>
 		</div>
 			
