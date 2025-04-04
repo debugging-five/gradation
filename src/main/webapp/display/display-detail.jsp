@@ -126,19 +126,6 @@
 			    </div>
 			</div>
 		
-			<!-- 댓글이 수정되었습니다! -->
-			<div id="updateCommentPopup" class="modal-bg" style="display: none;">
-			    <div class="modal">
-			        <div class="modal-title">
-			            <img class="attention-icon" alt="attention-icon" src="../assets/images/display/attention.png">
-			            <span>댓글이 수정되었습니다!</span>
-			        </div>
-			        <div class="modal-footer">
-			            <button class="send" onclick="closePopup('updateCommentPopup')">확인</button>
-			        </div>
-			    </div>
-			</div>
-		
 	    
 	    <!-- 정렬 방식 -->
 		<div class="dropdown-container-2">
@@ -171,23 +158,39 @@
 						</div>
 		        </div>
 		        
-				<div class="comment-wrapper">
-					<div class= "fix-comment">
-					    <p id="question-content" class="comment">${comment.replyContents}</p>
-					    <div id="answer-input1">
-					    	<textarea id="answer-input"></textarea>
-					    	<div class="fix-buttons">
-						  	  	<button id="cancel-faq">취소</button>
-								<button id="save-faq">저장</button>
-					    	</div>
+		        <form action="display-reply-update-ok.display?artId=${artId}" method="post">
+					<div class="comment-wrapper">
+						<div class= "fix-comment">
+						    <p id="question-content" class="comment">${comment.replyContents}</p>
+						    <div id="answer-input1">
+						    	<textarea id="answer-input" name="updateReplyContents"></textarea>
+						    	<div class="fix-buttons">
+							  	  	<button id="cancel-faq" type="button">취소</button>
+									<button id="save-faq" type="submit">저장</button>
+						    	</div>
+						    </div>
+						</div>
+						
+							
+					    <div class="comment-like-container" onclick="toggleCommentLike(this)">
+					        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
+					        <span class="comment-like-count">0</span>
 					    </div>
 					</div>
-						
-				    <div class="comment-like-container" onclick="toggleCommentLike(this)">
-				        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
-				        <span class="comment-like-count">0</span>
-				    </div>
-				</div>
+					
+					<!-- 댓글이 수정되었습니다! -->
+					<div id="updateCommentPopup" class="modal-bg" style="display: none;">
+					    <div class="modal">
+					        <div class="modal-title">
+					            <img class="attention-icon" alt="attention-icon" src="../assets/images/display/attention.png">
+					            <span>댓글이 수정되었습니다!</span>
+					        </div>
+					        <div class="modal-footer">
+					            <button class="send" onclick="closePopup('updateCommentPopup')">확인</button>
+					        </div>
+					    </div>
+					</div>
+				</form>
 			</div>
 		</c:forEach>
     </div>

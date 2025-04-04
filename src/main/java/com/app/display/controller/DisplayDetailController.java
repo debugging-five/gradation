@@ -36,7 +36,6 @@ public class DisplayDetailController implements Action {
 		Long artPostId = artPostDTO.getArtPostId();
 //		String artPostIdParam = req.getParameter("artPostId");
 		List<ArtPostDTO> artPostDTOs = artDAO.selectReplyList(artPostId);
-		System.out.println(artPostDTOs);
 		
 		String artDate = new SimpleDateFormat("yyyy").format(artPostDTO.getArtDate());
 		

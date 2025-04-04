@@ -324,10 +324,16 @@
       VALUES (SEQ_REPLY.NEXTVAL, #{artPostId}, #{userId}, #{replyContents}, CURRENT_TIMESTAMP)
    </insert>
    
+   <!-- 수정 -->
    <update id="updateReply" parameterType="ArtPostDTO">
 	  UPDATE TBL_REPLY SET REPLY_CONTENTS = #{replyContents}, REPLY_DATE = CURRENT_TIMESTAMP
-	  WHERE ART_POST_ID = #{artPostId} AND USER_ID = #{userId};
+	  WHERE ART_POST_ID = #{artPostId} AND USER_ID = #{userId}
    </update>
+   
+   <delete id="deleteReply" parameterType="ArtPostDTO" >
+	  DELETE FROM TBL_REPLY
+	  WHERE ART_POST_ID = #{artPostId} AND USER_ID = #{userId};
+   </delete>
    
 
 
