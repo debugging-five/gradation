@@ -50,17 +50,14 @@
 	      AND A.ART_CATEGORY = #{category}
 	    </if>
 	</select>
-	
-	
-	
-	
-	
+		
 	   <select id="selectDisplayCount" resultType="int">
 	      SELECT COUNT(*) FROM TBL_ART A
 	      JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
 	      WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
 	      AND   A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
 	   </select>
+	
 	
 	   <select id="selectDisplayList" resultType="ArtDTO"
 	      parameterType="map">
@@ -291,6 +288,8 @@
 		INSERT INTO TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
 		VALUES (SEQ_ART_LIKE.NEXTVAL, #{artId}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
+<<<<<<< HEAD
+=======
 	
 	<!-- 좋아요 삭제 -->
 	<delete id="deleteArtLike" parameterType="ArtPostDTO">
@@ -327,5 +326,6 @@
 		VALUES (SEQ_REPLY.NEXTVAL, #{artPostId}, #{userId}, #{replyContents}, CURRENT_TIMESTAMP);
 	</insert>
 	
+>>>>>>> master
 
 </mapper>
