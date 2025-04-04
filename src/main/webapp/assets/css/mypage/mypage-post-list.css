@@ -101,34 +101,15 @@ input:focus {
 	transition: background-color 0.2s ease;
 }
 
-.mypage-post-list .tab-received {
-	background-color: var(--color-gray500);
-	color: var(--color-black);
-	
-}
-
-.mypage-post-list .tab-content.tab-received-content {
-  width: 801px;
-  margin-left: 0;
-}
-
-
-a.tab.tab-sent.active {
+a.tab.tab-received {
 	background-color: var(--color-gray500) !important;
 	color: var(--color-black) !important;
-}
-
-.mypage-post-list .tab.tab-sent.active {
-	background-color: var(--color-gray100) !important;
 }
 
 .mypage-post-list .tab:hover {
 	background-color: var(--color-gray300);
 }
 
-.mypage-post-list .tab.active {
-	background-color: var(--color-gray500);
-}
 
 .mypage-post-list .message-table-header, .mypage-post-list .message-row
 	{
@@ -141,7 +122,7 @@ a.tab.tab-sent.active {
 
 .mypage-post-list .message-table-header {
 	height: 51px; 
-	font-weight : var( --font-weight-semibold);
+	font-weight: var(--font-weight-semibold);
 	font-size: var(--font-size-h5);
 	line-height: var(--line-height-h5);
 }
@@ -202,7 +183,6 @@ a.tab.tab-sent.active {
 .mypage-post-list .column-header-sender {
 	margin-left: 2px;
 }
-
 .mypage-post-list .column-header-sender, .mypage-post-list .column-sender
 	{
 	width: 150px;

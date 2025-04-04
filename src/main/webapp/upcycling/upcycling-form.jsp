@@ -14,10 +14,8 @@
 	href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
-
 <body style="margin: 0; background: #fbfcfc">
 	<%@ include file="../layout/header.jsp"%>
-
 	<input type="hidden" id="page-name" name="page" value="upcycling-form" />
 	<div class="container-center">
 		<div class="upcycle-form screen">
@@ -258,14 +256,11 @@
 
   	  document.querySelector("form").submit();
   	}
-
-
-
-  function execDaumPostcode() {
-    new daum.Postcode({
-      oncomplete: function(data) {
-        var fullAddress = data.address;
-        var extraAddress = '';
+ 	 function execDaumPostcode() {
+   		 new daum.Postcode({
+    	 oncomplete: function(data) {
+       	 var fullAddress = data.address;
+         var extraAddress = '';
 
         if (data.addressType === 'R') {
           if (data.bname !== '') extraAddress += data.bname;

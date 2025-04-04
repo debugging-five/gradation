@@ -14,7 +14,7 @@ import com.app.vo.MailVO;
 
 public class MypageSendPostContentModifyOkController implements Action {
 
-	private final MailDAO mailDAO;
+    private final MailDAO mailDAO;
 
     public MypageSendPostContentModifyOkController() {
         this.mailDAO = new MailDAO();
@@ -24,25 +24,25 @@ public class MypageSendPostContentModifyOkController implements Action {
     public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         HttpSession session = req.getSession();
 
-        String userEmail = (String) session.getAttribute("userEmail");
-
-     // fallback: 세션이 null일 경우 쿼리 파라미터에서 이메일 받기
-     if (userEmail == null) {
-         userEmail = req.getParameter("sendUserEmail");
-     }
-     System.out.println("사용할 userEmail: " + userEmail);
-
-     Long userId = mailDAO.findUserIdByEmail(userEmail);
-//     System.out.println("userId 역조회 결과: " + userId);
-
         String mailTitle = req.getParameter("mailTitle");
         String mailContents = req.getParameter("mailContents");
         String receiveUserEmail = req.getParameter("receiveUserEmail");
 
+        // 안전하게 userId 가져오기
+        String sendUserIdStr = req.getParameter("sendUserId");
+        Long userId = null;
+        if (sendUserIdStr != null && !sendUserIdStr.trim().isEmpty()) {
+            userId = Long.parseLong(sendUserIdStr.trim());
+        } else {
+            // 필요하다면 디버깅용 로그 출력
+            System.out.println("sendUserId 값이 없음!");
+            throw new IllegalArgumentException("보내는 사용자 ID가 유효하지 않습니다.");
+        }
+
         MailVO mailVO = new MailVO();
         mailVO.setMailTitle(mailTitle);
         mailVO.setMailContents(mailContents);
-        mailVO.setSendUserId(userId); 
+        mailVO.setSendUserId(userId);
         mailVO.setReceiveUserEmail(receiveUserEmail);
 
         mailDAO.insertByEmail(mailVO);
@@ -52,6 +52,4 @@ public class MypageSendPostContentModifyOkController implements Action {
         result.setRedirect(true);
         return result;
     }
-
-
 }
