@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			alert('답변 내용을 입력하세요.');
 			return;
 		}
-		/* 임시 */
-		console.log('답변 등록:', content);
+
 	});
 	
 	listBtn.addEventListener("click", () => {
