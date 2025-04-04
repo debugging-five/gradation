@@ -52,23 +52,32 @@ document.querySelector("#updateCommentPopup .send").addEventListener("click", fu
 
 /* ...버튼 속에 수정과 삭제 */
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn"); // 모든 버튼 선택
+    const dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
-    // 버튼 클릭 시 드롭다운 표시/숨김
-    dropdownBtn.addEventListener("click", function (event) {
-        event.stopPropagation();  // 이벤트 버블링 방지
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    dropdownBtns.forEach((btn, index) => {
+        btn.addEventListener("click", function (event) {
+            event.stopPropagation(); // 이벤트 버블링 방지
+
+            // 모든 드롭다운 닫기
+            dropdownMenus.forEach((menu) => (menu.style.display = "none"));
+
+            // 현재 클릭된 버튼에 해당하는 메뉴 열기/닫기
+            let dropdownMenu = dropdownMenus[index];
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        });
     });
 
-    // 바깥 영역 클릭 시 드롭다운 닫기
+    // 바깥 영역 클릭 시 모든 드롭다운 닫기
     document.addEventListener("click", function () {
-        dropdownMenu.style.display = "none";
+        dropdownMenus.forEach((menu) => (menu.style.display = "none"));
     });
 
     // 드롭다운 내부 클릭 시 닫히지 않도록
-    dropdownMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
+    dropdownMenus.forEach((menu) => {
+        menu.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
     });
 });
 
