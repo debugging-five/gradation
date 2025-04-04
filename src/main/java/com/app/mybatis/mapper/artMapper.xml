@@ -50,17 +50,14 @@
 	      AND A.ART_CATEGORY = #{category}
 	    </if>
 	</select>
-	
-	
-	
-	
-	
+		
 	   <select id="selectDisplayCount" resultType="int">
 	      SELECT COUNT(*) FROM TBL_ART A
 	      JOIN TBL_ART_IMG I ON A.ID = I.ART_ID
 	      WHERE A.ART_START_DATE &lt;= TO_DATE('2025-04-02', 'YYYY-MM-DD')
 	      AND   A.ART_END_DATE &gt;= TO_DATE('2024-01-01', 'YYYY-MM-DD')
 	   </select>
+	
 	
 	   <select id="selectDisplayList" resultType="ArtDTO"
 	      parameterType="map">
@@ -179,6 +176,10 @@
 	</select>
 
 
+
+
+
+
 	<!--작품 업로드 (전시중) -->
 	<insert id="insert" parameterType="ArtPostDTO">
        INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
@@ -195,12 +196,33 @@
            #{userId}
        )
 	</insert>
+	
+	<!--작품 업로드 (전시예정) -->
+	<insert id="insertCommingSoon" parameterType="ArtDTO">
+       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
+       VALUES (
+           SEQ_ART.NEXTVAL,
+           #{artTitle},
+           #{artCategory},
+           #{artMaterial},
+           #{artSize},
+           #{artDescription},
+           CURRENT_TIMESTAMP,
+           CURRENT_TIMESTAMP, 
+           #{artEndDate},
+           #{userId}
+       )
+	</insert>
+	
+	<!-- 최신artId가져오기 -->
 	<select id="getLatestArtId" resultType="Long">
 	    SELECT ID 
 	    FROM TBL_ART 
 	    ORDER BY ART_DATE DESC
 	    FETCH FIRST 1 ROWS ONLY
 	</select>
+	
+	<!-- 이미지넣기 -->
 	<insert id="insertImg" parameterType="ArtPostDTO">
 		INSERT INTO TBL_ART_IMG (ID, ART_IMG_NAME, ART_IMG_PATH, ART_ID)
 		VALUES(
@@ -211,6 +233,7 @@
 		)
 	</insert>
 	
+	<!-- 작품 게시에 넣기 -->
 	<insert id="insertArtPost" parameterType="ArtPostDTO">
 		INSERT INTO TBL_ART_POST (ID, ART_POST_DATE, USER_ID, ART_ID)
 		VALUES(
@@ -220,25 +243,8 @@
 			#{artId}
 		)
 	</insert>
-
-    
-	<!--작품 업로드 (전시예정) -->
-	<insert id="insertCommindSoon" parameterType="ArtVO">
-	       INSERT INTO TBL_ART (ID, ART_TITLE, ART_CATEGORY, ART_MATERIAL, ART_SIZE, ART_DESCRIPTION, ART_DATE, ART_START_DATE, ART_END_DATE, USER_ID )           
-	       VALUES (
-	           SEQ_ART.NEXTVAL,
-	           #{artTitle},
-	           #{artCategory},
-	           #{artMaterial},
-	           #{artSize},
-	           #{artDescription},
-	           SYSDATE,
-	           SYSDATE,
-	           #{artEndDate},
-	           #{userId}
-	       )
-	</insert>
 	
+	<!-- 해당 아이디를 통하여 상품 뿌리기 -->
 	<select id="selectArtById" parameterType="long" resultType="ArtPostDTO">
 	    SELECT 
 	        TAP.ID,
@@ -250,7 +256,8 @@
 	        TA.ART_MATERIAL, 
 	        TA.ART_SIZE, 
 	        TA.ART_CATEGORY, 
-	        TA.ART_DESCRIPTION
+	        TA.ART_DESCRIPTION,
+	        TAP.ID AS ART_POST_ID
 	    FROM TBL_ART_POST TAP
 	    JOIN TBL_ART TA ON TAP.ART_ID = TA.ID
 	    JOIN TBL_USER TU ON TAP.USER_ID = TU.ID
@@ -267,17 +274,58 @@
 		FROM TBL_ART
 	</select>
 
-
-	<insert id="insertArtLike" parameterType="ArtLikeVO">
-		INSERT INTO
-		TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
-		VALUES (
-		SEQ_ART_LIKE.NEXTVAL,
-		#{artId},
-		#{userId},
-		SYSDATE
-		)
+	<!-- 좋아요 여부 -->
+	<select id="selectUserLike" parameterType="ArtPostDTO" resultType="int">
+		SELECT COUNT(*) 
+		FROM TBL_ART_LIKE TAL
+		JOIN TBL_USER TU
+		ON TAL.USER_ID = TU.ID
+		WHERE ART_ID = #{artId} AND USER_EMAIL = #{userEmail}
+	</select>
+	
+	<!-- 좋아요 추가 -->
+	<insert id="insertArtLike" parameterType="ArtPostDTO">
+		INSERT INTO TBL_ART_LIKE (ID, ART_ID, USER_ID, ART_LIKE_TIME)
+		VALUES (SEQ_ART_LIKE.NEXTVAL, #{artId}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
-
+<<<<<<< HEAD
+=======
+	
+	<!-- 좋아요 삭제 -->
+	<delete id="deleteArtLike" parameterType="ArtPostDTO">
+		DELETE FROM TBL_ART_LIKE WHERE ART_ID = #{artId} AND USER_ID = #{userId}
+	</delete>
+	
+	<!-- 좋아요 개수 조회 -->
+	<select id="selectArtLikeCount" parameterType="long" resultType="int">
+		SELECT COUNT(*) FROM TBL_ART_LIKE WHERE ART_ID = #{artId}
+	</select>
+	
+	<!-- 댓글 조회 -->
+	<select id="selectReplyList" parameterType="long" resultType="ArtPostDTO">
+		SELECT 
+			TAP.ID,
+			TU.USER_IMG_NAME, 
+			TU.USER_IMG_PATH,
+			TU.USER_NAME,
+			TU.USER_NICKNAME,
+			TR.REPLY_DATE,
+			TR.REPLY_CONTENTS
+		FROM TBL_USER TU
+		JOIN TBL_REPLY TR
+		ON TU.ID = TR.USER_ID
+		JOIN TBL_ART_POST TAP 
+		ON  TR.ART_POST_ID = TAP.ID
+		WHERE TAP.ID = #{artPostId}
+		ORDER BY TR.REPLY_DATE DESC
+	</select>
+	
+	<!-- 댓글달기 -->
+	<insert id="insertReply" parameterType="ArtPostDTO">
+		INSERT INTO TBL_REPLY (ID, ART_POST_ID, USER_ID, REPLY_CONTENTS, REPLY_DATE)
+		VALUES (SEQ_REPLY.NEXTVAL, #{artPostId}, #{userId}, #{replyContents}, CURRENT_TIMESTAMP);
+	</insert>
+	
+>>>>>>> master
 
 </mapper>

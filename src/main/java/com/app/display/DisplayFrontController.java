@@ -13,6 +13,7 @@ import com.app.auction.controller.AuctionController;
 import com.app.auction.controller.AuctionModifyController;
 import com.app.auction.controller.AuctionModifyOkController;
 import com.app.auction.controller.AuctionPaymentController;
+import com.app.display.controller.DisplayArtLikeOkController;
 import com.app.display.controller.DisplayCategoryArchitectureController;
 import com.app.display.controller.DisplayCategoryCalligraphyController;
 import com.app.display.controller.DisplayCategoryCraftController;
@@ -21,10 +22,14 @@ import com.app.display.controller.DisplayCategoryPaintingController;
 import com.app.display.controller.DisplayCategorySculptureController;
 import com.app.display.controller.DisplayDetailController;
 import com.app.display.controller.DisplayFormCommingSoonController;
+import com.app.display.controller.DisplayFormCommingSoonOkController;
 import com.app.display.controller.DisplayFormController;
 import com.app.display.controller.DisplayFormOkController;
 import com.app.display.controller.DisplayMainCommingSoonController;
 import com.app.display.controller.DisplayMainIngController;
+import com.app.display.controller.DisplayReplyDeleteController;
+import com.app.display.controller.DisplayReplyUpdateController;
+import com.app.display.controller.DisplayReplyUploadController;
 import com.app.mypage.controller.MypageContactArtistWriteController;
 
 public class DisplayFrontController extends HttpServlet{
@@ -60,11 +65,20 @@ public class DisplayFrontController extends HttpServlet{
 			result = new DisplayDetailController().execute(req, resp);
 		}else if(target.equals("display/display-form")) {
 			result = new DisplayFormController().execute(req, resp);
-		}else if(target.equals("display/display-form-comming-soon")) {
-			result = new DisplayFormCommingSoonController().execute(req, resp);
 		}else if(target.equals("display/display-form-ok")) {
 			result = new DisplayFormOkController().execute(req, resp);
-		}else {
+		}else if(target.equals("display/display-form-comming-soon")) {
+			result = new DisplayFormCommingSoonController().execute(req, resp);
+		}else if(target.equals("display/display-form-comming-soon-ok")) {
+			result = new DisplayFormCommingSoonOkController().execute(req, resp);
+		}else if(target.equals("display/display-art-like-ok")) {
+			result = new DisplayArtLikeOkController().execute(req, resp);
+		}else if(target.equals("display/display-reply-upload")) {
+			result = new DisplayReplyUploadController().execute(req, resp);
+		}else if(target.equals("display/display-reply-update")) {
+			result = new DisplayReplyUpdateController().execute(req, resp);
+		}else if(target.equals("display/display-reply-delete")) {
+			result = new DisplayReplyDeleteController().execute(req, resp);
 //			전부 404
 		}
 		

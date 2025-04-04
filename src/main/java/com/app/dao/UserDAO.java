@@ -97,6 +97,8 @@ import com.app.vo.UserVO;
  		sqlSession.update("user.updateUserUniversityStatus", userVO);
  	}
  	
+// 	--------------------------------임시 매서드---------------------------------------
+ 	
 // 	FAQ임시
  	public List<FaqVO> selectFaqAll() {
  		return sqlSession.selectList("admin.selectFaqAll");
@@ -114,5 +116,28 @@ import com.app.vo.UserVO;
  	public QnaDTO selectOneQna(QnaDTO qnaDTO) {
  		return sqlSession.selectOne("user.selectOneQna", qnaDTO);
  	}
+ 	public QnaVO selectQnaById(Long qnaId) {
+ 		return sqlSession.selectOne("user.selectQnaById", qnaId);
+ 	}
  	
+// 	qna insert
+ 	public void insertQna(QnaVO qnaVO) {
+ 		sqlSession.insert("user.insertQna", qnaVO);
+ 	}
+ 	
+// 	qna update
+ 	public void updateQna(QnaVO qnaVO) {
+ 		sqlSession.update("user.updateQna", qnaVO);
+ 	}
+ 	
+// 	qna delete
+ 	public void deleteQna(long qnaId) {
+ 		sqlSession.delete("user.deleteQna", qnaId);
+ 	}
+ 	 	
+//  사용자 id로 이메일 조회
+ 	public String findEmailById(Long id) {
+ 	    return sqlSession.selectOne("user.findEmailById", id);
+ 	}
+
  }

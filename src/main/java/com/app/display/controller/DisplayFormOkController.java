@@ -1,6 +1,8 @@
 package com.app.display.controller;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +24,8 @@ public class DisplayFormOkController implements Action {
         UserDAO userDAO = new UserDAO();
         ArtDAO artDAO = new ArtDAO();
         ArtPostDTO artPostDTO = new ArtPostDTO();
+        
+        
         
         // 로그인된 유저 정보 가져오기
         String userEmail = (String) req.getSession().getAttribute("loginUser");
@@ -56,15 +60,6 @@ public class DisplayFormOkController implements Action {
         String artSize = multi.getParameter("artSize");
         String artCategory = multi.getParameter("artCategory");
         String artDescription = multi.getParameter("artDescription");
-        
-        System.out.println("artImgName: " + artImgName);
-        System.out.println("artImgPath: " + artImgPath);
-        System.out.println("artTitle: " + artTitle);
-        System.out.println("artMaterial: " + artMaterial);
-        System.out.println("artSize: " + artSize);
-        System.out.println("artCategory: " + artCategory);
-        System.out.println("artDescription: " + artDescription);
-
        
 
         // DTO에 값 설정
@@ -77,7 +72,6 @@ public class DisplayFormOkController implements Action {
         artPostDTO.setArtSize(artSize);
         artPostDTO.setArtCategory(artCategory);
         artPostDTO.setArtDescription(artDescription);
-        
         
 
         // 1. 작품 정보 먼저 저장
