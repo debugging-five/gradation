@@ -95,12 +95,16 @@
 	const id = <%=mail.getId()%>;
 	
 	deleteButton.addEventListener("click", () => {
-		location.href= 'mypage-contact-artist-delete-ok.mypage?id=' + id;
+	    if (confirm("삭제하시겠습니까?")) {
+	        location.href = 'mypage-contact-artist-delete-ok.mypage?id=' + id;
+	    }
 	});
 	
 	modifyButton.addEventListener("click", () => {
-		location.href = 'mypage-contact-artist-update.mypage?id=' + id;
-	})
+	    console.log('mypage-contact-artist-update.mypage?id=' + id);
+	    location.href = 'mypage-contact-artist-update.mypage?id=' + id;
+	});
+
 	
 	listButton.addEventListener("click", () => {
 		location.href = 'mypage-contact-artist-list.mypage' ;

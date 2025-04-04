@@ -43,9 +43,9 @@ public class UniversityExhibitionFormWriteOkController implements Action {
 	        System.out.println("날짜 값이 없습니다."); // 디버깅용 출력
 	    }
 	    
-	    exhibitionDAO.insertExhibition(majorDTO);
-	    exhibitionDAO.insertMajor(majorDTO);
-	    exhibitionDAO.insertUniversity(majorDTO);
+//	    exhibitionDAO.insertExhibition(majorDTO);
+//	    exhibitionDAO.insertMajor(majorDTO);
+//	    exhibitionDAO.insertUniversity(majorDTO);
 		
 		result.setRedirect(true);
 		result.setPath("mypage-service-center-qna-list.mypage");

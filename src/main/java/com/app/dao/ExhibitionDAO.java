@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.dto.ArtPostDTO;
 import com.app.dto.GradationExhibitionDTO;
+import com.app.dto.MailDTO;
 import com.app.dto.MajorDTO;
 import com.app.dto.UniversityExhibitionDTO;
 import com.app.mybatis.config.MyBatisConfig;
@@ -48,20 +49,10 @@ public class ExhibitionDAO {
  		sqlSession.insert("exhibition.insertUniversityExhibition", majorDTO);
  	}
  	
-
-    public void insertUniversity(MajorDTO majorDTO) {
-        sqlSession.insert("exhibition.insertUniversity", majorDTO);
-    }
-
-    public void insertMajor(MajorDTO majorDTO) {
-        sqlSession.insert("exhibition.insertMajor", majorDTO);
-    }
-
-    public void insertExhibition(MajorDTO majorDTO) {
-        sqlSession.insert("exhibition.insertExhibition", majorDTO);
+    
+// 대학교 전시회 메인
+    public List<MajorDTO> selectUniversityExhibition() {
+    	return sqlSession.selectList("exhibition.selectUniversityExhibition");
     }
     
-    
-
-
 }

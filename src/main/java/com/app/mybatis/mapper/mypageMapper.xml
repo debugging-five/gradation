@@ -58,7 +58,7 @@
 	<select id="selectMailAll" resultType="MailDTO">
 	    SELECT TBM.ID, TBM.MAIL_TITLE, TBM.MAIL_SEND_TIME, 
 	           TBM.SEND_USER_ID, TBM.RECEIVE_USER_ID, TBM.MAIL_CONTENTS,
-	           TBU.USER_EMAIL AS rUserEmail  
+	           TBU.USER_EMAIL AS rUserEmail, TBU.USER_EMAIL AS sUserEmail
 	    FROM TBL_MAIL TBM
 	    JOIN TBL_USER TBU
 	    ON TBM.RECEIVE_USER_ID = TBU.ID 
