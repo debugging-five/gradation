@@ -77,11 +77,55 @@
     <!-- 댓글 섹션 -->
     <div class="comments-section">
         <h3 class="comments">comments</h3>
+        
     	<!-- 댓글 쓰기 -->
-        <div class="textarea-container">
-	        <textarea class="comment-typing" placeholder="댓글을 작성해주세요."></textarea>
-	        <button class="submit-button" onclick="openPopup()">등록</button>
-	    </div>
+    	<form action="display-reply-upload-ok.display?artId=${artId}" method="post">
+	        <div class="textarea-container">
+		        <textarea class="comment-typing" placeholder="댓글을 작성해주세요." name="replyContents"></textarea>
+		        <button class="submit-button" onclick="openPopup()" type="button">등록</button>
+		    </div>
+		    
+		    <!-- 등록 클릭 시 팝업 (문구 있을 시)-->
+			<div class="modal-bg" id="modalBg">
+			    <div class="modal">
+			        <div class="modal-title">
+			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
+			        	<span>댓글을 등록하시겠습니까?</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="cancel" onclick="closePopup('modalBg')" type="button">취소</button>
+			            <button class="send" onclick="confirmSubmission()" type="button">확인</button>
+			        </div>
+			    </div>
+			</div>
+			
+			<!-- 등록완료 팝업 -->
+			<div id="popupOverlay" class="modal-bg" style="display: none;">
+				<div class="modal">
+			        <div class="modal-title">
+			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/ok.png">
+			        	<span>댓글이 등록되었습니다!</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="send" onclick="closePopup()" type="submit">확인</button>
+			        </div>
+			    </div>
+			</div>
+		</form>
+		
+			<!-- 댓글을 입력하세요. -->
+			<div id="emptyCommentPopup" class="modal-bg" style="display: none;">
+			    <div class="modal">
+			        <div class="modal-title">
+			            <img class="question-icon" alt="question-icon" src="../assets/images/display/attention.png">
+			            <span>댓글을 입력하세요.</span>
+			        </div>
+			        <div class="modal-footer">
+			            <button class="send" onclick="closePopup('emptyCommentPopup')" type="button">확인</button>
+			        </div>
+			    </div>
+			</div>
+		
 	    
 	    <!-- 정렬 방식 -->
 		<div class="dropdown-container-2">
@@ -103,100 +147,55 @@
 		        	<img class="profile-image" alt="profile-image" src="${userImg}"
 		        		onerror="this.onerror=null; this.src='../assets/images/display/user.png';">
 		            <p class="comment-user"><strong>${comment.userNickname}</strong></p>
-		            <p>${comment.replyDate}</p>
+		            <p>${comment.replyDate}</p> 
 		            
-			      	<div class="dropdown-container">
-					    <button class="dropdown-btn">⋮</button>
-					    <ul class="dropdown-menu">
-					        <li id="modify-faq" class="edit">수정</li>
-					        <li id="delete-faq" class="delete">삭제</li>
-					    </ul>
-					</div>
+				      	<div class="dropdown-container">
+						    <button class="dropdown-btn">⋮</button>
+						    <ul class="dropdown-menu">
+						        <li id="modify-faq" class="edit">수정</li>
+						        <li id="delete-faq" class="delete">삭제</li>
+						    </ul>
+						</div>
 		        </div>
 		        
-				<div class="comment-wrapper">
-					<div class= "fix-comment">
-					    <p id="question-content" class="comment">${comment.replyContents}</p>
-					    <div id="answer-input1">
-					    	<textarea id="answer-input"></textarea>
-					    	<div class="fix-buttons">
-						  	  	<button id="cancel-faq">취소</button>
-								<button id="save-faq">저장</button>
-					    	</div>
+		        <form action="display-reply-update-ok.display?artId=${artId}" method="post">
+					<div class="comment-wrapper">
+						<div class= "fix-comment">
+						    <p id="question-content" class="comment">${comment.replyContents}</p>
+						    <div id="answer-input1">
+						    	<textarea id="answer-input" name="updateReplyContents"></textarea>
+						    	<div class="fix-buttons">
+							  	  	<button id="cancel-faq" type="button">취소</button>
+									<button id="save-faq" type="submit">저장</button>
+						    	</div>
+						    </div>
+						</div>
+						
+							
+					    <div class="comment-like-container" onclick="toggleCommentLike(this)">
+					        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
+					        <span class="comment-like-count">0</span>
 					    </div>
 					</div>
-						
-				    <div class="comment-like-container" onclick="toggleCommentLike(this)">
-				        <img class="comment-like-icon" src="../assets/images/display/like.png" alt="like">
-				        <span class="comment-like-count">0</span>
-				    </div>
-				</div>
+					
+					<!-- 댓글이 수정되었습니다! -->
+					<div id="updateCommentPopup" class="modal-bg" style="display: none;">
+					    <div class="modal">
+					        <div class="modal-title">
+					            <img class="attention-icon" alt="attention-icon" src="../assets/images/display/attention.png">
+					            <span>댓글이 수정되었습니다!</span>
+					        </div>
+					        <div class="modal-footer">
+					            <button class="send" onclick="closePopup('updateCommentPopup')">확인</button>
+					        </div>
+					    </div>
+					</div>
+				</form>
 			</div>
 		</c:forEach>
-		
-		
-		
-		
-
-
-        
-       
-       		<!-- 등록 클릭 시 팝업 (문구 있을 시)-->
-			<div class="modal-bg" id="modalBg">
-			    <div class="modal">
-			        <div class="modal-title">
-			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/question.png">
-			        	<span>댓글을 등록하시겠습니까?</span>
-			        </div>
-			        <div class="modal-footer">
-			            <button class="cancel" onclick="closePopup('modalBg')">취소</button>
-			            <button class="send" onclick="confirmSubmission()">확인</button>
-			        </div>
-			    </div>
-			</div>
-			
-			<!-- 등록완료 팝업 -->
-			<div id="popupOverlay" class="modal-bg" style="display: none;">
-				<div class="modal">
-			        <div class="modal-title">
-			        	<img class="question-icon" alt="question-icon" src="../assets/images/display/ok.png">
-			        	<span>댓글이 등록되었습니다!</span>
-			        </div>
-			        <div class="modal-footer">
-			            <button class="send" onclick="closePopup()">확인</button>
-			        </div>
-			    </div>
-			</div>
-			
-			<!-- 댓글을 입력하세요. -->
-			<div id="emptyCommentPopup" class="modal-bg" style="display: none;">
-			    <div class="modal">
-			        <div class="modal-title">
-			            <img class="question-icon" alt="question-icon" src="../assets/images/display/attention.png">
-			            <span>댓글을 입력하세요.</span>
-			        </div>
-			        <div class="modal-footer">
-			            <button class="send" onclick="closePopup('emptyCommentPopup')">확인</button>
-			        </div>
-			    </div>
-			</div>
-			
-			<!-- 댓글이 수정되었습니다! -->
-			<div id="updateCommentPopup" class="modal-bg" style="display: none;">
-			    <div class="modal">
-			        <div class="modal-title">
-			            <img class="attention-icon" alt="attention-icon" src="../assets/images/display/attention.png">
-			            <span>댓글이 수정되었습니다!</span>
-			        </div>
-			        <div class="modal-footer">
-			            <button class="send" onclick="closePopup('updateCommentPopup')">확인</button>
-			        </div>
-			    </div>
-			</div>
-	    
+    </div>
     
-	</div>    
-</div>
+</div>    
 <div class="footer-margin"></div>
 <%@ include file="../layout/footer.jsp" %>
 </body>
