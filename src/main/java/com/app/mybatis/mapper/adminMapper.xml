@@ -50,12 +50,45 @@
 
 
 	<!-- 1 : 1 문의 -->
+	<!-- 답변 대기 리스트 -->
+	<select id="selectWaitingQna" parameterType="Long" resultType="QnaDTO">
+		SELECT Q.ID, Q.QNA_TITLE, Q.QNA_TIME, Q.QNA_CATEGORY
+		FROM TBL_QNA Q
+		LEFT JOIN TBL_QNA_ANSWER A
+		ON Q.ID = A.QNA_ID
+		WHERE A.QNA_ID IS NULL
+		ORDER BY Q.ID
+	</select>
 	
-
-
-
-
-
+	<!-- 답변 완료 리스트 -->
+	<select id="selectCompletedQna" parameterType="Long" resultType="QnaDTO">
+		SELECT Q.ID, Q.QNA_TITLE, Q.QNA_TIME, Q.QNA_CATEGORY
+		FROM TBL_QNA Q
+		JOIN TBL_QNA_ANSWER A
+		ON Q.ID = A.QNA_ID
+		WHERE A.QNA_ID IS NOT NULL
+		ORDER BY Q.ID
+	</select>	
+	
+	<!-- 답변 하나 조회 -->
+	<select id="selectQnaById" parameterType="Long" resultType="QnaDTO">
+		SELECT 
+			Q.ID,
+			Q.QNA_TITLE,
+			Q.QNA_TIME,
+			Q.QNA_CATEGORY,
+			Q.QNA_CONTENT,
+			U.USER_NAME,
+			U.USER_EMAIL,
+			U.USER_PHONE,
+			A.QNA_ANSWER_CONTENT,
+			A.QNA_ANSWER_TIME
+		FROM TBL_QNA Q
+		JOIN TBL_USER U 
+		ON Q.USER_ID = U.ID
+		LEFT JOIN TBL_QNA_ANSWER A ON Q.ID = A.QNA_ID
+		WHERE Q.ID = #{id}		
+	</select>
 
 
 
@@ -117,7 +150,7 @@
 	 
 	 <!-- 회원관리 회원한명 Read -->	
 	<select id="selectId" parameterType="Long" resultType="MajorDTO">
-		SELECT TBU.ID TBU.USER_IDENTIFICATION, TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL, TBU.USER_ADDRESS, TBUS.UNIVERSITY_NAME
+		SELECT TBU.ID TBU.USER_IDENTIFICATION, TBU.USER_NAME, TBU.USER_PHONE, TBU.USER_EMAIL, TBU.USER_ADDRESS, TBUS.UNIVERSITY_NAME			
 		FROM TBL_USER TBU
 		JOIN TBL_MAJOR TBM
 		ON TBU.MAJOR_ID = TBM.ID 
