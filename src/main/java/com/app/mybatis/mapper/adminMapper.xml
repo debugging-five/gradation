@@ -90,6 +90,14 @@
 		WHERE Q.ID = #{id}		
 	</select>
 
+	<!-- 답변 달기 -->
+	<insert id="insertQnaAnswer" parameterType="QnaDTO">
+		INSERT INTO TBL_QNA_ANSWER(ID, QNA_ID, QNA_ANSWER_TITLE, QNA_ANSWER_CONTENT, QNA_ANSWER_TIME)
+		VALUES(SEQ_QNA_ANSWER.NEXTVAL, #{qnaId}, #{qnaAnswerTitle}, #{qnaAnswerContent}, CURRENT_TIMESTAMP)
+	</insert>
+
+
+
 
 
 
@@ -160,10 +168,13 @@
 	</select>
 	
 
-		
 	
 
-	
-	
-	 
 </mapper>
+
+
+
+
+
+
+

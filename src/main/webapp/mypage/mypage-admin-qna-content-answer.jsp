@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../assets/css/font/font.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-qna-content.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/mypage/mypage-admin-qna-content-answer.css" />
 <title>고객센터 / 1 : 1 문의</title>
 </head>
 <body>
@@ -53,25 +53,25 @@
 					<p>${qna.qnaContent}</p>
 				</div>
 				
-				<div id="button-wrapper">
-					<button id="list-button" type="button">목록</button>
-					<button id="answer-button" type="button">답변하기</button>
-				</div>
-				<div id="reply-wrap" style="display: none;">
-					<h5>내용<span class="star">*</span></h5>
-					<textarea id="textarea" name="answer" placeholder="내용을 입력하세요."></textarea>
-					<div id="button-wrapper">
-						<button id="cancel" type="button">취소</button>
-						<button id="registration" type="button">등록</button>
+				<form id="answer" action="mypage-admin-qna-content-answer-ok.mypage" method="post">
+					<input type="hidden" name="id" value="${qna.id}" />
+					<div id="reply-wrap">
+						<h5>내용<span class="star">*</span></h5>
+						<textarea id="textarea" name="qnaAnswerContent" placeholder="내용을 입력하세요."></textarea>
+						<div id="button-wrapper">
+							<button id="cancel" type="button" data-id="${qna.id}">취소</button>
+							<button id="registration" type="button">등록</button>
+						</div>
 					</div>
-				</div>
+				</form>				
+				
 			</div>
 		</div>
 	</div>
 	
 	<%@ include file="../layout/footer.jsp" %>
 </body>
-<script type="text/javascript" src="../assets/js/mypage/mypage-admin-qna-content.js"></script>
+<script type="text/javascript" src="../assets/js/mypage/mypage-admin-qna-content-answer.js"></script>
 </html>
 
 
