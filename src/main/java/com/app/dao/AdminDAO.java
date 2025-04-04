@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.dto.QnaDTO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.FaqVO;
 
@@ -15,10 +16,7 @@ public class AdminDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	
-	
-	
-	
+//	FAQ
 //	FAQ 전체 조회
 	public List<FaqVO> selectFaqAll() {
 		return sqlSession.selectList("admin.selectFaqAll");
@@ -50,5 +48,43 @@ public class AdminDAO {
 		sqlSession.delete("admin.deleteFaq", id);
 	}
 	
+//	1 : 1 문의
+//	1 : 1 문의 답변 대기 리스트
+	public List<QnaDTO> selectWaitingQna() {
+		return sqlSession.selectList("admin.selectWaitingQna");
+	}
+	
+//	1 : 1 문의 답변 완료 리스트
+	public List<QnaDTO> selectCompletedQna() {
+		return sqlSession.selectList("admin.selectCompletedQna");
+	}
+	
+//	1 : 1 문의 하나 조회
+	public Optional<QnaDTO> selectQnaById(Long id) {
+		return Optional.ofNullable(sqlSession.selectOne("admin.selectQnaById", id));
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

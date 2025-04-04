@@ -289,4 +289,5 @@
 		VALUES (SEQ_ART_LIKE.NEXTVAL, #{artId}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
 
+
 </mapper>
