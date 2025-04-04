@@ -38,7 +38,7 @@
 				
 				<div id="textarea-content">
 					<h5>내용<span class="star">*</span></h5>
-					<textarea name="mailContents">내용을 입력하세요.</textarea>
+					<textarea name="mailContents" placeholder="내용을 입력하세요."></textarea>
 				</div>
 
 				
