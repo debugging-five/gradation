@@ -44,8 +44,8 @@
                 </div>
 
 				<div id="button-div">
-					<button type="button" class="qna-button" id="update-qna" onclick="location.href='mypage-service-center-qna-update.mypage'">수정</button>
-					<button type="button" class="qna-button" id="delete-qna" onclick="location.href='mypage-service-center-qna-delete-ok.mypage'">삭제</button>
+					<button type="button" class="qna-button" id="update-qna" onclick="location.href='mypage-service-center-qna-update.mypage?contentId=${qna.qnaId}'">수정</button>
+					<button type="button" class="qna-button" id="delete-qna" onclick="location.href='mypage-service-center-qna-delete-ok.mypage?contentId=${qna.qnaId}'">삭제</button>
 					<button type="button" class="qna-button" id="list-qna" onclick="location.href='mypage-service-center-qna-list.mypage'">목록</button>
 				</div>
 			</div>
