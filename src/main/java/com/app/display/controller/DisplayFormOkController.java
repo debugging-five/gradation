@@ -60,15 +60,6 @@ public class DisplayFormOkController implements Action {
         String artSize = multi.getParameter("artSize");
         String artCategory = multi.getParameter("artCategory");
         String artDescription = multi.getParameter("artDescription");
-        
-        System.out.println("artImgName: " + artImgName);
-        System.out.println("artImgPath: " + artImgPath);
-        System.out.println("artTitle: " + artTitle);
-        System.out.println("artMaterial: " + artMaterial);
-        System.out.println("artSize: " + artSize);
-        System.out.println("artCategory: " + artCategory);
-        System.out.println("artDescription: " + artDescription);
-
        
 
         // DTO에 값 설정

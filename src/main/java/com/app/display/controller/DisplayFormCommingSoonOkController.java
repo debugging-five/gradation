@@ -63,15 +63,7 @@ public class DisplayFormCommingSoonOkController implements Action {
         if (artEndDateStr != null && !artEndDateStr.isEmpty()) {
             artEndDate = Date.valueOf(artEndDateStr); // 문자열을 `java.sql.Date`로 변환
         }
-        
-        System.out.println("artImgName: " + artImgName);
-        System.out.println("artImgPath: " + artImgPath);
-        System.out.println("artTitle: " + artTitle);
-        System.out.println("artMaterial: " + artMaterial);
-        System.out.println("artSize: " + artSize);
-        System.out.println("artCategory: " + artCategory);
-        System.out.println("artDescription: " + artDescription);
-        System.out.println("artEndDate: " + artEndDate);
+
         
 
        

@@ -48,19 +48,30 @@ public class ArtDAO {
         return sqlSession.selectOne("art.selectArtById", artId);
     }
     
+    // 좋아요 여부                            매개변수 타입
+    public int selectUserLike(ArtPostDTO artPostDTO) {
+        return sqlSession.selectOne("art.selectUserLike", artPostDTO);
+    }
+    
+    
     // 좋아요 추가
-    public void insertArtLike(Long artId, Long userId) {
-        sqlSession.insert("art.insertArtLike", Map.of("artId", artId, "userId", userId));
+    public void insertArtLike(ArtPostDTO artPostDTO) {
+        sqlSession.insert("art.insertArtLike", artPostDTO);
     }
 
     // 좋아요 삭제
-    public void deleteArtLike(Long artId, Long userId) {
-        sqlSession.delete("art.deleteArtLike", Map.of("artId", artId, "userId", userId));
+    public void deleteArtLike(ArtPostDTO artPostDTO) {
+        sqlSession.delete("art.deleteArtLike", artPostDTO);
     }
     
 //    좋아요 카운트
     public int selectArtLikeCount(Long artId) {
         return sqlSession.selectOne("art.selectArtLikeCount", artId);
+    }
+    
+//    댓글 조회
+    public List<ArtPostDTO> selectReplyList(Long artPostId) {
+        return sqlSession.selectList("art.selectReplyList", artPostId);
     }
 
     // ✔ 작품 상세보기
