@@ -53,7 +53,7 @@ public class MypageAdminQnaContentAnswerController implements Action {
 		System.out.println(qna);
 		
 		req.setAttribute("qna", qna);
-		result.setPath("mypage-admin-qna-content.jsp");
+		result.setPath("mypage-admin-qna-content-answer.jsp");
 		return result;
 	}
 
