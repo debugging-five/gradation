@@ -126,10 +126,9 @@ select {
 	width : 16px;
 	height : 16px;
 	position : absolute;
-	left : 435px;
-	top : 965px;
+/* 	left : 435px;
+	top : 965px; */
 }
-
 
 
 #icon1 {
@@ -359,13 +358,10 @@ select {
 	align-items : center;  
 }
 
-#exhibition-list {
-	margin : 13px 0 0 0;
-}
-
 #list {
 	display : flex;
 	gap : 28px;
+	margin : 12px 0 0 0;
 }
 
 

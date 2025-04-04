@@ -62,7 +62,7 @@
 			<div id="bar-border">
 				<div id="filter-wrapper">
 					<!-- 지역 필터링 드롭다운 -->
-					<select id="region-filter">
+					<select id="region-filter" onclick="filterByRegion()">
 						<option value="">전체 지역</option>
 						<option value="seoul">서울</option>
 						<option value="gyeonggi">경기</option>
@@ -127,7 +127,9 @@
 					</div>
 					
 					<div>
-						<button>${exhibition.universityExhibitionStatus}</button>
+						<button class="status-button" onclick="location.href=`${exhibition.universityHomepage}`">
+							${exhibition.universityExhibitionState}
+						</button>
 					</div>
 					</div>
 				</div>	
@@ -160,5 +162,5 @@
 <%@ include file="../layout/footer.jsp" %>
 
 </body>
-<!-- <script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script> -->
+<script type="text/javascript" src="../assets/js/exhibition/university-exhibition-main.js"></script>
 </html>
