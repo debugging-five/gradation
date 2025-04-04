@@ -99,30 +99,28 @@
 }
 
 .display-page .tab-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
 }
-
 
 .display-page .tab-text-upcoming {
-  color: var(--color-gray900);
-  cursor: pointer;
-  height: 30px;
-  min-width: 56px;
-  text-align: center;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  font-weight: var(--font-weight-regular);
-  white-space: nowrap;
-  font-size: var(--font-size-h7);
-  line-height: 1;
+	color: var(--color-gray900);
+	cursor: pointer;
+	height: 30px;
+	min-width: 56px;
+	text-align: center;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	font-weight: var(--font-weight-regular);
+	white-space: nowrap;
+	font-size: var(--font-size-h7);
+	line-height: 1;
 }
-
 
 .display-page .tab-text a:hover {
 	color: var(--color-primary);
@@ -136,13 +134,10 @@
 	color: var(--color-primary)
 }
 
-.tab-text a.active,
-.tab-text-upcoming a.active {
+.tab-text a.active, .tab-text-upcoming a.active {
 	color: var(--color-primary);
 	font-weight: bold;
-
 }
-
 
 .display-page .category-container {
 	margin-top: 30px;
@@ -289,11 +284,19 @@
 }
 
 .display-page .sort-select {
-	position: relative;
-	cursor: pointer;
-	display: flex;
-	gap: 3px;
-	width: 63px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  width: fit-content;
+  margin-left: -30px;  
+}
+
+
+.current-sort {
+	margin-left: 10px;
+	font-weight: bold;
+	color: #333;
 }
 
 .sort-dropdown {
@@ -327,12 +330,16 @@
 }
 
 .display-page .sort-label {
+	cursor: pointer;
+	z-index: 2;
+	pointer-events: auto;
 	color: var(--color-black);
 	height: 19px;
-	width: 72px;
+	width: 120px;
 	font-size: var(--font-size-h7);
 	line-height: var(--line-height-h7);
 	font-weight: var(--font-weight-regular);
+	margin-right: -40px;
 }
 
 .display-page .sort-icon {

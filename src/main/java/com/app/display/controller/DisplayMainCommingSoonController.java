@@ -1,6 +1,7 @@
 package com.app.display.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -8,34 +9,63 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.dao.ArtDAO;
+import com.app.dto.ArtDTO;
 
 public class DisplayMainCommingSoonController implements Action {
 
-	@Override
-	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Result result = new Result();
-		String pageParam = req.getParameter("page");
+	private String getLocalizedCategory(String category) {
+	    if (category == null || category.isEmpty()) {
+	        return null;
+	    }
+	    switch (category) {
+	        case "korean": return "한국화";
+	        case "painting": return "회화";
+	        case "sculpture": return "조각";
+	        case "craft": return "공예";
+	        case "architecture": return "건축";
+	        case "calligraphy": return "서예";
+	        default: return null;
+	    }
+	}
+    @Override
+    public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        Result result = new Result();
+
         int page = 1;
+        String pageParam = req.getParameter("page");
         if (pageParam != null && !pageParam.isEmpty()) {
-            page = Integer.parseInt(pageParam);
+            try {
+                page = Integer.parseInt(pageParam);
+            } catch (NumberFormatException e) {
+                page = 1;
+            }
         }
-
-        int pageSize = 12;
-
-        int totalItems = 50;
+        int pageSize = 15;
+        int startIndex = (page - 1) * pageSize;
+        String category = req.getParameter("category");
+        String localizedCategory = getLocalizedCategory(category);
+        boolean isFiltered = localizedCategory != null;
+        ArtDAO artDAO = new ArtDAO();
+        int totalItems;
+        List<ArtDTO> artList;
+        if (isFiltered) {
+            totalItems = artDAO.getFilteredCommingSoonCount(localizedCategory);
+            artList = artDAO.selectCommingSoonListFiltered(startIndex, pageSize, localizedCategory);
+        } else {
+            totalItems = artDAO.getCommingSoonCount();
+            artList = artDAO.selectCommingSoonList(startIndex, pageSize);
+        }
 
         int totalPages = (int) Math.ceil((double) totalItems / pageSize);
 
-        int startIndex = (page - 1) * pageSize;
-        int endIndex = Math.min(startIndex + pageSize, totalItems);
-
+        req.setAttribute("artList", artList);
         req.setAttribute("currentPage", page);
         req.setAttribute("totalPages", totalPages);
-        req.setAttribute("startIndex", startIndex);
-        req.setAttribute("endIndex", endIndex);
-        result.setRedirect(false);
-		result.setPath("display-main-comming-soon.jsp");
-		return result;
-	}
+        req.setAttribute("category", category);
 
+        result.setPath("display-main-comming-soon.jsp");
+        result.setRedirect(false);
+        return result;
+    }
 }
