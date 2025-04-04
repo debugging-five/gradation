@@ -64,6 +64,11 @@ public class AdminDAO {
 		return Optional.ofNullable(sqlSession.selectOne("admin.selectQnaById", id));
 	}
 	
+//	1 : 1 문의 답변
+	public void insertQnaAnswer(QnaDTO qnaDTO) {
+		sqlSession.insert("admin.insertQnaAnswer", qnaDTO);
+	}
+	
 }
 
 
