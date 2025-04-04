@@ -35,7 +35,7 @@
 	<div id="container-wrap">
 		<div id="container">
 			<!-- 카테고리 include 할 위치잡음 -->
-			<div id="category">
+						<div id="category">
 				<%@ include file="mypage-info-layout.jsp" %>
 			</div>
 			<div id="content-wrap">
@@ -47,31 +47,39 @@
 				<div id="title-wrapper">
 					<div id="contact-title">
 						<h3>${mail.mailTitle}</h3> <!-- 제목은 수정 불가 -->
+						<p>${mail.mailSendTime}</p>
 					</div>
 				</div>
 				
+				<!-- 이름, 연락처, 이메일 div -->
+				<div id="writer-info">
+					<div id="name">
+						<p>이름</p>
+						<p>${sendUserVO.userName}</p>
+					</div>
+					<div id="phone">
+						<p>연락처</p>
+						<p>${sendUserVO.userPhone}</p>
+					</div>
+					<div id="email">
+						<p>이메일</p>
+						<p>${sendUserVO.userEmail}</p>
+					</div>
+				</div>
 				
-				<!-- 쪽지 내용 div -->
-			<div id="contact-content">
-                <p id="content-text">${mail.mailContents}</p>
-            </div>
+				<!-- 쪽지 수정 -->
+				<form action="mypage-contact-artist-update-ok.mypage" method="post">
+				    <!-- 숨겨진 input (글 ID) -->
+				    <input type="hidden" name="id" value="${mail.id}">
+				
+				    <textarea id="content-input" name="mailContents">${mail.mailContents}</textarea>
+				
+				    <div id="save-cancel-buttons">
+				        <button id="cancel-button">취소</button>
+				        <button id="save-button">저장</button>
+				    </div>
+				</form>
 
-            <!-- 수정 폼 -->
-            <form action="mypage-contact-artist-update-ok.mypage" method="post">
-                <!-- 숨겨진 input (글 ID) -->
-                <input type="hidden" name="id" value="${mail.id}">
-
-                <div id="edit-fields">
-                    <div id="content-edit">
-                        <textarea id="content-input" name="mailContents">${mail.mailContents}</textarea>
-                    </div>
-
-                    <div id="save-cancel-buttons">
-                        <button id="cancel-button" type="button">취소</button>
-                        <button id="save-button" type="submit">저장</button>
-                    </div>
-                </div>
-            </form>
 
 			</div>
 		</div>
@@ -86,13 +94,15 @@
 	const cancelButton = document.getElementById("cancel-button");
 	const id = <%=mail.getId()%>;
 	
-	modifyButton.addEventListener("click", () => {
+	saveButton.addEventListener("click", () => {
 		location.href = 'mypage-contact-artist-update.mypage?id=' + id;
-	})
+	});
 	
-	modifyButton.addEventListener("click", () => {
-		location.href = 'mypage-contact-artist-detail.mypage?id=' + id;
-	})
+	cancelButton.addEventListener("click", () => {
+    location.href = 'mypage-contact-artist-detail.mypage?id=' + id;
+	});
+	
+
 	
 	
 		

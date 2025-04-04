@@ -105,6 +105,10 @@ select {
 	margin : 0 0 12px 0;
 }
 
+#search-wrapper {
+	position : relative;
+}
+
 #search-input {
 	width : 184px;
 	height : 28px;
@@ -112,7 +116,7 @@ select {
 	border-radius : 3px;
 	font-family: var(--font-family-Pretendard-Regular);
 	background-color : var(--color-gray100);
-	position : relative;
+
 }
 
 #search-input::placeholder {
@@ -123,13 +127,14 @@ select {
 }
 
 #search-icon {
-	width : 16px;
-	height : 16px;
-	position : absolute;
-	left : 435px;
-	top : 965px;
-}
-
+	position: absolute;
+  	left: 160px; 
+  	top: 50%;
+  	transform: translateY(-50%);
+  	width: 16px; 
+  	height: 16px;
+  	pointer-events: none;
+  }
 
 
 #icon1 {
@@ -211,23 +216,10 @@ select {
 
 #button-wrapper {
 	display : flex;
-	gap : 16px;
+	gap : 12px;
 	margin : 4px 0 0 0;
 }
 
-
-/* .button-like.liked {
-	color : var(--color-primary);
-	background-color : var(--color-gray100);
-} */
-.like-btn.liked {
-	color : var(--color-primary);
-	background-color : var(--color-gray100);
-}
-
-.button-like i {
-	margin : 0 0 0 2px;
-}
 
 #button-wrapper2 {
 	margin : 100px 0 200px 0;
@@ -279,24 +271,26 @@ select {
 	height : 84px;
 }
 
-.exhibition-number {
+.university-name h6 {
 	height : 21px;
 }
 
-.exhibition-number {
+.exhibition-title p {
 	font-size : var(--font-size-h8);
-	margin : 2px 0;
+	font-weight : var(--font-weight-light);
 	height : 17px;
+	margin : 2px 0 0 0;
 }
 
-.exhibition-major, .exhibition-date, .exhibition-location {
+
+.exhibition-major p, .exhibition-date p, .exhibition-location p{
 	font-size : var(--font-size-h9);
 	color : var(--color-gray900);
 	height : 14px;
 }
 
 .exhibition-major {
-	margin : 0 0 8px 0;
+	margin : 2px 0 8px 0;
 }
 
 .exhibition-date, .exhibition-location {
@@ -332,11 +326,33 @@ select {
   color : var(--color-gray100);
 }
 
-#my-pick {
-	font-size : var(--font-size-h7);
-	cursor : pointer;
+#university-logo {
+	width : 84px;
+	height : 84px;
 }
 
-#heart-icon {
-	margin : 0 0 0 4px;
+#logo-wrapper {
+	width : 128px;
+	height : 128px;
+	background-color : var(--color-gray100);
+	border-radius : 10px;
+	border : solid 1px var(--color-gray500);
+	display : flex;
+	justify-content : center;
+	align-items : center;  
 }
+
+#list {
+	display : flex;
+	gap : 28px;
+	margin : 12px 0 0 0;
+}
+
+.like-button {
+	width : 88px;
+	height : 28px;
+	background-color : var(--color-gray100);
+	border : solid 1px var(--color-primary);
+	border-radius : 3px;
+}
+
