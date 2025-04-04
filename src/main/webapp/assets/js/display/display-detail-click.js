@@ -47,6 +47,32 @@ document.querySelector("#updateCommentPopup .send").addEventListener("click", fu
 });
 
 
+/* 등록순 버튼 속에 등록순과 좋아요순 */
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn2 = document.querySelector(".dropdown-btn-2");
+    const dropdownMenu2 = document.querySelector(".dropdown-menu-2");
+
+    // 버튼 클릭 시 드롭다운 표시/숨김
+    dropdownBtn2.addEventListener("click", function (event) {
+        event.stopPropagation();  // 이벤트 버블링 방지
+        dropdownMenu2.style.display = dropdownMenu2.style.display === "block" ? "none" : "block";
+    });
+
+    // 바깥 영역 클릭 시 드롭다운 닫기
+    document.addEventListener("click", function () {
+        dropdownMenu2.style.display = "none";
+    });
+
+    // 드롭다운 내부 클릭 시 닫히지 않도록
+    dropdownMenu2.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+});
+
+
+
+
+
 
 
 
@@ -80,49 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
-
-
-
-/* 등록순 버튼 속에 등록순과 좋아요순 */
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn2 = document.querySelector(".dropdown-btn-2");
-    const dropdownMenu2 = document.querySelector(".dropdown-menu-2");
-
-    // 버튼 클릭 시 드롭다운 표시/숨김
-    dropdownBtn2.addEventListener("click", function (event) {
-        event.stopPropagation();  // 이벤트 버블링 방지
-        dropdownMenu2.style.display = dropdownMenu2.style.display === "block" ? "none" : "block";
-    });
-
-    // 바깥 영역 클릭 시 드롭다운 닫기
-    document.addEventListener("click", function () {
-        dropdownMenu2.style.display = "none";
-    });
-
-    // 드롭다운 내부 클릭 시 닫히지 않도록
-    dropdownMenu2.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
-});
-
-
-
-
+	
+	
+	
 /* 기존 요소들 */
 const content = document.getElementById("question-content");
 const textarea = document.getElementById("answer-input");
 const answerInputWrapper = document.getElementById("answer-input1");
 const likeContainer = document.querySelector(".comment-like-container"); // 좋아요 버튼 컨테이너
 const dropdownContainer = document.querySelector(".dropdown-container"); // 드롭다운 버튼 컨테이너 추가
-
+	
 /* 버튼 */
 const deleteBtn = document.getElementById("delete-faq");
 const modifyBtn = document.getElementById("modify-faq");
 const cancelBtn = document.getElementById("cancel-faq");
 const saveBtn = document.getElementById("save-faq");
-
+	
+/* 수정 버튼 */
 modifyBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -144,7 +144,9 @@ modifyBtn.addEventListener("click", (e) => {
     cancelBtn.style.display = "inline-block";
     saveBtn.style.display = "inline-block";
 });
-
+	
+	
+/* 취소 버튼 */
 cancelBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -163,7 +165,9 @@ cancelBtn.addEventListener("click", (e) => {
     deleteBtn.style.display = "inline-block";
     modifyBtn.style.display = "inline-block";
 });
-
+	
+	
+/* 저장 버튼 */
 saveBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -185,6 +189,6 @@ saveBtn.addEventListener("click", (e) => {
     deleteBtn.style.display = "inline-block";
     modifyBtn.style.display = "inline-block";
 });
-
-
-
+	
+	
+	

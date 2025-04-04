@@ -73,7 +73,7 @@ public class DisplayFrontController extends HttpServlet{
 			result = new DisplayFormCommingSoonOkController().execute(req, resp);
 		}else if(target.equals("display/display-art-like-ok")) {
 			result = new DisplayArtLikeOkController().execute(req, resp);
-		}else if(target.equals("display/display-reply-upload")) {
+		}else if(target.equals("display/display-reply-upload-ok")) {
 			result = new DisplayReplyUploadController().execute(req, resp);
 		}else if(target.equals("display/display-reply-update")) {
 			result = new DisplayReplyUpdateController().execute(req, resp);

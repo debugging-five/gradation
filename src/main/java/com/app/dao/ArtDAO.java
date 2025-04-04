@@ -73,6 +73,11 @@ public class ArtDAO {
     public List<ArtPostDTO> selectReplyList(Long artPostId) {
         return sqlSession.selectList("art.selectReplyList", artPostId);
     }
+    
+//    댓글 달기
+    public void insertReply(ArtPostDTO artPostDTO) {
+        sqlSession.insert("art.insertReply", artPostDTO);
+    }
 
     // ✔ 작품 상세보기
     public List<ArtVO> selectAll() {
