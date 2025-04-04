@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,40 +18,40 @@
 				<h1 class="page-title">auction</h1>
 				<div class="tab-wrapper">
 					<div class="tab-text">
-						<a href="?display=bidding&category=korean&page=1">경매중</a>
+						<a id="display-"href="?display=bidding&category=korean&page=1">경매중</a>
 					</div>
 					<span>|</span>
 					<div class="tab-text">
-						<a href="?display=comming&category=korean&page=1">경매예정</a>
+						<a id="display-"href="?display=comming&category=korean&page=1">경매예정</a>
 					</div>
 					<span>|</span>
 					<div class="tab-text">
-						<a href="?display=complete&category=korean&page=1">경매완료</a>
+						<a id="display-"href="?display=complete&category=korean&page=1">경매완료</a>
 					</div>				
 				</div>
 				<div class="category-list">
 					<div class="category-item">
-						<a href="">한국화</a>
+						<a href="?display=${display}&category=korean&page=1">한국화</a>
 					</div>
 					<span>|</span>
 					<div class="category-item">
-						<a href="">회화</a>
+						<a href="?display=${display}&category=painting&page=1">회화</a>
 					</div>
 					<span>|</span>
 					<div class="category-item">
-						<a href="">조각</a>
+						<a href="?display=${display}&category=sculpture&page=1">조각</a>
 					</div>
 					<span>|</span>
 					<div class="category-item">
-						<a href="">공예</a>
+						<a href="?display=${display}&category=craft&page=1">공예</a>
 					</div>
 					<span>|</span>
 					<div class="category-item">
-						<a href="">건축</a>
+						<a href="?display=${display}&category=architecture&page=1">건축</a>
 					</div>
 					<span>|</span>
 					<div class="category-item">
-						<a href="">서예</a>
+						<a href="?display=${display}&category=calligraphy&page=1">서예</a>
 					</div>
 				</div>
 				<div class="row-upload-options">
@@ -72,48 +73,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="row-main">
-				<div class="row-gallery">
-					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-our-team.jpeg"
-							alt="our-team" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-6.jpeg"
-							alt="gradation-6" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-7.jpeg"
-							alt="gradation-7" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-gradation-2.jpeg"
-							alt="gradation-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-tiger-and-waterfall.jpeg"
-							alt="tiger-and-waterfall" />
+			<div class="auction-main">
+				<c:forEach var="list" items="${list}" varStatus="status">
+					<div class="art-wrap" onclick="location.href='auction-bidding-main.auction?auctionId=${list.id}'">
+						<img alt="작품이미지" id="art-img" src="..${list.artImgPath}${list.artImgName}">
+						<div class="hover-div">
+							<h3>${list.artTitle}</h3>
+							<h3></h3>
+						</div>
 					</div>
-					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/korean/img-korean-cat-4.jpeg"
-							alt="korean-cat-4" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-							alt="meditation-house-3" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-hanok-2.jpeg"
-							alt="hanok-2" /> <img class="gallery-image"
-							src="../assets/images/display/art/craft/img-craft-object-cat.jpeg"
-							alt="object-cat" /> <img class="gallery-image"
-							src="../assets/images/display/art/sculpture/img-sculpture-cat-2.jpeg"
-							alt="cat-2" />
-					</div>
-					<div class="gallery-column">
-						<img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-catwatercolor-person.jpeg"
-							alt="catwatercolor-person" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-oh.jpeg"
-							alt="oh" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-whale.jpeg"
-							alt="whale" /> <img class="gallery-image"
-							src="../assets/images/display/art/painting/img-painting-old-man-in-cafe.jpeg"
-							alt="old-man-in-cafe" /> <img class="gallery-image"
-							src="../assets/images/display/art/architecture/img-architecture-meditation-house-3.jpeg"
-							alt="meditation-house-3" />
-					</div>
-				</div>
+				</c:forEach>
 			</div>
 			<div class="pagination-bar suith4">
 				<img class="pagination-icon"
